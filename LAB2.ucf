@@ -1,0 +1,25 @@
+//-----------------------------------------------
+// Extracted from S3A User Guide
+//-----------------------------------------------
+
+// 2.5 Module Clocks (Table 11)
+NET "Clk"		LOC = C10;	NET "Clk"		IOSTANDARD = "LVCMOS33";
+NET "Clk"		TNM_NET = "TNM_Clk";
+TIMESPEC "TS_Clk" = PERIOD "TNM_Clk" 16 MHz HIGH 50%;
+
+// 2.4.2 USB-UART (Table 6)
+NET "UART_Rx"	LOC = A3;	NET "UART_Rx"	IOSTANDARD = "LVCMOS33";
+NET "UART_Tx"	LOC = B3;	NET "UART_Tx"	IOSTANDARD = "LVCMOS33";
+
+// 2.4.4 Miscellaneous I/O (Table 8)
+NET "PUSH_A"	LOC = K3;	NET "PUSH_A"	IOSTANDARD = "LVCMOS33";
+NET "PUSH_B"	LOC = H5;	NET "PUSH_B"	IOSTANDARD = "LVCMOS33";
+NET "PUSH_C"	LOC = L3;	NET "PUSH_C"	IOSTANDARD = "LVCMOS33";
+NET "Reset"		LOC = H4;	NET "Reset"		IOSTANDARD = "LVCMOS33";
+
+// 2.4.5 LEDs (Table 9)
+NET "D5"		LOC = D14;	NET "D5"		IOSTANDARD = "LVCMOS33";
+NET "D4"		LOC = C16;	NET "D4"		IOSTANDARD = "LVCMOS33";
+NET "D3"		LOC = C15;	NET "D3"		IOSTANDARD = "LVCMOS33";
+NET "D2"		LOC = B15;	NET "D2"		IOSTANDARD = "LVCMOS33";
+

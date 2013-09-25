@@ -1,0 +1,44 @@
+// BMM LOC annotation file.
+//
+// Release 13.2 - Data2MEM O.61xd, build 2.2 May 20, 2011
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Processor 'mcs', ID 100, memory map.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+ADDRESS_MAP mcs MICROBLAZE-LE 100
+
+
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    // Processor 'mcs' address space 'lmb_bram' 0x00000000:0x00007FFF (32 KBytes).
+    //
+    ///////////////////////////////////////////////////////////////////////////////
+
+    ADDRESS_SPACE lmb_bram RAMB16 [0x00000000:0x00007FFF]
+        BUS_BLOCK
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1 [31:30] INPUT = mcs.lmb_bram_0.mem PLACED = X1Y2;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[1].RAMB16_S2_1 [29:28] INPUT = mcs.lmb_bram_1.mem PLACED = X0Y7;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[2].RAMB16_S2_1 [27:26] INPUT = mcs.lmb_bram_2.mem PLACED = X1Y7;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1 [25:24] INPUT = mcs.lmb_bram_3.mem PLACED = X0Y2;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[4].RAMB16_S2_1 [23:22] INPUT = mcs.lmb_bram_4.mem PLACED = X1Y1;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[5].RAMB16_S2_1 [21:20] INPUT = mcs.lmb_bram_5.mem PLACED = X0Y8;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1 [19:18] INPUT = mcs.lmb_bram_6.mem PLACED = X1Y8;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[7].RAMB16_S2_1 [17:16] INPUT = mcs.lmb_bram_7.mem PLACED = X0Y1;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[8].RAMB16_S2_1 [15:14] INPUT = mcs.lmb_bram_8.mem PLACED = X1Y3;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1 [13:12] INPUT = mcs.lmb_bram_9.mem PLACED = X0Y6;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[10].RAMB16_S2_1 [11:10] INPUT = mcs.lmb_bram_10.mem PLACED = X1Y6;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[11].RAMB16_S2_1 [9:8] INPUT = mcs.lmb_bram_11.mem PLACED = X0Y3;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[12].RAMB16_S2_1 [7:6] INPUT = mcs.lmb_bram_12.mem PLACED = X1Y4;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[13].RAMB16_S2_1 [5:4] INPUT = mcs.lmb_bram_13.mem PLACED = X0Y5;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[14].RAMB16_S2_1 [3:2] INPUT = mcs.lmb_bram_14.mem PLACED = X1Y5;
+            mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[15].RAMB16_S2_1 [1:0] INPUT = mcs.lmb_bram_15.mem PLACED = X0Y4;
+        END_BUS_BLOCK;
+    END_ADDRESS_SPACE;
+
+END_ADDRESS_MAP;
+
