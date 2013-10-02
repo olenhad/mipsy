@@ -30,9 +30,20 @@ entity adder32 is
 end adder32;
 
 architecture Behavioral of adder32 is
-
+component uadder32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
+           result : out  STD_LOGIC_VECTOR(31 downto 0);
+			  overflow : out STD_LOGIC);
+end component;
+signal sameSigns : std_logic_vector(31 downto 0);
 begin
-	
-	 overflow <=  0 when  ;
+sameSigns <= (std_logic_vector(unsigned('0' & operand1(30 downto 0)) + unsigned('0' & operand2(30 downto 0))));
+result <= std_logic_vector(signed(operand1) + signed(operand2)) when (operand1(31) /= operand2(31)) else
+			operand1(31)& sameSigns(30 downto 0)
+			
+overflow <= sameSigns(31);
+		
+--UADDR1: port map ('0'& operand1(30 downto 0),operand)
 end Behavioral;
 

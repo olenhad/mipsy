@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\pc richard\Documents\CG3207\cg3207-project\test_uadder32_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/pc richard/Documents/CG3207/cg3207-project/test_uadder32_isim_beh.wdb 
+Running: C:\Users\pc richard\Documents\CG3207\cg3207-project\test_adder32_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/pc richard/Documents/CG3207/cg3207-project/test_adder32_isim_beh.wdb 
 ISim O.61xd (signature 0x1cce1bb2)
 ----------------------------------------------------------------------
 INFO:Security:66 - Your license for 'ISIM' is for evaluation use only.
