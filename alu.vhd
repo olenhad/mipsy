@@ -47,13 +47,13 @@ process (Clk)
 begin  
    if (Clk'event and Clk = '1') then
       if Control(5) = '1' then
-         Result1 <= X"00000000";
-		 Result2 <= X"00000000";
-		 Debug   <= X"00000000";
+			Result1 <= X"00000000";
+			Result2 <= X"00000000";
+			Debug   <= X"00000000";
       else
          Result1 <= Operand1;
-		 Result2 <= Operand2;
-		 Debug   <= (Control(1) & Control(0) & Control & Control & Control & Control & Control);
+			Result2 <= Operand2;
+			Debug   <= (Control(1) & Control(0) & Control & Control & Control & Control & Control);
       end if;
    end if;
 end process;
