@@ -30,12 +30,6 @@ entity adder32 is
 end adder32;
 
 architecture Behavioral of adder32 is
-component uadder32 is
-    Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
-           operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
-           result : out  STD_LOGIC_VECTOR(31 downto 0);
-			  overflow : out STD_LOGIC);
-end component;
 signal complementedAdd : std_logic_vector(31 downto 0);
 signal interResult :  std_logic_vector(31 downto 0);
 signal maxNegative : std_logic_vector(31 downto 0) := (31 => '1', others => '0');
