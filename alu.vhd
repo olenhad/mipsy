@@ -19,10 +19,9 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
@@ -40,9 +39,37 @@ Port (	Clk			: in	STD_LOGIC;
 end alu;
 
 architecture Behavioral of alu is
-
+component addsub32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
+			  isadd : in std_logic;
+           result : out  STD_LOGIC_VECTOR(31 downto 0);
+			  overflow : out STD_LOGIC);
+end component;
+component uaddsub32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
+			  isadd : in std_logic;
+           result : out  STD_LOGIC_VECTOR(31 downto 0);
+			  overflow : out STD_LOGIC);
+end component;
+signal addsubResult : std_logic_vector(31 downto 0);
+signal uaddsubResult : std_logic_vector(31 downto 0);
+signal isAdd: std_logic;
+signal isOverflow : std_logic;
 begin
+addsub: addsub32 port map (operand1 => operand1, 
+									operand2 => operand2,
+									isadd => isadd, 
+									result => addsubResult,
+									overflow => isOverflow);
 
+uaddsub: uaddsub32 port map (operand1 => operand1, 
+									 operand2 => operand2,
+									 isadd => isadd, 
+									 result => uaddsubResult,
+									 overflow => isOverflow);
+									
 process (Clk)
 begin  
    if (Clk'event and Clk = '1') then
@@ -50,14 +77,82 @@ begin
 			Result1 <= X"00000000";
 			Result2 <= X"00000000";
 			Debug   <= X"00000000";
-      else
+      elsif Control = b"000000" then
          Result1 <= Operand1;
 			Result2 <= Operand2;
 			Debug   <= (Control(1) & Control(0) & Control & Control & Control & Control & Control);
+		elsif Control = b"000001" then
+		-- ADD
+			isadd <= '1';
+			Result1 <= addsubResult;
+			Debug <= ( 0 => isOverflow, others => '0');
+		elsif Control = b"000010" then
+		-- ADDU
+			isadd <= '1';
+			Result1 <= uaddsubResult;
+			Debug <= ( 0 => isOverflow, others => '0');
+		elsif Control = b"000011" then
+		-- SUB
+			isadd <= '0';
+			Result1 <= addsubResult;
+			Debug <= ( 0 => isOverflow, others => '0');
+		elsif Control = b"000100" then
+		-- SUBU
+			isadd <= '0';
+			Result1 <= uaddsubResult;
+			Debug <= ( 0 => isOverflow, others => '0');
+		elsif Control = b"000101" then
+		-- MULT
+		elsif Control = b"000110" then
+		-- MULTU
+		elsif Control = b"000111" then
+		-- DIV
+		elsif Control = b"001000" then
+		-- DIVU
+		elsif Control = b"001001" then
+		-- AND
+			Result1 <= operand1 and operand2;
+		elsif Control = b"001010" then
+		-- OR
+			Result1 <= operand1 or operand2;
+		elsif Control = b"001011" then
+		-- XOR
+			Result1 <= operand1 xor operand2;
+		elsif Control = b"001100" then
+		-- NOR
+			Result1 <= operand1 nor operand2;
+		elsif Control = b"001101" then
+		-- SLT
+			isadd <= '0';
+			Result1 <= (0 => addsubResult(31), others => '0');
+			Debug <= ( 0 => isOverflow, others => '0');
+		elsif Control = b"001110" then
+		-- SLL
+			Result1 <= std_logic_vector( unsigned(operand1) sll to_integer(unsigned(operand2)));
+		elsif Control = b"001111" then
+		-- SRL
+			Result1 <= std_logic_vector( unsigned(operand1) srl to_integer(unsigned(operand2)));
+		elsif Control = b"010000" then
+		-- SRA
+			Result1 <= to_stdLogicVector(to_bitvector(operand1) sra to_integer(unsigned(operand2)));
+			
+		elsif Control = b"010001" then
+		-- BEQ
+			if operand1 = operand2 then
+				Result1 <= (0 => '1', others => '0');
+			else
+				Result1 <= (others => '0');
+			end if;
+		elsif Control = b"010010" then
+		-- BNE
+			if operand1 /= operand2 then
+				Result1 <= (0 => '1', others => '0');
+			else
+				Result1 <= (others => '0');
+			end if;
       end if;
    end if;
 end process;
-
 
 end Behavioral;
 

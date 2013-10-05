@@ -22,23 +22,31 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="LAB2.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="LAB2_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="adder32_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="addsub32_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="alu.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="alu.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="alu.xst"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_adder32_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_adder32_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_addsub32_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_addsub32_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_addsub32_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_addsub32_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_uadder32_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_uadder32_stx_beh.prj"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_uaddsub32_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_uaddsub32_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_uaddsub32_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_uaddsub32_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="uadder32_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="uaddsub32_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
@@ -46,22 +54,28 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1380983957" xil_pn:in_ck="-8529847799460272217" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1380983957">
+    <transform xil_pn:end_ts="1380985233" xil_pn:in_ck="-5496570572190285290" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1380985233">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="adder32.vhd"/>
+      <outfile xil_pn:name="addsub32.vhd"/>
       <outfile xil_pn:name="alu.vhd"/>
       <outfile xil_pn:name="test_adder32.vhd"/>
+      <outfile xil_pn:name="test_addsub32.vhd"/>
       <outfile xil_pn:name="test_uadder32.vhd"/>
       <outfile xil_pn:name="test_uaddsub32.vhd"/>
       <outfile xil_pn:name="uadder32.vhd"/>
       <outfile xil_pn:name="uaddsub32.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1380983873" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3658138010609867166" xil_pn:start_ts="1380983873">
+    <transform xil_pn:end_ts="1380985115" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3601838253663320083" xil_pn:start_ts="1380985115">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1380983873" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2239606214285229674" xil_pn:start_ts="1380983873">
+    <transform xil_pn:end_ts="1380985115" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8541127198824923819" xil_pn:start_ts="1380985115">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -69,33 +83,50 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1380983959" xil_pn:in_ck="-8529847799460272217" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1380983959">
+    <transform xil_pn:end_ts="1380985236" xil_pn:in_ck="-5496570572190285290" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1380985236">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="adder32.vhd"/>
+      <outfile xil_pn:name="addsub32.vhd"/>
       <outfile xil_pn:name="alu.vhd"/>
       <outfile xil_pn:name="test_adder32.vhd"/>
+      <outfile xil_pn:name="test_addsub32.vhd"/>
       <outfile xil_pn:name="test_uadder32.vhd"/>
       <outfile xil_pn:name="test_uaddsub32.vhd"/>
       <outfile xil_pn:name="uadder32.vhd"/>
       <outfile xil_pn:name="uaddsub32.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1380983966" xil_pn:in_ck="-8529847799460272217" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4883076559796596834" xil_pn:start_ts="1380983959">
+    <transform xil_pn:end_ts="1380985242" xil_pn:in_ck="-5496570572190285290" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-8304766875807174152" xil_pn:start_ts="1380985236">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="test_uaddsub32_beh.prj"/>
-      <outfile xil_pn:name="test_uaddsub32_isim_beh.exe"/>
+      <outfile xil_pn:name="test_addsub32_beh.prj"/>
+      <outfile xil_pn:name="test_addsub32_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1380983967" xil_pn:in_ck="-4838766409834433802" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8990420336796178193" xil_pn:start_ts="1380983966">
+    <transform xil_pn:end_ts="1380985243" xil_pn:in_ck="1696296068015268764" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6336889427410386885" xil_pn:start_ts="1380985242">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="test_uaddsub32_isim_beh.wdb"/>
+      <outfile xil_pn:name="test_addsub32_isim_beh.wdb"/>
     </transform>
   </transforms>
 
