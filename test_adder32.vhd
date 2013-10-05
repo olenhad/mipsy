@@ -102,7 +102,18 @@ BEGIN
 		wait for 100 ns;	
 		operand1 <= x"FFFFFFFF";
 		operand2 <= x"FFFFFFFF";
-			
+		
+		wait for 100 ns;	
+		operand1 <= x"80000001";
+		operand2 <= x"80000001";
+		
+		wait for 100 ns;	
+		operand1 <= x"80000000";
+		operand2 <= x"FFFFFFFF";
+		
+		wait for 100 ns;	
+		operand1 <= x"80000000";
+		operand2 <= x"00000001";
       wait;
    end process;
 

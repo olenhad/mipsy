@@ -36,13 +36,19 @@ component uadder32 is
            result : out  STD_LOGIC_VECTOR(31 downto 0);
 			  overflow : out STD_LOGIC);
 end component;
-signal sameSigns : std_logic_vector(31 downto 0);
+signal complementedAdd : std_logic_vector(31 downto 0);
+signal interResult :  std_logic_vector(31 downto 0);
+signal maxNegative : std_logic_vector(31 downto 0) := (31 => '1', others => '0');
 begin
-sameSigns <= (std_logic_vector(unsigned('0' & operand1(30 downto 0)) + unsigned('0' & operand2(30 downto 0))));
-result <= std_logic_vector(signed(operand1) + signed(operand2)) when (operand1(31) /= operand2(31)) else
-			operand1(31)& sameSigns(30 downto 0)
-			
-overflow <= sameSigns(31);
+interResult <= std_logic_vector( unsigned(operand1) + unsigned(operand2)) when (operand1(31) = '0' and operand2(31) = '0') else
+			      std_logic_vector( signed(operand1) + signed(operand2));
+complementedAdd <= std_logic_vector(unsigned(not(operand1))+1 + unsigned(not(operand2)) + 1) when (operand1 /= maxNegative and operand2 /= maxNegative) else
+                   maxNegative;
+overflow <= interResult(31) when (operand1(31) = '0' and operand2(31) = '0') else
+            complementedAdd(31) when (operand1(31) = '1' and operand2(31) = '1') else
+				'0';
+result <= interResult;
+			   
 		
 --UADDR1: port map ('0'& operand1(30 downto 0),operand)
 end Behavioral;
