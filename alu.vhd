@@ -53,22 +53,36 @@ component uaddsub32 is
            result : out  STD_LOGIC_VECTOR(31 downto 0);
 			  overflow : out STD_LOGIC);
 end component;
+component umul32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR(31 downto 0);
+			  result2 : out STD_LOGIC_VECTOR(31 downto 0));
+end component;
+component mul32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR(31 downto 0);
+			  result2 : out STD_LOGIC_VECTOR(31 downto 0));
+end component;
+
 signal addsubResult : std_logic_vector(31 downto 0);
 signal uaddsubResult : std_logic_vector(31 downto 0);
 signal isAdd: std_logic;
-signal isOverflow : std_logic;
+signal isOverflowAdd : std_logic;
+signal isOverflowAddU : std_logic;
 begin
 addsub: addsub32 port map (operand1 => operand1, 
 									operand2 => operand2,
 									isadd => isadd, 
 									result => addsubResult,
-									overflow => isOverflow);
+									overflow => isOverflowAdd);
 
 uaddsub: uaddsub32 port map (operand1 => operand1, 
 									 operand2 => operand2,
 									 isadd => isadd, 
 									 result => uaddsubResult,
-									 overflow => isOverflow);
+									 overflow => isOverflowAddU);
 									
 process (Clk)
 begin  
@@ -85,22 +99,22 @@ begin
 		-- ADD
 			isadd <= '1';
 			Result1 <= addsubResult;
-			Debug <= ( 0 => isOverflow, others => '0');
+			Debug <= ( 0 => isOverflowAdd, others => '0');
 		elsif Control = b"000010" then
 		-- ADDU
 			isadd <= '1';
 			Result1 <= uaddsubResult;
-			Debug <= ( 0 => isOverflow, others => '0');
+			Debug <= ( 0 => isOverflowAddU, others => '0');
 		elsif Control = b"000011" then
 		-- SUB
 			isadd <= '0';
 			Result1 <= addsubResult;
-			Debug <= ( 0 => isOverflow, others => '0');
+			Debug <= ( 0 => isOverflowAdd, others => '0');
 		elsif Control = b"000100" then
 		-- SUBU
 			isadd <= '0';
 			Result1 <= uaddsubResult;
-			Debug <= ( 0 => isOverflow, others => '0');
+			Debug <= ( 0 => isOverflowAddU, others => '0');
 		elsif Control = b"000101" then
 		-- MULT
 		elsif Control = b"000110" then
@@ -125,7 +139,7 @@ begin
 		-- SLT
 			isadd <= '0';
 			Result1 <= (0 => addsubResult(31), others => '0');
-			Debug <= ( 0 => isOverflow, others => '0');
+			Debug <= ( 0 => isOverflowAdd, others => '0');
 		elsif Control = b"001110" then
 		-- SLL
 			Result1 <= std_logic_vector( unsigned(operand1) sll to_integer(unsigned(operand2)));
