@@ -1,0 +1,31 @@
+Command line:
+   test_div32_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55842
+
+Wed Oct 09 11:31:38 2013
+
+
+ Elaboration Time: 0.078 sec
+
+ Current Memory Usage: 495.219 Meg
+
+ Total Signals          : 11
+ Total Nets             : 130
+ Total Signal Drivers   : 6
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 5
+ Total Traceable Variables  : 13
+ Total Scalar Nets and Variables : 613
+Total Line Count : 21
+In process div32.vhd:46 
+ 
+
+ Total Simulation Time: 0.0936 sec
+
+ Current Memory Usage: 495.342 Meg
+
+Wed Oct 09 11:31:57 2013
+

@@ -1,0 +1,2 @@
+vhdl isim_temp "umul32.vhd"
+vhdl isim_temp "test_umul32.vhd"

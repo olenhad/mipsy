@@ -1,0 +1,2 @@
+vhdl isim_temp "uadder32.vhd"
+vhdl isim_temp "uaddsub32.vhd"
