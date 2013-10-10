@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.61xd on Fri Oct 11 02:50:40 2013
+// Written by: Map O.61xd on Fri Oct 11 03:09:16 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -157,7 +157,118 @@ PIN mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1_pins<27>
         = BEL
         "mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1"
         PINNAME CLKB;
-TIMEGRP TNM_Clk = BEL "alu0/Debug_1" BEL "alu0/Debug_0" BEL
+TIMEGRP TNM_Clk = BEL "alu0/udiv/tremainder_0" BEL "alu0/udiv/tquotient_3" BEL
+        "alu0/udiv/tremainder_1" BEL "alu0/udiv/tquotient_4" BEL
+        "alu0/udiv/tremainder_3" BEL "alu0/udiv/tremainder_2" BEL
+        "alu0/udiv/tquotient_5" BEL "alu0/udiv/tquotient_7" BEL
+        "alu0/udiv/tquotient_6" BEL "alu0/udiv/tremainder_4" BEL
+        "alu0/udiv/tremainder_10" BEL "alu0/udiv/tremainder_5" BEL
+        "alu0/udiv/tquotient_8" BEL "alu0/udiv/tremainder_6" BEL
+        "alu0/udiv/tquotient_9" BEL "alu0/udiv/tremainder_11" BEL
+        "alu0/udiv/tremainder_7" BEL "alu0/udiv/tremainder_13" BEL
+        "alu0/udiv/tremainder_12" BEL "alu0/udiv/tremainder_8" BEL
+        "alu0/udiv/tremainder_14" BEL "alu0/udiv/tremainder_9" BEL
+        "alu0/udiv/remainder_0" BEL "alu0/udiv/remainder_1" BEL
+        "alu0/udiv/remainder_2" BEL "alu0/udiv/remainder_3" BEL
+        "alu0/udiv/remainder_4" BEL "alu0/udiv/remainder_5" BEL
+        "alu0/udiv/remainder_6" BEL "alu0/udiv/remainder_7" BEL
+        "alu0/udiv/remainder_8" BEL "alu0/udiv/remainder_9" BEL
+        "alu0/udiv/remainder_10" BEL "alu0/udiv/remainder_11" BEL
+        "alu0/udiv/remainder_12" BEL "alu0/udiv/remainder_13" BEL
+        "alu0/udiv/remainder_14" BEL "alu0/udiv/remainder_15" BEL
+        "alu0/udiv/remainder_16" BEL "alu0/udiv/remainder_17" BEL
+        "alu0/udiv/remainder_18" BEL "alu0/udiv/remainder_19" BEL
+        "alu0/udiv/remainder_20" BEL "alu0/udiv/remainder_21" BEL
+        "alu0/udiv/remainder_22" BEL "alu0/udiv/remainder_23" BEL
+        "alu0/udiv/remainder_24" BEL "alu0/udiv/remainder_25" BEL
+        "alu0/udiv/remainder_26" BEL "alu0/udiv/remainder_27" BEL
+        "alu0/udiv/remainder_28" BEL "alu0/udiv/remainder_29" BEL
+        "alu0/udiv/remainder_30" BEL "alu0/udiv/remainder_31" BEL
+        "alu0/udiv/tremainder_21" BEL "alu0/udiv/tremainder_20" BEL
+        "alu0/udiv/tremainder_15" BEL "alu0/udiv/tremainder_16" BEL
+        "alu0/udiv/tremainder_22" BEL "alu0/udiv/tremainder_17" BEL
+        "alu0/udiv/tremainder_23" BEL "alu0/udiv/tremainder_19" BEL
+        "alu0/udiv/tremainder_18" BEL "alu0/udiv/tremainder_24" BEL
+        "alu0/udiv/tremainder_26" BEL "alu0/udiv/tremainder_30" BEL
+        "alu0/udiv/tremainder_25" BEL "alu0/udiv/tremainder_29" BEL
+        "alu0/udiv/tremainder_27" BEL "alu0/udiv/tremainder_28" BEL
+        "alu0/udiv/counter_2" BEL "alu0/udiv/counter_3" BEL
+        "alu0/udiv/counter_4" BEL "alu0/udiv/counter_5" BEL
+        "alu0/udiv/counter_6" BEL "alu0/udiv/counter_7" BEL
+        "alu0/udiv/counter_8" BEL "alu0/udiv/counter_9" BEL
+        "alu0/udiv/counter_10" BEL "alu0/udiv/counter_11" BEL
+        "alu0/udiv/counter_12" BEL "alu0/udiv/counter_13" BEL
+        "alu0/udiv/counter_14" BEL "alu0/udiv/counter_15" BEL
+        "alu0/udiv/counter_16" BEL "alu0/udiv/counter_17" BEL
+        "alu0/udiv/counter_18" BEL "alu0/udiv/counter_19" BEL
+        "alu0/udiv/counter_20" BEL "alu0/udiv/counter_21" BEL
+        "alu0/udiv/counter_22" BEL "alu0/udiv/counter_23" BEL
+        "alu0/udiv/counter_24" BEL "alu0/udiv/counter_25" BEL
+        "alu0/udiv/counter_26" BEL "alu0/udiv/counter_27" BEL
+        "alu0/udiv/counter_28" BEL "alu0/udiv/counter_29" BEL
+        "alu0/udiv/counter_30" BEL "alu0/udiv/counter_31" BEL
+        "alu0/udiv/tquotient_11" BEL "alu0/udiv/exception" BEL
+        "alu0/udiv/tquotient_10" BEL "alu0/udiv/tquotient_14" BEL
+        "alu0/udiv/tquotient_12" BEL "alu0/udiv/tquotient_13" BEL
+        "alu0/udiv/tquotient_16" BEL "alu0/udiv/tquotient_15" BEL
+        "alu0/udiv/tquotient_20" BEL "alu0/udiv/tquotient_21" BEL
+        "alu0/udiv/tquotient_17" BEL "alu0/udiv/tquotient_22" BEL
+        "alu0/udiv/tquotient_18" BEL "alu0/udiv/tquotient_24" BEL
+        "alu0/udiv/tquotient_23" BEL "alu0/udiv/tquotient_19" BEL
+        "alu0/udiv/isDone" BEL "alu0/udiv/tquotient_25" BEL
+        "alu0/udiv/tquotient_30" BEL "alu0/udiv/tquotient_27" BEL
+        "alu0/udiv/tquotient_26" BEL "alu0/udiv/tquotient_31" BEL
+        "alu0/udiv/tquotient_29" BEL "alu0/udiv/tquotient_28" BEL
+        "alu0/udiv/tquotient_0" BEL "alu0/udiv/tquotient_2" BEL
+        "alu0/udiv/tquotient_1" BEL "alu0/udiv/cOperand1_0" BEL
+        "alu0/udiv/cOperand1_1" BEL "alu0/udiv/cOperand1_2" BEL
+        "alu0/udiv/cOperand1_3" BEL "alu0/udiv/cOperand1_4" BEL
+        "alu0/udiv/cOperand1_5" BEL "alu0/udiv/cOperand1_6" BEL
+        "alu0/udiv/cOperand1_7" BEL "alu0/udiv/cOperand1_8" BEL
+        "alu0/udiv/cOperand1_9" BEL "alu0/udiv/cOperand1_10" BEL
+        "alu0/udiv/cOperand1_11" BEL "alu0/udiv/cOperand1_12" BEL
+        "alu0/udiv/cOperand1_13" BEL "alu0/udiv/cOperand1_14" BEL
+        "alu0/udiv/cOperand1_15" BEL "alu0/udiv/cOperand1_16" BEL
+        "alu0/udiv/cOperand1_17" BEL "alu0/udiv/cOperand1_18" BEL
+        "alu0/udiv/cOperand1_19" BEL "alu0/udiv/cOperand1_20" BEL
+        "alu0/udiv/cOperand1_21" BEL "alu0/udiv/cOperand1_22" BEL
+        "alu0/udiv/cOperand1_23" BEL "alu0/udiv/cOperand1_24" BEL
+        "alu0/udiv/cOperand1_25" BEL "alu0/udiv/cOperand1_26" BEL
+        "alu0/udiv/cOperand1_27" BEL "alu0/udiv/cOperand1_28" BEL
+        "alu0/udiv/cOperand1_29" BEL "alu0/udiv/cOperand1_30" BEL
+        "alu0/udiv/cOperand1_31" BEL "alu0/udiv/cOperand2_0" BEL
+        "alu0/udiv/cOperand2_1" BEL "alu0/udiv/cOperand2_2" BEL
+        "alu0/udiv/cOperand2_3" BEL "alu0/udiv/cOperand2_4" BEL
+        "alu0/udiv/cOperand2_5" BEL "alu0/udiv/cOperand2_6" BEL
+        "alu0/udiv/cOperand2_7" BEL "alu0/udiv/cOperand2_8" BEL
+        "alu0/udiv/cOperand2_9" BEL "alu0/udiv/cOperand2_10" BEL
+        "alu0/udiv/cOperand2_11" BEL "alu0/udiv/cOperand2_12" BEL
+        "alu0/udiv/cOperand2_13" BEL "alu0/udiv/cOperand2_14" BEL
+        "alu0/udiv/cOperand2_15" BEL "alu0/udiv/cOperand2_16" BEL
+        "alu0/udiv/cOperand2_17" BEL "alu0/udiv/cOperand2_18" BEL
+        "alu0/udiv/cOperand2_19" BEL "alu0/udiv/cOperand2_20" BEL
+        "alu0/udiv/cOperand2_21" BEL "alu0/udiv/cOperand2_22" BEL
+        "alu0/udiv/cOperand2_23" BEL "alu0/udiv/cOperand2_24" BEL
+        "alu0/udiv/cOperand2_25" BEL "alu0/udiv/cOperand2_26" BEL
+        "alu0/udiv/cOperand2_27" BEL "alu0/udiv/cOperand2_28" BEL
+        "alu0/udiv/cOperand2_29" BEL "alu0/udiv/cOperand2_30" BEL
+        "alu0/udiv/cOperand2_31" BEL "alu0/udiv/quotient_0" BEL
+        "alu0/udiv/quotient_1" BEL "alu0/udiv/quotient_2" BEL
+        "alu0/udiv/quotient_3" BEL "alu0/udiv/quotient_4" BEL
+        "alu0/udiv/quotient_5" BEL "alu0/udiv/quotient_6" BEL
+        "alu0/udiv/quotient_7" BEL "alu0/udiv/quotient_8" BEL
+        "alu0/udiv/quotient_9" BEL "alu0/udiv/quotient_10" BEL
+        "alu0/udiv/quotient_11" BEL "alu0/udiv/quotient_12" BEL
+        "alu0/udiv/quotient_13" BEL "alu0/udiv/quotient_14" BEL
+        "alu0/udiv/quotient_15" BEL "alu0/udiv/quotient_16" BEL
+        "alu0/udiv/quotient_17" BEL "alu0/udiv/quotient_18" BEL
+        "alu0/udiv/quotient_19" BEL "alu0/udiv/quotient_20" BEL
+        "alu0/udiv/quotient_21" BEL "alu0/udiv/quotient_22" BEL
+        "alu0/udiv/quotient_23" BEL "alu0/udiv/quotient_24" BEL
+        "alu0/udiv/quotient_25" BEL "alu0/udiv/quotient_26" BEL
+        "alu0/udiv/quotient_27" BEL "alu0/udiv/quotient_28" BEL
+        "alu0/udiv/quotient_29" BEL "alu0/udiv/quotient_30" BEL
+        "alu0/udiv/quotient_31" BEL "alu0/Debug_1" BEL "alu0/Debug_0" BEL
         "alu0/udivIsSigned" BEL "alu0/isAdd" BEL "alu0/mulIsSigned" BEL
         "alu0/Result2_31" BEL "alu0/Result2_30" BEL "alu0/Result2_29" BEL
         "alu0/Result2_28" BEL "alu0/Result2_27" BEL "alu0/Result2_26" BEL

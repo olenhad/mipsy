@@ -2,14 +2,14 @@ Command line:
    test_udiv32_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  57273
+     -socket  57409
 
-Fri Oct 11 02:44:10 2013
+Fri Oct 11 03:03:26 2013
 
 
- Elaboration Time: 0.0156 sec
+ Elaboration Time: 0.0312 sec
 
- Current Memory Usage: 496.243 Meg
+ Current Memory Usage: 492.102 Meg
 
  Total Signals          : 14
  Total Nets             : 131
@@ -19,11 +19,11 @@ Fri Oct 11 02:44:10 2013
  Total Processes        : 3
  Total Traceable Variables  : 14
  Total Scalar Nets and Variables : 615
-Total Line Count : 80
+Total Line Count : 81
 
- Total Simulation Time: 0.078 sec
+ Total Simulation Time: 0.0468 sec
 
- Current Memory Usage: 496.243 Meg
+ Current Memory Usage: 492.102 Meg
 
-Fri Oct 11 02:46:33 2013
+Fri Oct 11 03:14:31 2013
 

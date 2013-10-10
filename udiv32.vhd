@@ -53,6 +53,7 @@ variable cOperand1 : std_logic_vector(31 downto 0):= (others => '0');
 variable cOperand2 : std_logic_vector(31 downto 0) := (others => '0');
 variable counter : integer := 31;
 begin
+	if rising_edge(clk) then
 		if cOperand1 /= operand1 or cOperand2 /= operand2 then
 			tremainder := ( others =>'0');
 			tquotient := ( others =>'0');
@@ -110,7 +111,7 @@ begin
 				exception <= '1';
 			end if;
 		end if;
-		
+	end if;
 end process;
 end Behavioral;
 

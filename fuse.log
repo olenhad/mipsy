@@ -13,7 +13,8 @@ Compiling package numeric_std
 Compiling architecture behavioral of entity udiv32 [udiv32_default]
 Compiling architecture behavior of entity test_udiv32
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 6 VHDL Units
 Built simulation executable C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_udiv32_isim_beh.exe
-Fuse Memory Usage: 24488 KB
-Fuse CPU Usage: 233 ms
+Fuse Memory Usage: 24428 KB
+Fuse CPU Usage: 186 ms

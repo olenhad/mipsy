@@ -99,8 +99,8 @@ BEGIN
 
       -- insert stimulus here
 		isSigned <= '0';
-		operand1 <= x"00000003";
-		operand2 <= x"00000002";
+		operand1 <= x"0000000A";
+		operand2 <= x"00000003";
 		wait for clk_period*5;
 		operand1 <= x"00000013";
 		operand2 <= x"00000018";

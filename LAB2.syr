@@ -115,10 +115,10 @@ Architecture behavioral of Entity uaddsub32 is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd" in Library work.
 Architecture behavioral of Entity mul32 is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/udiv32.vhd" in Library work.
-Architecture behavioral of Entity udiv32 is up to date.
+Entity <udiv32> compiled.
+Entity <udiv32> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
-Entity <alu> compiled.
-Entity <alu> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" in Library work.
 Architecture structural of Entity lab2 is up to date.
 
@@ -174,8 +174,6 @@ Analyzing Entity <mul32> in library <work> (Architecture <behavioral>).
 Entity <mul32> analyzed. Unit <mul32> generated.
 
 Analyzing Entity <udiv32> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/udiv32.vhd" line 48: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <operand1>, <operand2>, <isSigned>
 Entity <udiv32> analyzed. Unit <udiv32> generated.
 
 
@@ -205,175 +203,50 @@ Unit <mul32> synthesized.
 
 Synthesizing Unit <udiv32>.
     Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/udiv32.vhd".
-WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:737 - Found 32-bit latch for signal <remainder>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 32-bit latch for signal <counter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 32-bit latch for signal <cOperand1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 32-bit latch for signal <cOperand2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <isDone>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <exception>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 32-bit latch for signal <quotient>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_20>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_16>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_21>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_17>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_22>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_18>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_23>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_19>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_24>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_25>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_30>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_26>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_31>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_27>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_28>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_29>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tremainder_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_20>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_21>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_16>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_22>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_17>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_23>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_18>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_24>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_19>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_30>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_25>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_31>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_26>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_27>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_28>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tquotient_29>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 32-bit adder for signal <cOperand1$addsub0000> created at line 70.
-    Found 32-bit 4-to-1 multiplexer for signal <cOperand1$mux0001> created at line 63.
-    Found 1-bit 32-to-1 multiplexer for signal <cOperand1$mux0002> created at line 83.
-    Found 32-bit adder for signal <cOperand2$addsub0000> created at line 76.
-    Found 32-bit 4-to-1 multiplexer for signal <cOperand2$mux0001> created at line 63.
-    Found 32-bit subtractor for signal <counter$addsub0000> created at line 104.
-    Found 32-bit adder for signal <quotient$addsub0000> created at line 97.
-    Found 1-bit xor2 for signal <quotient$xor0000> created at line 96.
-    Found 32-bit comparator less for signal <remainder$cmp_lt0000> created at line 92.
-    Found 32-bit 4-to-1 multiplexer for signal <remainder$mux0002> created at line 79.
-    Found 32-bit comparator equal for signal <tquotient_0$cmp_eq0001> created at line 56.
-    Found 32-bit comparator equal for signal <tquotient_0$cmp_eq0002> created at line 56.
-    Found 32-bit comparator less for signal <tquotient_0$cmp_lt0000> created at line 85.
-    Found 32-bit comparator less for signal <tquotient_0$cmp_lt0001> created at line 85.
-    Found 32-bit comparator less for signal <tquotient_0$cmp_lt0002> created at line 85.
-    Found 32-bit comparator less for signal <tquotient_0$cmp_lt0003> created at line 85.
-    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0000> created at line 56.
-    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0001> created at line 56.
-    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0002> created at line 56.
-    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0003> created at line 56.
-    Found 32-bit comparator equal for signal <tremainder_10$cmp_eq0001> created at line 56.
-    Found 32-bit comparator equal for signal <tremainder_10$cmp_eq0003> created at line 56.
-    Found 32-bit comparator greatequal for signal <tremainder_14$cmp_ge0000> created at line 85.
-    Found 32-bit comparator greatequal for signal <tremainder_14$cmp_ge0001> created at line 85.
-    Found 32-bit comparator greatequal for signal <tremainder_14$cmp_ge0002> created at line 85.
-    Found 32-bit comparator greatequal for signal <tremainder_14$cmp_ge0003> created at line 85.
-    Found 32-bit subtractor for signal <tremainder_31$sub0000> created at line 86.
-    Found 32-bit subtractor for signal <tremainder_31$sub0001> created at line 86.
-    Found 32-bit subtractor for signal <tremainder_31$sub0002> created at line 86.
-    Found 32-bit subtractor for signal <tremainder_31$sub0003> created at line 86.
+    Found 1-bit register for signal <exception>.
+    Found 32-bit register for signal <quotient>.
+    Found 32-bit register for signal <remainder>.
+    Found 32-bit register for signal <cOperand1>.
+    Found 32-bit adder for signal <cOperand1$addsub0000> created at line 71.
+    Found 32-bit 4-to-1 multiplexer for signal <cOperand1$mux0001> created at line 64.
+    Found 1-bit 32-to-1 multiplexer for signal <cOperand1$mux0002> created at line 84.
+    Found 32-bit register for signal <cOperand2>.
+    Found 32-bit adder for signal <cOperand2$addsub0000> created at line 77.
+    Found 32-bit 4-to-1 multiplexer for signal <cOperand2$mux0001> created at line 64.
+    Found 32-bit register for signal <counter>.
+    Found 32-bit subtractor for signal <counter$addsub0000> created at line 105.
+    Found 32-bit comparator less for signal <counter$cmp_lt0000> created at line 93.
+    Found 1-bit register for signal <isDone>.
+    Found 32-bit adder for signal <quotient$addsub0000> created at line 98.
+    Found 32-bit 4-to-1 multiplexer for signal <quotient$mux0001>.
+    Found 1-bit xor2 for signal <quotient$xor0000> created at line 97.
+    Found 32-bit comparator greatequal for signal <remainder$cmp_ge0000> created at line 93.
+    Found 32-bit register for signal <tquotient>.
+    Found 32-bit comparator greatequal for signal <tquotient_13$cmp_ge0000> created at line 86.
+    Found 32-bit comparator greatequal for signal <tquotient_13$cmp_ge0001> created at line 86.
+    Found 32-bit comparator greatequal for signal <tquotient_13$cmp_ge0002> created at line 86.
+    Found 32-bit comparator greatequal for signal <tquotient_13$cmp_ge0003> created at line 86.
+    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0000> created at line 57.
+    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0001> created at line 57.
+    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0002> created at line 57.
+    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0003> created at line 57.
+    Found 32-bit comparator equal for signal <tquotient_3$cmp_eq0000> created at line 57.
+    Found 32-bit comparator equal for signal <tquotient_3$cmp_eq0001> created at line 57.
+    Found 32-bit comparator less for signal <tquotient_3$cmp_lt0000> created at line 86.
+    Found 32-bit comparator less for signal <tquotient_3$cmp_lt0001> created at line 86.
+    Found 32-bit comparator less for signal <tquotient_3$cmp_lt0002> created at line 86.
+    Found 32-bit comparator less for signal <tquotient_3$cmp_lt0003> created at line 86.
+    Found 32-bit register for signal <tremainder>.
+    Found 32-bit comparator equal for signal <tremainder_0$cmp_eq0000> created at line 57.
+    Found 32-bit comparator equal for signal <tremainder_0$cmp_eq0003> created at line 57.
+    Found 32-bit subtractor for signal <tremainder_31$sub0000> created at line 87.
+    Found 32-bit subtractor for signal <tremainder_31$sub0001> created at line 87.
+    Found 32-bit subtractor for signal <tremainder_31$sub0002> created at line 87.
+    Found 32-bit subtractor for signal <tremainder_31$sub0003> created at line 87.
     Summary:
+	inferred 226 D-type flip-flop(s).
 	inferred   8 Adder/Subtractor(s).
-	inferred  17 Comparator(s).
+	inferred  18 Comparator(s).
 	inferred  97 Multiplexer(s).
 Unit <udiv32> synthesized.
 
@@ -451,15 +324,12 @@ Macro Statistics
  32-bit subtractor                                     : 5
  33-bit adder                                          : 1
  64-bit adder                                          : 1
-# Registers                                            : 6
- 1-bit register                                        : 3
- 32-bit register                                       : 3
-# Latches                                              : 71
- 1-bit latch                                           : 66
- 32-bit latch                                          : 5
-# Comparators                                          : 19
+# Registers                                            : 77
+ 1-bit register                                        : 69
+ 32-bit register                                       : 8
+# Comparators                                          : 20
  32-bit comparator equal                               : 5
- 32-bit comparator greatequal                          : 4
+ 32-bit comparator greatequal                          : 5
  32-bit comparator less                                : 5
  32-bit comparator not equal                           : 5
 # Multiplexers                                         : 6
@@ -494,14 +364,11 @@ Macro Statistics
  32-bit subtractor                                     : 2
  33-bit adder                                          : 1
  64-bit adder                                          : 1
-# Registers                                            : 69
- Flip-Flops                                            : 69
-# Latches                                              : 70
- 1-bit latch                                           : 65
- 32-bit latch                                          : 5
-# Comparators                                          : 19
+# Registers                                            : 294
+ Flip-Flops                                            : 294
+# Comparators                                          : 20
  32-bit comparator equal                               : 5
- 32-bit comparator greatequal                          : 4
+ 32-bit comparator greatequal                          : 5
  32-bit comparator less                                : 5
  32-bit comparator not equal                           : 5
 # Multiplexers                                         : 6
@@ -521,17 +388,17 @@ Optimizing unit <LAB2> ...
 
 Optimizing unit <mul32> ...
 
-Optimizing unit <adder32> ...
-
 Optimizing unit <udiv32> ...
 WARNING:Xst:1293 - FF/Latch <counter_0> has a constant value of 1 in block <udiv32>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <counter_1> has a constant value of 1 in block <udiv32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter_1> has a constant value of 1 in block <udiv32>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <adder32> ...
 
 Optimizing unit <alu> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 68.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 67.
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
@@ -547,8 +414,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 69
- Flip-Flops                                            : 69
+# Registers                                            : 292
+ Flip-Flops                                            : 292
 
 =========================================================================
 
@@ -577,23 +444,23 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 6250
+# BELS                             : 6181
 #      GND                         : 2
-#      INV                         : 324
+#      INV                         : 322
 #      LUT1                        : 27
-#      LUT2                        : 252
-#      LUT2_D                      : 8
+#      LUT2                        : 277
+#      LUT2_D                      : 11
 #      LUT2_L                      : 3
-#      LUT3                        : 687
+#      LUT3                        : 729
 #      LUT3_D                      : 2
-#      LUT3_L                      : 5
-#      LUT4                        : 2773
-#      LUT4_D                      : 35
-#      LUT4_L                      : 119
+#      LUT3_L                      : 6
+#      LUT4                        : 2668
+#      LUT4_D                      : 8
+#      LUT4_L                      : 128
 #      MULT_AND                    : 94
 #      MUXCY                       : 923
 #      MUXCY_L                     : 77
-#      MUXF5                       : 209
+#      MUXF5                       : 194
 #      MUXF6                       : 5
 #      MUXF7                       : 2
 #      MUXF8                       : 1
@@ -601,25 +468,20 @@ Cell Usage :
 #      XORCY                       : 700
 # FlipFlops/Latches                : 883
 #      FD                          : 90
-#      FDE                         : 80
+#      FDE                         : 303
 #      FDR                         : 170
 #      FDRE                        : 214
 #      FDRS                        : 66
 #      FDRSE                       : 12
 #      FDS                         : 8
 #      FDSE                        : 20
-#      LD                          : 63
-#      LD_1                        : 129
-#      LDCP_1                      : 1
-#      LDE_1                       : 30
 # RAMS                             : 157
 #      RAM16X1D                    : 141
 #      RAMB16BWE                   : 16
 # Shift Registers                  : 50
 #      SRL16                       : 1
 #      SRL16E                      : 49
-# Clock Buffers                    : 3
-#      BUFG                        : 2
+# Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 10
 #      IBUF                        : 5
@@ -633,17 +495,17 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     2378  out of   3584    66%  
+ Number of Slices:                     2341  out of   3584    65%  
  Number of Slice Flip Flops:            883  out of   7168    12%  
- Number of 4 input LUTs:               4567  out of   7168    63%  
-    Number used as logic:              4235
+ Number of 4 input LUTs:               4513  out of   7168    62%  
+    Number used as logic:              4181
     Number used as Shift registers:      50
     Number used as RAMs:                282
  Number of IOs:                          11
  Number of bonded IOBs:                  11  out of    195     5%  
  Number of BRAMs:                        16  out of     20    80%  
  Number of MULT18X18SIOs:                 4  out of     20    20%  
- Number of GCLKs:                         3  out of     24    12%  
+ Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
 Partition Resource Summary:
@@ -663,65 +525,21 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-------------------------------------------------------------------------+--------------------------------+-------+
-Clock Signal                                                            | Clock buffer(FF name)          | Load  |
-------------------------------------------------------------------------+--------------------------------+-------+
-Clk                                                                     | BUFGP                          | 867   |
-alu0/udiv/tquotient_29_not0001(alu0/udiv/tquotient_29_not0001:O)        | NONE(*)(alu0/udiv/tquotient_29)| 1     |
-alu0/udiv/tquotient_28_not0001(alu0/udiv/tquotient_28_not00011:O)       | NONE(*)(alu0/udiv/tquotient_28)| 1     |
-alu0/udiv/tquotient_27_not0001(alu0/udiv/tquotient_27_not0001:O)        | NONE(*)(alu0/udiv/tquotient_27)| 1     |
-alu0/udiv/tquotient_26_not0001(alu0/udiv/tquotient_26_not0001:O)        | NONE(*)(alu0/udiv/tquotient_26)| 1     |
-alu0/udiv/tquotient_31_not0001(alu0/udiv/tquotient_31_not0001:O)        | NONE(*)(alu0/udiv/tquotient_31)| 1     |
-alu0/udiv/tquotient_25_not0001(alu0/udiv/tquotient_25_not0001:O)        | NONE(*)(alu0/udiv/tquotient_25)| 1     |
-alu0/udiv/tquotient_30_not0001(alu0/udiv/tquotient_30_not0001:O)        | NONE(*)(alu0/udiv/tquotient_30)| 1     |
-alu0/udiv/tquotient_19_not0001(alu0/udiv/tquotient_19_not0001:O)        | NONE(*)(alu0/udiv/tquotient_19)| 1     |
-alu0/udiv/tquotient_24_not0001(alu0/udiv/tquotient_24_not00011:O)       | NONE(*)(alu0/udiv/tquotient_24)| 1     |
-alu0/udiv/tquotient_18_not0001(alu0/udiv/tquotient_18_not0001:O)        | NONE(*)(alu0/udiv/tquotient_18)| 1     |
-alu0/udiv/tquotient_23_not0001(alu0/udiv/tquotient_23_not0001:O)        | NONE(*)(alu0/udiv/tquotient_23)| 1     |
-alu0/udiv/tquotient_17_not0001(alu0/udiv/tquotient_17_not0001:O)        | NONE(*)(alu0/udiv/tquotient_17)| 1     |
-alu0/udiv/tquotient_22_not0001(alu0/udiv/tquotient_22_not0001:O)        | NONE(*)(alu0/udiv/tquotient_22)| 1     |
-alu0/udiv/tquotient_16_not0001(alu0/udiv/tquotient_16_not00011:O)       | NONE(*)(alu0/udiv/tquotient_16)| 1     |
-alu0/udiv/tquotient_21_not0001(alu0/udiv/tquotient_21_not0001:O)        | NONE(*)(alu0/udiv/tquotient_21)| 1     |
-alu0/udiv/tquotient_15_not0001(alu0/udiv/tquotient_15_not0001:O)        | NONE(*)(alu0/udiv/tquotient_15)| 1     |
-alu0/udiv/tquotient_20_not0001(alu0/udiv/tquotient_20_not00011:O)       | NONE(*)(alu0/udiv/tquotient_20)| 1     |
-alu0/udiv/tquotient_14_not0001(alu0/udiv/tquotient_14_not0001:O)        | NONE(*)(alu0/udiv/tquotient_14)| 1     |
-alu0/udiv/tquotient_9_not0001(alu0/udiv/tquotient_9_not0001:O)          | NONE(*)(alu0/udiv/tquotient_9) | 1     |
-alu0/udiv/tquotient_13_not0001(alu0/udiv/tquotient_13_not0001:O)        | NONE(*)(alu0/udiv/tquotient_13)| 1     |
-alu0/udiv/tquotient_8_not0001(alu0/udiv/tquotient_8_not00011:O)         | NONE(*)(alu0/udiv/tquotient_8) | 1     |
-alu0/udiv/tquotient_12_not0001(alu0/udiv/tquotient_12_not00011:O)       | NONE(*)(alu0/udiv/tquotient_12)| 1     |
-alu0/udiv/tquotient_7_not0001(alu0/udiv/tquotient_7_not0001:O)          | NONE(*)(alu0/udiv/tquotient_7) | 1     |
-alu0/udiv/tquotient_11_not0001(alu0/udiv/tquotient_11_not0001:O)        | NONE(*)(alu0/udiv/tquotient_11)| 1     |
-alu0/udiv/tquotient_6_not0001(alu0/udiv/tquotient_6_not0001:O)          | NONE(*)(alu0/udiv/tquotient_6) | 1     |
-alu0/udiv/tquotient_10_not0001(alu0/udiv/tquotient_10_not0001:O)        | NONE(*)(alu0/udiv/tquotient_10)| 1     |
-alu0/udiv/tquotient_5_not0001(alu0/udiv/tquotient_5_not0001:O)          | NONE(*)(alu0/udiv/tquotient_5) | 1     |
-alu0/udiv/tquotient_4_not0001(alu0/udiv/tquotient_4_not00011:O)         | NONE(*)(alu0/udiv/tquotient_4) | 1     |
-alu0/udiv/tquotient_3_not0001(alu0/udiv/tquotient_3_not0001:O)          | NONE(*)(alu0/udiv/tquotient_3) | 1     |
-alu0/udiv/tquotient_2_not0001(alu0/udiv/tquotient_2_not0001:O)          | NONE(*)(alu0/udiv/tquotient_2) | 1     |
-alu0/udiv/tquotient_1_not0001(alu0/udiv/tquotient_1_not0001:O)          | NONE(*)(alu0/udiv/tquotient_1) | 1     |
-alu0/udiv/tquotient_0_not0001(alu0/udiv/tquotient_0_not00011:O)         | NONE(*)(alu0/udiv/tquotient_0) | 1     |
-alu0/udiv/tremainder_10_not00011(alu0/udiv/tquotient_9_not0001_SW1_f5:O)| BUFG(*)(alu0/udiv/tremainder_9)| 31    |
-alu0/udiv/tremainder_mux0000<0>_mand(alu0/udiv/isDone_not00011:O)       | NONE(*)(alu0/udiv/isDone)      | 1     |
-alu0/udiv/isDone_mux00001(alu0/udiv/isDone_mux00001:O)                  | BUFG(*)(alu0/udiv/exception)   | 159   |
-------------------------------------------------------------------------+--------------------------------+-------+
-(*) These 35 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 1090  |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
--------------------------------------------------------+------------------------+-------+
-Control Signal                                         | Buffer(FF name)        | Load  |
--------------------------------------------------------+------------------------+-------+
-alu0/udiv/isDone__and0000(alu0/udiv/isDone__and00001:O)| NONE(alu0/udiv/isDone) | 1     |
-alu0/udiv/isDone__and0001(alu0/udiv/isDone_mux00031:O) | NONE(alu0/udiv/isDone) | 1     |
--------------------------------------------------------+------------------------+-------+
+No asynchronous control signals found in this design
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 33.479ns (Maximum Frequency: 29.870MHz)
+   Minimum period: 35.851ns (Maximum Frequency: 27.893MHz)
    Minimum input arrival time before clock: 1.548ns
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: 5.816ns
@@ -732,451 +550,191 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 24.488ns (frequency: 40.837MHz)
-  Total number of paths / destination ports: 925459680 / 3631
+  Clock period: 35.851ns (frequency: 27.893MHz)
+  Total number of paths / destination ports: 5056091226160 / 4077
 -------------------------------------------------------------------------
-Delay:               24.488ns (Levels of Logic = 76)
+Delay:               35.851ns (Levels of Logic = 190)
   Source:            mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_0 (FF)
-  Destination:       alu0/Result2_31 (FF)
+  Destination:       alu0/udiv/quotient_31 (FF)
   Source Clock:      Clk rising
   Destination Clock: Clk rising
 
-  Data Path: mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_0 to alu0/Result2_31
+  Data Path: mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_0 to alu0/udiv/quotient_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            84   0.591   1.422  U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_0 (GPO2<0>)
+     FDRE:C->Q            72   0.591   1.418  U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_0 (GPO2<0>)
      end scope: 'mcs0'
-     LUT1:I0->O            1   0.648   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<0>_rt (alu0/mult/Madd_newOperand1_addsub0000_cy<0>_rt)
-     MUXCY:S->O            1   0.632   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<0> (alu0/mult/Madd_newOperand1_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<1> (alu0/mult/Madd_newOperand1_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<2> (alu0/mult/Madd_newOperand1_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<3> (alu0/mult/Madd_newOperand1_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<4> (alu0/mult/Madd_newOperand1_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<5> (alu0/mult/Madd_newOperand1_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<6> (alu0/mult/Madd_newOperand1_addsub0000_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<7> (alu0/mult/Madd_newOperand1_addsub0000_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<8> (alu0/mult/Madd_newOperand1_addsub0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<9> (alu0/mult/Madd_newOperand1_addsub0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<10> (alu0/mult/Madd_newOperand1_addsub0000_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<11> (alu0/mult/Madd_newOperand1_addsub0000_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<12> (alu0/mult/Madd_newOperand1_addsub0000_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<13> (alu0/mult/Madd_newOperand1_addsub0000_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<14> (alu0/mult/Madd_newOperand1_addsub0000_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<15> (alu0/mult/Madd_newOperand1_addsub0000_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<16> (alu0/mult/Madd_newOperand1_addsub0000_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<17> (alu0/mult/Madd_newOperand1_addsub0000_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<18> (alu0/mult/Madd_newOperand1_addsub0000_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<19> (alu0/mult/Madd_newOperand1_addsub0000_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<20> (alu0/mult/Madd_newOperand1_addsub0000_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<21> (alu0/mult/Madd_newOperand1_addsub0000_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<22> (alu0/mult/Madd_newOperand1_addsub0000_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<23> (alu0/mult/Madd_newOperand1_addsub0000_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<24> (alu0/mult/Madd_newOperand1_addsub0000_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<25> (alu0/mult/Madd_newOperand1_addsub0000_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<26> (alu0/mult/Madd_newOperand1_addsub0000_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<27> (alu0/mult/Madd_newOperand1_addsub0000_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<28> (alu0/mult/Madd_newOperand1_addsub0000_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<29> (alu0/mult/Madd_newOperand1_addsub0000_cy<29>)
-     MUXCY:CI->O           0   0.065   0.000  alu0/mult/Madd_newOperand1_addsub0000_cy<30> (alu0/mult/Madd_newOperand1_addsub0000_cy<30>)
-     XORCY:CI->O           1   0.844   0.452  alu0/mult/Madd_newOperand1_addsub0000_xor<31> (alu0/mult/newOperand1_addsub0000<31>)
-     LUT3:I2->O            2   0.648   0.447  alu0/mult/Mmux_newOperand1501 (alu0/mult/newOperand1<31>)
-     MULT18X18SIO:A14->P14    1   4.808   0.563  alu0/mult/Mmult_combinedResult_submult_01 (alu0/mult/Mmult_combinedResult_submult_01_P_to_Adder_B_14)
-     LUT2:I0->O            1   0.648   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_lut<31> (alu0/mult/Mmult_combinedResult_submult_00_Madd_lut<31>)
-     MUXCY:S->O            1   0.632   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<31> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<31>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<32> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<32>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<33> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<33>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<34> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<34>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<35> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<35>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<36> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<36>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<37> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<37>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<38> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<38>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<39> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<39>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<40> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<40>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<41> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<41>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<42> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<42>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<43> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<43>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<44> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<44>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<45> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<45>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<46> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<46>)
-     MUXCY:CI->O           0   0.065   0.000  alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<47> (alu0/mult/Mmult_combinedResult_submult_00_Madd_cy<47>)
-     XORCY:CI->O           1   0.844   0.563  alu0/mult/Mmult_combinedResult_submult_00_Madd_xor<48> (alu0/mult/Mmult_combinedResult_submult_0_48)
-     LUT2:I0->O            1   0.648   0.000  alu0/mult/Mmult_combinedResult_Madd_lut<48> (alu0/mult/Mmult_combinedResult_Madd_lut<48>)
-     MUXCY:S->O            1   0.632   0.000  alu0/mult/Mmult_combinedResult_Madd_cy<48> (alu0/mult/Mmult_combinedResult_Madd_cy<48>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_Madd_cy<49> (alu0/mult/Mmult_combinedResult_Madd_cy<49>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_Madd_cy<50> (alu0/mult/Mmult_combinedResult_Madd_cy<50>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_Madd_cy<51> (alu0/mult/Mmult_combinedResult_Madd_cy<51>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_Madd_cy<52> (alu0/mult/Mmult_combinedResult_Madd_cy<52>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_Madd_cy<53> (alu0/mult/Mmult_combinedResult_Madd_cy<53>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_Madd_cy<54> (alu0/mult/Mmult_combinedResult_Madd_cy<54>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_Madd_cy<55> (alu0/mult/Mmult_combinedResult_Madd_cy<55>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_Madd_cy<56> (alu0/mult/Mmult_combinedResult_Madd_cy<56>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_Madd_cy<57> (alu0/mult/Mmult_combinedResult_Madd_cy<57>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_Madd_cy<58> (alu0/mult/Mmult_combinedResult_Madd_cy<58>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_Madd_cy<59> (alu0/mult/Mmult_combinedResult_Madd_cy<59>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_Madd_cy<60> (alu0/mult/Mmult_combinedResult_Madd_cy<60>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/mult/Mmult_combinedResult_Madd_cy<61> (alu0/mult/Mmult_combinedResult_Madd_cy<61>)
-     XORCY:CI->O           3   0.844   0.531  alu0/mult/Mmult_combinedResult_Madd_xor<62> (alu0/mult/combinedResult<62>)
-     INV:I->O              1   0.648   0.000  alu0/mult/Madd_convertedResult_not0000<62>1_INV_0 (alu0/mult/Madd_convertedResult_not0000<62>)
-     MUXCY:S->O            0   0.632   0.000  alu0/mult/Madd_convertedResult_cy<62> (alu0/mult/Madd_convertedResult_cy<62>)
-     XORCY:CI->O           1   0.844   0.452  alu0/mult/Madd_convertedResult_xor<63> (alu0/mult/convertedResult<63>)
-     LUT4_L:I2->LO         1   0.648   0.132  alu0/Result2_mux0000<31>211_SW0 (N738)
-     LUT4:I2->O            1   0.648   0.000  alu0/Result2_mux0000<31>211 (alu0/Result2_mux0000<31>21)
-     FDRS:D                    0.252          alu0/Result2_31
-    ----------------------------------------
-    Total                     24.488ns (19.926ns logic, 4.562ns route)
-                                       (81.4% logic, 18.6% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'alu0/udiv/tremainder_10_not00011'
-  Clock period: 23.400ns (frequency: 42.735MHz)
-  Total number of paths / destination ports: 1974552192 / 31
--------------------------------------------------------------------------
-Delay:               23.400ns (Levels of Logic = 129)
-  Source:            alu0/udiv/tremainder_0 (LATCH)
-  Destination:       alu0/udiv/tremainder_9 (LATCH)
-  Source Clock:      alu0/udiv/tremainder_10_not00011 falling
-  Destination Clock: alu0/udiv/tremainder_10_not00011 falling
-
-  Data Path: alu0/udiv/tremainder_0 to alu0/udiv/tremainder_9
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               5   0.728   0.633  alu0/udiv/tremainder_0 (alu0/udiv/tremainder_0)
-     MULT_AND:I0->LO       0   0.602   0.000  alu0/udiv/tremainder_mux0000<0>_mand (alu0/udiv/tremainder_mux0000<0>_mand1)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<1> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<2> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<3> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<4> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<5> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<6> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<7> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<8> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<9> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<10> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<11> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<12> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<13> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<14> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<15> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<16> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<17> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<18> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<19> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<20> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<21> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<22> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<23> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<24> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<25> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<26> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<27> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<28> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<29> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<30> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<30>)
-     MUXCY:CI->O          95   0.269   1.314  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<31> (alu0/udiv/tremainder_14_cmp_ge0000)
+     LUT1:I0->O            1   0.648   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<0>_rt (alu0/udiv/Madd_cOperand1_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.632   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<0> (alu0/udiv/Madd_cOperand1_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<1> (alu0/udiv/Madd_cOperand1_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<2> (alu0/udiv/Madd_cOperand1_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<3> (alu0/udiv/Madd_cOperand1_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<4> (alu0/udiv/Madd_cOperand1_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<5> (alu0/udiv/Madd_cOperand1_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<6> (alu0/udiv/Madd_cOperand1_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<7> (alu0/udiv/Madd_cOperand1_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<8> (alu0/udiv/Madd_cOperand1_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<9> (alu0/udiv/Madd_cOperand1_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<10> (alu0/udiv/Madd_cOperand1_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<11> (alu0/udiv/Madd_cOperand1_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<12> (alu0/udiv/Madd_cOperand1_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<13> (alu0/udiv/Madd_cOperand1_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<14> (alu0/udiv/Madd_cOperand1_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<15> (alu0/udiv/Madd_cOperand1_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<16> (alu0/udiv/Madd_cOperand1_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<17> (alu0/udiv/Madd_cOperand1_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<18> (alu0/udiv/Madd_cOperand1_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<19> (alu0/udiv/Madd_cOperand1_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<20> (alu0/udiv/Madd_cOperand1_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<21> (alu0/udiv/Madd_cOperand1_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<22> (alu0/udiv/Madd_cOperand1_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<23> (alu0/udiv/Madd_cOperand1_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<24> (alu0/udiv/Madd_cOperand1_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<25> (alu0/udiv/Madd_cOperand1_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<26> (alu0/udiv/Madd_cOperand1_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<27> (alu0/udiv/Madd_cOperand1_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<28> (alu0/udiv/Madd_cOperand1_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<29> (alu0/udiv/Madd_cOperand1_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  alu0/udiv/Madd_cOperand1_addsub0000_cy<30> (alu0/udiv/Madd_cOperand1_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.452  alu0/udiv/Madd_cOperand1_addsub0000_xor<31> (alu0/udiv/cOperand1_addsub0000<31>)
+     LUT3:I2->O            3   0.648   0.000  alu0/udiv/Mmux_cOperand1_mux0001501 (alu0/udiv/Mmux_cOperand1_mux0002_6)
+     MUXF5:I1->O           1   0.276   0.000  alu0/udiv/Mmux_cOperand1_mux0002_5_f5 (alu0/udiv/Mmux_cOperand1_mux0002_5_f5)
+     MUXF6:I1->O           1   0.291   0.000  alu0/udiv/Mmux_cOperand1_mux0002_4_f6 (alu0/udiv/Mmux_cOperand1_mux0002_4_f6)
+     MUXF7:I1->O           1   0.291   0.000  alu0/udiv/Mmux_cOperand1_mux0002_3_f7 (alu0/udiv/Mmux_cOperand1_mux0002_3_f7)
+     MUXF8:I1->O           5   0.291   0.636  alu0/udiv/Mmux_cOperand1_mux0002_2_f8 (alu0/udiv/cOperand1_mux0002)
+     LUT4:I3->O            1   0.648   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_lut<0> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<0> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<1> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<2> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<3> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<4> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<5> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<6> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<7> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<8> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<9> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<10> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<11> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<12> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<13> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<14> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<15> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<16> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<17> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<18> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<19> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<20> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<21> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<22> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<23> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<24> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<25> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<26> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<27> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<28> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<29> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<29>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<30> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<30>)
+     MUXCY:CI->O         105   0.269   1.317  alu0/udiv/Mcompar_tquotient_13_cmp_ge0003_cy<31> (alu0/udiv/tquotient_13_cmp_ge0003)
      LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00001 (alu0/udiv/tremainder_0_mux0000)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<1> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<2> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<3> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<4> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<5> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<6> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<7> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<8> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<9> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<10> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<11> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<12> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<13> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<14> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<15> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<16> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<17> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<18> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<19> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<20> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<21> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<22> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<23> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<24> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<25> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<26> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<27> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<28> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<29> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<30> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<30>)
-     MUXCY:CI->O         124   0.269   1.323  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<31> (alu0/udiv/tremainder_14_cmp_ge0001)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<1> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<2> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<3> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<4> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<5> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<6> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<7> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<8> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<9> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<10> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<11> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<12> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<13> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<14> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<15> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<16> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<17> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<18> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<19> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<20> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<21> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<22> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<23> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<24> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<25> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<26> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<27> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<28> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<29> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<29>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<30> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<30>)
+     MUXCY:CI->O         144   0.269   1.330  alu0/udiv/Mcompar_tquotient_13_cmp_ge0002_cy<31> (alu0/udiv/tquotient_13_cmp_ge0002)
      LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00011 (alu0/udiv/tremainder_0_mux0001)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<1> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<2> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<3> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<4> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<5> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<6> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<7> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<8> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<9> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<10> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<11> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<12> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<13> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<14> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<15> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<16> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<17> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<18> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<19> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<20> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<21> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<22> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<23> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<24> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<25> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<26> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<27> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<28> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<29> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<30> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<30>)
-     MUXCY:CI->O         125   0.269   1.324  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<31> (alu0/udiv/tremainder_14_cmp_ge0002)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<1> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<2> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<3> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<4> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<5> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<6> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<7> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<8> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<9> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<10> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<11> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<12> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<13> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<14> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<15> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<16> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<17> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<18> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<19> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<20> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<21> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<22> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<23> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<24> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<25> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<26> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<27> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<28> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<29> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<29>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<30> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<30>)
+     MUXCY:CI->O         156   0.269   1.333  alu0/udiv/Mcompar_tquotient_13_cmp_ge0001_cy<31> (alu0/udiv/tquotient_13_cmp_ge0001)
      LUT3:I2->O            2   0.648   0.447  alu0/udiv/tremainder_0_mux00021 (alu0/udiv/tremainder_0_mux0002)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<1> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<2> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<3> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<4> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<5> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<6> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<7> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<8> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<9> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<10> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<11> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<12> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<13> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<14> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<15> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<16> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<17> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<18> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<19> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<20> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<21> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<22> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<23> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<24> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<25> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<26> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<27> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<28> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<29> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<30> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<30>)
-     MUXCY:CI->O         101   0.269   1.364  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<31> (alu0/udiv/tremainder_14_cmp_ge0003)
-     LUT4:I1->O            1   0.643   0.000  alu0/udiv/tremainder_9_mux00061 (alu0/udiv/tremainder_9_mux0006)
-     LD:D                      0.252          alu0/udiv/tremainder_9
-    ----------------------------------------
-    Total                     23.400ns (15.933ns logic, 7.467ns route)
-                                       (68.1% logic, 31.9% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'alu0/udiv/tremainder_mux0000<0>_mand'
-  Clock period: 4.190ns (frequency: 238.654MHz)
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Delay:               4.190ns (Levels of Logic = 2)
-  Source:            alu0/udiv/isDone (LATCH)
-  Destination:       alu0/udiv/isDone (LATCH)
-  Source Clock:      alu0/udiv/tremainder_mux0000<0>_mand rising
-  Destination Clock: alu0/udiv/tremainder_mux0000<0>_mand rising
-
-  Data Path: alu0/udiv/isDone to alu0/udiv/isDone
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDCP_1:G->Q           4   0.728   0.619  alu0/udiv/isDone (alu0/udiv/isDone)
-     LUT3:I2->O           35   0.648   1.295  alu0/udiv/isDone_mux00001 (alu0/udiv/isDone_mux00001)
-     LUT3:I2->O            2   0.648   0.000  alu0/udiv/isDone_mux00031 (alu0/udiv/isDone__and0001)
-     LDCP_1:D                  0.252          alu0/udiv/isDone
-    ----------------------------------------
-    Total                      4.190ns (2.276ns logic, 1.914ns route)
-                                       (54.3% logic, 45.7% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'alu0/udiv/isDone_mux00001'
-  Clock period: 33.479ns (frequency: 29.870MHz)
-  Total number of paths / destination ports: 612064459449 / 95
--------------------------------------------------------------------------
-Delay:               33.479ns (Levels of Logic = 180)
-  Source:            alu0/udiv/cOperand1_1 (LATCH)
-  Destination:       alu0/udiv/quotient_31 (LATCH)
-  Source Clock:      alu0/udiv/isDone_mux00001 rising
-  Destination Clock: alu0/udiv/isDone_mux00001 rising
-
-  Data Path: alu0/udiv/cOperand1_1 to alu0/udiv/quotient_31
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD_1:G->Q             1   0.728   0.452  alu0/udiv/cOperand1_1 (alu0/udiv/cOperand1_1)
-     LUT4:I2->O            1   0.648   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_lut<0> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_lut<0>)
-     MUXCY:S->O            1   0.632   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<0> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<1> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<2> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<3> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<4> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<5> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<6> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<7> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<8> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<9> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<10> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<11> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<12> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<13> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<14> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<14>)
-     MUXCY:CI->O          31   0.269   1.405  alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<15> (alu0/udiv/Mcompar_tquotient_13_cmp_ne0000_cy<15>)
-     LUT2:I0->O           60   0.648   1.271  alu0/udiv/isDone_not00011_1 (alu0/udiv/isDone_not00011)
-     MULT_AND:I1->LO       0   0.654   0.000  alu0/udiv/tremainder_mux0000<0>_mand (alu0/udiv/tremainder_mux0000<0>_mand1)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<1> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<2> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<3> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<4> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<5> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<6> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<7> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<8> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<9> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<10> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<11> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<12> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<13> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<14> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<15> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<16> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<17> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<18> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<19> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<20> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<21> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<22> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<23> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<24> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<25> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<26> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<27> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<28> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<29> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<30> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<30>)
-     MUXCY:CI->O          95   0.269   1.314  alu0/udiv/Mcompar_tremainder_14_cmp_ge0000_cy<31> (alu0/udiv/tremainder_14_cmp_ge0000)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00001 (alu0/udiv/tremainder_0_mux0000)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<1> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<2> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<3> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<4> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<5> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<6> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<7> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<8> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<9> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<10> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<11> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<12> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<13> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<14> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<15> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<16> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<17> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<18> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<19> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<20> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<21> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<22> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<23> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<24> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<25> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<26> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<27> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<28> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<29> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<30> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<30>)
-     MUXCY:CI->O         124   0.269   1.323  alu0/udiv/Mcompar_tremainder_14_cmp_ge0001_cy<31> (alu0/udiv/tremainder_14_cmp_ge0001)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00011 (alu0/udiv/tremainder_0_mux0001)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<1> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<2> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<3> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<4> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<5> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<6> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<7> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<8> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<9> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<10> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<11> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<12> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<13> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<14> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<15> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<16> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<17> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<18> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<19> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<20> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<21> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<22> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<23> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<24> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<25> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<26> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<27> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<28> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<29> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<30> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<30>)
-     MUXCY:CI->O         125   0.269   1.324  alu0/udiv/Mcompar_tremainder_14_cmp_ge0002_cy<31> (alu0/udiv/tremainder_14_cmp_ge0002)
-     LUT3:I2->O            2   0.648   0.447  alu0/udiv/tremainder_0_mux00021 (alu0/udiv/tremainder_0_mux0002)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<1> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<2> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<3> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<4> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<5> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<6> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<7> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<8> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<9> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<10> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<11> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<12> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<13> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<14> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<15> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<16> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<17> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<18> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<19> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<20> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<21> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<22> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<23> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<24> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<25> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<26> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<27> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<28> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<29> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<30> (alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<30>)
-     MUXCY:CI->O         101   0.269   1.287  alu0/udiv/Mcompar_tremainder_14_cmp_ge0003_cy<31> (alu0/udiv/tremainder_14_cmp_ge0003)
-     LUT4:I3->O            1   0.648   0.000  alu0/udiv/tquotient_0_mux000812 (alu0/udiv/tquotient_0_mux00081)
-     MUXCY:S->O            1   0.632   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<0> (alu0/udiv/Madd_quotient_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<1> (alu0/udiv/Madd_quotient_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<2> (alu0/udiv/Madd_quotient_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<3> (alu0/udiv/Madd_quotient_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<4> (alu0/udiv/Madd_quotient_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<5> (alu0/udiv/Madd_quotient_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<6> (alu0/udiv/Madd_quotient_addsub0000_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<7> (alu0/udiv/Madd_quotient_addsub0000_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<8> (alu0/udiv/Madd_quotient_addsub0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<9> (alu0/udiv/Madd_quotient_addsub0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<10> (alu0/udiv/Madd_quotient_addsub0000_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<11> (alu0/udiv/Madd_quotient_addsub0000_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<12> (alu0/udiv/Madd_quotient_addsub0000_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<13> (alu0/udiv/Madd_quotient_addsub0000_cy<13>)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<1> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<2> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<3> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<4> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<5> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<6> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<7> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<8> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<9> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<10> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<11> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<12> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<13> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<14> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<15> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<16> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<17> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<18> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<19> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<20> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<21> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<22> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<23> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<24> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<25> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<26> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<27> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<28> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<29> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<29>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<30> (alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<30>)
+     MUXCY:CI->O         118   0.269   1.292  alu0/udiv/Mcompar_tquotient_13_cmp_ge0000_cy<31> (alu0/udiv/tquotient_13_cmp_ge0000)
+     LUT4:I3->O            5   0.648   0.636  alu0/udiv/tquotient_0_mux000011_1 (alu0/udiv/tquotient_0_mux000011)
+     LUT4:I3->O            1   0.648   0.000  alu0/udiv/Madd_quotient_not0000<13>11 (alu0/udiv/Madd_quotient_not0000<13>1)
+     MUXCY:S->O            1   0.632   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<13> (alu0/udiv/Madd_quotient_addsub0000_cy<13>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<14> (alu0/udiv/Madd_quotient_addsub0000_cy<14>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<15> (alu0/udiv/Madd_quotient_addsub0000_cy<15>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<16> (alu0/udiv/Madd_quotient_addsub0000_cy<16>)
@@ -1195,11 +753,11 @@ Delay:               33.479ns (Levels of Logic = 180)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<29> (alu0/udiv/Madd_quotient_addsub0000_cy<29>)
      MUXCY:CI->O           0   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<30> (alu0/udiv/Madd_quotient_addsub0000_cy<30>)
      XORCY:CI->O           1   0.844   0.423  alu0/udiv/Madd_quotient_addsub0000_xor<31> (alu0/udiv/quotient_addsub0000<31>)
-     LUT4:I3->O            1   0.648   0.000  alu0/udiv/quotient_mux0003<31> (alu0/udiv/quotient_mux0003<31>)
-     LD_1:D                    0.252          alu0/udiv/quotient_31
+     LUT4:I3->O            1   0.648   0.000  alu0/udiv/Mmux_quotient_mux000150 (alu0/udiv/quotient_mux0001<31>)
+     FDE:D                     0.252          alu0/udiv/quotient_31
     ----------------------------------------
-    Total                     33.479ns (23.171ns logic, 10.308ns route)
-                                       (69.2% logic, 30.8% route)
+    Total                     35.851ns (25.505ns logic, 10.346ns route)
+                                       (71.1% logic, 28.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
@@ -1262,14 +820,14 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 49.00 secs
-Total CPU time to Xst completion: 49.53 secs
+Total REAL time to Xst completion: 55.00 secs
+Total CPU time to Xst completion: 54.31 secs
  
 --> 
 
-Total memory usage is 383956 kilobytes
+Total memory usage is 363784 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   91 (   0 filtered)
-Number of infos    :   70 (   0 filtered)
+Number of warnings :   18 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

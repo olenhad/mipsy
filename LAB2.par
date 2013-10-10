@@ -1,7 +1,7 @@
 Release 13.2 par O.61xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-HUNARKHANNA-PC::  Fri Oct 11 02:50:43 2013
+HUNARKHANNA-PC::  Fri Oct 11 03:09:18 2013
 
 par -w -intstyle ise -ol high -t 1 LAB2_map.ncd LAB2.ncd LAB2.pcf 
 
@@ -36,10 +36,10 @@ Design Summary Report:
    Number of External Bidir IOBs                  0
 
 
-   Number of BUFGMUXs                        3 out of 24     12%
+   Number of BUFGMUXs                        1 out of 24      4%
    Number of MULT18X18SIOs                   4 out of 20     20%
    Number of RAMB16BWEs                     16 out of 20     80%
-   Number of Slices                       2493 out of 3584   69%
+   Number of Slices                       2451 out of 3584   68%
       Number of SLICEMs                    173 out of 1792    9%
 
 
@@ -49,8 +49,8 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 2 secs 
-Finished initial Timing Analysis.  REAL time: 2 secs 
+Starting initial Timing Analysis.  REAL time: 3 secs 
+Finished initial Timing Analysis.  REAL time: 3 secs 
 
 
 Starting Placer
@@ -58,42 +58,44 @@ Total REAL time at the beginning of Placer: 3 secs
 Total CPU  time at the beginning of Placer: 3 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:7a01217f) REAL time: 3 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:3e60e26f) REAL time: 4 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:7a01217f) REAL time: 3 secs 
+Phase 2.7  Design Feasibility Check (Checksum:3e60e26f) REAL time: 4 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:7a01217f) REAL time: 3 secs 
+Phase 3.31  Local Placement Optimization (Checksum:3e60e26f) REAL time: 4 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:584ecbbb) REAL time: 5 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:8cb7c414) REAL time: 6 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:584ecbbb) REAL time: 5 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:8cb7c414) REAL time: 6 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:584ecbbb) REAL time: 5 secs 
+Phase 6.36  Local Placement Optimization (Checksum:8cb7c414) REAL time: 6 secs 
 
 Phase 7.8  Global Placement
-......................
-..........................................................................................
-..........................
-.......................................................
-Phase 7.8  Global Placement (Checksum:ea2693de) REAL time: 15 secs 
+.........................
+............................................................................
+.....................................
+................................................................................................
+...........................................
+.................
+Phase 7.8  Global Placement (Checksum:528fb506) REAL time: 24 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:ea2693de) REAL time: 15 secs 
+Phase 8.5  Local Placement Optimization (Checksum:528fb506) REAL time: 24 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:ac90286b) REAL time: 19 secs 
+Phase 9.18  Placement Optimization (Checksum:bbe8223e) REAL time: 28 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:ac90286b) REAL time: 20 secs 
+Phase 10.5  Local Placement Optimization (Checksum:bbe8223e) REAL time: 28 secs 
 
-Total REAL time to Placer completion: 20 secs 
-Total CPU  time to Placer completion: 20 secs 
+Total REAL time to Placer completion: 28 secs 
+Total CPU  time to Placer completion: 28 secs 
 Writing design to file LAB2.ncd
 
 
@@ -101,26 +103,26 @@ Writing design to file LAB2.ncd
 Starting Router
 
 
-Phase  1  : 19325 unrouted;      REAL time: 22 secs 
+Phase  1  : 19143 unrouted;      REAL time: 32 secs 
 
-Phase  2  : 18405 unrouted;      REAL time: 23 secs 
+Phase  2  : 18212 unrouted;      REAL time: 32 secs 
 
-Phase  3  : 7226 unrouted;      REAL time: 24 secs 
+Phase  3  : 6584 unrouted;      REAL time: 35 secs 
 
-Phase  4  : 7226 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 25 secs 
+Phase  4  : 6584 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 35 secs 
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 30 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 40 secs 
 
 Updating file: LAB2.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 32 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 44 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 32 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 44 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 33 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 45 secs 
 
-Total REAL time to Router completion: 33 secs 
-Total CPU time to Router completion: 33 secs 
+Total REAL time to Router completion: 45 secs 
+Total CPU time to Router completion: 45 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -138,112 +140,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tremainder |              |      |      |            |             |
-|         _10_not0001 | BUFGMUX_X1Y10| No   |   29 |  0.026     |  0.998      |
-+---------------------+--------------+------+------+------------+-------------+
-|           Clk_BUFGP | BUFGMUX_X2Y10| No   |  594 |  0.100     |  1.071      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/isDone_mux |              |      |      |            |             |
-|                0000 |  BUFGMUX_X1Y0| No   |  116 |  0.059     |  1.037      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          13_not0001 |         Local|      |    1 |  0.000     |  1.403      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          17_not0001 |         Local|      |    1 |  0.000     |  0.401      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|           1_not0001 |         Local|      |    1 |  0.000     |  0.563      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          25_not0001 |         Local|      |    1 |  0.000     |  0.634      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tremainder |              |      |      |            |             |
-|    _mux0000<0>_mand |         Local|      |    1 |  0.000     |  0.832      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          10_not0001 |         Local|      |    1 |  0.000     |  0.847      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          18_not0001 |         Local|      |    1 |  0.000     |  0.900      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          14_not0001 |         Local|      |    1 |  0.000     |  0.903      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          26_not0001 |         Local|      |    1 |  0.000     |  1.732      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          11_not0001 |         Local|      |    1 |  0.000     |  1.181      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          19_not0001 |         Local|      |    1 |  0.000     |  1.171      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          15_not0001 |         Local|      |    1 |  0.000     |  1.153      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          27_not0001 |         Local|      |    1 |  0.000     |  0.311      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|           0_not0001 |         Local|      |    1 |  0.000     |  1.100      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|           3_not0001 |         Local|      |    1 |  0.000     |  0.883      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|           2_not0001 |         Local|      |    1 |  0.000     |  1.163      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|           4_not0001 |         Local|      |    1 |  0.000     |  1.365      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|           5_not0001 |         Local|      |    1 |  0.000     |  1.167      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|           6_not0001 |         Local|      |    1 |  0.000     |  0.311      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|           7_not0001 |         Local|      |    1 |  0.000     |  0.613      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|           8_not0001 |         Local|      |    1 |  0.000     |  0.429      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|           9_not0001 |         Local|      |    1 |  0.000     |  0.647      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          12_not0001 |         Local|      |    1 |  0.000     |  1.097      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          20_not0001 |         Local|      |    1 |  0.000     |  0.630      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          23_not0001 |         Local|      |    1 |  0.000     |  1.147      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          21_not0001 |         Local|      |    1 |  0.000     |  0.305      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          22_not0001 |         Local|      |    1 |  0.000     |  1.603      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          30_not0001 |         Local|      |    1 |  0.000     |  0.923      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          31_not0001 |         Local|      |    1 |  0.000     |  1.097      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          16_not0001 |         Local|      |    1 |  0.000     |  0.876      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          24_not0001 |         Local|      |    1 |  0.000     |  1.629      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          28_not0001 |         Local|      |    1 |  0.000     |  1.821      |
-+---------------------+--------------+------+------+------------+-------------+
-|alu0/udiv/tquotient_ |              |      |      |            |             |
-|          29_not0001 |         Local|      |    1 |  0.000     |  1.393      |
+|           Clk_BUFGP | BUFGMUX_X2Y10| No   |  764 |  0.177     |  1.147      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -263,8 +160,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_Clk = PERIOD TIMEGRP "TNM_Clk" 16 MHz  | SETUP       |    32.907ns|    29.593ns|       0|           0
-  HIGH 50%                                  | HOLD        |     0.694ns|            |       0|           0
+  TS_Clk = PERIOD TIMEGRP "TNM_Clk" 16 MHz  | SETUP       |    17.618ns|    44.882ns|       0|           0
+  HIGH 50%                                  | HOLD        |     0.701ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -275,10 +172,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 34 secs 
-Total CPU time to PAR completion: 34 secs 
+Total REAL time to PAR completion: 47 secs 
+Total CPU time to PAR completion: 47 secs 
 
-Peak Memory Usage:  363 MB
+Peak Memory Usage:  372 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
