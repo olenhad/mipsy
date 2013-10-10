@@ -78,10 +78,7 @@ signal uaddsubResult : std_logic_vector(31 downto 0);
 signal mulResult : std_logic_vector(63 downto 0);
 signal mulIsSigned : std_logic;
 
-signal udivRemainder : std_logic_vector(31 downto 0);
-signal udivQuotient : std_logic_vector(31 downto 0);
-signal udivException : std_logic;
-signal udivIsSigned : std_logic;
+signal divIsSigned : std_logic;
 
 signal divRemainder : std_logic_vector(31 downto 0);
 signal divQuotient : std_logic_vector(31 downto 0);
@@ -114,10 +111,10 @@ mult: mul32 port map ( operand1 => operand1,
 div: div32 port map ( operand1 => operand1,
 							  operand2 => operand2,
 							  clk => clk,
-							  isSigned => udivIsSigned,
-							  remainder => udivRemainder,
-							  quotient => udivQuotient,
-							  exception => udivException);
+							  isSigned => divIsSigned,
+							  remainder => divRemainder,
+							  quotient => divQuotient,
+							  exception => divException);
 
 
 process (Clk)
@@ -164,17 +161,17 @@ begin
 			Result2 <= mulResult(63 downto 32);
 		elsif Control = b"000111" then
 		-- DIV
-			Result1 <= udivRemainder;
-			Result2 <= udivQuotient;
-			udivIsSigned <= '1';
+			Result1 <= divRemainder;
+			Result2 <= divQuotient;
+			divIsSigned <= '1';
 			Debug <= ( 1 => divException, others => '0');
 		
 		elsif Control = b"001000" then
 		-- DIVU	
-			Result1 <= udivRemainder;
-			Result2 <= udivQuotient;
-			udivIsSigned <= '0';
-			Debug <= ( 1 => udivException, others => '0');
+			Result1 <= divRemainder;
+			Result2 <= divQuotient;
+			divIsSigned <= '0';
+			Debug <= ( 1 => divException, others => '0');
 		elsif Control = b"001001" then
 		-- AND
 			Result1 <= operand1 and operand2;

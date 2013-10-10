@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.61xd on Fri Oct 11 04:04:40 2013
+// Written by: Map O.61xd on Fri Oct 11 04:36:36 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -206,20 +206,20 @@ TIMEGRP TNM_Clk = BEL "alu0/div/tremainder_0" BEL "alu0/div/tquotient_3" BEL
         "alu0/div/counter_26" BEL "alu0/div/counter_27" BEL
         "alu0/div/counter_28" BEL "alu0/div/counter_29" BEL
         "alu0/div/counter_30" BEL "alu0/div/counter_31" BEL
-        "alu0/div/tquotient_11" BEL "alu0/div/exception" BEL
-        "alu0/div/tquotient_10" BEL "alu0/div/tquotient_14" BEL
-        "alu0/div/tquotient_12" BEL "alu0/div/tquotient_13" BEL
-        "alu0/div/tquotient_16" BEL "alu0/div/tquotient_15" BEL
-        "alu0/div/tquotient_20" BEL "alu0/div/tquotient_21" BEL
+        "alu0/div/exception" BEL "alu0/div/tquotient_12" BEL
+        "alu0/div/tquotient_10" BEL "alu0/div/tquotient_11" BEL
+        "alu0/div/tquotient_15" BEL "alu0/div/tquotient_13" BEL
+        "alu0/div/tquotient_14" BEL "alu0/div/tquotient_21" BEL
+        "alu0/div/tquotient_20" BEL "alu0/div/tquotient_16" BEL
         "alu0/div/tquotient_17" BEL "alu0/div/tquotient_22" BEL
-        "alu0/div/tquotient_18" BEL "alu0/div/tquotient_24" BEL
-        "alu0/div/tquotient_23" BEL "alu0/div/tquotient_19" BEL
-        "alu0/div/isDone" BEL "alu0/div/tquotient_25" BEL
-        "alu0/div/tquotient_30" BEL "alu0/div/tquotient_27" BEL
-        "alu0/div/tquotient_26" BEL "alu0/div/tquotient_31" BEL
-        "alu0/div/tquotient_29" BEL "alu0/div/tquotient_28" BEL
-        "alu0/div/tquotient_0" BEL "alu0/div/tquotient_2" BEL
-        "alu0/div/tquotient_1" BEL "alu0/div/cOperand1_0" BEL
+        "alu0/div/tquotient_18" BEL "alu0/div/tquotient_23" BEL
+        "alu0/div/tquotient_25" BEL "alu0/div/tquotient_19" BEL
+        "alu0/div/tquotient_24" BEL "alu0/div/tquotient_26" BEL
+        "alu0/div/tquotient_30" BEL "alu0/div/isDone" BEL "alu0/div/cIsSigned"
+        BEL "alu0/div/tquotient_31" BEL "alu0/div/tquotient_27" BEL
+        "alu0/div/tquotient_28" BEL "alu0/div/tquotient_0" BEL
+        "alu0/div/tquotient_29" BEL "alu0/div/tquotient_1" BEL
+        "alu0/div/tquotient_2" BEL "alu0/div/cOperand1_0" BEL
         "alu0/div/cOperand1_1" BEL "alu0/div/cOperand1_2" BEL
         "alu0/div/cOperand1_3" BEL "alu0/div/cOperand1_4" BEL
         "alu0/div/cOperand1_5" BEL "alu0/div/cOperand1_6" BEL
@@ -268,7 +268,7 @@ TIMEGRP TNM_Clk = BEL "alu0/div/tremainder_0" BEL "alu0/div/tquotient_3" BEL
         "alu0/div/quotient_27" BEL "alu0/div/quotient_28" BEL
         "alu0/div/quotient_29" BEL "alu0/div/quotient_30" BEL
         "alu0/div/quotient_31" BEL "alu0/Debug_1" BEL "alu0/Debug_0" BEL
-        "alu0/udivIsSigned" BEL "alu0/isAdd" BEL "alu0/mulIsSigned" BEL
+        "alu0/divIsSigned" BEL "alu0/isAdd" BEL "alu0/mulIsSigned" BEL
         "alu0/Result2_31" BEL "alu0/Result2_30" BEL "alu0/Result2_29" BEL
         "alu0/Result2_28" BEL "alu0/Result2_27" BEL "alu0/Result2_26" BEL
         "alu0/Result2_25" BEL "alu0/Result2_24" BEL "alu0/Result2_23" BEL

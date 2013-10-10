@@ -98,48 +98,48 @@ BEGIN
      -- wait for <clock>_period*10;
 
       -- insert stimulus here
+		isSigned <= '1';
+		operand1 <= x"0000000A";
+		operand2 <= x"fffffffd";
+		wait for clk_period*9;
+		operand1 <= x"00000013";
+		operand2 <= x"00000018";
+		wait for clk_period*9;
+		operand1 <= x"ffffffff";
+		operand2 <= x"fffffffe";
+		wait for clk_period*9;
+		operand1 <= x"ffffffff";
+		operand2 <= x"00000000";
+		wait for clk_period*9;
+		operand1 <= x"ffffffff";
+		operand2 <= x"00000001";
+		wait for clk_period*9;
+		operand1 <= x"fffffffe";
+		operand2 <= x"ffffffff";
+		wait for clk_period*9;
+		
 		isSigned <= '0';
 		operand1 <= x"0000000A";
 		operand2 <= x"00000003";
-		wait for clk_period*5;
+		wait for clk_period*9;
 		operand1 <= x"00000013";
 		operand2 <= x"00000018";
-		wait for clk_period*5;
+		wait for clk_period*9;
 		operand1 <= x"ffffffff";
 		operand2 <= x"fffffffe";
-		wait for clk_period*5;
+		wait for clk_period*9;
 		operand1 <= x"ffffffff";
 		operand2 <= x"00000000";
-		wait for clk_period*5;
+		wait for clk_period*9;
 		operand1 <= x"ffffffff";
 		operand2 <= x"00000001";
-		wait for clk_period*5;
+		wait for clk_period*9;
 		operand1 <= x"fffffffe";
 		operand2 <= x"ffffffff";
-		wait for clk_period*5;
-		
-		isSigned <= '1';
-		operand1 <= x"0000000A";
-		operand2 <= x"00000003";
-		wait for clk_period*5;
-		operand1 <= x"00000013";
-		operand2 <= x"00000018";
-		wait for clk_period*5;
-		operand1 <= x"ffffffff";
-		operand2 <= x"fffffffe";
-		wait for clk_period*5;
-		operand1 <= x"ffffffff";
-		operand2 <= x"00000000";
-		wait for clk_period*5;
-		operand1 <= x"ffffffff";
-		operand2 <= x"00000001";
-		wait for clk_period*5;
-		operand1 <= x"fffffffe";
-		operand2 <= x"ffffffff";
-		wait for clk_period*5;
+		wait for clk_period*9;
 
-		operand1 <= x"00000007";
-		operand2 <= x"fffffffe";
+		operand1 <= x"0000000A";
+		operand2 <= x"fffffffd";
 		wait for clk_period*5;
 
       wait;

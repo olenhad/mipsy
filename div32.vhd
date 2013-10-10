@@ -51,19 +51,22 @@ variable tquotient : std_logic_vector(31 downto 0) := (others => '0');
 variable tremainder : std_logic_vector(31 downto 0) := (others => '0');
 variable cOperand1 : std_logic_vector(31 downto 0):= (others => '0');
 variable cOperand2 : std_logic_vector(31 downto 0) := (others => '0');
+variable cIsSigned :std_logic;
 variable counter : integer := 31;
 begin
 	if rising_edge(clk) then
-		if cOperand1 /= operand1 or cOperand2 /= operand2 then
+		if cOperand1 /= operand1 or cOperand2 /= operand2  or cIsSigned /= isSigned then
 			tremainder := ( others =>'0');
 			tquotient := ( others =>'0');
 			isDone := '0';
+			cIsSigned := isSigned;
 		end if;
 		
 		if isDone = '0' then
 			if isSigned = '0' then
 				cOperand1 := operand1 ;
 				cOperand2 := operand2;
+				
 			else 
 				if operand1(31) = '0' then
 					cOperand1 := operand1;

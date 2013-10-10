@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_udiv32_isim_beh.exe" -prj "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_udiv32_beh.prj" "test_udiv32" 
+-intstyle "ise" -incremental -o "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_div32_isim_beh.exe" -prj "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_div32_beh.prj" "test_div32" 
