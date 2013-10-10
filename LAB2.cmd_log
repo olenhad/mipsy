@@ -17,3 +17,28 @@ map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o LAB2_ma
 par -w -intstyle ise -ol high -t 1 LAB2_map.ncd LAB2.ncd LAB2.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LAB2.twx LAB2.ncd -o LAB2.twr LAB2.pcf -ucf LAB2.ucf 
 bitgen -intstyle ise -f LAB2.ut LAB2.ncd 
+xst -intstyle ise -ifn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.xst" -ofn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.syr" 
+xst -intstyle ise -ifn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.xst" -ofn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LAB2.ucf -p xc3s400a-ft256-4 "LAB2.ngc" LAB2.ngd -bm "mcs/mcs.bmm" 
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o LAB2_map.ncd LAB2.ngd LAB2.pcf 
+par -w -intstyle ise -ol high -t 1 LAB2_map.ncd LAB2.ncd LAB2.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LAB2.twx LAB2.ncd -o LAB2.twr LAB2.pcf -ucf LAB2.ucf 
+bitgen -intstyle ise -f LAB2.ut LAB2.ncd 
+xst -intstyle ise -ifn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.xst" -ofn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LAB2.ucf -p xc3s400a-ft256-4 "LAB2.ngc" LAB2.ngd -bm "mcs/mcs.bmm" 
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o LAB2_map.ncd LAB2.ngd LAB2.pcf 
+par -w -intstyle ise -ol high -t 1 LAB2_map.ncd LAB2.ncd LAB2.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LAB2.twx LAB2.ncd -o LAB2.twr LAB2.pcf -ucf LAB2.ucf 
+bitgen -intstyle ise -f LAB2.ut LAB2.ncd 
+xst -intstyle ise -ifn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.xst" -ofn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LAB2.ucf -p xc3s400a-ft256-4 "LAB2.ngc" LAB2.ngd -bm "mcs/mcs.bmm" 
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o LAB2_map.ncd LAB2.ngd LAB2.pcf 
+par -w -intstyle ise -ol high -t 1 LAB2_map.ncd LAB2.ncd LAB2.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LAB2.twx LAB2.ncd -o LAB2.twr LAB2.pcf -ucf LAB2.ucf 
+bitgen -intstyle ise -f LAB2.ut LAB2.ncd 
+xst -intstyle ise -ifn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.xst" -ofn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LAB2.ucf -p xc3s400a-ft256-4 "LAB2.ngc" LAB2.ngd -bm "mcs/mcs.bmm" 
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o LAB2_map.ncd LAB2.ngd LAB2.pcf 
+par -w -intstyle ise -ol high -t 1 LAB2_map.ncd LAB2.ncd LAB2.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LAB2.twx LAB2.ncd -o LAB2.twr LAB2.pcf -ucf LAB2.ucf 
+bitgen -intstyle ise -f LAB2.ut LAB2.ncd 

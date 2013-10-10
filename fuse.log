@@ -15,5 +15,5 @@ Compiling architecture behavior of entity test_udiv32
 Time Resolution for simulation is 1ps.
 Compiled 6 VHDL Units
 Built simulation executable C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_udiv32_isim_beh.exe
-Fuse Memory Usage: 24796 KB
-Fuse CPU Usage: 233 ms
+Fuse Memory Usage: 24484 KB
+Fuse CPU Usage: 202 ms

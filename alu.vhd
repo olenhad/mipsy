@@ -68,8 +68,9 @@ end component;
 component udiv32 is
     Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
            operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
+			  clk : in std_logic;
            remainder : out  STD_LOGIC_VECTOR(31 downto 0);
-			  coeff : out STD_LOGIC_VECTOR(31 downto 0);
+			  quotient : out STD_LOGIC_VECTOR(31 downto 0);
 			  exception : out std_logic);
 end component;
 
@@ -108,8 +109,9 @@ umult: umul32 port map ( operand1 => operand1,
 
 udiv: udiv32 port map ( operand1 => operand1,
 							  operand2 => operand2,
+							  clk => clk,
 							  remainder => udivRemainder,
-							  coeff => udivQuotient,
+							  quotient => udivQuotient,
 							  exception => udivException);
 process (Clk)
 begin  

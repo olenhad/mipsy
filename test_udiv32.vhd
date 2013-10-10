@@ -94,19 +94,25 @@ BEGIN
 
      -- wait for <clock>_period*10;
 
-      -- insert stimulus here 
+      -- insert stimulus here
+		operand1 <= x"00000003";
+		operand2 <= x"00000002";
+		wait for clk_period*5;
+		operand1 <= x"00000013";
+		operand2 <= x"00000018";
+		wait for clk_period*5;
 		operand1 <= x"ffffffff";
 		operand2 <= x"fffffffe";
-		wait for clk_period*34;
+		wait for clk_period*5;
 		operand1 <= x"ffffffff";
 		operand2 <= x"00000000";
-		wait for clk_period*2;
+		wait for clk_period*5;
 		operand1 <= x"ffffffff";
 		operand2 <= x"00000001";
-		wait for clk_period*34;
+		wait for clk_period*5;
 		operand1 <= x"fffffffe";
 		operand2 <= x"ffffffff";
-		wait for clk_period*34;
+		wait for clk_period*5;
 
       wait;
    end process;
