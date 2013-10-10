@@ -43,7 +43,7 @@ ARCHITECTURE behavior OF test_udiv32 IS
     PORT(
          operand1 : IN  std_logic_vector(31 downto 0);
          operand2 : IN  std_logic_vector(31 downto 0);
-			clk : in std_logic;
+			isSigned : in std_logic;
          remainder : OUT  std_logic_vector(31 downto 0);
          quotient : OUT  std_logic_vector(31 downto 0);
          exception : OUT  std_logic
@@ -54,8 +54,8 @@ ARCHITECTURE behavior OF test_udiv32 IS
    --Inputs
    signal operand1 : std_logic_vector(31 downto 0) := (others => '0');
    signal operand2 : std_logic_vector(31 downto 0) := (others => '0');
-	signal clk : std_logic;
- 	--Outputs
+ 	signal isSigned : std_logic;
+	--Outputs
    signal remainder : std_logic_vector(31 downto 0);
    signal quotient : std_logic_vector(31 downto 0);
    signal exception : std_logic;
@@ -70,20 +70,20 @@ BEGIN
    uut: udiv32 PORT MAP (
           operand1 => operand1,
           operand2 => operand2,
-			 clk => clk,
+			 isSigned => isSigned,
           remainder => remainder,
           quotient => quotient,
           exception => exception
         );
 
    -- Clock process definitions
-   clk_process :process
-   begin
-		clk <= '0';
-		wait for clk_period/2;
-	   clk <= '1';
-	   wait for clk_period/2;
-   end process;
+--   clk_process :process
+ --  begin
+--		clk <= '0';
+--		wait for clk_period/2;
+--	   clk <= '1';
+--	   wait for clk_period/2;
+ --  end process;
  
 
    -- Stimulus process
@@ -95,6 +95,7 @@ BEGIN
      -- wait for <clock>_period*10;
 
       -- insert stimulus here
+		isSigned <= '0';
 		operand1 <= x"00000003";
 		operand2 <= x"00000002";
 		wait for clk_period*5;
@@ -112,6 +113,30 @@ BEGIN
 		wait for clk_period*5;
 		operand1 <= x"fffffffe";
 		operand2 <= x"ffffffff";
+		wait for clk_period*5;
+		
+		isSigned <= '1';
+		operand1 <= x"0000000A";
+		operand2 <= x"00000003";
+		wait for clk_period*5;
+		operand1 <= x"00000013";
+		operand2 <= x"00000018";
+		wait for clk_period*5;
+		operand1 <= x"ffffffff";
+		operand2 <= x"fffffffe";
+		wait for clk_period*5;
+		operand1 <= x"ffffffff";
+		operand2 <= x"00000000";
+		wait for clk_period*5;
+		operand1 <= x"ffffffff";
+		operand2 <= x"00000001";
+		wait for clk_period*5;
+		operand1 <= x"fffffffe";
+		operand2 <= x"ffffffff";
+		wait for clk_period*5;
+
+		operand1 <= x"00000007";
+		operand2 <= x"fffffffe";
 		wait for clk_period*5;
 
       wait;

@@ -9,23 +9,23 @@ Target Device  : xc3s400a
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Thu Oct 10 23:25:18 2013
+Mapped Date    : Fri Oct 11 01:41:27 2013
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   49
+Number of warnings:   48
 Logic Utilization:
-  Number of Slice Flip Flops:           553 out of   7,168    7%
-  Number of 4 input LUTs:             6,554 out of   7,168   91%
+  Number of Slice Flip Flops:           555 out of   7,168    7%
+  Number of 4 input LUTs:             6,914 out of   7,168   96%
 Logic Distribution:
-  Number of occupied Slices:          3,511 out of   3,584   97%
-    Number of Slices containing only related logic:   3,511 out of   3,511 100%
-    Number of Slices containing unrelated logic:          0 out of   3,511   0%
+  Number of occupied Slices:          3,582 out of   3,584   99%
+    Number of Slices containing only related logic:   3,582 out of   3,582 100%
+    Number of Slices containing unrelated logic:          0 out of   3,582   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       6,623 out of   7,168   92%
-    Number used as logic:             6,222
-    Number used as a route-thru:         69
+  Total Number of 4 input LUTs:       6,970 out of   7,168   97%
+    Number used as logic:             6,582
+    Number used as a route-thru:         56
     Number used for Dual Port RAMs:     282
       (Two LUTs used per Dual Port RAM)
     Number used as Shift registers:      50
@@ -35,14 +35,14 @@ Logic Distribution:
 
   Number of bonded IOBs:                 11 out of     195    5%
   Number of BUFGMUXs:                     1 out of      24    4%
-  Number of MULT18X18SIOs:                8 out of      20   40%
+  Number of MULT18X18SIOs:                4 out of      20   20%
   Number of RAMB16BWEs:                  16 out of      20   80%
 
-Average Fanout of Non-Clock Nets:                3.83
+Average Fanout of Non-Clock Nets:                3.90
 
-Peak Memory Usage:  304 MB
-Total REAL time to MAP completion:  7 secs 
-Total CPU time to MAP completion:   7 secs 
+Peak Memory Usage:  306 MB
+Total REAL time to MAP completion:  8 secs 
+Total CPU time to MAP completion:   8 secs 
 
 NOTES:
 
@@ -83,9 +83,6 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:Pack:266 - The function generator alu0/Result1_cmp_eq00171 failed to
-   merge with F5 multiplexer alu0/Result1_mux0005<31>482_f5.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator
    mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
    FPGA.PreFetch_Buffers[24].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge

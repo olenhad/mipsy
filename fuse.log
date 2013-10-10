@@ -1,4 +1,4 @@
-Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_udiv32_isim_beh.exe -prj C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_udiv32_beh.prj work.test_udiv32 
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_udiv32_isim_beh.exe -prj C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_udiv32_beh.prj test_udiv32 
 ISim O.61xd (signature 0x1cce1bb2)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -15,5 +15,5 @@ Compiling architecture behavior of entity test_udiv32
 Time Resolution for simulation is 1ps.
 Compiled 6 VHDL Units
 Built simulation executable C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_udiv32_isim_beh.exe
-Fuse Memory Usage: 24484 KB
-Fuse CPU Usage: 202 ms
+Fuse Memory Usage: 24556 KB
+Fuse CPU Usage: 249 ms

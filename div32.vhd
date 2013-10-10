@@ -33,18 +33,35 @@ entity div32 is
     Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
            operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
            remainder : out  STD_LOGIC_VECTOR(31 downto 0);
-			  coeff : out STD_LOGIC_VECTOR(31 downto 0);
+			  quotient : out STD_LOGIC_VECTOR(31 downto 0);
 			  exception : out std_logic);
 end div32;
 
 architecture Behavioral of div32 is
-signal isException : std_logic;
-begin
 
-isException <= '1' when (operand2 = x"00000000") else
-				   '0';
-coeff <= std_logic_vector(signed(operand1) / signed(operand2)) when isException = '0' else (others => '0');
-remainder <= std_logic_vector(signed(operand1) rem signed(operand2)) when isException = '0' else (others => '0');
-exception <= isException;
+component udiv32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
+           remainder : out  STD_LOGIC_VECTOR(31 downto 0);
+			  quotient : out STD_LOGIC_VECTOR(31 downto 0);
+			  exception : out std_logic);
+end component;
+
+signal newOperand1, newOperand2, interQuotient : std_logic_vector(31 downto 0) := (others => '0');
+
+begin
+newOperand1 <= operand1 when operand1(31) = '0' else
+					std_logic_vector(unsigned(not(operand1))+1);
+newOperand2 <= operand2 when operand2(31) = '0' else
+					std_logic_vector(unsigned(not(operand2))+1);
+
+udiv : udiv32 port map ( operand1 => newOperand1,
+								 operand2 => newOperand2,
+								 remainder => remainder,
+								 quotient => interQuotient,
+								 exception => exception);
+quotient <= interQuotient when ((operand1(31) xor operand2(31))='0') else
+				std_logic_vector(unsigned(not(interQuotient))+1);
+
 end Behavioral;
 

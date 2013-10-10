@@ -104,8 +104,6 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/umul32.vhd" in Library work.
-Architecture behavioral of Entity umul32 is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uadder32.vhd" in Library work.
 Architecture behavioral of Entity uadder32 is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/adder32.vhd" in Library work.
@@ -117,10 +115,10 @@ Architecture behavioral of Entity uaddsub32 is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd" in Library work.
 Architecture behavioral of Entity mul32 is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/udiv32.vhd" in Library work.
-Entity <udiv32> compiled.
-Entity <udiv32> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity udiv32 is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
-Architecture behavioral of Entity alu is up to date.
+Entity <alu> compiled.
+Entity <alu> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" in Library work.
 Architecture structural of Entity lab2 is up to date.
 
@@ -136,8 +134,6 @@ Analyzing hierarchy for entity <addsub32> in library <work> (architecture <behav
 Analyzing hierarchy for entity <uaddsub32> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <mul32> in library <work> (architecture <behavioral>).
-
-Analyzing hierarchy for entity <umul32> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <udiv32> in library <work> (architecture <behavioral>).
 
@@ -177,10 +173,9 @@ Entity <uadder32> analyzed. Unit <uadder32> generated.
 Analyzing Entity <mul32> in library <work> (Architecture <behavioral>).
 Entity <mul32> analyzed. Unit <mul32> generated.
 
-Analyzing Entity <umul32> in library <work> (Architecture <behavioral>).
-Entity <umul32> analyzed. Unit <umul32> generated.
-
 Analyzing Entity <udiv32> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/udiv32.vhd" line 47: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <isSigned>
 Entity <udiv32> analyzed. Unit <udiv32> generated.
 
 
@@ -190,84 +185,101 @@ Entity <udiv32> analyzed. Unit <udiv32> generated.
 
 Performing bidirectional port resolution...
 
-Synthesizing Unit <umul32>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/umul32.vhd".
-    Found 32x32-bit multiplier for signal <largeResult>.
+Synthesizing Unit <mul32>.
+    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd".
+WARNING:Xst:1780 - Signal <interResult2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <interResult1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 32x32-bit multiplier for signal <combinedResult>.
+    Found 64-bit adder for signal <convertedResult>.
+    Found 32-bit 4-to-1 multiplexer for signal <newOperand1>.
+    Found 32-bit adder for signal <newOperand1$addsub0000> created at line 49.
+    Found 32-bit 4-to-1 multiplexer for signal <newOperand2>.
+    Found 32-bit adder for signal <newOperand2$addsub0000> created at line 53.
+    Found 1-bit xor2 for signal <result1$xor0000> created at line 61.
     Summary:
+	inferred   3 Adder/Subtractor(s).
 	inferred   1 Multiplier(s).
-Unit <umul32> synthesized.
+	inferred  64 Multiplexer(s).
+Unit <mul32> synthesized.
 
 
 Synthesizing Unit <udiv32>.
     Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/udiv32.vhd".
-WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 32-bit comparator greatequal for signal <tquotient_12$cmp_ge0000> created at line 69.
-    Found 32-bit comparator greatequal for signal <tquotient_2$cmp_ge0000> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0000> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0001> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0002> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0003> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0004> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0005> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0006> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0007> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0008> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0009> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0010> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0011> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0012> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0013> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0014> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0015> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0016> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0017> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0018> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0019> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0020> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0021> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0022> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0023> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0024> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0025> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0026> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0027> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0028> created at line 69.
-    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0029> created at line 69.
-    Found 32-bit subtractor for signal <tremainder_31$sub0000> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0001> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0002> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0003> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0004> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0005> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0006> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0007> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0008> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0009> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0010> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0011> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0012> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0013> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0014> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0015> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0016> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0017> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0018> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0019> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0020> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0021> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0022> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0023> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0024> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0025> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0026> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0027> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0028> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0029> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0030> created at line 70.
-    Found 32-bit subtractor for signal <tremainder_31$sub0031> created at line 70.
+    Found 32-bit 4-to-1 multiplexer for signal <quotient>.
+    Found 32-bit adder for signal <cOperand1$addsub0000> created at line 62.
+    Found 32-bit 4-to-1 multiplexer for signal <cOperand1$mux0001> created at line 55.
+    Found 32-bit adder for signal <cOperand2$addsub0000> created at line 68.
+    Found 32-bit 4-to-1 multiplexer for signal <cOperand2$mux0001> created at line 55.
+    Found 32-bit adder for signal <quotient$addsub0000> created at line 84.
+    Found 1-bit xor2 for signal <quotient$xor0000> created at line 81.
+    Found 32-bit comparator greatequal for signal <tquotient_12$cmp_ge0000> created at line 76.
+    Found 32-bit comparator greatequal for signal <tquotient_2$cmp_ge0000> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0000> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0001> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0002> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0003> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0004> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0005> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0006> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0007> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0008> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0009> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0010> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0011> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0012> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0013> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0014> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0015> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0016> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0017> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0018> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0019> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0020> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0021> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0022> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0023> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0024> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0025> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0026> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0027> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0028> created at line 76.
+    Found 32-bit comparator greatequal for signal <tremainder_28$cmp_ge0029> created at line 76.
+    Found 32-bit subtractor for signal <tremainder_31$sub0000> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0001> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0002> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0003> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0004> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0005> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0006> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0007> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0008> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0009> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0010> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0011> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0012> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0013> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0014> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0015> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0016> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0017> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0018> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0019> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0020> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0021> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0022> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0023> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0024> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0025> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0026> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0027> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0028> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0029> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0030> created at line 77.
+    Found 32-bit subtractor for signal <tremainder_31$sub0031> created at line 77.
     Summary:
-	inferred  32 Adder/Subtractor(s).
+	inferred  35 Adder/Subtractor(s).
 	inferred  32 Comparator(s).
+	inferred  96 Multiplexer(s).
 Unit <udiv32> synthesized.
 
 
@@ -308,28 +320,22 @@ Synthesizing Unit <uaddsub32>.
 Unit <uaddsub32> synthesized.
 
 
-Synthesizing Unit <mul32>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd".
-    Found 64-bit adder for signal <convertedResult>.
-    Found 32-bit adder for signal <newOperand1$addsub0000> created at line 53.
-    Found 32-bit adder for signal <newOperand2$addsub0000> created at line 55.
-    Found 1-bit xor2 for signal <result1$xor0000> created at line 61.
-    Summary:
-	inferred   3 Adder/Subtractor(s).
-Unit <mul32> synthesized.
-
-
 Synthesizing Unit <alu>.
     Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd".
+WARNING:Xst:1780 - Signal <divRemainder> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <divQuotient> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <divException> is used but never assigned. This sourceless signal will be automatically connected to value 0.
     Found 32-bit register for signal <Debug>.
     Found 32-bit register for signal <Result1>.
     Found 32-bit register for signal <Result2>.
     Found 1-bit register for signal <isAdd>.
-    Found 32-bit comparator equal for signal <Result1$cmp_eq0085> created at line 192.
-    Found 32-bit comparator not equal for signal <Result1$cmp_ne0000> created at line 199.
-    Found 32-bit xor2 for signal <Result1$xor0000> created at line 171.
+    Found 1-bit register for signal <mulIsSigned>.
+    Found 32-bit comparator equal for signal <Result1$cmp_eq0082> created at line 205.
+    Found 32-bit comparator not equal for signal <Result1$cmp_ne0000> created at line 212.
+    Found 32-bit xor2 for signal <Result1$xor0000> created at line 184.
+    Found 1-bit register for signal <udivIsSigned>.
     Summary:
-	inferred  97 D-type flip-flop(s).
+	inferred  99 D-type flip-flop(s).
 	inferred   2 Comparator(s).
 Unit <alu> synthesized.
 
@@ -343,22 +349,24 @@ Unit <LAB2> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 2
- 32x32-bit multiplier                                  : 2
-# Adders/Subtractors                                   : 42
- 32-bit adder                                          : 8
+# Multipliers                                          : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 45
+ 32-bit adder                                          : 11
  32-bit subtractor                                     : 32
  33-bit adder                                          : 1
  64-bit adder                                          : 1
-# Registers                                            : 4
- 1-bit register                                        : 1
+# Registers                                            : 6
+ 1-bit register                                        : 3
  32-bit register                                       : 3
 # Comparators                                          : 34
  32-bit comparator equal                               : 1
  32-bit comparator greatequal                          : 32
  32-bit comparator not equal                           : 1
-# Xors                                                 : 2
- 1-bit xor2                                            : 1
+# Multiplexers                                         : 5
+ 32-bit 4-to-1 multiplexer                             : 5
+# Xors                                                 : 3
+ 1-bit xor2                                            : 2
  32-bit xor2                                           : 1
 
 =========================================================================
@@ -377,23 +385,25 @@ WARNING:Xst:2404 -  FFs/Latches <Debug<31:2>> (without init value) have a consta
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 2
- 32x32-bit multiplier                                  : 2
-# Adders/Subtractors                                   : 41
+# Multipliers                                          : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 44
  31-bit subtractor                                     : 31
- 32-bit adder                                          : 6
+ 32-bit adder                                          : 9
  32-bit adder carry in                                 : 1
  32-bit subtractor                                     : 1
  33-bit adder                                          : 1
  64-bit adder                                          : 1
-# Registers                                            : 67
- Flip-Flops                                            : 67
+# Registers                                            : 69
+ Flip-Flops                                            : 69
 # Comparators                                          : 34
  32-bit comparator equal                               : 1
  32-bit comparator greatequal                          : 32
  32-bit comparator not equal                           : 1
-# Xors                                                 : 2
- 1-bit xor2                                            : 1
+# Multiplexers                                         : 5
+ 32-bit 4-to-1 multiplexer                             : 5
+# Xors                                                 : 3
+ 1-bit xor2                                            : 2
  32-bit xor2                                           : 1
 
 =========================================================================
@@ -404,13 +414,19 @@ Macro Statistics
 
 Optimizing unit <LAB2> ...
 
+Optimizing unit <mul32> ...
+
+Optimizing unit <udiv32> ...
+
 Optimizing unit <adder32> ...
 
 Optimizing unit <alu> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 97.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 103.
+Optimizing block <LAB2> to meet ratio 100 (+ 5) of 3584 slices :
+Area constraint is met for block <LAB2>, final ratio is 99.
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
@@ -426,8 +442,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 67
- Flip-Flops                                            : 67
+# Registers                                            : 69
+ Flip-Flops                                            : 69
 
 =========================================================================
 
@@ -456,29 +472,29 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 10739
+# BELS                             : 11107
 #      GND                         : 2
-#      INV                         : 260
-#      LUT1                        : 37
-#      LUT2                        : 439
-#      LUT2_D                      : 8
-#      LUT2_L                      : 3
-#      LUT3                        : 1533
-#      LUT3_D                      : 3
+#      INV                         : 353
+#      LUT1                        : 26
+#      LUT2                        : 331
+#      LUT2_D                      : 9
+#      LUT2_L                      : 4
+#      LUT3                        : 1491
+#      LUT3_D                      : 270
 #      LUT3_L                      : 5
-#      LUT4                        : 3929
-#      LUT4_D                      : 8
-#      LUT4_L                      : 72
+#      LUT4                        : 4069
+#      LUT4_D                      : 18
+#      LUT4_L                      : 71
 #      MULT_AND                    : 92
-#      MUXCY                       : 2522
+#      MUXCY                       : 2519
 #      MUXCY_L                     : 77
-#      MUXF5                       : 195
+#      MUXF5                       : 229
 #      MUXF6                       : 1
 #      VCC                         : 2
-#      XORCY                       : 1551
-# FlipFlops/Latches                : 658
+#      XORCY                       : 1538
+# FlipFlops/Latches                : 660
 #      FD                          : 90
-#      FDE                         : 78
+#      FDE                         : 80
 #      FDR                         : 170
 #      FDRE                        : 214
 #      FDRS                        : 66
@@ -496,8 +512,8 @@ Cell Usage :
 # IO Buffers                       : 10
 #      IBUF                        : 5
 #      OBUF                        : 5
-# MULTs                            : 8
-#      MULT18X18SIO                : 8
+# MULTs                            : 4
+#      MULT18X18SIO                : 4
 =========================================================================
 
 Device utilization summary:
@@ -505,17 +521,19 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     3395  out of   3584    94%  
- Number of Slice Flip Flops:            658  out of   7168     9%  
- Number of 4 input LUTs:               6629  out of   7168    92%  
-    Number used as logic:              6297
+ Number of Slices:                     3597  out of   3584   100% (*) 
+ Number of Slice Flip Flops:            660  out of   7168     9%  
+ Number of 4 input LUTs:               6979  out of   7168    97%  
+    Number used as logic:              6647
     Number used as Shift registers:      50
     Number used as RAMs:                282
  Number of IOs:                          11
  Number of bonded IOBs:                  11  out of    195     5%  
  Number of BRAMs:                        16  out of     20    80%  
- Number of MULT18X18SIOs:                 8  out of     20    40%  
+ Number of MULT18X18SIOs:                 4  out of     20    20%  
  Number of GCLKs:                         1  out of     24     4%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
 ---------------------------
 Partition Resource Summary:
@@ -538,7 +556,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 865   |
+Clk                                | BUFGP                  | 867   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -549,7 +567,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 177.966ns (Maximum Frequency: 5.619MHz)
+   Minimum period: 186.811ns (Maximum Frequency: 5.353MHz)
    Minimum input arrival time before clock: 1.548ns
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: 5.816ns
@@ -560,31 +578,56 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 177.966ns (frequency: 5.619MHz)
-  Total number of paths / destination ports: 6539387704513506100000000000000000000000000000000000000000000000 / 3627
+  Clock period: 186.811ns (frequency: 5.353MHz)
+  Total number of paths / destination ports: 250751754836545790000000000000000000000000000000000000000000000000 / 3631
 -------------------------------------------------------------------------
-Delay:               177.966ns (Levels of Logic = 1005)
-  Source:            mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_31 (FF)
-  Destination:       alu0/Result1_31 (FF)
+Delay:               186.811ns (Levels of Logic = 1037)
+  Source:            mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_0 (FF)
+  Destination:       alu0/Result2_31 (FF)
   Source Clock:      Clk rising
   Destination Clock: Clk rising
 
-  Data Path: mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_31 to alu0/Result1_31
+  Data Path: mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_0 to alu0/Result2_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q           103   0.591   1.428  U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_31 (GPO2<31>)
+     FDRE:C->Q            35   0.591   1.406  U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_0 (GPO3<0>)
      end scope: 'mcs0'
-     LUT2:I0->O            1   0.648   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_lut<0> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_lut<0>)
-     MUXCY:S->O            1   0.632   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<0> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<5>)
-     MUXCY:CI->O          20   0.269   1.134  alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<6> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<6>)
-     LUT3:I2->O          103   0.648   1.317  alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<8>1 (alu0/udiv/tremainder_28_cmp_ge0000)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00001 (alu0/udiv/tremainder_0_mux0000)
+     LUT1:I0->O            1   0.648   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<0>_rt (alu0/udiv/Madd_cOperand2_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.632   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<0> (alu0/udiv/Madd_cOperand2_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<1> (alu0/udiv/Madd_cOperand2_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<2> (alu0/udiv/Madd_cOperand2_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<3> (alu0/udiv/Madd_cOperand2_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<4> (alu0/udiv/Madd_cOperand2_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<5> (alu0/udiv/Madd_cOperand2_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<6> (alu0/udiv/Madd_cOperand2_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<7> (alu0/udiv/Madd_cOperand2_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<8> (alu0/udiv/Madd_cOperand2_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<9> (alu0/udiv/Madd_cOperand2_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<10> (alu0/udiv/Madd_cOperand2_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<11> (alu0/udiv/Madd_cOperand2_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<12> (alu0/udiv/Madd_cOperand2_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<13> (alu0/udiv/Madd_cOperand2_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<14> (alu0/udiv/Madd_cOperand2_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<15> (alu0/udiv/Madd_cOperand2_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<16> (alu0/udiv/Madd_cOperand2_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<17> (alu0/udiv/Madd_cOperand2_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<18> (alu0/udiv/Madd_cOperand2_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<19> (alu0/udiv/Madd_cOperand2_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<20> (alu0/udiv/Madd_cOperand2_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<21> (alu0/udiv/Madd_cOperand2_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<22> (alu0/udiv/Madd_cOperand2_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<23> (alu0/udiv/Madd_cOperand2_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<24> (alu0/udiv/Madd_cOperand2_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<25> (alu0/udiv/Madd_cOperand2_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<26> (alu0/udiv/Madd_cOperand2_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<27> (alu0/udiv/Madd_cOperand2_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_cOperand2_addsub0000_cy<28> (alu0/udiv/Madd_cOperand2_addsub0000_cy<28>)
+     XORCY:CI->O           1   0.844   0.420  alu0/udiv/Madd_cOperand2_addsub0000_xor<29> (alu0/udiv/cOperand2_addsub0000<29>)
+     MUXF5:S->O           64   0.756   1.415  alu0/udiv/Mmux_cOperand2_mux000144 (alu0/udiv/cOperand2_mux0001<29>)
+     LUT3:I0->O            1   0.648   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_lut<8> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_lut<8>)
+     MUXCY:S->O          101   0.836   1.287  alu0/udiv/Mcompar_tremainder_28_cmp_ge0000_cy<8> (alu0/udiv/tremainder_28_cmp_ge0000)
+     LUT4:I3->O            5   0.648   0.633  alu0/udiv/tremainder_0_mux0000 (alu0/udiv/tremainder_0_mux0000)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0001_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0001_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0001_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0001_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0001_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0001_cy<3>)
@@ -615,7 +658,7 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0001_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0001_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0001_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0001_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0001_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0001_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0001_cy<31> (alu0/udiv/tremainder_28_cmp_ge0001)
+     MUXCY:CI->O          62   0.269   1.304  alu0/udiv/Mcompar_tremainder_28_cmp_ge0001_cy<31> (alu0/udiv/tremainder_28_cmp_ge0001)
      LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00011 (alu0/udiv/tremainder_0_mux0001)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0002_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0002_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0002_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0002_cy<2>)
@@ -647,18 +690,11 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0002_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0002_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0002_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0002_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0002_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0002_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0002_cy<31> (alu0/udiv/tremainder_28_cmp_ge0002)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00021 (alu0/udiv/tremainder_0_mux0002)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<6> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<7> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<8> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<9> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<10> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<10>)
+     MUXCY:CI->O          86   0.269   1.311  alu0/udiv/Mcompar_tremainder_28_cmp_ge0002_cy<31> (alu0/udiv/tremainder_28_cmp_ge0002)
+     LUT3:I2->O            2   0.648   0.479  alu0/udiv/tremainder_10_mux000211 (alu0/udiv/N3)
+     LUT4:I2->O            3   0.648   0.563  alu0/udiv/tremainder_9_mux0002_SW0 (N879)
+     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_9_mux0002 (alu0/udiv/tremainder_9_mux0002)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<10> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<10>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<11> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<11>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<12> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<12>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<13> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<13>)
@@ -679,10 +715,9 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<31> (alu0/udiv/tremainder_28_cmp_ge0003)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00031 (alu0/udiv/tremainder_0_mux0003)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<2>)
+     MUXCY:CI->O         102   0.269   1.316  alu0/udiv/Mcompar_tremainder_28_cmp_ge0003_cy<31> (alu0/udiv/tremainder_28_cmp_ge0003)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_1_mux0003 (alu0/udiv/tremainder_1_mux0003)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<5>)
@@ -711,10 +746,9 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<31> (alu0/udiv/tremainder_28_cmp_ge0004)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00041 (alu0/udiv/tremainder_0_mux0004)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<2>)
+     MUXCY:CI->O         106   0.269   1.318  alu0/udiv/Mcompar_tremainder_28_cmp_ge0004_cy<31> (alu0/udiv/tremainder_28_cmp_ge0004)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_1_mux0004 (alu0/udiv/tremainder_1_mux0004)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<5>)
@@ -743,10 +777,9 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<31> (alu0/udiv/tremainder_28_cmp_ge0006)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00051 (alu0/udiv/tremainder_0_mux0005)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<2>)
+     MUXCY:CI->O         107   0.269   1.318  alu0/udiv/Mcompar_tremainder_28_cmp_ge0006_cy<31> (alu0/udiv/tremainder_28_cmp_ge0006)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_1_mux0005 (alu0/udiv/tremainder_1_mux0005)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<5>)
@@ -775,10 +808,9 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<31> (alu0/udiv/tremainder_28_cmp_ge0008)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00061 (alu0/udiv/tremainder_0_mux0006)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<2>)
+     MUXCY:CI->O         106   0.269   1.318  alu0/udiv/Mcompar_tremainder_28_cmp_ge0008_cy<31> (alu0/udiv/tremainder_28_cmp_ge0008)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_1_mux0006 (alu0/udiv/tremainder_1_mux0006)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<5>)
@@ -807,10 +839,9 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<31> (alu0/udiv/tremainder_28_cmp_ge0010)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00071 (alu0/udiv/tremainder_0_mux0007)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<2>)
+     MUXCY:CI->O         104   0.269   1.317  alu0/udiv/Mcompar_tremainder_28_cmp_ge0010_cy<31> (alu0/udiv/tremainder_28_cmp_ge0010)
+     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_1_mux0007 (alu0/udiv/tremainder_1_mux0007)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<5>)
@@ -839,10 +870,9 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<31> (alu0/udiv/tremainder_28_cmp_ge0012)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00081 (alu0/udiv/tremainder_0_mux0008)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<2>)
+     MUXCY:CI->O         104   0.269   1.317  alu0/udiv/Mcompar_tremainder_28_cmp_ge0012_cy<31> (alu0/udiv/tremainder_28_cmp_ge0012)
+     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_1_mux0008 (alu0/udiv/tremainder_1_mux0008)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<5>)
@@ -871,10 +901,9 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<31> (alu0/udiv/tremainder_28_cmp_ge0014)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00091 (alu0/udiv/tremainder_0_mux0009)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<2>)
+     MUXCY:CI->O         101   0.269   1.316  alu0/udiv/Mcompar_tremainder_28_cmp_ge0014_cy<31> (alu0/udiv/tremainder_28_cmp_ge0014)
+     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_1_mux0009 (alu0/udiv/tremainder_1_mux0009)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<5>)
@@ -903,7 +932,7 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<31> (alu0/udiv/tremainder_28_cmp_ge0005)
+     MUXCY:CI->O         106   0.269   1.318  alu0/udiv/Mcompar_tremainder_28_cmp_ge0005_cy<31> (alu0/udiv/tremainder_28_cmp_ge0005)
      LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00101 (alu0/udiv/tremainder_0_mux0010)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0007_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0007_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0007_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0007_cy<2>)
@@ -935,7 +964,7 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0007_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0007_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0007_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0007_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0007_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0007_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0007_cy<31> (alu0/udiv/tremainder_28_cmp_ge0007)
+     MUXCY:CI->O         103   0.269   1.317  alu0/udiv/Mcompar_tremainder_28_cmp_ge0007_cy<31> (alu0/udiv/tremainder_28_cmp_ge0007)
      LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00111 (alu0/udiv/tremainder_0_mux0011)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0009_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0009_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0009_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0009_cy<2>)
@@ -967,7 +996,7 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0009_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0009_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0009_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0009_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0009_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0009_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0009_cy<31> (alu0/udiv/tremainder_28_cmp_ge0009)
+     MUXCY:CI->O         107   0.269   1.318  alu0/udiv/Mcompar_tremainder_28_cmp_ge0009_cy<31> (alu0/udiv/tremainder_28_cmp_ge0009)
      LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00121 (alu0/udiv/tremainder_0_mux0012)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0011_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0011_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0011_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0011_cy<2>)
@@ -999,7 +1028,7 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0011_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0011_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0011_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0011_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0011_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0011_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0011_cy<31> (alu0/udiv/tremainder_28_cmp_ge0011)
+     MUXCY:CI->O         103   0.269   1.317  alu0/udiv/Mcompar_tremainder_28_cmp_ge0011_cy<31> (alu0/udiv/tremainder_28_cmp_ge0011)
      LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00131 (alu0/udiv/tremainder_0_mux0013)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0013_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0013_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0013_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0013_cy<2>)
@@ -1031,8 +1060,8 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0013_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0013_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0013_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0013_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0013_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0013_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0013_cy<31> (alu0/udiv/tremainder_28_cmp_ge0013)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00141 (alu0/udiv/tremainder_0_mux0014)
+     MUXCY:CI->O         106   0.269   1.318  alu0/udiv/Mcompar_tremainder_28_cmp_ge0013_cy<31> (alu0/udiv/tremainder_28_cmp_ge0013)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_0_mux00141 (alu0/udiv/tremainder_0_mux0014)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0016_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0016_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0016_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0016_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0016_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0016_cy<3>)
@@ -1063,8 +1092,8 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0016_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0016_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0016_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0016_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0016_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0016_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0016_cy<31> (alu0/udiv/tremainder_28_cmp_ge0016)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00151 (alu0/udiv/tremainder_0_mux0015)
+     MUXCY:CI->O         104   0.269   1.317  alu0/udiv/Mcompar_tremainder_28_cmp_ge0016_cy<31> (alu0/udiv/tremainder_28_cmp_ge0016)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_0_mux00151 (alu0/udiv/tremainder_0_mux0015)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0018_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0018_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0018_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0018_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0018_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0018_cy<3>)
@@ -1095,8 +1124,8 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0018_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0018_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0018_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0018_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0018_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0018_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  alu0/udiv/Mcompar_tremainder_28_cmp_ge0018_cy<31> (alu0/udiv/tremainder_28_cmp_ge0018)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00161 (alu0/udiv/tremainder_0_mux0016)
+     MUXCY:CI->O         107   0.269   1.318  alu0/udiv/Mcompar_tremainder_28_cmp_ge0018_cy<31> (alu0/udiv/tremainder_28_cmp_ge0018)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_0_mux00161 (alu0/udiv/tremainder_0_mux0016)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0019_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0019_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0019_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0019_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0019_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0019_cy<3>)
@@ -1127,8 +1156,8 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0019_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0019_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0019_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0019_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0019_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0019_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  alu0/udiv/Mcompar_tremainder_28_cmp_ge0019_cy<31> (alu0/udiv/tremainder_28_cmp_ge0019)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00171 (alu0/udiv/tremainder_0_mux0017)
+     MUXCY:CI->O         103   0.269   1.317  alu0/udiv/Mcompar_tremainder_28_cmp_ge0019_cy<31> (alu0/udiv/tremainder_28_cmp_ge0019)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_0_mux00171 (alu0/udiv/tremainder_0_mux0017)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0021_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0021_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0021_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0021_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0021_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0021_cy<3>)
@@ -1159,11 +1188,9 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0021_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0021_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0021_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0021_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0021_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0021_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  alu0/udiv/Mcompar_tremainder_28_cmp_ge0021_cy<31> (alu0/udiv/tremainder_28_cmp_ge0021)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00181 (alu0/udiv/tremainder_0_mux0018)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<1> (alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<2> (alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<3> (alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<3>)
+     MUXCY:CI->O         107   0.269   1.318  alu0/udiv/Mcompar_tremainder_28_cmp_ge0021_cy<31> (alu0/udiv/tremainder_28_cmp_ge0021)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_2_mux0018 (alu0/udiv/tremainder_2_mux0018)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<3> (alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<4> (alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<5> (alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<5>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<6> (alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<6>)
@@ -1191,10 +1218,9 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<28> (alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<29> (alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<30> (alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<31> (alu0/udiv/tquotient_12_cmp_ge0000)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00191 (alu0/udiv/tremainder_0_mux0019)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<2>)
+     MUXCY:CI->O         104   0.269   1.317  alu0/udiv/Mcompar_tquotient_12_cmp_ge0000_cy<31> (alu0/udiv/tquotient_12_cmp_ge0000)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_1_mux0019 (alu0/udiv/tremainder_1_mux0019)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<5>)
@@ -1223,10 +1249,9 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<31> (alu0/udiv/tremainder_28_cmp_ge0015)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00201 (alu0/udiv/tremainder_0_mux0020)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<2>)
+     MUXCY:CI->O         106   0.269   1.318  alu0/udiv/Mcompar_tremainder_28_cmp_ge0015_cy<31> (alu0/udiv/tremainder_28_cmp_ge0015)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_1_mux0020 (alu0/udiv/tremainder_1_mux0020)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<5>)
@@ -1255,10 +1280,9 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<31> (alu0/udiv/tremainder_28_cmp_ge0017)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00211 (alu0/udiv/tremainder_0_mux0021)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<2>)
+     MUXCY:CI->O         105   0.269   1.317  alu0/udiv/Mcompar_tremainder_28_cmp_ge0017_cy<31> (alu0/udiv/tremainder_28_cmp_ge0017)
+     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_1_mux0021 (alu0/udiv/tremainder_1_mux0021)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<5>)
@@ -1287,7 +1311,7 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<31> (alu0/udiv/tremainder_28_cmp_ge0020)
+     MUXCY:CI->O         102   0.269   1.316  alu0/udiv/Mcompar_tremainder_28_cmp_ge0020_cy<31> (alu0/udiv/tremainder_28_cmp_ge0020)
      LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00221 (alu0/udiv/tremainder_0_mux0022)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0022_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0022_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0022_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0022_cy<2>)
@@ -1319,7 +1343,7 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0022_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0022_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0022_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0022_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0022_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0022_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  alu0/udiv/Mcompar_tremainder_28_cmp_ge0022_cy<31> (alu0/udiv/tremainder_28_cmp_ge0022)
+     MUXCY:CI->O         104   0.269   1.317  alu0/udiv/Mcompar_tremainder_28_cmp_ge0022_cy<31> (alu0/udiv/tremainder_28_cmp_ge0022)
      LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00231 (alu0/udiv/tremainder_0_mux0023)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0023_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0023_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0023_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0023_cy<2>)
@@ -1351,8 +1375,8 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0023_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0023_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0023_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0023_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0023_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0023_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  alu0/udiv/Mcompar_tremainder_28_cmp_ge0023_cy<31> (alu0/udiv/tremainder_28_cmp_ge0023)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00241 (alu0/udiv/tremainder_0_mux0024)
+     MUXCY:CI->O         105   0.269   1.317  alu0/udiv/Mcompar_tremainder_28_cmp_ge0023_cy<31> (alu0/udiv/tremainder_28_cmp_ge0023)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_0_mux00241 (alu0/udiv/tremainder_0_mux0024)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0024_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0024_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0024_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0024_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0024_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0024_cy<3>)
@@ -1383,8 +1407,8 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0024_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0024_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0024_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0024_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0024_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0024_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  alu0/udiv/Mcompar_tremainder_28_cmp_ge0024_cy<31> (alu0/udiv/tremainder_28_cmp_ge0024)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00251 (alu0/udiv/tremainder_0_mux0025)
+     MUXCY:CI->O         105   0.269   1.317  alu0/udiv/Mcompar_tremainder_28_cmp_ge0024_cy<31> (alu0/udiv/tremainder_28_cmp_ge0024)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_0_mux00251 (alu0/udiv/tremainder_0_mux0025)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0026_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0026_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0026_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0026_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0026_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0026_cy<3>)
@@ -1415,11 +1439,9 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0026_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0026_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0026_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0026_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0026_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0026_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  alu0/udiv/Mcompar_tremainder_28_cmp_ge0026_cy<31> (alu0/udiv/tremainder_28_cmp_ge0026)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00261 (alu0/udiv/tremainder_0_mux0026)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<3>)
+     MUXCY:CI->O         107   0.269   1.318  alu0/udiv/Mcompar_tremainder_28_cmp_ge0026_cy<31> (alu0/udiv/tremainder_28_cmp_ge0026)
+     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_2_mux0026 (alu0/udiv/tremainder_2_mux0026)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<5>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<6> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<6>)
@@ -1447,10 +1469,9 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<31> (alu0/udiv/tremainder_28_cmp_ge0028)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00271 (alu0/udiv/tremainder_0_mux0027)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<2>)
+     MUXCY:CI->O         100   0.269   1.316  alu0/udiv/Mcompar_tremainder_28_cmp_ge0028_cy<31> (alu0/udiv/tremainder_28_cmp_ge0028)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_1_mux0027 (alu0/udiv/tremainder_1_mux0027)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<5>)
@@ -1479,8 +1500,8 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<31> (alu0/udiv/tremainder_28_cmp_ge0029)
-     LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00281 (alu0/udiv/tremainder_0_mux0028)
+     MUXCY:CI->O         110   0.269   1.319  alu0/udiv/Mcompar_tremainder_28_cmp_ge0029_cy<31> (alu0/udiv/tremainder_28_cmp_ge0029)
+     LUT3:I2->O            4   0.648   0.587  alu0/udiv/tremainder_0_mux00281 (alu0/udiv/tremainder_0_mux0028)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tquotient_2_cmp_ge0000_cy<1> (alu0/udiv/Mcompar_tquotient_2_cmp_ge0000_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_2_cmp_ge0000_cy<2> (alu0/udiv/Mcompar_tquotient_2_cmp_ge0000_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_2_cmp_ge0000_cy<3> (alu0/udiv/Mcompar_tquotient_2_cmp_ge0000_cy<3>)
@@ -1511,7 +1532,7 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_2_cmp_ge0000_cy<28> (alu0/udiv/Mcompar_tquotient_2_cmp_ge0000_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_2_cmp_ge0000_cy<29> (alu0/udiv/Mcompar_tquotient_2_cmp_ge0000_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tquotient_2_cmp_ge0000_cy<30> (alu0/udiv/Mcompar_tquotient_2_cmp_ge0000_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  alu0/udiv/Mcompar_tquotient_2_cmp_ge0000_cy<31> (alu0/udiv/tquotient_2_cmp_ge0000)
+     MUXCY:CI->O         115   0.269   1.320  alu0/udiv/Mcompar_tquotient_2_cmp_ge0000_cy<31> (alu0/udiv/tquotient_2_cmp_ge0000)
      LUT3:I2->O            3   0.648   0.531  alu0/udiv/tremainder_0_mux00291 (alu0/udiv/tremainder_0_mux0029)
      MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0025_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0025_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0025_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0025_cy<2>)
@@ -1543,11 +1564,9 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0025_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0025_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0025_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0025_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0025_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0025_cy<30>)
-     MUXCY:CI->O          94   0.269   1.314  alu0/udiv/Mcompar_tremainder_28_cmp_ge0025_cy<31> (alu0/udiv/tremainder_28_cmp_ge0025)
-     LUT3:I2->O            1   0.648   0.420  alu0/udiv/tremainder_0_mux00301 (alu0/udiv/tremainder_0_mux0030)
-     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<1> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<2> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<3>)
+     MUXCY:CI->O         116   0.269   1.321  alu0/udiv/Mcompar_tremainder_28_cmp_ge0025_cy<31> (alu0/udiv/tremainder_28_cmp_ge0025)
+     LUT3:I2->O            1   0.648   0.420  alu0/udiv/tremainder_2_mux0030 (alu0/udiv/tremainder_2_mux0030)
+     MUXCY:DI->O           1   0.787   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<3> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<4> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<5> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<5>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<6> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<6>)
@@ -1575,14 +1594,45 @@ Delay:               177.966ns (Levels of Logic = 1005)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<28> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<29> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<30> (alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<30>)
-     MUXCY:CI->O           5   0.269   0.636  alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<31> (alu0/udiv/tremainder_28_cmp_ge0027)
-     LUT4_D:I3->O         15   0.648   1.020  alu0/Result1_mux0005<6>131 (alu0/N184)
-     LUT4_L:I3->LO         1   0.648   0.103  alu0/Result1_mux0005<23>525 (alu0/Result1_mux0005<23>525)
-     LUT4:I3->O            1   0.648   0.000  alu0/Result1_mux0005<23>5621 (alu0/Result1_mux0005<23>562)
-     FDRS:D                    0.252          alu0/Result1_23
+     MUXCY:CI->O          38   0.269   1.407  alu0/udiv/Mcompar_tremainder_28_cmp_ge0027_cy<31> (alu0/udiv/tremainder_28_cmp_ge0027)
+     LUT1:I0->O            1   0.648   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<0>_rt (alu0/udiv/Madd_quotient_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.632   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<0> (alu0/udiv/Madd_quotient_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<1> (alu0/udiv/Madd_quotient_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<2> (alu0/udiv/Madd_quotient_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<3> (alu0/udiv/Madd_quotient_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<4> (alu0/udiv/Madd_quotient_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<5> (alu0/udiv/Madd_quotient_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<6> (alu0/udiv/Madd_quotient_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<7> (alu0/udiv/Madd_quotient_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<8> (alu0/udiv/Madd_quotient_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<9> (alu0/udiv/Madd_quotient_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<10> (alu0/udiv/Madd_quotient_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<11> (alu0/udiv/Madd_quotient_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<12> (alu0/udiv/Madd_quotient_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<13> (alu0/udiv/Madd_quotient_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<14> (alu0/udiv/Madd_quotient_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<15> (alu0/udiv/Madd_quotient_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<16> (alu0/udiv/Madd_quotient_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<17> (alu0/udiv/Madd_quotient_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<18> (alu0/udiv/Madd_quotient_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<19> (alu0/udiv/Madd_quotient_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<20> (alu0/udiv/Madd_quotient_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<21> (alu0/udiv/Madd_quotient_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<22> (alu0/udiv/Madd_quotient_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<23> (alu0/udiv/Madd_quotient_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<24> (alu0/udiv/Madd_quotient_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<25> (alu0/udiv/Madd_quotient_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<26> (alu0/udiv/Madd_quotient_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<27> (alu0/udiv/Madd_quotient_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<28> (alu0/udiv/Madd_quotient_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<29> (alu0/udiv/Madd_quotient_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  alu0/udiv/Madd_quotient_addsub0000_cy<30> (alu0/udiv/Madd_quotient_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.423  alu0/udiv/Madd_quotient_addsub0000_xor<31> (alu0/udiv/quotient_addsub0000<31>)
+     LUT4:I3->O            1   0.648   0.000  alu0/Result2_mux0000<31>37 (alu0/Result2_mux0000<31>37)
+     FDRS:D                    0.252          alu0/Result2_31
     ----------------------------------------
-    Total                    177.966ns (116.569ns logic, 61.397ns route)
-                                       (65.5% logic, 34.5% route)
+    Total                    186.811ns (122.615ns logic, 64.196ns route)
+                                       (65.6% logic, 34.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
@@ -1645,14 +1695,14 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 62.00 secs
-Total CPU time to Xst completion: 61.92 secs
+Total REAL time to Xst completion: 70.00 secs
+Total CPU time to Xst completion: 70.28 secs
  
 --> 
 
-Total memory usage is 396884 kilobytes
+Total memory usage is 404628 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   12 (   0 filtered)
+Number of warnings :   18 (   0 filtered)
 Number of infos    :    5 (   0 filtered)
 

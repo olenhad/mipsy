@@ -53,37 +53,44 @@ component uaddsub32 is
            result : out  STD_LOGIC_VECTOR(31 downto 0);
 			  overflow : out STD_LOGIC);
 end component;
-component umul32 is
-    Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
-           operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
-           result1 : out  STD_LOGIC_VECTOR(31 downto 0);
-			  result2 : out STD_LOGIC_VECTOR(31 downto 0));
-end component;
+
 component mul32 is
     Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
            operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
+			  isSigned : in std_logic;
            result1 : out  STD_LOGIC_VECTOR(31 downto 0);
 			  result2 : out STD_LOGIC_VECTOR(31 downto 0));
 end component;
 component udiv32 is
     Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
            operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
-			  clk : in std_logic;
+			  isSigned: in STD_LOGIC;
            remainder : out  STD_LOGIC_VECTOR(31 downto 0);
 			  quotient : out STD_LOGIC_VECTOR(31 downto 0);
 			  exception : out std_logic);
 end component;
 
+
 signal addsubResult : std_logic_vector(31 downto 0);
 signal uaddsubResult : std_logic_vector(31 downto 0);
+
 signal mulResult : std_logic_vector(63 downto 0);
-signal umulResult : std_logic_vector(63 downto 0);
+signal mulIsSigned : std_logic;
+
 signal udivRemainder : std_logic_vector(31 downto 0);
 signal udivQuotient : std_logic_vector(31 downto 0);
 signal udivException : std_logic;
+signal udivIsSigned : std_logic;
+
+signal divRemainder : std_logic_vector(31 downto 0);
+signal divQuotient : std_logic_vector(31 downto 0);
+signal divException : std_logic;
+
+
 signal isAdd: std_logic;
 signal isOverflowAdd : std_logic;
 signal isOverflowAddU : std_logic;
+
 begin
 addsub: addsub32 port map (operand1 => operand1, 
 									operand2 => operand2,
@@ -99,20 +106,18 @@ uaddsub: uaddsub32 port map (operand1 => operand1,
 									 
 mult: mul32 port map ( operand1 => operand1,
 							  operand2 => operand2,
+							  isSigned => mulIsSigned,
 							  result1 => mulResult(31 downto 0),
 							  result2 => mulResult(63 downto 32));
 
-umult: umul32 port map ( operand1 => operand1,
-							  operand2 => operand2,
-							  result1 => umulResult(31 downto 0),
-							  result2 => umulResult(63 downto 32));
-
 udiv: udiv32 port map ( operand1 => operand1,
 							  operand2 => operand2,
-							  clk => clk,
+							  isSigned => udivIsSigned,
 							  remainder => udivRemainder,
 							  quotient => udivQuotient,
 							  exception => udivException);
+
+
 process (Clk)
 begin  
    if (Clk'event and Clk = '1') then
@@ -147,19 +152,27 @@ begin
 			Debug <= ( 0 => isOverflowAddU, others => '0');
 		elsif Control = b"000101" then
 		-- MULT
+			mulIsSigned <= '1';
 			Result1 <= mulResult(31 downto 0);
 			Result2 <= mulResult(63 downto 32);
 		elsif Control = b"000110" then
 		-- MULTU
-			Result1 <= umulResult(31 downto 0);
-			Result2 <= umulResult(63 downto 32);
+			mulIsSigned <= '0';
+			Result1 <= mulResult(31 downto 0);
+			Result2 <= mulResult(63 downto 32);
 		elsif Control = b"000111" then
-		-- DIVU
+		-- DIV
 			Result1 <= udivRemainder;
 			Result2 <= udivQuotient;
-			Debug <= ( 1 => udivException, others => '0');
+			udivIsSigned <= '1';
+			Debug <= ( 1 => divException, others => '0');
+		
 		elsif Control = b"001000" then
-		-- DIVU
+		-- DIVU	
+			Result1 <= udivRemainder;
+			Result2 <= udivQuotient;
+			udivIsSigned <= '0';
+			Debug <= ( 1 => udivException, others => '0');
 		elsif Control = b"001001" then
 		-- AND
 			Result1 <= operand1 and operand2;

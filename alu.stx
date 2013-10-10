@@ -1,41 +1,46 @@
 Release 13.2 - xst O.61xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:/Users/pc richard/Documents/CG3207/cg3207-project/xst/projnav.tmp
+--> Parameter TMPDIR set to C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.24 secs
+Total CPU time to Xst completion: 0.07 secs
  
---> Parameter xsthdpdir set to C:/Users/pc richard/Documents/CG3207/cg3207-project/xst
+--> Parameter xsthdpdir set to C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd" in Library work.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/umul32.vhd" in Library work.
+Architecture behavioral of Entity umul32 is up to date.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uadder32.vhd" in Library work.
 Architecture behavioral of Entity uadder32 is up to date.
-Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" in Library work.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/adder32.vhd" in Library work.
 Architecture behavioral of Entity adder32 is up to date.
-Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" in Library work.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/addsub32.vhd" in Library work.
 Architecture behavioral of Entity addsub32 is up to date.
-Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd" in Library work.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uaddsub32.vhd" in Library work.
 Architecture behavioral of Entity uaddsub32 is up to date.
-Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd" in Library work.
-Entity <alu> compiled.
-Entity <alu> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd" in Library work.
+Architecture behavioral of Entity mul32 is up to date.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/udiv32.vhd" in Library work.
+Architecture behavioral of Entity udiv32 is up to date.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.41 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> 
 
-Total memory usage is 197900 kilobytes
+Total memory usage is 200236 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

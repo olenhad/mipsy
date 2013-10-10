@@ -1,4 +1,3 @@
-vhdl work "umul32.vhd"
 vhdl work "uadder32.vhd"
 vhdl work "adder32.vhd"
 vhdl work "udiv32.vhd"

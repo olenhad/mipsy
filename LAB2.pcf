@@ -1,8 +1,11 @@
 //! **************************************************************************
-// Written by: Map O.61xd on Thu Oct 10 23:25:23 2013
+// Written by: Map O.61xd on Fri Oct 11 01:41:33 2013
 //! **************************************************************************
 
 SCHEMATIC START;
+NET
+        "mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/pc_write_I"
+        USELOWSKEWLINES;
 COMP "UART_Rx" LOCATE = SITE "A3" LEVEL 1;
 COMP "UART_Tx" LOCATE = SITE "B3" LEVEL 1;
 COMP "D2" LOCATE = SITE "B15" LEVEL 1;
@@ -14,9 +17,6 @@ COMP "Reset" LOCATE = SITE "H4" LEVEL 1;
 COMP "PUSH_A" LOCATE = SITE "K3" LEVEL 1;
 COMP "PUSH_B" LOCATE = SITE "H5" LEVEL 1;
 COMP "PUSH_C" LOCATE = SITE "L3" LEVEL 1;
-NET
-        "mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/pc_write_I"
-        USELOWSKEWLINES;
 PIN mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1_pins<26>
         = BEL
         "mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1"
@@ -157,7 +157,8 @@ PIN mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1_pins<27>
         = BEL
         "mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1"
         PINNAME CLKB;
-TIMEGRP TNM_Clk = BEL "alu0/Debug_1" BEL "alu0/Debug_0" BEL "alu0/isAdd" BEL
+TIMEGRP TNM_Clk = BEL "alu0/Debug_1" BEL "alu0/Debug_0" BEL
+        "alu0/udivIsSigned" BEL "alu0/isAdd" BEL "alu0/mulIsSigned" BEL
         "alu0/Result2_31" BEL "alu0/Result2_30" BEL "alu0/Result2_29" BEL
         "alu0/Result2_28" BEL "alu0/Result2_27" BEL "alu0/Result2_26" BEL
         "alu0/Result2_25" BEL "alu0/Result2_24" BEL "alu0/Result2_23" BEL

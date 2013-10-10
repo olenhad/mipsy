@@ -43,6 +43,7 @@ ARCHITECTURE behavior OF test_mul32 IS
     PORT(
          operand1 : IN  std_logic_vector(31 downto 0);
          operand2 : IN  std_logic_vector(31 downto 0);
+			isSigned : in std_logic;
          result1 : OUT  std_logic_vector(31 downto 0);
          result2 : OUT  std_logic_vector(31 downto 0)
         );
@@ -52,7 +53,7 @@ ARCHITECTURE behavior OF test_mul32 IS
    --Inputs
    signal operand1 : std_logic_vector(31 downto 0) := (others => '0');
    signal operand2 : std_logic_vector(31 downto 0) := (others => '0');
-
+	signal isSigned : std_logic;
  	--Outputs
    signal result1 : std_logic_vector(31 downto 0);
    signal result2 : std_logic_vector(31 downto 0);
@@ -67,6 +68,7 @@ BEGIN
    uut: mul32 PORT MAP (
           operand1 => operand1,
           operand2 => operand2,
+			 isSigned => isSigned,
           result1 => result1,
           result2 => result2
         );
@@ -90,6 +92,7 @@ BEGIN
    --   wait for <clock>_period*10;
 
       -- insert stimulus here
+		isSigned <= '0';
 		operand1 <= x"00000002";
 		operand2 <= x"00000004";
 		wait for 100 ns;
@@ -116,6 +119,35 @@ BEGIN
 		operand1 <= x"80000000";
 		operand2 <= x"FFFFFFFF";
 		wait for 100 ns;
+		
+		isSigned <= '1';
+		operand1 <= x"00000002";
+		operand2 <= x"00000004";
+		wait for 100 ns;
+		operand1 <= x"fffffffe";
+		operand2 <= x"fffffffe";
+		wait for 100 ns;
+		
+		operand1 <= x"7fffffff";
+		operand2 <= x"7fffffff";
+		wait for 100 ns;
+		
+		operand1 <= x"00000000";
+		operand2 <= x"00000002";
+		wait for 100 ns;
+		
+		operand1 <= x"80000000";
+		operand2 <= x"80000000";
+		wait for 100 ns;
+		
+		operand1 <= x"00000002";
+		operand2 <= x"FFFFFFFF";
+		wait for 100 ns;
+		
+		operand1 <= x"80000000";
+		operand2 <= x"FFFFFFFF";
+		wait for 100 ns;
+      
       wait;
    end process;
 
