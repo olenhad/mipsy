@@ -43,6 +43,7 @@ ARCHITECTURE behavior OF test_udiv32 IS
     PORT(
          operand1 : IN  std_logic_vector(31 downto 0);
          operand2 : IN  std_logic_vector(31 downto 0);
+			clk : in std_logic;
 			isSigned : in std_logic;
          remainder : OUT  std_logic_vector(31 downto 0);
          quotient : OUT  std_logic_vector(31 downto 0);
@@ -55,6 +56,7 @@ ARCHITECTURE behavior OF test_udiv32 IS
    signal operand1 : std_logic_vector(31 downto 0) := (others => '0');
    signal operand2 : std_logic_vector(31 downto 0) := (others => '0');
  	signal isSigned : std_logic;
+	signal clk : std_logic;
 	--Outputs
    signal remainder : std_logic_vector(31 downto 0);
    signal quotient : std_logic_vector(31 downto 0);
@@ -70,20 +72,21 @@ BEGIN
    uut: udiv32 PORT MAP (
           operand1 => operand1,
           operand2 => operand2,
+			 clk => clk,
 			 isSigned => isSigned,
           remainder => remainder,
           quotient => quotient,
           exception => exception
         );
 
-   -- Clock process definitions
---   clk_process :process
- --  begin
---		clk <= '0';
---		wait for clk_period/2;
---	   clk <= '1';
---	   wait for clk_period/2;
- --  end process;
+    --Clock process definitions
+   clk_process :process
+   begin
+		clk <= '0';
+		wait for clk_period/2;
+	   clk <= '1';
+	   wait for clk_period/2;
+   end process;
  
 
    -- Stimulus process

@@ -64,6 +64,7 @@ end component;
 component udiv32 is
     Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
            operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
+			  clk: in STD_LOGIC;
 			  isSigned: in STD_LOGIC;
            remainder : out  STD_LOGIC_VECTOR(31 downto 0);
 			  quotient : out STD_LOGIC_VECTOR(31 downto 0);
@@ -112,6 +113,7 @@ mult: mul32 port map ( operand1 => operand1,
 
 udiv: udiv32 port map ( operand1 => operand1,
 							  operand2 => operand2,
+							  clk => clk,
 							  isSigned => udivIsSigned,
 							  remainder => udivRemainder,
 							  quotient => udivQuotient,

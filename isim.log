@@ -8,6 +8,6 @@ This is a Lite version of ISim.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
-# run 600 ns
+# run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.

@@ -1,11 +1,8 @@
 //! **************************************************************************
-// Written by: Map O.61xd on Fri Oct 11 01:41:33 2013
+// Written by: Map O.61xd on Fri Oct 11 02:50:40 2013
 //! **************************************************************************
 
 SCHEMATIC START;
-NET
-        "mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/pc_write_I"
-        USELOWSKEWLINES;
 COMP "UART_Rx" LOCATE = SITE "A3" LEVEL 1;
 COMP "UART_Tx" LOCATE = SITE "B3" LEVEL 1;
 COMP "D2" LOCATE = SITE "B15" LEVEL 1;
@@ -17,6 +14,9 @@ COMP "Reset" LOCATE = SITE "H4" LEVEL 1;
 COMP "PUSH_A" LOCATE = SITE "K3" LEVEL 1;
 COMP "PUSH_B" LOCATE = SITE "H5" LEVEL 1;
 COMP "PUSH_C" LOCATE = SITE "L3" LEVEL 1;
+NET
+        "mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/pc_write_I"
+        USELOWSKEWLINES;
 PIN mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1_pins<26>
         = BEL
         "mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1"
