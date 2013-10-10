@@ -9,23 +9,25 @@ Target Device  : xc3s400a
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Thu Oct 10 17:08:42 2013
+Mapped Date    : Thu Oct 10 19:26:02 2013
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   48
+Number of warnings:   52
 Logic Utilization:
-  Number of Slice Flip Flops:           551 out of   7,168    7%
-  Number of 4 input LUTs:             3,550 out of   7,168   49%
+  Total Number Slice Registers:         616 out of   7,168    8%
+    Number used as Flip Flops:          553
+    Number used as Latches:              63
+  Number of 4 input LUTs:             6,658 out of   7,168   92%
 Logic Distribution:
-  Number of occupied Slices:          2,002 out of   3,584   55%
-    Number of Slices containing only related logic:   2,002 out of   2,002 100%
-    Number of Slices containing unrelated logic:          0 out of   2,002   0%
+  Number of occupied Slices:          3,582 out of   3,584   99%
+    Number of Slices containing only related logic:   3,582 out of   3,582 100%
+    Number of Slices containing unrelated logic:          0 out of   3,582   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       3,618 out of   7,168   50%
-    Number used as logic:             3,218
-    Number used as a route-thru:         68
+  Total Number of 4 input LUTs:       6,730 out of   7,168   93%
+    Number used as logic:             6,326
+    Number used as a route-thru:         72
     Number used for Dual Port RAMs:     282
       (Two LUTs used per Dual Port RAM)
     Number used as Shift registers:      50
@@ -34,15 +36,15 @@ Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
   Number of bonded IOBs:                 11 out of     195    5%
-  Number of BUFGMUXs:                     1 out of      24    4%
+  Number of BUFGMUXs:                     2 out of      24    8%
   Number of MULT18X18SIOs:                8 out of      20   40%
   Number of RAMB16BWEs:                  16 out of      20   80%
 
-Average Fanout of Non-Clock Nets:                3.35
+Average Fanout of Non-Clock Nets:                3.45
 
-Peak Memory Usage:  284 MB
-Total REAL time to MAP completion:  5 secs 
-Total CPU time to MAP completion:   5 secs 
+Peak Memory Usage:  305 MB
+Total REAL time to MAP completion:  7 secs 
+Total CPU time to MAP completion:   7 secs 
 
 NOTES:
 
@@ -83,6 +85,18 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:Pack:266 - The function generator alu0/Result1_mux0005<0>11 failed to
+   merge with F5 multiplexer alu0/Result1_mux0005<30>499_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator alu0/Result1_mux0005<0>11 failed to
+   merge with F5 multiplexer alu0/Result1_mux0005<31>477_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator alu0/Result1_mux0005<0>11 failed to
+   merge with F5 multiplexer alu0/Result1_mux0005<26>473_f5.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator alu0/Result1_mux0005<0>11 failed to
+   merge with F5 multiplexer alu0/Result1_mux0005<1>515_f5.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator
    mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
    FPGA.PreFetch_Buffers[24].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
@@ -428,7 +442,7 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 Section 4 - Removed Logic Summary
 ---------------------------------
   58 block(s) removed
-  83 block(s) optimized away
+  82 block(s) optimized away
   10 signal(s) removed
 
 Section 5 - Removed Logic
@@ -651,8 +665,6 @@ Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_1
-   optimized to 0
 FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_10
    optimized to 0
 FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_11

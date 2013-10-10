@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.61xd on Thu Oct 10 17:08:46 2013
+// Written by: Map O.61xd on Thu Oct 10 19:26:08 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -157,28 +157,29 @@ PIN mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1_pins<27>
         = BEL
         "mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1"
         PINNAME CLKB;
-TIMEGRP TNM_Clk = BEL "alu0/Debug" BEL "alu0/isAdd" BEL "alu0/Result2_31" BEL
-        "alu0/Result2_30" BEL "alu0/Result2_29" BEL "alu0/Result2_28" BEL
-        "alu0/Result2_27" BEL "alu0/Result2_26" BEL "alu0/Result2_25" BEL
-        "alu0/Result2_24" BEL "alu0/Result2_23" BEL "alu0/Result2_22" BEL
-        "alu0/Result2_21" BEL "alu0/Result2_20" BEL "alu0/Result2_19" BEL
-        "alu0/Result2_18" BEL "alu0/Result2_17" BEL "alu0/Result2_16" BEL
-        "alu0/Result2_15" BEL "alu0/Result2_14" BEL "alu0/Result2_13" BEL
-        "alu0/Result2_12" BEL "alu0/Result2_11" BEL "alu0/Result2_10" BEL
-        "alu0/Result2_9" BEL "alu0/Result2_8" BEL "alu0/Result2_7" BEL
-        "alu0/Result2_6" BEL "alu0/Result2_5" BEL "alu0/Result2_4" BEL
-        "alu0/Result2_3" BEL "alu0/Result2_2" BEL "alu0/Result2_1" BEL
-        "alu0/Result2_0" BEL "alu0/Result1_31" BEL "alu0/Result1_30" BEL
-        "alu0/Result1_29" BEL "alu0/Result1_28" BEL "alu0/Result1_27" BEL
-        "alu0/Result1_26" BEL "alu0/Result1_25" BEL "alu0/Result1_24" BEL
-        "alu0/Result1_23" BEL "alu0/Result1_22" BEL "alu0/Result1_21" BEL
-        "alu0/Result1_20" BEL "alu0/Result1_19" BEL "alu0/Result1_18" BEL
-        "alu0/Result1_17" BEL "alu0/Result1_16" BEL "alu0/Result1_15" BEL
-        "alu0/Result1_14" BEL "alu0/Result1_13" BEL "alu0/Result1_12" BEL
-        "alu0/Result1_11" BEL "alu0/Result1_10" BEL "alu0/Result1_9" BEL
-        "alu0/Result1_8" BEL "alu0/Result1_7" BEL "alu0/Result1_6" BEL
-        "alu0/Result1_5" BEL "alu0/Result1_4" BEL "alu0/Result1_3" BEL
-        "alu0/Result1_2" BEL "alu0/Result1_1" BEL "alu0/Result1_0" BEL
+TIMEGRP TNM_Clk = BEL "alu0/Debug_1" BEL "alu0/Debug_0" BEL "alu0/isAdd" BEL
+        "alu0/Result2_31" BEL "alu0/Result2_30" BEL "alu0/Result2_29" BEL
+        "alu0/Result2_28" BEL "alu0/Result2_27" BEL "alu0/Result2_26" BEL
+        "alu0/Result2_25" BEL "alu0/Result2_24" BEL "alu0/Result2_23" BEL
+        "alu0/Result2_22" BEL "alu0/Result2_21" BEL "alu0/Result2_20" BEL
+        "alu0/Result2_19" BEL "alu0/Result2_18" BEL "alu0/Result2_17" BEL
+        "alu0/Result2_16" BEL "alu0/Result2_15" BEL "alu0/Result2_14" BEL
+        "alu0/Result2_13" BEL "alu0/Result2_12" BEL "alu0/Result2_11" BEL
+        "alu0/Result2_10" BEL "alu0/Result2_9" BEL "alu0/Result2_8" BEL
+        "alu0/Result2_7" BEL "alu0/Result2_6" BEL "alu0/Result2_5" BEL
+        "alu0/Result2_4" BEL "alu0/Result2_3" BEL "alu0/Result2_2" BEL
+        "alu0/Result2_1" BEL "alu0/Result2_0" BEL "alu0/Result1_31" BEL
+        "alu0/Result1_30" BEL "alu0/Result1_29" BEL "alu0/Result1_28" BEL
+        "alu0/Result1_27" BEL "alu0/Result1_26" BEL "alu0/Result1_25" BEL
+        "alu0/Result1_24" BEL "alu0/Result1_23" BEL "alu0/Result1_22" BEL
+        "alu0/Result1_21" BEL "alu0/Result1_20" BEL "alu0/Result1_19" BEL
+        "alu0/Result1_18" BEL "alu0/Result1_17" BEL "alu0/Result1_16" BEL
+        "alu0/Result1_15" BEL "alu0/Result1_14" BEL "alu0/Result1_13" BEL
+        "alu0/Result1_12" BEL "alu0/Result1_11" BEL "alu0/Result1_10" BEL
+        "alu0/Result1_9" BEL "alu0/Result1_8" BEL "alu0/Result1_7" BEL
+        "alu0/Result1_6" BEL "alu0/Result1_5" BEL "alu0/Result1_4" BEL
+        "alu0/Result1_3" BEL "alu0/Result1_2" BEL "alu0/Result1_1" BEL
+        "alu0/Result1_0" BEL
         "mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[31].Register_File_Bit_I/Using_LUT4.RAM16x1D_Reg1_Low.SLICEM_F"
         BEL
         "mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[31].Register_File_Bit_I/Using_LUT4.RAM16x1D_Reg1_Low.SLICEM_G"
@@ -1459,6 +1460,7 @@ TIMEGRP TNM_Clk = BEL "alu0/Debug" BEL "alu0/isAdd" BEL "alu0/Result2_31" BEL
         "mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_30" BEL
         "mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_31" BEL
         "mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_0" BEL
+        "mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_1" BEL
         "mcs0/U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/UART_Status_3"
         BEL
         "mcs0/U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/overrun_error"

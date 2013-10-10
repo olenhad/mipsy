@@ -1,7 +1,7 @@
 Release 13.2 par O.61xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-HUNARKHANNA-PC::  Thu Oct 10 17:08:51 2013
+HUNARKHANNA-PC::  Thu Oct 10 19:26:12 2013
 
 par -w -intstyle ise -ol high -t 1 LAB2_map.ncd LAB2.ncd LAB2.pcf 
 
@@ -36,10 +36,10 @@ Design Summary Report:
    Number of External Bidir IOBs                  0
 
 
-   Number of BUFGMUXs                        1 out of 24      4%
+   Number of BUFGMUXs                        2 out of 24      8%
    Number of MULT18X18SIOs                   8 out of 20     40%
    Number of RAMB16BWEs                     16 out of 20     80%
-   Number of Slices                       2002 out of 3584   55%
+   Number of Slices                       3582 out of 3584   99%
       Number of SLICEMs                    169 out of 1792    9%
 
 
@@ -49,51 +49,55 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 3 secs 
-Finished initial Timing Analysis.  REAL time: 3 secs 
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 4 secs 
 
 
 Starting Placer
-Total REAL time at the beginning of Placer: 3 secs 
-Total CPU  time at the beginning of Placer: 3 secs 
+Total REAL time at the beginning of Placer: 4 secs 
+Total CPU  time at the beginning of Placer: 4 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:b85b4842) REAL time: 4 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:c20916ec) REAL time: 5 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:b85b4842) REAL time: 4 secs 
+Phase 2.7  Design Feasibility Check (Checksum:c20916ec) REAL time: 5 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:b85b4842) REAL time: 4 secs 
+Phase 3.31  Local Placement Optimization (Checksum:c20916ec) REAL time: 5 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:fe9262a0) REAL time: 6 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:a3f33d4f) REAL time: 7 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:fe9262a0) REAL time: 6 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:a3f33d4f) REAL time: 7 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:fe9262a0) REAL time: 6 secs 
+Phase 6.36  Local Placement Optimization (Checksum:a3f33d4f) REAL time: 7 secs 
 
 Phase 7.8  Global Placement
-.....................
-.......................................
-.................
-..........
-Phase 7.8  Global Placement (Checksum:de570933) REAL time: 21 secs 
+........................
+...........................................................................................................................
+............................
+.........................................................................................................
+..........................................................
+.........................................................................
+............................................................................
+......................................................
+Phase 7.8  Global Placement (Checksum:5d4a7f73) REAL time: 35 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:de570933) REAL time: 21 secs 
+Phase 8.5  Local Placement Optimization (Checksum:5d4a7f73) REAL time: 36 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:510f96b2) REAL time: 26 secs 
+Phase 9.18  Placement Optimization (Checksum:3608ef69) REAL time: 43 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:510f96b2) REAL time: 26 secs 
+Phase 10.5  Local Placement Optimization (Checksum:3608ef69) REAL time: 44 secs 
 
-Total REAL time to Placer completion: 27 secs 
-Total CPU  time to Placer completion: 26 secs 
+Total REAL time to Placer completion: 44 secs 
+Total CPU  time to Placer completion: 44 secs 
 Writing design to file LAB2.ncd
 
 
@@ -101,26 +105,97 @@ Writing design to file LAB2.ncd
 Starting Router
 
 
-Phase  1  : 15431 unrouted;      REAL time: 29 secs 
+Phase  1  : 28630 unrouted;      REAL time: 47 secs 
 
-Phase  2  : 14682 unrouted;      REAL time: 30 secs 
+Phase  2  : 27798 unrouted;      REAL time: 48 secs 
 
-Phase  3  : 5187 unrouted;      REAL time: 31 secs 
+Phase  3  : 15821 unrouted;      REAL time: 51 secs 
 
-Phase  4  : 5187 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 32 secs 
+Phase  4  : 18709 unrouted; (Setup:14112754, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 36 secs 
+WARNING:Route:441 - The router has detected a very high timing score (2157026) for this design. It is extremely unlikely
+   the router will be able to meet your timing requirements. To prevent excessive run time the router will change
+   strategy. The router will now work to completely route this design but not to improve timing. This behavior will
+   allow you to use the Static Timing Report and FPGA Editor to isolate the paths with timing problems. The cause of
+   this behavior is either overly difficult constraints, or issues with the implementation or synthesis of logic in the
+   critical timing path. If you would prefer the router continue trying to meet timing and you are willing to accept a
+   long run time set the option "-xe c" to override the present behavior.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 36 secs 
+Phase  5  : 0 unrouted; (Setup:16723582, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 59 secs 
 
 Updating file: LAB2.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 38 secs 
+Phase  6  : 0 unrouted; (Setup:16723582, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 4 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 38 secs 
+Phase  7  : 0 unrouted; (Setup:16723582, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 5 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 39 secs 
+Phase  8  : 0 unrouted; (Setup:16718050, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 7 secs 
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_0_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 58 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_25_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_21_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_20_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_28_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_18_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_29_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_30_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_19_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_26_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_27_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_31_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_10_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_11_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_8_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_9_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_6_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_7_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_4_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_5_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_12_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_13_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_2_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_3_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_17_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_24_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_16_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_23_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_15_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_22_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_14_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 93 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:alu0/udiv/tquotient_1_cmp_ge0000 may have excessive skew because 
+      1 CLK pins and 97 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 39 secs 
-Total CPU time to Router completion: 38 secs 
+Total REAL time to Router completion: 2 mins 7 secs 
+Total CPU time to Router completion: 2 mins 6 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -138,7 +213,106 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           Clk_BUFGP | BUFGMUX_X2Y10| No   |  591 |  0.172     |  1.148      |
+|alu0/udiv/tremainder |              |      |      |            |             |
+|         _10_not0000 | BUFGMUX_X1Y10| No   |   22 |  0.061     |  1.036      |
++---------------------+--------------+------+------+------------+-------------+
+|           Clk_BUFGP | BUFGMUX_X2Y10| No   |  591 |  0.159     |  1.129      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       31_cmp_ge0000 |         Local|      |   94 |  0.000     |  3.749      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       10_cmp_ge0000 |         Local|      |   94 |  0.000     |  5.058      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       11_cmp_ge0000 |         Local|      |   94 |  0.000     |  4.720      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|        1_cmp_ge0000 |         Local|      |   98 |  0.000     |  2.935      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|        8_cmp_ge0000 |         Local|      |   94 |  0.000     |  3.072      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|        9_cmp_ge0000 |         Local|      |   94 |  0.000     |  3.328      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|        0_cmp_ge0000 |         Local|      |   59 |  0.000     |  2.628      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|        6_cmp_ge0000 |         Local|      |   94 |  0.000     |  4.384      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|        7_cmp_ge0000 |         Local|      |   94 |  0.000     |  4.542      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|        4_cmp_ge0000 |         Local|      |   94 |  0.000     |  2.254      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|        5_cmp_ge0000 |         Local|      |   94 |  0.000     |  2.853      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       12_cmp_ge0000 |         Local|      |   94 |  0.000     |  5.100      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       13_cmp_ge0000 |         Local|      |   94 |  0.000     |  3.016      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|        2_cmp_ge0000 |         Local|      |   94 |  0.000     |  1.567      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|        3_cmp_ge0000 |         Local|      |   94 |  0.000     |  3.004      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       27_cmp_ge0000 |         Local|      |   94 |  0.000     |  1.451      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       26_cmp_ge0000 |         Local|      |   94 |  0.000     |  4.209      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       19_cmp_ge0000 |         Local|      |   94 |  0.000     |  5.290      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       30_cmp_ge0000 |         Local|      |   94 |  0.000     |  1.557      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       29_cmp_ge0000 |         Local|      |   94 |  0.000     |  2.092      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       18_cmp_ge0000 |         Local|      |   94 |  0.000     |  4.752      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       28_cmp_ge0000 |         Local|      |   94 |  0.000     |  4.627      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       20_cmp_ge0000 |         Local|      |   94 |  0.000     |  4.606      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       21_cmp_ge0000 |         Local|      |   94 |  0.000     |  3.981      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       25_cmp_ge0000 |         Local|      |   94 |  0.000     |  5.483      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       17_cmp_ge0000 |         Local|      |   94 |  0.000     |  4.675      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       24_cmp_ge0000 |         Local|      |   94 |  0.000     |  3.965      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       16_cmp_ge0000 |         Local|      |   94 |  0.000     |  5.042      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       23_cmp_ge0000 |         Local|      |   94 |  0.000     |  4.654      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       15_cmp_ge0000 |         Local|      |   94 |  0.000     |  2.156      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       22_cmp_ge0000 |         Local|      |   94 |  0.000     |  4.985      |
++---------------------+--------------+------+------+------------+-------------+
+|alu0/udiv/tquotient_ |              |      |      |            |             |
+|       14_cmp_ge0000 |         Local|      |   94 |  0.000     |  4.674      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -149,7 +323,24 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+Timing Score: 16718050 (Setup: 16718050, Hold: 0, Component Switching Limit: 0)
+
+WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
+   your design.
+
+   Review the timing report using Timing Analyzer (In ISE select "Post-Place &
+   Route Static Timing Report"). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
+
+   Try the Design Goal and Strategies for Timing Performance(In ISE select Project -> Design Goals & Strategies) to
+   ensure the best options are set in the tools for timing closure.
+
+   Use the Xilinx "SmartXplorer" script to try special combinations of
+   options known to produce very good results.
+
+   Visit the Xilinx technical support web at http://support.xilinx.com and go to
+   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
+   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
+   in your design.
 
 Asterisk (*) preceding a constraint indicates it was not met.
    This may be due to a setup or hold violation.
@@ -158,29 +349,29 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_Clk = PERIOD TIMEGRP "TNM_Clk" 16 MHz  | SETUP       |    32.698ns|    29.802ns|       0|           0
-  HIGH 50%                                  | HOLD        |     0.617ns|            |       0|           0
+* TS_Clk = PERIOD TIMEGRP "TNM_Clk" 16 MHz  | SETUP       |  -178.895ns|   241.395ns|     107|    16718050
+  HIGH 50%                                  | HOLD        |     0.766ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
-All constraints were met.
+1 constraint not met.
 
 
 Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 40 secs 
-Total CPU time to PAR completion: 39 secs 
+Total REAL time to PAR completion: 2 mins 9 secs 
+Total CPU time to PAR completion: 2 mins 8 secs 
 
-Peak Memory Usage:  356 MB
+Peak Memory Usage:  452 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
-Timing: Completed - No errors found.
+Timing: Completed - 107 errors found.
 
 Number of error messages: 0
-Number of warning messages: 0
+Number of warning messages: 34
 Number of info messages: 0
 
 Writing design to file LAB2.ncd

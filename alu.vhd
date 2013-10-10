@@ -152,7 +152,7 @@ begin
 			Result1 <= umulResult(31 downto 0);
 			Result2 <= umulResult(63 downto 32);
 		elsif Control = b"000111" then
-		-- DIV
+		-- DIVU
 			Result1 <= udivRemainder;
 			Result2 <= udivQuotient;
 			Debug <= ( 1 => udivException, others => '0');

@@ -43,8 +43,9 @@ ARCHITECTURE behavior OF test_udiv32 IS
     PORT(
          operand1 : IN  std_logic_vector(31 downto 0);
          operand2 : IN  std_logic_vector(31 downto 0);
+			clk : in std_logic;
          remainder : OUT  std_logic_vector(31 downto 0);
-         coeff : OUT  std_logic_vector(31 downto 0);
+         quotient : OUT  std_logic_vector(31 downto 0);
          exception : OUT  std_logic
         );
     END COMPONENT;
@@ -53,15 +54,15 @@ ARCHITECTURE behavior OF test_udiv32 IS
    --Inputs
    signal operand1 : std_logic_vector(31 downto 0) := (others => '0');
    signal operand2 : std_logic_vector(31 downto 0) := (others => '0');
-
+	signal clk : std_logic;
  	--Outputs
    signal remainder : std_logic_vector(31 downto 0);
-   signal coeff : std_logic_vector(31 downto 0);
+   signal quotient : std_logic_vector(31 downto 0);
    signal exception : std_logic;
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
  
- --  constant <clock>_period : time := 10 ns;
+   constant clk_period : time := 10 ns;
  
 BEGIN
  
@@ -69,19 +70,20 @@ BEGIN
    uut: udiv32 PORT MAP (
           operand1 => operand1,
           operand2 => operand2,
+			 clk => clk,
           remainder => remainder,
-          coeff => coeff,
+          quotient => quotient,
           exception => exception
         );
 
    -- Clock process definitions
-  -- <clock>_process :process
-   --begin
-		--<clock> <= '0';
-		--wait for <clock>_period/2;
-	--	<clock> <= '1';
-	--	wait for <clock>_period/2;
-   --end process;
+   clk_process :process
+   begin
+		clk <= '0';
+		wait for clk_period/2;
+	   clk <= '1';
+	   wait for clk_period/2;
+   end process;
  
 
    -- Stimulus process
@@ -95,16 +97,16 @@ BEGIN
       -- insert stimulus here 
 		operand1 <= x"ffffffff";
 		operand2 <= x"fffffffe";
-		wait for 100 ns;
+		wait for clk_period*34;
 		operand1 <= x"ffffffff";
 		operand2 <= x"00000000";
-		wait for 100 ns;
+		wait for clk_period*2;
 		operand1 <= x"ffffffff";
 		operand2 <= x"00000001";
-		wait for 100 ns;
+		wait for clk_period*34;
 		operand1 <= x"fffffffe";
 		operand2 <= x"ffffffff";
-		wait for 100 ns;
+		wait for clk_period*34;
 
       wait;
    end process;
