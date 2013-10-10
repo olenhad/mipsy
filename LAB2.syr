@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.24 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.24 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: LAB2.prj
 
@@ -104,18 +104,25 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd" in Library work.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/umul32.vhd" in Library work.
+Architecture behavioral of Entity umul32 is up to date.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uadder32.vhd" in Library work.
 Architecture behavioral of Entity uadder32 is up to date.
-Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" in Library work.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/adder32.vhd" in Library work.
 Architecture behavioral of Entity adder32 is up to date.
-Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" in Library work.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/addsub32.vhd" in Library work.
 Architecture behavioral of Entity addsub32 is up to date.
-Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd" in Library work.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uaddsub32.vhd" in Library work.
 Architecture behavioral of Entity uaddsub32 is up to date.
-Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd" in Library work.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd" in Library work.
+Architecture behavioral of Entity mul32 is up to date.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/udiv32.vhd" in Library work.
+Entity <udiv32> compiled.
+Entity <udiv32> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
 Entity <alu> compiled.
 Entity <alu> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" in Library work.
+Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" in Library work.
 Architecture structural of Entity lab2 is up to date.
 
 =========================================================================
@@ -129,6 +136,12 @@ Analyzing hierarchy for entity <addsub32> in library <work> (architecture <behav
 
 Analyzing hierarchy for entity <uaddsub32> in library <work> (architecture <behavioral>).
 
+Analyzing hierarchy for entity <mul32> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <umul32> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <udiv32> in library <work> (architecture <Behavioral>).
+
 Analyzing hierarchy for entity <adder32> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <uadder32> in library <work> (architecture <behavioral>).
@@ -138,13 +151,13 @@ Analyzing hierarchy for entity <uadder32> in library <work> (architecture <behav
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <LAB2> in library <work> (Architecture <structural>).
-WARNING:Xst:753 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" line 98: Unconnected output port 'UART_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" line 98: Unconnected output port 'GPI1_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" line 98: Unconnected output port 'GPI2_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" line 98: Unconnected output port 'GPI3_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" line 98: Unconnected output port 'GPI4_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" line 98: Unconnected output port 'INTC_IRQ' of component 'mcs'.
-WARNING:Xst:2211 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" line 98: Instantiating black box module <mcs>.
+WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 98: Unconnected output port 'UART_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 98: Unconnected output port 'GPI1_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 98: Unconnected output port 'GPI2_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 98: Unconnected output port 'GPI3_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 98: Unconnected output port 'GPI4_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 98: Unconnected output port 'INTC_IRQ' of component 'mcs'.
+WARNING:Xst:2211 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 98: Instantiating black box module <mcs>.
 Entity <LAB2> analyzed. Unit <LAB2> generated.
 
 Analyzing Entity <alu> in library <work> (Architecture <behavioral>).
@@ -162,440 +175,19 @@ Entity <uaddsub32> analyzed. Unit <uaddsub32> generated.
 Analyzing Entity <uadder32> in library <work> (Architecture <behavioral>).
 Entity <uadder32> analyzed. Unit <uadder32> generated.
 
+Analyzing Entity <mul32> in library <work> (Architecture <behavioral>).
+Entity <mul32> analyzed. Unit <mul32> generated.
 
-=========================================================================
-*                           HDL Synthesis                               *
-=========================================================================
+Analyzing Entity <umul32> in library <work> (Architecture <behavioral>).
+Entity <umul32> analyzed. Unit <umul32> generated.
 
-Performing bidirectional port resolution...
-
-Synthesizing Unit <adder32>.
-    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd".
-WARNING:Xst:653 - Signal <maxNegative> is used but never assigned. This sourceless signal will be automatically connected to value 10000000000000000000000000000000.
-WARNING:Xst:646 - Signal <complementedAdd<30:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Found 32-bit adder for signal <complementedAdd$addsub0000> created at line 46.
-    Found 32-bit adder for signal <complementedAdd$addsub0001> created at line 46.
-    Found 32-bit adder for signal <complementedAdd$addsub0002> created at line 46.
-    Found 32-bit adder for signal <interResult>.
-    Summary:
-	inferred   4 Adder/Subtractor(s).
-Unit <adder32> synthesized.
-
-
-Synthesizing Unit <uadder32>.
-    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd".
-    Found 33-bit adder for signal <largeResult>.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-Unit <uadder32> synthesized.
-
-
-Synthesizing Unit <addsub32>.
-    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd".
-    Found 32-bit adder for signal <newOperand2$addsub0000> created at line 49.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-Unit <addsub32> synthesized.
-
-
-Synthesizing Unit <uaddsub32>.
-    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd".
-    Found 32-bit adder for signal <newOperand2$addsub0000> created at line 50.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-Unit <uaddsub32> synthesized.
-
-
-Synthesizing Unit <alu>.
-    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd".
-    Found 32-bit register for signal <Debug>.
-    Found 32-bit register for signal <Result1>.
-    Found 32-bit register for signal <Result2>.
-    Found 1-bit register for signal <isAdd>.
-    Found 32-bit comparator equal for signal <Result1$cmp_eq0085> created at line 155.
-    Found 32-bit comparator not equal for signal <Result1$cmp_ne0000> created at line 162.
-    Found 32-bit xor2 for signal <Result1$xor0000> created at line 134.
-    Summary:
-	inferred  97 D-type flip-flop(s).
-	inferred   2 Comparator(s).
-Unit <alu> synthesized.
-
-
-Synthesizing Unit <LAB2>.
-    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd".
-Unit <LAB2> synthesized.
-
-
-=========================================================================
-HDL Synthesis Report
-
-Macro Statistics
-# Adders/Subtractors                                   : 7
- 32-bit adder                                          : 6
- 33-bit adder                                          : 1
-# Registers                                            : 4
- 1-bit register                                        : 1
- 32-bit register                                       : 3
-# Comparators                                          : 2
- 32-bit comparator equal                               : 1
- 32-bit comparator not equal                           : 1
-# Xors                                                 : 1
- 32-bit xor2                                           : 1
-
-=========================================================================
-
-=========================================================================
-*                       Advanced HDL Synthesis                          *
-=========================================================================
-
-Reading core <mcs.ngc>.
-Loading core <mcs> for timing and area information for instance <mcs0>.
-WARNING:Xst:1710 - FF/Latch <Debug_31> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_30> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_29> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_28> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_27> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_26> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_25> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_24> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_23> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_22> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_21> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_20> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_19> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_18> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_17> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_16> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_15> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_14> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_13> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_12> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_11> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_10> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_9> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_8> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_7> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_6> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_5> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_4> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_3> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_2> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Debug_1> (without init value) has a constant value of 0 in block <alu0>. This FF/Latch will be trimmed during the optimization process.
-
-=========================================================================
-Advanced HDL Synthesis Report
-
-Macro Statistics
-# Adders/Subtractors                                   : 6
- 32-bit adder                                          : 4
- 32-bit adder carry in                                 : 1
- 33-bit adder                                          : 1
-# Registers                                            : 97
- Flip-Flops                                            : 97
-# Comparators                                          : 2
- 32-bit comparator equal                               : 1
- 32-bit comparator not equal                           : 1
-# Xors                                                 : 1
- 32-bit xor2                                           : 1
-
-=========================================================================
-
-=========================================================================
-*                         Low Level Synthesis                           *
-=========================================================================
-WARNING:Xst:1710 - FF/Latch <Debug_31> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_30> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_29> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_28> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_27> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_26> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_25> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_24> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_23> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_22> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_21> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_20> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_19> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_18> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_17> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_16> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_15> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_14> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_13> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_12> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_11> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_10> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_9> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_8> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_7> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_6> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_5> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_4> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_3> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_2> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_1> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
-
-Optimizing unit <LAB2> ...
-
-Optimizing unit <adder32> ...
-
-Optimizing unit <alu> ...
-
-Mapping all equations...
-Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 45.
-INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
-   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
-   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
-INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
-INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
-   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
-   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
-INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
-
-Final Macro Processing ...
-
-=========================================================================
-Final Register Report
-
-Macro Statistics
-# Registers                                            : 66
- Flip-Flops                                            : 66
-
-=========================================================================
-
-=========================================================================
-*                           Partition Report                            *
-=========================================================================
-
-Partition Implementation Status
--------------------------------
-
-  No Partitions were found in this design.
-
--------------------------------
-
-=========================================================================
-*                            Final Report                               *
-=========================================================================
-Final Results
-RTL Top Level Output File Name     : LAB2.ngr
-Top Level Output File Name         : LAB2
-Output Format                      : NGC
-Optimization Goal                  : Speed
-Keep Hierarchy                     : No
-
-Design Statistics
-# IOs                              : 11
-
-Cell Usage :
-# BELS                             : 3401
-#      GND                         : 2
-#      INV                         : 105
-#      LUT1                        : 6
-#      LUT2                        : 111
-#      LUT2_D                      : 8
-#      LUT2_L                      : 14
-#      LUT3                        : 367
-#      LUT3_D                      : 69
-#      LUT3_L                      : 18
-#      LUT4                        : 1579
-#      LUT4_D                      : 49
-#      LUT4_L                      : 349
-#      MULT_AND                    : 34
-#      MUXCY                       : 223
-#      MUXCY_L                     : 77
-#      MUXF5                       : 175
-#      MUXF6                       : 1
-#      VCC                         : 2
-#      XORCY                       : 212
-# FlipFlops/Latches                : 657
-#      FD                          : 90
-#      FDE                         : 78
-#      FDR                         : 168
-#      FDRE                        : 246
-#      FDRS                        : 35
-#      FDRSE                       : 12
-#      FDS                         : 8
-#      FDSE                        : 20
-# RAMS                             : 157
-#      RAM16X1D                    : 141
-#      RAMB16BWE                   : 16
-# Shift Registers                  : 50
-#      SRL16                       : 1
-#      SRL16E                      : 49
-# Clock Buffers                    : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 10
-#      IBUF                        : 5
-#      OBUF                        : 5
-=========================================================================
-
-Device utilization summary:
----------------------------
-
-Selected Device : 3s400aft256-4 
-
- Number of Slices:                     1548  out of   3584    43%  
- Number of Slice Flip Flops:            657  out of   7168     9%  
- Number of 4 input LUTs:               3007  out of   7168    41%  
-    Number used as logic:              2675
-    Number used as Shift registers:      50
-    Number used as RAMs:                282
- Number of IOs:                          11
- Number of bonded IOBs:                  11  out of    195     5%  
- Number of BRAMs:                        16  out of     20    80%  
- Number of GCLKs:                         1  out of     24     4%  
-
----------------------------
-Partition Resource Summary:
----------------------------
-
-  No Partitions were found in this design.
-
----------------------------
-
-
-=========================================================================
-TIMING REPORT
-
-NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
-      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
-      GENERATED AFTER PLACE-and-ROUTE.
-
-Clock Information:
-------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 864   |
------------------------------------+------------------------+-------+
-
-Asynchronous Control Signals Information:
-----------------------------------------
-No asynchronous control signals found in this design
-
-Timing Summary:
----------------
-Speed Grade: -4
-
-   Minimum period: 14.529ns (Maximum Frequency: 68.830MHz)
-   Minimum input arrival time before clock: 1.548ns
-   Maximum output required time after clock: 5.531ns
-   Maximum combinational path delay: 5.816ns
-
-Timing Detail:
---------------
-All values displayed in nanoseconds (ns)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 14.529ns (frequency: 68.830MHz)
-  Total number of paths / destination ports: 269665 / 3625
--------------------------------------------------------------------------
-Delay:               14.529ns (Levels of Logic = 18)
-  Source:            mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_24 (FF)
-  Destination:       alu0/Result1_31 (FF)
-  Source Clock:      Clk rising
-  Destination Clock: Clk rising
-
-  Data Path: mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_24 to alu0/Result1_31
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDRE:C->Q            13   0.591   1.126  U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_24 (GPO3<24>)
-     end scope: 'mcs0'
-     LUT3:I0->O            1   0.648   0.000  alu0/Result1_cmp_eq00181_wg_lut<0> (alu0/Result1_cmp_eq00181_wg_lut<0>)
-     MUXCY:S->O            1   0.632   0.000  alu0/Result1_cmp_eq00181_wg_cy<0> (alu0/Result1_cmp_eq00181_wg_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/Result1_cmp_eq00181_wg_cy<1> (alu0/Result1_cmp_eq00181_wg_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/Result1_cmp_eq00181_wg_cy<2> (alu0/Result1_cmp_eq00181_wg_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/Result1_cmp_eq00181_wg_cy<3> (alu0/Result1_cmp_eq00181_wg_cy<3>)
-     MUXCY:CI->O           1   0.269   0.452  alu0/Result1_cmp_eq00181_wg_cy<4> (alu0/Result1_cmp_eq00181_wg_cy<4>)
-     LUT3_D:I2->O         52   0.648   1.301  alu0/Result1_cmp_eq00181_wg_cy<6>1 (alu0/Result1_cmp_eq00181_wg_cy<6>)
-     LUT3_D:I2->O         25   0.648   1.340  alu0/Result1_cmp_eq00351 (alu0/Result1_cmp_eq0035)
-     LUT4:I1->O            1   0.643   0.000  alu0/Result1_mux0005<0>41_wg_lut<3> (alu0/Result1_mux0005<0>41_wg_lut<3>)
-     MUXCY:S->O            1   0.632   0.000  alu0/Result1_mux0005<0>41_wg_cy<3> (alu0/Result1_mux0005<0>41_wg_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/Result1_mux0005<0>41_wg_cy<4> (alu0/Result1_mux0005<0>41_wg_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/Result1_mux0005<0>41_wg_cy<5> (alu0/Result1_mux0005<0>41_wg_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  alu0/Result1_mux0005<0>41_wg_cy<6> (alu0/Result1_mux0005<0>41_wg_cy<6>)
-     MUXCY:CI->O           5   0.269   0.665  alu0/Result1_mux0005<0>41_wg_cy<7> (alu0/Result1_mux0005<0>41_wg_cy<7>)
-     LUT4_D:I2->O          4   0.648   0.590  alu0/Result1_or0004 (alu0/Result1_or0004)
-     LUT4_D:I3->O          1   0.648   0.452  alu0/Result1_mux0005<30>1 (alu0/N5)
-     LUT3:I2->O            1   0.648   0.420  alu0/Result1_mux0005<31>2 (alu0/Result1_mux0005<31>2)
-     FDRS:S                    0.869          alu0/Result1_31
-    ----------------------------------------
-    Total                     14.529ns (8.183ns logic, 6.346ns route)
-                                       (56.3% logic, 43.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
-  Total number of paths / destination ports: 5 / 5
--------------------------------------------------------------------------
-Offset:              1.548ns (Levels of Logic = 2)
-  Source:            Reset (PAD)
-  Destination:       mcs0/U0/reset_vec_0 (FF)
-  Destination Clock: Clk rising
-
-  Data Path: Reset to mcs0/U0/reset_vec_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             2   0.849   0.447  Reset_IBUF (D2_OBUF)
-     begin scope: 'mcs0'
-     FD:D                      0.252          U0/reset_vec_0
-    ----------------------------------------
-    Total                      1.548ns (1.101ns logic, 0.447ns route)
-                                       (71.1% logic, 28.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
-  Total number of paths / destination ports: 4 / 4
--------------------------------------------------------------------------
-Offset:              5.531ns (Levels of Logic = 2)
-  Source:            mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_2 (FF)
-  Destination:       D3 (PAD)
-  Source Clock:      Clk rising
-
-  Data Path: mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_2 to D3
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDRE:C->Q             1   0.591   0.420  U0/iomodule_0/IOModule_Core_I1/GPO_I4/gpo_io_i_2 (GPO4<2>)
-     end scope: 'mcs0'
-     OBUF:I->O                 4.520          D3_OBUF (D3)
-    ----------------------------------------
-    Total                      5.531ns (5.111ns logic, 0.420ns route)
-                                       (92.4% logic, 7.6% route)
-
-=========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Delay:               5.816ns (Levels of Logic = 2)
-  Source:            Reset (PAD)
-  Destination:       D2 (PAD)
-
-  Data Path: Reset to D2
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             2   0.849   0.447  Reset_IBUF (D2_OBUF)
-     OBUF:I->O                 4.520          D2_OBUF (D2)
-    ----------------------------------------
-    Total                      5.816ns (5.369ns logic, 0.447ns route)
-                                       (92.3% logic, 7.7% route)
-
-=========================================================================
-
-
-Total REAL time to Xst completion: 111.00 secs
-Total CPU time to Xst completion: 111.48 secs
- 
+Analyzing Entity <udiv32> in library <work> (Architecture <Behavioral>).
+ERROR:Xst:769 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/udiv32.vhd" line 45: Operator <INVALID OPERATOR> must have constant operands or first operand must be power of 2
 --> 
 
-Total memory usage is 320096 kilobytes
+Total memory usage is 238548 kilobytes
 
-Number of errors   :    0 (   0 filtered)
-Number of warnings :   71 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

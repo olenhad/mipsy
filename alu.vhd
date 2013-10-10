@@ -65,9 +65,21 @@ component mul32 is
            result1 : out  STD_LOGIC_VECTOR(31 downto 0);
 			  result2 : out STD_LOGIC_VECTOR(31 downto 0));
 end component;
+component udiv32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
+           remainder : out  STD_LOGIC_VECTOR(31 downto 0);
+			  coeff : out STD_LOGIC_VECTOR(31 downto 0);
+			  exception : out std_logic);
+end component;
 
 signal addsubResult : std_logic_vector(31 downto 0);
 signal uaddsubResult : std_logic_vector(31 downto 0);
+signal mulResult : std_logic_vector(63 downto 0);
+signal umulResult : std_logic_vector(63 downto 0);
+signal udivRemainder : std_logic_vector(31 downto 0);
+signal udivQuotient : std_logic_vector(31 downto 0);
+signal udivException : std_logic;
 signal isAdd: std_logic;
 signal isOverflowAdd : std_logic;
 signal isOverflowAddU : std_logic;
@@ -83,10 +95,26 @@ uaddsub: uaddsub32 port map (operand1 => operand1,
 									 isadd => isadd, 
 									 result => uaddsubResult,
 									 overflow => isOverflowAddU);
-									
+									 
+mult: mul32 port map ( operand1 => operand1,
+							  operand2 => operand2,
+							  result1 => mulResult(31 downto 0),
+							  result2 => mulResult(63 downto 32));
+
+umult: umul32 port map ( operand1 => operand1,
+							  operand2 => operand2,
+							  result1 => umulResult(31 downto 0),
+							  result2 => umulResult(63 downto 32));
+
+udiv: udiv32 port map ( operand1 => operand1,
+							  operand2 => operand2,
+							  remainder => udivRemainder,
+							  coeff => udivQuotient,
+							  exception => udivException);
 process (Clk)
 begin  
    if (Clk'event and Clk = '1') then
+		Debug   <= X"00000000";
       if Control(5) = '1' then
 			Result1 <= X"00000000";
 			Result2 <= X"00000000";
@@ -117,10 +145,17 @@ begin
 			Debug <= ( 0 => isOverflowAddU, others => '0');
 		elsif Control = b"000101" then
 		-- MULT
+			Result1 <= mulResult(31 downto 0);
+			Result2 <= mulResult(63 downto 32);
 		elsif Control = b"000110" then
 		-- MULTU
+			Result1 <= umulResult(31 downto 0);
+			Result2 <= umulResult(63 downto 32);
 		elsif Control = b"000111" then
 		-- DIV
+			Result1 <= udivRemainder;
+			Result2 <= udivQuotient;
+			Debug <= ( 1 => udivException, others => '0');
 		elsif Control = b"001000" then
 		-- DIVU
 		elsif Control = b"001001" then
