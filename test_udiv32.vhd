@@ -32,14 +32,14 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY test_udiv32 IS
-END test_udiv32;
+ENTITY test_div32 IS
+END test_div32;
  
-ARCHITECTURE behavior OF test_udiv32 IS 
+ARCHITECTURE behavior OF test_div32 IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT udiv32
+    COMPONENT div32
     PORT(
          operand1 : IN  std_logic_vector(31 downto 0);
          operand2 : IN  std_logic_vector(31 downto 0);
@@ -69,7 +69,7 @@ ARCHITECTURE behavior OF test_udiv32 IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: udiv32 PORT MAP (
+   uut: div32 PORT MAP (
           operand1 => operand1,
           operand2 => operand2,
 			 clk => clk,

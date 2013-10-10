@@ -61,7 +61,7 @@ component mul32 is
            result1 : out  STD_LOGIC_VECTOR(31 downto 0);
 			  result2 : out STD_LOGIC_VECTOR(31 downto 0));
 end component;
-component udiv32 is
+component div32 is
     Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
            operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
 			  clk: in STD_LOGIC;
@@ -111,7 +111,7 @@ mult: mul32 port map ( operand1 => operand1,
 							  result1 => mulResult(31 downto 0),
 							  result2 => mulResult(63 downto 32));
 
-udiv: udiv32 port map ( operand1 => operand1,
+div: div32 port map ( operand1 => operand1,
 							  operand2 => operand2,
 							  clk => clk,
 							  isSigned => udivIsSigned,
