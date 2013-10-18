@@ -23,7 +23,7 @@ use work.utils.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
@@ -34,7 +34,9 @@ use work.utils.ALL;
 
 entity control_unit is
 	port(CLK  : in std_logic;
-	     Debug_Ins: out std_logic_vector(31 downto 0));
+	     Debug_Ins: out std_logic_vector(31 downto 0);
+		  Debug_PC : out std_logic_vector(8 downto 0)
+		  );
 end control_unit;
 
 architecture Behavioral of control_unit is
@@ -111,12 +113,21 @@ mips_rom : rom port map(CLK => CLK,
 
 process(clk)
 
-variable registerFile : RegisterSet := (others => (others => '0'));
-variable programCounter : CodeAddress := (others => '0');
-variable currentInstruction : CodeInstruction := (others => '0');
- 	
-begin
-
+	variable registerFile : RegisterSet := (others => (others => '0'));
+	variable programCounter : std_logic_vector(8 downto 0) := (others => '0');
+	variable currentInstruction : std_logic_vector(31 downto 0) := (others => '0');
+		
+	begin
+	if (rising_edge(CLK)) then
+		rom_EN <= '1';
+		rom_addr <= programCounter;
+		currentInstruction := rom_data;
+		-- TODO everything
+		Debug_Ins <= currentInstruction;
+		Debug_PC <=  programCounter;
+		programCounter := std_logic_vector(unsigned(programCounter) + 4);
+		
+	end if;
 
 
 end process;
