@@ -19,6 +19,10 @@ package utils is
 
 	type RomData is array(0 to 255) of std_logic_vector(7 downto 0);
 	type RamData is array(0 to 4096) of std_logic_vector(7 downto 0);
+	type RegisterSet is array (31 downto 0) of std_logic_vector(31 downto 0);
+	type CodeAddress is array (8 downto 0) of std_logic;
+	type CodeInstruction is array (31 downto 0) of std_logic;
+	
 	impure function read_rom_from_file ( rom_file_name : in string) return RomData;
 	impure function read_ram_from_file ( ram_file_name : in string) return RamData;
 -- type <new_type> is

@@ -19,6 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use work.utils.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -29,12 +30,16 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+
 entity control_unit is
-	port(CLK  : in std_logic,
+	port(CLK  : in std_logic;
 	     Debug_Ins: out std_logic_vector(31 downto 0));
 end control_unit;
 
 architecture Behavioral of control_unit is
+
+
 
 component alu is
 Port (	Clk			: in	STD_LOGIC;
@@ -63,8 +68,58 @@ port (CLK : in std_logic;
 end component;
 
 
+
+signal alu_control : std_logic_vector(5 downto 0) := (others => '0');
+signal alu_operand1	: STD_LOGIC_VECTOR (31 downto 0) := (others => '0') ;
+signal alu_operand2	: STD_LOGIC_VECTOR (31 downto 0) := (others => '0') ;
+signal alu_result1	: STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
+signal alu_result2	: STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
+signal alu_debug : STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
+
+signal ram_WE   : std_logic := '0';
+signal ram_EN   : std_logic := '0';
+signal ram_ADDR : std_logic_vector(11 downto 0) := (others => '0') ;
+signal ram_DI   : std_logic_vector(31 downto 0) := (others => '0');
+signal ram_DO   : std_logic_vector(31 downto 0) := (others => '0');
+
+signal rom_EN   : std_logic := '0';
+signal rom_ADDR : std_logic_vector(8 downto 0) := (others => '0') ;
+signal rom_DATA   : std_logic_vector(31 downto 0) := (others => '0');
+
+
 begin
 
+mips_alu : alu port map(CLK => CLK,
+                        operand1 => alu_operand1,
+								operand2 => alu_operand2,
+								control => alu_control,
+								result1 => alu_result1,
+								result2 => alu_result2,
+								debug => alu_debug);
+
+mips_ram : ram port map(CLK => CLK,
+								WE => ram_WE,
+								EN => ram_EN,
+								ADDR => ram_ADDR,
+								DI => ram_DI,
+								DO => ram_DO);
+
+mips_rom : rom port map(CLK => CLK,
+								EN => rom_EN,
+								ADDR => rom_ADDR,
+								DATA => rom_DATA);
+
+process(clk)
+
+variable registerFile : RegisterSet := (others => (others => '0'));
+variable programCounter : CodeAddress := (others => '0');
+variable currentInstruction : CodeInstruction := (others => '0');
+ 	
+begin
+
+
+
+end process;
 
 end Behavioral;
 
