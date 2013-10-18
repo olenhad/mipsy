@@ -1,0 +1,2 @@
+vhdl work "uadder32.vhd"
+vhdl work "uaddsub32.vhd"

@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/xst"
+elaborate
+-ifn rom.prj
+-ifmt mixed

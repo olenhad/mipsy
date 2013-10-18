@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\Hunar Khanna\Desktop\CG3207\VHDL\lab2\cg3207-project\test_div32_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_div32_isim_beh.wdb 
+Running: C:\Users\Hunar Khanna\Desktop\CG3207\VHDL\lab2\cg3207-project\ram_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/ram_test_isim_beh.wdb 
 ISim O.61xd (signature 0x1cce1bb2)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.

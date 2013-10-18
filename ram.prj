@@ -1,0 +1,2 @@
+vhdl work "utils.vhd"
+vhdl work "ram.vhd"

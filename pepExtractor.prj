@@ -1,1 +1,2 @@
-work	"div32.vhd"
+work	"ram.vhd"
+work	"utils.vhd"
