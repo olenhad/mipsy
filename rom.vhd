@@ -45,31 +45,22 @@ use work.utils.ALL;
 
  
 entity rom is
-port (CLK : in std_logic;
-      EN : in std_logic;
+port (EN : in std_logic;
       ADDR : in std_logic_vector(8 downto 0);
       DATA : out std_logic_vector(31 downto 0));
 end rom;
 
 architecture Behavioral of rom is
        
-                                          
-
-    signal rom_data : RomData := read_rom_from_file("C:\Users\Hunar Khanna\Desktop\CG3207\Mars\test1.hex");
+signal rom_data : RomData := read_rom_from_file("C:\Users\Hunar Khanna\Desktop\CG3207\Mars\test1.hex");
 
 begin
-
-   process (clk)                                                
-    begin                                                        
-       if clk'event and clk = '1' then                              
-          if EN = '1' then                                             
-             data <= (rom_data(to_integer(unsigned(addr) + 3))) & 
-				         (rom_data(to_integer(unsigned(addr) + 2))) & 
-							(rom_data(to_integer(unsigned(addr) + 1))) & 
-							(rom_data(to_integer(unsigned(addr))));      
-          end if;                                                      
-       end if;                                                      
-    end process;   
+	data <= (rom_data(to_integer(unsigned(addr) + 3))) & 
+			  (rom_data(to_integer(unsigned(addr) + 2))) & 
+			  (rom_data(to_integer(unsigned(addr) + 1))) & 
+			  (rom_data(to_integer(unsigned(addr))))
+			  when EN = '1' else
+			  (others => '0');
 
 end Behavioral;
 

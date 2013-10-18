@@ -1,5 +1,6 @@
 ISim log file
-Running: C:\Users\Hunar Khanna\Desktop\CG3207\VHDL\lab2\cg3207-project\test_controlunit_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_controlunit_isim_beh.wdb 
+Running: C:\Users\Hunar Khanna\Desktop\CG3207\VHDL\lab2\cg3207-project\ram_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/ram_test_isim_beh.wdb 
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
 ISim O.61xd (signature 0x1cce1bb2)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,7 +12,3 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-ERROR: Index 259 out of bound 0 to 255. 
-ERROR: In process rom.vhd:62 
- 
-INFO: Simulator is stopped.

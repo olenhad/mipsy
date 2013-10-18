@@ -41,7 +41,6 @@ ARCHITECTURE behavior OF ram_test IS
  
     COMPONENT ram
     PORT(
-         CLK : IN  std_logic;
          WE : IN  std_logic;
          EN : IN  std_logic;
          ADDR : IN  std_logic_vector(11 downto 0);
@@ -68,7 +67,6 @@ BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: ram PORT MAP (
-          CLK => CLK,
           WE => WE,
           EN => EN,
           ADDR => ADDR,
@@ -77,13 +75,6 @@ BEGIN
         );
 
    -- Clock process definitions
-   CLK_process :process
-   begin
-		CLK <= '0';
-		wait for CLK_period/2;
-		CLK <= '1';
-		wait for CLK_period/2;
-   end process;
  
 
    -- Stimulus process

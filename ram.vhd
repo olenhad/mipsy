@@ -35,8 +35,7 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;	
 					
 entity ram is
-	port (CLK  : in std_logic;
-          WE   : in std_logic;
+	port ( WE   : in std_logic;
           EN   : in std_logic;
           ADDR : in std_logic_vector(11 downto 0);
           DI   : in std_logic_vector(31 downto 0);
@@ -47,25 +46,16 @@ architecture Behavioral of ram is
 	
     signal RAM: RamData := read_ram_from_file("C:\Users\Hunar Khanna\Desktop\CG3207\Mars\test1data.hex");
 begin
-	 process (CLK)
-    begin
-        if CLK'event and CLK = '1' then
-            if EN = '1' then
-                if WE = '1' then
-                    RAM(to_integer(unsigned(ADDR))) <= DI(7 downto 0);
-						  RAM(to_integer(unsigned(ADDR) + 1)) <= DI(15 downto 8);
-						  RAM(to_integer(unsigned(ADDR) + 2)) <= DI(23 downto 16);
-						  RAM(to_integer(unsigned(ADDR) + 3)) <= DI(31 downto 24);
-						  
-                end if;
-                DO <= RAM(to_integer(unsigned(ADDR)+3)) &
-							 RAM(to_integer(unsigned(ADDR)+2)) &
-							 RAM(to_integer(unsigned(ADDR)+1)) &
-							 RAM(to_integer(unsigned(ADDR)));
-					       
-            end if;
-        end if;
-    end process;
+	RAM(to_integer(unsigned(ADDR))) <= DI(7 downto 0) when EN = '1' and WE = '1';
+	RAM(to_integer(unsigned(ADDR) + 1)) <= DI(15 downto 8) when EN = '1' and WE = '1';
+	RAM(to_integer(unsigned(ADDR) + 2)) <= DI(23 downto 16) when EN = '1' and WE = '1';
+	RAM(to_integer(unsigned(ADDR) + 3)) <= DI(31 downto 24) when EN = '1' and WE = '1';
+	
+	DO <= RAM(to_integer(unsigned(ADDR)+3)) &
+			RAM(to_integer(unsigned(ADDR)+2)) &
+			RAM(to_integer(unsigned(ADDR)+1)) &
+			RAM(to_integer(unsigned(ADDR))) when EN = '1' and WE = '0' else
+			(others => '0');
 
 end Behavioral;
 
