@@ -85,6 +85,7 @@ signal ram_DI   : std_logic_vector(31 downto 0) := (others => '0');
 signal ram_DO   : std_logic_vector(31 downto 0) := (others => '0');
 
 signal rom_EN   : std_logic := '0';
+-- rom starting address set to 0
 signal rom_ADDR : std_logic_vector(8 downto 0) := (others => '0') ;
 signal rom_DATA   : std_logic_vector(31 downto 0) := (others => '0');
 
@@ -110,27 +111,42 @@ mips_rom : rom port map(CLK => CLK,
 								EN => rom_EN,
 								ADDR => rom_ADDR,
 								DATA => rom_DATA);
+rom_EN <= '1';
 
 process(clk)
 
 	variable registerFile : RegisterSet := (others => (others => '0'));
 	variable programCounter : std_logic_vector(8 downto 0) := (others => '0');
 	variable currentInstruction : std_logic_vector(31 downto 0) := (others => '0');
-		
+	variable opcode : std_logic_vector(5 downto 0) := (others => '0');
 	begin
 	if (rising_edge(CLK)) then
-		rom_EN <= '1';
-		rom_addr <= programCounter;
+		
 		currentInstruction := rom_data;
-		-- TODO everything
 		Debug_Ins <= currentInstruction;
 		Debug_PC <=  programCounter;
+		
+		opcode := currentInstruction(31 downto 26);
+		
+		-- R type
+		if opcode = (others => '0') then
+		-- funct portion of Current Instruction
+			alu_control <= currentInstruction(5 downto 0);
+		-- load operand 1 with register whose address is in rs
+			alu_operand1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+		-- load operand 2 with register whose address is in rt
+			alu_operand2 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
+		-- sets register whose address is at rd to alu_result1
+			registerFile(to_integer(unsigned(currentInstruction(15 downto 11)))) := alu_result1;
+		end if;
+		-- Program COunter update
 		programCounter := std_logic_vector(unsigned(programCounter) + 4);
+		rom_addr <= programCounter;
 		
 	end if;
 
-
 end process;
+
 
 end Behavioral;
 
