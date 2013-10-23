@@ -2,15 +2,15 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   13:10:21 10/18/2013
+-- Create Date:   01:35:12 10/24/2013
 -- Design Name:   
--- Module Name:   C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom_test.vhd
+-- Module Name:   C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_fetch.vhd
 -- Project Name:  LAB2
 -- Target Device:  
 -- Tool versions:  
 -- Description:   
 -- 
--- VHDL Test Bench Created by ISE for module: rom
+-- VHDL Test Bench Created by ISE for module: fetch
 -- 
 -- Dependencies:
 -- 
@@ -30,32 +30,34 @@ USE ieee.std_logic_1164.ALL;
  
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
-USE ieee.numeric_std.ALL;
+--USE ieee.numeric_std.ALL;
  
-ENTITY rom_test IS
-END rom_test;
+ENTITY test_fetch IS
+END test_fetch;
  
-ARCHITECTURE behavior OF rom_test IS 
+ARCHITECTURE behavior OF test_fetch IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT rom
+    COMPONENT fetch
     PORT(
          CLK : IN  std_logic;
-         EN : IN  std_logic;
-         ADDR : IN  std_logic_vector(31 downto 0);
-         DATA : OUT  std_logic_vector(31 downto 0)
+         isJump : IN  std_logic;
+         jumpAddress : IN  std_logic_vector(31 downto 0);
+         programCounter : OUT  std_logic_vector(31 downto 0);
+         currentInstruction : OUT  std_logic_vector(31 downto 0)
         );
     END COMPONENT;
     
 
    --Inputs
    signal CLK : std_logic := '0';
-   signal EN : std_logic := '1';
-   signal ADDR : std_logic_vector(31 downto 0) := (others => '0');
+   signal isJump : std_logic := '0';
+   signal jumpAddress : std_logic_vector(31 downto 0) := (others => '0');
 
  	--Outputs
-   signal DATA : std_logic_vector(31 downto 0);
+   signal programCounter : std_logic_vector(31 downto 0);
+   signal currentInstruction : std_logic_vector(31 downto 0);
 
    -- Clock period definitions
    constant CLK_period : time := 10 ns;
@@ -63,11 +65,12 @@ ARCHITECTURE behavior OF rom_test IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: rom PORT MAP (
+   uut: fetch PORT MAP (
           CLK => CLK,
-          EN => EN,
-          ADDR => ADDR,
-          DATA => DATA
+          isJump => isJump,
+          jumpAddress => jumpAddress,
+          programCounter => programCounter,
+          currentInstruction => currentInstruction
         );
 
    -- Clock process definitions
@@ -85,26 +88,31 @@ BEGIN
    begin		
       -- hold reset state for 100 ns.
       wait for 100 ns;	
-		addr <= ( others => '0');
-
-		wait for CLK_period*2;
-		addr <= (2=> '1' , others => '0');
 		
-		wait for CLK_period*2;
-		addr <= (3=> '1' , others => '0');
-
-		wait for CLK_period*2;
-		addr <= std_logic_vector(unsigned(addr) + 4);
-
-
-		wait for CLK_period*2;
-		addr <= std_logic_vector(unsigned(addr) + 4);
-		
-		wait for CLK_period*2;
-		addr <= std_logic_vector(unsigned(addr) + 4);
-
-
       wait for CLK_period*10;
+		
+		isJump <= '0';
+		jumpAddress <= ( others => '0');
+		
+		wait for CLK_period*2;
+		
+		isJump <= '1';
+		jumpAddress <= ( 3 => '1', others => '0');
+		
+		wait for CLK_period;
+		isJump <= '0';
+		wait for CLK_period;
+		isJump <= '1';
+		jumpAddress <= ( others => '0');
+		
+		wait for CLK_period;
+		isJump <= '0';
+		
+		wait for CLK_period*2;
+		
+		isJump <= '0';
+		jumpAddress <= ( 4 => '1', others => '0');
+		
 
       -- insert stimulus here 
 

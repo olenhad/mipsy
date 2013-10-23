@@ -47,7 +47,7 @@ use work.utils.ALL;
 entity rom is
 port (EN : in std_logic;
 		CLK: in std_logic;
-      ADDR : in std_logic_vector(8 downto 0);
+      ADDR : in std_logic_vector(31 downto 0);
       DATA : out std_logic_vector(31 downto 0));
 end rom;
 
