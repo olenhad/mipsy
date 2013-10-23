@@ -1,3 +1,2 @@
-work	"fetch.vhd"
-work	"rom.vhd"
+work	"decode.vhd"
 work	"utils.vhd"

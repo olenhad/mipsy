@@ -40,7 +40,7 @@ end fetch;
 
 architecture Behavioral of fetch is
 component rom is
-	port (CLK : in std_logic;
+	port (
 			EN : in std_logic;
 			ADDR : in std_logic_vector(31 downto 0);
 			DATA : out std_logic_vector(31 downto 0));
@@ -54,7 +54,7 @@ signal rom_DATA   : std_logic_vector(31 downto 0);
 begin
 
 
-hunars_rom : rom port map(CLK => CLK,
+hunars_rom : rom port map(
 								  EN => rom_EN,
 								  ADDR => rom_ADDR,
 								  DATA => rom_DATA);
@@ -66,19 +66,14 @@ begin
 	if rising_edge(CLK) then
 			ciR := rom_data;
 			
-			
-
-			
+			pcR := std_logic_vector(unsigned(pcR) + 4);
 			programCounter <= pcr;
 			currentInstruction <= ciR;
 			
 			if isJump = '1' then
 				pcR := jumpAddress;	
-			end if;
+			end if;		
 			
-	
-			
-			pcR := std_logic_vector(unsigned(pcR) + 4);
 			rom_addr <= pcR;
 	end if;
 end process;

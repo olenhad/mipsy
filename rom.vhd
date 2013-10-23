@@ -46,7 +46,6 @@ use work.utils.ALL;
  
 entity rom is
 port (EN : in std_logic;
-		CLK: in std_logic;
       ADDR : in std_logic_vector(31 downto 0);
       DATA : out std_logic_vector(31 downto 0));
 end rom;
@@ -56,19 +55,11 @@ architecture Behavioral of rom is
 signal rom_data : RomData := read_rom_from_file("asm\test1.hex");
 
 begin
-process(CLK)
-begin
-	if rising_edge(CLK) then
-		if EN = '1' then
-			data <= (rom_data(to_integer(unsigned(addr) + 3))) & 
-					  (rom_data(to_integer(unsigned(addr) + 2))) & 
-					  (rom_data(to_integer(unsigned(addr) + 1))) & 
-			        (rom_data(to_integer(unsigned(addr))));
-		else
-			data <= (others => '0');
-		end if;
-	end if;
-			  
-end process;
+	data <= (rom_data(to_integer(unsigned(addr) + 3))) & 
+			  (rom_data(to_integer(unsigned(addr) + 2))) & 
+			  (rom_data(to_integer(unsigned(addr) + 1))) & 
+			  (rom_data(to_integer(unsigned(addr)))) when en ='1' else 
+			  (others => '0');
+
 end Behavioral;
 

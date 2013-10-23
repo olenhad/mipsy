@@ -1,12 +1,11 @@
-Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_fetch_isim_beh.exe -prj C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_fetch_beh.prj work.test_fetch 
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/ram_test_isim_beh.exe -prj C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/ram_test_beh.prj work.ram_test 
 ISim O.61xd (signature 0x1cce1bb2)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
 Parsing VHDL file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd" into library work
-Parsing VHDL file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" into library work
-Parsing VHDL file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/fetch.vhd" into library work
-Parsing VHDL file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_fetch.vhd" into library work
+Parsing VHDL file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/ram.vhd" into library work
+Parsing VHDL file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/ram_test.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
@@ -15,12 +14,13 @@ Compiling package numeric_std
 Compiling package textio
 Compiling package std_logic_textio
 Compiling package utils
-Compiling architecture behavioral of entity rom [rom_default]
-Compiling architecture behavioral of entity fetch [fetch_default]
-Compiling architecture behavior of entity test_fetch
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity ram [ram_default]
+Compiling architecture behavior of entity ram_test
 Time Resolution for simulation is 1ps.
-Waiting for 2 sub-compilation(s) to finish...
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 11 VHDL Units
-Built simulation executable C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_fetch_isim_beh.exe
-Fuse Memory Usage: 24952 KB
-Fuse CPU Usage: 280 ms
+Built simulation executable C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/ram_test_isim_beh.exe
+Fuse Memory Usage: 29232 KB
+Fuse CPU Usage: 483 ms

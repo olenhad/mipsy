@@ -41,7 +41,7 @@ ARCHITECTURE behavior OF rom_test IS
  
     COMPONENT rom
     PORT(
-         CLK : IN  std_logic;
+        -- CLK : IN  std_logic;
          EN : IN  std_logic;
          ADDR : IN  std_logic_vector(31 downto 0);
          DATA : OUT  std_logic_vector(31 downto 0)
@@ -50,7 +50,7 @@ ARCHITECTURE behavior OF rom_test IS
     
 
    --Inputs
-   signal CLK : std_logic := '0';
+   --signal CLK : std_logic := '0';
    signal EN : std_logic := '1';
    signal ADDR : std_logic_vector(31 downto 0) := (others => '0');
 
@@ -64,20 +64,20 @@ BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: rom PORT MAP (
-          CLK => CLK,
+         -- CLK => CLK,
           EN => EN,
           ADDR => ADDR,
           DATA => DATA
         );
 
    -- Clock process definitions
-   CLK_process :process
-   begin
-		CLK <= '0';
-		wait for CLK_period/2;
-		CLK <= '1';
-		wait for CLK_period/2;
-   end process;
+  -- CLK_process :process
+--   begin
+--		--CLK <= '0';
+--		wait for CLK_period/2;
+--		--CLK <= '1';
+--		wait for CLK_period/2;
+--   end process;
  
 
    -- Stimulus process
@@ -87,20 +87,20 @@ BEGIN
       wait for 100 ns;	
 		addr <= ( others => '0');
 
-		wait for CLK_period*2;
+		--wait for CLK_period*2;
 		addr <= (2=> '1' , others => '0');
 		
-		wait for CLK_period*2;
+	--	wait for CLK_period*2;
 		addr <= (3=> '1' , others => '0');
 
-		wait for CLK_period*2;
+	--	wait for CLK_period*2;
 		addr <= std_logic_vector(unsigned(addr) + 4);
 
 
-		wait for CLK_period*2;
+	--	wait for CLK_period*2;
 		addr <= std_logic_vector(unsigned(addr) + 4);
 		
-		wait for CLK_period*2;
+	--	wait for CLK_period*2;
 		addr <= std_logic_vector(unsigned(addr) + 4);
 
 
