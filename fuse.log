@@ -1,11 +1,11 @@
-Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/pc richard/Documents/CG3207/cg3207-project/ram_test_isim_beh.exe -prj C:/Users/pc richard/Documents/CG3207/cg3207-project/ram_test_beh.prj work.ram_test 
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/pc richard/Documents/CG3207/cg3207-project/rom_test_isim_beh.exe -prj C:/Users/pc richard/Documents/CG3207/cg3207-project/rom_test_beh.prj work.rom_test 
 ISim O.61xd (signature 0x1cce1bb2)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
 Parsing VHDL file "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" into library work
-Parsing VHDL file "C:/Users/pc richard/Documents/CG3207/cg3207-project/ram.vhd" into library work
-Parsing VHDL file "C:/Users/pc richard/Documents/CG3207/cg3207-project/ram_test.vhd" into library work
+Parsing VHDL file "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" into library work
+Parsing VHDL file "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom_test.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
@@ -14,13 +14,11 @@ Compiling package numeric_std
 Compiling package textio
 Compiling package std_logic_textio
 Compiling package utils
-Compiling package std_logic_arith
-Compiling package std_logic_unsigned
-Compiling architecture behavioral of entity ram [ram_default]
-Compiling architecture behavior of entity ram_test
+Compiling architecture behavioral of entity rom [rom_default]
+Compiling architecture behavior of entity rom_test
 Time Resolution for simulation is 1ps.
-Waiting for 2 sub-compilation(s) to finish...
-Compiled 11 VHDL Units
-Built simulation executable C:/Users/pc richard/Documents/CG3207/cg3207-project/ram_test_isim_beh.exe
-Fuse Memory Usage: 29448 KB
-Fuse CPU Usage: 1076 ms
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 9 VHDL Units
+Built simulation executable C:/Users/pc richard/Documents/CG3207/cg3207-project/rom_test_isim_beh.exe
+Fuse Memory Usage: 25084 KB
+Fuse CPU Usage: 608 ms

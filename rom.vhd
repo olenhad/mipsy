@@ -53,7 +53,7 @@ end rom;
 
 architecture Behavioral of rom is
        
-signal rom_data : RomData := read_rom_from_file("C:\Users\Hunar Khanna\Desktop\CG3207\Mars\test1.hex");
+signal rom_data : RomData := read_rom_from_file("asm\test1.hex");
 
 begin
 process(CLK)
@@ -63,7 +63,7 @@ begin
 			data <= (rom_data(to_integer(unsigned(addr) + 3))) & 
 					  (rom_data(to_integer(unsigned(addr) + 2))) & 
 					  (rom_data(to_integer(unsigned(addr) + 1))) & 
-			        (rom_data(to_integer(unsigned(addr))))
+			        (rom_data(to_integer(unsigned(addr))));
 		else
 			data <= (others => '0');
 		end if;
