@@ -51,6 +51,8 @@ signal rom_EN   : std_logic := '1';
 signal rom_ADDR : std_logic_vector(31 downto 0) := (others => '0') ;
 signal rom_DATA   : std_logic_vector(31 downto 0);
 
+signal pcR : std_logic_vector(31 downto 0) := (others => '0');
+
 begin
 
 
@@ -58,25 +60,31 @@ hunars_rom : rom port map(
 								  EN => rom_EN,
 								  ADDR => rom_ADDR,
 								  DATA => rom_DATA);
-process(CLK)
-	variable pcR : std_logic_vector(31 downto 0) := (others => '0');
-	variable ciR : std_logic_vector(31 downto 0) := (others => '0');
-	
-begin
-	if rising_edge(CLK) then
-			ciR := rom_data;
-			
-			pcR := std_logic_vector(unsigned(pcR) + 4);
-			programCounter <= pcr;
-			currentInstruction <= ciR;
-			
-			if isJump = '1' then
-				pcR := jumpAddress;	
-			end if;		
-			
-			rom_addr <= pcR;
-	end if;
-end process;
+								
+
+rom_addr <= 
+currentInstruction <= romData;
+
+								
+--process(CLK)
+--	variable pcR : std_logic_vector(31 downto 0) := (others => '0');
+--	variable ciR : std_logic_vector(31 downto 0) := (others => '0');
+--	
+--begin
+--	if rising_edge(CLK) then
+--			ciR := rom_data;
+--			
+--			pcR := std_logic_vector(unsigned(pcR) + 4);
+--			programCounter <= pcr;
+--			currentInstruction <= ciR;
+--			
+--			if isJump = '1' then
+--				pcR := jumpAddress;	
+--			end if;		
+--			
+--			rom_addr <= pcR;
+--	end if;
+--end process;
 
 end Behavioral;
 

@@ -6,6 +6,7 @@ curI <= fetchI
 
 wait until debug
 
+
 LW
 ALU <= decode 1 cycle
 offset <= ALU 1 cycle

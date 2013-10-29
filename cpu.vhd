@@ -38,13 +38,11 @@ end cpu;
 
 architecture Behavioral of cpu is
 
-component fetch is
-	Port(CLK  : in std_logic;
-	     isJump : in std_logic;
-		  jumpAddress : in std_logic_vector(31 downto 0);
-		  programCounter : out std_logic_vector(31 downto 0);
-		  currentInstruction : out std_logic_vector(31 downto 0));
-	
+component rom is
+	port (
+			EN : in std_logic;
+			ADDR : in std_logic_vector(31 downto 0);
+			DATA : out std_logic_vector(31 downto 0));
 end component;
 
 component decode is
@@ -78,9 +76,9 @@ component ram is
           DO   : out std_logic_vector(31 downto 0));
 end component;
 
-signal fetch_isJump : std_logic := '0';
-signal fetch_jumpAddress : std_logic_vector(31 downto 0) := (others => '0');
-signal fetch_programCounter : std_logic_vector(31 downto 0) := (others => '0');
+signal rom_EN : std_logic := '0';
+signal rom_ADDR : std_logic_vector(31 downto 0) := (others => '0');
+signal rom_DATA : std_logic_vector(31 downto 0) := (others => '0');
 
 signal decode_CurrentInstruction : std_logic_vector(31 downto 0) := (others => '0');
 signal decode_WriteAddr : std_logic_vector(4 downto 0) := (others => '0');
@@ -106,12 +104,10 @@ signal ram_do  : std_logic_vector(31 downto 0) := (others => '0');
 
 begin
 
-ifetch : fetch port map (CLK => CLK,
-								 isJump => fetch_isJump,
-								 jumpAddress => fetch_jumpAddress,
-		                   programCounter => fetch_programCounter,
-								 currentInstruction => decode_currentInstruction);
-
+ifetch : rom port map (EN => '1',
+							  ADDR => rom_ADDR
+							  DATA => rom_DATA);
+	
 idecode : decode port map (CLK => CLK,
                           CurrentInstruction => decode_currentInstruction,
 								  WriteAddr => decode_WriteAddr,
