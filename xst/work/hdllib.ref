@@ -1,5 +1,5 @@
 PH utils NULL "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" sub00/vhpl22 1383055158
-AR addsub32 behavioral "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" sub00/vhpl06 1383055161
+AR addsub32 behavioral "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" sub00/vhpl06 1383058806
 EN udiv32 NULL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/udiv32.vhd" sub00/vhpl18 1381434600
 EN uaddsub32 NULL "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd" sub00/vhpl07 1383055162
 AR uaddsub32 behavioral "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd" sub00/vhpl08 1383055163
@@ -10,7 +10,7 @@ EN lab2 NULL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2
 EN mul32 NULL "C:/Users/pc richard/Documents/CG3207/cg3207-project/mul32.vhd" sub00/vhpl10 1383055164
 EN cpu NULL "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" sub00/vhpl32 1383055176
 AR uadder32 behavioral "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd" sub00/vhpl02 1383055155
-EN addsub32 NULL "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" sub00/vhpl05 1383055160
+EN addsub32 NULL "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" sub00/vhpl05 1383058805
 AR cpu behavioral "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" sub00/vhpl33 1383055177
 EN uadder32 NULL "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd" sub00/vhpl01 1383055154
 AR fetch behavioral "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/fetch.vhd" sub00/vhpl29 1382555198
@@ -19,8 +19,8 @@ AR ram behavioral "C:/Users/pc richard/Documents/CG3207/cg3207-project/ram.vhd" 
 AR umul32 behavioral "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/umul32.vhd" sub00/vhpl16 1381425090
 AR udiv32 behavioral "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/udiv32.vhd" sub00/vhpl19 1381434601
 EN div32 NULL "C:/Users/pc richard/Documents/CG3207/cg3207-project/div32.vhd" sub00/vhpl11 1383055166
-AR adder32 behavioral "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" sub00/vhpl04 1383055157
-EN adder32 NULL "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" sub00/vhpl03 1383055156
+AR adder32 behavioral "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" sub00/vhpl04 1383058804
+EN adder32 NULL "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" sub00/vhpl03 1383058803
 EN umul32 NULL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/umul32.vhd" sub00/vhpl15 1381425089
 AR alu behavioral "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd" sub00/vhpl09 1383055173
 PB utils utils "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" sub00/vhpl23 1383055159

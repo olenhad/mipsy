@@ -54,7 +54,8 @@ component decode is
 			AluOP1 : out std_logic_vector(31 downto 0);
 			AluOP2 : out std_logic_vector(31 downto 0);
 			AluControl : out std_logic_vector(5 downto 0);
-			ControlSignals : out std_logic_vector(5 downto 0));
+			ControlSignals : out std_logic_vector(5 downto 0);
+			WaitFor : out std_logic_vector (3 downto 0));
 end component;
 
 component alu is
@@ -76,7 +77,7 @@ component ram is
           DO   : out std_logic_vector(31 downto 0));
 end component;
 
-type CPUState is (FetchDecode, Execute, MemUpdate);
+type CPUState is (FetchDecode, Execute, MemRW, WriteBack);
 
 signal rom_EN : std_logic := '0';
 signal rom_ADDR : std_logic_vector(31 downto 0) := (others => '0');
@@ -90,6 +91,13 @@ signal decode_AluOP1 :  std_logic_vector(31 downto 0) := (others => '0');
 signal decode_AluOP2 :  std_logic_vector(31 downto 0) := (others => '0');
 signal decode_AluControl : std_logic_vector(5 downto 0) := (others => '0');
 signal decode_ControlSignals : std_logic_vector(5 downto 0) := (others => '0');
+signal decode_waitFor : std_logic_vector(3 downto 0);
+
+signal sig_Branch : std_logic := '0';
+signal sig_MemRead : std_logic := '0';
+signal sig_MemWrite : std_logic := '0';
+signal sig_RegWrite : std_logic := '0';
+signal sig_MemToReg : std_logic := '0';
 
 signal alu_control : std_logic_vector(5 downto 0) := (others => '0');
 signal alu_op1 : std_logic_vector(31 downto 0) := (others => '0');
@@ -118,7 +126,22 @@ idecode : decode port map (CLK => CLK,
 								  AluOP1 => decode_AluOP1,
 								  AluOP2 => decode_AluOP2,
 								  AluControl => decode_AluControl,
-								  ControlSignals => decode_ControlSignals);
+								  ControlSignals => decode_ControlSignals,
+								  WaitFor => decode_waitFor);
+
+		-- ControlSignals
+		-- 0 => Branch
+		-- 1 => MemRead
+		-- 2 => MemWrite
+		-- 3 => RegWrite
+		-- 4 => MemToReg
+		-- MemWrite => 1
+
+sig_Branch <= decode_ControlSignals(0);
+sig_MemRead <= decode_ControlSignals(1);
+sig_MemWrite <= decode_ControlSignals(2);
+sig_RegWrite <= decode_ControlSignals(3);
+sig_MemToReg <= decode_ControlSignals(4);
 
 ialu : alu port map (CLK => CLK,
 							Control => alu_control,
@@ -136,6 +159,11 @@ iram : ram port map (CLK => CLK,
 							DO  => ram_DO);
 							
 
+alu_op1 <= decode_AluOP1;
+alu_op2 <= decode_AluOP2;
+alu_control <= decode_AluControl;
+
+
 process(CLK) 
 variable pc : std_logic_vector(31 downto 0) := (others => '0');
 variable currentIns :  std_logic_vector(31 downto 0) := (others => '0');
@@ -143,7 +171,7 @@ variable currentState : CPUState := FetchDecode;
 variable waitCounter : integer := 0;
 begin
 	if rising_edge(CLK) then
-		if waitCounter /= 0 then
+		if waitCounter = 0 then
 			if currentState = FetchDecode then
 				
 				currentIns := rom_DATA;
@@ -152,12 +180,36 @@ begin
 
 				rom_ADDR <= pc;
 
+				
+				-- feed cur Ins to decode. decode will give alu appropriate operands by nnext clk cycle
+				decode_currentInstruction <= currentIns;
+				decode_RegWrite <= '0';
+				
+	
 				currentState := Execute;
-			
+					
 			elsif currentState = Execute then
+				
+				waitCounter := decode_WaitFor;
+				currentState := MemWR;
+				
+			elsif currentState = MemWR then
 			
-			elsif currentState = MemUpdate then
+			-- R Type			
+				if sig_Branch = '0' and 
+					sig_MemRead = '0' and 
+					sig_MemWrite = '0' and 
+					sig_RegWrite = '1' and
+					sig_MemToReg = '0' then
+					
+					
+					
+				end if;
+			end if;
 			
+			if currentState = WriteBack then
+			
+				
 			end if;
 			
 		else

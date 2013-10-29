@@ -1,0 +1,2 @@
+vhdl work "adder32.vhd"
+vhdl work "addsub32.vhd"

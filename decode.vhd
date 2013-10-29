@@ -47,17 +47,27 @@ architecture Behavioral of decode is
 begin
 -- Circuit can't be combinational because it needs to interface reads and writes to the RegisterFile
 
+-- ControlSignals
+-- 0 => Branch
+-- 1 => MemRead
+-- 2 => MemWrite
+-- 3 => RegWrite
+-- 4 => MemToReg
+
+
 process(CLK)
 	variable registerFile : RegisterSet := (others => (others => '0'));
 	variable opcode : std_logic_vector(5 downto 0) := (others => '0');
 begin
+
 	if rising_edge(CLK) then
 		
 		opcode := currentInstruction(31 downto 26);
 		ControlSignals <= (others => '0');
 		-- R type
 		if opcode = b"000000" then
-		
+		-- all R type instructions just Write to registers. assert RegWrite	
+			ControlSignals <= "01000";
 		-- funct portion of Current Instruction
 			AluControl <= CurrentInstruction(5 downto 0);
 
@@ -87,7 +97,15 @@ begin
 		-- Alu Control set to Add.
 			AluControl <=  b"100000";
 		-- TODO set ControlSignals appropriately
-		
+		-- ControlSignals
+		-- 0 => Branch
+		-- 1 => MemRead
+		-- 2 => MemWrite
+		-- 3 => RegWrite
+		-- 4 => MemToReg
+		-- MemRead => 1. RegWrite => 1. MemToReg => 1	
+			ControlSignals <= b"11010";
+			
 		elsif opcode = b"101011" then
 		-- Store Word (2B)
 			AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
@@ -95,11 +113,27 @@ begin
 			AluOp1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
 		-- Alu Control set to Add.
 			AluControl <=  b"100000";
+			
+		-- ControlSignals
+		-- 0 => Branch
+		-- 1 => MemRead
+		-- 2 => MemWrite
+		-- 3 => RegWrite
+		-- 4 => MemToReg
+		-- MemWrite => 1	
+			ControlSignals <= b"00100";
 		
 		end if;
 
 	end if;
 end process;
+
+-- checks for DIV, DIVU
+waitFor <= x"8" when (CurrentInstruction(5 downto 0) = b"011010" or 
+							 CurrentInstruction(5 downto 0) = b"011011") else
+-- checks for LUI
+			  x"0" when CurrentInstruction(31 downto 26) = b"001111" else
+			  x"1";
 
 end Behavioral;
 
