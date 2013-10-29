@@ -3,6 +3,9 @@ val1: .word 10
 val2: .word 20
 .text
 #lw test
+lui $t2, 5
+lui $t4, 6
+
 lw $t1, val1
 #t1 = 0x000a
 lw $t2, val2

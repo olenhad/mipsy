@@ -60,7 +60,8 @@ component decode is
 			AluControl : out std_logic_vector(5 downto 0);
 			ControlSignals : out std_logic_vector(4 downto 0);
 			WaitFor : out std_logic_vector (3 downto 0);
-			registerOut : out std_logic_vector(31 downto 0));
+			registerOut : out std_logic_vector(31 downto 0);
+			lreg: out std_logic_vector(31 downto 0));
 end component;
 
 component alu is
@@ -98,6 +99,7 @@ signal decode_AluControl : std_logic_vector(5 downto 0) := (others => '0');
 signal decode_ControlSignals : std_logic_vector(4 downto 0) := (others => '0');
 signal decode_waitFor : std_logic_vector(3 downto 0);
 signal decode_registerOut : std_logic_vector(31 downto 0);
+signal decode_lreg : std_logic_vector(31 downto 0);
 
 signal sig_Branch : std_logic := '0';
 signal sig_MemRead : std_logic := '0';
@@ -134,7 +136,8 @@ idecode : decode port map (CLK => CLK,
 								  AluControl => decode_AluControl,
 								  ControlSignals => decode_ControlSignals,
 								  WaitFor => decode_waitFor,
-								  registerOut => decode_registerOut);
+								  registerOut => decode_registerOut,
+								  lreg => decode_lreg);
 
 		-- ControlSignals
 		-- 0 => Branch
@@ -254,14 +257,15 @@ begin
 					-- send alu_r1
 					decode_WriteData <= alu_r1;
 					
-					-- state shortcircuited back to FetchDecode
-					currentState := FetchDecode;
 				
 				elsif sig_RegWrite = '1' and
 				      sig_MemToReg = '1' then
 					-- lw	
 						-- RT for I type instructions	
+					decode_regWrite <= '1';
 					decode_WriteAddr <= CurrentIns(20 downto 16);
+					decode_WriteData <= ram_DO;
+					
 				end if;
 				
 				currentState := FetchDecode;
@@ -278,6 +282,6 @@ begin
 
 end process;
 
-DRegOut <= decode_registerOut;
+DRegOut <= decode_lreg;
 end Behavioral;
 

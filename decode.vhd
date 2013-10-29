@@ -40,7 +40,8 @@ entity decode is
 			AluControl : out std_logic_vector(5 downto 0);
 			ControlSignals : out std_logic_vector(4 downto 0);
 			WaitFor : out std_logic_vector (3 downto 0);
-			registerOut : out std_logic_vector(31 downto 0));
+			registerOut : out std_logic_vector(31 downto 0);
+			lreg: out std_logic_vector(31 downto 0));
 
 end decode;
 
@@ -59,9 +60,8 @@ begin
 
 process(CLK)
 	variable registerFile : RegisterSet := (others => (others => '0'));
-	variable opcode : std_logic_vector(5 downto 0) := (others => '0');
+	variable opcode : std_logic_vector(5 downto 0) := (others => '0'); 
 begin
-
 	if rising_edge(CLK) then
 		
 		if currentInstruction = x"FFFFFFFF" then
@@ -69,7 +69,7 @@ begin
 			--registerOut <= x"000000" & b"000" & WriteAddr;
 		elsif RegWrite = '1' then
 			registerFile(to_integer(unsigned(WriteAddr))) := WriteData;
-			--registerOut <= registerFile(to_integer(unsigned(WriteAddr)));
+			lreg <= registerFile(to_integer(unsigned(WriteAddr)));
 		else
 		
 		
@@ -154,7 +154,7 @@ waitFor <= x"8" when (CurrentInstruction(5 downto 0) = b"011010" or
 							 CurrentInstruction(5 downto 0) = b"011011") else
 -- checks for LUI
 			  --x"0" when CurrentInstruction(31 downto 26) = b"001111" else
-			  x"1";
+			  x"0";
 
 end Behavioral;
 
