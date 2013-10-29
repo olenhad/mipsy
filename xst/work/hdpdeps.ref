@@ -5,7 +5,7 @@ FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" 2013/
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/control_unit.vhd" 2013/10/18.18:40:27 O.61xd
 EN work/control_unit 1382092849 \
       FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/control_unit.vhd" \
-      PB ieee/std_logic_1164 1308643377 PB work/utils 1383074879 \
+      PB ieee/std_logic_1164 1308643377 PB work/utils 1383082477 \
       PB ieee/NUMERIC_STD 1308643378
 AR work/control_unit/Behavioral 1382092850 \
       FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/control_unit.vhd" \
@@ -41,48 +41,48 @@ AR work/umul32/Behavioral 1381425090 \
       EN work/umul32 1381425089
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd" 2013/10/18.18:25:06 O.61xd
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" 2013/10/05.22:29:37 O.61xd
-EN work/adder32 1383074876 \
+EN work/adder32 1383082474 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" \
       PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/adder32/Behavioral 1383074877 \
+AR work/adder32/Behavioral 1383082475 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" \
-      EN work/adder32 1383074876
+      EN work/adder32 1383082474
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" 2013/10/05.22:47:14 O.61xd
-EN work/addsub32 1383074880 \
+EN work/addsub32 1383082478 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" \
       PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/addsub32/Behavioral 1383074881 \
+AR work/addsub32/Behavioral 1383082479 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" \
-      EN work/addsub32 1383074880 CP adder32
+      EN work/addsub32 1383082478 CP adder32
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd" 2013/10/23.11:09:48 O.61xd
-EN work/alu 1383074892 \
+EN work/alu 1383082490 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd" \
       PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/alu/Behavioral 1383074893 \
+AR work/alu/Behavioral 1383082491 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd" \
-      EN work/alu 1383074892 CP addsub32 CP uaddsub32 CP mul32 CP div32
-FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" 2013/10/30.03:27:50 O.61xd
-EN work/cpu 1383074896 \
+      EN work/alu 1383082490 CP addsub32 CP uaddsub32 CP mul32 CP div32
+FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" 2013/10/30.05:33:49 O.61xd
+EN work/cpu 1383082494 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" \
       PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/cpu/Behavioral 1383074897 \
+AR work/cpu/Behavioral 1383082495 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" \
-      EN work/cpu 1383074896 CP rom CP decode CP alu CP ram
-FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" 2013/10/30.03:24:17 O.61xd
-EN work/decode 1383074890 \
+      EN work/cpu 1383082494 CP rom CP decode CP alu CP ram
+FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" 2013/10/30.05:34:07 O.61xd
+EN work/decode 1383082488 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" \
-      PB ieee/std_logic_1164 1308643377 PB work/utils 1383074879 \
+      PB ieee/std_logic_1164 1308643377 PB work/utils 1383082477 \
       PB ieee/NUMERIC_STD 1308643378
-AR work/decode/Behavioral 1383074891 \
+AR work/decode/Behavioral 1383082489 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" \
-      EN work/decode 1383074890
+      EN work/decode 1383082488
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/div32.vhd" 2013/10/16.09:25:13 O.61xd
-EN work/div32 1383074886 \
+EN work/div32 1383082484 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/div32.vhd" \
       PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/div32/Behavioral 1383074887 \
+AR work/div32/Behavioral 1383082485 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/div32.vhd" \
-      EN work/div32 1383074886
+      EN work/div32 1383082484
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/fetch.vhd" 2013/10/29.21:19:27 O.61xd
 EN work/fetch 1382555197 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/fetch.vhd" \
@@ -92,48 +92,48 @@ AR work/fetch/Behavioral 1382555198 \
       EN work/fetch 1382555197 CP rom
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" 2013/10/02.09:35:22 O.61xd
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/mul32.vhd" 2013/10/11.03:33:46 O.61xd
-EN work/mul32 1383074884 \
+EN work/mul32 1383082482 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/mul32.vhd" \
       PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/mul32/Behavioral 1383074885 \
+AR work/mul32/Behavioral 1383082483 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/mul32.vhd" \
-      EN work/mul32 1383074884
-FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/ram.vhd" 2013/10/30.03:26:34 O.61xd
-EN work/ram 1383074894 \
+      EN work/mul32 1383082482
+FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/ram.vhd" 2013/10/30.05:14:06 O.61xd
+EN work/ram 1383082492 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/ram.vhd" \
       PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
-      PB work/utils 1383074879 PB ieee/STD_LOGIC_UNSIGNED 1308643379
-AR work/ram/Behavioral 1383074895 \
+      PB work/utils 1383082477 PB ieee/STD_LOGIC_UNSIGNED 1308643379
+AR work/ram/Behavioral 1383082493 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/ram.vhd" \
-      EN work/ram 1383074894
+      EN work/ram 1383082492
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" 2013/10/29.20:47:32 O.61xd
-EN work/rom 1383074888 \
+EN work/rom 1383082486 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" \
       PB std/TEXTIO 1308643377 PB ieee/std_logic_1164 1308643377 \
       PB ieee/STD_LOGIC_TEXTIO 1308643378 PB ieee/NUMERIC_STD 1308643378 \
-      PB work/utils 1383074879
-AR work/rom/Behavioral 1383074889 \
+      PB work/utils 1383082477
+AR work/rom/Behavioral 1383082487 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" \
-      EN work/rom 1383074888
+      EN work/rom 1383082486
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd" 2013/10/02.12:40:39 O.61xd
-EN work/uadder32 1383074874 \
+EN work/uadder32 1383082472 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd" \
       PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/uadder32/Behavioral 1383074875 \
+AR work/uadder32/Behavioral 1383082473 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd" \
-      EN work/uadder32 1383074874
+      EN work/uadder32 1383082472
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd" 2013/10/05.22:33:13 O.61xd
-EN work/uaddsub32 1383074882 \
+EN work/uaddsub32 1383082480 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd" \
       PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/uaddsub32/Behavioral 1383074883 \
+AR work/uaddsub32/Behavioral 1383082481 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd" \
-      EN work/uaddsub32 1383074882 CP uadder32
-FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" 2013/10/23.09:30:35 O.61xd
-PH work/utils 1383074878 \
+      EN work/uaddsub32 1383082480 CP uadder32
+FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" 2013/10/30.05:06:57 O.61xd
+PH work/utils 1383082476 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" \
       PB std/TEXTIO 1308643377 PB ieee/std_logic_1164 1308643377 \
       PB ieee/STD_LOGIC_TEXTIO 1308643378 PB ieee/NUMERIC_STD 1308643378
-PB work/utils 1383074879 \
+PB work/utils 1383082477 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" \
-      PH work/utils 1383074878
+      PH work/utils 1383082476

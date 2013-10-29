@@ -52,7 +52,7 @@ package body utils is
        variable line_read : line;                                 
        variable rom_name       : RomData := (others => (others => '0'));
 		 variable hex_temp : std_logic_vector (0 to 31);
-		 variable main_counter : integer := 0;
+		 variable main_counter : integer := 0 ;
     begin                                                        
        	
   

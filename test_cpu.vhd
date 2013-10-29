@@ -46,7 +46,9 @@ ARCHITECTURE behavior OF test_cpu IS
          DRegAddr : IN  std_logic_vector(4 downto 0);
          DMemAddr : IN  std_logic_vector(31 downto 0);
          DRegOut : OUT  std_logic_vector(31 downto 0);
-         DMemOut : OUT  std_logic_vector(31 downto 0)
+         DMemOut : OUT  std_logic_vector(31 downto 0);
+			DCPUState : out std_logic_vector(31 downto 0);
+			  DCurrentIns : out std_logic_vector(31 downto 0)
         );
     END COMPONENT;
     
@@ -60,7 +62,8 @@ ARCHITECTURE behavior OF test_cpu IS
  	--Outputs
    signal DRegOut : std_logic_vector(31 downto 0);
    signal DMemOut : std_logic_vector(31 downto 0);
-
+	signal DCPUState : std_logic_vector(31 downto 0);
+	signal DCurrentIns : std_logic_vector(31 downto 0);
    -- Clock period definitions
    constant CLK_period : time := 10 ns;
  
@@ -73,7 +76,9 @@ BEGIN
           DRegAddr => DRegAddr,
           DMemAddr => DMemAddr,
           DRegOut => DRegOut,
-          DMemOut => DMemOut
+          DMemOut => DMemOut,
+			 DCPUState => DCPUState,
+			 DCurrentIns => DCurrentIns
         );
 
    -- Clock process definitions
@@ -91,12 +96,21 @@ BEGIN
    begin		
       wait for 5 ns;
 		
-      wait for CLK_period*5;
+      wait for CLK_period*7;
 
-      DHalt <= '1';
-		DRegAddr <= b"01001";
+		DRegAddr <= b"00001";
+      DHalt <= '0';
+		
 		
 		wait for CLK_period*2;
+		
+		DHalt <= '0';
+		
+		wait for CLK_period*5;
+		
+		DHalt <= '0';
+		DRegAddr <= b"01001";
+		
 		-- insert stimulus here 
 
       wait;

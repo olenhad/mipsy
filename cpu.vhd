@@ -35,7 +35,9 @@ entity cpu is
 	        DRegAddr : in std_logic_vector(4 downto 0);
 			  DMemAddr : in std_logic_vector(31 downto 0);
 			  DRegOut : out std_logic_vector(31 downto 0);
-			  DMemOut : out std_logic_vector(31 downto 0));
+			  DMemOut : out std_logic_vector(31 downto 0);
+			  DCPUState : out std_logic_vector(31 downto 0);
+			  DCurrentIns : out std_logic_vector(31 downto 0));
 end cpu;
 
 architecture Behavioral of cpu is
@@ -175,11 +177,13 @@ variable currentIns :  std_logic_vector(31 downto 0) := (others => '0');
 variable currentState : CPUState := FetchDecode;
 variable waitCounter : integer := 0;
 begin
+	
 	if rising_edge(CLK) then
 	
-		if waitCounter = 0 and DHalt = '0' then
-			DMemOut <= (others => '0');
-			DRegOut <= (others => '0');
+		DCurrentIns <= currentIns;
+		if waitCounter = 0 then
+			
+			
 			if currentState = FetchDecode then
 				
 				decode_RegWrite <= '0';
@@ -195,15 +199,20 @@ begin
 				
 				-- feed cur Ins to decode. decode will give alu appropriate operands by nnext clk cycle
 				decode_currentInstruction <= currentIns;
-	
+				
+				DCPUState <= (others => '0');
+				
 				currentState := Execute;
 					
 			elsif currentState = Execute then
+				
+				DCPUState <= (0 => '1', others => '0');
 				
 				waitCounter :=  to_integer(unsigned(decode_WaitFor));
 				currentState := MemWR;
 				
 			elsif currentState = MemWR then
+				DCPUState <= (1 => '1', others => '0');
 				if sig_Branch = '0' and 
 					sig_MemRead = '0' and 
 					sig_MemWrite = '0' then 
@@ -232,6 +241,7 @@ begin
 				currentState := WriteBack;
 	
 			elsif currentState = WriteBack then
+					DCPUState <= (2 => '1', others => '0');
 					ram_WE <= '0';
 				-- R Type
 				if sig_RegWrite = '1' and
@@ -243,6 +253,7 @@ begin
 					decode_WriteAddr <= CurrentIns(15 downto 11);
 					-- send alu_r1
 					decode_WriteData <= alu_r1;
+					
 					-- state shortcircuited back to FetchDecode
 					currentState := FetchDecode;
 				
@@ -258,23 +269,15 @@ begin
 			end if;
 			
 			
-		elsif DHalt = '0' then
+		else
 		
 			waitCounter := waitCounter - 1;
 		
-		elsif DHalt = '1' then
-			
-			decode_currentInstruction <= x"FFFFFFFF";
-			
-			decode_WriteAddr <= DRegAddr;
-			DRegOut <= decode_registerOut;
-			
-			ram_ADDR <= DMemAddr;
-			DMemOut <= ram_DO;
 		end if;
 	end if;
 
 end process;
 
+DRegOut <= decode_registerOut;
 end Behavioral;
 

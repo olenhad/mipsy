@@ -1,4 +1,4 @@
-.data
+.data 
 val1: .word 10
 val2: .word 20
 .text

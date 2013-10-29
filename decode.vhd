@@ -65,11 +65,11 @@ begin
 	if rising_edge(CLK) then
 		
 		if currentInstruction = x"FFFFFFFF" then
-			registerOut <= registerFile(to_integer(unsigned(WriteAddr)));
-		
+			--registerOut <= registerFile(to_integer(unsigned(WriteAddr)));
+			--registerOut <= x"000000" & b"000" & WriteAddr;
 		elsif RegWrite = '1' then
 			registerFile(to_integer(unsigned(WriteAddr))) := WriteData;
-		
+			--registerOut <= registerFile(to_integer(unsigned(WriteAddr)));
 		else
 		
 		
@@ -138,6 +138,12 @@ begin
 				
 				registerOut <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
 				
+			elsif opcode = b"001111" then
+			-- LUI (F)
+				AluOP1 <= x"0000" & CurrentInstruction(15 downto 0);
+				AluOP2 <= x"00000010";
+				AluControl <= b"000000";
+				ControlSignals <= b"01000";
 			end if;
 		end if;
 	end if;
@@ -147,7 +153,7 @@ end process;
 waitFor <= x"8" when (CurrentInstruction(5 downto 0) = b"011010" or 
 							 CurrentInstruction(5 downto 0) = b"011011") else
 -- checks for LUI
-			  x"0" when CurrentInstruction(31 downto 26) = b"001111" else
+			  --x"0" when CurrentInstruction(31 downto 26) = b"001111" else
 			  x"1";
 
 end Behavioral;
