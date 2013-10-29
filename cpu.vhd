@@ -22,7 +22,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
@@ -76,6 +76,8 @@ component ram is
           DO   : out std_logic_vector(31 downto 0));
 end component;
 
+type CPUState is (FetchDecode, Execute, MemUpdate);
+
 signal rom_EN : std_logic := '0';
 signal rom_ADDR : std_logic_vector(31 downto 0) := (others => '0');
 signal rom_DATA : std_logic_vector(31 downto 0) := (others => '0');
@@ -104,8 +106,8 @@ signal ram_do  : std_logic_vector(31 downto 0) := (others => '0');
 
 begin
 
-ifetch : rom port map (EN => '1',
-							  ADDR => rom_ADDR
+irom  : rom port map (EN => '1',
+							  ADDR => rom_ADDR,
 							  DATA => rom_DATA);
 	
 idecode : decode port map (CLK => CLK,
@@ -135,8 +137,33 @@ iram : ram port map (CLK => CLK,
 							
 
 process(CLK) 
+variable pc : std_logic_vector(31 downto 0) := (others => '0');
+variable currentIns :  std_logic_vector(31 downto 0) := (others => '0');
+variable currentState : CPUState := FetchDecode;
+variable waitCounter : integer := 0;
+begin
+	if rising_edge(CLK) then
+		if waitCounter /= 0 then
+			if currentState = FetchDecode then
+				
+				currentIns := rom_DATA;
+				
+				pc := std_logic_vector(unsigned(pc) + 4);
 
-if rising_edge()
+				rom_ADDR <= pc;
+
+				currentState := Execute;
+			
+			elsif currentState = Execute then
+			
+			elsif currentState = MemUpdate then
+			
+			end if;
+			
+		else
+			waitCounter := waitCounter - 1;
+		end if;
+	end if;
 
 end process;
 

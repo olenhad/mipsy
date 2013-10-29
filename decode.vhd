@@ -38,7 +38,8 @@ entity decode is
 			AluOP1 : out std_logic_vector(31 downto 0);
 			AluOP2 : out std_logic_vector(31 downto 0);
 			AluControl : out std_logic_vector(5 downto 0);
-			ControlSignals : out std_logic_vector(5 downto 0));
+			ControlSignals : out std_logic_vector(5 downto 0);
+			WaitFor : out std_logic_vector (3 downto 0));
 end decode;
 
 architecture Behavioral of decode is
