@@ -38,7 +38,7 @@ entity ram is
 	port ( WE   : in std_logic;
           EN   : in std_logic;
 			 CLK	: in std_logic;
-          ADDR : in std_logic_vector(11 downto 0);
+          ADDR : in std_logic_vector(31 downto 0);
           DI   : in std_logic_vector(31 downto 0);
           DO   : out std_logic_vector(31 downto 0));
 end ram;

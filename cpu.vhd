@@ -33,7 +33,7 @@ entity cpu is
     Port ( CLK : in  STD_LOGIC;
 			  DHalt : in std_logic;
 	        DRegAddr : in std_logic_vector(4 downto 0);
-			  DMemAddr : in std_logic_vector(11 downto 0);
+			  DMemAddr : in std_logic_vector(31 downto 0);
 			  DRegOut : out std_logic_vector(31 downto 0);
 			  DMemOut : out std_logic_vector(31 downto 0));
 end cpu;
@@ -56,7 +56,7 @@ component decode is
 			AluOP1 : out std_logic_vector(31 downto 0);
 			AluOP2 : out std_logic_vector(31 downto 0);
 			AluControl : out std_logic_vector(5 downto 0);
-			ControlSignals : out std_logic_vector(5 downto 0);
+			ControlSignals : out std_logic_vector(4 downto 0);
 			WaitFor : out std_logic_vector (3 downto 0);
 			registerOut : out std_logic_vector(31 downto 0));
 end component;
@@ -75,7 +75,7 @@ component ram is
 	port (CLK  : in std_logic;
           WE   : in std_logic;
           EN   : in std_logic;
-          ADDR : in std_logic_vector(11 downto 0);
+          ADDR : in std_logic_vector(31 downto 0);
           DI   : in std_logic_vector(31 downto 0);
           DO   : out std_logic_vector(31 downto 0));
 end component;
@@ -93,7 +93,7 @@ signal decode_RegWrite : std_logic := '0';
 signal decode_AluOP1 :  std_logic_vector(31 downto 0) := (others => '0');
 signal decode_AluOP2 :  std_logic_vector(31 downto 0) := (others => '0');
 signal decode_AluControl : std_logic_vector(5 downto 0) := (others => '0');
-signal decode_ControlSignals : std_logic_vector(5 downto 0) := (others => '0');
+signal decode_ControlSignals : std_logic_vector(4 downto 0) := (others => '0');
 signal decode_waitFor : std_logic_vector(3 downto 0);
 signal decode_registerOut : std_logic_vector(31 downto 0);
 
@@ -112,7 +112,7 @@ signal alu_debug : std_logic_vector(31 downto 0) := (others => '0');
 
 signal ram_we : std_logic := '0';
 signal ram_en : std_logic := '1';
-signal ram_addr : std_logic_vector(11 downto 0) := (others => '0');
+signal ram_addr : std_logic_vector(31 downto 0) := (others => '0');
 signal ram_di  : std_logic_vector(31 downto 0) := (others => '0');
 signal ram_do  : std_logic_vector(31 downto 0) := (others => '0');
 
@@ -178,6 +178,8 @@ begin
 	if rising_edge(CLK) then
 	
 		if waitCounter = 0 and DHalt = '0' then
+			DMemOut <= (others => '0');
+			DRegOut <= (others => '0');
 			if currentState = FetchDecode then
 				
 				decode_RegWrite <= '0';
@@ -268,7 +270,7 @@ begin
 			DRegOut <= decode_registerOut;
 			
 			ram_ADDR <= DMemAddr;
-			DMemOut <= ram_DATA;
+			DMemOut <= ram_DO;
 		end if;
 	end if;
 
