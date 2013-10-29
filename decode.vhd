@@ -64,72 +64,82 @@ begin
 
 	if rising_edge(CLK) then
 		
-		opcode := currentInstruction(31 downto 26);
-		ControlSignals <= (others => '0');
-		registerOut <= (others => '0');
-		-- R type
-		if opcode = b"000000" then
-		-- all R type instructions just Write to registers. assert RegWrite	
-			ControlSignals <= "01000";
-		-- funct portion of Current Instruction
-			AluControl <= CurrentInstruction(5 downto 0);
+		if currentInstruction = x"FFFFFFFF" then
+			registerOut <= registerFile(to_integer(unsigned(WriteAddr)));
+		
+		elsif RegWrite = '1' then
+			registerFile(to_integer(unsigned(WriteAddr))) := WriteData;
+		
+		else
+		
+		
+			
+			opcode := currentInstruction(31 downto 26);
+			ControlSignals <= (others => '0');
+			registerOut <= (others => '0');
+			-- R type
+			if opcode = b"000000" then
+			-- all R type instructions just Write to registers. assert RegWrite	
+				ControlSignals <= "01000";
+			-- funct portion of Current Instruction
+				AluControl <= CurrentInstruction(5 downto 0);
 
-		-- load operand 1 with register whose address is in rs
-			AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
-		
-		
-			if (CurrentInstruction(5 downto 0) = b"00000" or 
-			    CurrentInstruction(5 downto 0) = b"00010" or  
-				 CurrentInstruction(5 downto 0) = b"00011") then
-			-- load operand 2 with shamt
-				 AluOP2 <= x"000000" & b"000" & CurrentInstruction(10 downto 6);
-			else
-			-- load operand 2 with register whose address is in rt
-				AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
+			-- load operand 1 with register whose address is in rs
+				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+			
+			
+				if (CurrentInstruction(5 downto 0) = b"00000" or 
+					 CurrentInstruction(5 downto 0) = b"00010" or  
+					 CurrentInstruction(5 downto 0) = b"00011") then
+				-- load operand 2 with shamt
+					 AluOP2 <= x"000000" & b"000" & CurrentInstruction(10 downto 6);
+				else
+				-- load operand 2 with register whose address is in rt
+					AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
+				end if;
+			-- sets register whose address is at rd to alu_result1
+				--registerFile(to_integer(unsigned(currentInstruction(15 downto 11)))) := alu_result1;
+			
+			-- I types
+			elsif opcode = b"100011" then
+			 -- Load Word (23)
+			 -- sign extension to offset
+				AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
+			-- currentInstruction (25 downto 21) denotes rs, which contains base address
+				AluOp1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+			-- Alu Control set to Add.
+				AluControl <=  b"100000";
+			-- TODO set ControlSignals appropriately
+			-- ControlSignals
+			-- 0 => Branch
+			-- 1 => MemRead
+			-- 2 => MemWrite
+			-- 3 => RegWrite
+			-- 4 => MemToReg
+			-- MemRead => 1. RegWrite => 1. MemToReg => 1	
+				ControlSignals <= b"11010";
+				
+			elsif opcode = b"101011" then
+			-- Store Word (2B)
+				AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
+			-- currentInstruction (25 downto 21) denotes rs, which contains base address
+				AluOp1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+			-- Alu Control set to Add.
+				AluControl <=  b"100000";
+				
+			-- ControlSignals
+			-- 0 => Branch
+			-- 1 => MemRead
+			-- 2 => MemWrite
+			-- 3 => RegWrite
+			-- 4 => MemToReg
+			-- MemWrite => 1	
+				ControlSignals <= b"00100";
+				
+				registerOut <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
+				
 			end if;
-		-- sets register whose address is at rd to alu_result1
-			--registerFile(to_integer(unsigned(currentInstruction(15 downto 11)))) := alu_result1;
-		
-		-- I types
-		elsif opcode = b"100011" then
-		 -- Load Word (23)
-		 -- sign extension to offset
-			AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
-		-- currentInstruction (25 downto 21) denotes rs, which contains base address
-			AluOp1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
-		-- Alu Control set to Add.
-			AluControl <=  b"100000";
-		-- TODO set ControlSignals appropriately
-		-- ControlSignals
-		-- 0 => Branch
-		-- 1 => MemRead
-		-- 2 => MemWrite
-		-- 3 => RegWrite
-		-- 4 => MemToReg
-		-- MemRead => 1. RegWrite => 1. MemToReg => 1	
-			ControlSignals <= b"11010";
-			
-		elsif opcode = b"101011" then
-		-- Store Word (2B)
-			AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
-		-- currentInstruction (25 downto 21) denotes rs, which contains base address
-			AluOp1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
-		-- Alu Control set to Add.
-			AluControl <=  b"100000";
-			
-		-- ControlSignals
-		-- 0 => Branch
-		-- 1 => MemRead
-		-- 2 => MemWrite
-		-- 3 => RegWrite
-		-- 4 => MemToReg
-		-- MemWrite => 1	
-			ControlSignals <= b"00100";
-			
-			registerOut <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
-			
 		end if;
-
 	end if;
 end process;
 

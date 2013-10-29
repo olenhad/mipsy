@@ -31,9 +31,11 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity cpu is
     Port ( CLK : in  STD_LOGIC;
-	        DInstruction : out std_logic_vector(31 downto 0);
-			  DRamWord0 : out std_logic_vector(31 downto 0);
-			  DRamWord1 : out std_logic_vector(31 downto 0));
+			  DHalt : in std_logic;
+	        DRegAddr : in std_logic_vector(4 downto 0);
+			  DMemAddr : in std_logic_vector(11 downto 0);
+			  DRegOut : out std_logic_vector(31 downto 0);
+			  DMemOut : out std_logic_vector(31 downto 0));
 end cpu;
 
 architecture Behavioral of cpu is
@@ -174,8 +176,13 @@ variable currentState : CPUState := FetchDecode;
 variable waitCounter : integer := 0;
 begin
 	if rising_edge(CLK) then
-		if waitCounter = 0 then
+	
+		if waitCounter = 0 and DHalt = '0' then
 			if currentState = FetchDecode then
+				
+				decode_RegWrite <= '0';
+				decode_WriteAddr <= (others => '0');
+				decode_WriteData <= (others => '0');
 				
 				currentIns := rom_DATA;
 				
@@ -186,8 +193,6 @@ begin
 				
 				-- feed cur Ins to decode. decode will give alu appropriate operands by nnext clk cycle
 				decode_currentInstruction <= currentIns;
-				decode_RegWrite <= '0';
-				
 	
 				currentState := Execute;
 					
@@ -225,7 +230,7 @@ begin
 				currentState := WriteBack;
 	
 			elsif currentState = WriteBack then
-				
+					ram_WE <= '0';
 				-- R Type
 				if sig_RegWrite = '1' and
 					sig_MemToReg = '0' then
@@ -251,8 +256,19 @@ begin
 			end if;
 			
 			
-		else
+		elsif DHalt = '0' then
+		
 			waitCounter := waitCounter - 1;
+		
+		elsif DHalt = '1' then
+			
+			decode_currentInstruction <= x"FFFFFFFF";
+			
+			decode_WriteAddr <= DRegAddr;
+			DRegOut <= decode_registerOut;
+			
+			ram_ADDR <= DMemAddr;
+			DMemOut <= ram_DATA;
 		end if;
 	end if;
 
