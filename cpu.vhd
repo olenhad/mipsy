@@ -55,7 +55,8 @@ component decode is
 			AluOP2 : out std_logic_vector(31 downto 0);
 			AluControl : out std_logic_vector(5 downto 0);
 			ControlSignals : out std_logic_vector(5 downto 0);
-			WaitFor : out std_logic_vector (3 downto 0));
+			WaitFor : out std_logic_vector (3 downto 0);
+			registerOut : out std_logic_vector(31 downto 0));
 end component;
 
 component alu is
@@ -77,7 +78,7 @@ component ram is
           DO   : out std_logic_vector(31 downto 0));
 end component;
 
-type CPUState is (FetchDecode, Execute, MemRW, WriteBack);
+type CPUState is (FetchDecode, Execute, MemWR, WriteBack);
 
 signal rom_EN : std_logic := '0';
 signal rom_ADDR : std_logic_vector(31 downto 0) := (others => '0');
@@ -92,6 +93,7 @@ signal decode_AluOP2 :  std_logic_vector(31 downto 0) := (others => '0');
 signal decode_AluControl : std_logic_vector(5 downto 0) := (others => '0');
 signal decode_ControlSignals : std_logic_vector(5 downto 0) := (others => '0');
 signal decode_waitFor : std_logic_vector(3 downto 0);
+signal decode_registerOut : std_logic_vector(31 downto 0);
 
 signal sig_Branch : std_logic := '0';
 signal sig_MemRead : std_logic := '0';
@@ -127,7 +129,8 @@ idecode : decode port map (CLK => CLK,
 								  AluOP2 => decode_AluOP2,
 								  AluControl => decode_AluControl,
 								  ControlSignals => decode_ControlSignals,
-								  WaitFor => decode_waitFor);
+								  WaitFor => decode_waitFor,
+								  registerOut => decode_registerOut);
 
 		-- ControlSignals
 		-- 0 => Branch
@@ -190,27 +193,63 @@ begin
 					
 			elsif currentState = Execute then
 				
-				waitCounter := decode_WaitFor;
+				waitCounter :=  to_integer(unsigned(decode_WaitFor));
 				currentState := MemWR;
 				
 			elsif currentState = MemWR then
-			
-			-- R Type			
 				if sig_Branch = '0' and 
 					sig_MemRead = '0' and 
-					sig_MemWrite = '0' and 
-					sig_RegWrite = '1' and
+					sig_MemWrite = '0' then 
+					
+				-- DO nothing. Update to next stage
+				-- R Type	
+					
+				elsif sig_Branch = '0' and
+				      sig_MemRead = '1' and 
+					   sig_MemWrite = '0' then 
+					
+				-- lw 
+				-- send alu's r1 which contains actual memory address after adding base and offset	
+					ram_addr <= alu_r1;
+					
+				elsif sig_Branch = '0' and
+				      sig_MemRead = '0' and
+						sig_MemWrite = '1' then
+				-- sw		
+					ram_WE <= '1';	
+					ram_ADDR <= alu_r1;
+				-- registerOut sends data from rt	
+					ram_DI <= decode_registerOut;
+					
+				end if;	
+				currentState := WriteBack;
+	
+			elsif currentState = WriteBack then
+				
+				-- R Type
+				if sig_RegWrite = '1' and
 					sig_MemToReg = '0' then
 					
-					
-					
+					decode_regWrite <= '1';
+					-- TODO fix me for MUL, DIV
+					-- write to rd
+					decode_WriteAddr <= CurrentIns(15 downto 11);
+					-- send alu_r1
+					decode_WriteData <= alu_r1;
+					-- state shortcircuited back to FetchDecode
+					currentState := FetchDecode;
+				
+				elsif sig_RegWrite = '1' and
+				      sig_MemToReg = '1' then
+					-- lw	
+						-- RT for I type instructions	
+					decode_WriteAddr <= CurrentIns(20 downto 16);
 				end if;
-			end if;
-			
-			if currentState = WriteBack then
-			
+				
+				currentState := FetchDecode;
 				
 			end if;
+			
 			
 		else
 			waitCounter := waitCounter - 1;

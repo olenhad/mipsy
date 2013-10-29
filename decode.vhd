@@ -39,7 +39,9 @@ entity decode is
 			AluOP2 : out std_logic_vector(31 downto 0);
 			AluControl : out std_logic_vector(5 downto 0);
 			ControlSignals : out std_logic_vector(5 downto 0);
-			WaitFor : out std_logic_vector (3 downto 0));
+			WaitFor : out std_logic_vector (3 downto 0);
+			registerOut : out std_logic_vector(31 downto 0));
+
 end decode;
 
 architecture Behavioral of decode is
@@ -64,6 +66,7 @@ begin
 		
 		opcode := currentInstruction(31 downto 26);
 		ControlSignals <= (others => '0');
+		registerOut <= (others => '0');
 		-- R type
 		if opcode = b"000000" then
 		-- all R type instructions just Write to registers. assert RegWrite	
@@ -122,7 +125,9 @@ begin
 		-- 4 => MemToReg
 		-- MemWrite => 1	
 			ControlSignals <= b"00100";
-		
+			
+			registerOut <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
+			
 		end if;
 
 	end if;
