@@ -44,6 +44,7 @@ end decode;
 architecture Behavioral of decode is
 
 begin
+-- Circuit can't be combinational because it needs to interface reads and writes to the RegisterFile
 
 process(CLK)
 	variable registerFile : RegisterSet := (others => (others => '0'));
