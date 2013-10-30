@@ -22,9 +22,19 @@ package utils is
 	type RegisterSet is array (31 downto 0) of std_logic_vector(31 downto 0);
 	type CodeAddress is array (8 downto 0) of std_logic;
 	type CodeInstruction is array (31 downto 0) of std_logic;
+	subtype Word is std_logic_vector(31 downto 0);
 	
 	impure function read_rom_from_file ( rom_file_name : in string) return RomData;
 	impure function read_ram_from_file ( ram_file_name : in string) return RamData;
+	
+	function read_ram_at ( ram_data : in RamData; addr: in std_logic_vector(31 downto 0))  
+		return Word;
+	
+	function write_ram_at (ram_data : in RamData; 
+								  addr: in std_logic_vector(31 downto 0);
+								  DI: in Word)
+		return RamData;
+
 -- type <new_type> is
 --  record
 --    <type_name>        : std_logic_vector( 7 downto 0);
@@ -46,6 +56,29 @@ end utils;
 
 package body utils is
 	
+		function read_ram_at ( ram_data : in RamData; addr: in std_logic_vector(31 downto 0)) 
+		return Word is
+		begin
+		
+			return ram_data(to_integer(unsigned(ADDR(15 downto 0))+3)) &
+					 ram_data(to_integer(unsigned(ADDR(15 downto 0))+2)) &
+					 ram_data(to_integer(unsigned(ADDR(15 downto 0))+1)) &
+					 ram_data(to_integer(unsigned(ADDR(15 downto 0))));
+		end function;
+		
+	function write_ram_at (ram_data : in RamData; 
+								  addr: in std_logic_vector(31 downto 0);
+								  DI: in Word)
+		return RamData is
+			variable RAM : RamData := ram_data;
+		begin
+			RAM(to_integer(unsigned(ADDR(15 downto 0)))) := DI(7 downto 0);
+			RAM(to_integer(unsigned(ADDR(15 downto 0)) + 1)) := DI(15 downto 8);
+			RAM(to_integer(unsigned(ADDR(15 downto 0)) + 2)) := DI(23 downto 16);
+			RAM(to_integer(unsigned(ADDR(15 downto 0)) + 3)) := DI(31 downto 24);
+			return RAM;
+	end function;
+
 	
 	impure function read_rom_from_file ( rom_file_name : in string) return RomData is                                                   
        FILE rom_file         : text is in rom_file_name;                       
@@ -91,7 +124,10 @@ impure function read_ram_from_file ( ram_file_name : in string) return RamData i
         end loop;
 		return ram_name;
 		  
-    end function;          	 
+    end function; 
+
+
+	
 ---- Example 1
 --  function <function_name>  (signal <signal_name> : in <type_declaration>  ) return <type_declaration> is
 --    variable <variable_name>     : <type_declaration>;

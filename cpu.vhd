@@ -28,6 +28,7 @@ use IEEE.NUMERIC_STD.ALL;
 -- any Xilinx primitives in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
+use work.utils.ALL;
 
 entity cpu is
     Port ( CLK : in  STD_LOGIC;
@@ -80,14 +81,14 @@ Port (	Clk			: in	STD_LOGIC;
 		Debug		: out	STD_LOGIC_VECTOR (31 downto 0));
 end component;
 
-component ram is
-	port (CLK  : in std_logic;
-          WE   : in std_logic;
-          EN   : in std_logic;
-          ADDR : in std_logic_vector(31 downto 0);
-          DI   : in std_logic_vector(31 downto 0);
-          DO   : out std_logic_vector(31 downto 0));
-end component;
+--component ram is
+--	port (CLK  : in std_logic;
+--          WE   : in std_logic;
+--          EN   : in std_logic;
+--          ADDR : in std_logic_vector(31 downto 0);
+--          DI   : in std_logic_vector(31 downto 0);
+--          DO   : out std_logic_vector(31 downto 0));
+--end component;
 
 type CPUState is (FetchDecode, Execute, MemWR, WriteBack, AluWait, AluWaitWB);
 
@@ -122,11 +123,11 @@ signal alu_r1 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_r2 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_debug : std_logic_vector(31 downto 0) := (others => '0');
 
-signal ram_we : std_logic := '0';
-signal ram_en : std_logic := '1';
-signal ram_addr : std_logic_vector(31 downto 0) := (others => '0');
-signal ram_di  : std_logic_vector(31 downto 0) := (others => '0');
-signal ram_do  : std_logic_vector(31 downto 0) := (others => '0');
+--signal ram_we : std_logic := '0';
+--signal ram_en : std_logic := '1';
+--signal ram_addr : std_logic_vector(31 downto 0) := (others => '0');
+--signal ram_di  : std_logic_vector(31 downto 0) := (others => '0');
+--signal ram_do  : std_logic_vector(31 downto 0) := (others => '0');
 
 begin
 
@@ -170,23 +171,25 @@ ialu : alu port map (CLK => CLK,
 							Result1	=> alu_r1,
 							Result2  => alu_r2,
 							Debug		=> alu_debug);
-
-iram : ram port map (CLK => CLK,
-							WE => ram_WE,
-							EN =>  ram_EN,
-							ADDR => ram_ADDR,
-							DI  => ram_DI,
-							DO  => ram_DO);
-							
+--
+--iram : ram port map (CLK => CLK,
+--							WE => ram_WE,
+--							EN =>  ram_EN,
+--							ADDR => ram_ADDR,
+--							DI  => ram_DI,
+--							DO  => ram_DO);
+--							
 
 
 
 
 process(CLK) 
-variable pc : std_logic_vector(31 downto 0) := (others => '0');
-variable currentIns :  std_logic_vector(31 downto 0) := (others => '0');
-variable currentState : CPUState := FetchDecode;
-variable waitCounter : integer := 0;
+	variable pc : std_logic_vector(31 downto 0) := (others => '0');
+	variable currentIns :  std_logic_vector(31 downto 0) := (others => '0');
+	variable currentState : CPUState := FetchDecode;
+	variable waitCounter : integer := 0;
+	variable RAM: RamData := read_ram_from_file("asm\test1data.hex");
+	variable ram_WE : std_logic := '0';
 begin
 	
 	if rising_edge(CLK) then
@@ -243,27 +246,28 @@ begin
 					
 				-- lw 
 				-- send alu's r1 which contains actual memory address after adding base and offset	
-					ram_addr <= alu_r1;
+				--	ram_addr <= alu_r1;
 					DCPUState <= x"FFFFFFFF";
 				elsif sig_Branch = '0' and
 				      sig_MemRead = '0' and
 						sig_MemWrite = '1' then
-				-- sw		
-					ram_WE <= '1';	
-					ram_ADDR <= alu_r1;
-				-- registerOut sends data from rt	
-					ram_DI <= decode_registerOut;
+--				-- sw		
+--					ram_WE <= '1';	
+--					ram_ADDR <= alu_r1;
+--				-- registerOut sends data from rt	
+--					ram_DI <= decode_registerOut;
+					
+					RAM := write_ram_at(RAM, alu_r1, decode_registerOut );
+					DMemOut <= read_ram_at(RAM, alu_r1);
+					DMemAddr <= alu_r1;
 					
 				end if;	
-				currentState := AluWaitWB;
-			
-			elsif currentState = AluWaitWB then
-				DCPUState <= (6 => '1', others => '0');
 				currentState := WriteBack;
+			
 	
 			elsif currentState = WriteBack then
 					DCPUState <= (2 => '1', others => '0');
-					ram_WE <= '0';
+					--ram_WE <= '0';
 				-- R Type
 				if sig_RegWrite = '1' and
 					sig_MemToReg = '0' then
@@ -283,7 +287,9 @@ begin
 						-- RT for I type instructions	
 					decode_regWrite <= '1';
 					decode_WriteAddr <= decode_RegWBAddr;
-					decode_WriteData <= ram_DO;
+					decode_WriteData <= read_ram_at(RAM, alu_r1);
+					DMemOut <= read_ram_at(RAM, alu_r1);
+					DMemAddr <= alu_r1;
 					
 				end if;
 				
@@ -313,8 +319,8 @@ alu_control <= decode_AluControl;
 DAluR1 <= alu_r1;
 DRegOutAddr <= decode_lregAddr;
 
-DMemOut <= ram_DO;
-DMemAddr <= ram_addr;
+--DMemOut <= ram_DO;
+--DMemAddr <= ram_addr;
 
 end Behavioral;
 

@@ -44,7 +44,7 @@ ARCHITECTURE behavior OF ram_test IS
 		   CLK : IN std_logic;
          WE : IN  std_logic;
          EN : IN  std_logic;
-         ADDR : IN  std_logic_vector(11 downto 0);
+         ADDR : IN  std_logic_vector(31 downto 0);
          DI : IN  std_logic_vector(31 downto 0);
          DO : OUT  std_logic_vector(31 downto 0)
         );
@@ -55,7 +55,7 @@ ARCHITECTURE behavior OF ram_test IS
    signal CLK : std_logic := '0';
    signal WE : std_logic := '0';
    signal EN : std_logic := '0';
-   signal ADDR : std_logic_vector(11 downto 0) := (others => '0');
+   signal ADDR : std_logic_vector(31 downto 0) := (others => '0');
    signal DI : std_logic_vector(31 downto 0) := (others => '0');
 
  	--Outputs
