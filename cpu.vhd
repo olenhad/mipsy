@@ -38,7 +38,10 @@ entity cpu is
 			  DMemOut : out std_logic_vector(31 downto 0);
 			  DCPUState : out std_logic_vector(31 downto 0);
 			  DCurrentIns : out std_logic_vector(31 downto 0);
-			  DAlu1 : out std_logic_vector(31 downto 0));
+			  DAlu1 : out std_logic_vector(31 downto 0);
+			  DAlu2 : out std_logic_vector(31 downto 0);
+			  DAluR1 : out std_logic_vector(31 downto 0);
+			  DRegOutAddr : out std_logic_vector(4 downto 0) );
 end cpu;
 
 architecture Behavioral of cpu is
@@ -60,9 +63,11 @@ component decode is
 			AluOP2 : out std_logic_vector(31 downto 0);
 			AluControl : out std_logic_vector(5 downto 0);
 			ControlSignals : out std_logic_vector(4 downto 0);
+			RegWBAddr : out std_logic_vector(4 downto 0);
 			WaitFor : out std_logic_vector (3 downto 0);
 			registerOut : out std_logic_vector(31 downto 0);
-			lreg: out std_logic_vector(31 downto 0));
+			lreg: out std_logic_vector(31 downto 0);
+			lregAddr : out std_logic_vector(4 downto 0));
 end component;
 
 component alu is
@@ -101,6 +106,8 @@ signal decode_ControlSignals : std_logic_vector(4 downto 0) := (others => '0');
 signal decode_waitFor : std_logic_vector(3 downto 0);
 signal decode_registerOut : std_logic_vector(31 downto 0);
 signal decode_lreg : std_logic_vector(31 downto 0);
+signal decode_lregAddr : std_logic_vector(4 downto 0);
+signal decode_RegWBAddr : std_logic_vector(4 downto 0);
 
 signal sig_Branch : std_logic := '0';
 signal sig_MemRead : std_logic := '0';
@@ -136,9 +143,11 @@ idecode : decode port map (CLK => CLK,
 								  AluOP2 => decode_AluOP2,
 								  AluControl => decode_AluControl,
 								  ControlSignals => decode_ControlSignals,
+								  RegWBAddr => decode_RegWBAddr,
 								  WaitFor => decode_waitFor,
 								  registerOut => decode_registerOut,
-								  lreg => decode_lreg);
+								  lreg => decode_lreg,
+								  lregAddr => decode_lregAddr);
 
 		-- ControlSignals
 		-- 0 => Branch
@@ -182,7 +191,7 @@ begin
 	
 	if rising_edge(CLK) then
 	
-		DCurrentIns <= currentIns;
+		
 		if waitCounter = 0 then
 			
 			
@@ -201,7 +210,7 @@ begin
 				
 				-- feed cur Ins to decode. decode will give alu appropriate operands by nnext clk cycle
 				decode_currentInstruction <= currentIns;
-				
+				DCurrentIns <= currentIns;
 				DCPUState <= (others => '0');
 				
 				currentState := Execute;
@@ -253,7 +262,8 @@ begin
 					decode_regWrite <= '1';
 					-- TODO fix me for MUL, DIV
 					-- write to rd
-					decode_WriteAddr <= CurrentIns(15 downto 11);
+					-- also goes here with LUI
+					decode_WriteAddr <= decode_RegWBAddr;
 					-- send alu_r1
 					decode_WriteData <= alu_r1;
 					
@@ -263,7 +273,7 @@ begin
 					-- lw	
 						-- RT for I type instructions	
 					decode_regWrite <= '1';
-					decode_WriteAddr <= CurrentIns(20 downto 16);
+					decode_WriteAddr <= decode_RegWBAddr;
 					decode_WriteData <= ram_DO;
 					
 				end if;
@@ -284,10 +294,13 @@ end process;
 
 DRegOut <= decode_lreg;
 DAlu1 <= decode_AluOP1;
-
+DAlu2 <= decode_AluOP2;
 alu_op1 <= decode_AluOP1;
 alu_op2 <= decode_AluOP2;
 alu_control <= decode_AluControl;
+DAluR1 <= alu_r1;
+DRegOutAddr <= decode_lregAddr;
+
 
 end Behavioral;
 

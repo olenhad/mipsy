@@ -39,9 +39,11 @@ entity decode is
 			AluOP2 : out std_logic_vector(31 downto 0);
 			AluControl : out std_logic_vector(5 downto 0);
 			ControlSignals : out std_logic_vector(4 downto 0);
+			RegWBAddr : out std_logic_vector(4 downto 0);
 			WaitFor : out std_logic_vector (3 downto 0);
 			registerOut : out std_logic_vector(31 downto 0);
-			lreg: out std_logic_vector(31 downto 0));
+			lreg: out std_logic_vector(31 downto 0);
+			lregAddr : out std_logic_vector(4 downto 0));
 
 end decode;
 
@@ -70,6 +72,7 @@ begin
 		elsif RegWrite = '1' then
 			registerFile(to_integer(unsigned(WriteAddr))) := WriteData;
 			lreg <= registerFile(to_integer(unsigned(WriteAddr)));
+			lregAddr <= WriteAddr;
 		else
 		
 		
@@ -87,6 +90,7 @@ begin
 			-- load operand 1 with register whose address is in rs
 				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
 			
+				RegWBAddr <= currentInstruction(15 downto 11);
 			
 				if (CurrentInstruction(5 downto 0) = b"00000" or 
 					 CurrentInstruction(5 downto 0) = b"00010" or  
@@ -106,7 +110,7 @@ begin
 			 -- sign extension to offset
 				AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
 			-- currentInstruction (25 downto 21) denotes rs, which contains base address
-				AluOp1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
 			-- Alu Control set to Add.
 				AluControl <=  b"100001";
 			-- TODO set ControlSignals appropriately
@@ -118,12 +122,13 @@ begin
 			-- 4 => MemToReg
 			-- MemRead => 1. RegWrite => 1. MemToReg => 1	
 				ControlSignals <= b"11010";
+				RegWBAddr <= currentInstruction(20 downto 16);
 				
 			elsif opcode = b"101011" then
 			-- Store Word (2B)
 				AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
 			-- currentInstruction (25 downto 21) denotes rs, which contains base address
-				AluOp1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
 			-- Alu Control set to Add.
 				AluControl <=  b"100000";
 				
@@ -137,13 +142,15 @@ begin
 				ControlSignals <= b"00100";
 				
 				registerOut <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
-				
+				RegWBAddr <= currentInstruction(20 downto 16);
 			elsif opcode = b"001111" then
 			-- LUI (F)
 				AluOP1 <= x"0000" & CurrentInstruction(15 downto 0);
 				AluOP2 <= x"00000010";
 				AluControl <= b"000000";
 				ControlSignals <= b"01000";
+				RegWBAddr <= currentInstruction(20 downto 16);
+				
 			end if;
 		end if;
 	end if;

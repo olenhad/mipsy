@@ -49,7 +49,10 @@ ARCHITECTURE behavior OF test_cpu IS
          DMemOut : OUT  std_logic_vector(31 downto 0);
 			DCPUState : out std_logic_vector(31 downto 0);
 			  DCurrentIns : out std_logic_vector(31 downto 0);
-			  DAlu1 : out std_logic_vector(31 downto 0)
+			  DAlu1 : out std_logic_vector(31 downto 0);
+				DAlu2 : out std_logic_vector(31 downto 0);
+			  DAluR1 : out std_logic_vector(31 downto 0);
+  DRegOutAddr : out std_logic_vector(4 downto 0) 			  
         );
     END COMPONENT;
     
@@ -66,8 +69,10 @@ ARCHITECTURE behavior OF test_cpu IS
 	signal DCPUState : std_logic_vector(31 downto 0);
 	signal DCurrentIns : std_logic_vector(31 downto 0);
 	signal DAlu1 : std_logic_vector(31 downto 0);
-	
-   -- Clock period definitions
+	signal DAlu2 : std_logic_vector(31 downto 0);
+	signal DAluR1 : std_logic_vector(31 downto 0);
+   signal DRegOutAddr : std_logic_vector(4 downto 0);
+	-- Clock period definitions
    constant CLK_period : time := 10 ns;
  
 BEGIN
@@ -82,7 +87,10 @@ BEGIN
           DMemOut => DMemOut,
 			 DCPUState => DCPUState,
 			 DCurrentIns => DCurrentIns,
-			 DAlu1 => Dalu1
+			 DAlu1 => Dalu1,
+			 DAlu2 => DAlu2,
+			 DAluR1 => DAluR1,
+			 DRegOutAddr => DRegOutAddr
         );
 
    -- Clock process definitions
