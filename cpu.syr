@@ -1,0 +1,167 @@
+Release 13.2 - xst O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: cpu.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "cpu.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "cpu"
+Output Format                      : NGC
+Target Device                      : xc3s400a-4-ft256
+
+---- Source Options
+Top Module Name                    : cpu
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : _
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+loop_iteration_limit               : 2048
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd" in Library work.
+Architecture behavioral of Entity uadder32 is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" in Library work.
+Architecture behavioral of Entity adder32 is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" in Library work.
+Architecture behavioral of Entity addsub32 is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd" in Library work.
+Architecture behavioral of Entity uaddsub32 is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/mul32.vhd" in Library work.
+Architecture behavioral of Entity mul32 is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/div32.vhd" in Library work.
+Architecture behavioral of Entity div32 is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" in Library work.
+Architecture utils of Entity utils is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" in Library work.
+Architecture behavioral of Entity rom is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" in Library work.
+Architecture behavioral of Entity decode is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" in Library work.
+Architecture behavioral of Entity cpu is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <cpu> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <rom> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <decode> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <alu> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <addsub32> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <uaddsub32> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mul32> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <div32> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <adder32> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <uadder32> in library <work> (architecture <behavioral>).
+
+INFO:Xst:2555 - '-hierarchy_separator' switch is being deprecated in a future release.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" line 260: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" line 261: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" line 262: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" line 263: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" line 328: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" line 328: Index value(s) does not match array range, simulation mismatch.

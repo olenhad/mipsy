@@ -48,7 +48,7 @@ architecture Behavioral of ram is
     
 begin
 process(CLK)
-	variable RAM: RamData := read_ram_from_file("asm\test1data.hex");
+	variable RAM: RamData := RamDefault;
 begin
 	if rising_edge(CLK) then
 		if (EN = '1' and WE = '1') then

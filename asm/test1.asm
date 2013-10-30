@@ -3,6 +3,10 @@ val1: .word 10
 val2: .word 12
 .text
 #lw test
+main:
+lui $t1, 1
+lui $t2, 1
+beq $t1,$t2, jtest
 lui $t2, 5
 lui $t4, 6
 
@@ -16,8 +20,10 @@ add $t3, $t2, $t1
 # sw
 sub $t4, $t3, $t1
 #t4 = 0x00014
-
+jtest:
 sw $t4, val1
+
+
 
 
 

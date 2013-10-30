@@ -257,7 +257,10 @@ begin
 --				-- registerOut sends data from rt	
 --					ram_DI <= decode_registerOut;
 					
-					RAM := write_ram_at(RAM, alu_r1, decode_registerOut );
+					RAM(to_integer(unsigned(alu_r1(15 downto 0)))) := decode_registerOut(7 downto 0);
+					RAM(to_integer(unsigned(alu_r1(15 downto 0)) + 1)) := decode_registerOut(15 downto 8);
+					RAM(to_integer(unsigned(alu_r1(15 downto 0)) + 2)) := decode_registerOut(23 downto 16);
+					RAM(to_integer(unsigned(alu_r1(15 downto 0)) + 3)) := decode_registerOut(31 downto 24);
 					DMemOut <= read_ram_at(RAM, alu_r1);
 					DMemAddr <= alu_r1;
 					

@@ -1,13 +1,13 @@
 set -tmpdir "xst/projnav.tmp"
 set -xsthdpdir "xst"
+set -loop_iteration_limit 1024
 run
--ifn cpu.prj
--loop_iteration_limit 2048
+-ifn LAB2.prj
 -ifmt mixed
--ofn cpu
+-ofn LAB2
 -ofmt NGC
 -p xc3s400a-4-ft256
--top cpu
+-top LAB2
 -opt_mode Speed
 -opt_level 1
 -iuc NO
@@ -18,7 +18,7 @@ run
 -read_cores YES
 -write_timing_constraints NO
 -cross_clock_analysis NO
--hierarchy_separator _
+-hierarchy_separator /
 -bus_delimiter <>
 -case Maintain
 -slice_utilization_ratio 100

@@ -52,7 +52,7 @@ end rom;
 
 architecture Behavioral of rom is
        
-signal rom_data : RomData := read_rom_from_file("asm\test1.hex");
+signal rom_data : RomData := RomDefault;
 
 begin
 	data <= (rom_data(to_integer(unsigned(addr) + 3))) & 
