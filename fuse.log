@@ -39,8 +39,8 @@ Compiling architecture behavioral of entity ram [ram_default]
 Compiling architecture behavioral of entity cpu [cpu_default]
 Compiling architecture behavior of entity test_cpu
 Time Resolution for simulation is 1ps.
-Waiting for 10 sub-compilation(s) to finish...
+Waiting for 11 sub-compilation(s) to finish...
 Compiled 31 VHDL Units
 Built simulation executable C:/Users/pc richard/Documents/CG3207/cg3207-project/test_cpu_isim_beh.exe
-Fuse Memory Usage: 30204 KB
-Fuse CPU Usage: 1216 ms
+Fuse Memory Usage: 30172 KB
+Fuse CPU Usage: 1356 ms

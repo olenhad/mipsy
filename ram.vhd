@@ -45,16 +45,17 @@ end ram;
 
 architecture Behavioral of ram is
 	
-    signal RAM: RamData := read_ram_from_file("asm\test1data.hex");
+    
 begin
 process(CLK)
+	variable RAM: RamData := read_ram_from_file("asm\test1data.hex");
 begin
 	if rising_edge(CLK) then
 		if (EN = '1' and WE = '1') then
-			RAM(to_integer(unsigned(ADDR(15 downto 0)))) <= DI(7 downto 0);
-			RAM(to_integer(unsigned(ADDR(15 downto 0)) + 1)) <= DI(15 downto 8);
-			RAM(to_integer(unsigned(ADDR(15 downto 0)) + 2)) <= DI(23 downto 16);
-			RAM(to_integer(unsigned(ADDR(15 downto 0)) + 3)) <= DI(31 downto 24);
+			RAM(to_integer(unsigned(ADDR(15 downto 0)))) := DI(7 downto 0);
+			RAM(to_integer(unsigned(ADDR(15 downto 0)) + 1)) := DI(15 downto 8);
+			RAM(to_integer(unsigned(ADDR(15 downto 0)) + 2)) := DI(23 downto 16);
+			RAM(to_integer(unsigned(ADDR(15 downto 0)) + 3)) := DI(31 downto 24);
 			DO <= (others => '0');
 		elsif (EN = '1' and WE = '0') then
 			DO <= RAM(to_integer(unsigned(ADDR(15 downto 0))+3)) &

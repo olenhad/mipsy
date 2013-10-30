@@ -89,7 +89,7 @@ component ram is
           DO   : out std_logic_vector(31 downto 0));
 end component;
 
-type CPUState is (FetchDecode, Execute, MemWR, WriteBack);
+type CPUState is (FetchDecode, Execute, MemWR, WriteBack, AluWait, AluWaitWB);
 
 signal rom_EN : std_logic := '0';
 signal rom_ADDR : std_logic_vector(31 downto 0) := (others => '0');
@@ -222,8 +222,12 @@ begin
 				DCPUState <= (0 => '1', others => '0');
 				
 				waitCounter :=  to_integer(unsigned(decode_WaitFor));
+				currentState := AluWait;
+			
+			elsif currentState = AluWait then
+				DCPUState <= (5 => '1', others => '0');
 				currentState := MemWR;
-				
+			
 			elsif currentState = MemWR then
 				DCPUState <= (1 => '1', others => '0');
 				if sig_Branch = '0' and 
@@ -240,7 +244,7 @@ begin
 				-- lw 
 				-- send alu's r1 which contains actual memory address after adding base and offset	
 					ram_addr <= alu_r1;
-					
+					DCPUState <= x"FFFFFFFF";
 				elsif sig_Branch = '0' and
 				      sig_MemRead = '0' and
 						sig_MemWrite = '1' then
@@ -251,7 +255,12 @@ begin
 					ram_DI <= decode_registerOut;
 					
 				end if;	
+				currentState := AluWaitWB;
+			
+			elsif currentState = AluWaitWB then
+				DCPUState <= (6 => '1', others => '0');
 				currentState := WriteBack;
+	
 			elsif currentState = WriteBack then
 					DCPUState <= (2 => '1', others => '0');
 					ram_WE <= '0';
