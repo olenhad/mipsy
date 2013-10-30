@@ -16,3 +16,8 @@ add $t3, $t2, $t1
 # sw
 sub $t4, $t3, $t1
 #t4 = 0x00014
+
+sw $t4, val1
+
+
+
