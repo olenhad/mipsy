@@ -161,7 +161,7 @@ waitFor <= x"8" when (CurrentInstruction(5 downto 0) = b"011010" or
 							 CurrentInstruction(5 downto 0) = b"011011") else
 -- checks for LUI
 			  --x"0" when CurrentInstruction(31 downto 26) = b"001111" else
-			  x"2";
+			  x"0";
 
 end Behavioral;
 

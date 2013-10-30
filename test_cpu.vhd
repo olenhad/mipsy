@@ -44,7 +44,7 @@ ARCHITECTURE behavior OF test_cpu IS
          CLK : IN  std_logic;
          DHalt : IN  std_logic;
          DRegAddr : IN  std_logic_vector(4 downto 0);
-         DMemAddr : IN  std_logic_vector(31 downto 0);
+         DMemAddr : OUT  std_logic_vector(31 downto 0);
          DRegOut : OUT  std_logic_vector(31 downto 0);
          DMemOut : OUT  std_logic_vector(31 downto 0);
 			DCPUState : out std_logic_vector(31 downto 0);

@@ -33,7 +33,7 @@ entity cpu is
     Port ( CLK : in  STD_LOGIC;
 			  DHalt : in std_logic;
 	        DRegAddr : in std_logic_vector(4 downto 0);
-			  DMemAddr : in std_logic_vector(31 downto 0);
+			  DMemAddr : out std_logic_vector(31 downto 0);
 			  DRegOut : out std_logic_vector(31 downto 0);
 			  DMemOut : out std_logic_vector(31 downto 0);
 			  DCPUState : out std_logic_vector(31 downto 0);
@@ -304,6 +304,8 @@ alu_control <= decode_AluControl;
 DAluR1 <= alu_r1;
 DRegOutAddr <= decode_lregAddr;
 
+DMemOut <= ram_DO;
+DMemAddr <= ram_addr;
 
 end Behavioral;
 

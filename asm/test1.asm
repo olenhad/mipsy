@@ -1,6 +1,6 @@
 .data 
 val1: .word 10
-val2: .word 20
+val2: .word 12
 .text
 #lw test
 lui $t2, 5
