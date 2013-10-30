@@ -197,9 +197,6 @@ begin
 			
 			if currentState = FetchDecode then
 				
-				decode_RegWrite <= '0';
-				decode_WriteAddr <= (others => '0');
-				decode_WriteData <= (others => '0');
 				
 				currentIns := rom_DATA;
 				
@@ -217,6 +214,10 @@ begin
 				
 					
 			elsif currentState = Execute then
+				
+				decode_RegWrite <= '0';
+				decode_WriteAddr <= (others => '0');
+				decode_WriteData <= (others => '0');
 				
 				DCPUState <= (0 => '1', others => '0');
 				
@@ -251,7 +252,6 @@ begin
 					
 				end if;	
 				currentState := WriteBack;
-	
 			elsif currentState = WriteBack then
 					DCPUState <= (2 => '1', others => '0');
 					ram_WE <= '0';
