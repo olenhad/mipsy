@@ -37,7 +37,8 @@ entity cpu is
 			  DRegOut : out std_logic_vector(31 downto 0);
 			  DMemOut : out std_logic_vector(31 downto 0);
 			  DCPUState : out std_logic_vector(31 downto 0);
-			  DCurrentIns : out std_logic_vector(31 downto 0));
+			  DCurrentIns : out std_logic_vector(31 downto 0);
+			  DAlu1 : out std_logic_vector(31 downto 0));
 end cpu;
 
 architecture Behavioral of cpu is
@@ -169,9 +170,7 @@ iram : ram port map (CLK => CLK,
 							DO  => ram_DO);
 							
 
-alu_op1 <= decode_AluOP1;
-alu_op2 <= decode_AluOP2;
-alu_control <= decode_AluControl;
+
 
 
 process(CLK) 
@@ -206,6 +205,7 @@ begin
 				DCPUState <= (others => '0');
 				
 				currentState := Execute;
+				
 					
 			elsif currentState = Execute then
 				
@@ -283,5 +283,11 @@ begin
 end process;
 
 DRegOut <= decode_lreg;
+DAlu1 <= decode_AluOP1;
+
+alu_op1 <= decode_AluOP1;
+alu_op2 <= decode_AluOP2;
+alu_control <= decode_AluControl;
+
 end Behavioral;
 

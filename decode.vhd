@@ -108,7 +108,7 @@ begin
 			-- currentInstruction (25 downto 21) denotes rs, which contains base address
 				AluOp1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
 			-- Alu Control set to Add.
-				AluControl <=  b"100000";
+				AluControl <=  b"100001";
 			-- TODO set ControlSignals appropriately
 			-- ControlSignals
 			-- 0 => Branch
@@ -154,7 +154,7 @@ waitFor <= x"8" when (CurrentInstruction(5 downto 0) = b"011010" or
 							 CurrentInstruction(5 downto 0) = b"011011") else
 -- checks for LUI
 			  --x"0" when CurrentInstruction(31 downto 26) = b"001111" else
-			  x"0";
+			  x"2";
 
 end Behavioral;
 
