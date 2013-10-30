@@ -90,19 +90,19 @@ BEGIN
       -- hold reset state for 100 ns.
       wait for 100 ns;	
 
-   	operand1 <= x"00000003";
-		operand2 <= x"00000001";
-		isadd <= '0';
+   	operand1 <= x"10010000";
+		operand2 <= x"00000000";
+		isadd <= '1';
 		
 		wait for 100 ns;
-		operand1 <= x"00000002";
-		operand2 <= x"00000003";
-		isadd <= '0';
+		operand1 <= x"10010000";
+		operand2 <= x"00000004";
+		isadd <= '1';
 
 		wait for 100 ns;
 		operand1 <= x"00000002";
 		operand2 <= x"00000003";
-		isadd <= '1';
+		isadd <= '0';
 		
 		
 		wait for 100 ns;

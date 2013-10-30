@@ -121,15 +121,7 @@ process (Clk)
 begin  
    if (Clk'event and Clk = '1') then
 		Debug   <= X"00000000";
-      if Control(5) = '1' then
-			Result1 <= X"00000000";
-			Result2 <= X"00000000";
-			Debug   <= X"00000000";
-     -- elsif Control = b"000000" then
-      --   Result1 <= Operand1;
-		--	Result2 <= Operand2;
-		--	Debug   <= (Control(1) & Control(0) & Control & Control & Control & Control & Control);
-		elsif Control = b"100000" then
+      if Control = b"100000" then
 		-- ADD
 			isadd <= '1';
 			Result1 <= addsubResult;

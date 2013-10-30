@@ -42,5 +42,5 @@ Time Resolution for simulation is 1ps.
 Waiting for 12 sub-compilation(s) to finish...
 Compiled 31 VHDL Units
 Built simulation executable C:/Users/pc richard/Documents/CG3207/cg3207-project/test_cpu_isim_beh.exe
-Fuse Memory Usage: 30144 KB
-Fuse CPU Usage: 1310 ms
+Fuse Memory Usage: 30096 KB
+Fuse CPU Usage: 1559 ms

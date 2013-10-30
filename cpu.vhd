@@ -63,7 +63,7 @@ component decode is
 			AluOP2 : out std_logic_vector(31 downto 0);
 			AluControl : out std_logic_vector(5 downto 0);
 			ControlSignals : out std_logic_vector(4 downto 0);
-			RegWBAddr : out std_logic_vector(4 downto 0);
+			RegWBAddr : out std_logic_vector(    4 downto 0);
 			WaitFor : out std_logic_vector (3 downto 0);
 			registerOut : out std_logic_vector(31 downto 0);
 			lreg: out std_logic_vector(31 downto 0);
@@ -293,10 +293,13 @@ begin
 end process;
 
 DRegOut <= decode_lreg;
-DAlu1 <= decode_AluOP1;
-DAlu2 <= decode_AluOP2;
+
 alu_op1 <= decode_AluOP1;
 alu_op2 <= decode_AluOP2;
+
+DAlu1 <= alu_op1;
+DAlu2 <= alu_op2;
+
 alu_control <= decode_AluControl;
 DAluR1 <= alu_r1;
 DRegOutAddr <= decode_lregAddr;
