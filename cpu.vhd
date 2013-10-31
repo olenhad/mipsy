@@ -35,15 +35,15 @@ entity cpu is
 --			  DHalt : in std_logic;
 --	        DRegAddr : in std_logic_vector(4 downto 0);
 --			  DMemAddr : out std_logic_vector(31 downto 0);
-			  DRegOut : out std_logic_vector(31 downto 0);
-			  DOutput : out std_logic_vector(31 downto 0);
+--			  DRegOut : out std_logic_vector(31 downto 0);
+			  DOutput : out std_logic_vector(31 downto 0)
 --			  DMemOut : out std_logic_vector(31 downto 0);
-			  DCPUState : out std_logic_vector(31 downto 0);
+--			  DCPUState : out std_logic_vector(31 downto 0);
 --			  DCurrentIns : out std_logic_vector(31 downto 0);
 --			  DAlu1 : out std_logic_vector(31 downto 0);
 --			  DAlu2 : out std_logic_vector(31 downto 0);
 --			  DAluR1 : out std_logic_vector(31 downto 0);
-			  DRegOutAddr : out std_logic_vector(4 downto 0) 
+--			  DRegOutAddr : out std_logic_vector(4 downto 0) 
 			  );
 end cpu;
 
@@ -207,7 +207,7 @@ begin
 				
 				currentIns := rom_DATA;
 --				DCurrentIns <= currentIns;
-				DCPUState <= (others => '0');
+	--			DCPUState <= (others => '0');
 
 --				 Check if instruction is a jump
 				if currentIns(31 downto 26) = b"000010" then
@@ -231,17 +231,17 @@ begin
 				decode_WriteAddr <= (others => '0');
 				decode_WriteData <= (others => '0');
 				
-				DCPUState <= (0 => '1', others => '0');
+			--	DCPUState <= (0 => '1', others => '0');
 				
 				waitCounter :=  to_integer(unsigned(decode_WaitFor));
 				currentState := AluWait;
 			
 			elsif currentState = AluWait then
-				DCPUState <= (5 => '1', others => '0');
+	--			DCPUState <= (5 => '1', others => '0');
 				currentState := MemWR;
 			
 			elsif currentState = MemWR then
-				DCPUState <= (1 => '1', others => '0');
+	--			DCPUState <= (1 => '1', others => '0');
 				if sig_Branch = '0' and 
 					sig_MemRead = '0' and 
 					sig_MemWrite = '0' then 
@@ -257,7 +257,7 @@ begin
 				-- lw 
 				-- send alu's r1 which contains actual memory address after adding base and offset	
 				--	ram_addr <= alu_r1;
-					DCPUState <= x"FFFFFFFF";
+	--				DCPUState <= x"FFFFFFFF";
 					
 					currentState := WriteBack;
 			
@@ -297,7 +297,7 @@ begin
 				
 	
 			elsif currentState = WriteBack then
-					DCPUState <= (2 => '1', others => '0');
+--					DCPUState <= (2 => '1', others => '0');
 					--ram_WE <= '0';
 				-- R Type
 				if sig_RegWrite = '1' and
@@ -341,9 +341,10 @@ rom_ADDR <= pc;
 
 end process;
 
-DRegOut <= decode_lreg;
+--DRegOut <= decode_lreg;
 
-DOutput <= RAM(63) & RAM(62) & RAM(61) & RAM(60);
+DOutput <= decode_lreg;
+--RAM(63) & RAM(62) & RAM(61) & RAM(60);
 
 alu_op1 <= decode_AluOP1;
 alu_op2 <= decode_AluOP2;
@@ -353,7 +354,7 @@ alu_op2 <= decode_AluOP2;
 
 alu_control <= decode_AluControl;
 --DAluR1 <= alu_r1;
-DRegOutAddr <= decode_lregAddr;
+--DRegOutAddr <= decode_lregAddr;
 
 --DMemOut <= ram_DO;
 --DMemAddr <= ram_addr;

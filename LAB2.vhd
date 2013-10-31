@@ -96,14 +96,14 @@ component cpu is
 --			  DHalt : in std_logic;
 --	        DRegAddr : in std_logic_vector(4 downto 0);
 --			  DMemAddr : out std_logic_vector(31 downto 0);
-			  DRegOut : out std_logic_vector(31 downto 0);
+--			  DRegOut : out std_logic_vector(31 downto 0);
 --			  DMemOut : out std_logic_vector(31 downto 0);
-			  DCPUState : out std_logic_vector(31 downto 0);
+--			  DCPUState : out std_logic_vector(31 downto 0);
 --			  DCurrentIns : out std_logic_vector(31 downto 0);
 --			  DAlu1 : out std_logic_vector(31 downto 0);
 --			  DAlu2 : out std_logic_vector(31 downto 0);
 --			  DAluR1 : out std_logic_vector(31 downto 0);
-			  DRegOutAddr : out std_logic_vector(4 downto 0); 
+--			  DRegOutAddr : out std_logic_vector(4 downto 0); 
 			  DOutput : out std_logic_vector(31 downto 0)
 			  );
 end component;
@@ -153,9 +153,7 @@ Debug <=  x"000000" & b"000" & paddedRegAddr;
 cpu0 : cpu
 	PORT MAP (
 		CLK => CLK,
-		DOutput => Result1,
-		DRegOut => Result2,
-		DRegOutAddr => paddedRegAddr
+		DOutput => Result1
 		);
 	
 

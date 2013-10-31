@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> Reading design: LAB2.prj
 
@@ -107,57 +107,29 @@ loop_iteration_limit               : 2048
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/LAB2 is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd".
-WARNING:HDLParsers:3607 - Unit work/LAB2/Structural is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd".
-WARNING:HDLParsers:3607 - Unit work/cpu is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd".
-WARNING:HDLParsers:3607 - Unit work/cpu/Behavioral is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd".
-WARNING:HDLParsers:3607 - Unit work/alu is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd".
-WARNING:HDLParsers:3607 - Unit work/alu/Behavioral is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd".
-WARNING:HDLParsers:3607 - Unit work/decode is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd".
-WARNING:HDLParsers:3607 - Unit work/decode/Behavioral is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd".
-WARNING:HDLParsers:3607 - Unit work/rom is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd".
-WARNING:HDLParsers:3607 - Unit work/rom/Behavioral is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd".
-WARNING:HDLParsers:3607 - Unit work/addsub32 is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/addsub32.vhd".
-WARNING:HDLParsers:3607 - Unit work/addsub32/Behavioral is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/addsub32.vhd".
-WARNING:HDLParsers:3607 - Unit work/div32 is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/div32.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd".
-WARNING:HDLParsers:3607 - Unit work/div32/Behavioral is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/div32.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd".
-WARNING:HDLParsers:3607 - Unit work/mul32 is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/mul32.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd".
-WARNING:HDLParsers:3607 - Unit work/mul32/Behavioral is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/mul32.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd".
-WARNING:HDLParsers:3607 - Unit work/uaddsub32 is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uaddsub32.vhd".
-WARNING:HDLParsers:3607 - Unit work/uaddsub32/Behavioral is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uaddsub32.vhd".
-WARNING:HDLParsers:3607 - Unit work/utils is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd".
-WARNING:HDLParsers:3607 - Unit work/utils is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd".
-WARNING:HDLParsers:3607 - Unit work/adder32 is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/adder32.vhd".
-WARNING:HDLParsers:3607 - Unit work/adder32/Behavioral is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/adder32.vhd".
-WARNING:HDLParsers:3607 - Unit work/uadder32 is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uadder32.vhd".
-WARNING:HDLParsers:3607 - Unit work/uadder32/Behavioral is now defined in a different file.  It was defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd", and is now defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uadder32.vhd".
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uadder32.vhd" in Library work.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd" in Library work.
 Architecture behavioral of Entity uadder32 is up to date.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/adder32.vhd" in Library work.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" in Library work.
 Architecture behavioral of Entity adder32 is up to date.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/addsub32.vhd" in Library work.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" in Library work.
 Architecture behavioral of Entity addsub32 is up to date.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uaddsub32.vhd" in Library work.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd" in Library work.
 Architecture behavioral of Entity uaddsub32 is up to date.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd" in Library work.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/mul32.vhd" in Library work.
 Architecture behavioral of Entity mul32 is up to date.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" in Library work.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/div32.vhd" in Library work.
 Architecture behavioral of Entity div32 is up to date.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd" in Library work.
-Package <utils> compiled.
-Package body <utils> compiled.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" in Library work.
-Entity <rom> compiled.
-Entity <rom> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" in Library work.
-Entity <decode> compiled.
-Entity <decode> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" in Library work.
+Architecture utils of Entity utils is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" in Library work.
+Architecture behavioral of Entity rom is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" in Library work.
+Architecture behavioral of Entity decode is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" in Library work.
-Entity <cpu> compiled.
-Entity <cpu> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" in Library work.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" in Library work.
+Architecture behavioral of Entity cpu is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" in Library work.
 Architecture structural of Entity lab2 is up to date.
 
 =========================================================================
@@ -191,43 +163,33 @@ INFO:Xst:2555 - '-hierarchy_separator' switch is being deprecated in a future re
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <LAB2> in library <work> (Architecture <structural>).
-WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 114: Unconnected output port 'UART_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 114: Unconnected output port 'GPI1_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 114: Unconnected output port 'GPI2_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 114: Unconnected output port 'GPI3_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 114: Unconnected output port 'GPI4_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 114: Unconnected output port 'INTC_IRQ' of component 'mcs'.
-WARNING:Xst:2211 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 114: Instantiating black box module <mcs>.
-WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 151: Unconnected output port 'DCPUState' of component 'cpu'.
+WARNING:Xst:753 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" line 116: Unconnected output port 'UART_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" line 116: Unconnected output port 'GPI1_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" line 116: Unconnected output port 'GPI2_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" line 116: Unconnected output port 'GPI3_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" line 116: Unconnected output port 'GPI4_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" line 116: Unconnected output port 'INTC_IRQ' of component 'mcs'.
+WARNING:Xst:2211 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" line 116: Instantiating black box module <mcs>.
 Entity <LAB2> analyzed. Unit <LAB2> generated.
 
 Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 272: Index value(s) does not match array range, simulation mismatch.
-INFO:Xst:1607 - Contents of array <RAM> may be accessed with an index that does not cover the full array size.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 273: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 274: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 275: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd" line 70: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd" line 70: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd" line 70: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd" line 70: Index value(s) does not match array range, simulation mismatch.
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <rom> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 58: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" line 58: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom_data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 58: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" line 58: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom_data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 58: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" line 58: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom_data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 58: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" line 58: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom_data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 Entity <rom> analyzed. Unit <rom> generated.
 
 Analyzing Entity <decode> in library <work> (Architecture <behavioral>).
-WARNING:Xst:795 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" line 95: Size of operands are different : result is <false>.
-WARNING:Xst:795 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" line 95: Size of operands are different : result is <false>.
-WARNING:Xst:795 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" line 95: Size of operands are different : result is <false>.
+WARNING:Xst:795 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" line 95: Size of operands are different : result is <false>.
+WARNING:Xst:795 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" line 95: Size of operands are different : result is <false>.
+WARNING:Xst:795 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" line 95: Size of operands are different : result is <false>.
 Entity <decode> analyzed. Unit <decode> generated.
 
 Analyzing Entity <alu> in library <work> (Architecture <behavioral>).
@@ -259,7 +221,7 @@ Entity <div32> analyzed. Unit <div32> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <rom>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd".
 WARNING:Xst:647 - Input <ADDR<31:20>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1781 - Signal <rom_data> is used but never assigned. Tied to default value.
     Found 256x8-bit ROM for signal <DATA$varindex0000> created at line 58.
@@ -276,7 +238,7 @@ Unit <rom> synthesized.
 
 
 Synthesizing Unit <decode>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd".
     Found 32-bit register for signal <lreg>.
     Found 5-bit register for signal <lregAddr>.
     Found 32-bit register for signal <AluOP1>.
@@ -298,7 +260,7 @@ Unit <decode> synthesized.
 
 
 Synthesizing Unit <mul32>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/mul32.vhd".
 WARNING:Xst:1780 - Signal <interResult2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <interResult1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 32x32-bit multiplier for signal <combinedResult>.
@@ -316,7 +278,7 @@ Unit <mul32> synthesized.
 
 
 Synthesizing Unit <div32>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/div32.vhd".
     Found 1-bit register for signal <exception>.
     Found 32-bit register for signal <quotient>.
     Found 32-bit register for signal <remainder>.
@@ -369,7 +331,7 @@ Unit <div32> synthesized.
 
 
 Synthesizing Unit <adder32>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/adder32.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd".
 WARNING:Xst:653 - Signal <maxNegative> is used but never assigned. This sourceless signal will be automatically connected to value 10000000000000000000000000000000.
 WARNING:Xst:646 - Signal <complementedAdd<30:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 32-bit adder for signal <complementedAdd$addsub0000> created at line 46.
@@ -382,7 +344,7 @@ Unit <adder32> synthesized.
 
 
 Synthesizing Unit <uadder32>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uadder32.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd".
     Found 33-bit adder for signal <largeResult>.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -390,7 +352,7 @@ Unit <uadder32> synthesized.
 
 
 Synthesizing Unit <addsub32>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/addsub32.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd".
     Found 32-bit adder for signal <newOperand2$addsub0000> created at line 49.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -398,7 +360,7 @@ Unit <addsub32> synthesized.
 
 
 Synthesizing Unit <uaddsub32>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uaddsub32.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd".
     Found 32-bit adder for signal <newOperand2$addsub0000> created at line 50.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -406,7 +368,7 @@ Unit <uaddsub32> synthesized.
 
 
 Synthesizing Unit <alu>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd".
     Found 32-bit register for signal <Debug>.
     Found 32-bit register for signal <Result1>.
     Found 32-bit register for signal <Result2>.
@@ -423,13 +385,13 @@ Unit <alu> synthesized.
 
 
 Synthesizing Unit <cpu>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd".
 WARNING:Xst:646 - Signal <tconcat> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <rom_EN> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <decode_lregAddr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <currentIns<31:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <alu_r2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <alu_debug> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <RAM<64>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found finite state machine <FSM_0> for signal <currentState>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
@@ -442,7 +404,6 @@ WARNING:Xst:646 - Signal <RAM<64>> is assigned but never used. This unconnected 
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 32-bit register for signal <DCPUState>.
     Found 32-bit register for signal <currentIns>.
     Found 32-bit register for signal <decode_CurrentInstruction>.
     Found 1-bit register for signal <decode_RegWrite>.
@@ -450,30 +411,31 @@ WARNING:Xst:646 - Signal <RAM<64>> is assigned but never used. This unconnected 
     Found 32-bit register for signal <decode_WriteData>.
     Found 32-bit register for signal <pc>.
     Found 32-bit adder for signal <pc$share0000>.
-    Found 512-bit register for signal <RAM<0:63>>.
-    Found 6-bit adder for signal <RAM$add0000> created at line 273.
-    Found 6-bit adder for signal <RAM$add0001> created at line 274.
-    Found 6-bit adder for signal <RAM$add0002> created at line 275.
-    Found 8-bit 64-to-1 multiplexer for signal <ram_data$mux0000> created at line 70.
-    Found 8-bit 64-to-1 multiplexer for signal <ram_data$mux0001> created at line 70.
-    Found 8-bit 64-to-1 multiplexer for signal <ram_data$mux0002> created at line 70.
-    Found 8-bit 64-to-1 multiplexer for signal <ram_data$mux0003> created at line 70.
+    Found 512-bit register for signal <RAM>.
+    Found 6-bit adder for signal <RAM$add0000> created at line 274.
+    Found 6-bit adder for signal <RAM$add0001> created at line 275.
+    Found 6-bit adder for signal <RAM$add0002> created at line 276.
+    Found 8-bit 64-to-1 multiplexer for signal <ram_data$mux0000> created at line 72.
+    Found 8-bit 64-to-1 multiplexer for signal <ram_data$mux0001> created at line 72.
+    Found 8-bit 64-to-1 multiplexer for signal <ram_data$mux0002> created at line 72.
+    Found 8-bit 64-to-1 multiplexer for signal <ram_data$mux0003> created at line 72.
     Found 32-bit down counter for signal <waitCounter>.
 INFO:Xst:738 - HDL ADVISOR - 512 flip-flops were inferred for signal <RAM>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   1 Counter(s).
-	inferred 678 D-type flip-flop(s).
+	inferred 646 D-type flip-flop(s).
 	inferred   4 Adder/Subtractor(s).
 	inferred  32 Multiplexer(s).
 Unit <cpu> synthesized.
 
 
 Synthesizing Unit <LAB2>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd".
+WARNING:Xst:653 - Signal <paddedRegAddr> is used but never assigned. This sourceless signal will be automatically connected to value 00000.
+WARNING:Xst:653 - Signal <Result2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
 WARNING:Xst:646 - Signal <Operand2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <Operand1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <Debug> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
 WARNING:Xst:646 - Signal <Control> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <LAB2> synthesized.
 
@@ -496,9 +458,9 @@ Macro Statistics
  64-bit adder                                          : 1
 # Counters                                             : 1
  32-bit down counter                                   : 1
-# Registers                                            : 189
+# Registers                                            : 188
  1-bit register                                        : 71
- 32-bit register                                       : 49
+ 32-bit register                                       : 48
  5-bit register                                        : 4
  6-bit register                                        : 1
  8-bit register                                        : 64
@@ -611,8 +573,8 @@ Macro Statistics
  8-bit adder                                           : 3
 # Counters                                             : 1
  32-bit down counter                                   : 1
-# Registers                                            : 2135
- Flip-Flops                                            : 2135
+# Registers                                            : 2103
+ Flip-Flops                                            : 2103
 # Comparators                                          : 20
  32-bit comparator equal                               : 5
  32-bit comparator greatequal                          : 5
@@ -669,18 +631,12 @@ WARNING:Xst:2677 - Node <currentIns_12> of sequential type is unconnected in blo
 WARNING:Xst:2677 - Node <currentIns_13> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <currentIns_14> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <currentIns_15> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:1293 - FF/Latch <decode_CurrentInstruction_30> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <decode_CurrentInstruction_9> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <decode_CurrentInstruction_15> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <decode_CurrentInstruction_23> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <decode_CurrentInstruction_25> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <decode_CurrentInstruction_30> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <decode_CurrentInstruction_8> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <decode_CurrentInstruction_10> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <decode_CurrentInstruction_13> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <decode_CurrentInstruction_18> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <decode_CurrentInstruction_11> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <decode_CurrentInstruction_24> 
-INFO:Xst:2261 - The FF/Latch <decode_CurrentInstruction_14> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <decode_CurrentInstruction_22> 
-INFO:Xst:2261 - The FF/Latch <decode_CurrentInstruction_28> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <decode_CurrentInstruction_29> 
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <decode_CurrentInstruction_15> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <LAB2> ...
 
@@ -697,523 +653,6 @@ Optimizing unit <adder32> ...
 Optimizing unit <alu> ...
 
 Optimizing unit <cpu> ...
-INFO:Xst:2261 - The FF/Latch <decode_CurrentInstruction_11> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <decode_CurrentInstruction_14> 
-INFO:Xst:2261 - The FF/Latch <decode_CurrentInstruction_11> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <decode_CurrentInstruction_14> 
-WARNING:Xst:1293 - FF/Latch <cpu0_idecode_registerFile_23_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_23_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_22_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_7_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_decode_WriteAddr_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_RegWBAddr_2> (without init value) has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_29_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_30_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_28_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_31_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_13_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_14_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_12_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_4_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_21_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_6_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_15_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_16> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_17> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_18> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_19> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_20> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_21> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_22> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_23> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_24> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_25> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_26> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_27> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_28> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_29> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_30> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_31> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_20_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_0> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_1> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_2> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_3> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_4> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_5> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_6> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_7> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_8> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_9> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_10> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_11> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_12> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_13> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_14> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_registerFile_5_15> has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu0_idecode_lregAddr_2> (without init value) has a constant value of 0 in block <LAB2>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <cpu0_ialu_Result2_0> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_ialu_Result2_1> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_ialu_Result2_2> of sequential type is unconnected in block <LAB2>.
@@ -1314,62 +753,29 @@ WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_7> of sequential type is unconn
 WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_5> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_4> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_3> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_31> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_30> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_29> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_28> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_27> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_26> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_25> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_24> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_23> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_22> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_21> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_20> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_19> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_18> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_17> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_16> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_15> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_14> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_13> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_12> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_11> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_10> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_9> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_8> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_7> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_6> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_5> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_4> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_3> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_2> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_1> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCPUState_0> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_idecode_lregAddr_0> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_idecode_lregAddr_1> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_idecode_lregAddr_2> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_idecode_lregAddr_3> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_idecode_lregAddr_4> of sequential type is unconnected in block <LAB2>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 145.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 154.
 Optimizing block <LAB2> to meet ratio 100 (+ 5) of 3584 slices :
-WARNING:Xst:1426 - The value init of the FF/Latch cpu0_RAM_0_1 hinder the constant cleaning in the block LAB2.
-   You should achieve better results by setting this init to 0.
-WARNING:Xst:1426 - The value init of the FF/Latch cpu0_RAM_0_3 hinder the constant cleaning in the block LAB2.
-   You should achieve better results by setting this init to 0.
-WARNING:Xst:1426 - The value init of the FF/Latch cpu0_RAM_4_2 hinder the constant cleaning in the block LAB2.
-   You should achieve better results by setting this init to 0.
-WARNING:Xst:1426 - The value init of the FF/Latch cpu0_RAM_4_3 hinder the constant cleaning in the block LAB2.
-   You should achieve better results by setting this init to 0.
-Area constraint is met for block <LAB2>, final ratio is 86.
-INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
-INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
-   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
-   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
+WARNING:Xst:2254 - Area constraint could not be met for block <LAB2>, final ratio is 136.
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
 INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
-FlipFlop cpu0_idecode_AluOP1_0 has been replicated 2 time(s)
-FlipFlop cpu0_idecode_AluOP1_1 has been replicated 1 time(s)
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
+INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
+FlipFlop cpu0_decode_CurrentInstruction_16 has been replicated 1 time(s)
+FlipFlop cpu0_decode_WriteAddr_0 has been replicated 1 time(s)
+FlipFlop cpu0_ialu_Result1_0 has been replicated 2 time(s)
+FlipFlop cpu0_idecode_AluOP1_0 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_10 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_11 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_12 has been replicated 1 time(s)
@@ -1377,19 +783,8 @@ FlipFlop cpu0_idecode_AluOP1_13 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_14 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_2 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_21 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_26 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_3 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_4 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_5 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_6 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_7 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_8 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_9 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP2_0 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP2_1 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP2_2 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP2_3 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP2_4 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -1397,8 +792,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 947
- Flip-Flops                                            : 947
+# Registers                                            : 2000
+ Flip-Flops                                            : 2000
 
 =========================================================================
 
@@ -1427,36 +822,36 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 7680
+# BELS                             : 13186
 #      GND                         : 2
-#      INV                         : 299
-#      LUT1                        : 21
-#      LUT2                        : 291
-#      LUT2_D                      : 12
+#      INV                         : 291
+#      LUT1                        : 13
+#      LUT2                        : 342
+#      LUT2_D                      : 9
 #      LUT2_L                      : 3
-#      LUT3                        : 2040
-#      LUT3_D                      : 12
-#      LUT3_L                      : 15
-#      LUT4                        : 2047
-#      LUT4_D                      : 8
-#      LUT4_L                      : 57
+#      LUT3                        : 4861
+#      LUT3_D                      : 8
+#      LUT3_L                      : 9
+#      LUT4                        : 3359
+#      LUT4_D                      : 6
+#      LUT4_L                      : 54
 #      MULT_AND                    : 94
 #      MUXCY                       : 715
 #      MUXCY_L                     : 77
-#      MUXF5                       : 835
-#      MUXF6                       : 337
-#      MUXF7                       : 174
-#      MUXF8                       : 77
+#      MUXF5                       : 1779
+#      MUXF6                       : 581
+#      MUXF7                       : 290
+#      MUXF8                       : 129
 #      VCC                         : 2
 #      XORCY                       : 562
-# FlipFlops/Latches                : 1538
+# FlipFlops/Latches                : 2591
 #      FD                          : 92
-#      FDE                         : 989
+#      FDE                         : 2040
 #      FDR                         : 168
 #      FDRE                        : 214
 #      FDRS                        : 2
 #      FDRSE                       : 12
-#      FDS                         : 41
+#      FDS                         : 43
 #      FDSE                        : 20
 # RAMS                             : 158
 #      RAM16X1D                    : 141
@@ -1478,10 +873,10 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     3050  out of   3584    85%  
- Number of Slice Flip Flops:           1538  out of   7168    21%  
- Number of 4 input LUTs:               5137  out of   7168    71%  
-    Number used as logic:              4805
+ Number of Slices:                     4870  out of   3584   135% (*) 
+ Number of Slice Flip Flops:           2591  out of   7168    36%  
+ Number of 4 input LUTs:               9287  out of   7168   129% (*) 
+    Number used as logic:              8955
     Number used as Shift registers:      50
     Number used as RAMs:                282
  Number of IOs:                          11
@@ -1489,6 +884,8 @@ Selected Device : 3s400aft256-4
  Number of BRAMs:                        17  out of     20    85%  
  Number of MULT18X18SIOs:                 3  out of     20    15%  
  Number of GCLKs:                         1  out of     24     4%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
 ---------------------------
 Partition Resource Summary:
@@ -1511,7 +908,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 1746  |
+Clk                                | BUFGP                  | 2799  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1522,7 +919,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 30.177ns (Maximum Frequency: 33.138MHz)
+   Minimum period: 30.523ns (Maximum Frequency: 32.762MHz)
    Minimum input arrival time before clock: 1.548ns
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: 5.816ns
@@ -1533,23 +930,22 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 30.177ns (frequency: 33.138MHz)
-  Total number of paths / destination ports: 626520867477 / 5298
+  Clock period: 30.523ns (frequency: 32.762MHz)
+  Total number of paths / destination ports: 626519790570 / 7400
 -------------------------------------------------------------------------
-Delay:               30.177ns (Levels of Logic = 168)
-  Source:            cpu0_idecode_AluOP1_0_1 (FF)
+Delay:               30.523ns (Levels of Logic = 167)
+  Source:            cpu0_idecode_AluOP1_1 (FF)
   Destination:       cpu0_ialu_div_tremainder_28 (FF)
   Source Clock:      Clk rising
   Destination Clock: Clk rising
 
-  Data Path: cpu0_idecode_AluOP1_0_1 to cpu0_ialu_div_tremainder_28
+  Data Path: cpu0_idecode_AluOP1_1 to cpu0_ialu_div_tremainder_28
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              3   0.591   0.674  cpu0_idecode_AluOP1_0_1 (cpu0_idecode_AluOP1_0_1)
-     LUT1:I0->O            1   0.648   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>_rt (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>_rt)
-     MUXCY:S->O            1   0.632   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1>)
+     FDE:C->Q             19   0.591   1.085  cpu0_idecode_AluOP1_1 (cpu0_idecode_AluOP1_1)
+     INV:I->O              1   0.648   0.000  cpu0_ialu_div_Madd_cOperand1_not0000<1>1_INV_0 (cpu0_ialu_div_Madd_cOperand1_not0000<1>)
+     MUXCY:S->O            1   0.632   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<2> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<3> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<4> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<4>)
@@ -1617,7 +1013,7 @@ Delay:               30.177ns (Levels of Logic = 168)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<28> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<29> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<30> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<30>)
-     MUXCY:CI->O          65   0.269   1.305  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0003)
+     MUXCY:CI->O          64   0.269   1.304  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0003)
      LUT3:I2->O            3   0.648   0.531  cpu0_ialu_div_tremainder_0_mux00001 (cpu0_ialu_div_tremainder_0_mux0000)
      MUXCY:DI->O           1   0.787   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<1> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<2> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<2>)
@@ -1717,8 +1113,8 @@ Delay:               30.177ns (Levels of Logic = 168)
      LUT4:I3->O            1   0.648   0.000  cpu0_ialu_div_tremainder_9_mux00041 (cpu0_ialu_div_tremainder_9_mux0004)
      FDE:D                     0.252          cpu0_ialu_div_tremainder_9
     ----------------------------------------
-    Total                     30.177ns (21.623ns logic, 8.554ns route)
-                                       (71.7% logic, 28.3% route)
+    Total                     30.523ns (21.558ns logic, 8.965ns route)
+                                       (70.6% logic, 29.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
@@ -1781,14 +1177,14 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 83.00 secs
-Total CPU time to Xst completion: 82.93 secs
+Total REAL time to Xst completion: 302.00 secs
+Total CPU time to Xst completion: 301.83 secs
  
 --> 
 
-Total memory usage is 456664 kilobytes
+Total memory usage is 451668 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  794 (   0 filtered)
-Number of infos    :   22 (   0 filtered)
+Number of warnings :  215 (   0 filtered)
+Number of infos    :   16 (   0 filtered)
 
