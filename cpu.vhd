@@ -123,6 +123,8 @@ signal alu_r1 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_r2 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_debug : std_logic_vector(31 downto 0) := (others => '0');
 
+signal RAM: RamData := RamDefault;
+
 --signal ram_we : std_logic := '0';
 --signal ram_en : std_logic := '1';
 --signal ram_addr : std_logic_vector(31 downto 0) := (others => '0');
@@ -188,7 +190,7 @@ process(CLK)
 	variable currentIns :  std_logic_vector(31 downto 0) := (others => '0');
 	variable currentState : CPUState := FetchDecode;
 	variable waitCounter : integer := 0;
-	variable RAM: RamData := read_ram_from_file("asm\test1data.hex");
+
 	variable ram_WE : std_logic := '0';
 begin
 	
@@ -202,18 +204,25 @@ begin
 				
 				
 				currentIns := rom_DATA;
-				
-				pc := std_logic_vector(unsigned(pc) + 4);
-
-				rom_ADDR <= pc;
-
-				
-				-- feed cur Ins to decode. decode will give alu appropriate operands by nnext clk cycle
-				decode_currentInstruction <= currentIns;
 				DCurrentIns <= currentIns;
 				DCPUState <= (others => '0');
 				
-				currentState := Execute;
+				pc := std_logic_vector(unsigned(pc) + 4);
+
+				
+
+				-- Check if instruction is a jump
+				if currentIns(31 downto 26) = b"000010" then
+					pc := b"0000" & CurrentIns(25 downto 0) & b"00";
+					currentState := FetchDecode;
+					rom_ADDR <= pc;
+				else
+					-- feed cur Ins to decode. decode will give alu appropriate operands by nnext clk cycle
+					rom_ADDR <= pc;
+					decode_currentInstruction <= currentIns;	
+				
+					currentState := Execute;
+				end if;
 				
 					
 			elsif currentState = Execute then
@@ -257,10 +266,10 @@ begin
 --				-- registerOut sends data from rt	
 --					ram_DI <= decode_registerOut;
 					
-					RAM(to_integer(unsigned(alu_r1(15 downto 0)))) := decode_registerOut(7 downto 0);
-					RAM(to_integer(unsigned(alu_r1(15 downto 0)) + 1)) := decode_registerOut(15 downto 8);
-					RAM(to_integer(unsigned(alu_r1(15 downto 0)) + 2)) := decode_registerOut(23 downto 16);
-					RAM(to_integer(unsigned(alu_r1(15 downto 0)) + 3)) := decode_registerOut(31 downto 24);
+					RAM(to_integer(unsigned(alu_r1(5 downto 0)))) <= decode_registerOut(7 downto 0);
+					RAM(to_integer(unsigned(alu_r1(5 downto 0)) + 1)) <= decode_registerOut(15 downto 8);
+					RAM(to_integer(unsigned(alu_r1(5 downto 0)) + 2)) <= decode_registerOut(23 downto 16);
+					RAM(to_integer(unsigned(alu_r1(5 downto 0)) + 3)) <= decode_registerOut(31 downto 24);
 					DMemOut <= read_ram_at(RAM, alu_r1);
 					DMemAddr <= alu_r1;
 					

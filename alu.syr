@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Reading design: alu.prj
 
@@ -89,7 +89,7 @@ Global Optimization                : AllClockNets
 Read Cores                         : YES
 Write Timing Constraints           : NO
 Cross Clock Analysis               : NO
-Hierarchy Separator                : /
+Hierarchy Separator                : _
 Bus Delimiter                      : <>
 Case Specifier                     : Maintain
 Slice Utilization Ratio            : 100
@@ -98,28 +98,29 @@ Verilog 2001                       : YES
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
+---- Other Options
+loop_iteration_limit               : 2048
+
 =========================================================================
 
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uadder32.vhd" in Library work.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd" in Library work.
 Architecture behavioral of Entity uadder32 is up to date.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/adder32.vhd" in Library work.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" in Library work.
 Architecture behavioral of Entity adder32 is up to date.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/addsub32.vhd" in Library work.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" in Library work.
 Architecture behavioral of Entity addsub32 is up to date.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uaddsub32.vhd" in Library work.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd" in Library work.
 Architecture behavioral of Entity uaddsub32 is up to date.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd" in Library work.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/mul32.vhd" in Library work.
 Architecture behavioral of Entity mul32 is up to date.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" in Library work.
-Entity <div32> compiled.
-Entity <div32> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
-Entity <alu> compiled.
-Entity <alu> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/div32.vhd" in Library work.
+Architecture behavioral of Entity div32 is up to date.
+Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -138,6 +139,7 @@ Analyzing hierarchy for entity <adder32> in library <work> (architecture <behavi
 
 Analyzing hierarchy for entity <uadder32> in library <work> (architecture <behavioral>).
 
+INFO:Xst:2555 - '-hierarchy_separator' switch is being deprecated in a future release.
 
 =========================================================================
 *                            HDL Analysis                               *
@@ -171,7 +173,7 @@ Entity <div32> analyzed. Unit <div32> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <mul32>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/mul32.vhd".
 WARNING:Xst:1780 - Signal <interResult2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <interResult1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 32x32-bit multiplier for signal <combinedResult>.
@@ -189,49 +191,52 @@ Unit <mul32> synthesized.
 
 
 Synthesizing Unit <div32>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/div32.vhd".
     Found 1-bit register for signal <exception>.
     Found 32-bit register for signal <quotient>.
     Found 32-bit register for signal <remainder>.
+    Found 1-bit register for signal <cIsSigned>.
     Found 32-bit register for signal <cOperand1>.
-    Found 32-bit adder for signal <cOperand1$addsub0000> created at line 71.
-    Found 32-bit 4-to-1 multiplexer for signal <cOperand1$mux0001> created at line 64.
-    Found 1-bit 32-to-1 multiplexer for signal <cOperand1$mux0002> created at line 84.
+    Found 32-bit adder for signal <cOperand1$addsub0000> created at line 74.
+    Found 32-bit 4-to-1 multiplexer for signal <cOperand1$mux0001> created at line 66.
+    Found 1-bit 32-to-1 multiplexer for signal <cOperand1$mux0002> created at line 87.
     Found 32-bit register for signal <cOperand2>.
-    Found 32-bit adder for signal <cOperand2$addsub0000> created at line 77.
-    Found 32-bit 4-to-1 multiplexer for signal <cOperand2$mux0001> created at line 64.
+    Found 32-bit adder for signal <cOperand2$addsub0000> created at line 80.
+    Found 32-bit 4-to-1 multiplexer for signal <cOperand2$mux0001> created at line 66.
     Found 32-bit register for signal <counter>.
-    Found 32-bit subtractor for signal <counter$addsub0000> created at line 105.
-    Found 32-bit comparator less for signal <counter$cmp_lt0000> created at line 93.
+    Found 32-bit subtractor for signal <counter$addsub0000> created at line 108.
+    Found 32-bit comparator less for signal <counter$cmp_lt0000> created at line 96.
     Found 1-bit register for signal <isDone>.
-    Found 32-bit adder for signal <quotient$addsub0000> created at line 98.
+    Found 32-bit adder for signal <quotient$addsub0000> created at line 101.
     Found 32-bit 4-to-1 multiplexer for signal <quotient$mux0001>.
-    Found 1-bit xor2 for signal <quotient$xor0000> created at line 97.
-    Found 32-bit comparator greatequal for signal <remainder$cmp_ge0000> created at line 93.
+    Found 1-bit xor2 for signal <quotient$xor0000> created at line 100.
+    Found 32-bit comparator greatequal for signal <remainder$cmp_ge0000> created at line 96.
     Found 32-bit register for signal <tquotient>.
-    Found 32-bit comparator greatequal for signal <tquotient_13$cmp_ge0000> created at line 86.
-    Found 32-bit comparator greatequal for signal <tquotient_13$cmp_ge0001> created at line 86.
-    Found 32-bit comparator greatequal for signal <tquotient_13$cmp_ge0002> created at line 86.
-    Found 32-bit comparator greatequal for signal <tquotient_13$cmp_ge0003> created at line 86.
-    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0000> created at line 57.
-    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0001> created at line 57.
-    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0002> created at line 57.
-    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0003> created at line 57.
-    Found 32-bit comparator equal for signal <tquotient_3$cmp_eq0000> created at line 57.
-    Found 32-bit comparator equal for signal <tquotient_3$cmp_eq0001> created at line 57.
-    Found 32-bit comparator less for signal <tquotient_3$cmp_lt0000> created at line 86.
-    Found 32-bit comparator less for signal <tquotient_3$cmp_lt0001> created at line 86.
-    Found 32-bit comparator less for signal <tquotient_3$cmp_lt0002> created at line 86.
-    Found 32-bit comparator less for signal <tquotient_3$cmp_lt0003> created at line 86.
+    Found 32-bit comparator greatequal for signal <tquotient_13$cmp_ge0000> created at line 89.
+    Found 32-bit comparator greatequal for signal <tquotient_13$cmp_ge0001> created at line 89.
+    Found 32-bit comparator greatequal for signal <tquotient_13$cmp_ge0002> created at line 89.
+    Found 32-bit comparator greatequal for signal <tquotient_13$cmp_ge0003> created at line 89.
+    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0000> created at line 58.
+    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0001> created at line 58.
+    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0002> created at line 58.
+    Found 32-bit comparator not equal for signal <tquotient_13$cmp_ne0003> created at line 58.
+    Found 1-bit xor2 for signal <tquotient_13$xor0000> created at line 58.
+    Found 32-bit comparator equal for signal <tquotient_3$cmp_eq0000> created at line 58.
+    Found 32-bit comparator equal for signal <tquotient_3$cmp_eq0001> created at line 58.
+    Found 32-bit comparator less for signal <tquotient_3$cmp_lt0000> created at line 89.
+    Found 32-bit comparator less for signal <tquotient_3$cmp_lt0001> created at line 89.
+    Found 32-bit comparator less for signal <tquotient_3$cmp_lt0002> created at line 89.
+    Found 32-bit comparator less for signal <tquotient_3$cmp_lt0003> created at line 89.
     Found 32-bit register for signal <tremainder>.
-    Found 32-bit comparator equal for signal <tremainder_0$cmp_eq0000> created at line 57.
-    Found 32-bit comparator equal for signal <tremainder_0$cmp_eq0003> created at line 57.
-    Found 32-bit subtractor for signal <tremainder_31$sub0000> created at line 87.
-    Found 32-bit subtractor for signal <tremainder_31$sub0001> created at line 87.
-    Found 32-bit subtractor for signal <tremainder_31$sub0002> created at line 87.
-    Found 32-bit subtractor for signal <tremainder_31$sub0003> created at line 87.
+    Found 1-bit xor2 for signal <tremainder$xor0000> created at line 58.
+    Found 32-bit comparator equal for signal <tremainder_0$cmp_eq0000> created at line 58.
+    Found 32-bit comparator equal for signal <tremainder_0$cmp_eq0003> created at line 58.
+    Found 32-bit subtractor for signal <tremainder_31$sub0000> created at line 90.
+    Found 32-bit subtractor for signal <tremainder_31$sub0001> created at line 90.
+    Found 32-bit subtractor for signal <tremainder_31$sub0002> created at line 90.
+    Found 32-bit subtractor for signal <tremainder_31$sub0003> created at line 90.
     Summary:
-	inferred 226 D-type flip-flop(s).
+	inferred 227 D-type flip-flop(s).
 	inferred   8 Adder/Subtractor(s).
 	inferred  18 Comparator(s).
 	inferred  97 Multiplexer(s).
@@ -239,7 +244,7 @@ Unit <div32> synthesized.
 
 
 Synthesizing Unit <adder32>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/adder32.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd".
 WARNING:Xst:653 - Signal <maxNegative> is used but never assigned. This sourceless signal will be automatically connected to value 10000000000000000000000000000000.
 WARNING:Xst:646 - Signal <complementedAdd<30:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 32-bit adder for signal <complementedAdd$addsub0000> created at line 46.
@@ -252,7 +257,7 @@ Unit <adder32> synthesized.
 
 
 Synthesizing Unit <uadder32>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uadder32.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd".
     Found 33-bit adder for signal <largeResult>.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -260,7 +265,7 @@ Unit <uadder32> synthesized.
 
 
 Synthesizing Unit <addsub32>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/addsub32.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd".
     Found 32-bit adder for signal <newOperand2$addsub0000> created at line 49.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -268,7 +273,7 @@ Unit <addsub32> synthesized.
 
 
 Synthesizing Unit <uaddsub32>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uaddsub32.vhd".
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd".
     Found 32-bit adder for signal <newOperand2$addsub0000> created at line 50.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -276,19 +281,16 @@ Unit <uaddsub32> synthesized.
 
 
 Synthesizing Unit <alu>.
-    Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd".
-WARNING:Xst:1780 - Signal <divRemainder> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <divQuotient> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <divException> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+    Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd".
     Found 32-bit register for signal <Result1>.
     Found 32-bit register for signal <Result2>.
     Found 32-bit register for signal <Debug>.
+    Found 1-bit register for signal <divIsSigned>.
     Found 1-bit register for signal <isAdd>.
     Found 1-bit register for signal <mulIsSigned>.
-    Found 32-bit comparator equal for signal <Result1$cmp_eq0082> created at line 207.
-    Found 32-bit comparator not equal for signal <Result1$cmp_ne0000> created at line 214.
-    Found 32-bit xor2 for signal <Result1$xor0000> created at line 186.
-    Found 1-bit register for signal <udivIsSigned>.
+    Found 32-bit comparator equal for signal <Result1$cmp_eq0068> created at line 196.
+    Found 32-bit comparator not equal for signal <Result1$cmp_ne0000> created at line 203.
+    Found 32-bit xor2 for signal <Result1$xor0000> created at line 175.
     Summary:
 	inferred  99 D-type flip-flop(s).
 	inferred   2 Comparator(s).
@@ -306,8 +308,8 @@ Macro Statistics
  32-bit subtractor                                     : 5
  33-bit adder                                          : 1
  64-bit adder                                          : 1
-# Registers                                            : 77
- 1-bit register                                        : 69
+# Registers                                            : 78
+ 1-bit register                                        : 70
  32-bit register                                       : 8
 # Comparators                                          : 20
  32-bit comparator equal                               : 5
@@ -317,8 +319,8 @@ Macro Statistics
 # Multiplexers                                         : 6
  1-bit 32-to-1 multiplexer                             : 1
  32-bit 4-to-1 multiplexer                             : 5
-# Xors                                                 : 3
- 1-bit xor2                                            : 2
+# Xors                                                 : 5
+ 1-bit xor2                                            : 4
  32-bit xor2                                           : 1
 
 =========================================================================
@@ -372,8 +374,8 @@ Macro Statistics
  32-bit subtractor                                     : 2
  33-bit adder                                          : 1
  64-bit adder                                          : 1
-# Registers                                            : 294
- Flip-Flops                                            : 294
+# Registers                                            : 295
+ Flip-Flops                                            : 295
 # Comparators                                          : 20
  32-bit comparator equal                               : 5
  32-bit comparator greatequal                          : 5
@@ -382,8 +384,8 @@ Macro Statistics
 # Multiplexers                                         : 6
  1-bit 32-to-1 multiplexer                             : 1
  32-bit 4-to-1 multiplexer                             : 5
-# Xors                                                 : 3
- 1-bit xor2                                            : 2
+# Xors                                                 : 5
+ 1-bit xor2                                            : 4
  32-bit xor2                                           : 1
 
 =========================================================================
@@ -404,7 +406,8 @@ Optimizing unit <adder32> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block alu, actual ratio is 52.
+Found area constraint ratio of 100 (+ 5) on block alu, actual ratio is 56.
+FlipFlop divIsSigned has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -412,8 +415,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 292
- Flip-Flops                                            : 292
+# Registers                                            : 294
+ Flip-Flops                                            : 294
 
 =========================================================================
 
@@ -442,29 +445,30 @@ Design Statistics
 # IOs                              : 167
 
 Cell Usage :
-# BELS                             : 4996
+# BELS                             : 5047
 #      GND                         : 1
 #      INV                         : 311
 #      LUT1                        : 24
-#      LUT2                        : 209
+#      LUT2                        : 238
 #      LUT2_D                      : 2
-#      LUT3                        : 430
+#      LUT3                        : 696
 #      LUT3_L                      : 2
-#      LUT4                        : 2284
-#      LUT4_D                      : 7
-#      LUT4_L                      : 65
+#      LUT4                        : 1679
+#      LUT4_D                      : 8
+#      LUT4_L                      : 64
 #      MULT_AND                    : 60
-#      MUXCY                       : 923
-#      MUXF5                       : 21
+#      MUXCY                       : 915
+#      MUXF5                       : 390
 #      MUXF6                       : 4
 #      MUXF7                       : 2
 #      MUXF8                       : 1
 #      VCC                         : 1
 #      XORCY                       : 649
-# FlipFlops/Latches                : 292
-#      FDE                         : 226
-#      FDR                         : 2
-#      FDRS                        : 64
+# FlipFlops/Latches                : 294
+#      FD                          : 4
+#      FDE                         : 224
+#      FDR                         : 1
+#      FDS                         : 65
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 166
@@ -479,9 +483,9 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     1815  out of   3584    50%  
- Number of Slice Flip Flops:            292  out of   7168     4%  
- Number of 4 input LUTs:               3334  out of   7168    46%  
+ Number of Slices:                     1619  out of   3584    45%  
+ Number of Slice Flip Flops:            294  out of   7168     4%  
+ Number of 4 input LUTs:               3024  out of   7168    42%  
  Number of IOs:                         167
  Number of bonded IOBs:                 167  out of    195    85%  
  Number of MULT18X18SIOs:                 4  out of     20    20%  
@@ -508,7 +512,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 292   |
+Clk                                | BUFGP                  | 294   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -519,9 +523,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 33.520ns (Maximum Frequency: 29.833MHz)
-   Minimum input arrival time before clock: 36.296ns
-   Maximum output required time after clock: 5.558ns
+   Minimum period: 33.447ns (Maximum Frequency: 29.898MHz)
+   Minimum input arrival time before clock: 36.295ns
+   Maximum output required time after clock: 6.111ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -530,431 +534,431 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 33.520ns (frequency: 29.833MHz)
-  Total number of paths / destination ports: 2198201139874 / 578
+  Clock period: 33.447ns (frequency: 29.898MHz)
+  Total number of paths / destination ports: 2289014404236 / 582
 -------------------------------------------------------------------------
-Delay:               33.520ns (Levels of Logic = 168)
-  Source:            div/cOperand1_1 (FF)
-  Destination:       div/quotient_31 (FF)
+Delay:               33.447ns (Levels of Logic = 168)
+  Source:            div_cOperand1_1 (FF)
+  Destination:       div_quotient_31 (FF)
   Source Clock:      Clk rising
   Destination Clock: Clk rising
 
-  Data Path: div/cOperand1_1 to div/quotient_31
+  Data Path: div_cOperand1_1 to div_quotient_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              1   0.591   0.452  div/cOperand1_1 (div/cOperand1_1)
-     LUT4:I2->O            1   0.648   0.000  div/Mcompar_tquotient_13_cmp_ne0000_lut<0> (div/Mcompar_tquotient_13_cmp_ne0000_lut<0>)
-     MUXCY:S->O            1   0.632   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<0> (div/Mcompar_tquotient_13_cmp_ne0000_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<1> (div/Mcompar_tquotient_13_cmp_ne0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<2> (div/Mcompar_tquotient_13_cmp_ne0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<3> (div/Mcompar_tquotient_13_cmp_ne0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<4> (div/Mcompar_tquotient_13_cmp_ne0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<5> (div/Mcompar_tquotient_13_cmp_ne0000_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<6> (div/Mcompar_tquotient_13_cmp_ne0000_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<7> (div/Mcompar_tquotient_13_cmp_ne0000_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<8> (div/Mcompar_tquotient_13_cmp_ne0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<9> (div/Mcompar_tquotient_13_cmp_ne0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<10> (div/Mcompar_tquotient_13_cmp_ne0000_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<11> (div/Mcompar_tquotient_13_cmp_ne0000_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<12> (div/Mcompar_tquotient_13_cmp_ne0000_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<13> (div/Mcompar_tquotient_13_cmp_ne0000_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ne0000_cy<14> (div/Mcompar_tquotient_13_cmp_ne0000_cy<14>)
-     MUXCY:CI->O          40   0.269   1.408  div/Mcompar_tquotient_13_cmp_ne0000_cy<15> (div/Mcompar_tquotient_13_cmp_ne0000_cy<15>)
-     LUT2:I0->O           13   0.648   0.983  div/tremainder_mux0000<0>11_1 (div/tremainder_mux0000<0>11)
-     MULT_AND:I1->LO       0   0.654   0.000  div/tremainder_mux0000<0>_mand (div/tremainder_mux0000<0>_mand1)
-     MUXCY:DI->O           1   0.787   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<1> (div/Mcompar_tquotient_13_cmp_ge0003_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<2> (div/Mcompar_tquotient_13_cmp_ge0003_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<3> (div/Mcompar_tquotient_13_cmp_ge0003_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<4> (div/Mcompar_tquotient_13_cmp_ge0003_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<5> (div/Mcompar_tquotient_13_cmp_ge0003_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<6> (div/Mcompar_tquotient_13_cmp_ge0003_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<7> (div/Mcompar_tquotient_13_cmp_ge0003_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<8> (div/Mcompar_tquotient_13_cmp_ge0003_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<9> (div/Mcompar_tquotient_13_cmp_ge0003_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<10> (div/Mcompar_tquotient_13_cmp_ge0003_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<11> (div/Mcompar_tquotient_13_cmp_ge0003_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<12> (div/Mcompar_tquotient_13_cmp_ge0003_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<13> (div/Mcompar_tquotient_13_cmp_ge0003_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<14> (div/Mcompar_tquotient_13_cmp_ge0003_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<15> (div/Mcompar_tquotient_13_cmp_ge0003_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<16> (div/Mcompar_tquotient_13_cmp_ge0003_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<17> (div/Mcompar_tquotient_13_cmp_ge0003_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<18> (div/Mcompar_tquotient_13_cmp_ge0003_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<19> (div/Mcompar_tquotient_13_cmp_ge0003_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<20> (div/Mcompar_tquotient_13_cmp_ge0003_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<21> (div/Mcompar_tquotient_13_cmp_ge0003_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<22> (div/Mcompar_tquotient_13_cmp_ge0003_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<23> (div/Mcompar_tquotient_13_cmp_ge0003_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<24> (div/Mcompar_tquotient_13_cmp_ge0003_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<25> (div/Mcompar_tquotient_13_cmp_ge0003_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<26> (div/Mcompar_tquotient_13_cmp_ge0003_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<27> (div/Mcompar_tquotient_13_cmp_ge0003_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<28> (div/Mcompar_tquotient_13_cmp_ge0003_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<29> (div/Mcompar_tquotient_13_cmp_ge0003_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<30> (div/Mcompar_tquotient_13_cmp_ge0003_cy<30>)
-     MUXCY:CI->O         103   0.269   1.317  div/Mcompar_tquotient_13_cmp_ge0003_cy<31> (div/tquotient_13_cmp_ge0003)
-     LUT3:I2->O            3   0.648   0.531  div/tremainder_0_mux00001 (div/tremainder_0_mux0000)
-     MUXCY:DI->O           1   0.787   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<1> (div/Mcompar_tquotient_13_cmp_ge0002_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<2> (div/Mcompar_tquotient_13_cmp_ge0002_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<3> (div/Mcompar_tquotient_13_cmp_ge0002_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<4> (div/Mcompar_tquotient_13_cmp_ge0002_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<5> (div/Mcompar_tquotient_13_cmp_ge0002_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<6> (div/Mcompar_tquotient_13_cmp_ge0002_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<7> (div/Mcompar_tquotient_13_cmp_ge0002_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<8> (div/Mcompar_tquotient_13_cmp_ge0002_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<9> (div/Mcompar_tquotient_13_cmp_ge0002_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<10> (div/Mcompar_tquotient_13_cmp_ge0002_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<11> (div/Mcompar_tquotient_13_cmp_ge0002_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<12> (div/Mcompar_tquotient_13_cmp_ge0002_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<13> (div/Mcompar_tquotient_13_cmp_ge0002_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<14> (div/Mcompar_tquotient_13_cmp_ge0002_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<15> (div/Mcompar_tquotient_13_cmp_ge0002_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<16> (div/Mcompar_tquotient_13_cmp_ge0002_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<17> (div/Mcompar_tquotient_13_cmp_ge0002_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<18> (div/Mcompar_tquotient_13_cmp_ge0002_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<19> (div/Mcompar_tquotient_13_cmp_ge0002_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<20> (div/Mcompar_tquotient_13_cmp_ge0002_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<21> (div/Mcompar_tquotient_13_cmp_ge0002_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<22> (div/Mcompar_tquotient_13_cmp_ge0002_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<23> (div/Mcompar_tquotient_13_cmp_ge0002_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<24> (div/Mcompar_tquotient_13_cmp_ge0002_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<25> (div/Mcompar_tquotient_13_cmp_ge0002_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<26> (div/Mcompar_tquotient_13_cmp_ge0002_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<27> (div/Mcompar_tquotient_13_cmp_ge0002_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<28> (div/Mcompar_tquotient_13_cmp_ge0002_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<29> (div/Mcompar_tquotient_13_cmp_ge0002_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<30> (div/Mcompar_tquotient_13_cmp_ge0002_cy<30>)
-     MUXCY:CI->O         144   0.269   1.330  div/Mcompar_tquotient_13_cmp_ge0002_cy<31> (div/tquotient_13_cmp_ge0002)
-     LUT3:I2->O            3   0.648   0.531  div/tremainder_0_mux00011 (div/tremainder_0_mux0001)
-     MUXCY:DI->O           1   0.787   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<1> (div/Mcompar_tquotient_13_cmp_ge0001_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<2> (div/Mcompar_tquotient_13_cmp_ge0001_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<3> (div/Mcompar_tquotient_13_cmp_ge0001_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<4> (div/Mcompar_tquotient_13_cmp_ge0001_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<5> (div/Mcompar_tquotient_13_cmp_ge0001_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<6> (div/Mcompar_tquotient_13_cmp_ge0001_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<7> (div/Mcompar_tquotient_13_cmp_ge0001_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<8> (div/Mcompar_tquotient_13_cmp_ge0001_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<9> (div/Mcompar_tquotient_13_cmp_ge0001_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<10> (div/Mcompar_tquotient_13_cmp_ge0001_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<11> (div/Mcompar_tquotient_13_cmp_ge0001_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<12> (div/Mcompar_tquotient_13_cmp_ge0001_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<13> (div/Mcompar_tquotient_13_cmp_ge0001_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<14> (div/Mcompar_tquotient_13_cmp_ge0001_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<15> (div/Mcompar_tquotient_13_cmp_ge0001_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<16> (div/Mcompar_tquotient_13_cmp_ge0001_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<17> (div/Mcompar_tquotient_13_cmp_ge0001_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<18> (div/Mcompar_tquotient_13_cmp_ge0001_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<19> (div/Mcompar_tquotient_13_cmp_ge0001_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<20> (div/Mcompar_tquotient_13_cmp_ge0001_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<21> (div/Mcompar_tquotient_13_cmp_ge0001_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<22> (div/Mcompar_tquotient_13_cmp_ge0001_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<23> (div/Mcompar_tquotient_13_cmp_ge0001_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<24> (div/Mcompar_tquotient_13_cmp_ge0001_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<25> (div/Mcompar_tquotient_13_cmp_ge0001_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<26> (div/Mcompar_tquotient_13_cmp_ge0001_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<27> (div/Mcompar_tquotient_13_cmp_ge0001_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<28> (div/Mcompar_tquotient_13_cmp_ge0001_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<29> (div/Mcompar_tquotient_13_cmp_ge0001_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<30> (div/Mcompar_tquotient_13_cmp_ge0001_cy<30>)
-     MUXCY:CI->O         156   0.269   1.333  div/Mcompar_tquotient_13_cmp_ge0001_cy<31> (div/tquotient_13_cmp_ge0001)
-     LUT3:I2->O            2   0.648   0.447  div/tremainder_0_mux00021 (div/tremainder_0_mux0002)
-     MUXCY:DI->O           1   0.787   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<1> (div/Mcompar_tquotient_13_cmp_ge0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<2> (div/Mcompar_tquotient_13_cmp_ge0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<3> (div/Mcompar_tquotient_13_cmp_ge0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<4> (div/Mcompar_tquotient_13_cmp_ge0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<5> (div/Mcompar_tquotient_13_cmp_ge0000_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<6> (div/Mcompar_tquotient_13_cmp_ge0000_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<7> (div/Mcompar_tquotient_13_cmp_ge0000_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<8> (div/Mcompar_tquotient_13_cmp_ge0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<9> (div/Mcompar_tquotient_13_cmp_ge0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<10> (div/Mcompar_tquotient_13_cmp_ge0000_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<11> (div/Mcompar_tquotient_13_cmp_ge0000_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<12> (div/Mcompar_tquotient_13_cmp_ge0000_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<13> (div/Mcompar_tquotient_13_cmp_ge0000_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<14> (div/Mcompar_tquotient_13_cmp_ge0000_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<15> (div/Mcompar_tquotient_13_cmp_ge0000_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<16> (div/Mcompar_tquotient_13_cmp_ge0000_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<17> (div/Mcompar_tquotient_13_cmp_ge0000_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<18> (div/Mcompar_tquotient_13_cmp_ge0000_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<19> (div/Mcompar_tquotient_13_cmp_ge0000_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<20> (div/Mcompar_tquotient_13_cmp_ge0000_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<21> (div/Mcompar_tquotient_13_cmp_ge0000_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<22> (div/Mcompar_tquotient_13_cmp_ge0000_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<23> (div/Mcompar_tquotient_13_cmp_ge0000_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<24> (div/Mcompar_tquotient_13_cmp_ge0000_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<25> (div/Mcompar_tquotient_13_cmp_ge0000_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<26> (div/Mcompar_tquotient_13_cmp_ge0000_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<27> (div/Mcompar_tquotient_13_cmp_ge0000_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<28> (div/Mcompar_tquotient_13_cmp_ge0000_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<29> (div/Mcompar_tquotient_13_cmp_ge0000_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<30> (div/Mcompar_tquotient_13_cmp_ge0000_cy<30>)
-     MUXCY:CI->O         118   0.269   1.292  div/Mcompar_tquotient_13_cmp_ge0000_cy<31> (div/tquotient_13_cmp_ge0000)
-     LUT4:I3->O            5   0.648   0.636  div/tquotient_0_mux000011_1 (div/tquotient_0_mux000011)
-     LUT4:I3->O            1   0.648   0.000  div/Madd_quotient_not0000<13>11 (div/Madd_quotient_not0000<13>1)
-     MUXCY:S->O            1   0.632   0.000  div/Madd_quotient_addsub0000_cy<13> (div/Madd_quotient_addsub0000_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<14> (div/Madd_quotient_addsub0000_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<15> (div/Madd_quotient_addsub0000_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<16> (div/Madd_quotient_addsub0000_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<17> (div/Madd_quotient_addsub0000_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<18> (div/Madd_quotient_addsub0000_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<19> (div/Madd_quotient_addsub0000_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<20> (div/Madd_quotient_addsub0000_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<21> (div/Madd_quotient_addsub0000_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<22> (div/Madd_quotient_addsub0000_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<23> (div/Madd_quotient_addsub0000_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<24> (div/Madd_quotient_addsub0000_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<25> (div/Madd_quotient_addsub0000_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<26> (div/Madd_quotient_addsub0000_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<27> (div/Madd_quotient_addsub0000_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<28> (div/Madd_quotient_addsub0000_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<29> (div/Madd_quotient_addsub0000_cy<29>)
-     MUXCY:CI->O           0   0.065   0.000  div/Madd_quotient_addsub0000_cy<30> (div/Madd_quotient_addsub0000_cy<30>)
-     XORCY:CI->O           1   0.844   0.423  div/Madd_quotient_addsub0000_xor<31> (div/quotient_addsub0000<31>)
-     LUT4:I3->O            1   0.648   0.000  div/Mmux_quotient_mux000150 (div/quotient_mux0001<31>)
-     FDE:D                     0.252          div/quotient_31
+     FDE:C->Q              1   0.591   0.452  div_cOperand1_1 (div_cOperand1_1)
+     LUT4:I2->O            1   0.648   0.000  div_Mcompar_tquotient_13_cmp_ne0000_lut<0> (div_Mcompar_tquotient_13_cmp_ne0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<0> (div_Mcompar_tquotient_13_cmp_ne0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<1> (div_Mcompar_tquotient_13_cmp_ne0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<2> (div_Mcompar_tquotient_13_cmp_ne0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<3> (div_Mcompar_tquotient_13_cmp_ne0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<4> (div_Mcompar_tquotient_13_cmp_ne0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<5> (div_Mcompar_tquotient_13_cmp_ne0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<6> (div_Mcompar_tquotient_13_cmp_ne0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<7> (div_Mcompar_tquotient_13_cmp_ne0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<8> (div_Mcompar_tquotient_13_cmp_ne0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<9> (div_Mcompar_tquotient_13_cmp_ne0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<10> (div_Mcompar_tquotient_13_cmp_ne0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<11> (div_Mcompar_tquotient_13_cmp_ne0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<12> (div_Mcompar_tquotient_13_cmp_ne0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<13> (div_Mcompar_tquotient_13_cmp_ne0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ne0000_cy<14> (div_Mcompar_tquotient_13_cmp_ne0000_cy<14>)
+     MUXCY:CI->O          37   0.269   1.344  div_Mcompar_tquotient_13_cmp_ne0000_cy<15> (div_Mcompar_tquotient_13_cmp_ne0000_cy<15>)
+     LUT3:I1->O           13   0.643   0.983  div_tremainder_mux0000<0>11_1 (div_tremainder_mux0000<0>11)
+     MULT_AND:I1->LO       0   0.654   0.000  div_tremainder_mux0000<0>_mand (div_tremainder_mux0000<0>_mand1)
+     MUXCY:DI->O           1   0.787   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<1> (div_Mcompar_tquotient_13_cmp_ge0003_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<2> (div_Mcompar_tquotient_13_cmp_ge0003_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<3> (div_Mcompar_tquotient_13_cmp_ge0003_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<4> (div_Mcompar_tquotient_13_cmp_ge0003_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<5> (div_Mcompar_tquotient_13_cmp_ge0003_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<6> (div_Mcompar_tquotient_13_cmp_ge0003_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<7> (div_Mcompar_tquotient_13_cmp_ge0003_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<8> (div_Mcompar_tquotient_13_cmp_ge0003_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<9> (div_Mcompar_tquotient_13_cmp_ge0003_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<10> (div_Mcompar_tquotient_13_cmp_ge0003_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<11> (div_Mcompar_tquotient_13_cmp_ge0003_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<12> (div_Mcompar_tquotient_13_cmp_ge0003_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<13> (div_Mcompar_tquotient_13_cmp_ge0003_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<14> (div_Mcompar_tquotient_13_cmp_ge0003_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<15> (div_Mcompar_tquotient_13_cmp_ge0003_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<16> (div_Mcompar_tquotient_13_cmp_ge0003_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<17> (div_Mcompar_tquotient_13_cmp_ge0003_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<18> (div_Mcompar_tquotient_13_cmp_ge0003_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<19> (div_Mcompar_tquotient_13_cmp_ge0003_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<20> (div_Mcompar_tquotient_13_cmp_ge0003_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<21> (div_Mcompar_tquotient_13_cmp_ge0003_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<22> (div_Mcompar_tquotient_13_cmp_ge0003_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<23> (div_Mcompar_tquotient_13_cmp_ge0003_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<24> (div_Mcompar_tquotient_13_cmp_ge0003_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<25> (div_Mcompar_tquotient_13_cmp_ge0003_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<26> (div_Mcompar_tquotient_13_cmp_ge0003_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<27> (div_Mcompar_tquotient_13_cmp_ge0003_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<28> (div_Mcompar_tquotient_13_cmp_ge0003_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<29> (div_Mcompar_tquotient_13_cmp_ge0003_cy<29>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<30> (div_Mcompar_tquotient_13_cmp_ge0003_cy<30>)
+     MUXCY:CI->O         103   0.269   1.317  div_Mcompar_tquotient_13_cmp_ge0003_cy<31> (div_tquotient_13_cmp_ge0003)
+     LUT3:I2->O            3   0.648   0.531  div_tremainder_0_mux00001 (div_tremainder_0_mux0000)
+     MUXCY:DI->O           1   0.787   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<1> (div_Mcompar_tquotient_13_cmp_ge0002_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<2> (div_Mcompar_tquotient_13_cmp_ge0002_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<3> (div_Mcompar_tquotient_13_cmp_ge0002_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<4> (div_Mcompar_tquotient_13_cmp_ge0002_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<5> (div_Mcompar_tquotient_13_cmp_ge0002_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<6> (div_Mcompar_tquotient_13_cmp_ge0002_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<7> (div_Mcompar_tquotient_13_cmp_ge0002_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<8> (div_Mcompar_tquotient_13_cmp_ge0002_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<9> (div_Mcompar_tquotient_13_cmp_ge0002_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<10> (div_Mcompar_tquotient_13_cmp_ge0002_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<11> (div_Mcompar_tquotient_13_cmp_ge0002_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<12> (div_Mcompar_tquotient_13_cmp_ge0002_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<13> (div_Mcompar_tquotient_13_cmp_ge0002_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<14> (div_Mcompar_tquotient_13_cmp_ge0002_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<15> (div_Mcompar_tquotient_13_cmp_ge0002_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<16> (div_Mcompar_tquotient_13_cmp_ge0002_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<17> (div_Mcompar_tquotient_13_cmp_ge0002_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<18> (div_Mcompar_tquotient_13_cmp_ge0002_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<19> (div_Mcompar_tquotient_13_cmp_ge0002_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<20> (div_Mcompar_tquotient_13_cmp_ge0002_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<21> (div_Mcompar_tquotient_13_cmp_ge0002_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<22> (div_Mcompar_tquotient_13_cmp_ge0002_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<23> (div_Mcompar_tquotient_13_cmp_ge0002_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<24> (div_Mcompar_tquotient_13_cmp_ge0002_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<25> (div_Mcompar_tquotient_13_cmp_ge0002_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<26> (div_Mcompar_tquotient_13_cmp_ge0002_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<27> (div_Mcompar_tquotient_13_cmp_ge0002_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<28> (div_Mcompar_tquotient_13_cmp_ge0002_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<29> (div_Mcompar_tquotient_13_cmp_ge0002_cy<29>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<30> (div_Mcompar_tquotient_13_cmp_ge0002_cy<30>)
+     MUXCY:CI->O         135   0.269   1.327  div_Mcompar_tquotient_13_cmp_ge0002_cy<31> (div_tquotient_13_cmp_ge0002)
+     LUT3:I2->O            3   0.648   0.531  div_tremainder_0_mux00011 (div_tremainder_0_mux0001)
+     MUXCY:DI->O           1   0.787   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<1> (div_Mcompar_tquotient_13_cmp_ge0001_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<2> (div_Mcompar_tquotient_13_cmp_ge0001_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<3> (div_Mcompar_tquotient_13_cmp_ge0001_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<4> (div_Mcompar_tquotient_13_cmp_ge0001_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<5> (div_Mcompar_tquotient_13_cmp_ge0001_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<6> (div_Mcompar_tquotient_13_cmp_ge0001_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<7> (div_Mcompar_tquotient_13_cmp_ge0001_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<8> (div_Mcompar_tquotient_13_cmp_ge0001_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<9> (div_Mcompar_tquotient_13_cmp_ge0001_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<10> (div_Mcompar_tquotient_13_cmp_ge0001_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<11> (div_Mcompar_tquotient_13_cmp_ge0001_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<12> (div_Mcompar_tquotient_13_cmp_ge0001_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<13> (div_Mcompar_tquotient_13_cmp_ge0001_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<14> (div_Mcompar_tquotient_13_cmp_ge0001_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<15> (div_Mcompar_tquotient_13_cmp_ge0001_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<16> (div_Mcompar_tquotient_13_cmp_ge0001_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<17> (div_Mcompar_tquotient_13_cmp_ge0001_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<18> (div_Mcompar_tquotient_13_cmp_ge0001_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<19> (div_Mcompar_tquotient_13_cmp_ge0001_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<20> (div_Mcompar_tquotient_13_cmp_ge0001_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<21> (div_Mcompar_tquotient_13_cmp_ge0001_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<22> (div_Mcompar_tquotient_13_cmp_ge0001_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<23> (div_Mcompar_tquotient_13_cmp_ge0001_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<24> (div_Mcompar_tquotient_13_cmp_ge0001_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<25> (div_Mcompar_tquotient_13_cmp_ge0001_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<26> (div_Mcompar_tquotient_13_cmp_ge0001_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<27> (div_Mcompar_tquotient_13_cmp_ge0001_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<28> (div_Mcompar_tquotient_13_cmp_ge0001_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<29> (div_Mcompar_tquotient_13_cmp_ge0001_cy<29>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<30> (div_Mcompar_tquotient_13_cmp_ge0001_cy<30>)
+     MUXCY:CI->O         155   0.269   1.333  div_Mcompar_tquotient_13_cmp_ge0001_cy<31> (div_tquotient_13_cmp_ge0001)
+     LUT3:I2->O            2   0.648   0.447  div_tremainder_0_mux00021 (div_tremainder_0_mux0002)
+     MUXCY:DI->O           1   0.787   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<1> (div_Mcompar_tquotient_13_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<2> (div_Mcompar_tquotient_13_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<3> (div_Mcompar_tquotient_13_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<4> (div_Mcompar_tquotient_13_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<5> (div_Mcompar_tquotient_13_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<6> (div_Mcompar_tquotient_13_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<7> (div_Mcompar_tquotient_13_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<8> (div_Mcompar_tquotient_13_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<9> (div_Mcompar_tquotient_13_cmp_ge0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<10> (div_Mcompar_tquotient_13_cmp_ge0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<11> (div_Mcompar_tquotient_13_cmp_ge0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<12> (div_Mcompar_tquotient_13_cmp_ge0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<13> (div_Mcompar_tquotient_13_cmp_ge0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<14> (div_Mcompar_tquotient_13_cmp_ge0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<15> (div_Mcompar_tquotient_13_cmp_ge0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<16> (div_Mcompar_tquotient_13_cmp_ge0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<17> (div_Mcompar_tquotient_13_cmp_ge0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<18> (div_Mcompar_tquotient_13_cmp_ge0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<19> (div_Mcompar_tquotient_13_cmp_ge0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<20> (div_Mcompar_tquotient_13_cmp_ge0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<21> (div_Mcompar_tquotient_13_cmp_ge0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<22> (div_Mcompar_tquotient_13_cmp_ge0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<23> (div_Mcompar_tquotient_13_cmp_ge0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<24> (div_Mcompar_tquotient_13_cmp_ge0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<25> (div_Mcompar_tquotient_13_cmp_ge0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<26> (div_Mcompar_tquotient_13_cmp_ge0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<27> (div_Mcompar_tquotient_13_cmp_ge0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<28> (div_Mcompar_tquotient_13_cmp_ge0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<29> (div_Mcompar_tquotient_13_cmp_ge0000_cy<29>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<30> (div_Mcompar_tquotient_13_cmp_ge0000_cy<30>)
+     MUXCY:CI->O         117   0.269   1.292  div_Mcompar_tquotient_13_cmp_ge0000_cy<31> (div_tquotient_13_cmp_ge0000)
+     LUT4:I3->O            5   0.648   0.636  div_tquotient_0_mux00001_1 (div_tquotient_0_mux00001)
+     LUT4:I3->O            1   0.648   0.000  div_Madd_quotient_not0000<13>11 (div_Madd_quotient_not0000<13>1)
+     MUXCY:S->O            1   0.632   0.000  div_Madd_quotient_addsub0000_cy<13> (div_Madd_quotient_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<14> (div_Madd_quotient_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<15> (div_Madd_quotient_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<16> (div_Madd_quotient_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<17> (div_Madd_quotient_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<18> (div_Madd_quotient_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<19> (div_Madd_quotient_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<20> (div_Madd_quotient_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<21> (div_Madd_quotient_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<22> (div_Madd_quotient_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<23> (div_Madd_quotient_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<24> (div_Madd_quotient_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<25> (div_Madd_quotient_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<26> (div_Madd_quotient_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<27> (div_Madd_quotient_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<28> (div_Madd_quotient_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<29> (div_Madd_quotient_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  div_Madd_quotient_addsub0000_cy<30> (div_Madd_quotient_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.423  div_Madd_quotient_addsub0000_xor<31> (div_quotient_addsub0000<31>)
+     LUT4:I3->O            1   0.648   0.000  div_Mmux_quotient_mux000150 (div_quotient_mux0001<31>)
+     FDE:D                     0.252          div_quotient_31
     ----------------------------------------
-    Total                     33.520ns (22.837ns logic, 10.683ns route)
-                                       (68.1% logic, 31.9% route)
+    Total                     33.447ns (22.832ns logic, 10.615ns route)
+                                       (68.3% logic, 31.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
-  Total number of paths / destination ports: 2857888994228 / 618
+  Total number of paths / destination ports: 2889498347252 / 553
 -------------------------------------------------------------------------
-Offset:              36.296ns (Levels of Logic = 190)
+Offset:              36.295ns (Levels of Logic = 190)
   Source:            Operand1<0> (PAD)
-  Destination:       div/quotient_31 (FF)
+  Destination:       div_quotient_31 (FF)
   Destination Clock: Clk rising
 
-  Data Path: Operand1<0> to div/quotient_31
+  Data Path: Operand1<0> to div_quotient_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            86   0.849   1.422  Operand1_0_IBUF (Operand1_0_IBUF)
-     LUT1:I0->O            1   0.648   0.000  div/Madd_cOperand1_addsub0000_cy<0>_rt (div/Madd_cOperand1_addsub0000_cy<0>_rt)
-     MUXCY:S->O            1   0.632   0.000  div/Madd_cOperand1_addsub0000_cy<0> (div/Madd_cOperand1_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<1> (div/Madd_cOperand1_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<2> (div/Madd_cOperand1_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<3> (div/Madd_cOperand1_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<4> (div/Madd_cOperand1_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<5> (div/Madd_cOperand1_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<6> (div/Madd_cOperand1_addsub0000_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<7> (div/Madd_cOperand1_addsub0000_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<8> (div/Madd_cOperand1_addsub0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<9> (div/Madd_cOperand1_addsub0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<10> (div/Madd_cOperand1_addsub0000_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<11> (div/Madd_cOperand1_addsub0000_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<12> (div/Madd_cOperand1_addsub0000_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<13> (div/Madd_cOperand1_addsub0000_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<14> (div/Madd_cOperand1_addsub0000_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<15> (div/Madd_cOperand1_addsub0000_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<16> (div/Madd_cOperand1_addsub0000_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<17> (div/Madd_cOperand1_addsub0000_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<18> (div/Madd_cOperand1_addsub0000_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<19> (div/Madd_cOperand1_addsub0000_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<20> (div/Madd_cOperand1_addsub0000_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<21> (div/Madd_cOperand1_addsub0000_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<22> (div/Madd_cOperand1_addsub0000_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<23> (div/Madd_cOperand1_addsub0000_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<24> (div/Madd_cOperand1_addsub0000_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<25> (div/Madd_cOperand1_addsub0000_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<26> (div/Madd_cOperand1_addsub0000_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<27> (div/Madd_cOperand1_addsub0000_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<28> (div/Madd_cOperand1_addsub0000_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<29> (div/Madd_cOperand1_addsub0000_cy<29>)
-     MUXCY:CI->O           0   0.065   0.000  div/Madd_cOperand1_addsub0000_cy<30> (div/Madd_cOperand1_addsub0000_cy<30>)
-     XORCY:CI->O           1   0.844   0.563  div/Madd_cOperand1_addsub0000_xor<31> (div/cOperand1_addsub0000<31>)
-     LUT3:I0->O            3   0.648   0.000  div/Mmux_cOperand1_mux0001501 (div/Mmux_cOperand1_mux0002_6)
-     MUXF5:I1->O           1   0.276   0.000  div/Mmux_cOperand1_mux0002_5_f5 (div/Mmux_cOperand1_mux0002_5_f5)
-     MUXF6:I1->O           1   0.291   0.000  div/Mmux_cOperand1_mux0002_4_f6 (div/Mmux_cOperand1_mux0002_4_f6)
-     MUXF7:I1->O           1   0.291   0.000  div/Mmux_cOperand1_mux0002_3_f7 (div/Mmux_cOperand1_mux0002_3_f7)
-     MUXF8:I1->O           5   0.291   0.713  div/Mmux_cOperand1_mux0002_2_f8 (div/cOperand1_mux0002)
-     LUT2:I1->O            1   0.643   0.000  div/Mcompar_tquotient_13_cmp_ge0003_lut<0> (div/Mcompar_tquotient_13_cmp_ge0003_lut<0>)
-     MUXCY:S->O            1   0.632   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<0> (div/Mcompar_tquotient_13_cmp_ge0003_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<1> (div/Mcompar_tquotient_13_cmp_ge0003_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<2> (div/Mcompar_tquotient_13_cmp_ge0003_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<3> (div/Mcompar_tquotient_13_cmp_ge0003_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<4> (div/Mcompar_tquotient_13_cmp_ge0003_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<5> (div/Mcompar_tquotient_13_cmp_ge0003_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<6> (div/Mcompar_tquotient_13_cmp_ge0003_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<7> (div/Mcompar_tquotient_13_cmp_ge0003_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<8> (div/Mcompar_tquotient_13_cmp_ge0003_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<9> (div/Mcompar_tquotient_13_cmp_ge0003_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<10> (div/Mcompar_tquotient_13_cmp_ge0003_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<11> (div/Mcompar_tquotient_13_cmp_ge0003_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<12> (div/Mcompar_tquotient_13_cmp_ge0003_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<13> (div/Mcompar_tquotient_13_cmp_ge0003_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<14> (div/Mcompar_tquotient_13_cmp_ge0003_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<15> (div/Mcompar_tquotient_13_cmp_ge0003_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<16> (div/Mcompar_tquotient_13_cmp_ge0003_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<17> (div/Mcompar_tquotient_13_cmp_ge0003_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<18> (div/Mcompar_tquotient_13_cmp_ge0003_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<19> (div/Mcompar_tquotient_13_cmp_ge0003_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<20> (div/Mcompar_tquotient_13_cmp_ge0003_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<21> (div/Mcompar_tquotient_13_cmp_ge0003_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<22> (div/Mcompar_tquotient_13_cmp_ge0003_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<23> (div/Mcompar_tquotient_13_cmp_ge0003_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<24> (div/Mcompar_tquotient_13_cmp_ge0003_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<25> (div/Mcompar_tquotient_13_cmp_ge0003_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<26> (div/Mcompar_tquotient_13_cmp_ge0003_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<27> (div/Mcompar_tquotient_13_cmp_ge0003_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<28> (div/Mcompar_tquotient_13_cmp_ge0003_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<29> (div/Mcompar_tquotient_13_cmp_ge0003_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0003_cy<30> (div/Mcompar_tquotient_13_cmp_ge0003_cy<30>)
-     MUXCY:CI->O         103   0.269   1.317  div/Mcompar_tquotient_13_cmp_ge0003_cy<31> (div/tquotient_13_cmp_ge0003)
-     LUT3:I2->O            3   0.648   0.531  div/tremainder_0_mux00001 (div/tremainder_0_mux0000)
-     MUXCY:DI->O           1   0.787   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<1> (div/Mcompar_tquotient_13_cmp_ge0002_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<2> (div/Mcompar_tquotient_13_cmp_ge0002_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<3> (div/Mcompar_tquotient_13_cmp_ge0002_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<4> (div/Mcompar_tquotient_13_cmp_ge0002_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<5> (div/Mcompar_tquotient_13_cmp_ge0002_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<6> (div/Mcompar_tquotient_13_cmp_ge0002_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<7> (div/Mcompar_tquotient_13_cmp_ge0002_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<8> (div/Mcompar_tquotient_13_cmp_ge0002_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<9> (div/Mcompar_tquotient_13_cmp_ge0002_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<10> (div/Mcompar_tquotient_13_cmp_ge0002_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<11> (div/Mcompar_tquotient_13_cmp_ge0002_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<12> (div/Mcompar_tquotient_13_cmp_ge0002_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<13> (div/Mcompar_tquotient_13_cmp_ge0002_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<14> (div/Mcompar_tquotient_13_cmp_ge0002_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<15> (div/Mcompar_tquotient_13_cmp_ge0002_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<16> (div/Mcompar_tquotient_13_cmp_ge0002_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<17> (div/Mcompar_tquotient_13_cmp_ge0002_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<18> (div/Mcompar_tquotient_13_cmp_ge0002_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<19> (div/Mcompar_tquotient_13_cmp_ge0002_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<20> (div/Mcompar_tquotient_13_cmp_ge0002_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<21> (div/Mcompar_tquotient_13_cmp_ge0002_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<22> (div/Mcompar_tquotient_13_cmp_ge0002_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<23> (div/Mcompar_tquotient_13_cmp_ge0002_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<24> (div/Mcompar_tquotient_13_cmp_ge0002_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<25> (div/Mcompar_tquotient_13_cmp_ge0002_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<26> (div/Mcompar_tquotient_13_cmp_ge0002_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<27> (div/Mcompar_tquotient_13_cmp_ge0002_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<28> (div/Mcompar_tquotient_13_cmp_ge0002_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<29> (div/Mcompar_tquotient_13_cmp_ge0002_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0002_cy<30> (div/Mcompar_tquotient_13_cmp_ge0002_cy<30>)
-     MUXCY:CI->O         144   0.269   1.330  div/Mcompar_tquotient_13_cmp_ge0002_cy<31> (div/tquotient_13_cmp_ge0002)
-     LUT3:I2->O            3   0.648   0.531  div/tremainder_0_mux00011 (div/tremainder_0_mux0001)
-     MUXCY:DI->O           1   0.787   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<1> (div/Mcompar_tquotient_13_cmp_ge0001_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<2> (div/Mcompar_tquotient_13_cmp_ge0001_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<3> (div/Mcompar_tquotient_13_cmp_ge0001_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<4> (div/Mcompar_tquotient_13_cmp_ge0001_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<5> (div/Mcompar_tquotient_13_cmp_ge0001_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<6> (div/Mcompar_tquotient_13_cmp_ge0001_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<7> (div/Mcompar_tquotient_13_cmp_ge0001_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<8> (div/Mcompar_tquotient_13_cmp_ge0001_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<9> (div/Mcompar_tquotient_13_cmp_ge0001_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<10> (div/Mcompar_tquotient_13_cmp_ge0001_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<11> (div/Mcompar_tquotient_13_cmp_ge0001_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<12> (div/Mcompar_tquotient_13_cmp_ge0001_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<13> (div/Mcompar_tquotient_13_cmp_ge0001_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<14> (div/Mcompar_tquotient_13_cmp_ge0001_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<15> (div/Mcompar_tquotient_13_cmp_ge0001_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<16> (div/Mcompar_tquotient_13_cmp_ge0001_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<17> (div/Mcompar_tquotient_13_cmp_ge0001_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<18> (div/Mcompar_tquotient_13_cmp_ge0001_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<19> (div/Mcompar_tquotient_13_cmp_ge0001_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<20> (div/Mcompar_tquotient_13_cmp_ge0001_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<21> (div/Mcompar_tquotient_13_cmp_ge0001_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<22> (div/Mcompar_tquotient_13_cmp_ge0001_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<23> (div/Mcompar_tquotient_13_cmp_ge0001_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<24> (div/Mcompar_tquotient_13_cmp_ge0001_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<25> (div/Mcompar_tquotient_13_cmp_ge0001_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<26> (div/Mcompar_tquotient_13_cmp_ge0001_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<27> (div/Mcompar_tquotient_13_cmp_ge0001_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<28> (div/Mcompar_tquotient_13_cmp_ge0001_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<29> (div/Mcompar_tquotient_13_cmp_ge0001_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0001_cy<30> (div/Mcompar_tquotient_13_cmp_ge0001_cy<30>)
-     MUXCY:CI->O         156   0.269   1.333  div/Mcompar_tquotient_13_cmp_ge0001_cy<31> (div/tquotient_13_cmp_ge0001)
-     LUT3:I2->O            2   0.648   0.447  div/tremainder_0_mux00021 (div/tremainder_0_mux0002)
-     MUXCY:DI->O           1   0.787   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<1> (div/Mcompar_tquotient_13_cmp_ge0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<2> (div/Mcompar_tquotient_13_cmp_ge0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<3> (div/Mcompar_tquotient_13_cmp_ge0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<4> (div/Mcompar_tquotient_13_cmp_ge0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<5> (div/Mcompar_tquotient_13_cmp_ge0000_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<6> (div/Mcompar_tquotient_13_cmp_ge0000_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<7> (div/Mcompar_tquotient_13_cmp_ge0000_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<8> (div/Mcompar_tquotient_13_cmp_ge0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<9> (div/Mcompar_tquotient_13_cmp_ge0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<10> (div/Mcompar_tquotient_13_cmp_ge0000_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<11> (div/Mcompar_tquotient_13_cmp_ge0000_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<12> (div/Mcompar_tquotient_13_cmp_ge0000_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<13> (div/Mcompar_tquotient_13_cmp_ge0000_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<14> (div/Mcompar_tquotient_13_cmp_ge0000_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<15> (div/Mcompar_tquotient_13_cmp_ge0000_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<16> (div/Mcompar_tquotient_13_cmp_ge0000_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<17> (div/Mcompar_tquotient_13_cmp_ge0000_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<18> (div/Mcompar_tquotient_13_cmp_ge0000_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<19> (div/Mcompar_tquotient_13_cmp_ge0000_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<20> (div/Mcompar_tquotient_13_cmp_ge0000_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<21> (div/Mcompar_tquotient_13_cmp_ge0000_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<22> (div/Mcompar_tquotient_13_cmp_ge0000_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<23> (div/Mcompar_tquotient_13_cmp_ge0000_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<24> (div/Mcompar_tquotient_13_cmp_ge0000_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<25> (div/Mcompar_tquotient_13_cmp_ge0000_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<26> (div/Mcompar_tquotient_13_cmp_ge0000_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<27> (div/Mcompar_tquotient_13_cmp_ge0000_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<28> (div/Mcompar_tquotient_13_cmp_ge0000_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<29> (div/Mcompar_tquotient_13_cmp_ge0000_cy<29>)
-     MUXCY:CI->O           1   0.065   0.000  div/Mcompar_tquotient_13_cmp_ge0000_cy<30> (div/Mcompar_tquotient_13_cmp_ge0000_cy<30>)
-     MUXCY:CI->O         118   0.269   1.292  div/Mcompar_tquotient_13_cmp_ge0000_cy<31> (div/tquotient_13_cmp_ge0000)
-     LUT4:I3->O            5   0.648   0.636  div/tquotient_0_mux000011_1 (div/tquotient_0_mux000011)
-     LUT4:I3->O            1   0.648   0.000  div/Madd_quotient_not0000<13>11 (div/Madd_quotient_not0000<13>1)
-     MUXCY:S->O            1   0.632   0.000  div/Madd_quotient_addsub0000_cy<13> (div/Madd_quotient_addsub0000_cy<13>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<14> (div/Madd_quotient_addsub0000_cy<14>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<15> (div/Madd_quotient_addsub0000_cy<15>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<16> (div/Madd_quotient_addsub0000_cy<16>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<17> (div/Madd_quotient_addsub0000_cy<17>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<18> (div/Madd_quotient_addsub0000_cy<18>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<19> (div/Madd_quotient_addsub0000_cy<19>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<20> (div/Madd_quotient_addsub0000_cy<20>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<21> (div/Madd_quotient_addsub0000_cy<21>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<22> (div/Madd_quotient_addsub0000_cy<22>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<23> (div/Madd_quotient_addsub0000_cy<23>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<24> (div/Madd_quotient_addsub0000_cy<24>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<25> (div/Madd_quotient_addsub0000_cy<25>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<26> (div/Madd_quotient_addsub0000_cy<26>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<27> (div/Madd_quotient_addsub0000_cy<27>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<28> (div/Madd_quotient_addsub0000_cy<28>)
-     MUXCY:CI->O           1   0.065   0.000  div/Madd_quotient_addsub0000_cy<29> (div/Madd_quotient_addsub0000_cy<29>)
-     MUXCY:CI->O           0   0.065   0.000  div/Madd_quotient_addsub0000_cy<30> (div/Madd_quotient_addsub0000_cy<30>)
-     XORCY:CI->O           1   0.844   0.423  div/Madd_quotient_addsub0000_xor<31> (div/quotient_addsub0000<31>)
-     LUT4:I3->O            1   0.648   0.000  div/Mmux_quotient_mux000150 (div/quotient_mux0001<31>)
-     FDE:D                     0.252          div/quotient_31
+     IBUF:I->O            92   0.849   1.424  Operand1_0_IBUF (Operand1_0_IBUF)
+     LUT1:I0->O            1   0.648   0.000  div_Madd_cOperand1_addsub0000_cy<0>_rt (div_Madd_cOperand1_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.632   0.000  div_Madd_cOperand1_addsub0000_cy<0> (div_Madd_cOperand1_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<1> (div_Madd_cOperand1_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<2> (div_Madd_cOperand1_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<3> (div_Madd_cOperand1_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<4> (div_Madd_cOperand1_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<5> (div_Madd_cOperand1_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<6> (div_Madd_cOperand1_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<7> (div_Madd_cOperand1_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<8> (div_Madd_cOperand1_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<9> (div_Madd_cOperand1_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<10> (div_Madd_cOperand1_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<11> (div_Madd_cOperand1_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<12> (div_Madd_cOperand1_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<13> (div_Madd_cOperand1_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<14> (div_Madd_cOperand1_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<15> (div_Madd_cOperand1_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<16> (div_Madd_cOperand1_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<17> (div_Madd_cOperand1_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<18> (div_Madd_cOperand1_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<19> (div_Madd_cOperand1_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<20> (div_Madd_cOperand1_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<21> (div_Madd_cOperand1_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<22> (div_Madd_cOperand1_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<23> (div_Madd_cOperand1_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<24> (div_Madd_cOperand1_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<25> (div_Madd_cOperand1_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<26> (div_Madd_cOperand1_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<27> (div_Madd_cOperand1_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<28> (div_Madd_cOperand1_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<29> (div_Madd_cOperand1_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  div_Madd_cOperand1_addsub0000_cy<30> (div_Madd_cOperand1_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.563  div_Madd_cOperand1_addsub0000_xor<31> (div_cOperand1_addsub0000<31>)
+     LUT3:I0->O            3   0.648   0.000  div_Mmux_cOperand1_mux0001501 (div_Mmux_cOperand1_mux0002_6)
+     MUXF5:I1->O           1   0.276   0.000  div_Mmux_cOperand1_mux0002_5_f5 (div_Mmux_cOperand1_mux0002_5_f5)
+     MUXF6:I1->O           1   0.291   0.000  div_Mmux_cOperand1_mux0002_4_f6 (div_Mmux_cOperand1_mux0002_4_f6)
+     MUXF7:I1->O           1   0.291   0.000  div_Mmux_cOperand1_mux0002_3_f7 (div_Mmux_cOperand1_mux0002_3_f7)
+     MUXF8:I1->O           5   0.291   0.713  div_Mmux_cOperand1_mux0002_2_f8 (div_cOperand1_mux0002)
+     LUT2:I1->O            1   0.643   0.000  div_Mcompar_tquotient_13_cmp_ge0003_lut<0> (div_Mcompar_tquotient_13_cmp_ge0003_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<0> (div_Mcompar_tquotient_13_cmp_ge0003_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<1> (div_Mcompar_tquotient_13_cmp_ge0003_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<2> (div_Mcompar_tquotient_13_cmp_ge0003_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<3> (div_Mcompar_tquotient_13_cmp_ge0003_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<4> (div_Mcompar_tquotient_13_cmp_ge0003_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<5> (div_Mcompar_tquotient_13_cmp_ge0003_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<6> (div_Mcompar_tquotient_13_cmp_ge0003_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<7> (div_Mcompar_tquotient_13_cmp_ge0003_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<8> (div_Mcompar_tquotient_13_cmp_ge0003_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<9> (div_Mcompar_tquotient_13_cmp_ge0003_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<10> (div_Mcompar_tquotient_13_cmp_ge0003_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<11> (div_Mcompar_tquotient_13_cmp_ge0003_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<12> (div_Mcompar_tquotient_13_cmp_ge0003_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<13> (div_Mcompar_tquotient_13_cmp_ge0003_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<14> (div_Mcompar_tquotient_13_cmp_ge0003_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<15> (div_Mcompar_tquotient_13_cmp_ge0003_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<16> (div_Mcompar_tquotient_13_cmp_ge0003_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<17> (div_Mcompar_tquotient_13_cmp_ge0003_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<18> (div_Mcompar_tquotient_13_cmp_ge0003_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<19> (div_Mcompar_tquotient_13_cmp_ge0003_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<20> (div_Mcompar_tquotient_13_cmp_ge0003_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<21> (div_Mcompar_tquotient_13_cmp_ge0003_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<22> (div_Mcompar_tquotient_13_cmp_ge0003_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<23> (div_Mcompar_tquotient_13_cmp_ge0003_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<24> (div_Mcompar_tquotient_13_cmp_ge0003_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<25> (div_Mcompar_tquotient_13_cmp_ge0003_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<26> (div_Mcompar_tquotient_13_cmp_ge0003_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<27> (div_Mcompar_tquotient_13_cmp_ge0003_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<28> (div_Mcompar_tquotient_13_cmp_ge0003_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<29> (div_Mcompar_tquotient_13_cmp_ge0003_cy<29>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0003_cy<30> (div_Mcompar_tquotient_13_cmp_ge0003_cy<30>)
+     MUXCY:CI->O         103   0.269   1.317  div_Mcompar_tquotient_13_cmp_ge0003_cy<31> (div_tquotient_13_cmp_ge0003)
+     LUT3:I2->O            3   0.648   0.531  div_tremainder_0_mux00001 (div_tremainder_0_mux0000)
+     MUXCY:DI->O           1   0.787   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<1> (div_Mcompar_tquotient_13_cmp_ge0002_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<2> (div_Mcompar_tquotient_13_cmp_ge0002_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<3> (div_Mcompar_tquotient_13_cmp_ge0002_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<4> (div_Mcompar_tquotient_13_cmp_ge0002_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<5> (div_Mcompar_tquotient_13_cmp_ge0002_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<6> (div_Mcompar_tquotient_13_cmp_ge0002_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<7> (div_Mcompar_tquotient_13_cmp_ge0002_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<8> (div_Mcompar_tquotient_13_cmp_ge0002_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<9> (div_Mcompar_tquotient_13_cmp_ge0002_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<10> (div_Mcompar_tquotient_13_cmp_ge0002_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<11> (div_Mcompar_tquotient_13_cmp_ge0002_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<12> (div_Mcompar_tquotient_13_cmp_ge0002_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<13> (div_Mcompar_tquotient_13_cmp_ge0002_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<14> (div_Mcompar_tquotient_13_cmp_ge0002_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<15> (div_Mcompar_tquotient_13_cmp_ge0002_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<16> (div_Mcompar_tquotient_13_cmp_ge0002_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<17> (div_Mcompar_tquotient_13_cmp_ge0002_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<18> (div_Mcompar_tquotient_13_cmp_ge0002_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<19> (div_Mcompar_tquotient_13_cmp_ge0002_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<20> (div_Mcompar_tquotient_13_cmp_ge0002_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<21> (div_Mcompar_tquotient_13_cmp_ge0002_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<22> (div_Mcompar_tquotient_13_cmp_ge0002_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<23> (div_Mcompar_tquotient_13_cmp_ge0002_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<24> (div_Mcompar_tquotient_13_cmp_ge0002_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<25> (div_Mcompar_tquotient_13_cmp_ge0002_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<26> (div_Mcompar_tquotient_13_cmp_ge0002_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<27> (div_Mcompar_tquotient_13_cmp_ge0002_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<28> (div_Mcompar_tquotient_13_cmp_ge0002_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<29> (div_Mcompar_tquotient_13_cmp_ge0002_cy<29>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0002_cy<30> (div_Mcompar_tquotient_13_cmp_ge0002_cy<30>)
+     MUXCY:CI->O         135   0.269   1.327  div_Mcompar_tquotient_13_cmp_ge0002_cy<31> (div_tquotient_13_cmp_ge0002)
+     LUT3:I2->O            3   0.648   0.531  div_tremainder_0_mux00011 (div_tremainder_0_mux0001)
+     MUXCY:DI->O           1   0.787   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<1> (div_Mcompar_tquotient_13_cmp_ge0001_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<2> (div_Mcompar_tquotient_13_cmp_ge0001_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<3> (div_Mcompar_tquotient_13_cmp_ge0001_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<4> (div_Mcompar_tquotient_13_cmp_ge0001_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<5> (div_Mcompar_tquotient_13_cmp_ge0001_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<6> (div_Mcompar_tquotient_13_cmp_ge0001_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<7> (div_Mcompar_tquotient_13_cmp_ge0001_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<8> (div_Mcompar_tquotient_13_cmp_ge0001_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<9> (div_Mcompar_tquotient_13_cmp_ge0001_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<10> (div_Mcompar_tquotient_13_cmp_ge0001_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<11> (div_Mcompar_tquotient_13_cmp_ge0001_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<12> (div_Mcompar_tquotient_13_cmp_ge0001_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<13> (div_Mcompar_tquotient_13_cmp_ge0001_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<14> (div_Mcompar_tquotient_13_cmp_ge0001_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<15> (div_Mcompar_tquotient_13_cmp_ge0001_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<16> (div_Mcompar_tquotient_13_cmp_ge0001_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<17> (div_Mcompar_tquotient_13_cmp_ge0001_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<18> (div_Mcompar_tquotient_13_cmp_ge0001_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<19> (div_Mcompar_tquotient_13_cmp_ge0001_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<20> (div_Mcompar_tquotient_13_cmp_ge0001_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<21> (div_Mcompar_tquotient_13_cmp_ge0001_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<22> (div_Mcompar_tquotient_13_cmp_ge0001_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<23> (div_Mcompar_tquotient_13_cmp_ge0001_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<24> (div_Mcompar_tquotient_13_cmp_ge0001_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<25> (div_Mcompar_tquotient_13_cmp_ge0001_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<26> (div_Mcompar_tquotient_13_cmp_ge0001_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<27> (div_Mcompar_tquotient_13_cmp_ge0001_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<28> (div_Mcompar_tquotient_13_cmp_ge0001_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<29> (div_Mcompar_tquotient_13_cmp_ge0001_cy<29>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0001_cy<30> (div_Mcompar_tquotient_13_cmp_ge0001_cy<30>)
+     MUXCY:CI->O         155   0.269   1.333  div_Mcompar_tquotient_13_cmp_ge0001_cy<31> (div_tquotient_13_cmp_ge0001)
+     LUT3:I2->O            2   0.648   0.447  div_tremainder_0_mux00021 (div_tremainder_0_mux0002)
+     MUXCY:DI->O           1   0.787   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<1> (div_Mcompar_tquotient_13_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<2> (div_Mcompar_tquotient_13_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<3> (div_Mcompar_tquotient_13_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<4> (div_Mcompar_tquotient_13_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<5> (div_Mcompar_tquotient_13_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<6> (div_Mcompar_tquotient_13_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<7> (div_Mcompar_tquotient_13_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<8> (div_Mcompar_tquotient_13_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<9> (div_Mcompar_tquotient_13_cmp_ge0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<10> (div_Mcompar_tquotient_13_cmp_ge0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<11> (div_Mcompar_tquotient_13_cmp_ge0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<12> (div_Mcompar_tquotient_13_cmp_ge0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<13> (div_Mcompar_tquotient_13_cmp_ge0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<14> (div_Mcompar_tquotient_13_cmp_ge0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<15> (div_Mcompar_tquotient_13_cmp_ge0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<16> (div_Mcompar_tquotient_13_cmp_ge0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<17> (div_Mcompar_tquotient_13_cmp_ge0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<18> (div_Mcompar_tquotient_13_cmp_ge0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<19> (div_Mcompar_tquotient_13_cmp_ge0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<20> (div_Mcompar_tquotient_13_cmp_ge0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<21> (div_Mcompar_tquotient_13_cmp_ge0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<22> (div_Mcompar_tquotient_13_cmp_ge0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<23> (div_Mcompar_tquotient_13_cmp_ge0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<24> (div_Mcompar_tquotient_13_cmp_ge0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<25> (div_Mcompar_tquotient_13_cmp_ge0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<26> (div_Mcompar_tquotient_13_cmp_ge0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<27> (div_Mcompar_tquotient_13_cmp_ge0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<28> (div_Mcompar_tquotient_13_cmp_ge0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<29> (div_Mcompar_tquotient_13_cmp_ge0000_cy<29>)
+     MUXCY:CI->O           1   0.065   0.000  div_Mcompar_tquotient_13_cmp_ge0000_cy<30> (div_Mcompar_tquotient_13_cmp_ge0000_cy<30>)
+     MUXCY:CI->O         117   0.269   1.292  div_Mcompar_tquotient_13_cmp_ge0000_cy<31> (div_tquotient_13_cmp_ge0000)
+     LUT4:I3->O            5   0.648   0.636  div_tquotient_0_mux00001_1 (div_tquotient_0_mux00001)
+     LUT4:I3->O            1   0.648   0.000  div_Madd_quotient_not0000<13>11 (div_Madd_quotient_not0000<13>1)
+     MUXCY:S->O            1   0.632   0.000  div_Madd_quotient_addsub0000_cy<13> (div_Madd_quotient_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<14> (div_Madd_quotient_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<15> (div_Madd_quotient_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<16> (div_Madd_quotient_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<17> (div_Madd_quotient_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<18> (div_Madd_quotient_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<19> (div_Madd_quotient_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<20> (div_Madd_quotient_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<21> (div_Madd_quotient_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<22> (div_Madd_quotient_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<23> (div_Madd_quotient_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<24> (div_Madd_quotient_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<25> (div_Madd_quotient_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<26> (div_Madd_quotient_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<27> (div_Madd_quotient_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<28> (div_Madd_quotient_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  div_Madd_quotient_addsub0000_cy<29> (div_Madd_quotient_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  div_Madd_quotient_addsub0000_cy<30> (div_Madd_quotient_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.423  div_Madd_quotient_addsub0000_xor<31> (div_quotient_addsub0000<31>)
+     LUT4:I3->O            1   0.648   0.000  div_Mmux_quotient_mux000150 (div_quotient_mux0001<31>)
+     FDE:D                     0.252          div_quotient_31
     ----------------------------------------
-    Total                     36.296ns (25.758ns logic, 10.538ns route)
+    Total                     36.295ns (25.758ns logic, 10.537ns route)
                                        (71.0% logic, 29.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
   Total number of paths / destination ports: 66 / 66
 -------------------------------------------------------------------------
-Offset:              5.558ns (Levels of Logic = 1)
-  Source:            Result1_31 (FF)
-  Destination:       Result1<31> (PAD)
+Offset:              6.111ns (Levels of Logic = 1)
+  Source:            Result1_0 (FF)
+  Destination:       Result1<0> (PAD)
   Source Clock:      Clk rising
 
-  Data Path: Result1_31 to Result1<31>
+  Data Path: Result1_0 to Result1<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRS:C->Q             2   0.591   0.447  Result1_31 (Result1_31)
-     OBUF:I->O                 4.520          Result1_31_OBUF (Result1<31>)
+     FDS:C->Q             14   0.591   1.000  Result1_0 (Result1_0)
+     OBUF:I->O                 4.520          Result1_0_OBUF (Result1<0>)
     ----------------------------------------
-    Total                      5.558ns (5.111ns logic, 0.447ns route)
-                                       (92.0% logic, 8.0% route)
+    Total                      6.111ns (5.111ns logic, 1.000ns route)
+                                       (83.6% logic, 16.4% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 42.00 secs
-Total CPU time to Xst completion: 42.03 secs
+Total REAL time to Xst completion: 131.00 secs
+Total CPU time to Xst completion: 131.14 secs
  
 --> 
 
-Total memory usage is 353992 kilobytes
+Total memory usage is 337960 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   40 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   37 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

@@ -43,7 +43,9 @@ entity decode is
 			WaitFor : out std_logic_vector (3 downto 0);
 			registerOut : out std_logic_vector(31 downto 0);
 			lreg: out std_logic_vector(31 downto 0);
-			lregAddr : out std_logic_vector(4 downto 0));
+			lregAddr : out std_logic_vector(4 downto 0)
+			--jAddr : out std_logic_vector(31 downto 0)
+			);
 
 end decode;
 
@@ -75,8 +77,6 @@ begin
 			lregAddr <= WriteAddr;
 		else
 		
-		
-			
 			opcode := currentInstruction(31 downto 26);
 			ControlSignals <= (others => '0');
 			registerOut <= (others => '0');
@@ -151,6 +151,36 @@ begin
 				ControlSignals <= b"01000";
 				RegWBAddr <= currentInstruction(20 downto 16);
 				
+			elsif opcode = b"000010" then
+			-- J 
+			-- ControlSignals
+			-- 0 => Branch
+			-- 1 => MemRead
+			-- 2 => MemWrite
+			-- 3 => RegWrite
+			-- 4 => MemToReg
+			-- MemWrite => 1	
+			--	jAddr <= b"0000" & CurrentInstruction(25 downto 0) & b"00";
+				ControlSignals <= b"00001";
+			
+			elsif opcode = b"000100" then
+			-- BEQ	
+			-- Jump to offset from 15 to 0
+			--	jAddr <= x"000" & b"00" & CurrentInstruction(15 downto 0) & b"00";
+			-- ALU performs equality comparison/
+			-- RS sent as OP1	
+				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+			-- RT sent as OP2	
+				AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
+			-- send equality test to aluControl	
+				AluControl <= b"000100";
+			-- ControlSignals
+			-- 0 => Branch
+			-- 1 => MemRead
+			-- 2 => MemWrite
+			-- 3 => RegWrite
+			-- 4 => MemToReg
+				ControlSignals <= b"00001";
 			end if;
 		end if;
 	end if;
