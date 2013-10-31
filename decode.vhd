@@ -151,6 +151,17 @@ begin
 				ControlSignals <= b"01000";
 				RegWBAddr <= currentInstruction(20 downto 16);
 				
+			elsif opcode = b"001101" then
+			-- ORI
+			-- Offset padded with 16 0's
+				AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
+			-- OP1 given RS	
+				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+				AluControl <= b"100101";
+						-- all R type instructions just Write to registers. assert RegWrite	
+				ControlSignals <= "01000";
+				RegWBAddr <= currentInstruction(20 downto 16);
+				
 			elsif opcode = b"000010" then
 			-- J 
 			-- ControlSignals

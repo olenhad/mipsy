@@ -1,11 +1,13 @@
 .data 
-val1: .word 10
+val1: .word 0xFFF00000
 val2: .word 12
 .text
 #lw test
 main:
 
-lui $t1, 1
+lw $t1, val1
+ori $t3, $t1, 0xF0F0
+
 lui $t2, 1
 #beq $t1, $t2, main
 beq $t1,$t2, main
