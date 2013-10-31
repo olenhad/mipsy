@@ -206,24 +206,23 @@ begin
 				currentIns := rom_DATA;
 				DCurrentIns <= currentIns;
 				DCPUState <= (others => '0');
-				
-				pc := std_logic_vector(unsigned(pc) + 4);
-
-				
 
 				-- Check if instruction is a jump
 				if currentIns(31 downto 26) = b"000010" then
 					pc := b"0000" & CurrentIns(25 downto 0) & b"00";
 					currentState := FetchDecode;
-					rom_ADDR <= pc;
+					
 				else
+					pc := std_logic_vector(unsigned(pc) + 4);
 					-- feed cur Ins to decode. decode will give alu appropriate operands by nnext clk cycle
-					rom_ADDR <= pc;
+					
 					decode_currentInstruction <= currentIns;	
 				
 					currentState := Execute;
 				end if;
 				
+				DMeMOut <= pc;
+				rom_ADDR <= pc;
 					
 			elsif currentState = Execute then
 				

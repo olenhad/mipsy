@@ -55,10 +55,10 @@ architecture Behavioral of rom is
 signal rom_data : RomData := RomDefault;
 
 begin
-	data <= (rom_data(to_integer(unsigned(addr(7 downto 0)) + 3))) & 
-			  (rom_data(to_integer(unsigned(addr(7 downto 0)) + 2))) & 
-			  (rom_data(to_integer(unsigned(addr(7 downto 0)) + 1))) & 
-			  (rom_data(to_integer(unsigned(addr(7 downto 0))))) when en ='1' else 
+	data <= (rom_data(to_integer(unsigned(addr(19 downto 0)) + 3))) & 
+			  (rom_data(to_integer(unsigned(addr(19 downto 0)) + 2))) & 
+			  (rom_data(to_integer(unsigned(addr(19 downto 0)) + 1))) & 
+			  (rom_data(to_integer(unsigned(addr(19 downto 0))))) when en ='1' else 
 			  (others => '0');
 
 end Behavioral;

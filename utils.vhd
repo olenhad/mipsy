@@ -29,8 +29,8 @@ package utils is
 	
 	constant RomDefault : RomData := (x"0b", x"00", x"10", x"08", x"01", x"00", x"09", x"3c", x"01", x"00", x"0a", x"3c", x"05", x"00", x"0a", x"3c", 
 x"06", x"00", x"0c", x"3c", x"01", x"10", x"01", x"3c", x"00", x"00", x"29", x"8c", x"01", x"10", x"01", x"3c", 
-x"04", x"00", x"2a", x"8c", x"20", x"58", x"49", x"01", x"22", x"60", x"69", x"01", x"01", x"10", x"01", x"3c", 
-x"00", x"00", x"2c", x"ac", others => (others => '0'));
+x"04", x"00", x"2a", x"8c", x"20", x"58", x"49", x"01", x"22", x"60", x"69", x"01", x"03", x"00", x"10", x"08", 
+x"01", x"10", x"01", x"3c", x"00", x"00", x"2c", x"ac", others => (others => '0'));
 
 	constant RamDefault : RamData := (
 	x"0a", x"00", x"00", x"00", x"0c", others => (others => '0'));

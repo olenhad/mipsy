@@ -9,6 +9,8 @@ lui $t1, 1
 lui $t2, 1
 #beq $t1,$t2, jtest
 
+jtest2:
+
 lui $t2, 5
 lui $t4, 6
 
@@ -23,6 +25,7 @@ add $t3, $t2, $t1
 sub $t4, $t3, $t1
 #t4 = 0x00014
 jtest:
+j jtest2 
 sw $t4, val1
 
 
