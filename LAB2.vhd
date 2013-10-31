@@ -103,7 +103,9 @@ component cpu is
 --			  DAlu1 : out std_logic_vector(31 downto 0);
 --			  DAlu2 : out std_logic_vector(31 downto 0);
 --			  DAluR1 : out std_logic_vector(31 downto 0);
-			  DRegOutAddr : out std_logic_vector(4 downto 0) );
+			  DRegOutAddr : out std_logic_vector(4 downto 0); 
+			  DOutput : out std_logic_vector(31 downto 0)
+			  );
 end component;
 
 begin
@@ -147,11 +149,12 @@ PORT MAP (
 --	Debug			=>  Debug
 --);
 
-Result2 <=  x"000000" & b"000" & paddedRegAddr;
+Debug <=  x"000000" & b"000" & paddedRegAddr;
 cpu0 : cpu
 	PORT MAP (
 		CLK => CLK,
-		DRegOut => Result1,
+		DOutput => Result1,
+		DRegOut => Result2,
 		DRegOutAddr => paddedRegAddr
 		);
 	

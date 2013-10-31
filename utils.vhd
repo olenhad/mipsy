@@ -18,7 +18,7 @@ use IEEE.NUMERIC_STD.ALL;
 package utils is
 
 	type RomData is array(0 to 255) of std_logic_vector(7 downto 0);
-	type RamData is array(0 to 64) of std_logic_vector(7 downto 0);
+	type RamData is array(0 to 63) of std_logic_vector(7 downto 0);
 	type RegisterSet is array (31 downto 0) of std_logic_vector(31 downto 0);
 	type CodeAddress is array (8 downto 0) of std_logic;
 	type CodeInstruction is array (31 downto 0) of std_logic;
@@ -28,7 +28,7 @@ package utils is
 --	impure function read_ram_from_file ( ram_file_name : in string) return RamData;
 	
 	constant RomDefault : RomData := (x"01", x"10", x"01", x"3c", x"00", x"00", x"29", x"8c", x"01", x"10", x"01", x"3c", x"04", x"00", x"2a", x"8c", 
-x"20", x"58", x"49", x"01", x"05", x"00", x"10", x"08",others => (others => '0'));
+x"20", x"58", x"49", x"01", x"01", x"10", x"01", x"3c", x"3c", x"00", x"2b", x"ac", x"07", x"00", x"10", x"08", others => (others => '0'));
 
 	constant RamDefault : RamData := (
 	x"0a", x"00", x"00", x"00", x"0c", others => (others => '0'));

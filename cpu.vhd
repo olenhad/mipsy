@@ -36,6 +36,7 @@ entity cpu is
 --	        DRegAddr : in std_logic_vector(4 downto 0);
 --			  DMemAddr : out std_logic_vector(31 downto 0);
 			  DRegOut : out std_logic_vector(31 downto 0);
+			  DOutput : out std_logic_vector(31 downto 0);
 --			  DMemOut : out std_logic_vector(31 downto 0);
 			  DCPUState : out std_logic_vector(31 downto 0);
 --			  DCurrentIns : out std_logic_vector(31 downto 0);
@@ -341,6 +342,8 @@ rom_ADDR <= pc;
 end process;
 
 DRegOut <= decode_lreg;
+
+DOutput <= RAM(63) & RAM(62) & RAM(61) & RAM(60);
 
 alu_op1 <= decode_AluOP1;
 alu_op2 <= decode_AluOP2;

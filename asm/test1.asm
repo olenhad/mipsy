@@ -5,9 +5,12 @@ val2: .word 12
 #lw test
 main:
 
+lw $t3, val2
+lui $1, 0x1001
+sw $t3, 60($1)
+
 lw $t1, val1
 ori $t3, $t1, 0xF0F0
-
 lui $t2, 1
 #beq $t1, $t2, main
 beq $t1,$t2, main

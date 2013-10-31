@@ -11,7 +11,7 @@ ERROR:Security:14 - No feature was available for 'ISIM'.
 
 No such feature exists.
 Feature:       ISIM
-License path:  C:/.Xilinx\Xilinx.lic;C:\Xilinx\13.2\ISE_DS\ISE\/data\*.lic;C:\Xilinx\13.2\ISE_DS\ISE\/coregen/core_licenses\Xilinx.lic;C:\Xilinx\13.2\ISE_DS\ISE\/coregen/core_licenses\XilinxFree.lic;C:\Xilinx\13.2\ISE_DS\EDK/data/core_licenses\Xilinx.lic;
+License path:  C:/.Xilinx\Xilinx (1).lic;C:/.Xilinx\Xilinx.lic;C:\Xilinx\13.2\ISE_DS\ISE\/data\*.lic;C:\Xilinx\13.2\ISE_DS\ISE\/coregen/core_licenses\Xilinx.lic;C:\Xilinx\13.2\ISE_DS\ISE\/coregen/core_licenses\XilinxFree.lic;C:\Xilinx\13.2\ISE_DS\EDK/data/core_licenses\Xilinx.lic;
 FLEXnet Licensing error:-5,357
 For further information, refer to the FLEXnet Licensing documentation,
 available at "www.acresso.com".
@@ -25,5 +25,4 @@ Time resolution is 1 ps
 # run 400 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 1.00us
 # run 1.00us
