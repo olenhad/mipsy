@@ -2,6 +2,7 @@ set -tmpdir "xst/projnav.tmp"
 set -xsthdpdir "xst"
 run
 -ifn LAB2.prj
+-loop_iteration_limit 2048
 -ifmt mixed
 -ofn LAB2
 -ofmt NGC
@@ -17,7 +18,7 @@ run
 -read_cores YES
 -write_timing_constraints NO
 -cross_clock_analysis NO
--hierarchy_separator /
+-hierarchy_separator _
 -bus_delimiter <>
 -case Maintain
 -slice_utilization_ratio 100

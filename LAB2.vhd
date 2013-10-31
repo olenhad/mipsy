@@ -48,6 +48,7 @@ architecture Structural of LAB2 is
 
 	signal PushButtons	: STD_LOGIC_VECTOR(2 DOWNTO 0);
 	signal LEDs			: STD_LOGIC_VECTOR(2 DOWNTO 0);
+	signal paddedRegAddr : STD_LOGIC_VECTOR(4 DOWNTO 0);
 
 ------------------------------------------------------------------------------
 -- Component Definition for UART Interfacing Unit 
@@ -90,6 +91,21 @@ PORT (
 );
 END COMPONENT;
 
+component cpu is
+    Port ( CLK : in  STD_LOGIC;
+--			  DHalt : in std_logic;
+--	        DRegAddr : in std_logic_vector(4 downto 0);
+--			  DMemAddr : out std_logic_vector(31 downto 0);
+			  DRegOut : out std_logic_vector(31 downto 0);
+--			  DMemOut : out std_logic_vector(31 downto 0);
+			  DCPUState : out std_logic_vector(31 downto 0);
+--			  DCurrentIns : out std_logic_vector(31 downto 0);
+--			  DAlu1 : out std_logic_vector(31 downto 0);
+--			  DAlu2 : out std_logic_vector(31 downto 0);
+--			  DAluR1 : out std_logic_vector(31 downto 0);
+			  DRegOutAddr : out std_logic_vector(4 downto 0) );
+end component;
+
 begin
 
 ------------------------------------------------------------------------------
@@ -120,16 +136,25 @@ PORT MAP (
 ------------------------------------------------------------------------------
 -- Instantiating ALU 
 ------------------------------------------------------------------------------
-alu0 : alu
-PORT MAP (
-	Clk				=>	Clk,
-	Control			=>  Control,
-	Operand1		=>  Operand1,
-	Operand2		=>  Operand2,
-	Result1			=>  Result1,
-	Result2			=>  Result2,
-	Debug			=>  Debug
-);
+--alu0 : alu
+--PORT MAP (
+--	Clk				=>	Clk,
+--	Control			=>  Control,
+--	Operand1		=>  Operand1,
+--	Operand2		=>  Operand2,
+--	Result1			=>  Result1,
+--	Result2			=>  Result2,
+--	Debug			=>  Debug
+--);
+
+Result2 <=  x"000000" & b"000" & paddedRegAddr;
+cpu0 : cpu
+	PORT MAP (
+		CLK => CLK,
+		DRegOut => Result1,
+		DRegOutAddr => paddedRegAddr
+		);
+	
 
 ---------------------------------------
 -- Connecting Input Buttons and LEDs --

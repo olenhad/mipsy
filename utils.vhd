@@ -27,14 +27,11 @@ package utils is
 	impure function read_rom_from_file ( rom_file_name : in string) return RomData;
 --	impure function read_ram_from_file ( ram_file_name : in string) return RamData;
 	
-	constant RomDefault : RomData := (x"01", x"10", x"01", x"3c", x"00", x"00", x"29", x"8c", x"f0", x"f0", x"2b", x"35", x"01", x"00", x"0a", x"3c", 
-x"fb", x"ff", x"2a", x"11", x"05", x"00", x"0a", x"3c", x"06", x"00", x"0c", x"3c", x"01", x"10", x"01", x"3c", 
-x"00", x"00", x"29", x"8c", x"01", x"10", x"01", x"3c", x"04", x"00", x"2a", x"8c", x"20", x"58", x"49", x"01", 
-x"22", x"60", x"69", x"01", x"05", x"00", x"10", x"08", x"01", x"10", x"01", x"3c", x"00", x"00", x"2c", x"ac", 
-  others => (others => '0'));
+	constant RomDefault : RomData := (x"01", x"10", x"01", x"3c", x"00", x"00", x"29", x"8c", x"01", x"10", x"01", x"3c", x"04", x"00", x"2a", x"8c", 
+x"20", x"58", x"49", x"01", x"05", x"00", x"10", x"08",others => (others => '0'));
 
 	constant RamDefault : RamData := (
-	x"00", x"00", x"f0", x"ff", x"0c", others => (others => '0'));
+	x"0a", x"00", x"00", x"00", x"0c", others => (others => '0'));
 	
 	
 	function read_ram_at ( ram_data : in RamData; addr: in std_logic_vector(31 downto 0))  

@@ -41,18 +41,18 @@ ARCHITECTURE behavior OF test_cpu IS
  
     COMPONENT cpu
     PORT(
-         CLK : IN  std_logic;
-         DHalt : IN  std_logic;
-         DRegAddr : IN  std_logic_vector(4 downto 0);
-         DMemAddr : OUT  std_logic_vector(31 downto 0);
-         DRegOut : OUT  std_logic_vector(31 downto 0);
-         DMemOut : OUT  std_logic_vector(31 downto 0);
-			DCPUState : out std_logic_vector(31 downto 0);
-			  DCurrentIns : out std_logic_vector(31 downto 0);
-			  DAlu1 : out std_logic_vector(31 downto 0);
-				DAlu2 : out std_logic_vector(31 downto 0);
-			  DAluR1 : out std_logic_vector(31 downto 0);
-  DRegOutAddr : out std_logic_vector(4 downto 0) 			  
+			  CLK : in  STD_LOGIC;
+--			  DHalt : in std_logic;
+--	        DRegAddr : in std_logic_vector(4 downto 0);
+--			  DMemAddr : out std_logic_vector(31 downto 0);
+			  DRegOut : out std_logic_vector(31 downto 0);
+--			  DMemOut : out std_logic_vector(31 downto 0);
+			  DCPUState : out std_logic_vector(31 downto 0);
+--			  DCurrentIns : out std_logic_vector(31 downto 0);
+--			  DAlu1 : out std_logic_vector(31 downto 0);
+--			  DAlu2 : out std_logic_vector(31 downto 0);
+--			  DAluR1 : out std_logic_vector(31 downto 0);
+			  DRegOutAddr : out std_logic_vector(4 downto 0) 			  
         );
     END COMPONENT;
     
@@ -80,16 +80,16 @@ BEGIN
 	-- Instantiate the Unit Under Test (UUT)
    uut: cpu PORT MAP (
           CLK => CLK,
-          DHalt => DHalt,
-          DRegAddr => DRegAddr,
-          DMemAddr => DMemAddr,
+--          DHalt => DHalt,
+--          DRegAddr => DRegAddr,
+--          DMemAddr => DMemAddr,
           DRegOut => DRegOut,
-          DMemOut => DMemOut,
-			 DCPUState => DCPUState,
-			 DCurrentIns => DCurrentIns,
-			 DAlu1 => Dalu1,
-			 DAlu2 => DAlu2,
-			 DAluR1 => DAluR1,
+--          DMemOut => DMemOut,
+--			 DCPUState => DCPUState,
+--			 DCurrentIns => DCurrentIns,
+--			 DAlu1 => Dalu1,
+--			 DAlu2 => DAlu2,
+--			 DAluR1 => DAluR1,
 			 DRegOutAddr => DRegOutAddr
         );
 

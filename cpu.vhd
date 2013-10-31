@@ -32,17 +32,18 @@ use work.utils.ALL;
 
 entity cpu is
     Port ( CLK : in  STD_LOGIC;
-			  DHalt : in std_logic;
-	        DRegAddr : in std_logic_vector(4 downto 0);
-			  DMemAddr : out std_logic_vector(31 downto 0);
+--			  DHalt : in std_logic;
+--	        DRegAddr : in std_logic_vector(4 downto 0);
+--			  DMemAddr : out std_logic_vector(31 downto 0);
 			  DRegOut : out std_logic_vector(31 downto 0);
-			  DMemOut : out std_logic_vector(31 downto 0);
+--			  DMemOut : out std_logic_vector(31 downto 0);
 			  DCPUState : out std_logic_vector(31 downto 0);
-			  DCurrentIns : out std_logic_vector(31 downto 0);
-			  DAlu1 : out std_logic_vector(31 downto 0);
-			  DAlu2 : out std_logic_vector(31 downto 0);
-			  DAluR1 : out std_logic_vector(31 downto 0);
-			  DRegOutAddr : out std_logic_vector(4 downto 0) );
+--			  DCurrentIns : out std_logic_vector(31 downto 0);
+--			  DAlu1 : out std_logic_vector(31 downto 0);
+--			  DAlu2 : out std_logic_vector(31 downto 0);
+--			  DAluR1 : out std_logic_vector(31 downto 0);
+			  DRegOutAddr : out std_logic_vector(4 downto 0) 
+			  );
 end cpu;
 
 architecture Behavioral of cpu is
@@ -204,10 +205,10 @@ begin
 				
 				
 				currentIns := rom_DATA;
-				DCurrentIns <= currentIns;
+--				DCurrentIns <= currentIns;
 				DCPUState <= (others => '0');
 
-				-- Check if instruction is a jump
+--				 Check if instruction is a jump
 				if currentIns(31 downto 26) = b"000010" then
 					pc := b"0000" & CurrentIns(25 downto 0) & b"00";
 					currentState := FetchDecode;
@@ -272,8 +273,8 @@ begin
 					RAM(to_integer(unsigned(alu_r1(5 downto 0)) + 1)) <= decode_registerOut(15 downto 8);
 					RAM(to_integer(unsigned(alu_r1(5 downto 0)) + 2)) <= decode_registerOut(23 downto 16);
 					RAM(to_integer(unsigned(alu_r1(5 downto 0)) + 3)) <= decode_registerOut(31 downto 24);
-					DMemOut <= read_ram_at(RAM, alu_r1);
-					DMemAddr <= alu_r1;
+--					DMemOut <= read_ram_at(RAM, alu_r1);
+--					DMemAddr <= alu_r1;
 					currentState := WriteBack;
 				
 				
@@ -317,9 +318,9 @@ begin
 					decode_regWrite <= '1';
 					decode_WriteAddr <= decode_RegWBAddr;
 					decode_WriteData <= read_ram_at(RAM, alu_r1);
-					DMemOut <= read_ram_at(RAM, alu_r1);
-					DMemAddr <= alu_r1;
-					
+--					DMemOut <= read_ram_at(RAM, alu_r1);
+--					DMemAddr <= alu_r1;
+--					
 				end if;
 				
 				currentState := FetchDecode;
@@ -335,7 +336,7 @@ begin
 	end if;
 
 rom_ADDR <= pc;
-DMeMOut <= pc;
+--DMeMOut <= pc;
 
 end process;
 
@@ -344,11 +345,11 @@ DRegOut <= decode_lreg;
 alu_op1 <= decode_AluOP1;
 alu_op2 <= decode_AluOP2;
 
-DAlu1 <= alu_op1;
-DAlu2 <= alu_op2;
+--DAlu1 <= alu_op1;
+--DAlu2 <= alu_op2;
 
 alu_control <= decode_AluControl;
-DAluR1 <= alu_r1;
+--DAluR1 <= alu_r1;
 DRegOutAddr <= decode_lregAddr;
 
 --DMemOut <= ram_DO;
