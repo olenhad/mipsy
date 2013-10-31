@@ -4,10 +4,11 @@ val2: .word 12
 .text
 #lw test
 main:
-j jtest
+
 lui $t1, 1
 lui $t2, 1
-#beq $t1,$t2, jtest
+#beq $t1, $t2, main
+beq $t1,$t2, main
 
 jtest2:
 

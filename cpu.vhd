@@ -190,7 +190,7 @@ process(CLK)
 	variable currentIns :  std_logic_vector(31 downto 0) := (others => '0');
 	variable currentState : CPUState := FetchDecode;
 	variable waitCounter : integer := 0;
-
+	variable tconcat : std_logic_vector(17 downto 0);
 	variable ram_WE : std_logic := '0';
 begin
 	
@@ -221,8 +221,7 @@ begin
 					currentState := Execute;
 				end if;
 				
-				DMeMOut <= pc;
-				rom_ADDR <= pc;
+	
 					
 			elsif currentState = Execute then
 				
@@ -247,7 +246,8 @@ begin
 					
 				-- DO nothing. Update to next stage
 				-- R Type	
-					
+					currentState := WriteBack;
+			
 				elsif sig_Branch = '0' and
 				      sig_MemRead = '1' and 
 					   sig_MemWrite = '0' then 
@@ -256,6 +256,9 @@ begin
 				-- send alu's r1 which contains actual memory address after adding base and offset	
 				--	ram_addr <= alu_r1;
 					DCPUState <= x"FFFFFFFF";
+					
+					currentState := WriteBack;
+			
 				elsif sig_Branch = '0' and
 				      sig_MemRead = '0' and
 						sig_MemWrite = '1' then
@@ -271,10 +274,25 @@ begin
 					RAM(to_integer(unsigned(alu_r1(5 downto 0)) + 3)) <= decode_registerOut(31 downto 24);
 					DMemOut <= read_ram_at(RAM, alu_r1);
 					DMemAddr <= alu_r1;
+					currentState := WriteBack;
+				
+				
+				elsif sig_Branch = '1' then
+	-- BEQ	
+					if alu_r1 = x"00000001" then
+			
+				-- shift branch offset by 2 			
+						tconcat := CurrentIns(15 downto 0) & b"00";
+				
+				-- add offset to pc				
+						pc := std_logic_vector( signed(pc) + signed( tconcat));
+						
+					end if;
+					
+					currentState := FetchDecode;
 					
 				end if;	
-				currentState := WriteBack;
-			
+				
 	
 			elsif currentState = WriteBack then
 					DCPUState <= (2 => '1', others => '0');
@@ -315,6 +333,9 @@ begin
 		
 		end if;
 	end if;
+
+rom_ADDR <= pc;
+DMeMOut <= pc;
 
 end process;
 
