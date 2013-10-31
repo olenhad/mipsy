@@ -9,40 +9,418 @@ Target Device  : xc3s400a
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Fri Nov 01 02:20:22 2013
+Mapped Date    : Fri Nov 01 02:34:26 2013
 
-vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-INFO:Security:54 - 'xc3s400a' is a WebPack part.
-INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
-INFO:Security:63 - The LM_LICENSE_FILE environment variable is not set.
-INFO:Security:68 - Please run the Xilinx License Configuration Manager
-       (xlcm or "Manage Xilinx Licenses")
-       to assist in obtaining a license.
-ERROR:Security:9 - No 'ISE' nor 'WebPack' feature was available for part
-'xc3s400a'.
-----------------------------------------------------------------------
-No such feature exists.
-Feature:       WebPack
-License path: 
-C:/.Xilinx\Xilinx.lic;C:\Xilinx\13.2\ISE_DS\ISE\/data\*.lic;C:\Xilinx\13.2\ISE_D
-S\ISE\/coregen/core_licenses\Xilinx.lic;C:\Xilinx\13.2\ISE_DS\ISE\/coregen/core_
-licenses\XilinxFree.lic;C:\Xilinx\13.2\ISE_DS\EDK/data/core_licenses\Xilinx.lic;
-FLEXnet Licensing error:-5,357.  System Error: 2 ""
-For further information, refer to the FLEXnet Licensing documentation,
-available at "www.acresso.com".No such feature exists.
-Feature:       ISE
-License path: 
-C:/.Xilinx\Xilinx.lic;C:\Xilinx\13.2\ISE_DS\ISE\/data\*.lic;C:\Xilinx\13.2\ISE_D
-S\ISE\/coregen/core_licenses\Xilinx.lic;C:\Xilinx\13.2\ISE_DS\ISE\/coregen/core_
-licenses\XilinxFree.lic;C:\Xilinx\13.2\ISE_DS\EDK/data/core_licenses\Xilinx.lic;
-FLEXnet Licensing error:-5,357
-For further information, refer to the FLEXnet Licensing documentation,
-available at "www.acresso.com".
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ERROR:Map:258 - A problem was encountered attempting to get the license for this
-   architecture. 
+Mapping design into LUTs...
+Running directed packing...
+WARNING:Pack:266 - The function generator
+   cpu0_ialu_div_Mmux_cOperand1_mux0001221 failed to merge with F5 multiplexer
+   cpu0_ialu_div_Mmux_cOperand1_mux0002_5_f6/MUXF5.I0.  There is a conflict for
+   the GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<24>221
+   failed to merge with F5 multiplexer cpu0_ialu_Result1_mux0005<26>1563_SW0_f5.
+    There is a conflict for the FXMUX.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<27>221
+   failed to merge with F5 multiplexer cpu0_ialu_Result1_mux0005<29>1564_SW0_f5.
+    There is a conflict for the FXMUX.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<10>711
+   failed to merge with F5 multiplexer cpu0_ialu_Result1_mux0005<10>701_f5. 
+   There is a conflict for the FXMUX.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[24].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[24].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[24].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[24].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[25].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[25].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[29].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[29].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[29].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[29].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[30].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[30].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[30].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[30].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[31].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[31].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[31].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[31].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[28].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[28].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[27].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[27].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[26].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[26].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[26].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[26].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[16].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[16].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[17].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[17].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[17].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[17].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[18].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[18].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[18].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[18].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[19].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[19].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[20].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[20].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[20].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[20].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[21].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[21].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[22].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[22].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[22].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[22].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[23].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[23].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[23].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[23].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[15].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[15].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[8].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[8].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[2].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[2].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[14].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[14].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[7].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[7].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[1].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[1].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[13].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[13].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA2> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA3> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA4> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA5> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA6> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA7> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[12].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[12].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[5].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[5].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[11].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[11].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[4].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[4].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[10].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[10].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
 
 Design Summary
 --------------
-Number of errors   :   1
-Number of warnings :   0
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   60
+Logic Utilization:
+  Number of Slice Flip Flops:         1,316 out of   7,168   18%
+  Number of 4 input LUTs:             5,049 out of   7,168   70%
+Logic Distribution:
+  Number of occupied Slices:          3,419 out of   3,584   95%
+    Number of Slices containing only related logic:   3,419 out of   3,419 100%
+    Number of Slices containing unrelated logic:          0 out of   3,419   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       5,106 out of   7,168   71%
+    Number used as logic:             4,717
+    Number used as a route-thru:         57
+    Number used for Dual Port RAMs:     282
+      (Two LUTs used per Dual Port RAM)
+    Number used as Shift registers:      50
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 11 out of     195    5%
+  Number of BUFGMUXs:                     1 out of      24    4%
+  Number of MULT18X18SIOs:                3 out of      20   15%
+  Number of RAMB16BWEs:                  17 out of      20   85%
+
+Average Fanout of Non-Clock Nets:                3.62
+
+Peak Memory Usage:  299 MB
+Total REAL time to MAP completion:  11 secs 
+Total CPU time to MAP completion:   6 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "LAB2_map.mrp" for details.

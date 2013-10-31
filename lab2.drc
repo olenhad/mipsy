@@ -1,7 +1,7 @@
 Release 13.2 Drc O.61xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Fri Oct 11 04:37:29 2013
+Fri Nov 01 02:35:45 2013
 
 drc -z LAB2.ncd LAB2.pcf
 
@@ -54,6 +54,22 @@ WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
    block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1>:<RA
    MB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA2> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA3> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA4> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA5> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA6> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA7> on
+   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
    block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1>:<RA
    MB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
@@ -101,5 +117,5 @@ WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
 WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
    block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1>:<RA
    MB16BWE_RAMB16BWE>.
-DRC detected 0 errors and 32 warnings.  Please see the previously displayed
+DRC detected 0 errors and 40 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
