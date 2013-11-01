@@ -110,7 +110,7 @@ begin
 			elsif opcode = b"100011" then
 			 -- Load Word (23)
 			 -- sign extension to offset
-				AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
+				AluOP2 <= x"0000" & b"00" & CurrentInstruction(15 downto 2);
 			-- currentInstruction (25 downto 21) denotes rs, which contains base address
 				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
 			-- Alu Control set to Add.
@@ -128,7 +128,7 @@ begin
 				
 			elsif opcode = b"101011" then
 			-- Store Word (2B)
-				AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
+				AluOP2 <= x"0000" & b"00" & CurrentInstruction(15 downto 2);
 			-- currentInstruction (25 downto 21) denotes rs, which contains base address
 				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
 			-- Alu Control set to Add.

@@ -215,7 +215,8 @@ begin
 
 --				 Check if instruction is a jump
 				if currentIns(31 downto 26) = b"000010" then
-					pc := b"0000" & CurrentIns(25 downto 0) & b"00";
+					--pc := b"0000" & CurrentIns(25 downto 0) & b"00";
+					pc := b"000000" & CurrentIns(25 downto 0);
 					currentState := FetchDecode;
 					
 				else
@@ -290,7 +291,7 @@ begin
 				-- shift branch offset by 2 			
 				--		tconcat := CurrentIns(15 downto 0) & b"00";
 				
-				tconcat := CurrentIns(15 downto 0);
+				tconcat := b"00" & CurrentIns(15 downto 0);
 				
 				-- add offset to pc				
 						pc := std_logic_vector( signed(pc) + signed( tconcat));

@@ -131,7 +131,6 @@
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="lab2.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="lab2.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="lab2.drc" xil_pn:subbranch="FPGAConfiguration"/>
@@ -224,9 +223,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1383264414" xil_pn:in_ck="7129224599166667769" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1383264414">
+    <transform xil_pn:end_ts="1383264855" xil_pn:in_ck="7129224599166667769" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1383264854">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="adder32.vhd"/>
       <outfile xil_pn:name="addsub32.vhd"/>
       <outfile xil_pn:name="alu.vhd"/>
@@ -270,10 +273,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1383264269" xil_pn:in_ck="7129224599166667769" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1383264269">
+    <transform xil_pn:end_ts="1383264858" xil_pn:in_ck="7129224599166667769" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1383264857">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
@@ -308,7 +312,7 @@
       <outfile xil_pn:name="umul32.vhd"/>
       <outfile xil_pn:name="utils.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1383264298" xil_pn:in_ck="7129224599166667769" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="912519074626804472" xil_pn:start_ts="1383264289">
+    <transform xil_pn:end_ts="1383264865" xil_pn:in_ck="7129224599166667769" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="912519074626804472" xil_pn:start_ts="1383264858">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -318,19 +322,17 @@
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="test_cpu_beh.prj"/>
       <outfile xil_pn:name="test_cpu_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1383264299" xil_pn:in_ck="6892049740271063028" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-755155104865479656" xil_pn:start_ts="1383264298">
+    <transform xil_pn:end_ts="1383264865" xil_pn:in_ck="6892049740271063028" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-755155104865479656" xil_pn:start_ts="1383264865">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="test_cpu_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1383244370" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1383244370">
@@ -361,12 +363,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1383262769" xil_pn:in_ck="1508176950863347775" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5675292700759545696" xil_pn:start_ts="1383262617">
+    <transform xil_pn:end_ts="1383265529" xil_pn:in_ck="1508176950863347775" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5675292700759545696" xil_pn:start_ts="1383265362">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="LAB2.lso"/>
       <outfile xil_pn:name="LAB2.ngc"/>

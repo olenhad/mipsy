@@ -131,3 +131,4 @@ xst -intstyle ise -ifn "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2
 xst -intstyle ise -ifn "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.xst" -ofn "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.syr" 
 xst -intstyle ise -ifn "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.xst" -ofn "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.syr" 
 xst -intstyle ise -ifn "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.xst" -ofn "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.syr" 
+xst -intstyle ise -ifn "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.xst" -ofn "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.syr" 
