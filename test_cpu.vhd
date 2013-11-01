@@ -48,8 +48,8 @@ ARCHITECTURE behavior OF test_cpu IS
 			  DRegOut : out std_logic_vector(31 downto 0);
 			  DOutput : out std_logic_vector(31 downto 0);
 --			  DMemOut : out std_logic_vector(31 downto 0);
-			  DCPUState : out std_logic_vector(31 downto 0);
---			  DCurrentIns : out std_logic_vector(31 downto 0);
+--			  DCPUState : out std_logic_vector(31 downto 0);
+			  DCurrentIns : out std_logic_vector(31 downto 0);
 --			  DAlu1 : out std_logic_vector(31 downto 0);
 --			  DAlu2 : out std_logic_vector(31 downto 0);
 --			  DAluR1 : out std_logic_vector(31 downto 0);
@@ -88,7 +88,7 @@ BEGIN
           DRegOut => DRegOut,
 --          DMemOut => DMemOut,
 --			 DCPUState => DCPUState,
---			 DCurrentIns => DCurrentIns,
+			 DCurrentIns => DCurrentIns,
 --			 DAlu1 => Dalu1,
 --			 DAlu2 => DAlu2,
 --			 DAluR1 => DAluR1,

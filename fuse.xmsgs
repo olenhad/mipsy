@@ -5,11 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="1156" delta="unknown" >"C:/Users/pc richard/Documents/CG3207/cg3207-project/test_cpu.vhd" Line 51: Formal port &lt;<arg fmt="%s" index="1">DCPUState</arg>&gt; does not exist in entity &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.  Please compare the definition of block &lt;<arg fmt="%s" index="3">cpu</arg>&gt; to its component declaration and its instantion to detect the mismatch.
-</msg>
-
-<msg type="error" file="Simulator" num="777" delta="unknown" >Static elaboration of top level VHDL design unit <arg fmt="%s" index="1">test_cpu</arg> in library <arg fmt="%s" index="2">work</arg> failed
-</msg>
-
 </messages>
 

@@ -35,15 +35,15 @@ entity cpu is
 --			  DHalt : in std_logic;
 --	        DRegAddr : in std_logic_vector(4 downto 0);
 --			  DMemAddr : out std_logic_vector(31 downto 0);
---			  DRegOut : out std_logic_vector(31 downto 0);
-			  DOutput : out std_logic_vector(31 downto 0)
+			  DRegOut : out std_logic_vector(31 downto 0);
+			  DOutput : out std_logic_vector(31 downto 0);
 --			  DMemOut : out std_logic_vector(31 downto 0);
 --			  DCPUState : out std_logic_vector(31 downto 0);
---			  DCurrentIns : out std_logic_vector(31 downto 0);
+			  DCurrentIns : out std_logic_vector(31 downto 0);
 --			  DAlu1 : out std_logic_vector(31 downto 0);
 --			  DAlu2 : out std_logic_vector(31 downto 0);
 --			  DAluR1 : out std_logic_vector(31 downto 0);
---			  DRegOutAddr : out std_logic_vector(4 downto 0) 
+			  DRegOutAddr : out std_logic_vector(4 downto 0) 
 			  );
 end cpu;
 
@@ -125,7 +125,11 @@ signal alu_r1 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_r2 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_debug : std_logic_vector(31 downto 0) := (others => '0');
 
-signal RAM: RamData := RamDefault;
+
+signal RAM0: RamData := (0 => x"0a", 1 => x"0c", 2 => x"0f", others => (others => '0'));
+signal RAM1: RamData := (others => (others => '0'));
+signal RAM2: RamData := (others => (others => '0'));
+signal RAM3: RamData := (others => (others => '0'));
 
 --signal ram_we : std_logic := '0';
 --signal ram_en : std_logic := '1';
@@ -206,7 +210,7 @@ begin
 				
 				
 				currentIns := rom_DATA;
---				DCurrentIns <= currentIns;
+				DCurrentIns <= currentIns;
 	--			DCPUState <= (others => '0');
 
 --				 Check if instruction is a jump
@@ -215,7 +219,7 @@ begin
 					currentState := FetchDecode;
 					
 				else
-					pc := std_logic_vector(unsigned(pc) + 4);
+					pc := std_logic_vector(unsigned(pc) + 1);
 					-- feed cur Ins to decode. decode will give alu appropriate operands by nnext clk cycle
 					
 					decode_currentInstruction <= currentIns;	
@@ -270,10 +274,10 @@ begin
 --				-- registerOut sends data from rt	
 --					ram_DI <= decode_registerOut;
 					
-					RAM(to_integer(unsigned(alu_r1(5 downto 0)))) <= decode_registerOut(7 downto 0);
-					RAM(to_integer(unsigned(alu_r1(5 downto 0)) + 1)) <= decode_registerOut(15 downto 8);
-					RAM(to_integer(unsigned(alu_r1(5 downto 0)) + 2)) <= decode_registerOut(23 downto 16);
-					RAM(to_integer(unsigned(alu_r1(5 downto 0)) + 3)) <= decode_registerOut(31 downto 24);
+					RAM0(to_integer(unsigned(alu_r1(5 downto 0)))) <= decode_registerOut(7 downto 0);
+					RAM1(to_integer(unsigned(alu_r1(5 downto 0)))) <= decode_registerOut(15 downto 8);
+					RAM2(to_integer(unsigned(alu_r1(5 downto 0)))) <= decode_registerOut(23 downto 16);
+					RAM3(to_integer(unsigned(alu_r1(5 downto 0)))) <= decode_registerOut(31 downto 24);
 --					DMemOut <= read_ram_at(RAM, alu_r1);
 --					DMemAddr <= alu_r1;
 					currentState := WriteBack;
@@ -284,7 +288,9 @@ begin
 					if alu_r1 = x"00000001" then
 			
 				-- shift branch offset by 2 			
-						tconcat := CurrentIns(15 downto 0) & b"00";
+				--		tconcat := CurrentIns(15 downto 0) & b"00";
+				
+				tconcat := CurrentIns(15 downto 0);
 				
 				-- add offset to pc				
 						pc := std_logic_vector( signed(pc) + signed( tconcat));
@@ -318,7 +324,11 @@ begin
 						-- RT for I type instructions	
 					decode_regWrite <= '1';
 					decode_WriteAddr <= decode_RegWBAddr;
-					decode_WriteData <= read_ram_at(RAM, alu_r1);
+					--decode_WriteData <= read_ram_at(RAM, alu_r1);
+					decode_WriteData <= RAM3(to_integer(unsigned(alu_r1(5 downto 0)))) &
+					                    RAM2(to_integer(unsigned(alu_r1(5 downto 0)))) &
+											  RAM1(to_integer(unsigned(alu_r1(5 downto 0)))) &
+											  RAM0(to_integer(unsigned(alu_r1(5 downto 0))));
 --					DMemOut <= read_ram_at(RAM, alu_r1);
 --					DMemAddr <= alu_r1;
 --					
@@ -341,9 +351,10 @@ rom_ADDR <= pc;
 
 end process;
 
---DRegOut <= decode_lreg;
+DRegOut <= decode_lreg;
 
-DOutput <= decode_lreg;
+DOutput <= ram3(15) & ram2(15) & ram1(15) & ram0(15);
+
 --RAM(63) & RAM(62) & RAM(61) & RAM(60);
 
 alu_op1 <= decode_AluOP1;
@@ -354,7 +365,7 @@ alu_op2 <= decode_AluOP2;
 
 alu_control <= decode_AluControl;
 --DAluR1 <= alu_r1;
---DRegOutAddr <= decode_lregAddr;
+DRegOutAddr <= decode_lregAddr;
 
 --DMemOut <= ram_DO;
 --DMemAddr <= ram_addr;

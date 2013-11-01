@@ -17,8 +17,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 package utils is
 
-	type RomData is array(0 to 255) of std_logic_vector(7 downto 0);
-	type RamData is array(0 to 63) of std_logic_vector(7 downto 0);
+	type RomData is array(0 to 63) of std_logic_vector(7 downto 0);
+	type RamData is array(0 to 15) of std_logic_vector(7 downto 0);
 	type RegisterSet is array (31 downto 0) of std_logic_vector(31 downto 0);
 	type CodeAddress is array (8 downto 0) of std_logic;
 	type CodeInstruction is array (31 downto 0) of std_logic;
@@ -27,13 +27,11 @@ package utils is
 	impure function read_rom_from_file ( rom_file_name : in string) return RomData;
 --	impure function read_ram_from_file ( ram_file_name : in string) return RamData;
 	
-	constant RomDefault : RomData := (x"01", x"10", x"01", x"3c", x"00", x"00", x"29", x"8c", x"01", x"10", x"01", x"3c", x"04", x"00", x"2a", x"8c", 
-x"20", x"58", x"49", x"01", x"22", x"78", x"69", x"01", x"01", x"10", x"01", x"3c", x"08", x"00", x"29", x"8c", 
-x"01", x"00", x"e9", x"11", x"09", x"00", x"10", x"08", x"01", x"10", x"01", x"3c", x"3c", x"00", x"2f", x"ac", 
-x"09", x"00", x"10", x"08",others => (others => '0'));
+--constant RomDefault : RomData := (x"01", x"10", x"01", x"3c", x"00", x"00", x"29", x"8c", x"01", x"10", x"01", x"3c", x"04", x"00", x"2a", x"8c", 
+--x"20", x"58", x"49", x"01", x"22", x"78", x"69", x"01", x"06", x"00", x"10", x"08",others => (others => '0'));
 
 	constant RamDefault : RamData := (
-	x"0a", x"00", x"00", x"00", x"0c", x"00", x"00", x"00", x"0c", others => (others => '0'));
+	x"0a", x"00", x"00", x"00", x"0c", others => (others => '0'));
 	
 	
 	function read_ram_at ( ram_data : in RamData; addr: in std_logic_vector(31 downto 0))  

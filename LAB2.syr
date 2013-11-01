@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Reading design: LAB2.prj
 
@@ -173,23 +173,39 @@ WARNING:Xst:2211 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd
 Entity <LAB2> analyzed. Unit <LAB2> generated.
 
 Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" line 277: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM0> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" line 278: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM1> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" line 279: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM2> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" line 280: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM3> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" line 326: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM3> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" line 326: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM2> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" line 326: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM1> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" line 326: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM0> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <rom> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" line 58: Index value(s) does not match array range, simulation mismatch.
-INFO:Xst:1433 - Contents of array <rom_data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" line 58: Index value(s) does not match array range, simulation mismatch.
-INFO:Xst:1433 - Contents of array <rom_data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" line 58: Index value(s) does not match array range, simulation mismatch.
-INFO:Xst:1433 - Contents of array <rom_data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" line 58: Index value(s) does not match array range, simulation mismatch.
-INFO:Xst:1433 - Contents of array <rom_data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" line 64: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <rom0> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" line 64: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <rom1> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" line 64: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <rom2> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" line 64: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <rom3> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 Entity <rom> analyzed. Unit <rom> generated.
 
 Analyzing Entity <decode> in library <work> (Architecture <behavioral>).
-WARNING:Xst:795 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" line 95: Size of operands are different : result is <false>.
-WARNING:Xst:795 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" line 95: Size of operands are different : result is <false>.
-WARNING:Xst:795 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" line 95: Size of operands are different : result is <false>.
+WARNING:Xst:795 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" line 97: Size of operands are different : result is <false>.
+WARNING:Xst:795 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" line 97: Size of operands are different : result is <false>.
+WARNING:Xst:795 - "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" line 97: Size of operands are different : result is <false>.
 Entity <decode> analyzed. Unit <decode> generated.
 
 Analyzing Entity <alu> in library <work> (Architecture <behavioral>).
@@ -223,22 +239,21 @@ Performing bidirectional port resolution...
 Synthesizing Unit <rom>.
     Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd".
 WARNING:Xst:647 - Input <ADDR<31:20>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1781 - Signal <rom_data> is used but never assigned. Tied to default value.
-    Found 256x8-bit ROM for signal <DATA$varindex0000> created at line 58.
-    Found 256x8-bit ROM for signal <DATA$varindex0001> created at line 58.
-    Found 256x8-bit ROM for signal <DATA$varindex0002> created at line 58.
-    Found 256x8-bit ROM for signal <DATA$varindex0003> created at line 58.
-    Found 20-bit adder for signal <rom_data$add0000> created at line 58.
-    Found 20-bit adder for signal <rom_data$add0001> created at line 58.
-    Found 20-bit adder for signal <rom_data$add0002> created at line 58.
+WARNING:Xst:647 - Input <EN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1781 - Signal <rom3> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <rom2> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <rom1> is used but never assigned. Tied to default value.
+WARNING:Xst:1781 - Signal <rom0> is used but never assigned. Tied to default value.
+    Found 64x32-bit ROM for signal <rom0$rom0000>.
     Summary:
-	inferred   4 ROM(s).
-	inferred   3 Adder/Subtractor(s).
+	inferred   1 ROM(s).
 Unit <rom> synthesized.
 
 
 Synthesizing Unit <decode>.
     Related source file is "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd".
+    Found 32x32-bit dual-port RAM <Mram_registerFile> for signal <registerFile>.
+    Found 32x32-bit dual-port RAM <Mram_registerFile_ren> for signal <registerFile>.
     Found 32-bit register for signal <lreg>.
     Found 5-bit register for signal <lregAddr>.
     Found 32-bit register for signal <AluOP1>.
@@ -247,15 +262,11 @@ Synthesizing Unit <decode>.
     Found 5-bit register for signal <RegWBAddr>.
     Found 5-bit register for signal <ControlSignals>.
     Found 32-bit register for signal <registerOut>.
-    Found 32-bit 32-to-1 multiplexer for signal <lreg$mux0000> created at line 76.
-    Found 1024-bit register for signal <registerFile>.
-    Found 32-bit 32-to-1 multiplexer for signal <registerFile$mux0001> created at line 91.
-    Found 32-bit 32-to-1 multiplexer for signal <registerFile$mux0002> created at line 102.
     Found 32-bit 4-to-1 multiplexer for signal <registerOut$mux0003>.
-INFO:Xst:738 - HDL ADVISOR - 1024 flip-flops were inferred for signal <registerFile>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
     Summary:
-	inferred 1173 D-type flip-flop(s).
-	inferred 128 Multiplexer(s).
+	inferred   2 RAM(s).
+	inferred 149 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
 Unit <decode> synthesized.
 
 
@@ -392,12 +403,16 @@ WARNING:Xst:646 - Signal <decode_lregAddr> is assigned but never used. This unco
 WARNING:Xst:646 - Signal <currentIns<31:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <alu_r2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <alu_debug> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 16x8-bit single-port RAM <Mram_RAM3> for signal <RAM3>.
+    Found 16x8-bit single-port RAM <Mram_RAM0> for signal <RAM0>.
+    Found 16x8-bit single-port RAM <Mram_RAM1> for signal <RAM1>.
+    Found 16x8-bit single-port RAM <Mram_RAM2> for signal <RAM2>.
     Found finite state machine <FSM_0> for signal <currentState>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
     | Transitions        | 9                                              |
     | Inputs             | 4                                              |
-    | Outputs            | 7                                              |
+    | Outputs            | 6                                              |
     | Clock              | CLK                       (rising_edge)        |
     | Clock enable       | currentState$not0000      (negative)           |
     | Power Up State     | 000                                            |
@@ -411,22 +426,13 @@ WARNING:Xst:646 - Signal <alu_debug> is assigned but never used. This unconnecte
     Found 32-bit register for signal <decode_WriteData>.
     Found 32-bit register for signal <pc>.
     Found 32-bit adder for signal <pc$share0000>.
-    Found 512-bit register for signal <RAM>.
-    Found 6-bit adder for signal <RAM$add0000> created at line 274.
-    Found 6-bit adder for signal <RAM$add0001> created at line 275.
-    Found 6-bit adder for signal <RAM$add0002> created at line 276.
-    Found 8-bit 64-to-1 multiplexer for signal <ram_data$mux0000> created at line 72.
-    Found 8-bit 64-to-1 multiplexer for signal <ram_data$mux0001> created at line 72.
-    Found 8-bit 64-to-1 multiplexer for signal <ram_data$mux0002> created at line 72.
-    Found 8-bit 64-to-1 multiplexer for signal <ram_data$mux0003> created at line 72.
     Found 32-bit down counter for signal <waitCounter>.
-INFO:Xst:738 - HDL ADVISOR - 512 flip-flops were inferred for signal <RAM>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
     Summary:
 	inferred   1 Finite State Machine(s).
+	inferred   4 RAM(s).
 	inferred   1 Counter(s).
-	inferred 646 D-type flip-flop(s).
-	inferred   4 Adder/Subtractor(s).
-	inferred  32 Multiplexer(s).
+	inferred 134 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
 Unit <cpu> synthesized.
 
 
@@ -445,35 +451,33 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 4
- 256x8-bit ROM                                         : 4
+# RAMs                                                 : 6
+ 16x8-bit single-port RAM                              : 4
+ 32x32-bit dual-port RAM                               : 2
+# ROMs                                                 : 1
+ 64x32-bit ROM                                         : 1
 # Multipliers                                          : 1
  32x32-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 25
- 20-bit adder                                          : 3
+# Adders/Subtractors                                   : 19
  32-bit adder                                          : 12
  32-bit subtractor                                     : 5
  33-bit adder                                          : 1
- 6-bit adder                                           : 3
  64-bit adder                                          : 1
 # Counters                                             : 1
  32-bit down counter                                   : 1
-# Registers                                            : 188
+# Registers                                            : 92
  1-bit register                                        : 71
- 32-bit register                                       : 48
+ 32-bit register                                       : 16
  5-bit register                                        : 4
  6-bit register                                        : 1
- 8-bit register                                        : 64
 # Comparators                                          : 20
  32-bit comparator equal                               : 5
  32-bit comparator greatequal                          : 5
  32-bit comparator less                                : 5
  32-bit comparator not equal                           : 5
-# Multiplexers                                         : 14
+# Multiplexers                                         : 7
  1-bit 32-to-1 multiplexer                             : 1
- 32-bit 32-to-1 multiplexer                            : 3
  32-bit 4-to-1 multiplexer                             : 6
- 8-bit 64-to-1 multiplexer                             : 4
 # Xors                                                 : 5
  1-bit xor2                                            : 4
  32-bit xor2                                           : 1
@@ -485,15 +489,15 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <cpu0/currentState/FSM> on signal <currentState[1:5]> with one-hot encoding.
+Optimizing FSM <cpu0/currentState/FSM> on signal <currentState[1:3]> with gray encoding.
 -------------------
  State | Encoding
 -------------------
- 000   | 00001
- 001   | 00010
- 010   | 01000
- 011   | 10000
- 100   | 00100
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 110
+ 100   | 011
 -------------------
 Reading core <mcs.ngc>.
 Loading core <mcs> for timing and area information for instance <mcs0>.
@@ -517,13 +521,102 @@ WARNING:Xst:2677 - Node <currentIns_31> of sequential type is unconnected in blo
 WARNING:Xst:2404 -  FFs/Latches <Debug<31:2>> (without init value) have a constant value of 0 in block <alu>.
 
 Synthesizing (advanced) Unit <cpu>.
-INFO:Xst:3044 - The ROM <irom_Mrom_DATA_varindex0003> will be implemented as a read-only BLOCK RAM, absorbing the register: <pc>.
-INFO:Xst:3225 - The RAM <irom_Mrom_DATA_varindex0003> will be implemented as BLOCK RAM
+INFO:Xst:3231 - The small RAM <Mram_RAM3> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <_and0000_0>    | high     |
+    |     addrA          | connected to signal <alu_r1>        |          |
+    |     diA            | connected to signal <decode_registerOut> |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_RAM0> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <_and0000_1>    | high     |
+    |     addrA          | connected to signal <alu_r1>        |          |
+    |     diA            | connected to signal <decode_registerOut> |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_RAM2> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <_and0000_3>    | high     |
+    |     addrA          | connected to signal <alu_r1>        |          |
+    |     diA            | connected to signal <decode_registerOut> |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_RAM1> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <_and0000_2>    | high     |
+    |     addrA          | connected to signal <alu_r1>        |          |
+    |     diA            | connected to signal <decode_registerOut> |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <idecode_Mram_registerFile> will be implemented as a BLOCK RAM, absorbing the following register(s): <decode_CurrentInstruction>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <idecode_RegWrite_0> | high     |
+    |     addrA          | connected to signal <decode_WriteAddr> |          |
+    |     diA            | connected to signal <decode_WriteData> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLK>           | rise     |
+    |     enB            | connected to signal <decode_CurrentInstruction_not0001> | high     |
+    |     addrB          | connected to signal <rom_DATA>      |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3044 - The ROM <irom_Mrom_rom0_rom0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <pc>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <idecode_Mram_registerFile_ren> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <idecode_RegWrite_1> | high     |
+    |     addrA          | connected to signal <decode_WriteAddr> |          |
+    |     diA            | connected to signal <decode_WriteData> |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <decode_CurrentInstruction> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <irom_Mrom_rom0_rom0000> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 32-bit                    |          |
     |     mode           | write-first                         |          |
     |     clkA           | connected to signal <CLK>           | rise     |
     |     enA            | connected to signal <currentState_not0001> | low      |
@@ -535,6 +628,60 @@ INFO:Xst:3225 - The RAM <irom_Mrom_DATA_varindex0003> will be implemented as BLO
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
 Unit <cpu> synthesized (advanced).
+WARNING:Xst:2677 - Node <decode_WriteData_0> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_1> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_2> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_3> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_4> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_5> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_6> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_7> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_8> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_9> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_10> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_11> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_12> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_13> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_14> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_15> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_16> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_17> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_18> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_19> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_20> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_21> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_22> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_23> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_15> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_14> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_13> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_12> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_11> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_10> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_9> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_8> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_7> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_6> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_5> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_4> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_3> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_2> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_1> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_0> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_7> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_6> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_5> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_4> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_3> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_2> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_1> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_0> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_sliced1_-1> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_sliced1_0> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced1_-1> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced1_0> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced1_-1> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced1_0> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <currentIns_16> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <currentIns_17> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <currentIns_18> of sequential type is unconnected in block <cpu>.
@@ -556,35 +703,32 @@ WARNING:Xst:2677 - Node <currentIns_31> of sequential type is unconnected in blo
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
- 256x8-bit single-port block RAM                       : 1
-# ROMs                                                 : 3
- 256x8-bit ROM                                         : 3
+# RAMs                                                 : 7
+ 16x8-bit single-port distributed RAM                  : 4
+ 32x32-bit dual-port block RAM                         : 1
+ 32x32-bit dual-port distributed RAM                   : 1
+ 64x32-bit single-port block RAM                       : 1
 # Multipliers                                          : 1
  32x32-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 24
+# Adders/Subtractors                                   : 18
  31-bit subtractor                                     : 3
  32-bit adder                                          : 10
  32-bit adder carry in                                 : 1
  32-bit subtractor                                     : 2
  33-bit adder                                          : 1
- 6-bit adder                                           : 3
  64-bit adder                                          : 1
- 8-bit adder                                           : 3
 # Counters                                             : 1
  32-bit down counter                                   : 1
-# Registers                                            : 2103
- Flip-Flops                                            : 2103
+# Registers                                            : 560
+ Flip-Flops                                            : 560
 # Comparators                                          : 20
  32-bit comparator equal                               : 5
  32-bit comparator greatequal                          : 5
  32-bit comparator less                                : 5
  32-bit comparator not equal                           : 5
-# Multiplexers                                         : 14
+# Multiplexers                                         : 7
  1-bit 32-to-1 multiplexer                             : 1
- 32-bit 32-to-1 multiplexer                            : 3
  32-bit 4-to-1 multiplexer                             : 6
- 8-bit 64-to-1 multiplexer                             : 4
 # Xors                                                 : 5
  1-bit xor2                                            : 4
  32-bit xor2                                           : 1
@@ -594,9 +738,11 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <ControlSignals_1> in Unit <decode> is equivalent to the following FF/Latch, which will be removed : <ControlSignals_4> 
+INFO:Xst:2261 - The FF/Latch <idecode_ControlSignals_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <idecode_ControlSignals_4> 
 WARNING:Xst:1293 - FF/Latch <pc_0> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pc_1> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <pc_6> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <pc_7> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <pc_8> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <pc_9> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <pc_10> of sequential type is unconnected in block <cpu>.
@@ -621,6 +767,8 @@ WARNING:Xst:2677 - Node <pc_28> of sequential type is unconnected in block <cpu>
 WARNING:Xst:2677 - Node <pc_29> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <pc_30> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <pc_31> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <currentIns_4> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <currentIns_5> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <currentIns_6> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <currentIns_7> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <currentIns_8> of sequential type is unconnected in block <cpu>.
@@ -631,16 +779,8 @@ WARNING:Xst:2677 - Node <currentIns_12> of sequential type is unconnected in blo
 WARNING:Xst:2677 - Node <currentIns_13> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <currentIns_14> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <currentIns_15> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:1293 - FF/Latch <decode_CurrentInstruction_30> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <decode_CurrentInstruction_9> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <decode_CurrentInstruction_25> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <decode_CurrentInstruction_8> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <decode_CurrentInstruction_10> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <decode_CurrentInstruction_15> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <LAB2> ...
-
-Optimizing unit <decode> ...
 
 Optimizing unit <mul32> ...
 
@@ -753,17 +893,10 @@ WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_7> of sequential type is unconn
 WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_5> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_4> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_3> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lregAddr_0> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lregAddr_1> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lregAddr_2> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lregAddr_3> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lregAddr_4> of sequential type is unconnected in block <LAB2>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 154.
-Optimizing block <LAB2> to meet ratio 100 (+ 5) of 3584 slices :
-WARNING:Xst:2254 - Area constraint could not be met for block <LAB2>, final ratio is 136.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 68.
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
@@ -772,19 +905,28 @@ INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_r
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
 INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
-FlipFlop cpu0_decode_CurrentInstruction_16 has been replicated 1 time(s)
-FlipFlop cpu0_decode_WriteAddr_0 has been replicated 1 time(s)
-FlipFlop cpu0_ialu_Result1_0 has been replicated 2 time(s)
-FlipFlop cpu0_idecode_AluOP1_0 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_0 has been replicated 2 time(s)
+FlipFlop cpu0_idecode_AluOP1_1 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_10 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_11 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_12 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_13 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_14 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_17 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_18 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_19 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_2 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_20 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_21 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_22 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_26 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_3 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_8 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_4 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_5 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_6 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_0 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_1 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_2 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_3 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_4 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -792,8 +934,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2000
- Flip-Flops                                            : 2000
+# Registers                                            : 473
+ Flip-Flops                                            : 473
 
 =========================================================================
 
@@ -822,40 +964,41 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 13186
+# BELS                             : 5704
 #      GND                         : 2
-#      INV                         : 291
+#      INV                         : 293
 #      LUT1                        : 13
-#      LUT2                        : 342
-#      LUT2_D                      : 9
+#      LUT2                        : 295
+#      LUT2_D                      : 11
 #      LUT2_L                      : 3
-#      LUT3                        : 4861
-#      LUT3_D                      : 8
-#      LUT3_L                      : 9
-#      LUT4                        : 3359
-#      LUT4_D                      : 6
-#      LUT4_L                      : 54
+#      LUT3                        : 944
+#      LUT3_D                      : 44
+#      LUT3_L                      : 6
+#      LUT4                        : 2061
+#      LUT4_D                      : 9
+#      LUT4_L                      : 88
 #      MULT_AND                    : 94
-#      MUXCY                       : 715
+#      MUXCY                       : 721
 #      MUXCY_L                     : 77
-#      MUXF5                       : 1779
-#      MUXF6                       : 581
-#      MUXF7                       : 290
-#      MUXF8                       : 129
+#      MUXF5                       : 473
+#      MUXF6                       : 5
+#      MUXF7                       : 2
+#      MUXF8                       : 1
 #      VCC                         : 2
-#      XORCY                       : 562
-# FlipFlops/Latches                : 2591
+#      XORCY                       : 560
+# FlipFlops/Latches                : 1064
 #      FD                          : 92
-#      FDE                         : 2040
+#      FDE                         : 515
 #      FDR                         : 168
 #      FDRE                        : 214
 #      FDRS                        : 2
 #      FDRSE                       : 12
-#      FDS                         : 43
+#      FDS                         : 41
 #      FDSE                        : 20
-# RAMS                             : 158
-#      RAM16X1D                    : 141
-#      RAMB16BWE                   : 17
+# RAMS                             : 255
+#      RAM16X1D                    : 205
+#      RAM16X1S                    : 32
+#      RAMB16BWE                   : 18
 # Shift Registers                  : 50
 #      SRL16                       : 1
 #      SRL16E                      : 49
@@ -873,19 +1016,17 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     4870  out of   3584   135% (*) 
- Number of Slice Flip Flops:           2591  out of   7168    36%  
- Number of 4 input LUTs:               9287  out of   7168   129% (*) 
-    Number used as logic:              8955
+ Number of Slices:                     2189  out of   3584    61%  
+ Number of Slice Flip Flops:           1064  out of   7168    14%  
+ Number of 4 input LUTs:               4259  out of   7168    59%  
+    Number used as logic:              3767
     Number used as Shift registers:      50
-    Number used as RAMs:                282
+    Number used as RAMs:                442
  Number of IOs:                          11
  Number of bonded IOBs:                  11  out of    195     5%  
- Number of BRAMs:                        17  out of     20    85%  
+ Number of BRAMs:                        18  out of     20    90%  
  Number of MULT18X18SIOs:                 3  out of     20    15%  
  Number of GCLKs:                         1  out of     24     4%  
-
-WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
 ---------------------------
 Partition Resource Summary:
@@ -908,7 +1049,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 2799  |
+Clk                                | BUFGP                  | 1369  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -919,7 +1060,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 30.523ns (Maximum Frequency: 32.762MHz)
+   Minimum period: 30.177ns (Maximum Frequency: 33.138MHz)
    Minimum input arrival time before clock: 1.548ns
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: 5.816ns
@@ -930,22 +1071,23 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 30.523ns (frequency: 32.762MHz)
-  Total number of paths / destination ports: 626519790570 / 7400
+  Clock period: 30.177ns (frequency: 33.138MHz)
+  Total number of paths / destination ports: 626520336143 / 5223
 -------------------------------------------------------------------------
-Delay:               30.523ns (Levels of Logic = 167)
-  Source:            cpu0_idecode_AluOP1_1 (FF)
+Delay:               30.177ns (Levels of Logic = 168)
+  Source:            cpu0_idecode_AluOP1_0_1 (FF)
   Destination:       cpu0_ialu_div_tremainder_28 (FF)
   Source Clock:      Clk rising
   Destination Clock: Clk rising
 
-  Data Path: cpu0_idecode_AluOP1_1 to cpu0_ialu_div_tremainder_28
+  Data Path: cpu0_idecode_AluOP1_0_1 to cpu0_ialu_div_tremainder_28
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             19   0.591   1.085  cpu0_idecode_AluOP1_1 (cpu0_idecode_AluOP1_1)
-     INV:I->O              1   0.648   0.000  cpu0_ialu_div_Madd_cOperand1_not0000<1>1_INV_0 (cpu0_ialu_div_Madd_cOperand1_not0000<1>)
-     MUXCY:S->O            1   0.632   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1>)
+     FDE:C->Q              3   0.591   0.674  cpu0_idecode_AluOP1_0_1 (cpu0_idecode_AluOP1_0_1)
+     LUT1:I0->O            1   0.648   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>_rt (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.632   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<2> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<3> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<4> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<4>)
@@ -1013,7 +1155,7 @@ Delay:               30.523ns (Levels of Logic = 167)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<28> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<29> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<30> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<30>)
-     MUXCY:CI->O          64   0.269   1.304  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0003)
+     MUXCY:CI->O          65   0.269   1.305  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0003)
      LUT3:I2->O            3   0.648   0.531  cpu0_ialu_div_tremainder_0_mux00001 (cpu0_ialu_div_tremainder_0_mux0000)
      MUXCY:DI->O           1   0.787   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<1> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<2> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<2>)
@@ -1113,8 +1255,8 @@ Delay:               30.523ns (Levels of Logic = 167)
      LUT4:I3->O            1   0.648   0.000  cpu0_ialu_div_tremainder_9_mux00041 (cpu0_ialu_div_tremainder_9_mux0004)
      FDE:D                     0.252          cpu0_ialu_div_tremainder_9
     ----------------------------------------
-    Total                     30.523ns (21.558ns logic, 8.965ns route)
-                                       (70.6% logic, 29.4% route)
+    Total                     30.177ns (21.623ns logic, 8.554ns route)
+                                       (71.7% logic, 28.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
@@ -1177,14 +1319,14 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 302.00 secs
-Total CPU time to Xst completion: 301.83 secs
+Total REAL time to Xst completion: 149.00 secs
+Total CPU time to Xst completion: 148.96 secs
  
 --> 
 
-Total memory usage is 451668 kilobytes
+Total memory usage is 359840 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  215 (   0 filtered)
-Number of infos    :   16 (   0 filtered)
+Number of warnings :  272 (   0 filtered)
+Number of infos    :   28 (   0 filtered)
 

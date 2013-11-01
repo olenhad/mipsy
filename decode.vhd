@@ -29,6 +29,7 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
 entity decode is
 	PORT( CLK : in std_logic;
 			CurrentInstruction : in std_logic_vector(31 downto 0);
@@ -51,6 +52,7 @@ end decode;
 
 architecture Behavioral of decode is
 
+	signal registerFile : RegisterSet := (others => (others => '0'));
 begin
 -- Circuit can't be combinational because it needs to interface reads and writes to the RegisterFile
 
@@ -63,7 +65,7 @@ begin
 
 
 process(CLK)
-	variable registerFile : RegisterSet := (others => (others => '0'));
+
 	variable opcode : std_logic_vector(5 downto 0) := (others => '0'); 
 begin
 	if rising_edge(CLK) then
@@ -72,7 +74,7 @@ begin
 			--registerOut <= registerFile(to_integer(unsigned(WriteAddr)));
 			--registerOut <= x"000000" & b"000" & WriteAddr;
 		elsif RegWrite = '1' then
-			registerFile(to_integer(unsigned(WriteAddr))) := WriteData;
+			registerFile(to_integer(unsigned(WriteAddr))) <= WriteData;
 			lreg <= registerFile(to_integer(unsigned(WriteAddr)));
 			lregAddr <= WriteAddr;
 		else

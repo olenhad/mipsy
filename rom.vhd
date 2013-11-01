@@ -45,21 +45,33 @@ use work.utils.ALL;
 
  
 entity rom is
-port (EN : in std_logic;
+port (
+		 EN : in std_logic;
       ADDR : in std_logic_vector(31 downto 0);
       DATA : out std_logic_vector(31 downto 0));
 end rom;
 
 architecture Behavioral of rom is
-       
-signal rom_data : RomData := RomDefault;
-
+-- TODO. RomDefault       
+signal rom0 : RomData := (x"3c",x"8c",x"3c",x"8c",x"01",x"01",x"01",x"01",x"35",x"01",x"01",x"01",x"3c",x"8c",x"11",x"08",x"3c",x"ac",x"08",others => (others => '0')); 
+signal rom1 : RomData := (x"01",x"29",x"01",x"2a",x"49",x"69",x"4c",x"a9",x"cf",x"2f",x"30",x"49",x"01",x"29",x"e9",x"10",x"01",x"2f",x"10",others => (others => '0')); 
+signal rom2 : RomData := (x"10",x"00",x"10",x"00",x"58",x"60",x"68",x"70",x"00",x"80",x"88",x"90",x"10",x"00",x"00",x"00",x"10",x"00",x"00",others => (others => '0')); 
+signal rom3 : RomData := (x"01",x"00",x"01",x"04",x"20",x"22",x"24",x"25",x"01",x"27",x"2a",x"2a",x"01",x"08",x"01",x"0f",x"01",x"3c",x"0f",others => (others => '0')); 
 begin
-	data <= (rom_data(to_integer(unsigned(addr(19 downto 0)) + 3))) & 
-			  (rom_data(to_integer(unsigned(addr(19 downto 0)) + 2))) & 
-			  (rom_data(to_integer(unsigned(addr(19 downto 0)) + 1))) & 
-			  (rom_data(to_integer(unsigned(addr(19 downto 0))))) when en ='1' else 
-			  (others => '0');
+
+
+	data <= rom0(to_integer(unsigned(addr(19 downto 0)))) & 
+			  rom1(to_integer(unsigned(addr(19 downto 0)))) & 
+			  rom2(to_integer(unsigned(addr(19 downto 0)))) & 
+			  rom3(to_integer(unsigned(addr(19 downto 0))));
+			 
+
+--	data <= (rom_data(to_integer(unsigned(addr(19 downto 0)) + 3))) & 
+--			  (rom_data(to_integer(unsigned(addr(19 downto 0)) + 2))) & 
+--			  (rom_data(to_integer(unsigned(addr(19 downto 0)) + 1))) & 
+--			  (rom_data(to_integer(unsigned(addr(19 downto 0))))) when en ='1' else 
+--			  (others => '0');
+	--data <= (rom_data(to_integer(unsigned(addr(19 downto 0)) + 3))) & x"000000";
 
 end Behavioral;
 
