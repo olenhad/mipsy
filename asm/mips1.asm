@@ -1,7 +1,7 @@
 .data 
 val1: .word 10
 val2: .word 12
-assert: .word 12
+assert: .word 15
 
 .text
 
@@ -13,29 +13,29 @@ lw $t2, val2
 add $t3, $t2, $t1
 # 22
 
-sub $t7, $t3, $t1
+sub $t4, $t3, $t1
 # 12
 
-#and $t5, $t2, $t4
+and $t5, $t2, $t4
 # 12
 
-#or $t6, $t5, $t1
+or $t6, $t5, $t1
 # 14
-
-#ori $t7, $t6, 1
+ori $t7, $t6, 1
 # 15
 
-#nor $s0, $t1, $t7
+nor $s0, $t1, $t7
 #  FFFF shit
 
-#slt $s1, $t1, $s0
+slt $s1, $t1, $s0
 
 # 1
-#slt $s2, $t2, $t1
+slt $s2, $t2, $t1
 # 0
 
 # output 
 lw $t1, assert
+
 beq $t7, $t1, out
 
 exit:
