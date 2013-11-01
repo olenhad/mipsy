@@ -9,23 +9,23 @@ Target Device  : xc3s400a
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Fri Nov 01 02:34:26 2013
+Mapped Date    : Fri Nov 01 11:41:20 2013
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   60
+Number of warnings:   83
 Logic Utilization:
-  Number of Slice Flip Flops:         1,316 out of   7,168   18%
-  Number of 4 input LUTs:             5,049 out of   7,168   70%
+  Number of Slice Flip Flops:         1,522 out of   7,168   21%
+  Number of 4 input LUTs:             4,482 out of   7,168   62%
 Logic Distribution:
-  Number of occupied Slices:          3,419 out of   3,584   95%
-    Number of Slices containing only related logic:   3,419 out of   3,419 100%
-    Number of Slices containing unrelated logic:          0 out of   3,419   0%
+  Number of occupied Slices:          2,840 out of   3,584   79%
+    Number of Slices containing only related logic:   2,840 out of   2,840 100%
+    Number of Slices containing unrelated logic:          0 out of   2,840   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       5,106 out of   7,168   71%
-    Number used as logic:             4,717
-    Number used as a route-thru:         57
+  Total Number of 4 input LUTs:       4,530 out of   7,168   63%
+    Number used as logic:             4,150
+    Number used as a route-thru:         48
     Number used for Dual Port RAMs:     282
       (Two LUTs used per Dual Port RAM)
     Number used as Shift registers:      50
@@ -36,12 +36,12 @@ Logic Distribution:
   Number of bonded IOBs:                 11 out of     195    5%
   Number of BUFGMUXs:                     1 out of      24    4%
   Number of MULT18X18SIOs:                3 out of      20   15%
-  Number of RAMB16BWEs:                  17 out of      20   85%
+  Number of RAMB16BWEs:                  19 out of      20   95%
 
-Average Fanout of Non-Clock Nets:                3.62
+Average Fanout of Non-Clock Nets:                3.68
 
-Peak Memory Usage:  299 MB
-Total REAL time to MAP completion:  11 secs 
+Peak Memory Usage:  295 MB
+Total REAL time to MAP completion:  6 secs 
 Total CPU time to MAP completion:   6 secs 
 
 NOTES:
@@ -83,21 +83,17 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<30>10_SW2
+   failed to merge with F5 multiplexer cpu0_ialu_Result1_mux0005<30>2742_SW1_f5.
+    There is a conflict for the FXMUX.  The design will exhibit suboptimal
+   timing.
 WARNING:Pack:266 - The function generator
    cpu0_ialu_div_Mmux_cOperand1_mux0001221 failed to merge with F5 multiplexer
    cpu0_ialu_div_Mmux_cOperand1_mux0002_5_f6/MUXF5.I0.  There is a conflict for
    the GYMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<24>221
-   failed to merge with F5 multiplexer cpu0_ialu_Result1_mux0005<26>1563_SW0_f5.
-    There is a conflict for the FXMUX.  The design will exhibit suboptimal
-   timing.
 WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<27>221
    failed to merge with F5 multiplexer cpu0_ialu_Result1_mux0005<29>1564_SW0_f5.
     There is a conflict for the FXMUX.  The design will exhibit suboptimal
-   timing.
-WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<10>711
-   failed to merge with F5 multiplexer cpu0_ialu_Result1_mux0005<10>701_f5. 
-   There is a conflict for the FXMUX.  The design will exhibit suboptimal
    timing.
 WARNING:Pack:266 - The function generator
    mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
@@ -372,57 +368,105 @@ WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
    block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1>:<RA
    MB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[12].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[12].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[5].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[5].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[11].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[11].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[4].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[4].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA2> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA3> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA4> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA5> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA6> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA7> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[12].RAMB16_S2_1>:<R
-   AMB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[12].RAMB16_S2_1>:<R
-   AMB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[5].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[5].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[11].RAMB16_S2_1>:<R
-   AMB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[11].RAMB16_S2_1>:<R
-   AMB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[4].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[4].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA8> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA9> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA10> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA11> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA12> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA13> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA14> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA15> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA16> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA17> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA18> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA19> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA20> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA21> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA22> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA23> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA24> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA25> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA26> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA27> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA28> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA29> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA30> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA31> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
    block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[10].RAMB16_S2_1>:<R
    AMB16BWE_RAMB16BWE>.
@@ -439,7 +483,7 @@ WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network mcs0/UART_Interrupt has no load.
-INFO:LIT:395 - The above info message is repeated 150 more times for the
+INFO:LIT:395 - The above info message is repeated 86 more times for the
    following (max. 5 shown):
    mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<5>,
    mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<4>,
@@ -454,9 +498,9 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
- 149 block(s) removed
- 112 block(s) optimized away
- 101 signal(s) removed
+  65 block(s) removed
+  79 block(s) optimized away
+  17 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -640,134 +684,6 @@ The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<1>" is
 sourceless and has been removed.
 The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<0>" is
 sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<31>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<30>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<29>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<28>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<27>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<26>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<25>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<24>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<23>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<22>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<21>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<20>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<19>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<18>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<17>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<16>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<15>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<14>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<13>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<12>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<11>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<10>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<9>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<8>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<7>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<6>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<5>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<4>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<3>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<2>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<1>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<0>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<31>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<30>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<29>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<28>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<27>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<26>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<25>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<24>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<23>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<22>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<21>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<20>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<19>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<18>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<17>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<16>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<15>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<14>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<13>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<12>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<11>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<10>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<9>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<8>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<7>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<6>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<5>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<4>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<3>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<2>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<1>" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i<0>" is
-sourceless and has been removed.
 The signal
 "mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/iFetch_In_Progress_n" is
 sourceless and has been removed.
@@ -783,172 +699,6 @@ MUXCY_L_BUF" (BUF) removed.
     The signal
 "mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3/
 LO" is sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/write_data<15>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_15" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_15" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<16>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_16" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_16" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<17>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_17" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_17" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<18>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_18" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_18" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<19>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_19" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_19" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<20>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_20" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_20" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<21>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_21" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_21" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<22>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_22" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_22" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<23>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_23" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_23" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<24>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_24" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_24" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<25>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_25" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_25" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<26>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_26" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_26" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<27>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_27" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_27" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<28>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_28" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_28" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<29>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_29" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_29" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<30>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_30" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_30" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/write_data<31>" is sourceless and has been
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_31" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_31" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_Read_inv" is
-sourceless and has been removed.
-The signal "mcs0/U0/iomodule_0/gpo2_write" is sourceless and has been removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_0" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_1" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_2" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_3" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_4" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_5" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_6" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_7" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_8" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_9" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_10" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_11" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_12" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_13" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_14" (SFF)
-removed.
-The signal "mcs0/U0/iomodule_0/gpo3_write" is sourceless and has been removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_0" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_1" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_2" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_3" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_4" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_5" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_6" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_7" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_8" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_9" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_10" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_11" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_12" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_13" (SFF)
-removed.
- Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_14" (SFF)
-removed.
 The signal "mcs0/U0/iomodule_0/gpo1_write" is sourceless and has been removed.
  Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i_0" (SFF)
 removed.
@@ -980,31 +730,10 @@ GA.Buffer_DFFs[1].buffer_Addr_MUXCY_L/MUXCY_L_BUF" (BUF) removed.
   The signal
 "mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FP
 GA.Buffer_DFFs[1].buffer_Addr_MUXCY_L/LO" is sourceless and has been removed.
-Unused block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_Read_inv1" (ROM)
-removed.
 Unused block
 "mcs0/U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/UART_Inte
 rrupt1" (ROM) removed.
 Unused block "mcs0/U0/iomodule_0/gpo1_write1" (ROM) removed.
-Unused block "mcs0/U0/iomodule_0/gpo2_write1" (ROM) removed.
-Unused block "mcs0/U0/iomodule_0/gpo3_write1" (ROM) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_15" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_16" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_17" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_18" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_19" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_20" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_21" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_22" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_23" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_24" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_25" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_26" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_27" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_28" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_29" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_30" (FF) removed.
-Unused block "mcs0/U0/iomodule_0/write_data_31" (FF) removed.
 Unused block
 "mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/iFetch_In_Progress_n1_INV_
 0" (BUF) removed.
@@ -1019,66 +748,6 @@ Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_10
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_11
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_12
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_13
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_14
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_15
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_16
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_17
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_18
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_19
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_2
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_20
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_21
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_22
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_23
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_24
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_25
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_26
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_27
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_28
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_29
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_30
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_31
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_5
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_6
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_7
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_8
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I2/GPI_In_9
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_0
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_1
-   optimized to 0
 FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_10
    optimized to 0
 FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_11
@@ -1098,8 +767,6 @@ FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_17
 FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_18
    optimized to 0
 FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_19
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_2
    optimized to 0
 FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_20
    optimized to 0
@@ -1121,13 +788,9 @@ FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_28
    optimized to 0
 FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_29
    optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_3
-   optimized to 0
 FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_30
    optimized to 0
 FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_31
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_4
    optimized to 0
 FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_5
    optimized to 0

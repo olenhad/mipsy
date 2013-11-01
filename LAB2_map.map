@@ -9,25 +9,21 @@ Target Device  : xc3s400a
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Fri Nov 01 02:34:26 2013
+Mapped Date    : Fri Nov 01 11:41:20 2013
 
 Mapping design into LUTs...
 Running directed packing...
+WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<30>10_SW2
+   failed to merge with F5 multiplexer cpu0_ialu_Result1_mux0005<30>2742_SW1_f5.
+    There is a conflict for the FXMUX.  The design will exhibit suboptimal
+   timing.
 WARNING:Pack:266 - The function generator
    cpu0_ialu_div_Mmux_cOperand1_mux0001221 failed to merge with F5 multiplexer
    cpu0_ialu_div_Mmux_cOperand1_mux0002_5_f6/MUXF5.I0.  There is a conflict for
    the GYMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<24>221
-   failed to merge with F5 multiplexer cpu0_ialu_Result1_mux0005<26>1563_SW0_f5.
-    There is a conflict for the FXMUX.  The design will exhibit suboptimal
-   timing.
 WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<27>221
    failed to merge with F5 multiplexer cpu0_ialu_Result1_mux0005<29>1564_SW0_f5.
     There is a conflict for the FXMUX.  The design will exhibit suboptimal
-   timing.
-WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<10>711
-   failed to merge with F5 multiplexer cpu0_ialu_Result1_mux0005<10>701_f5. 
-   There is a conflict for the FXMUX.  The design will exhibit suboptimal
    timing.
 WARNING:Pack:266 - The function generator
    mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
@@ -305,57 +301,105 @@ WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
    block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1>:<RA
    MB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[12].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[12].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[5].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[5].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[11].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[11].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[4].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[4].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA2> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA3> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA4> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA5> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA6> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA7> on
-   block:<cpu0_irom_Mrom_DATA_varindex0003>:<RAMB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[12].RAMB16_S2_1>:<R
-   AMB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[12].RAMB16_S2_1>:<R
-   AMB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[5].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[5].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[11].RAMB16_S2_1>:<R
-   AMB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[11].RAMB16_S2_1>:<R
-   AMB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[4].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[4].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
-WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
-   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1>:<RA
-   MB16BWE_RAMB16BWE>.
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA8> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA9> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA10> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA11> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA12> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA13> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA14> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA15> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA16> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA17> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA18> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA19> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA20> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA21> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA22> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA23> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA24> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA25> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA26> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA27> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA28> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA29> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA30> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA31> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
    block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[10].RAMB16_S2_1>:<R
    AMB16BWE_RAMB16BWE>.
@@ -374,18 +418,18 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:   60
+Number of warnings:   83
 Logic Utilization:
-  Number of Slice Flip Flops:         1,316 out of   7,168   18%
-  Number of 4 input LUTs:             5,049 out of   7,168   70%
+  Number of Slice Flip Flops:         1,522 out of   7,168   21%
+  Number of 4 input LUTs:             4,482 out of   7,168   62%
 Logic Distribution:
-  Number of occupied Slices:          3,419 out of   3,584   95%
-    Number of Slices containing only related logic:   3,419 out of   3,419 100%
-    Number of Slices containing unrelated logic:          0 out of   3,419   0%
+  Number of occupied Slices:          2,840 out of   3,584   79%
+    Number of Slices containing only related logic:   2,840 out of   2,840 100%
+    Number of Slices containing unrelated logic:          0 out of   2,840   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       5,106 out of   7,168   71%
-    Number used as logic:             4,717
-    Number used as a route-thru:         57
+  Total Number of 4 input LUTs:       4,530 out of   7,168   63%
+    Number used as logic:             4,150
+    Number used as a route-thru:         48
     Number used for Dual Port RAMs:     282
       (Two LUTs used per Dual Port RAM)
     Number used as Shift registers:      50
@@ -396,12 +440,12 @@ Logic Distribution:
   Number of bonded IOBs:                 11 out of     195    5%
   Number of BUFGMUXs:                     1 out of      24    4%
   Number of MULT18X18SIOs:                3 out of      20   15%
-  Number of RAMB16BWEs:                  17 out of      20   85%
+  Number of RAMB16BWEs:                  19 out of      20   95%
 
-Average Fanout of Non-Clock Nets:                3.62
+Average Fanout of Non-Clock Nets:                3.68
 
-Peak Memory Usage:  299 MB
-Total REAL time to MAP completion:  11 secs 
+Peak Memory Usage:  295 MB
+Total REAL time to MAP completion:  6 secs 
 Total CPU time to MAP completion:   6 secs 
 
 NOTES:

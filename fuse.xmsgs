@@ -5,5 +5,14 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="HDLCompiler" num="432" delta="unknown" >"C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 35: Formal &lt;<arg fmt="%s" index="1">cpu_op1</arg>&gt; has no actual or default value.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="432" delta="unknown" >"C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 36: Formal &lt;<arg fmt="%s" index="1">cpu_op2</arg>&gt; has no actual or default value.
+</msg>
+
+<msg type="error" file="Simulator" num="777" delta="unknown" >Static elaboration of top level VHDL design unit <arg fmt="%s" index="1">test_cpu</arg> in library <arg fmt="%s" index="2">work</arg> failed
+</msg>
+
 </messages>
 

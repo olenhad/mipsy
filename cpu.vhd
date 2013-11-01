@@ -32,11 +32,14 @@ use work.utils.ALL;
 
 entity cpu is
     Port ( CLK : in  STD_LOGIC;
+			  cpu_op1 : in STD_LOGIC_VECTOR (31 downto 0);
+			  cpu_op2 : in STD_LOGIC_VECTOR (31 downto 0);
 --			  DHalt : in std_logic;
 --	        DRegAddr : in std_logic_vector(4 downto 0);
 --			  DMemAddr : out std_logic_vector(31 downto 0);
 			  DRegOut : out std_logic_vector(31 downto 0);
 			  DOutput : out std_logic_vector(31 downto 0);
+			  DOutput2 : out std_logic_vector(31 downto 0);
 --			  DMemOut : out std_logic_vector(31 downto 0);
 --			  DCPUState : out std_logic_vector(31 downto 0);
 			  DCurrentIns : out std_logic_vector(31 downto 0);
@@ -126,7 +129,7 @@ signal alu_r2 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_debug : std_logic_vector(31 downto 0) := (others => '0');
 
 
-signal RAM0: RamData := (0 => x"0a", 1 => x"0c", 2 => x"0f", others => (others => '0'));
+signal RAM0: RamData := (0 => x"00", 1 => x"02", 2 => x"0f", others => (others => '0'));
 signal RAM1: RamData := (others => (others => '0'));
 signal RAM2: RamData := (others => (others => '0'));
 signal RAM3: RamData := (others => (others => '0'));
@@ -198,10 +201,31 @@ process(CLK)
 	variable waitCounter : integer := 0;
 	variable tconcat : std_logic_vector(17 downto 0);
 	variable ram_WE : std_logic := '0';
+	variable vlreg : std_logic_vector(31 downto 0) := (others => '0');
+	variable vlregAddr : std_logic_vector(4 downto 0) := (others => '0');
+	variable prev_op1 : STD_LOGIC_VECTOR (31 downto 0):= (others => '0');
+	variable prev_op2 : STD_LOGIC_VECTOR (31 downto 0):= (others => '0');
 begin
 	
 	if rising_edge(CLK) then
-	
+		vlreg := decode_lreg;
+		vlregAddr := decode_lregAddr;
+		
+		if(prev_op1 /= cpu_op1) then
+			prev_op1 := cpu_op1;
+			RAM0(0) <= prev_op1(7 downto 0);
+			RAM1(0) <= prev_op1(15 downto 8);
+			RAM2(0) <= prev_op1(23 downto 16);
+			RAM3(0) <= prev_op1(31 downto 24);
+		end if;
+		
+		if(prev_op2 /= cpu_op2) then
+			prev_op2 := cpu_op2;
+			RAM0(1) <= prev_op2(7 downto 0);
+			RAM1(1) <= prev_op2(15 downto 8);
+			RAM2(1) <= prev_op2(23 downto 16);
+			RAM3(1) <= prev_op2(31 downto 24);
+		end if;
 		
 		if waitCounter = 0 then
 			
@@ -348,13 +372,16 @@ begin
 	end if;
 
 rom_ADDR <= pc;
+DRegOutAddr <= vlregAddr;
+DRegOut <= vlreg;
 --DMeMOut <= pc;
 
 end process;
 
-DRegOut <= decode_lreg;
+
 
 DOutput <= ram3(15) & ram2(15) & ram1(15) & ram0(15);
+DOutput2 <= ram3(14) & ram2(14) & ram1(14) & ram0(14);
 
 --RAM(63) & RAM(62) & RAM(61) & RAM(60);
 
@@ -366,7 +393,7 @@ alu_op2 <= decode_AluOP2;
 
 alu_control <= decode_AluControl;
 --DAluR1 <= alu_r1;
-DRegOutAddr <= decode_lregAddr;
+
 
 --DMemOut <= ram_DO;
 --DMemAddr <= ram_addr;

@@ -73,12 +73,15 @@ begin
 		if currentInstruction = x"FFFFFFFF" then
 			--registerOut <= registerFile(to_integer(unsigned(WriteAddr)));
 			--registerOut <= x"000000" & b"000" & WriteAddr;
+			
 		elsif RegWrite = '1' then
 			registerFile(to_integer(unsigned(WriteAddr))) <= WriteData;
-			lreg <= registerFile(to_integer(unsigned(WriteAddr)));
+			lreg <= WriteData;
 			lregAddr <= WriteAddr;
 		else
-		
+--			lreg <= (others=>'0');
+--			lregAddr <= (others=>'0');
+			
 			opcode := currentInstruction(31 downto 26);
 			ControlSignals <= (others => '0');
 			registerOut <= (others => '0');
