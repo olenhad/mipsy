@@ -12,29 +12,14 @@ main:
 lw $t1, in1
 lw $t2, in2
 
-sub $t4, $t2, $t1
-add $t5, $t2, $t1
+sll $t4, $t2, 2
+sra $t5, $t1, 1
 
-beq $t1,$t2,equal
-
-unequal:
 lui $1, 0x1001
 sw $t4, 64($1)
 
 lui $1, 0x1001
 sw $t5, 68($1)
-j exit
-
-equal:
- lw $t6, val1
- lui $1, 0x1001
- sw $t6, 64($1)
- 
- lw $t7, val2
- lui $1, 0x1001
- sw $t7, 68($1)
- 
-exit:
 
 j main
 
