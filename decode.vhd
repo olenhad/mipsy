@@ -66,7 +66,9 @@ begin
 
 process(CLK)
 
-	variable opcode : std_logic_vector(5 downto 0) := (others => '0'); 
+	variable opcode : std_logic_vector(5 downto 0) := (others => '0');
+	variable part1 : std_logic_vector(31 downto 0) := (others => '0'); 
+	variable part2 : std_logic_vector(31 downto 0) := (others => '0'); 	
 begin
 	if rising_edge(CLK) then
 		
@@ -117,7 +119,7 @@ begin
 			-- currentInstruction (25 downto 21) denotes rs, which contains base address
 				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
 			-- Alu Control set to Add.
-				AluControl <=  b"100001";
+				AluControl <=  b"100000";
 			-- TODO set ControlSignals appropriately
 			-- ControlSignals
 			-- 0 => Branch
@@ -133,6 +135,7 @@ begin
 			-- Store Word (2B)
 				AluOP2 <= x"0000" & b"00" & CurrentInstruction(15 downto 2);
 			-- currentInstruction (25 downto 21) denotes rs, which contains base address
+
 				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
 			-- Alu Control set to Add.
 				AluControl <=  b"100000";
@@ -145,7 +148,8 @@ begin
 			-- 4 => MemToReg
 			-- MemWrite => 1	
 				ControlSignals <= b"00100";
-				
+			-- registerOut contains contents of rt.
+			
 				registerOut <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
 				RegWBAddr <= currentInstruction(20 downto 16);
 			elsif opcode = b"001111" then

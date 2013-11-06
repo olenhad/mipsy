@@ -3,13 +3,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: LAB2.prj
@@ -122,8 +122,7 @@ Architecture behavioral of Entity div32 is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd" in Library work.
 Architecture utils of Entity utils is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" in Library work.
-Entity <rom> compiled.
-Entity <rom> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity rom is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" in Library work.
 Architecture behavioral of Entity decode is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
@@ -173,38 +172,43 @@ WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project
 WARNING:Xst:2211 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 119: Instantiating black box module <mcs>.
 WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 156: Unconnected output port 'DRegOut' of component 'cpu'.
 WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 156: Unconnected output port 'DCurrentIns' of component 'cpu'.
+WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 156: Unconnected output port 'DAlu1' of component 'cpu'.
+WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 156: Unconnected output port 'DAlu2' of component 'cpu'.
+WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" line 156: Unconnected output port 'DAluR1' of component 'cpu'.
 Entity <LAB2> analyzed. Unit <LAB2> generated.
 
 Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 302: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 303: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 304: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 305: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 353: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 308: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 309: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 310: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 311: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 360: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <RAM3> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 353: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 360: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <RAM2> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 353: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 360: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <RAM1> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 353: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 360: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <RAM0> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:819 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 197: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <decode_registerOut>
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <rom> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom0> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom1> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom2> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom3> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 Entity <rom> analyzed. Unit <rom> generated.
 
 Analyzing Entity <decode> in library <work> (Architecture <behavioral>).
-WARNING:Xst:795 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" line 100: Size of operands are different : result is <false>.
-WARNING:Xst:795 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" line 100: Size of operands are different : result is <false>.
-WARNING:Xst:795 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" line 100: Size of operands are different : result is <false>.
+WARNING:Xst:795 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" line 102: Size of operands are different : result is <false>.
+WARNING:Xst:795 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" line 102: Size of operands are different : result is <false>.
+WARNING:Xst:795 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" line 102: Size of operands are different : result is <false>.
 Entity <decode> analyzed. Unit <decode> generated.
 
 Analyzing Entity <alu> in library <work> (Architecture <behavioral>).
@@ -397,6 +401,7 @@ Unit <alu> synthesized.
 Synthesizing Unit <cpu>.
     Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd".
 WARNING:Xst:1780 - Signal <rom_EN> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <decode_lreg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <currentIns<31:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <alu_r2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <alu_debug> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -418,29 +423,30 @@ WARNING:Xst:646 - Signal <alu_debug> is assigned but never used. This unconnecte
     Found 1-bit register for signal <decode_RegWrite>.
     Found 5-bit register for signal <decode_WriteAddr>.
     Found 32-bit register for signal <decode_WriteData>.
-    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0000> created at line 353.
-    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0001> created at line 353.
-    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0002> created at line 353.
-    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0003> created at line 353.
+    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0000> created at line 360.
+    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0001> created at line 360.
+    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0002> created at line 360.
+    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0003> created at line 360.
     Found 32-bit register for signal <pc>.
     Found 32-bit adder for signal <pc$share0000>.
     Found 32-bit register for signal <prev_op1>.
-    Found 32-bit comparator not equal for signal <prev_op1$cmp_ne0000> created at line 214.
+    Found 32-bit comparator not equal for signal <prev_op1$cmp_ne0000> created at line 216.
     Found 32-bit register for signal <prev_op2>.
-    Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0000> created at line 222.
+    Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0000> created at line 224.
     Found 128-bit register for signal <RAM0>.
     Found 128-bit register for signal <RAM1>.
     Found 128-bit register for signal <RAM2>.
-    Found 32-bit comparator not equal for signal <RAM2_0$cmp_ne0000> created at line 214.
-    Found 32-bit comparator not equal for signal <RAM2_1$cmp_ne0000> created at line 222.
+    Found 32-bit comparator not equal for signal <RAM2_0$cmp_ne0000> created at line 216.
+    Found 32-bit comparator not equal for signal <RAM2_1$cmp_ne0000> created at line 224.
     Found 128-bit register for signal <RAM3>.
-    Found 32-bit register for signal <vlreg>.
+    Found 32-bit register for signal <res1Reg>.
+    Found 32-bit register for signal <res2Reg>.
     Found 5-bit register for signal <vlregAddr>.
     Found 32-bit down counter for signal <waitCounter>.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   1 Counter(s).
-	inferred 779 D-type flip-flop(s).
+	inferred 811 D-type flip-flop(s).
 	inferred   1 Adder/Subtractor(s).
 	inferred   4 Comparator(s).
 	inferred  32 Multiplexer(s).
@@ -471,9 +477,9 @@ Macro Statistics
  64-bit adder                                          : 1
 # Counters                                             : 1
  32-bit down counter                                   : 1
-# Registers                                            : 161
+# Registers                                            : 162
  1-bit register                                        : 71
- 32-bit register                                       : 20
+ 32-bit register                                       : 21
  5-bit register                                        : 5
  6-bit register                                        : 1
  8-bit register                                        : 64
@@ -637,10 +643,10 @@ Macro Statistics
  32-bit comparator greatequal                          : 5
  32-bit comparator less                                : 5
  32-bit comparator not equal                           : 9
-# Multiplexers                                         : 39
- 1-bit 16-to-1 multiplexer                             : 32
+# Multiplexers                                         : 11
  1-bit 32-to-1 multiplexer                             : 1
  32-bit 4-to-1 multiplexer                             : 6
+ 8-bit 16-to-1 multiplexer                             : 4
 # Xors                                                 : 5
  1-bit xor2                                            : 4
  32-bit xor2                                           : 1
@@ -807,70 +813,6 @@ WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_7> of sequential type is unconn
 WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_5> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_4> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_3> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_31> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_30> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_29> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_28> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_27> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_26> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_25> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_24> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_23> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_22> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_21> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_20> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_19> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_18> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_17> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_16> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_15> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_14> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_13> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_12> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_11> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_10> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_9> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_8> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_7> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_6> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_5> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_4> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_3> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_2> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_1> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_vlreg_0> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_31> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_30> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_29> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_28> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_27> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_26> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_25> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_24> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_23> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_22> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_21> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_20> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_19> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_18> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_17> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_16> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_15> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_14> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_13> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_12> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_11> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_10> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_9> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_8> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_7> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_6> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_5> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_4> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_3> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_2> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_1> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_idecode_lreg_0> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_DCurrentIns_31> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_DCurrentIns_30> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_DCurrentIns_29> of sequential type is unconnected in block <LAB2>.
@@ -943,8 +885,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1039
- Flip-Flops                                            : 1039
+# Registers                                            : 1103
+ Flip-Flops                                            : 1103
 
 =========================================================================
 
@@ -973,31 +915,31 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 6454
+# BELS                             : 6455
 #      GND                         : 2
-#      INV                         : 292
+#      INV                         : 291
 #      LUT1                        : 13
 #      LUT2                        : 329
 #      LUT2_D                      : 11
 #      LUT2_L                      : 3
-#      LUT3                        : 1249
-#      LUT3_D                      : 42
+#      LUT3                        : 1260
+#      LUT3_D                      : 43
 #      LUT3_L                      : 6
-#      LUT4                        : 2193
-#      LUT4_D                      : 9
-#      LUT4_L                      : 87
+#      LUT4                        : 2185
+#      LUT4_D                      : 8
+#      LUT4_L                      : 91
 #      MULT_AND                    : 94
 #      MUXCY                       : 786
 #      MUXCY_L                     : 77
-#      MUXF5                       : 593
+#      MUXF5                       : 588
 #      MUXF6                       : 69
 #      MUXF7                       : 34
 #      MUXF8                       : 1
 #      VCC                         : 2
 #      XORCY                       : 562
-# FlipFlops/Latches                : 1630
+# FlipFlops/Latches                : 1694
 #      FD                          : 97
-#      FDE                         : 1076
+#      FDE                         : 1140
 #      FDR                         : 168
 #      FDRE                        : 214
 #      FDRS                        : 2
@@ -1024,10 +966,10 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     2427  out of   3584    67%  
- Number of Slice Flip Flops:           1630  out of   7168    22%  
- Number of 4 input LUTs:               4566  out of   7168    63%  
-    Number used as logic:              4234
+ Number of Slices:                     2482  out of   3584    69%  
+ Number of Slice Flip Flops:           1694  out of   7168    23%  
+ Number of 4 input LUTs:               4572  out of   7168    63%  
+    Number used as logic:              4240
     Number used as Shift registers:      50
     Number used as RAMs:                282
  Number of IOs:                          11
@@ -1057,7 +999,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 1840  |
+Clk                                | BUFGP                  | 1904  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1080,7 +1022,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
   Clock period: 30.177ns (frequency: 33.138MHz)
-  Total number of paths / destination ports: 626520533969 / 5604
+  Total number of paths / destination ports: 626520527979 / 5732
 -------------------------------------------------------------------------
 Delay:               30.177ns (Levels of Logic = 168)
   Source:            cpu0_idecode_AluOP1_0_1 (FF)
@@ -1328,13 +1270,13 @@ Delay:               5.816ns (Levels of Logic = 2)
 
 
 Total REAL time to Xst completion: 56.00 secs
-Total CPU time to Xst completion: 55.59 secs
+Total CPU time to Xst completion: 55.80 secs
  
 --> 
 
-Total memory usage is 401816 kilobytes
+Total memory usage is 400728 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  290 (   0 filtered)
+Number of warnings :  231 (   0 filtered)
 Number of infos    :   36 (   0 filtered)
 

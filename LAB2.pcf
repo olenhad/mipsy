@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.61xd on Fri Nov 01 11:41:24 2013
+// Written by: Map O.61xd on Thu Nov 07 01:06:22 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -264,39 +264,39 @@ TIMEGRP TNM_Clk = BEL "cpu0_ialu_mulIsSigned" BEL "cpu0_ialu_divIsSigned" BEL
         "cpu0_waitCounter_9" BEL "cpu0_waitCounter_8" BEL "cpu0_waitCounter_7"
         BEL "cpu0_waitCounter_6" BEL "cpu0_waitCounter_5" BEL
         "cpu0_waitCounter_4" BEL "cpu0_waitCounter_3" BEL "cpu0_waitCounter_2"
-        BEL "cpu0_waitCounter_1" BEL "cpu0_waitCounter_0" BEL "cpu0_RAM3_8_7"
-        BEL "cpu0_RAM3_8_6" BEL "cpu0_RAM3_8_5" BEL "cpu0_RAM3_8_4" BEL
-        "cpu0_RAM3_8_3" BEL "cpu0_RAM3_8_2" BEL "cpu0_RAM3_8_1" BEL
-        "cpu0_RAM3_8_0" BEL "cpu0_RAM0_6_7" BEL "cpu0_RAM0_6_6" BEL
-        "cpu0_RAM0_6_5" BEL "cpu0_RAM0_6_4" BEL "cpu0_RAM0_6_3" BEL
-        "cpu0_RAM0_6_2" BEL "cpu0_RAM0_6_1" BEL "cpu0_RAM0_6_0" BEL
+        BEL "cpu0_waitCounter_1" BEL "cpu0_waitCounter_0" BEL "cpu0_RAM0_6_7"
+        BEL "cpu0_RAM0_6_6" BEL "cpu0_RAM0_6_5" BEL "cpu0_RAM0_6_4" BEL
+        "cpu0_RAM0_6_3" BEL "cpu0_RAM0_6_2" BEL "cpu0_RAM0_6_1" BEL
+        "cpu0_RAM0_6_0" BEL "cpu0_RAM3_8_7" BEL "cpu0_RAM3_8_6" BEL
+        "cpu0_RAM3_8_5" BEL "cpu0_RAM3_8_4" BEL "cpu0_RAM3_8_3" BEL
+        "cpu0_RAM3_8_2" BEL "cpu0_RAM3_8_1" BEL "cpu0_RAM3_8_0" BEL
         "cpu0_RAM0_5_7" BEL "cpu0_RAM0_5_6" BEL "cpu0_RAM0_5_5" BEL
         "cpu0_RAM0_5_4" BEL "cpu0_RAM0_5_3" BEL "cpu0_RAM0_5_2" BEL
-        "cpu0_RAM0_5_1" BEL "cpu0_RAM0_5_0" BEL "cpu0_RAM3_7_7" BEL
-        "cpu0_RAM3_7_6" BEL "cpu0_RAM3_7_5" BEL "cpu0_RAM3_7_4" BEL
-        "cpu0_RAM3_7_3" BEL "cpu0_RAM3_7_2" BEL "cpu0_RAM3_7_1" BEL
-        "cpu0_RAM3_7_0" BEL "cpu0_RAM3_6_7" BEL "cpu0_RAM3_6_6" BEL
-        "cpu0_RAM3_6_5" BEL "cpu0_RAM3_6_4" BEL "cpu0_RAM3_6_3" BEL
-        "cpu0_RAM3_6_2" BEL "cpu0_RAM3_6_1" BEL "cpu0_RAM3_6_0" BEL
-        "cpu0_RAM0_3_7" BEL "cpu0_RAM0_3_6" BEL "cpu0_RAM0_3_5" BEL
-        "cpu0_RAM0_3_4" BEL "cpu0_RAM0_3_3" BEL "cpu0_RAM0_3_2" BEL
-        "cpu0_RAM0_3_1" BEL "cpu0_RAM0_3_0" BEL "cpu0_RAM0_4_7" BEL
+        "cpu0_RAM0_5_1" BEL "cpu0_RAM0_5_0" BEL "cpu0_RAM0_4_7" BEL
         "cpu0_RAM0_4_6" BEL "cpu0_RAM0_4_5" BEL "cpu0_RAM0_4_4" BEL
         "cpu0_RAM0_4_3" BEL "cpu0_RAM0_4_2" BEL "cpu0_RAM0_4_1" BEL
-        "cpu0_RAM0_4_0" BEL "cpu0_RAM2_15_7" BEL "cpu0_RAM2_15_6" BEL
-        "cpu0_RAM2_15_5" BEL "cpu0_RAM2_15_4" BEL "cpu0_RAM2_15_3" BEL
-        "cpu0_RAM2_15_2" BEL "cpu0_RAM2_15_1" BEL "cpu0_RAM2_15_0" BEL
-        "cpu0_RAM0_2_7" BEL "cpu0_RAM0_2_6" BEL "cpu0_RAM0_2_5" BEL
-        "cpu0_RAM0_2_4" BEL "cpu0_RAM0_2_3" BEL "cpu0_RAM0_2_2" BEL
-        "cpu0_RAM0_2_1" BEL "cpu0_RAM0_2_0" BEL "cpu0_RAM3_5_7" BEL
+        "cpu0_RAM0_4_0" BEL "cpu0_RAM3_6_7" BEL "cpu0_RAM3_6_6" BEL
+        "cpu0_RAM3_6_5" BEL "cpu0_RAM3_6_4" BEL "cpu0_RAM3_6_3" BEL
+        "cpu0_RAM3_6_2" BEL "cpu0_RAM3_6_1" BEL "cpu0_RAM3_6_0" BEL
+        "cpu0_RAM3_7_7" BEL "cpu0_RAM3_7_6" BEL "cpu0_RAM3_7_5" BEL
+        "cpu0_RAM3_7_4" BEL "cpu0_RAM3_7_3" BEL "cpu0_RAM3_7_2" BEL
+        "cpu0_RAM3_7_1" BEL "cpu0_RAM3_7_0" BEL "cpu0_RAM3_5_7" BEL
         "cpu0_RAM3_5_6" BEL "cpu0_RAM3_5_5" BEL "cpu0_RAM3_5_4" BEL
         "cpu0_RAM3_5_3" BEL "cpu0_RAM3_5_2" BEL "cpu0_RAM3_5_1" BEL
-        "cpu0_RAM3_5_0" BEL "cpu0_RAM2_14_7" BEL "cpu0_RAM2_14_6" BEL
+        "cpu0_RAM3_5_0" BEL "cpu0_RAM2_15_7" BEL "cpu0_RAM2_15_6" BEL
+        "cpu0_RAM2_15_5" BEL "cpu0_RAM2_15_4" BEL "cpu0_RAM2_15_3" BEL
+        "cpu0_RAM2_15_2" BEL "cpu0_RAM2_15_1" BEL "cpu0_RAM2_15_0" BEL
+        "cpu0_RAM0_3_7" BEL "cpu0_RAM0_3_6" BEL "cpu0_RAM0_3_5" BEL
+        "cpu0_RAM0_3_4" BEL "cpu0_RAM0_3_3" BEL "cpu0_RAM0_3_2" BEL
+        "cpu0_RAM0_3_1" BEL "cpu0_RAM0_3_0" BEL "cpu0_RAM3_4_7" BEL
+        "cpu0_RAM3_4_6" BEL "cpu0_RAM3_4_5" BEL "cpu0_RAM3_4_4" BEL
+        "cpu0_RAM3_4_3" BEL "cpu0_RAM3_4_2" BEL "cpu0_RAM3_4_1" BEL
+        "cpu0_RAM3_4_0" BEL "cpu0_RAM2_14_7" BEL "cpu0_RAM2_14_6" BEL
         "cpu0_RAM2_14_5" BEL "cpu0_RAM2_14_4" BEL "cpu0_RAM2_14_3" BEL
         "cpu0_RAM2_14_2" BEL "cpu0_RAM2_14_1" BEL "cpu0_RAM2_14_0" BEL
-        "cpu0_RAM3_4_7" BEL "cpu0_RAM3_4_6" BEL "cpu0_RAM3_4_5" BEL
-        "cpu0_RAM3_4_4" BEL "cpu0_RAM3_4_3" BEL "cpu0_RAM3_4_2" BEL
-        "cpu0_RAM3_4_1" BEL "cpu0_RAM3_4_0" BEL "cpu0_RAM3_3_7" BEL
+        "cpu0_RAM0_2_7" BEL "cpu0_RAM0_2_6" BEL "cpu0_RAM0_2_5" BEL
+        "cpu0_RAM0_2_4" BEL "cpu0_RAM0_2_3" BEL "cpu0_RAM0_2_2" BEL
+        "cpu0_RAM0_2_1" BEL "cpu0_RAM0_2_0" BEL "cpu0_RAM3_3_7" BEL
         "cpu0_RAM3_3_6" BEL "cpu0_RAM3_3_5" BEL "cpu0_RAM3_3_4" BEL
         "cpu0_RAM3_3_3" BEL "cpu0_RAM3_3_2" BEL "cpu0_RAM3_3_1" BEL
         "cpu0_RAM3_3_0" BEL "cpu0_RAM2_13_7" BEL "cpu0_RAM2_13_6" BEL
@@ -318,123 +318,145 @@ TIMEGRP TNM_Clk = BEL "cpu0_ialu_mulIsSigned" BEL "cpu0_ialu_divIsSigned" BEL
         "cpu0_RAM1_9_0" BEL "cpu0_RAM1_8_7" BEL "cpu0_RAM1_8_6" BEL
         "cpu0_RAM1_8_5" BEL "cpu0_RAM1_8_4" BEL "cpu0_RAM1_8_3" BEL
         "cpu0_RAM1_8_2" BEL "cpu0_RAM1_8_1" BEL "cpu0_RAM1_8_0" BEL
-        "cpu0_RAM1_15_7" BEL "cpu0_RAM1_15_6" BEL "cpu0_RAM1_15_5" BEL
-        "cpu0_RAM1_15_4" BEL "cpu0_RAM1_15_3" BEL "cpu0_RAM1_15_2" BEL
-        "cpu0_RAM1_15_1" BEL "cpu0_RAM1_15_0" BEL "cpu0_RAM1_6_7" BEL
-        "cpu0_RAM1_6_6" BEL "cpu0_RAM1_6_5" BEL "cpu0_RAM1_6_4" BEL
-        "cpu0_RAM1_6_3" BEL "cpu0_RAM1_6_2" BEL "cpu0_RAM1_6_1" BEL
-        "cpu0_RAM1_6_0" BEL "cpu0_RAM1_7_7" BEL "cpu0_RAM1_7_6" BEL
-        "cpu0_RAM1_7_5" BEL "cpu0_RAM1_7_4" BEL "cpu0_RAM1_7_3" BEL
-        "cpu0_RAM1_7_2" BEL "cpu0_RAM1_7_1" BEL "cpu0_RAM1_7_0" BEL
+        "cpu0_RAM1_7_7" BEL "cpu0_RAM1_7_6" BEL "cpu0_RAM1_7_5" BEL
+        "cpu0_RAM1_7_4" BEL "cpu0_RAM1_7_3" BEL "cpu0_RAM1_7_2" BEL
+        "cpu0_RAM1_7_1" BEL "cpu0_RAM1_7_0" BEL "cpu0_RAM1_15_7" BEL
+        "cpu0_RAM1_15_6" BEL "cpu0_RAM1_15_5" BEL "cpu0_RAM1_15_4" BEL
+        "cpu0_RAM1_15_3" BEL "cpu0_RAM1_15_2" BEL "cpu0_RAM1_15_1" BEL
+        "cpu0_RAM1_15_0" BEL "cpu0_RAM1_14_7" BEL "cpu0_RAM1_14_6" BEL
+        "cpu0_RAM1_14_5" BEL "cpu0_RAM1_14_4" BEL "cpu0_RAM1_14_3" BEL
+        "cpu0_RAM1_14_2" BEL "cpu0_RAM1_14_1" BEL "cpu0_RAM1_14_0" BEL
         "cpu0_RAM1_5_7" BEL "cpu0_RAM1_5_6" BEL "cpu0_RAM1_5_5" BEL
         "cpu0_RAM1_5_4" BEL "cpu0_RAM1_5_3" BEL "cpu0_RAM1_5_2" BEL
-        "cpu0_RAM1_5_1" BEL "cpu0_RAM1_5_0" BEL "cpu0_RAM1_14_7" BEL
-        "cpu0_RAM1_14_6" BEL "cpu0_RAM1_14_5" BEL "cpu0_RAM1_14_4" BEL
-        "cpu0_RAM1_14_3" BEL "cpu0_RAM1_14_2" BEL "cpu0_RAM1_14_1" BEL
-        "cpu0_RAM1_14_0" BEL "cpu0_RAM1_13_7" BEL "cpu0_RAM1_13_6" BEL
+        "cpu0_RAM1_5_1" BEL "cpu0_RAM1_5_0" BEL "cpu0_RAM1_6_7" BEL
+        "cpu0_RAM1_6_6" BEL "cpu0_RAM1_6_5" BEL "cpu0_RAM1_6_4" BEL
+        "cpu0_RAM1_6_3" BEL "cpu0_RAM1_6_2" BEL "cpu0_RAM1_6_1" BEL
+        "cpu0_RAM1_6_0" BEL "cpu0_RAM1_13_7" BEL "cpu0_RAM1_13_6" BEL
         "cpu0_RAM1_13_5" BEL "cpu0_RAM1_13_4" BEL "cpu0_RAM1_13_3" BEL
         "cpu0_RAM1_13_2" BEL "cpu0_RAM1_13_1" BEL "cpu0_RAM1_13_0" BEL
-        "cpu0_RAM1_4_7" BEL "cpu0_RAM1_4_6" BEL "cpu0_RAM1_4_5" BEL
-        "cpu0_RAM1_4_4" BEL "cpu0_RAM1_4_3" BEL "cpu0_RAM1_4_2" BEL
-        "cpu0_RAM1_4_1" BEL "cpu0_RAM1_4_0" BEL "cpu0_RAM1_3_7" BEL
-        "cpu0_RAM1_3_6" BEL "cpu0_RAM1_3_5" BEL "cpu0_RAM1_3_4" BEL
-        "cpu0_RAM1_3_3" BEL "cpu0_RAM1_3_2" BEL "cpu0_RAM1_3_1" BEL
-        "cpu0_RAM1_3_0" BEL "cpu0_RAM1_11_7" BEL "cpu0_RAM1_11_6" BEL
-        "cpu0_RAM1_11_5" BEL "cpu0_RAM1_11_4" BEL "cpu0_RAM1_11_3" BEL
-        "cpu0_RAM1_11_2" BEL "cpu0_RAM1_11_1" BEL "cpu0_RAM1_11_0" BEL
         "cpu0_RAM1_12_7" BEL "cpu0_RAM1_12_6" BEL "cpu0_RAM1_12_5" BEL
         "cpu0_RAM1_12_4" BEL "cpu0_RAM1_12_3" BEL "cpu0_RAM1_12_2" BEL
-        "cpu0_RAM1_12_1" BEL "cpu0_RAM1_12_0" BEL "cpu0_RAM1_10_7" BEL
-        "cpu0_RAM1_10_6" BEL "cpu0_RAM1_10_5" BEL "cpu0_RAM1_10_4" BEL
-        "cpu0_RAM1_10_3" BEL "cpu0_RAM1_10_2" BEL "cpu0_RAM1_10_1" BEL
-        "cpu0_RAM1_10_0" BEL "cpu0_RAM1_2_7" BEL "cpu0_RAM1_2_6" BEL
-        "cpu0_RAM1_2_5" BEL "cpu0_RAM1_2_4" BEL "cpu0_RAM1_2_3" BEL
-        "cpu0_RAM1_2_2" BEL "cpu0_RAM1_2_1" BEL "cpu0_RAM1_2_0" BEL
-        "cpu0_RAM0_15_7" BEL "cpu0_RAM0_15_6" BEL "cpu0_RAM0_15_5" BEL
-        "cpu0_RAM0_15_4" BEL "cpu0_RAM0_15_3" BEL "cpu0_RAM0_15_2" BEL
-        "cpu0_RAM0_15_1" BEL "cpu0_RAM0_15_0" BEL "cpu0_RAM0_14_7" BEL
-        "cpu0_RAM0_14_6" BEL "cpu0_RAM0_14_5" BEL "cpu0_RAM0_14_4" BEL
-        "cpu0_RAM0_14_3" BEL "cpu0_RAM0_14_2" BEL "cpu0_RAM0_14_1" BEL
-        "cpu0_RAM0_14_0" BEL "cpu0_RAM2_9_7" BEL "cpu0_RAM2_9_6" BEL
+        "cpu0_RAM1_12_1" BEL "cpu0_RAM1_12_0" BEL "cpu0_RAM1_3_7" BEL
+        "cpu0_RAM1_3_6" BEL "cpu0_RAM1_3_5" BEL "cpu0_RAM1_3_4" BEL
+        "cpu0_RAM1_3_3" BEL "cpu0_RAM1_3_2" BEL "cpu0_RAM1_3_1" BEL
+        "cpu0_RAM1_3_0" BEL "cpu0_RAM1_4_7" BEL "cpu0_RAM1_4_6" BEL
+        "cpu0_RAM1_4_5" BEL "cpu0_RAM1_4_4" BEL "cpu0_RAM1_4_3" BEL
+        "cpu0_RAM1_4_2" BEL "cpu0_RAM1_4_1" BEL "cpu0_RAM1_4_0" BEL
+        "cpu0_RAM1_11_7" BEL "cpu0_RAM1_11_6" BEL "cpu0_RAM1_11_5" BEL
+        "cpu0_RAM1_11_4" BEL "cpu0_RAM1_11_3" BEL "cpu0_RAM1_11_2" BEL
+        "cpu0_RAM1_11_1" BEL "cpu0_RAM1_11_0" BEL "cpu0_RAM1_2_7" BEL
+        "cpu0_RAM1_2_6" BEL "cpu0_RAM1_2_5" BEL "cpu0_RAM1_2_4" BEL
+        "cpu0_RAM1_2_3" BEL "cpu0_RAM1_2_2" BEL "cpu0_RAM1_2_1" BEL
+        "cpu0_RAM1_2_0" BEL "cpu0_res1Reg_31" BEL "cpu0_res1Reg_30" BEL
+        "cpu0_res1Reg_29" BEL "cpu0_res1Reg_28" BEL "cpu0_res1Reg_27" BEL
+        "cpu0_res1Reg_26" BEL "cpu0_res1Reg_25" BEL "cpu0_res1Reg_24" BEL
+        "cpu0_res1Reg_23" BEL "cpu0_res1Reg_22" BEL "cpu0_res1Reg_21" BEL
+        "cpu0_res1Reg_20" BEL "cpu0_res1Reg_19" BEL "cpu0_res1Reg_18" BEL
+        "cpu0_res1Reg_17" BEL "cpu0_res1Reg_16" BEL "cpu0_res1Reg_15" BEL
+        "cpu0_res1Reg_14" BEL "cpu0_res1Reg_13" BEL "cpu0_res1Reg_12" BEL
+        "cpu0_res1Reg_11" BEL "cpu0_res1Reg_10" BEL "cpu0_res1Reg_9" BEL
+        "cpu0_res1Reg_8" BEL "cpu0_res1Reg_7" BEL "cpu0_res1Reg_6" BEL
+        "cpu0_res1Reg_5" BEL "cpu0_res1Reg_4" BEL "cpu0_res1Reg_3" BEL
+        "cpu0_res1Reg_2" BEL "cpu0_res1Reg_1" BEL "cpu0_res1Reg_0" BEL
+        "cpu0_RAM1_10_7" BEL "cpu0_RAM1_10_6" BEL "cpu0_RAM1_10_5" BEL
+        "cpu0_RAM1_10_4" BEL "cpu0_RAM1_10_3" BEL "cpu0_RAM1_10_2" BEL
+        "cpu0_RAM1_10_1" BEL "cpu0_RAM1_10_0" BEL "cpu0_RAM0_15_7" BEL
+        "cpu0_RAM0_15_6" BEL "cpu0_RAM0_15_5" BEL "cpu0_RAM0_15_4" BEL
+        "cpu0_RAM0_15_3" BEL "cpu0_RAM0_15_2" BEL "cpu0_RAM0_15_1" BEL
+        "cpu0_RAM0_15_0" BEL "cpu0_RAM2_9_7" BEL "cpu0_RAM2_9_6" BEL
         "cpu0_RAM2_9_5" BEL "cpu0_RAM2_9_4" BEL "cpu0_RAM2_9_3" BEL
         "cpu0_RAM2_9_2" BEL "cpu0_RAM2_9_1" BEL "cpu0_RAM2_9_0" BEL
         "cpu0_RAM0_13_7" BEL "cpu0_RAM0_13_6" BEL "cpu0_RAM0_13_5" BEL
         "cpu0_RAM0_13_4" BEL "cpu0_RAM0_13_3" BEL "cpu0_RAM0_13_2" BEL
-        "cpu0_RAM0_13_1" BEL "cpu0_RAM0_13_0" BEL "cpu0_RAM2_8_7" BEL
-        "cpu0_RAM2_8_6" BEL "cpu0_RAM2_8_5" BEL "cpu0_RAM2_8_4" BEL
-        "cpu0_RAM2_8_3" BEL "cpu0_RAM2_8_2" BEL "cpu0_RAM2_8_1" BEL
-        "cpu0_RAM2_8_0" BEL "cpu0_RAM0_12_7" BEL "cpu0_RAM0_12_6" BEL
-        "cpu0_RAM0_12_5" BEL "cpu0_RAM0_12_4" BEL "cpu0_RAM0_12_3" BEL
-        "cpu0_RAM0_12_2" BEL "cpu0_RAM0_12_1" BEL "cpu0_RAM0_12_0" BEL
-        "cpu0_RAM0_11_7" BEL "cpu0_RAM0_11_6" BEL "cpu0_RAM0_11_5" BEL
-        "cpu0_RAM0_11_4" BEL "cpu0_RAM0_11_3" BEL "cpu0_RAM0_11_2" BEL
-        "cpu0_RAM0_11_1" BEL "cpu0_RAM0_11_0" BEL "cpu0_RAM2_6_7" BEL
-        "cpu0_RAM2_6_6" BEL "cpu0_RAM2_6_5" BEL "cpu0_RAM2_6_4" BEL
-        "cpu0_RAM2_6_3" BEL "cpu0_RAM2_6_2" BEL "cpu0_RAM2_6_1" BEL
-        "cpu0_RAM2_6_0" BEL "cpu0_RAM2_7_7" BEL "cpu0_RAM2_7_6" BEL
-        "cpu0_RAM2_7_5" BEL "cpu0_RAM2_7_4" BEL "cpu0_RAM2_7_3" BEL
-        "cpu0_RAM2_7_2" BEL "cpu0_RAM2_7_1" BEL "cpu0_RAM2_7_0" BEL
-        "cpu0_RAM2_5_7" BEL "cpu0_RAM2_5_6" BEL "cpu0_RAM2_5_5" BEL
-        "cpu0_RAM2_5_4" BEL "cpu0_RAM2_5_3" BEL "cpu0_RAM2_5_2" BEL
-        "cpu0_RAM2_5_1" BEL "cpu0_RAM2_5_0" BEL "cpu0_RAM2_4_7" BEL
-        "cpu0_RAM2_4_6" BEL "cpu0_RAM2_4_5" BEL "cpu0_RAM2_4_4" BEL
-        "cpu0_RAM2_4_3" BEL "cpu0_RAM2_4_2" BEL "cpu0_RAM2_4_1" BEL
-        "cpu0_RAM2_4_0" BEL "cpu0_RAM0_10_7" BEL "cpu0_RAM0_10_6" BEL
-        "cpu0_RAM0_10_5" BEL "cpu0_RAM0_10_4" BEL "cpu0_RAM0_10_3" BEL
-        "cpu0_RAM0_10_2" BEL "cpu0_RAM0_10_1" BEL "cpu0_RAM0_10_0" BEL
+        "cpu0_RAM0_13_1" BEL "cpu0_RAM0_13_0" BEL "cpu0_RAM0_14_7" BEL
+        "cpu0_RAM0_14_6" BEL "cpu0_RAM0_14_5" BEL "cpu0_RAM0_14_4" BEL
+        "cpu0_RAM0_14_3" BEL "cpu0_RAM0_14_2" BEL "cpu0_RAM0_14_1" BEL
+        "cpu0_RAM0_14_0" BEL "cpu0_RAM2_8_7" BEL "cpu0_RAM2_8_6" BEL
+        "cpu0_RAM2_8_5" BEL "cpu0_RAM2_8_4" BEL "cpu0_RAM2_8_3" BEL
+        "cpu0_RAM2_8_2" BEL "cpu0_RAM2_8_1" BEL "cpu0_RAM2_8_0" BEL
+        "cpu0_RAM0_12_7" BEL "cpu0_RAM0_12_6" BEL "cpu0_RAM0_12_5" BEL
+        "cpu0_RAM0_12_4" BEL "cpu0_RAM0_12_3" BEL "cpu0_RAM0_12_2" BEL
+        "cpu0_RAM0_12_1" BEL "cpu0_RAM0_12_0" BEL "cpu0_RAM2_7_7" BEL
+        "cpu0_RAM2_7_6" BEL "cpu0_RAM2_7_5" BEL "cpu0_RAM2_7_4" BEL
+        "cpu0_RAM2_7_3" BEL "cpu0_RAM2_7_2" BEL "cpu0_RAM2_7_1" BEL
+        "cpu0_RAM2_7_0" BEL "cpu0_RAM2_6_7" BEL "cpu0_RAM2_6_6" BEL
+        "cpu0_RAM2_6_5" BEL "cpu0_RAM2_6_4" BEL "cpu0_RAM2_6_3" BEL
+        "cpu0_RAM2_6_2" BEL "cpu0_RAM2_6_1" BEL "cpu0_RAM2_6_0" BEL
+        "cpu0_RAM0_10_7" BEL "cpu0_RAM0_10_6" BEL "cpu0_RAM0_10_5" BEL
+        "cpu0_RAM0_10_4" BEL "cpu0_RAM0_10_3" BEL "cpu0_RAM0_10_2" BEL
+        "cpu0_RAM0_10_1" BEL "cpu0_RAM0_10_0" BEL "cpu0_RAM0_11_7" BEL
+        "cpu0_RAM0_11_6" BEL "cpu0_RAM0_11_5" BEL "cpu0_RAM0_11_4" BEL
+        "cpu0_RAM0_11_3" BEL "cpu0_RAM0_11_2" BEL "cpu0_RAM0_11_1" BEL
+        "cpu0_RAM0_11_0" BEL "cpu0_RAM2_4_7" BEL "cpu0_RAM2_4_6" BEL
+        "cpu0_RAM2_4_5" BEL "cpu0_RAM2_4_4" BEL "cpu0_RAM2_4_3" BEL
+        "cpu0_RAM2_4_2" BEL "cpu0_RAM2_4_1" BEL "cpu0_RAM2_4_0" BEL
         "cpu0_RAM2_3_7" BEL "cpu0_RAM2_3_6" BEL "cpu0_RAM2_3_5" BEL
         "cpu0_RAM2_3_4" BEL "cpu0_RAM2_3_3" BEL "cpu0_RAM2_3_2" BEL
-        "cpu0_RAM2_3_1" BEL "cpu0_RAM2_3_0" BEL "cpu0_RAM2_2_7" BEL
-        "cpu0_RAM2_2_6" BEL "cpu0_RAM2_2_5" BEL "cpu0_RAM2_2_4" BEL
-        "cpu0_RAM2_2_3" BEL "cpu0_RAM2_2_2" BEL "cpu0_RAM2_2_1" BEL
-        "cpu0_RAM2_2_0" BEL "cpu0_RAM3_15_7" BEL "cpu0_RAM3_15_6" BEL
-        "cpu0_RAM3_15_5" BEL "cpu0_RAM3_15_4" BEL "cpu0_RAM3_15_3" BEL
-        "cpu0_RAM3_15_2" BEL "cpu0_RAM3_15_1" BEL "cpu0_RAM3_15_0" BEL
-        "cpu0_RAM3_14_7" BEL "cpu0_RAM3_14_6" BEL "cpu0_RAM3_14_5" BEL
-        "cpu0_RAM3_14_4" BEL "cpu0_RAM3_14_3" BEL "cpu0_RAM3_14_2" BEL
-        "cpu0_RAM3_14_1" BEL "cpu0_RAM3_14_0" BEL "cpu0_RAM3_13_7" BEL
-        "cpu0_RAM3_13_6" BEL "cpu0_RAM3_13_5" BEL "cpu0_RAM3_13_4" BEL
-        "cpu0_RAM3_13_3" BEL "cpu0_RAM3_13_2" BEL "cpu0_RAM3_13_1" BEL
-        "cpu0_RAM3_13_0" BEL "cpu0_RAM0_9_7" BEL "cpu0_RAM0_9_6" BEL
-        "cpu0_RAM0_9_5" BEL "cpu0_RAM0_9_4" BEL "cpu0_RAM0_9_3" BEL
-        "cpu0_RAM0_9_2" BEL "cpu0_RAM0_9_1" BEL "cpu0_RAM0_9_0" BEL
-        "cpu0_RAM3_12_7" BEL "cpu0_RAM3_12_6" BEL "cpu0_RAM3_12_5" BEL
-        "cpu0_RAM3_12_4" BEL "cpu0_RAM3_12_3" BEL "cpu0_RAM3_12_2" BEL
-        "cpu0_RAM3_12_1" BEL "cpu0_RAM3_12_0" BEL "cpu0_RAM3_11_7" BEL
-        "cpu0_RAM3_11_6" BEL "cpu0_RAM3_11_5" BEL "cpu0_RAM3_11_4" BEL
-        "cpu0_RAM3_11_3" BEL "cpu0_RAM3_11_2" BEL "cpu0_RAM3_11_1" BEL
-        "cpu0_RAM3_11_0" BEL "cpu0_RAM0_7_7" BEL "cpu0_RAM0_7_6" BEL
-        "cpu0_RAM0_7_5" BEL "cpu0_RAM0_7_4" BEL "cpu0_RAM0_7_3" BEL
-        "cpu0_RAM0_7_2" BEL "cpu0_RAM0_7_1" BEL "cpu0_RAM0_7_0" BEL
-        "cpu0_RAM0_8_7" BEL "cpu0_RAM0_8_6" BEL "cpu0_RAM0_8_5" BEL
-        "cpu0_RAM0_8_4" BEL "cpu0_RAM0_8_3" BEL "cpu0_RAM0_8_2" BEL
-        "cpu0_RAM0_8_1" BEL "cpu0_RAM0_8_0" BEL "cpu0_RAM3_9_7" BEL
-        "cpu0_RAM3_9_6" BEL "cpu0_RAM3_9_5" BEL "cpu0_RAM3_9_4" BEL
-        "cpu0_RAM3_9_3" BEL "cpu0_RAM3_9_2" BEL "cpu0_RAM3_9_1" BEL
-        "cpu0_RAM3_9_0" BEL "cpu0_RAM3_10_7" BEL "cpu0_RAM3_10_6" BEL
-        "cpu0_RAM3_10_5" BEL "cpu0_RAM3_10_4" BEL "cpu0_RAM3_10_3" BEL
-        "cpu0_RAM3_10_2" BEL "cpu0_RAM3_10_1" BEL "cpu0_RAM3_10_0" BEL
-        "cpu0_idecode_registerOut_31" BEL "cpu0_idecode_registerOut_30" BEL
-        "cpu0_idecode_registerOut_29" BEL "cpu0_idecode_registerOut_28" BEL
-        "cpu0_idecode_registerOut_27" BEL "cpu0_idecode_registerOut_26" BEL
-        "cpu0_idecode_registerOut_25" BEL "cpu0_idecode_registerOut_24" BEL
-        "cpu0_idecode_registerOut_23" BEL "cpu0_idecode_registerOut_22" BEL
-        "cpu0_idecode_registerOut_21" BEL "cpu0_idecode_registerOut_20" BEL
-        "cpu0_idecode_registerOut_19" BEL "cpu0_idecode_registerOut_18" BEL
-        "cpu0_idecode_registerOut_17" BEL "cpu0_idecode_registerOut_16" BEL
-        "cpu0_idecode_registerOut_15" BEL "cpu0_idecode_registerOut_14" BEL
-        "cpu0_idecode_registerOut_13" BEL "cpu0_idecode_registerOut_12" BEL
-        "cpu0_idecode_registerOut_11" BEL "cpu0_idecode_registerOut_10" BEL
-        "cpu0_idecode_registerOut_9" BEL "cpu0_idecode_registerOut_8" BEL
-        "cpu0_idecode_registerOut_7" BEL "cpu0_idecode_registerOut_6" BEL
-        "cpu0_idecode_registerOut_5" BEL "cpu0_idecode_registerOut_4" BEL
-        "cpu0_idecode_registerOut_3" BEL "cpu0_idecode_registerOut_2" BEL
-        "cpu0_idecode_registerOut_1" BEL "cpu0_idecode_registerOut_0" BEL
-        "cpu0_vlregAddr_4" BEL "cpu0_vlregAddr_3" BEL "cpu0_vlregAddr_2" BEL
-        "cpu0_vlregAddr_1" BEL "cpu0_vlregAddr_0" BEL
-        "cpu0_idecode_lregAddr_4" BEL "cpu0_idecode_lregAddr_3" BEL
-        "cpu0_idecode_lregAddr_2" BEL "cpu0_idecode_lregAddr_1" BEL
-        "cpu0_idecode_lregAddr_0" BEL "cpu0_decode_CurrentInstruction_31" BEL
+        "cpu0_RAM2_3_1" BEL "cpu0_RAM2_3_0" BEL "cpu0_RAM2_5_7" BEL
+        "cpu0_RAM2_5_6" BEL "cpu0_RAM2_5_5" BEL "cpu0_RAM2_5_4" BEL
+        "cpu0_RAM2_5_3" BEL "cpu0_RAM2_5_2" BEL "cpu0_RAM2_5_1" BEL
+        "cpu0_RAM2_5_0" BEL "cpu0_res2Reg_31" BEL "cpu0_res2Reg_30" BEL
+        "cpu0_res2Reg_29" BEL "cpu0_res2Reg_28" BEL "cpu0_res2Reg_27" BEL
+        "cpu0_res2Reg_26" BEL "cpu0_res2Reg_25" BEL "cpu0_res2Reg_24" BEL
+        "cpu0_res2Reg_23" BEL "cpu0_res2Reg_22" BEL "cpu0_res2Reg_21" BEL
+        "cpu0_res2Reg_20" BEL "cpu0_res2Reg_19" BEL "cpu0_res2Reg_18" BEL
+        "cpu0_res2Reg_17" BEL "cpu0_res2Reg_16" BEL "cpu0_res2Reg_15" BEL
+        "cpu0_res2Reg_14" BEL "cpu0_res2Reg_13" BEL "cpu0_res2Reg_12" BEL
+        "cpu0_res2Reg_11" BEL "cpu0_res2Reg_10" BEL "cpu0_res2Reg_9" BEL
+        "cpu0_res2Reg_8" BEL "cpu0_res2Reg_7" BEL "cpu0_res2Reg_6" BEL
+        "cpu0_res2Reg_5" BEL "cpu0_res2Reg_4" BEL "cpu0_res2Reg_3" BEL
+        "cpu0_res2Reg_2" BEL "cpu0_res2Reg_1" BEL "cpu0_res2Reg_0" BEL
+        "cpu0_RAM2_2_7" BEL "cpu0_RAM2_2_6" BEL "cpu0_RAM2_2_5" BEL
+        "cpu0_RAM2_2_4" BEL "cpu0_RAM2_2_3" BEL "cpu0_RAM2_2_2" BEL
+        "cpu0_RAM2_2_1" BEL "cpu0_RAM2_2_0" BEL "cpu0_RAM3_15_7" BEL
+        "cpu0_RAM3_15_6" BEL "cpu0_RAM3_15_5" BEL "cpu0_RAM3_15_4" BEL
+        "cpu0_RAM3_15_3" BEL "cpu0_RAM3_15_2" BEL "cpu0_RAM3_15_1" BEL
+        "cpu0_RAM3_15_0" BEL "cpu0_RAM3_14_7" BEL "cpu0_RAM3_14_6" BEL
+        "cpu0_RAM3_14_5" BEL "cpu0_RAM3_14_4" BEL "cpu0_RAM3_14_3" BEL
+        "cpu0_RAM3_14_2" BEL "cpu0_RAM3_14_1" BEL "cpu0_RAM3_14_0" BEL
+        "cpu0_RAM3_13_7" BEL "cpu0_RAM3_13_6" BEL "cpu0_RAM3_13_5" BEL
+        "cpu0_RAM3_13_4" BEL "cpu0_RAM3_13_3" BEL "cpu0_RAM3_13_2" BEL
+        "cpu0_RAM3_13_1" BEL "cpu0_RAM3_13_0" BEL "cpu0_RAM0_9_7" BEL
+        "cpu0_RAM0_9_6" BEL "cpu0_RAM0_9_5" BEL "cpu0_RAM0_9_4" BEL
+        "cpu0_RAM0_9_3" BEL "cpu0_RAM0_9_2" BEL "cpu0_RAM0_9_1" BEL
+        "cpu0_RAM0_9_0" BEL "cpu0_RAM3_12_7" BEL "cpu0_RAM3_12_6" BEL
+        "cpu0_RAM3_12_5" BEL "cpu0_RAM3_12_4" BEL "cpu0_RAM3_12_3" BEL
+        "cpu0_RAM3_12_2" BEL "cpu0_RAM3_12_1" BEL "cpu0_RAM3_12_0" BEL
+        "cpu0_RAM3_11_7" BEL "cpu0_RAM3_11_6" BEL "cpu0_RAM3_11_5" BEL
+        "cpu0_RAM3_11_4" BEL "cpu0_RAM3_11_3" BEL "cpu0_RAM3_11_2" BEL
+        "cpu0_RAM3_11_1" BEL "cpu0_RAM3_11_0" BEL "cpu0_RAM0_7_7" BEL
+        "cpu0_RAM0_7_6" BEL "cpu0_RAM0_7_5" BEL "cpu0_RAM0_7_4" BEL
+        "cpu0_RAM0_7_3" BEL "cpu0_RAM0_7_2" BEL "cpu0_RAM0_7_1" BEL
+        "cpu0_RAM0_7_0" BEL "cpu0_RAM0_8_7" BEL "cpu0_RAM0_8_6" BEL
+        "cpu0_RAM0_8_5" BEL "cpu0_RAM0_8_4" BEL "cpu0_RAM0_8_3" BEL
+        "cpu0_RAM0_8_2" BEL "cpu0_RAM0_8_1" BEL "cpu0_RAM0_8_0" BEL
+        "cpu0_RAM3_9_7" BEL "cpu0_RAM3_9_6" BEL "cpu0_RAM3_9_5" BEL
+        "cpu0_RAM3_9_4" BEL "cpu0_RAM3_9_3" BEL "cpu0_RAM3_9_2" BEL
+        "cpu0_RAM3_9_1" BEL "cpu0_RAM3_9_0" BEL "cpu0_RAM3_10_7" BEL
+        "cpu0_RAM3_10_6" BEL "cpu0_RAM3_10_5" BEL "cpu0_RAM3_10_4" BEL
+        "cpu0_RAM3_10_3" BEL "cpu0_RAM3_10_2" BEL "cpu0_RAM3_10_1" BEL
+        "cpu0_RAM3_10_0" BEL "cpu0_idecode_registerOut_31" BEL
+        "cpu0_idecode_registerOut_30" BEL "cpu0_idecode_registerOut_29" BEL
+        "cpu0_idecode_registerOut_28" BEL "cpu0_idecode_registerOut_27" BEL
+        "cpu0_idecode_registerOut_26" BEL "cpu0_idecode_registerOut_25" BEL
+        "cpu0_idecode_registerOut_24" BEL "cpu0_idecode_registerOut_23" BEL
+        "cpu0_idecode_registerOut_22" BEL "cpu0_idecode_registerOut_21" BEL
+        "cpu0_idecode_registerOut_20" BEL "cpu0_idecode_registerOut_19" BEL
+        "cpu0_idecode_registerOut_18" BEL "cpu0_idecode_registerOut_17" BEL
+        "cpu0_idecode_registerOut_16" BEL "cpu0_idecode_registerOut_15" BEL
+        "cpu0_idecode_registerOut_14" BEL "cpu0_idecode_registerOut_13" BEL
+        "cpu0_idecode_registerOut_12" BEL "cpu0_idecode_registerOut_11" BEL
+        "cpu0_idecode_registerOut_10" BEL "cpu0_idecode_registerOut_9" BEL
+        "cpu0_idecode_registerOut_8" BEL "cpu0_idecode_registerOut_7" BEL
+        "cpu0_idecode_registerOut_6" BEL "cpu0_idecode_registerOut_5" BEL
+        "cpu0_idecode_registerOut_4" BEL "cpu0_idecode_registerOut_3" BEL
+        "cpu0_idecode_registerOut_2" BEL "cpu0_idecode_registerOut_1" BEL
+        "cpu0_idecode_registerOut_0" BEL "cpu0_vlregAddr_4" BEL
+        "cpu0_vlregAddr_3" BEL "cpu0_vlregAddr_2" BEL "cpu0_vlregAddr_1" BEL
+        "cpu0_vlregAddr_0" BEL "cpu0_idecode_lregAddr_4" BEL
+        "cpu0_idecode_lregAddr_3" BEL "cpu0_idecode_lregAddr_2" BEL
+        "cpu0_idecode_lregAddr_1" BEL "cpu0_idecode_lregAddr_0" BEL
+        "cpu0_decode_CurrentInstruction_31" BEL
         "cpu0_decode_CurrentInstruction_30" BEL
         "cpu0_decode_CurrentInstruction_29" BEL
         "cpu0_decode_CurrentInstruction_28" BEL
@@ -523,18 +545,29 @@ TIMEGRP TNM_Clk = BEL "cpu0_ialu_mulIsSigned" BEL "cpu0_ialu_divIsSigned" BEL
         "cpu0_decode_WriteData_6" BEL "cpu0_decode_WriteData_5" BEL
         "cpu0_decode_WriteData_4" BEL "cpu0_decode_WriteData_3" BEL
         "cpu0_decode_WriteData_2" BEL "cpu0_decode_WriteData_1" BEL
-        "cpu0_decode_WriteData_0" BEL "cpu0_RAM0_1_7" BEL "cpu0_RAM0_1_6" BEL
-        "cpu0_RAM0_1_5" BEL "cpu0_RAM0_1_4" BEL "cpu0_RAM0_1_3" BEL
-        "cpu0_RAM0_1_2" BEL "cpu0_RAM0_1_1" BEL "cpu0_RAM0_1_0" BEL
-        "cpu0_decode_RegWrite" BEL "cpu0_RAM0_0_7" BEL "cpu0_RAM0_0_6" BEL
-        "cpu0_RAM0_0_5" BEL "cpu0_RAM0_0_4" BEL "cpu0_RAM0_0_3" BEL
-        "cpu0_RAM0_0_2" BEL "cpu0_RAM0_0_1" BEL "cpu0_RAM0_0_0" BEL
+        "cpu0_decode_WriteData_0" BEL "cpu0_decode_RegWrite" BEL
+        "cpu0_RAM0_1_7" BEL "cpu0_RAM0_1_6" BEL "cpu0_RAM0_1_5" BEL
+        "cpu0_RAM0_1_4" BEL "cpu0_RAM0_1_3" BEL "cpu0_RAM0_1_2" BEL
+        "cpu0_RAM0_1_1" BEL "cpu0_RAM0_1_0" BEL "cpu0_RAM0_0_7" BEL
+        "cpu0_RAM0_0_6" BEL "cpu0_RAM0_0_5" BEL "cpu0_RAM0_0_4" BEL
+        "cpu0_RAM0_0_3" BEL "cpu0_RAM0_0_2" BEL "cpu0_RAM0_0_1" BEL
+        "cpu0_RAM0_0_0" BEL "cpu0_RAM3_1_7" BEL "cpu0_RAM3_1_6" BEL
+        "cpu0_RAM3_1_5" BEL "cpu0_RAM3_1_4" BEL "cpu0_RAM3_1_3" BEL
+        "cpu0_RAM3_1_2" BEL "cpu0_RAM3_1_1" BEL "cpu0_RAM3_1_0" BEL
         "cpu0_RAM3_0_7" BEL "cpu0_RAM3_0_6" BEL "cpu0_RAM3_0_5" BEL
         "cpu0_RAM3_0_4" BEL "cpu0_RAM3_0_3" BEL "cpu0_RAM3_0_2" BEL
-        "cpu0_RAM3_0_1" BEL "cpu0_RAM3_0_0" BEL "cpu0_RAM3_1_7" BEL
-        "cpu0_RAM3_1_6" BEL "cpu0_RAM3_1_5" BEL "cpu0_RAM3_1_4" BEL
-        "cpu0_RAM3_1_3" BEL "cpu0_RAM3_1_2" BEL "cpu0_RAM3_1_1" BEL
-        "cpu0_RAM3_1_0" BEL "cpu0_prev_op2_31" BEL "cpu0_prev_op2_30" BEL
+        "cpu0_RAM3_0_1" BEL "cpu0_RAM3_0_0" BEL "cpu0_prev_op1_31" BEL
+        "cpu0_prev_op1_30" BEL "cpu0_prev_op1_29" BEL "cpu0_prev_op1_28" BEL
+        "cpu0_prev_op1_27" BEL "cpu0_prev_op1_26" BEL "cpu0_prev_op1_25" BEL
+        "cpu0_prev_op1_24" BEL "cpu0_prev_op1_23" BEL "cpu0_prev_op1_22" BEL
+        "cpu0_prev_op1_21" BEL "cpu0_prev_op1_20" BEL "cpu0_prev_op1_19" BEL
+        "cpu0_prev_op1_18" BEL "cpu0_prev_op1_17" BEL "cpu0_prev_op1_16" BEL
+        "cpu0_prev_op1_15" BEL "cpu0_prev_op1_14" BEL "cpu0_prev_op1_13" BEL
+        "cpu0_prev_op1_12" BEL "cpu0_prev_op1_11" BEL "cpu0_prev_op1_10" BEL
+        "cpu0_prev_op1_9" BEL "cpu0_prev_op1_8" BEL "cpu0_prev_op1_7" BEL
+        "cpu0_prev_op1_6" BEL "cpu0_prev_op1_5" BEL "cpu0_prev_op1_4" BEL
+        "cpu0_prev_op1_3" BEL "cpu0_prev_op1_2" BEL "cpu0_prev_op1_1" BEL
+        "cpu0_prev_op1_0" BEL "cpu0_prev_op2_31" BEL "cpu0_prev_op2_30" BEL
         "cpu0_prev_op2_29" BEL "cpu0_prev_op2_28" BEL "cpu0_prev_op2_27" BEL
         "cpu0_prev_op2_26" BEL "cpu0_prev_op2_25" BEL "cpu0_prev_op2_24" BEL
         "cpu0_prev_op2_23" BEL "cpu0_prev_op2_22" BEL "cpu0_prev_op2_21" BEL
@@ -545,33 +578,23 @@ TIMEGRP TNM_Clk = BEL "cpu0_ialu_mulIsSigned" BEL "cpu0_ialu_divIsSigned" BEL
         "cpu0_prev_op2_8" BEL "cpu0_prev_op2_7" BEL "cpu0_prev_op2_6" BEL
         "cpu0_prev_op2_5" BEL "cpu0_prev_op2_4" BEL "cpu0_prev_op2_3" BEL
         "cpu0_prev_op2_2" BEL "cpu0_prev_op2_1" BEL "cpu0_prev_op2_0" BEL
-        "cpu0_prev_op1_31" BEL "cpu0_prev_op1_30" BEL "cpu0_prev_op1_29" BEL
-        "cpu0_prev_op1_28" BEL "cpu0_prev_op1_27" BEL "cpu0_prev_op1_26" BEL
-        "cpu0_prev_op1_25" BEL "cpu0_prev_op1_24" BEL "cpu0_prev_op1_23" BEL
-        "cpu0_prev_op1_22" BEL "cpu0_prev_op1_21" BEL "cpu0_prev_op1_20" BEL
-        "cpu0_prev_op1_19" BEL "cpu0_prev_op1_18" BEL "cpu0_prev_op1_17" BEL
-        "cpu0_prev_op1_16" BEL "cpu0_prev_op1_15" BEL "cpu0_prev_op1_14" BEL
-        "cpu0_prev_op1_13" BEL "cpu0_prev_op1_12" BEL "cpu0_prev_op1_11" BEL
-        "cpu0_prev_op1_10" BEL "cpu0_prev_op1_9" BEL "cpu0_prev_op1_8" BEL
-        "cpu0_prev_op1_7" BEL "cpu0_prev_op1_6" BEL "cpu0_prev_op1_5" BEL
-        "cpu0_prev_op1_4" BEL "cpu0_prev_op1_3" BEL "cpu0_prev_op1_2" BEL
-        "cpu0_prev_op1_1" BEL "cpu0_prev_op1_0" BEL "cpu0_RAM1_0_7" BEL
-        "cpu0_RAM1_0_6" BEL "cpu0_RAM1_0_5" BEL "cpu0_RAM1_0_4" BEL
-        "cpu0_RAM1_0_3" BEL "cpu0_RAM1_0_2" BEL "cpu0_RAM1_0_1" BEL
-        "cpu0_RAM1_0_0" BEL "cpu0_RAM1_1_7" BEL "cpu0_RAM1_1_6" BEL
-        "cpu0_RAM1_1_5" BEL "cpu0_RAM1_1_4" BEL "cpu0_RAM1_1_3" BEL
-        "cpu0_RAM1_1_2" BEL "cpu0_RAM1_1_1" BEL "cpu0_RAM1_1_0" BEL
-        "cpu0_pc_5" BEL "cpu0_pc_4" BEL "cpu0_pc_3" BEL "cpu0_pc_2" BEL
-        "cpu0_pc_1" BEL "cpu0_pc_0" BEL "cpu0_RAM2_0_7" BEL "cpu0_RAM2_0_6"
-        BEL "cpu0_RAM2_0_5" BEL "cpu0_RAM2_0_4" BEL "cpu0_RAM2_0_3" BEL
-        "cpu0_RAM2_0_2" BEL "cpu0_RAM2_0_1" BEL "cpu0_RAM2_0_0" BEL
-        "cpu0_RAM2_1_7" BEL "cpu0_RAM2_1_6" BEL "cpu0_RAM2_1_5" BEL
-        "cpu0_RAM2_1_4" BEL "cpu0_RAM2_1_3" BEL "cpu0_RAM2_1_2" BEL
-        "cpu0_RAM2_1_1" BEL "cpu0_RAM2_1_0" BEL "cpu0_decode_WriteAddr_4" BEL
-        "cpu0_decode_WriteAddr_3" BEL "cpu0_decode_WriteAddr_2" BEL
-        "cpu0_decode_WriteAddr_1" BEL "cpu0_decode_WriteAddr_0" BEL
-        "cpu0_ialu_isAdd" BEL "cpu0_ialu_Result1_0" BEL "cpu0_ialu_Result1_1"
-        BEL "cpu0_ialu_Result1_2" BEL "cpu0_ialu_Result1_3" BEL
+        "cpu0_RAM1_1_7" BEL "cpu0_RAM1_1_6" BEL "cpu0_RAM1_1_5" BEL
+        "cpu0_RAM1_1_4" BEL "cpu0_RAM1_1_3" BEL "cpu0_RAM1_1_2" BEL
+        "cpu0_RAM1_1_1" BEL "cpu0_RAM1_1_0" BEL "cpu0_pc_5" BEL "cpu0_pc_4"
+        BEL "cpu0_pc_3" BEL "cpu0_pc_2" BEL "cpu0_pc_1" BEL "cpu0_pc_0" BEL
+        "cpu0_RAM1_0_7" BEL "cpu0_RAM1_0_6" BEL "cpu0_RAM1_0_5" BEL
+        "cpu0_RAM1_0_4" BEL "cpu0_RAM1_0_3" BEL "cpu0_RAM1_0_2" BEL
+        "cpu0_RAM1_0_1" BEL "cpu0_RAM1_0_0" BEL "cpu0_RAM2_0_7" BEL
+        "cpu0_RAM2_0_6" BEL "cpu0_RAM2_0_5" BEL "cpu0_RAM2_0_4" BEL
+        "cpu0_RAM2_0_3" BEL "cpu0_RAM2_0_2" BEL "cpu0_RAM2_0_1" BEL
+        "cpu0_RAM2_0_0" BEL "cpu0_RAM2_1_7" BEL "cpu0_RAM2_1_6" BEL
+        "cpu0_RAM2_1_5" BEL "cpu0_RAM2_1_4" BEL "cpu0_RAM2_1_3" BEL
+        "cpu0_RAM2_1_2" BEL "cpu0_RAM2_1_1" BEL "cpu0_RAM2_1_0" BEL
+        "cpu0_decode_WriteAddr_4" BEL "cpu0_decode_WriteAddr_3" BEL
+        "cpu0_decode_WriteAddr_2" BEL "cpu0_decode_WriteAddr_1" BEL
+        "cpu0_decode_WriteAddr_0" BEL "cpu0_ialu_isAdd" BEL
+        "cpu0_ialu_Result1_0" BEL "cpu0_ialu_Result1_1" BEL
+        "cpu0_ialu_Result1_2" BEL "cpu0_ialu_Result1_3" BEL
         "cpu0_ialu_Result1_4" BEL "cpu0_ialu_Result1_5" BEL
         "cpu0_ialu_Result1_6" BEL "cpu0_ialu_Result1_7" BEL
         "cpu0_ialu_Result1_8" BEL "cpu0_ialu_Result1_9" BEL
@@ -590,11 +613,11 @@ TIMEGRP TNM_Clk = BEL "cpu0_ialu_mulIsSigned" BEL "cpu0_ialu_divIsSigned" BEL
         "cpu0_idecode_AluOP1_20_1" BEL "cpu0_idecode_AluOP1_0_1" BEL
         "cpu0_idecode_AluOP1_10_1" BEL "cpu0_idecode_AluOP1_2_1" BEL
         "cpu0_idecode_AluOP1_3_1" BEL "cpu0_idecode_AluOP1_11_1" BEL
-        "cpu0_idecode_AluOP1_12_1" BEL "cpu0_idecode_AluOP1_4_1" BEL
-        "cpu0_idecode_AluOP1_13_1" BEL "cpu0_idecode_AluOP1_1_1" BEL
+        "cpu0_idecode_AluOP1_12_1" BEL "cpu0_idecode_AluOP1_1_1" BEL
+        "cpu0_idecode_AluOP1_4_1" BEL "cpu0_idecode_AluOP1_13_1" BEL
         "cpu0_idecode_AluOP1_5_1" BEL "cpu0_idecode_AluOP1_6_1" BEL
-        "cpu0_idecode_AluOP1_14_1" BEL "cpu0_idecode_AluOP1_18_1" BEL
-        "cpu0_idecode_AluOP1_7_1" BEL "cpu0_idecode_AluOP1_8_1" BEL
+        "cpu0_idecode_AluOP1_18_1" BEL "cpu0_idecode_AluOP1_7_1" BEL
+        "cpu0_idecode_AluOP1_8_1" BEL "cpu0_idecode_AluOP1_14_1" BEL
         "cpu0_idecode_AluOP1_19_1" BEL "cpu0_idecode_AluOP2_4_1" BEL
         "cpu0_idecode_AluOP2_3_1" BEL "cpu0_idecode_AluOP2_1_1" BEL
         "cpu0_idecode_AluOP2_0_1" BEL "cpu0_idecode_AluOP2_2_1" BEL

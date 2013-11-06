@@ -43,9 +43,9 @@ entity cpu is
 --			  DMemOut : out std_logic_vector(31 downto 0);
 --			  DCPUState : out std_logic_vector(31 downto 0);
 			  DCurrentIns : out std_logic_vector(31 downto 0);
---			  DAlu1 : out std_logic_vector(31 downto 0);
---			  DAlu2 : out std_logic_vector(31 downto 0);
---			  DAluR1 : out std_logic_vector(31 downto 0);
+			  DAlu1 : out std_logic_vector(31 downto 0);
+			  DAlu2 : out std_logic_vector(31 downto 0);
+			  DAluR1 : out std_logic_vector(31 downto 0);
 			  DRegOutAddr : out std_logic_vector(4 downto 0) 
 			  );
 end cpu;
@@ -129,7 +129,7 @@ signal alu_r2 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_debug : std_logic_vector(31 downto 0) := (others => '0');
 
 
-signal RAM0: RamData := (0 => x"00", 1 => x"02", 2 => x"0f", others => (others => '0'));
+signal RAM0: RamData := (0 => x"0a", 1 => x"0c", 2 => x"00", others => (others => '0'));
 signal RAM1: RamData := (others => (others => '0'));
 signal RAM2: RamData := (others => (others => '0'));
 signal RAM3: RamData := (others => (others => '0'));
@@ -205,6 +205,8 @@ process(CLK)
 	variable vlregAddr : std_logic_vector(4 downto 0) := (others => '0');
 	variable prev_op1 : STD_LOGIC_VECTOR (31 downto 0):= (others => '0');
 	variable prev_op2 : STD_LOGIC_VECTOR (31 downto 0):= (others => '0');
+	variable res1Reg : STD_LOGIC_vector (31 downto 0):= (others => '0');
+	variable res2Reg : STD_LOGIC_vector (31 downto 0):= (others => '0');
 begin
 	
 	if rising_edge(CLK) then
@@ -298,13 +300,18 @@ begin
 --					ram_ADDR <= alu_r1;
 --				-- registerOut sends data from rt	
 --					ram_DI <= decode_registerOut;
-					
-					RAM0(to_integer(unsigned(alu_r1(5 downto 0)))) <= decode_registerOut(7 downto 0);
-					RAM1(to_integer(unsigned(alu_r1(5 downto 0)))) <= decode_registerOut(15 downto 8);
-					RAM2(to_integer(unsigned(alu_r1(5 downto 0)))) <= decode_registerOut(23 downto 16);
-					RAM3(to_integer(unsigned(alu_r1(5 downto 0)))) <= decode_registerOut(31 downto 24);
---					DMemOut <= read_ram_at(RAM, alu_r1);
---					DMemAddr <= alu_r1;
+					if alu_r1(5 downto 0) = b"010000" then
+						res1Reg := decode_registerOut;
+					elsif alu_r1(5 downto 0) = b"010001" then
+						res2Reg := decode_registerOut;
+					else
+						RAM0(to_integer(unsigned(alu_r1(5 downto 0)))) <= decode_registerOut(7 downto 0);
+						RAM1(to_integer(unsigned(alu_r1(5 downto 0)))) <= decode_registerOut(15 downto 8);
+						RAM2(to_integer(unsigned(alu_r1(5 downto 0)))) <= decode_registerOut(23 downto 16);
+						RAM3(to_integer(unsigned(alu_r1(5 downto 0)))) <= decode_registerOut(31 downto 24);
+	--					DMemOut <= read_ram_at(RAM, alu_r1);
+	--					DMemAddr <= alu_r1;
+					end if;
 					currentState := WriteBack;
 				
 				
@@ -373,26 +380,28 @@ begin
 
 rom_ADDR <= pc;
 DRegOutAddr <= vlregAddr;
-DRegOut <= vlreg;
+DRegOut <= decode_registerOut;-- vlreg;
 --DMeMOut <= pc;
+
+DOutput <= res1Reg;
+DOutput2 <= res2Reg;
 
 end process;
 
 
 
-DOutput <= ram3(15) & ram2(15) & ram1(15) & ram0(15);
-DOutput2 <= ram3(14) & ram2(14) & ram1(14) & ram0(14);
+
 
 --RAM(63) & RAM(62) & RAM(61) & RAM(60);
 
 alu_op1 <= decode_AluOP1;
 alu_op2 <= decode_AluOP2;
 
---DAlu1 <= alu_op1;
---DAlu2 <= alu_op2;
+DAlu1 <= alu_op1;
+DAlu2 <= alu_op2;
 
 alu_control <= decode_AluControl;
---DAluR1 <= alu_r1;
+DAluR1 <= alu_r1;
 
 
 --DMemOut <= ram_DO;

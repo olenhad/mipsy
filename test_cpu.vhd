@@ -41,7 +41,7 @@ ARCHITECTURE behavior OF test_cpu IS
  
     COMPONENT cpu
     PORT(
-			  CLK : in  STD_LOGIC;
+ CLK : in  STD_LOGIC;
 			  cpu_op1 : in STD_LOGIC_VECTOR (31 downto 0);
 			  cpu_op2 : in STD_LOGIC_VECTOR (31 downto 0);
 --			  DHalt : in std_logic;
@@ -53,9 +53,9 @@ ARCHITECTURE behavior OF test_cpu IS
 --			  DMemOut : out std_logic_vector(31 downto 0);
 --			  DCPUState : out std_logic_vector(31 downto 0);
 			  DCurrentIns : out std_logic_vector(31 downto 0);
---			  DAlu1 : out std_logic_vector(31 downto 0);
---			  DAlu2 : out std_logic_vector(31 downto 0);
---			  DAluR1 : out std_logic_vector(31 downto 0);
+			  DAlu1 : out std_logic_vector(31 downto 0);
+			  DAlu2 : out std_logic_vector(31 downto 0);
+			  DAluR1 : out std_logic_vector(31 downto 0);
 			  DRegOutAddr : out std_logic_vector(4 downto 0)  			  
         );
     END COMPONENT;
@@ -66,7 +66,8 @@ ARCHITECTURE behavior OF test_cpu IS
    signal DHalt : std_logic := '0';
    signal DRegAddr : std_logic_vector(4 downto 0) := (others => '0');
    signal DMemAddr : std_logic_vector(31 downto 0) := (others => '0');
-
+	signal cpu_op1 : STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
+	signal cpu_op2 : STD_LOGIC_VECTOR (31 downto 0):= (others => '0');
  	--Outputs
    signal DRegOut : std_logic_vector(31 downto 0);
    signal DMemOut : std_logic_vector(31 downto 0);
@@ -77,6 +78,7 @@ ARCHITECTURE behavior OF test_cpu IS
 	signal DAluR1 : std_logic_vector(31 downto 0);
    signal DRegOutAddr : std_logic_vector(4 downto 0);
 	signal DOutput : std_logic_vector(31 downto 0);
+		signal DOutput2 : std_logic_vector(31 downto 0);
 	-- Clock period definitions
    constant CLK_period : time := 10 ns;
  
@@ -85,6 +87,8 @@ BEGIN
 	-- Instantiate the Unit Under Test (UUT)
    uut: cpu PORT MAP (
           CLK => CLK,
+			 cpu_op1 => cpu_op1,
+			 cpu_op2 => cpu_op2,
 --          DHalt => DHalt,
 --          DRegAddr => DRegAddr,
 --          DMemAddr => DMemAddr,
@@ -92,11 +96,13 @@ BEGIN
 --          DMemOut => DMemOut,
 --			 DCPUState => DCPUState,
 			 DCurrentIns => DCurrentIns,
---			 DAlu1 => Dalu1,
---			 DAlu2 => DAlu2,
---			 DAluR1 => DAluR1,
+			 DAlu1 => Dalu1,
+		 DAlu2 => DAlu2,
+			 DAluR1 => DAluR1,
 			 DRegOutAddr => DRegOutAddr,
-			 DOutput => DOutput
+			 DOutput => DOutput,
+			 			 DOutput2 => DOutput2
+
         );
 
    -- Clock process definitions
