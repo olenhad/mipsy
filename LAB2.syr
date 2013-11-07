@@ -124,13 +124,12 @@ Architecture utils of Entity utils is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" in Library work.
 Architecture behavioral of Entity rom is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" in Library work.
-Entity <decode> compiled.
-Entity <decode> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity decode is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
-Architecture behavioral of Entity alu is up to date.
+Entity <alu> compiled.
+Entity <alu> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" in Library work.
-Entity <cpu> compiled.
-Entity <cpu> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity cpu is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" in Library work.
 Architecture structural of Entity lab2 is up to date.
 
@@ -197,13 +196,13 @@ WARNING:Xst:819 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <rom> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 64: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom0> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 64: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom1> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 64: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom2> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 64: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom3> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 Entity <rom> analyzed. Unit <rom> generated.
 
@@ -385,15 +384,13 @@ Synthesizing Unit <alu>.
     Found 32-bit register for signal <Debug>.
     Found 32-bit register for signal <Result1>.
     Found 32-bit register for signal <Result2>.
-    Found 1-bit register for signal <divIsSigned>.
-    Found 1-bit register for signal <isAdd>.
-    Found 1-bit register for signal <mulIsSigned>.
-    Found 32-bit comparator equal for signal <Result1$cmp_eq0068> created at line 200.
-    Found 32-bit comparator not equal for signal <Result1$cmp_ne0000> created at line 207.
-    Found 32-bit xor2 for signal <Result1$xor0000> created at line 179.
+    Found 32-bit comparator equal for signal <Result1$cmp_eq0078> created at line 215.
+    Found 32-bit comparator less for signal <Result1$cmp_lt0000> created at line 195.
+    Found 32-bit comparator not equal for signal <Result1$cmp_ne0000> created at line 222.
+    Found 32-bit xor2 for signal <Result1$xor0000> created at line 188.
     Summary:
-	inferred  99 D-type flip-flop(s).
-	inferred   2 Comparator(s).
+	inferred  96 D-type flip-flop(s).
+	inferred   3 Comparator(s).
 Unit <alu> synthesized.
 
 
@@ -477,16 +474,16 @@ Macro Statistics
  64-bit adder                                          : 1
 # Counters                                             : 1
  32-bit down counter                                   : 1
-# Registers                                            : 164
- 1-bit register                                        : 71
+# Registers                                            : 161
+ 1-bit register                                        : 68
  32-bit register                                       : 23
  5-bit register                                        : 5
  6-bit register                                        : 1
  8-bit register                                        : 64
-# Comparators                                          : 24
+# Comparators                                          : 25
  32-bit comparator equal                               : 5
  32-bit comparator greatequal                          : 5
- 32-bit comparator less                                : 5
+ 32-bit comparator less                                : 6
  32-bit comparator not equal                           : 9
 # Multiplexers                                         : 11
  1-bit 32-to-1 multiplexer                             : 1
@@ -526,7 +523,6 @@ WARNING:Xst:2677 - Node <currentIns_22> of sequential type is unconnected in blo
 WARNING:Xst:2677 - Node <currentIns_23> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <currentIns_24> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <currentIns_25> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2404 -  FFs/Latches <Debug<31:2>> (without init value) have a constant value of 0 in block <alu>.
 
 Synthesizing (advanced) Unit <cpu>.
 INFO:Xst:3226 - The RAM <idecode_Mram_registerFile_ren> will be implemented as a BLOCK RAM, absorbing the following register(s): <decode_CurrentInstruction>
@@ -624,12 +620,12 @@ Macro Statistics
  64-bit adder                                          : 1
 # Counters                                             : 1
  32-bit down counter                                   : 1
-# Registers                                            : 1282
- Flip-Flops                                            : 1282
-# Comparators                                          : 24
+# Registers                                            : 1309
+ Flip-Flops                                            : 1309
+# Comparators                                          : 25
  32-bit comparator equal                               : 5
  32-bit comparator greatequal                          : 5
- 32-bit comparator less                                : 5
+ 32-bit comparator less                                : 6
  32-bit comparator not equal                           : 9
 # Multiplexers                                         : 11
  1-bit 32-to-1 multiplexer                             : 1
@@ -644,6 +640,36 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <Debug_31> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_30> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_29> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_28> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_27> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_26> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_25> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_24> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_23> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_22> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_21> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_20> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_19> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_18> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_17> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_16> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_15> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_14> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_13> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_12> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_11> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_10> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_9> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_8> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_7> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_6> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_5> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_4> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_3> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_2> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <currentIns_10> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_10> 
 INFO:Xst:2261 - The FF/Latch <currentIns_11> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_11> 
 INFO:Xst:2261 - The FF/Latch <currentIns_12> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_12> 
@@ -733,7 +759,7 @@ WARNING:Xst:2677 - Node <cpu0_currentIns_6> of sequential type is unconnected in
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 88.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 81.
 INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
@@ -742,21 +768,50 @@ INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_r
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
 INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
-FlipFlop cpu0_idecode_AluControl_3 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluControl_0 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluControl_1 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluControl_2 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_0 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_1 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_10 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_11 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_12 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_13 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_14 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_15 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_16 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_17 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_18 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_19 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_2 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_20 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_21 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_22 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_23 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_24 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_25 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_26 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_27 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_28 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_29 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_3 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_30 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_4 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_5 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_6 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_7 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_8 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_9 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_0 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_1 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_17 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_18 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_2 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_3 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_4 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_5 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_6 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_7 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -764,8 +819,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1255
- Flip-Flops                                            : 1255
+# Registers                                            : 1281
+ Flip-Flops                                            : 1281
 
 =========================================================================
 
@@ -794,36 +849,36 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 7887
+# BELS                             : 7463
 #      GND                         : 2
-#      INV                         : 322
+#      INV                         : 321
 #      LUT1                        : 27
-#      LUT2                        : 409
-#      LUT2_D                      : 10
+#      LUT2                        : 383
+#      LUT2_D                      : 11
 #      LUT2_L                      : 3
-#      LUT3                        : 1412
-#      LUT3_D                      : 2
+#      LUT3                        : 1139
+#      LUT3_D                      : 40
 #      LUT3_L                      : 6
-#      LUT4                        : 2854
-#      LUT4_D                      : 9
-#      LUT4_L                      : 97
+#      LUT4                        : 3072
+#      LUT4_D                      : 35
+#      LUT4_L                      : 91
 #      MULT_AND                    : 94
-#      MUXCY                       : 974
+#      MUXCY                       : 1014
 #      MUXCY_L                     : 77
-#      MUXF5                       : 778
-#      MUXF6                       : 69
+#      MUXF5                       : 336
+#      MUXF6                       : 70
 #      MUXF7                       : 34
 #      MUXF8                       : 1
 #      VCC                         : 2
 #      XORCY                       : 705
-# FlipFlops/Latches                : 1846
-#      FD                          : 97
-#      FDE                         : 1260
+# FlipFlops/Latches                : 1872
+#      FD                          : 95
+#      FDE                         : 1289
 #      FDR                         : 168
 #      FDRE                        : 214
 #      FDRS                        : 2
 #      FDRSE                       : 12
-#      FDS                         : 73
+#      FDS                         : 72
 #      FDSE                        : 20
 # RAMS                             : 160
 #      RAM16X1D                    : 141
@@ -845,10 +900,10 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     2985  out of   3584    83%  
- Number of Slice Flip Flops:           1846  out of   7168    25%  
- Number of 4 input LUTs:               5483  out of   7168    76%  
-    Number used as logic:              5151
+ Number of Slices:                     2843  out of   3584    79%  
+ Number of Slice Flip Flops:           1872  out of   7168    26%  
+ Number of 4 input LUTs:               5460  out of   7168    76%  
+    Number used as logic:              5128
     Number used as Shift registers:      50
     Number used as RAMs:                282
  Number of IOs:                          11
@@ -878,7 +933,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 2056  |
+Clk                                | BUFGP                  | 2082  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -889,7 +944,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 35.505ns (Maximum Frequency: 28.165MHz)
+   Minimum period: 35.249ns (Maximum Frequency: 28.370MHz)
    Minimum input arrival time before clock: 1.548ns
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: 5.816ns
@@ -900,22 +955,23 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 35.505ns (frequency: 28.165MHz)
-  Total number of paths / destination ports: 5178614352387 / 6036
+  Clock period: 35.249ns (frequency: 28.370MHz)
+  Total number of paths / destination ports: 5555029603024 / 6090
 -------------------------------------------------------------------------
-Delay:               35.505ns (Levels of Logic = 188)
-  Source:            cpu0_idecode_AluOP1_1 (FF)
+Delay:               35.249ns (Levels of Logic = 189)
+  Source:            cpu0_idecode_AluOP1_0_1 (FF)
   Destination:       cpu0_ialu_div_quotient_31 (FF)
   Source Clock:      Clk rising
   Destination Clock: Clk rising
 
-  Data Path: cpu0_idecode_AluOP1_1 to cpu0_ialu_div_quotient_31
+  Data Path: cpu0_idecode_AluOP1_0_1 to cpu0_ialu_div_quotient_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             18   0.591   1.068  cpu0_idecode_AluOP1_1 (cpu0_idecode_AluOP1_1)
-     INV:I->O              1   0.648   0.000  cpu0_ialu_div_Madd_cOperand1_not0000<1>1_INV_0 (cpu0_ialu_div_Madd_cOperand1_not0000<1>)
-     MUXCY:S->O            1   0.632   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1>)
+     FDE:C->Q              5   0.591   0.776  cpu0_idecode_AluOP1_0_1 (cpu0_idecode_AluOP1_0_1)
+     LUT1:I0->O            1   0.648   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>_rt (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.632   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<2> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<3> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<4> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<4>)
@@ -945,8 +1001,8 @@ Delay:               35.505ns (Levels of Logic = 188)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<28> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<29> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<29>)
      MUXCY:CI->O           0   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<30> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<30>)
-     XORCY:CI->O           1   0.844   0.452  cpu0_ialu_div_Madd_cOperand1_addsub0000_xor<31> (cpu0_ialu_div_cOperand1_addsub0000<31>)
-     LUT3:I2->O            3   0.648   0.000  cpu0_ialu_div_Mmux_cOperand1_mux0001501 (cpu0_ialu_div_Mmux_cOperand1_mux0002_6)
+     XORCY:CI->O           1   0.844   0.423  cpu0_ialu_div_Madd_cOperand1_addsub0000_xor<31> (cpu0_ialu_div_cOperand1_addsub0000<31>)
+     LUT4:I3->O            3   0.648   0.000  cpu0_ialu_div_Mmux_cOperand1_mux0001501 (cpu0_ialu_div_Mmux_cOperand1_mux0002_6)
      MUXF5:I1->O           1   0.276   0.000  cpu0_ialu_div_Mmux_cOperand1_mux0002_5_f5 (cpu0_ialu_div_Mmux_cOperand1_mux0002_5_f5)
      MUXF6:I1->O           1   0.291   0.000  cpu0_ialu_div_Mmux_cOperand1_mux0002_4_f6 (cpu0_ialu_div_Mmux_cOperand1_mux0002_4_f6)
      MUXF7:I1->O           1   0.291   0.000  cpu0_ialu_div_Mmux_cOperand1_mux0002_3_f7 (cpu0_ialu_div_Mmux_cOperand1_mux0002_3_f7)
@@ -1104,8 +1160,8 @@ Delay:               35.505ns (Levels of Logic = 188)
      LUT4:I3->O            1   0.648   0.000  cpu0_ialu_div_Mmux_quotient_mux000150 (cpu0_ialu_div_quotient_mux0001<31>)
      FDE:D                     0.252          cpu0_ialu_div_quotient_31
     ----------------------------------------
-    Total                     35.505ns (25.435ns logic, 10.070ns route)
-                                       (71.6% logic, 28.4% route)
+    Total                     35.249ns (25.500ns logic, 9.749ns route)
+                                       (72.3% logic, 27.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
@@ -1168,14 +1224,14 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 64.00 secs
-Total CPU time to Xst completion: 64.25 secs
+Total REAL time to Xst completion: 60.00 secs
+Total CPU time to Xst completion: 60.80 secs
  
 --> 
 
-Total memory usage is 419992 kilobytes
+Total memory usage is 386392 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  112 (   0 filtered)
+Number of warnings :  141 (   0 filtered)
 Number of infos    :   42 (   0 filtered)
 

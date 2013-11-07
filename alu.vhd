@@ -116,12 +116,18 @@ div: div32 port map ( operand1 => operand1,
 							  quotient => divQuotient,
 							  exception => divException);
 
-
+isadd <= '1' when (control = b"100000" or control = b"100001") else
+			'0';
+mulIsSigned <= '1' when (control = b"011000") else
+			'0';
+divIsSigned <= '1' when (control = b"011010") else
+			'0';
 process (Clk)
 	variable r1Reg : std_logic_vector(31 downto 0);
 	variable r2Reg : std_logic_vector(31 downto 0);
 begin  
    if (Clk'event and Clk = '1') then
+		
 		if Control = b"111111" then
 			-- NOP/echo
 	--		r1Reg := operand1;
@@ -130,46 +136,46 @@ begin
 		Result2 <= operand2;
       elsif Control = b"100000" then
 		-- ADD
-			isadd <= '1';
+			--isadd <= '1';
 			Result1 <= addsubResult;
 			Debug <= ( 0 => isOverflowAdd, others => '0');
 		elsif Control = b"100001" then
 		-- ADDU
-			isadd <= '1';
+--			isadd <= '1';
 			Result1 <= uaddsubResult;
 			Debug <= ( 0 => isOverflowAddU, others => '0');
 		elsif Control = b"100010" then
 		-- SUB
-			isadd <= '0';
+--			isadd <= '0';
 			Result1 <= addsubResult;
 			Debug <= ( 0 => isOverflowAdd, others => '0');
 		elsif Control = b"100011" then
 		-- SUBU
-			isadd <= '0';
+--			isadd <= '0';
 			Result1 <= uaddsubResult;
 			Debug <= ( 0 => isOverflowAddU, others => '0');
 		elsif Control = b"011000" then
 		-- MULT
-			mulIsSigned <= '1';
+--			mulIsSigned <= '1';
 			Result1 <= mulResult(31 downto 0);
 			Result2 <= mulResult(63 downto 32);
 		elsif Control = b"011001" then
 		-- MULTU
-			mulIsSigned <= '0';
+--			mulIsSigned <= '0';
 			Result1 <= mulResult(31 downto 0);
 			Result2 <= mulResult(63 downto 32);
 		elsif Control = b"011010" then
 		-- DIV
 			Result1 <= divRemainder;
 			Result2 <= divQuotient;
-			divIsSigned <= '1';
+--			divIsSigned <= '1';
 			Debug <= ( 1 => divException, others => '0');
 		
 		elsif Control = b"011011" then
 		-- DIVU	
 			Result1 <= divRemainder;
 			Result2 <= divQuotient;
-			divIsSigned <= '0';
+--			divIsSigned <= '0';
 			Debug <= ( 1 => divException, others => '0');
 		elsif Control = b"100100" then
 		-- AND
@@ -185,7 +191,7 @@ begin
 			Result1 <= operand1 nor operand2;
 		elsif Control = b"101010" then
 		-- SLT
-			isadd <= '0';
+--			isadd <= '0';
 			if operand1 < operand2 then
 				Result1 <= (0 => '1', others => '0');
 			else
