@@ -85,55 +85,61 @@ begin
 			opcode := currentInstruction(31 downto 26);
 			ControlSignals <= (others => '0');
 			registerOut <= (others => '0');
-			-- R type
+			
 			if opcode = b"000000" then
-			-- all R type instructions just Write to registers. assert RegWrite	
-				ControlSignals <= "01000";
-			-- funct portion of Current Instruction
-				AluControl <= CurrentInstruction(5 downto 0);
-
-			-- load operand 1 with register whose address is in rs
-				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
-			
-				RegWBAddr <= currentInstruction(15 downto 11);
-			
-				if (CurrentInstruction(5 downto 0) = b"000000" or 
-					 CurrentInstruction(5 downto 0) = b"000010" or  
-					 CurrentInstruction(5 downto 0) = b"000011") then
-				-- load operand 2 with shamt
-					 AluOP2 <= x"000000" & b"000" & CurrentInstruction(10 downto 6);
-				elsif (CurrentInstruction(5 downto 0) = b"010000") or
-				      (CurrentInstruction(5 downto 0) = b"010010") then
-					-- MFHI, MFLO, send NOP to ALU
-					 AluControl <= b"111111";
-				elsif (CurrentInstruction(5 downto 0) = b"000100") then
-					-- sllv
-					AluControl <= b"000000";
-					AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
-					-- OP2 which controls shift is given	
-					AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
-				
-				elsif (CurrentInstruction(5 downto 0) = b"000110") then
-					-- srlv
-					AluControl <= b"000010";
-					AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
-					-- OP2 which controls shift is given	
-					AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+				if (CurrentInstruction(20 downto 0) = b"000000000000000001000") then
+				-- JR
+					registerOut <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
 					
-				elsif (CurrentInstruction(5 downto 0) = b"000111") then
-					-- srav
-					AluControl <= b"000011";
-					AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
-					-- OP2 which controls shift is given	
-					AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
-
 				else
-				-- load operand 2 with register whose address is in rt
-					AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+				-- R type
+				-- all R type instructions just Write to registers. assert RegWrite	
+					ControlSignals <= "01000";
+				-- funct portion of Current Instruction
+					AluControl <= CurrentInstruction(5 downto 0);
+
+				-- load operand 1 with register whose address is in rs
+					AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
+				
+					RegWBAddr <= currentInstruction(15 downto 11);
+				
+					if (CurrentInstruction(5 downto 0) = b"000000" or 
+						 CurrentInstruction(5 downto 0) = b"000010" or  
+						 CurrentInstruction(5 downto 0) = b"000011") then
+					-- load operand 2 with shamt
+						 AluOP2 <= x"000000" & b"000" & CurrentInstruction(10 downto 6);
+					elsif (CurrentInstruction(5 downto 0) = b"010000") or
+							(CurrentInstruction(5 downto 0) = b"010010") then
+						-- MFHI, MFLO, send NOP to ALU
+						 AluControl <= b"111111";
+					elsif (CurrentInstruction(5 downto 0) = b"000100") then
+						-- sllv
+						AluControl <= b"000000";
+						AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
+						-- OP2 which controls shift is given	
+						AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+					
+					elsif (CurrentInstruction(5 downto 0) = b"000110") then
+						-- srlv
+						AluControl <= b"000010";
+						AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
+						-- OP2 which controls shift is given	
+						AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+						
+					elsif (CurrentInstruction(5 downto 0) = b"000111") then
+						-- srav
+						AluControl <= b"000011";
+						AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
+						-- OP2 which controls shift is given	
+						AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+
+					else
+					-- load operand 2 with register whose address is in rt
+						AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+					end if;
+				-- sets register whose address is at rd to alu_result1
+					--registerFile(to_integer(unsigned(currentInstruction(15 downto 11)))) := alu_result1;
 				end if;
-			-- sets register whose address is at rd to alu_result1
-				--registerFile(to_integer(unsigned(currentInstruction(15 downto 11)))) := alu_result1;
-			
 			-- I types
 			elsif opcode = b"001000" then
 			--	ADDI

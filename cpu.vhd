@@ -278,9 +278,15 @@ begin
 				currentState := AluWait;
 			
 			elsif currentState = AluWait then
+				if (CurrentIns(20 downto 0) = b"000000000000000001000" and
+					 CurrentIns(31 downto 26) = b"000000") then
+				-- JR
+					pc := decode_registerOut;
+					currentState := FetchDecode;
+				else
 	--			DCPUState <= (5 => '1', others => '0');
-				currentState := MemWR;
-			
+					currentState := MemWR;
+				end if;
 			elsif currentState = MemWR then
 	--			DCPUState <= (1 => '1', others => '0');
 				if sig_Branch = '0' and 

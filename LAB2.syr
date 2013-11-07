@@ -122,14 +122,14 @@ Architecture behavioral of Entity div32 is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd" in Library work.
 Architecture utils of Entity utils is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" in Library work.
-Architecture behavioral of Entity rom is up to date.
+Entity <rom> compiled.
+Entity <rom> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" in Library work.
 Architecture behavioral of Entity decode is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" in Library work.
-Entity <cpu> compiled.
-Entity <cpu> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity cpu is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" in Library work.
 Architecture structural of Entity lab2 is up to date.
 
@@ -179,30 +179,30 @@ WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project
 Entity <LAB2> analyzed. Unit <LAB2> generated.
 
 Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 318: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 319: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 320: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 321: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 403: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 324: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 325: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 326: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 327: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 409: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <RAM3> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 403: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 409: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <RAM2> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 403: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 409: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <RAM1> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 403: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 409: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <RAM0> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 WARNING:Xst:819 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 197: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <decode_registerOut>
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <rom> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 64: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom0> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 64: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom1> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 64: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom2> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 64: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom3> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 Entity <rom> analyzed. Unit <rom> generated.
 
@@ -263,11 +263,9 @@ Synthesizing Unit <decode>.
     Found 5-bit register for signal <RegWBAddr>.
     Found 5-bit register for signal <ControlSignals>.
     Found 32-bit register for signal <registerOut>.
-    Found 32-bit 4-to-1 multiplexer for signal <registerOut$mux0004>.
     Summary:
 	inferred   2 RAM(s).
 	inferred 149 D-type flip-flop(s).
-	inferred  32 Multiplexer(s).
 Unit <decode> synthesized.
 
 
@@ -403,8 +401,8 @@ WARNING:Xst:646 - Signal <alu_debug> is assigned but never used. This unconnecte
     Found finite state machine <FSM_0> for signal <currentState>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
-    | Transitions        | 10                                             |
-    | Inputs             | 5                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 7                                              |
     | Outputs            | 8                                              |
     | Clock              | CLK                       (rising_edge)        |
     | Clock enable       | currentState$not0000      (negative)           |
@@ -418,10 +416,10 @@ WARNING:Xst:646 - Signal <alu_debug> is assigned but never used. This unconnecte
     Found 1-bit register for signal <decode_RegWrite>.
     Found 5-bit register for signal <decode_WriteAddr>.
     Found 32-bit register for signal <decode_WriteData>.
-    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0000> created at line 403.
-    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0001> created at line 403.
-    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0002> created at line 403.
-    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0003> created at line 403.
+    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0000> created at line 409.
+    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0001> created at line 409.
+    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0002> created at line 409.
+    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0003> created at line 409.
     Found 32-bit register for signal <hi>.
     Found 32-bit register for signal <lo>.
     Found 32-bit register for signal <pc>.
@@ -486,9 +484,9 @@ Macro Statistics
  32-bit comparator greatequal                          : 5
  32-bit comparator less                                : 6
  32-bit comparator not equal                           : 9
-# Multiplexers                                         : 11
+# Multiplexers                                         : 10
  1-bit 32-to-1 multiplexer                             : 1
- 32-bit 4-to-1 multiplexer                             : 6
+ 32-bit 4-to-1 multiplexer                             : 5
  8-bit 16-to-1 multiplexer                             : 4
 # Xors                                                 : 5
  1-bit xor2                                            : 4
@@ -618,9 +616,9 @@ Macro Statistics
  32-bit comparator greatequal                          : 5
  32-bit comparator less                                : 6
  32-bit comparator not equal                           : 9
-# Multiplexers                                         : 11
+# Multiplexers                                         : 10
  1-bit 32-to-1 multiplexer                             : 1
- 32-bit 4-to-1 multiplexer                             : 6
+ 32-bit 4-to-1 multiplexer                             : 5
  8-bit 16-to-1 multiplexer                             : 4
 # Xors                                                 : 5
  1-bit xor2                                            : 4
@@ -674,8 +672,8 @@ INFO:Xst:2261 - The FF/Latch <currentIns_17> in Unit <cpu> is equivalent to the 
 INFO:Xst:2261 - The FF/Latch <currentIns_18> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_18> 
 INFO:Xst:2261 - The FF/Latch <currentIns_19> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_19> 
 INFO:Xst:2261 - The FF/Latch <currentIns_30> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_30> 
-INFO:Xst:2261 - The FF/Latch <currentIns_26> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_26> 
 INFO:Xst:2261 - The FF/Latch <currentIns_31> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_31> 
+INFO:Xst:2261 - The FF/Latch <currentIns_26> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_26> 
 INFO:Xst:2261 - The FF/Latch <currentIns_27> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_27> 
 INFO:Xst:2261 - The FF/Latch <currentIns_28> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_28> 
 INFO:Xst:2261 - The FF/Latch <currentIns_29> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_29> 
@@ -714,7 +712,7 @@ WARNING:Xst:2677 - Node <cpu0_DCurrentIns_21> of sequential type is unconnected 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 84.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 86.
 INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
@@ -759,14 +757,24 @@ FlipFlop cpu0_idecode_AluOP1_8 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_9 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_0 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_1 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP2_17 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP2_18 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_10 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_11 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_12 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_13 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_14 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_15 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_16 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_2 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_20 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_22 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_23 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_3 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_4 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_5 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_6 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_7 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_8 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP2_9 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -774,8 +782,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1320
- Flip-Flops                                            : 1320
+# Registers                                            : 1330
+ Flip-Flops                                            : 1330
 
 =========================================================================
 
@@ -804,31 +812,31 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 7804
+# BELS                             : 7859
 #      GND                         : 2
-#      INV                         : 322
+#      INV                         : 323
 #      LUT1                        : 74
-#      LUT2                        : 392
+#      LUT2                        : 385
 #      LUT2_D                      : 11
 #      LUT2_L                      : 3
-#      LUT3                        : 1179
+#      LUT3                        : 1167
 #      LUT3_D                      : 40
-#      LUT3_L                      : 6
-#      LUT4                        : 3199
-#      LUT4_D                      : 35
+#      LUT3_L                      : 7
+#      LUT4                        : 3248
+#      LUT4_D                      : 34
 #      LUT4_L                      : 91
 #      MULT_AND                    : 94
-#      MUXCY                       : 1071
+#      MUXCY                       : 1081
 #      MUXCY_L                     : 77
-#      MUXF5                       : 338
+#      MUXF5                       : 352
 #      MUXF6                       : 70
 #      MUXF7                       : 34
 #      MUXF8                       : 1
 #      VCC                         : 2
 #      XORCY                       : 763
-# FlipFlops/Latches                : 1911
+# FlipFlops/Latches                : 1921
 #      FD                          : 95
-#      FDE                         : 1328
+#      FDE                         : 1338
 #      FDR                         : 168
 #      FDRE                        : 214
 #      FDRS                        : 2
@@ -855,10 +863,10 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     2971  out of   3584    82%  
- Number of Slice Flip Flops:           1911  out of   7168    26%  
- Number of 4 input LUTs:               5684  out of   7168    79%  
-    Number used as logic:              5352
+ Number of Slices:                     2990  out of   3584    83%  
+ Number of Slice Flip Flops:           1921  out of   7168    26%  
+ Number of 4 input LUTs:               5715  out of   7168    79%  
+    Number used as logic:              5383
     Number used as Shift registers:      50
     Number used as RAMs:                282
  Number of IOs:                          11
@@ -888,7 +896,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 2121  |
+Clk                                | BUFGP                  | 2131  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -911,7 +919,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
   Clock period: 35.249ns (frequency: 28.370MHz)
-  Total number of paths / destination ports: 5555029612855 / 6168
+  Total number of paths / destination ports: 5555029634267 / 6188
 -------------------------------------------------------------------------
 Delay:               35.249ns (Levels of Logic = 189)
   Source:            cpu0_idecode_AluOP1_0_1 (FF)
@@ -1179,12 +1187,12 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 58.00 secs
-Total CPU time to Xst completion: 58.42 secs
+Total REAL time to Xst completion: 62.00 secs
+Total CPU time to Xst completion: 61.34 secs
  
 --> 
 
-Total memory usage is 388440 kilobytes
+Total memory usage is 389464 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   90 (   0 filtered)

@@ -23,6 +23,9 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
 </msg>
 
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">cpu0_ialu_Result1_mux0006&lt;16&gt;41</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">cpu0_ialu_Result1_mux0006&lt;5&gt;145_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
 <msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">cpu0_ialu_div_Mmux_cOperand1_mux0001221</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">cpu0_ialu_div_Mmux_cOperand1_mux0002_5_f6/MUXF5.I0</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
