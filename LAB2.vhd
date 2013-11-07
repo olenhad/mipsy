@@ -152,7 +152,7 @@ PORT MAP (
 --	Debug			=>  Debug
 --);
 
-Debug <=  x"000000" & b"000" & paddedRegAddr;
+--Debug <=  x"000000" & b"000" & paddedRegAddr;
 cpu0 : cpu
 	PORT MAP (
 		CLK => CLK,
@@ -160,8 +160,8 @@ cpu0 : cpu
 		cpu_op2 => operand2,
 		DOutput2 => Result2,
 		DOutput => Result1,
-		DRegOutAddr => paddedRegAddr
-	--	DCurrentIns => Result1
+		DRegOutAddr => paddedRegAddr,
+		DCurrentIns => Debug
 		);
 	
 

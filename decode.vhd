@@ -87,11 +87,7 @@ begin
 			registerOut <= (others => '0');
 			
 			if opcode = b"000000" then
-				if (CurrentInstruction(20 downto 0) = b"000000000000000001000") then
-				-- JR
-					registerOut <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
-					
-				else
+
 				-- R type
 				-- all R type instructions just Write to registers. assert RegWrite	
 					ControlSignals <= "01000";
@@ -102,8 +98,15 @@ begin
 					AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
 				
 					RegWBAddr <= currentInstruction(15 downto 11);
-				
-					if (CurrentInstruction(5 downto 0) = b"000000" or 
+					
+					if (CurrentInstruction(5 downto 0) = b"001000") then
+						-- JR
+						registerOut <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+					
+					elsif (CurrentInstruction(5 downto 0) = b"001001") then
+						-- JALR
+						registerOut <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+					elsif (CurrentInstruction(5 downto 0) = b"000000" or 
 						 CurrentInstruction(5 downto 0) = b"000010" or  
 						 CurrentInstruction(5 downto 0) = b"000011") then
 					-- load operand 2 with shamt
@@ -139,7 +142,7 @@ begin
 					end if;
 				-- sets register whose address is at rd to alu_result1
 					--registerFile(to_integer(unsigned(currentInstruction(15 downto 11)))) := alu_result1;
-				end if;
+				
 			-- I types
 			elsif opcode = b"001000" then
 			--	ADDI
@@ -259,6 +262,7 @@ begin
 			-- 4 => MemToReg
 				ControlSignals <= b"00001";
 			elsif opcode = b"000001" then
+			
 						-- BGEZ	
 			-- Jump to offset from 15 to 0
 			--	jAddr <= x"000" & b"00" & CurrentInstruction(15 downto 0) & b"00";

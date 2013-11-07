@@ -9,23 +9,23 @@ Target Device  : xc3s400a
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Fri Nov 08 04:49:27 2013
+Mapped Date    : Fri Nov 08 06:26:17 2013
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   82
+Number of warnings:   81
 Logic Utilization:
-  Number of Slice Flip Flops:         1,813 out of   7,168   25%
-  Number of 4 input LUTs:             5,607 out of   7,168   78%
+  Number of Slice Flip Flops:         1,833 out of   7,168   25%
+  Number of 4 input LUTs:             5,631 out of   7,168   78%
 Logic Distribution:
-  Number of occupied Slices:          3,445 out of   3,584   96%
-    Number of Slices containing only related logic:   3,445 out of   3,445 100%
-    Number of Slices containing unrelated logic:          0 out of   3,445   0%
+  Number of occupied Slices:          3,463 out of   3,584   96%
+    Number of Slices containing only related logic:   3,463 out of   3,463 100%
+    Number of Slices containing unrelated logic:          0 out of   3,463   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       5,713 out of   7,168   79%
-    Number used as logic:             5,275
-    Number used as a route-thru:        106
+  Total Number of 4 input LUTs:       5,736 out of   7,168   80%
+    Number used as logic:             5,299
+    Number used as a route-thru:        105
     Number used for Dual Port RAMs:     282
       (Two LUTs used per Dual Port RAM)
     Number used as Shift registers:      50
@@ -38,11 +38,11 @@ Logic Distribution:
   Number of MULT18X18SIOs:                4 out of      20   20%
   Number of RAMB16BWEs:                  19 out of      20   95%
 
-Average Fanout of Non-Clock Nets:                3.44
+Average Fanout of Non-Clock Nets:                3.42
 
 Peak Memory Usage:  303 MB
-Total REAL time to MAP completion:  7 secs 
-Total CPU time to MAP completion:   7 secs 
+Total REAL time to MAP completion:  6 secs 
+Total CPU time to MAP completion:   6 secs 
 
 NOTES:
 
@@ -83,9 +83,6 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0006<16>41 failed
-   to merge with F5 multiplexer cpu0_ialu_Result1_mux0006<5>145_f5.  There is a
-   conflict for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator
    cpu0_ialu_div_Mmux_cOperand1_mux0001221 failed to merge with F5 multiplexer
    cpu0_ialu_div_Mmux_cOperand1_mux0002_5_f6/MUXF5.I0.  There is a conflict for
@@ -494,7 +491,7 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 Section 4 - Removed Logic Summary
 ---------------------------------
   65 block(s) removed
-  79 block(s) optimized away
+  52 block(s) optimized away
   17 signal(s) removed
 
 Section 5 - Removed Logic
@@ -743,60 +740,6 @@ Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_10
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_11
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_12
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_13
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_14
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_15
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_16
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_17
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_18
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_19
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_20
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_21
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_22
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_23
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_24
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_25
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_26
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_27
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_28
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_29
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_30
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_31
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_5
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_6
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_7
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_8
-   optimized to 0
-FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/GPI_I3/GPI_In_9
-   optimized to 0
 FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i
    optimized to 0
 FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i

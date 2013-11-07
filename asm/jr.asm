@@ -24,5 +24,5 @@ ifzero:
 
 lui $1, 0x1001
 sw $t5, 68($1)
-
+jalr $5
 jr $31
