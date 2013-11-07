@@ -66,9 +66,7 @@ begin
 
 process(CLK)
 
-	variable opcode : std_logic_vector(5 downto 0) := (others => '0');
-	variable part1 : std_logic_vector(31 downto 0) := (others => '0'); 
-	variable part2 : std_logic_vector(31 downto 0) := (others => '0'); 	
+	variable opcode : std_logic_vector(5 downto 0) := (others => '0');	
 begin
 	if rising_edge(CLK) then
 		
@@ -95,23 +93,64 @@ begin
 				AluControl <= CurrentInstruction(5 downto 0);
 
 			-- load operand 1 with register whose address is in rs
-				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
 			
 				RegWBAddr <= currentInstruction(15 downto 11);
 			
-				if (CurrentInstruction(5 downto 0) = b"00000" or 
-					 CurrentInstruction(5 downto 0) = b"00010" or  
-					 CurrentInstruction(5 downto 0) = b"00011") then
+				if (CurrentInstruction(5 downto 0) = b"000000" or 
+					 CurrentInstruction(5 downto 0) = b"000010" or  
+					 CurrentInstruction(5 downto 0) = b"000011") then
 				-- load operand 2 with shamt
 					 AluOP2 <= x"000000" & b"000" & CurrentInstruction(10 downto 6);
+				elsif (CurrentInstruction(5 downto 0) = b"010000") or
+				      (CurrentInstruction(5 downto 0) = b"010010") then
+					-- MFHI, MFLO, send NOP to ALU
+					 AluControl <= b"111111";
+				elsif (CurrentInstruction(5 downto 0) = b"000100") then
+					-- sllv
+					AluControl <= b"000000";
+					AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
+					-- OP2 which controls shift is given	
+					AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+				
+				elsif (CurrentInstruction(5 downto 0) = b"000110") then
+					-- srlv
+					AluControl <= b"000010";
+					AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
+					-- OP2 which controls shift is given	
+					AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+					
+				elsif (CurrentInstruction(5 downto 0) = b"000111") then
+					-- srav
+					AluControl <= b"000011";
+					AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
+					-- OP2 which controls shift is given	
+					AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+
 				else
 				-- load operand 2 with register whose address is in rt
-					AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
+					AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
 				end if;
 			-- sets register whose address is at rd to alu_result1
 				--registerFile(to_integer(unsigned(currentInstruction(15 downto 11)))) := alu_result1;
 			
 			-- I types
+			elsif opcode = b"001000" then
+			--	ADDI
+				if currentInstruction(15) = '1' then
+					AluOP2 <= x"ffff" & CurrentInstruction(15 downto 0);
+				else
+					AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
+				end if;
+				
+			-- currentInstruction (25 downto 21) denotes rs, which contains base address
+				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+			-- Alu Control set to Add.
+				AluControl <=  b"100000";
+				RegWBAddr <= CurrentInstruction(20 downto 16);
+				ControlSignals <= "01000";
+			--RT is the write back address
+				
 			elsif opcode = b"100011" then
 			 -- Load Word (23)
 			 -- sign extension to offset
@@ -168,6 +207,18 @@ begin
 				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
 				AluControl <= b"100101";
 						-- all R type instructions just Write to registers. assert RegWrite	
+				ControlSignals <= "01000";
+				RegWBAddr <= currentInstruction(20 downto 16);
+			
+			elsif opcode = b"001010" then
+			-- SLTI
+				if currentInstruction(15) = '1' then
+					AluOP2 <= x"ffff" & CurrentInstruction(15 downto 0);
+				else
+					AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
+				end if;
+				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+				AluControl <= b"101010";
 				ControlSignals <= "01000";
 				RegWBAddr <= currentInstruction(20 downto 16);
 				

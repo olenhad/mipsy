@@ -124,11 +124,13 @@ Architecture utils of Entity utils is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" in Library work.
 Architecture behavioral of Entity rom is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" in Library work.
-Architecture behavioral of Entity decode is up to date.
+Entity <decode> compiled.
+Entity <decode> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" in Library work.
-Architecture behavioral of Entity cpu is up to date.
+Entity <cpu> compiled.
+Entity <cpu> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" in Library work.
 Architecture structural of Entity lab2 is up to date.
 
@@ -178,37 +180,34 @@ WARNING:Xst:753 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project
 Entity <LAB2> analyzed. Unit <LAB2> generated.
 
 Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 308: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 309: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 310: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 311: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 360: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 312: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 313: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 314: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 315: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 381: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <RAM3> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 360: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 381: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <RAM2> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 360: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 381: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <RAM1> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 360: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 381: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <RAM0> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 WARNING:Xst:819 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" line 197: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <decode_registerOut>
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <rom> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom0> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom1> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom2> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
 INFO:Xst:1433 - Contents of array <rom3> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 Entity <rom> analyzed. Unit <rom> generated.
 
 Analyzing Entity <decode> in library <work> (Architecture <behavioral>).
-WARNING:Xst:795 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" line 102: Size of operands are different : result is <false>.
-WARNING:Xst:795 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" line 102: Size of operands are different : result is <false>.
-WARNING:Xst:795 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" line 102: Size of operands are different : result is <false>.
 Entity <decode> analyzed. Unit <decode> generated.
 
 Analyzing Entity <alu> in library <work> (Architecture <behavioral>).
@@ -265,7 +264,7 @@ Synthesizing Unit <decode>.
     Found 5-bit register for signal <RegWBAddr>.
     Found 5-bit register for signal <ControlSignals>.
     Found 32-bit register for signal <registerOut>.
-    Found 32-bit 4-to-1 multiplexer for signal <registerOut$mux0003>.
+    Found 32-bit 4-to-1 multiplexer for signal <registerOut$mux0004>.
     Summary:
 	inferred   2 RAM(s).
 	inferred 149 D-type flip-flop(s).
@@ -389,9 +388,9 @@ Synthesizing Unit <alu>.
     Found 1-bit register for signal <divIsSigned>.
     Found 1-bit register for signal <isAdd>.
     Found 1-bit register for signal <mulIsSigned>.
-    Found 32-bit comparator equal for signal <Result1$cmp_eq0068> created at line 196.
-    Found 32-bit comparator not equal for signal <Result1$cmp_ne0000> created at line 203.
-    Found 32-bit xor2 for signal <Result1$xor0000> created at line 175.
+    Found 32-bit comparator equal for signal <Result1$cmp_eq0068> created at line 200.
+    Found 32-bit comparator not equal for signal <Result1$cmp_ne0000> created at line 207.
+    Found 32-bit xor2 for signal <Result1$xor0000> created at line 179.
     Summary:
 	inferred  99 D-type flip-flop(s).
 	inferred   2 Comparator(s).
@@ -402,15 +401,14 @@ Synthesizing Unit <cpu>.
     Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd".
 WARNING:Xst:1780 - Signal <rom_EN> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <decode_lreg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <currentIns<31:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <alu_r2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <currentIns<25:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <alu_debug> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found finite state machine <FSM_0> for signal <currentState>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
     | Transitions        | 9                                              |
     | Inputs             | 4                                              |
-    | Outputs            | 7                                              |
+    | Outputs            | 8                                              |
     | Clock              | CLK                       (rising_edge)        |
     | Clock enable       | currentState$not0000      (negative)           |
     | Power Up State     | 000                                            |
@@ -423,21 +421,23 @@ WARNING:Xst:646 - Signal <alu_debug> is assigned but never used. This unconnecte
     Found 1-bit register for signal <decode_RegWrite>.
     Found 5-bit register for signal <decode_WriteAddr>.
     Found 32-bit register for signal <decode_WriteData>.
-    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0000> created at line 360.
-    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0001> created at line 360.
-    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0002> created at line 360.
-    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0003> created at line 360.
+    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0000> created at line 381.
+    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0001> created at line 381.
+    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0002> created at line 381.
+    Found 8-bit 16-to-1 multiplexer for signal <decode_WriteData$varindex0003> created at line 381.
+    Found 32-bit register for signal <hi>.
+    Found 32-bit register for signal <lo>.
     Found 32-bit register for signal <pc>.
     Found 32-bit adder for signal <pc$share0000>.
     Found 32-bit register for signal <prev_op1>.
-    Found 32-bit comparator not equal for signal <prev_op1$cmp_ne0000> created at line 216.
+    Found 32-bit comparator not equal for signal <prev_op1$cmp_ne0000> created at line 220.
     Found 32-bit register for signal <prev_op2>.
-    Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0000> created at line 224.
+    Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0000> created at line 228.
     Found 128-bit register for signal <RAM0>.
     Found 128-bit register for signal <RAM1>.
     Found 128-bit register for signal <RAM2>.
-    Found 32-bit comparator not equal for signal <RAM2_0$cmp_ne0000> created at line 216.
-    Found 32-bit comparator not equal for signal <RAM2_1$cmp_ne0000> created at line 224.
+    Found 32-bit comparator not equal for signal <RAM2_0$cmp_ne0000> created at line 220.
+    Found 32-bit comparator not equal for signal <RAM2_1$cmp_ne0000> created at line 228.
     Found 128-bit register for signal <RAM3>.
     Found 32-bit register for signal <res1Reg>.
     Found 32-bit register for signal <res2Reg>.
@@ -446,7 +446,7 @@ WARNING:Xst:646 - Signal <alu_debug> is assigned but never used. This unconnecte
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   1 Counter(s).
-	inferred 811 D-type flip-flop(s).
+	inferred 875 D-type flip-flop(s).
 	inferred   1 Adder/Subtractor(s).
 	inferred   4 Comparator(s).
 	inferred  32 Multiplexer(s).
@@ -477,9 +477,9 @@ Macro Statistics
  64-bit adder                                          : 1
 # Counters                                             : 1
  32-bit down counter                                   : 1
-# Registers                                            : 162
+# Registers                                            : 164
  1-bit register                                        : 71
- 32-bit register                                       : 21
+ 32-bit register                                       : 23
  5-bit register                                        : 5
  6-bit register                                        : 1
  8-bit register                                        : 64
@@ -526,12 +526,6 @@ WARNING:Xst:2677 - Node <currentIns_22> of sequential type is unconnected in blo
 WARNING:Xst:2677 - Node <currentIns_23> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <currentIns_24> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <currentIns_25> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <currentIns_26> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <currentIns_27> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <currentIns_28> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <currentIns_29> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <currentIns_30> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <currentIns_31> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2404 -  FFs/Latches <Debug<31:2>> (without init value) have a constant value of 0 in block <alu>.
 
 Synthesizing (advanced) Unit <cpu>.
@@ -611,12 +605,6 @@ WARNING:Xst:2677 - Node <currentIns_22> of sequential type is unconnected in blo
 WARNING:Xst:2677 - Node <currentIns_23> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <currentIns_24> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <currentIns_25> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <currentIns_26> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <currentIns_27> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <currentIns_28> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <currentIns_29> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <currentIns_30> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <currentIns_31> of sequential type is unconnected in block <cpu>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -636,8 +624,8 @@ Macro Statistics
  64-bit adder                                          : 1
 # Counters                                             : 1
  32-bit down counter                                   : 1
-# Registers                                            : 1212
- Flip-Flops                                            : 1212
+# Registers                                            : 1282
+ Flip-Flops                                            : 1282
 # Comparators                                          : 24
  32-bit comparator equal                               : 5
  32-bit comparator greatequal                          : 5
@@ -656,13 +644,19 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <idecode_ControlSignals_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <idecode_ControlSignals_4> 
 INFO:Xst:2261 - The FF/Latch <currentIns_10> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_10> 
 INFO:Xst:2261 - The FF/Latch <currentIns_11> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_11> 
 INFO:Xst:2261 - The FF/Latch <currentIns_12> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_12> 
 INFO:Xst:2261 - The FF/Latch <currentIns_13> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_13> 
 INFO:Xst:2261 - The FF/Latch <currentIns_14> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_14> 
 INFO:Xst:2261 - The FF/Latch <currentIns_15> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_15> 
+INFO:Xst:2261 - The FF/Latch <currentIns_30> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_30> 
+INFO:Xst:2261 - The FF/Latch <currentIns_26> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_26> 
+INFO:Xst:2261 - The FF/Latch <currentIns_31> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_31> 
+INFO:Xst:2261 - The FF/Latch <currentIns_27> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_27> 
+INFO:Xst:2261 - The FF/Latch <currentIns_28> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_28> 
+INFO:Xst:2261 - The FF/Latch <currentIns_29> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_29> 
+INFO:Xst:2261 - The FF/Latch <idecode_ControlSignals_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <idecode_ControlSignals_4> 
 INFO:Xst:2261 - The FF/Latch <currentIns_0> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_0> 
 INFO:Xst:2261 - The FF/Latch <currentIns_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_1> 
 INFO:Xst:2261 - The FF/Latch <currentIns_2> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_2> 
@@ -713,112 +707,9 @@ Optimizing unit <adder32> ...
 Optimizing unit <alu> ...
 
 Optimizing unit <cpu> ...
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_0> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_1> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_2> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_3> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_4> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_5> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_6> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_7> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_8> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_9> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_10> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_11> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_12> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_13> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_14> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_15> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_16> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_17> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_18> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_19> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_20> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_21> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_22> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_23> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_24> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_25> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_26> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_27> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_28> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_29> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_30> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_Result2_31> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_ialu_Debug_0> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_ialu_Debug_1> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_mult_Mmult_combinedResult_submult_11> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_31> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_30> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_29> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_28> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_27> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_26> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_25> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_24> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_23> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_22> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_21> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_20> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_19> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_18> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_17> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_16> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_15> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_14> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_13> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_12> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_11> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_10> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_9> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_8> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_7> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_6> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_5> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_4> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_3> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_2> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_1> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_quotient_0> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_2> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_1> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_29> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_0> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_28> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_27> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_31> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_30> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_26> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_24> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_19> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_25> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_23> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_18> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_22> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_17> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_16> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_20> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_21> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_14> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_13> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_15> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_11> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_10> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_12> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_ialu_div_exception> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_9> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_8> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_6> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_7> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_5> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_4> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_ialu_div_tquotient_3> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCurrentIns_31> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCurrentIns_30> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCurrentIns_29> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCurrentIns_28> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCurrentIns_27> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DCurrentIns_26> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_DCurrentIns_25> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_DCurrentIns_24> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_DCurrentIns_23> of sequential type is unconnected in block <LAB2>.
@@ -842,7 +733,7 @@ WARNING:Xst:2677 - Node <cpu0_currentIns_6> of sequential type is unconnected in
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 73.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 88.
 INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
@@ -851,27 +742,15 @@ INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_r
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
 INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
-FlipFlop cpu0_idecode_AluOP1_0 has been replicated 2 time(s)
-FlipFlop cpu0_idecode_AluOP1_1 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluControl_3 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_0 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_10 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_11 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_12 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_13 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_14 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_17 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_18 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_19 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_2 has been replicated 2 time(s)
-FlipFlop cpu0_idecode_AluOP1_20 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_21 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_22 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_25 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_26 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_3 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_4 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_5 has been replicated 1 time(s)
+FlipFlop cpu0_idecode_AluOP1_27 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_6 has been replicated 1 time(s)
-FlipFlop cpu0_idecode_AluOP1_7 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP1_8 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_0 has been replicated 1 time(s)
 FlipFlop cpu0_idecode_AluOP2_1 has been replicated 1 time(s)
@@ -885,8 +764,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1103
- Flip-Flops                                            : 1103
+# Registers                                            : 1255
+ Flip-Flops                                            : 1255
 
 =========================================================================
 
@@ -915,36 +794,36 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 6455
+# BELS                             : 7887
 #      GND                         : 2
-#      INV                         : 291
-#      LUT1                        : 13
-#      LUT2                        : 329
-#      LUT2_D                      : 11
+#      INV                         : 322
+#      LUT1                        : 27
+#      LUT2                        : 409
+#      LUT2_D                      : 10
 #      LUT2_L                      : 3
-#      LUT3                        : 1260
-#      LUT3_D                      : 43
+#      LUT3                        : 1412
+#      LUT3_D                      : 2
 #      LUT3_L                      : 6
-#      LUT4                        : 2185
-#      LUT4_D                      : 8
-#      LUT4_L                      : 91
+#      LUT4                        : 2854
+#      LUT4_D                      : 9
+#      LUT4_L                      : 97
 #      MULT_AND                    : 94
-#      MUXCY                       : 786
+#      MUXCY                       : 974
 #      MUXCY_L                     : 77
-#      MUXF5                       : 588
+#      MUXF5                       : 778
 #      MUXF6                       : 69
 #      MUXF7                       : 34
 #      MUXF8                       : 1
 #      VCC                         : 2
-#      XORCY                       : 562
-# FlipFlops/Latches                : 1694
+#      XORCY                       : 705
+# FlipFlops/Latches                : 1846
 #      FD                          : 97
-#      FDE                         : 1140
+#      FDE                         : 1260
 #      FDR                         : 168
 #      FDRE                        : 214
 #      FDRS                        : 2
 #      FDRSE                       : 12
-#      FDS                         : 41
+#      FDS                         : 73
 #      FDSE                        : 20
 # RAMS                             : 160
 #      RAM16X1D                    : 141
@@ -957,8 +836,8 @@ Cell Usage :
 # IO Buffers                       : 10
 #      IBUF                        : 5
 #      OBUF                        : 5
-# MULTs                            : 3
-#      MULT18X18SIO                : 3
+# MULTs                            : 4
+#      MULT18X18SIO                : 4
 =========================================================================
 
 Device utilization summary:
@@ -966,16 +845,16 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     2482  out of   3584    69%  
- Number of Slice Flip Flops:           1694  out of   7168    23%  
- Number of 4 input LUTs:               4572  out of   7168    63%  
-    Number used as logic:              4240
+ Number of Slices:                     2985  out of   3584    83%  
+ Number of Slice Flip Flops:           1846  out of   7168    25%  
+ Number of 4 input LUTs:               5483  out of   7168    76%  
+    Number used as logic:              5151
     Number used as Shift registers:      50
     Number used as RAMs:                282
  Number of IOs:                          11
  Number of bonded IOBs:                  11  out of    195     5%  
  Number of BRAMs:                        19  out of     20    95%  
- Number of MULT18X18SIOs:                 3  out of     20    15%  
+ Number of MULT18X18SIOs:                 4  out of     20    20%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -999,7 +878,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 1904  |
+Clk                                | BUFGP                  | 2056  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1010,7 +889,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 30.177ns (Maximum Frequency: 33.138MHz)
+   Minimum period: 35.505ns (Maximum Frequency: 28.165MHz)
    Minimum input arrival time before clock: 1.548ns
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: 5.816ns
@@ -1021,23 +900,22 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 30.177ns (frequency: 33.138MHz)
-  Total number of paths / destination ports: 626520527979 / 5732
+  Clock period: 35.505ns (frequency: 28.165MHz)
+  Total number of paths / destination ports: 5178614352387 / 6036
 -------------------------------------------------------------------------
-Delay:               30.177ns (Levels of Logic = 168)
-  Source:            cpu0_idecode_AluOP1_0_1 (FF)
-  Destination:       cpu0_ialu_div_tremainder_28 (FF)
+Delay:               35.505ns (Levels of Logic = 188)
+  Source:            cpu0_idecode_AluOP1_1 (FF)
+  Destination:       cpu0_ialu_div_quotient_31 (FF)
   Source Clock:      Clk rising
   Destination Clock: Clk rising
 
-  Data Path: cpu0_idecode_AluOP1_0_1 to cpu0_ialu_div_tremainder_28
+  Data Path: cpu0_idecode_AluOP1_1 to cpu0_ialu_div_quotient_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              3   0.591   0.674  cpu0_idecode_AluOP1_0_1 (cpu0_idecode_AluOP1_0_1)
-     LUT1:I0->O            1   0.648   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>_rt (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>_rt)
-     MUXCY:S->O            1   0.632   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1>)
+     FDE:C->Q             18   0.591   1.068  cpu0_idecode_AluOP1_1 (cpu0_idecode_AluOP1_1)
+     INV:I->O              1   0.648   0.000  cpu0_ialu_div_Madd_cOperand1_not0000<1>1_INV_0 (cpu0_ialu_div_Madd_cOperand1_not0000<1>)
+     MUXCY:S->O            1   0.632   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<2> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<3> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<4> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<4>)
@@ -1068,7 +946,7 @@ Delay:               30.177ns (Levels of Logic = 168)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<29> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<29>)
      MUXCY:CI->O           0   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<30> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<30>)
      XORCY:CI->O           1   0.844   0.452  cpu0_ialu_div_Madd_cOperand1_addsub0000_xor<31> (cpu0_ialu_div_cOperand1_addsub0000<31>)
-     LUT3:I2->O            2   0.648   0.000  cpu0_ialu_div_Mmux_cOperand1_mux0001501 (cpu0_ialu_div_Mmux_cOperand1_mux0002_6)
+     LUT3:I2->O            3   0.648   0.000  cpu0_ialu_div_Mmux_cOperand1_mux0001501 (cpu0_ialu_div_Mmux_cOperand1_mux0002_6)
      MUXF5:I1->O           1   0.276   0.000  cpu0_ialu_div_Mmux_cOperand1_mux0002_5_f5 (cpu0_ialu_div_Mmux_cOperand1_mux0002_5_f5)
      MUXF6:I1->O           1   0.291   0.000  cpu0_ialu_div_Mmux_cOperand1_mux0002_4_f6 (cpu0_ialu_div_Mmux_cOperand1_mux0002_4_f6)
      MUXF7:I1->O           1   0.291   0.000  cpu0_ialu_div_Mmux_cOperand1_mux0002_3_f7 (cpu0_ialu_div_Mmux_cOperand1_mux0002_3_f7)
@@ -1105,7 +983,7 @@ Delay:               30.177ns (Levels of Logic = 168)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<28> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<29> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<30> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<30>)
-     MUXCY:CI->O          65   0.269   1.305  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0003)
+     MUXCY:CI->O         105   0.269   1.317  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0003)
      LUT3:I2->O            3   0.648   0.531  cpu0_ialu_div_tremainder_0_mux00001 (cpu0_ialu_div_tremainder_0_mux0000)
      MUXCY:DI->O           1   0.787   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<1> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<2> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<2>)
@@ -1137,7 +1015,7 @@ Delay:               30.177ns (Levels of Logic = 168)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<28> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<29> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<30> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<30>)
-     MUXCY:CI->O          92   0.269   1.313  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0002)
+     MUXCY:CI->O         135   0.269   1.327  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0002)
      LUT3:I2->O            3   0.648   0.531  cpu0_ialu_div_tremainder_0_mux00011 (cpu0_ialu_div_tremainder_0_mux0001)
      MUXCY:DI->O           1   0.787   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<1> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<2> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<2>)
@@ -1169,7 +1047,7 @@ Delay:               30.177ns (Levels of Logic = 168)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<28> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<29> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<30> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<30>)
-     MUXCY:CI->O          93   0.269   1.313  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0001)
+     MUXCY:CI->O         155   0.269   1.333  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0001)
      LUT3:I2->O            2   0.648   0.447  cpu0_ialu_div_tremainder_0_mux00021 (cpu0_ialu_div_tremainder_0_mux0002)
      MUXCY:DI->O           1   0.787   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<1> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<2> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<2>)
@@ -1201,12 +1079,33 @@ Delay:               30.177ns (Levels of Logic = 168)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<28> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<29> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<30> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<30>)
-     MUXCY:CI->O          63   0.269   1.275  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0000)
-     LUT4:I3->O            1   0.648   0.000  cpu0_ialu_div_tremainder_9_mux00041 (cpu0_ialu_div_tremainder_9_mux0004)
-     FDE:D                     0.252          cpu0_ialu_div_tremainder_9
+     MUXCY:CI->O         117   0.269   1.292  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0000)
+     LUT4:I3->O            5   0.648   0.636  cpu0_ialu_div_tquotient_0_mux00001_1 (cpu0_ialu_div_tquotient_0_mux00001)
+     LUT4:I3->O            1   0.648   0.000  cpu0_ialu_div_Madd_quotient_not0000<13>11 (cpu0_ialu_div_Madd_quotient_not0000<13>1)
+     MUXCY:S->O            1   0.632   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<13> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<14> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<15> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<16> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<17> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<18> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<19> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<20> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<21> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<22> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<23> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<24> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<25> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<26> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<27> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<28> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<29> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<30> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.844   0.423  cpu0_ialu_div_Madd_quotient_addsub0000_xor<31> (cpu0_ialu_div_quotient_addsub0000<31>)
+     LUT4:I3->O            1   0.648   0.000  cpu0_ialu_div_Mmux_quotient_mux000150 (cpu0_ialu_div_quotient_mux0001<31>)
+     FDE:D                     0.252          cpu0_ialu_div_quotient_31
     ----------------------------------------
-    Total                     30.177ns (21.623ns logic, 8.554ns route)
-                                       (71.7% logic, 28.3% route)
+    Total                     35.505ns (25.435ns logic, 10.070ns route)
+                                       (71.6% logic, 28.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
@@ -1269,14 +1168,14 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 56.00 secs
-Total CPU time to Xst completion: 55.80 secs
+Total REAL time to Xst completion: 64.00 secs
+Total CPU time to Xst completion: 64.25 secs
  
 --> 
 
-Total memory usage is 400728 kilobytes
+Total memory usage is 419992 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  231 (   0 filtered)
-Number of infos    :   36 (   0 filtered)
+Number of warnings :  112 (   0 filtered)
+Number of infos    :   42 (   0 filtered)
 

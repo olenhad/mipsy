@@ -9,23 +9,23 @@ Target Device  : xc3s400a
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Thu Nov 07 01:06:17 2013
+Mapped Date    : Fri Nov 08 00:13:27 2013
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:   83
 Logic Utilization:
-  Number of Slice Flip Flops:         1,586 out of   7,168   22%
-  Number of 4 input LUTs:             4,488 out of   7,168   62%
+  Number of Slice Flip Flops:         1,738 out of   7,168   24%
+  Number of 4 input LUTs:             5,382 out of   7,168   75%
 Logic Distribution:
-  Number of occupied Slices:          2,870 out of   3,584   80%
-    Number of Slices containing only related logic:   2,870 out of   2,870 100%
-    Number of Slices containing unrelated logic:          0 out of   2,870   0%
+  Number of occupied Slices:          3,347 out of   3,584   93%
+    Number of Slices containing only related logic:   3,347 out of   3,347 100%
+    Number of Slices containing unrelated logic:          0 out of   3,347   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       4,535 out of   7,168   63%
-    Number used as logic:             4,156
-    Number used as a route-thru:         47
+  Total Number of 4 input LUTs:       5,443 out of   7,168   75%
+    Number used as logic:             5,050
+    Number used as a route-thru:         61
     Number used for Dual Port RAMs:     282
       (Two LUTs used per Dual Port RAM)
     Number used as Shift registers:      50
@@ -35,14 +35,14 @@ Logic Distribution:
 
   Number of bonded IOBs:                 11 out of     195    5%
   Number of BUFGMUXs:                     1 out of      24    4%
-  Number of MULT18X18SIOs:                3 out of      20   15%
+  Number of MULT18X18SIOs:                4 out of      20   20%
   Number of RAMB16BWEs:                  19 out of      20   95%
 
-Average Fanout of Non-Clock Nets:                3.66
+Average Fanout of Non-Clock Nets:                3.74
 
-Peak Memory Usage:  296 MB
-Total REAL time to MAP completion:  5 secs 
-Total CPU time to MAP completion:   5 secs 
+Peak Memory Usage:  301 MB
+Total REAL time to MAP completion:  6 secs 
+Total CPU time to MAP completion:   6 secs 
 
 NOTES:
 
@@ -83,16 +83,16 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<26>221
-   failed to merge with F5 multiplexer
-   cpu0_ialu_Result1_mux0005<28>16341_SW0_f5.  There is a conflict for the
-   FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator
    cpu0_ialu_div_Mmux_cOperand1_mux0001221 failed to merge with F5 multiplexer
    cpu0_ialu_div_Mmux_cOperand1_mux0002_5_f6/MUXF5.I0.  There is a conflict for
    the GYMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<27>221
-   failed to merge with F5 multiplexer cpu0_ialu_Result1_mux0005<29>1564_SW0_f5.
+WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<26>231
+   failed to merge with F5 multiplexer cpu0_ialu_Result1_mux0005<28>1738_SW0_f5.
+    There is a conflict for the FXMUX.  The design will exhibit suboptimal
+   timing.
+WARNING:Pack:266 - The function generator cpu0_ialu_Result1_mux0005<27>241
+   failed to merge with F5 multiplexer cpu0_ialu_Result1_mux0005<29>1661_SW0_f5.
     There is a conflict for the FXMUX.  The design will exhibit suboptimal
    timing.
 WARNING:Pack:266 - The function generator

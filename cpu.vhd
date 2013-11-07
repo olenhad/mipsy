@@ -129,7 +129,7 @@ signal alu_r2 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_debug : std_logic_vector(31 downto 0) := (others => '0');
 
 
-signal RAM0: RamData := (0 => x"0a", 1 => x"0c", 2 => x"00", others => (others => '0'));
+signal RAM0: RamData := (0 => x"01", 1 => x"02", 2 => x"01", 3 => x"0d",others => (others => '0'));
 signal RAM1: RamData := (others => (others => '0'));
 signal RAM2: RamData := (others => (others => '0'));
 signal RAM3: RamData := (others => (others => '0'));
@@ -207,6 +207,10 @@ process(CLK)
 	variable prev_op2 : STD_LOGIC_VECTOR (31 downto 0):= (others => '0');
 	variable res1Reg : STD_LOGIC_vector (31 downto 0):= (others => '0');
 	variable res2Reg : STD_LOGIC_vector (31 downto 0):= (others => '0');
+	
+	variable lo : std_logic_vector(31 downto 0) := (others => '0'); 
+	variable hi : std_logic_vector(31 downto 0) := (others => '0'); 
+	
 begin
 	
 	if rising_edge(CLK) then
@@ -243,8 +247,8 @@ begin
 				if currentIns(31 downto 26) = b"000010" then
 					--pc := b"0000" & CurrentIns(25 downto 0) & b"00";
 					pc := b"000000" & CurrentIns(25 downto 0);
-					currentState := FetchDecode;
-					
+					currentState := FetchDecode;	
+				
 				else
 					pc := std_logic_vector(unsigned(pc) + 1);
 					-- feed cur Ins to decode. decode will give alu appropriate operands by nnext clk cycle
@@ -341,13 +345,30 @@ begin
 				if sig_RegWrite = '1' and
 					sig_MemToReg = '0' then
 					
-					decode_regWrite <= '1';
-					-- TODO fix me for MUL, DIV
-					-- write to rd
-					-- also goes here with LUI
-					decode_WriteAddr <= decode_RegWBAddr;
-					-- send alu_r1
-					decode_WriteData <= alu_r1;
+					-- if instruction is mul/div family then place result in hi/lo
+					if (currentIns(5 downto 0) = b"011000" and currentIns(31 downto 26) = b"000000") or 
+						(currentIns(5 downto 0) = b"011001" and currentIns(31 downto 26) = b"000000") or 
+						(currentIns(5 downto 0) = b"011010" and currentIns(31 downto 26) = b"000000") or
+						(currentIns(5 downto 0) = b"011011" and currentIns(31 downto 26) = b"000000")	then
+						lo := alu_r1;
+						hi := alu_r2;
+					else
+						decode_regWrite <= '1';
+						-- write to rd
+						-- also goes here with LUI
+						decode_WriteAddr <= decode_RegWBAddr;
+						-- send alu_r1
+						-- check if mfhi
+						if (currentIns(5 downto 0) = b"010000" and currentIns(31 downto 26) = b"000000") then
+							decode_WriteData <= hi;
+						elsif (currentIns(5 downto 0) = b"010010" and currentIns(31 downto 26) = b"000000") then
+						-- check if mflo
+							decode_WriteData <= lo;
+						else
+							-- otherwise send alu_r1
+							decode_WriteData <= alu_r1;
+						end if;
+					end if;
 					
 				
 				elsif sig_RegWrite = '1' and

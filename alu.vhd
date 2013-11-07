@@ -121,7 +121,11 @@ process (Clk)
 begin  
    if (Clk'event and Clk = '1') then
 		Debug   <= X"00000000";
-      if Control = b"100000" then
+		if Control = b"111111" then
+			-- NOP/echo
+			Result1 <= operand1;
+			Result2 <= operand2;
+      elsif Control = b"100000" then
 		-- ADD
 			isadd <= '1';
 			Result1 <= addsubResult;
