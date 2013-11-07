@@ -129,10 +129,10 @@ signal alu_r2 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_debug : std_logic_vector(31 downto 0) := (others => '0');
 
 
-signal RAM0: RamData := (0 => x"02", 1 => x"01", 2 => x"01", 3 => x"0d",others => (others => '0'));
-signal RAM1: RamData := (others => (others => '0'));
-signal RAM2: RamData := (others => (others => '0'));
-signal RAM3: RamData := (others => (others => '0'));
+signal RAM0: RamData := (0 => x"00", 1 => x"01", 2 => x"01", 3 => x"0d",others => (others => '0'));
+signal RAM1: RamData := (0 => x"00",others => (others => '0'));
+signal RAM2: RamData := (0 => x"00",others => (others => '0'));
+signal RAM3: RamData := (0 => x"00",others => (others => '0'));
 
 --signal ram_we : std_logic := '0';
 --signal ram_en : std_logic := '1';
@@ -320,17 +320,33 @@ begin
 				
 				
 				elsif sig_Branch = '1' then
-	-- BEQ	
-					if alu_r1 = x"00000001" then
+					-- BEQ
+					if currentIns(31 downto 26) = b"000100" then
+						if alu_r1 = x"00000001" then
 			
 				-- shift branch offset by 2 			
 				--		tconcat := CurrentIns(15 downto 0) & b"00";
 				
-				tconcat := b"00" & CurrentIns(15 downto 0);
+								tconcat := b"00" & CurrentIns(15 downto 0);
 				
 				-- add offset to pc				
-						pc := std_logic_vector( signed(pc) + signed( tconcat));
+								pc := std_logic_vector( signed(pc) + signed( tconcat));
 						
+						end if;
+				-- BGEZ
+					elsif currentIns(31 downto 26) = b"000001" then
+						if alu_r1 = X"00000000" then
+								tconcat := b"00" & CurrentIns(15 downto 0);
+								if currentIns(20 downto 16) = b"10001" then
+								-- BGEZAL
+									decode_WriteAddr <= b"11111";
+									decode_WriteData <= pc;
+									decode_RegWrite <= '1';
+								
+								end if;
+				-- add offset to pc				
+								pc := std_logic_vector( signed(pc) + signed( tconcat));
+						end if;
 					end if;
 					
 					currentState := FetchDecode;

@@ -252,6 +252,24 @@ begin
 			-- 3 => RegWrite
 			-- 4 => MemToReg
 				ControlSignals <= b"00001";
+			elsif opcode = b"000001" then
+						-- BGEZ	
+			-- Jump to offset from 15 to 0
+			--	jAddr <= x"000" & b"00" & CurrentInstruction(15 downto 0) & b"00";
+			-- ALU performs equality comparison/
+			-- RS sent as OP1	
+				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+			-- RT sent as OP2	
+				AluOP2 <= (others => '0');
+			-- Alu control sent stl. checks if op1 < op2. op2 is 0	
+				AluControl <= b"101010";
+			-- ControlSignals
+			-- 0 => Branch
+			-- 1 => MemRead
+			-- 2 => MemWrite
+			-- 3 => RegWrite
+			-- 4 => MemToReg
+				ControlSignals <= b"00001";
 			end if;
 		end if;
 	end if;

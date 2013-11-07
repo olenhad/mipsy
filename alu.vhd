@@ -192,7 +192,7 @@ begin
 		elsif Control = b"101010" then
 		-- SLT
 --			isadd <= '0';
-			if operand1 < operand2 then
+			if signed(operand1) < signed(operand2) then
 				Result1 <= (0 => '1', others => '0');
 			else
 				Result1 <= (others => '0');
