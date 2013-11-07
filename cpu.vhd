@@ -248,7 +248,13 @@ begin
 					--pc := b"0000" & CurrentIns(25 downto 0) & b"00";
 					pc := b"000000" & CurrentIns(25 downto 0);
 					currentState := FetchDecode;	
-				
+				elsif currentIns(31 downto 26) = b"000011" then
+				-- check for JAL
+					decode_WriteAddr <= b"11111";
+					decode_WriteData <= std_logic_vector(unsigned(pc) + 1);
+					decode_RegWrite <= '1';
+					pc := b"000000" & CurrentIns(25 downto 0);
+					currentState := FetchDecode;
 				else
 					pc := std_logic_vector(unsigned(pc) + 1);
 					-- feed cur Ins to decode. decode will give alu appropriate operands by nnext clk cycle
