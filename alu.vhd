@@ -118,13 +118,16 @@ div: div32 port map ( operand1 => operand1,
 
 
 process (Clk)
+	variable r1Reg : std_logic_vector(31 downto 0);
+	variable r2Reg : std_logic_vector(31 downto 0);
 begin  
    if (Clk'event and Clk = '1') then
-		Debug   <= X"00000000";
 		if Control = b"111111" then
 			-- NOP/echo
+	--		r1Reg := operand1;
+	--		r2Reg := operand1;
 			Result1 <= operand1;
-			Result2 <= operand2;
+		Result2 <= operand2;
       elsif Control = b"100000" then
 		-- ADD
 			isadd <= '1';
@@ -183,8 +186,14 @@ begin
 		elsif Control = b"101010" then
 		-- SLT
 			isadd <= '0';
-			Result1 <= (0 => addsubResult(31), others => '0');
-			Debug <= ( 0 => isOverflowAdd, others => '0');
+			if operand1 < operand2 then
+				Result1 <= (0 => '1', others => '0');
+			else
+				Result1 <= (others => '0');
+			end if;
+			Debug <= (others => '0');
+		--	Result1 <= (0 => addsubResult(31), others => '0');
+		--	Debug <= ( 0 => isOverflowAdd, others => '0');
 		elsif Control = b"000000" then
 		-- SLL
 			Result1 <= std_logic_vector( unsigned(operand1) sll to_integer(unsigned(operand2)));

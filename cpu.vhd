@@ -129,7 +129,7 @@ signal alu_r2 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_debug : std_logic_vector(31 downto 0) := (others => '0');
 
 
-signal RAM0: RamData := (0 => x"01", 1 => x"02", 2 => x"01", 3 => x"0d",others => (others => '0'));
+signal RAM0: RamData := (0 => x"02", 1 => x"01", 2 => x"01", 3 => x"0d",others => (others => '0'));
 signal RAM1: RamData := (others => (others => '0'));
 signal RAM2: RamData := (others => (others => '0'));
 signal RAM3: RamData := (others => (others => '0'));

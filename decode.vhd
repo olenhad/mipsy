@@ -210,17 +210,17 @@ begin
 				ControlSignals <= "01000";
 				RegWBAddr <= currentInstruction(20 downto 16);
 			
-			elsif opcode = b"001010" then
-			-- SLTI
-				if currentInstruction(15) = '1' then
-					AluOP2 <= x"ffff" & CurrentInstruction(15 downto 0);
-				else
-					AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
-				end if;
-				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
-				AluControl <= b"101010";
-				ControlSignals <= "01000";
-				RegWBAddr <= currentInstruction(20 downto 16);
+	--		elsif opcode = b"001010" then
+	--	 SLTI
+	--			if currentInstruction(15) = '1' then
+	--				AluOP2 <= x"ffff" & CurrentInstruction(15 downto 0);
+	--			else
+	--				AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
+	--			end if;
+	--			AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+	--			AluControl <= b"101010";
+	--			ControlSignals <= "01000";
+	--			RegWBAddr <= currentInstruction(20 downto 16);
 				
 			elsif opcode = b"000010" then
 			-- J 

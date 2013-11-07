@@ -9,7 +9,7 @@ main:
 lw $t1, in1
 lw $t2, in2
 
-#slti $t4, $t1, 10
+sub $t4, $t1, $t2
 #sllv $t5, $t1, $t2
 
 
