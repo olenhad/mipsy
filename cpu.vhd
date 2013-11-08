@@ -133,7 +133,7 @@ signal RAM0: RamData := (0 => x"00", 1 => x"01", 2 => x"01", 3 => x"0d",others =
 signal RAM1: RamData := (0 => x"00",others => (others => '0'));
 signal RAM2: RamData := (0 => x"00",others => (others => '0'));
 signal RAM3: RamData := (0 => x"00",others => (others => '0'));
-
+signal currentState : CPUState := FetchDecode;
 --signal ram_we : std_logic := '0';
 --signal ram_en : std_logic := '1';
 --signal ram_addr : std_logic_vector(31 downto 0) := (others => '0');
@@ -197,7 +197,7 @@ ialu : alu port map (CLK => CLK,
 process(CLK) 
 	variable pc : std_logic_vector(31 downto 0) := (others => '0');
 	variable currentIns :  std_logic_vector(31 downto 0) := (others => '0');
-	variable currentState : CPUState := FetchDecode;
+	
 	variable waitCounter : integer := 0;
 	variable tconcat : std_logic_vector(17 downto 0);
 	variable ram_WE : std_logic := '0';
@@ -247,21 +247,21 @@ begin
 				if currentIns(31 downto 26) = b"000010" then
 					--pc := b"0000" & CurrentIns(25 downto 0) & b"00";
 					pc := b"000000" & CurrentIns(25 downto 0);
-					currentState := FetchDecode;	
+					currentState <= FetchDecode;	
 				elsif currentIns(31 downto 26) = b"000011" then
 				-- check for JAL
 					decode_WriteAddr <= b"11111";
 					decode_WriteData <= std_logic_vector(unsigned(pc) + 1);
 					decode_RegWrite <= '1';
 					pc := b"000000" & CurrentIns(25 downto 0);
-					currentState := FetchDecode;
+					currentState <= FetchDecode;
 				else
 					pc := std_logic_vector(unsigned(pc) + 1);
 					-- feed cur Ins to decode. decode will give alu appropriate operands by nnext clk cycle
 					
 					decode_currentInstruction <= currentIns;	
 				
-					currentState := Execute;
+					currentState <= Execute;
 				end if;
 				
 	
@@ -275,14 +275,14 @@ begin
 			--	DCPUState <= (0 => '1', others => '0');
 				
 				waitCounter :=  to_integer(unsigned(decode_WaitFor));
-				currentState := AluWait;
+				currentState <= AluWait;
 			
 			elsif currentState = AluWait then
 				if (CurrentIns(20 downto 0) = b"000000000000000001000" and
 					 CurrentIns(31 downto 26) = b"000000") then
 				-- JR
 					pc := decode_registerOut;
-					currentState := FetchDecode;
+					currentState <= FetchDecode;
 				elsif (CurrentIns(20 downto 0) = b"000001111100000001001" and
 					 CurrentIns(31 downto 26) = b"000000") then
 				-- JALR
@@ -290,10 +290,10 @@ begin
 					decode_WriteData <= pc;
 					decode_RegWrite <= '1';
 					pc := decode_registerOut;
-					currentState := FetchDecode;
+					currentState <= FetchDecode;
 				else
 	--			DCPUState <= (5 => '1', others => '0');
-					currentState := MemWR;
+					currentState <= MemWR;
 				end if;
 			elsif currentState = MemWR then
 	--			DCPUState <= (1 => '1', others => '0');
@@ -304,7 +304,7 @@ begin
 					
 				-- DO nothing. Update to next stage
 				-- R Type	
-					currentState := WriteBack;
+					currentState <= WriteBack;
 			
 				elsif sig_Branch = '0' and
 				      sig_MemRead = '1' and 
@@ -315,7 +315,7 @@ begin
 				--	ram_addr <= alu_r1;
 	--				DCPUState <= x"FFFFFFFF";
 					
-					currentState := WriteBack;
+					currentState <= WriteBack;
 			
 				elsif sig_Branch = '0' and
 				      sig_MemRead = '0' and
@@ -337,7 +337,7 @@ begin
 	--					DMemOut <= read_ram_at(RAM, alu_r1);
 	--					DMemAddr <= alu_r1;
 					end if;
-					currentState := WriteBack;
+					currentState <= WriteBack;
 				
 				
 				elsif sig_Branch = '1' then
@@ -370,7 +370,7 @@ begin
 						end if;
 					end if;
 					
-					currentState := FetchDecode;
+					currentState <= FetchDecode;
 					
 				end if;	
 				
@@ -424,7 +424,7 @@ begin
 --					
 				end if;
 				
-				currentState := FetchDecode;
+				currentState <= FetchDecode;
 				
 			end if;
 			

@@ -41,37 +41,37 @@
 <msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">DAluR1</arg>&apos; of component &apos;<arg fmt="%s" index="4">cpu</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">345</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">334</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">346</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">335</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">347</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">336</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">348</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">337</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">430</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">419</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">RAM3</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">430</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">419</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">RAM2</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">430</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">419</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">RAM1</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">430</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">419</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">RAM0</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
@@ -81,25 +81,25 @@
 <arg fmt="%s" index="3">&lt;decode_registerOut&gt;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">65</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">67</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">rom0</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">65</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">67</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">rom1</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">65</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">67</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">rom2</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">65</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">67</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">rom3</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
@@ -147,6 +147,9 @@
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">alu_debug</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">aluwaitwb</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">currentState</arg>&gt;.
+</msg>
+
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">paddedRegAddr</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
@@ -154,9 +157,6 @@
 </msg>
 
 <msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ControlSignals_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">idecode</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ControlSignals_4&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_10&gt; </arg>
@@ -409,10 +409,10 @@
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_30&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_31&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_26&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_26&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_31&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_27&gt; </arg>

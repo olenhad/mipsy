@@ -23,7 +23,7 @@ j main
 ifzero:
 
 addi $t3, $31, 0
-
+add $s0,$s1, $s2  
 jalr $t3
 
 lui $1, 0x1001

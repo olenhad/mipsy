@@ -86,7 +86,16 @@ begin
 			ControlSignals <= (others => '0');
 			registerOut <= (others => '0');
 			
-			if opcode = b"000000" then
+			if (CurrentInstruction(5 downto 0) = b"001000" and
+				 CurrentInstruction(31 downto 26) = b"000000") then
+						-- JR
+				registerOut <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+					
+			elsif (CurrentInstruction(5 downto 0) = b"001001" and
+			       CurrentInstruction(31 downto 26) = b"000000") then
+						-- JALR
+				registerOut <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+			elsif opcode = b"000000" then
 
 				-- R type
 				-- all R type instructions just Write to registers. assert RegWrite	
