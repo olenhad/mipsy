@@ -213,7 +213,7 @@ process(CLK)
 	
 begin
 	
-	if rising_edge(CLK) then
+	if falling_edge(CLK) then
 		vlreg := decode_lreg;
 		vlregAddr := decode_lregAddr;
 		

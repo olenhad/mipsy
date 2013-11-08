@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.61xd on Fri Nov 08 08:00:29 2013
+// Written by: Map O.61xd on Fri Nov 08 08:09:41 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -684,32 +684,32 @@ TIMEGRP TNM_Clk = BEL "cpu0_ialu_div_quotient_31" BEL
         "cpu0_ialu_Result1_26" BEL "cpu0_ialu_Result1_27" BEL
         "cpu0_ialu_Result1_28" BEL "cpu0_ialu_Result1_29" BEL
         "cpu0_ialu_Result1_30" BEL "cpu0_ialu_Result1_31" BEL
-        "cpu0_idecode_AluControl_1_1" BEL "cpu0_idecode_AluOP1_0_1" BEL
+        "cpu0_idecode_AluControl_1_1" BEL "cpu0_idecode_AluControl_0_1" BEL
+        "cpu0_idecode_AluOP1_0_1" BEL "cpu0_idecode_AluOP1_1_1" BEL
+        "cpu0_idecode_AluOP1_2_1" BEL "cpu0_idecode_AluOP1_3_1" BEL
         "cpu0_idecode_AluOP1_4_1" BEL "cpu0_idecode_AluOP1_5_1" BEL
-        "cpu0_idecode_AluOP1_1_1" BEL "cpu0_idecode_AluOP1_2_1" BEL
-        "cpu0_idecode_AluOP1_3_1" BEL "cpu0_idecode_AluOP1_6_1" BEL
-        "cpu0_idecode_AluOP1_7_1" BEL "cpu0_idecode_AluOP1_8_1" BEL
-        "cpu0_idecode_AluOP1_9_1" BEL "cpu0_idecode_AluOP1_10_1" BEL
-        "cpu0_idecode_AluOP1_11_1" BEL "cpu0_idecode_AluControl_0_1" BEL
+        "cpu0_idecode_AluOP1_6_1" BEL "cpu0_idecode_AluOP1_7_1" BEL
+        "cpu0_idecode_AluOP1_8_1" BEL "cpu0_idecode_AluOP1_9_1" BEL
+        "cpu0_idecode_AluOP1_10_1" BEL "cpu0_idecode_AluOP1_11_1" BEL
         "cpu0_idecode_AluOP1_12_1" BEL "cpu0_idecode_AluOP1_13_1" BEL
         "cpu0_idecode_AluOP1_14_1" BEL "cpu0_idecode_AluOP1_15_1" BEL
         "cpu0_idecode_AluOP1_16_1" BEL "cpu0_idecode_AluOP1_17_1" BEL
         "cpu0_idecode_AluOP1_18_1" BEL "cpu0_idecode_AluOP1_19_1" BEL
-        "cpu0_idecode_AluOP1_20_1" BEL "cpu0_idecode_AluOP1_22_1" BEL
-        "cpu0_idecode_AluOP1_23_1" BEL "cpu0_idecode_AluOP1_24_1" BEL
-        "cpu0_idecode_AluOP1_25_1" BEL "cpu0_idecode_AluOP1_26_1" BEL
-        "cpu0_idecode_AluOP1_27_1" BEL "cpu0_idecode_AluControl_2_1" BEL
-        "cpu0_idecode_AluOP2_1_1" BEL "cpu0_idecode_AluOP2_0_1" BEL
-        "cpu0_idecode_AluOP2_3_1" BEL "cpu0_idecode_AluOP2_4_1" BEL
-        "cpu0_idecode_AluOP2_5_1" BEL "cpu0_idecode_AluOP1_28_1" BEL
-        "cpu0_idecode_AluOP1_29_1" BEL "cpu0_idecode_AluOP1_30_1" BEL
-        "cpu0_idecode_AluOP2_7_1" BEL "cpu0_idecode_AluOP2_9_1" BEL
-        "cpu0_idecode_AluOP2_11_1" BEL "cpu0_idecode_AluOP2_10_1" BEL
-        "cpu0_idecode_AluOP2_13_1" BEL "cpu0_idecode_AluOP2_12_1" BEL
-        "cpu0_idecode_AluOP2_15_1" BEL "cpu0_idecode_AluOP2_14_1" BEL
-        "cpu0_idecode_AluOP2_16_1" BEL "cpu0_idecode_AluOP2_20_1" BEL
-        "cpu0_idecode_AluOP2_22_1" BEL "cpu0_idecode_AluOP2_6_1" BEL
-        "cpu0_idecode_AluOP2_2_1" BEL "cpu0_idecode_AluOP1_21_1" BEL
+        "cpu0_idecode_AluOP1_20_1" BEL "cpu0_idecode_AluOP1_23_1" BEL
+        "cpu0_idecode_AluOP1_24_1" BEL "cpu0_idecode_AluOP1_25_1" BEL
+        "cpu0_idecode_AluOP1_26_1" BEL "cpu0_idecode_AluOP1_27_1" BEL
+        "cpu0_idecode_AluControl_2_1" BEL "cpu0_idecode_AluOP2_1_1" BEL
+        "cpu0_idecode_AluOP2_0_1" BEL "cpu0_idecode_AluOP2_3_1" BEL
+        "cpu0_idecode_AluOP2_4_1" BEL "cpu0_idecode_AluOP2_5_1" BEL
+        "cpu0_idecode_AluOP1_28_1" BEL "cpu0_idecode_AluOP1_29_1" BEL
+        "cpu0_idecode_AluOP1_30_1" BEL "cpu0_idecode_AluOP2_7_1" BEL
+        "cpu0_idecode_AluOP2_9_1" BEL "cpu0_idecode_AluOP2_11_1" BEL
+        "cpu0_idecode_AluOP2_10_1" BEL "cpu0_idecode_AluOP2_13_1" BEL
+        "cpu0_idecode_AluOP2_12_1" BEL "cpu0_idecode_AluOP2_15_1" BEL
+        "cpu0_idecode_AluOP2_14_1" BEL "cpu0_idecode_AluOP2_16_1" BEL
+        "cpu0_idecode_AluOP2_20_1" BEL "cpu0_idecode_AluOP2_22_1" BEL
+        "cpu0_idecode_AluOP2_6_1" BEL "cpu0_idecode_AluOP2_2_1" BEL
+        "cpu0_idecode_AluOP1_22_1" BEL "cpu0_idecode_AluOP1_21_1" BEL
         "mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[31].Register_File_Bit_I/Using_LUT4.RAM16x1D_Reg1_Low.SLICEM_F"
         BEL
         "mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[31].Register_File_Bit_I/Using_LUT4.RAM16x1D_Reg1_Low.SLICEM_G"
