@@ -1,56 +1,18 @@
 V3 77
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/adder32.vhd" 2013/10/09.09:07:55 O.61xd
-EN work/adder32 1383869310 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/adder32.vhd" \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/adder32/Behavioral 1383869311 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/adder32.vhd" \
-      EN work/adder32 1383869310
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/addsub32.vhd" 2013/10/09.09:07:55 O.61xd
-EN work/addsub32 1383869312 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/addsub32.vhd" \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/addsub32/Behavioral 1383869313 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/addsub32.vhd" \
-      EN work/addsub32 1383869312 CP adder32
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" 2013/11/08.03:00:48 O.61xd
-EN work/alu 1383869326 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/alu/Behavioral 1383869327 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" \
-      EN work/alu 1383869326 CP addsub32 CP uaddsub32 CP mul32 CP div32
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/control_unit.vhd" 2013/10/18.18:40:27 O.61xd
 EN work/control_unit 1382092849 \
       FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/control_unit.vhd" \
-      PB ieee/std_logic_1164 1308643377 PB work/utils 1383869321 \
+      PB ieee/std_logic_1164 1308643377 PB work/utils 1384194938 \
       PB ieee/NUMERIC_STD 1308643378
 AR work/control_unit/Behavioral 1382092850 \
       FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/control_unit.vhd" \
       EN work/control_unit 1382092849 CP alu CP ram CP rom
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" 2013/11/08.08:07:54 O.61xd
-EN work/cpu 1383869328 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
-      PB work/utils 1383869321
-AR work/cpu/Behavioral 1383869329 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" \
-      EN work/cpu 1383869328 CP rom CP decode CP alu
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" 2013/11/08.07:58:41 O.61xd
-EN work/decode 1383869324 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" \
-      PB ieee/std_logic_1164 1308643377 PB work/utils 1383869321 \
-      PB ieee/NUMERIC_STD 1308643378
-AR work/decode/Behavioral 1383869325 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" \
-      EN work/decode 1383869324
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" 2013/10/11.04:35:29 O.61xd
-EN work/div32 1383869318 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/div32/Behavioral 1383869319 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" \
-      EN work/div32 1383869318
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/fetch.vhd" 2013/10/24.03:06:14 O.61xd
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" 2013/11/08.06:05:39 O.61xd
 EN work/LAB2 1383869330 \
@@ -61,36 +23,10 @@ AR work/LAB2/Structural 1383869331 \
       FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" \
       EN work/LAB2 1383869330 CP mcs CP cpu
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd" 2013/10/11.01:26:55 O.61xd
-EN work/mul32 1383869316 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd" \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/mul32/Behavioral 1383869317 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/mul32.vhd" \
-      EN work/mul32 1383869316
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/ram.vhd" 2013/10/18.16:53:50 O.61xd
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" 2013/11/08.07:03:21 O.61xd
-EN work/rom 1383869322 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" \
-      PB std/TEXTIO 1308643377 PB ieee/std_logic_1164 1308643377 \
-      PB ieee/STD_LOGIC_TEXTIO 1308643378 PB ieee/NUMERIC_STD 1308643378 \
-      PB work/utils 1383869321
-AR work/rom/Behavioral 1383869323 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" \
-      EN work/rom 1383869322
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uadder32.vhd" 2013/10/09.09:07:55 O.61xd
-EN work/uadder32 1383869308 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uadder32.vhd" \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/uadder32/Behavioral 1383869309 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uadder32.vhd" \
-      EN work/uadder32 1383869308
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uaddsub32.vhd" 2013/10/09.09:07:55 O.61xd
-EN work/uaddsub32 1383869314 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uaddsub32.vhd" \
-      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
-AR work/uaddsub32/Behavioral 1383869315 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/uaddsub32.vhd" \
-      EN work/uaddsub32 1383869314 CP uadder32
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/udiv32.vhd" 2013/10/11.03:03:08 O.61xd
 EN work/udiv32 1381434600 \
       FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/udiv32.vhd" \
@@ -106,19 +42,50 @@ AR work/umul32/Behavioral 1381425090 \
       FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/umul32.vhd" \
       EN work/umul32 1381425089
 FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd" 2013/11/01.08:28:58 O.61xd
-PH work/utils 1383869320 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd" \
-      PB std/TEXTIO 1308643377 PB ieee/std_logic_1164 1308643377 \
-      PB ieee/STD_LOGIC_TEXTIO 1308643378 PB ieee/NUMERIC_STD 1308643378
-PB work/utils 1383869321 \
-      FL "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd" \
-      PH work/utils 1383869320
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" 2013/10/05.22:29:37 O.61xd
+EN work/adder32 1384194927 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
+AR work/adder32/Behavioral 1384194928 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" \
+      EN work/adder32 1384194927
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" 2013/10/05.22:47:14 O.61xd
-FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd" 2013/10/30.23:21:38 O.61xd
-FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" 2013/11/01.08:14:11 O.61xd
-FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" 2013/11/01.08:19:49 O.61xd
+EN work/addsub32 1384194929 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
+AR work/addsub32/Behavioral 1384194930 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/addsub32.vhd" \
+      EN work/addsub32 1384194929 CP adder32
+FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd" 2013/11/11.22:03:34 O.61xd
+EN work/alu 1384194943 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd" \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
+AR work/alu/Behavioral 1384194944 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd" \
+      EN work/alu 1384194943 CP addsub32 CP uaddsub32 CP mul32 CP div32
+FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" 2013/11/12.02:35:13 O.61xd
+EN work/cpu 1384194945 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
+      PB work/utils 1384194938
+AR work/cpu/Behavioral 1384194946 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" \
+      EN work/cpu 1384194945 CP rom CP decode CP alu
+FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" 2013/11/11.22:03:34 O.61xd
+EN work/decode 1384194941 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" \
+      PB ieee/std_logic_1164 1308643377 PB work/utils 1384194938 \
+      PB ieee/NUMERIC_STD 1308643378
+AR work/decode/Behavioral 1384194942 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" \
+      EN work/decode 1384194941
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/div32.vhd" 2013/10/16.09:25:13 O.61xd
+EN work/div32 1384194935 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/div32.vhd" \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
+AR work/div32/Behavioral 1384194936 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/div32.vhd" \
+      EN work/div32 1384194935
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/fetch.vhd" 2013/10/29.21:19:27 O.61xd
 EN work/fetch 1382555197 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/fetch.vhd" \
@@ -128,15 +95,48 @@ AR work/fetch/Behavioral 1382555198 \
       EN work/fetch 1382555197 CP rom
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd" 2013/11/01.05:34:51 O.61xd
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/mul32.vhd" 2013/10/11.03:33:46 O.61xd
+EN work/mul32 1384194933 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/mul32.vhd" \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
+AR work/mul32/Behavioral 1384194934 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/mul32.vhd" \
+      EN work/mul32 1384194933
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/ram.vhd" 2013/10/30.05:14:06 O.61xd
 EN work/ram 1383147731 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/ram.vhd" \
       PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
-      PB work/utils 1383869321 PB ieee/STD_LOGIC_UNSIGNED 1308643379
+      PB work/utils 1384194938 PB ieee/STD_LOGIC_UNSIGNED 1308643379
 AR work/ram/Behavioral 1383147732 \
       FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/ram.vhd" \
       EN work/ram 1383147731
-FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" 2013/11/01.07:59:46 O.61xd
+FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" 2013/11/12.02:20:25 O.61xd
+EN work/rom 1384194939 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" \
+      PB std/TEXTIO 1308643377 PB ieee/std_logic_1164 1308643377 \
+      PB ieee/STD_LOGIC_TEXTIO 1308643378 PB ieee/NUMERIC_STD 1308643378 \
+      PB work/utils 1384194938
+AR work/rom/Behavioral 1384194940 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" \
+      EN work/rom 1384194939
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd" 2013/10/02.12:40:39 O.61xd
+EN work/uadder32 1384194925 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd" \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
+AR work/uadder32/Behavioral 1384194926 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd" \
+      EN work/uadder32 1384194925
 FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd" 2013/10/05.22:33:13 O.61xd
-FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" 2013/11/01.07:24:28 O.61xd
+EN work/uaddsub32 1384194931 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd" \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378
+AR work/uaddsub32/Behavioral 1384194932 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/uaddsub32.vhd" \
+      EN work/uaddsub32 1384194931 CP uadder32
+FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" 2013/11/01.11:14:49 O.61xd
+PH work/utils 1384194937 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" \
+      PB std/TEXTIO 1308643377 PB ieee/std_logic_1164 1308643377 \
+      PB ieee/STD_LOGIC_TEXTIO 1308643378 PB ieee/NUMERIC_STD 1308643378
+PB work/utils 1384194938 \
+      FL "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" \
+      PH work/utils 1384194937

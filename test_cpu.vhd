@@ -53,6 +53,10 @@ ARCHITECTURE behavior OF test_cpu IS
 --			  DMemOut : out std_logic_vector(31 downto 0);
 --			  DCPUState : out std_logic_vector(31 downto 0);
 			  DCurrentIns : out std_logic_vector(31 downto 0);
+			  DCurrentIns2 : out std_logic_vector(31 downto 0);
+			  DCurrentIns3 : out std_logic_vector(31 downto 0);
+			  DCurrentIns4 : out std_logic_vector(31 downto 0);
+			  DCurrentIns5 : out std_logic_vector(31 downto 0);
 			  DAlu1 : out std_logic_vector(31 downto 0);
 			  DAlu2 : out std_logic_vector(31 downto 0);
 			  DAluR1 : out std_logic_vector(31 downto 0);
@@ -73,6 +77,10 @@ ARCHITECTURE behavior OF test_cpu IS
    signal DMemOut : std_logic_vector(31 downto 0);
 	signal DCPUState : std_logic_vector(31 downto 0);
 	signal DCurrentIns : std_logic_vector(31 downto 0);
+	signal DCurrentIns2 : std_logic_vector(31 downto 0);
+	signal DCurrentIns3 : std_logic_vector(31 downto 0);
+	signal DCurrentIns4 : std_logic_vector(31 downto 0);
+	signal DCurrentIns5 : std_logic_vector(31 downto 0);
 	signal DAlu1 : std_logic_vector(31 downto 0);
 	signal DAlu2 : std_logic_vector(31 downto 0);
 	signal DAluR1 : std_logic_vector(31 downto 0);
@@ -96,6 +104,10 @@ BEGIN
 --          DMemOut => DMemOut,
 --			 DCPUState => DCPUState,
 			 DCurrentIns => DCurrentIns,
+			 DCurrentIns2 => DCurrentIns2,
+				DCurrentIns3 => DCurrentIns3,
+				DCurrentIns4 => DCurrentIns4,
+				DCurrentIns5 => DCurrentIns5,
 			 DAlu1 => Dalu1,
 		 DAlu2 => DAlu2,
 			 DAluR1 => DAluR1,
@@ -118,22 +130,10 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-      wait for 5 ns;
+      wait for 20 ns;
 		
       wait for CLK_period*7;
 
-		DRegAddr <= b"00001";
-      DHalt <= '0';
-		
-		
-		wait for CLK_period*2;
-		
-		DHalt <= '0';
-		
-		wait for CLK_period*5;
-		
-		DHalt <= '0';
-		DRegAddr <= b"01001";
 		
 		-- insert stimulus here 
 
