@@ -152,7 +152,8 @@ signal ALUW_decodeControlSignals :  std_logic_vector(4 downto 0) := (others => '
 signal MEMWR_decodeControlSignals :  std_logic_vector(4 downto 0) := (others => '0');
 signal WB_decodeControlSignals :  std_logic_vector(4 downto 0) := (others => '0');
 
-
+signal MEMWR_alur1:  std_logic_vector(31 downto 0) := (others => '0');
+signal MEMWR_alur2:  std_logic_vector(31 downto 0) := (others => '0');
 signal WB_alur1:  std_logic_vector(31 downto 0) := (others => '0');
 signal WB_alur2:  std_logic_vector(31 downto 0) := (others => '0');
 
@@ -232,8 +233,8 @@ process(CLK)
 	--Prefix indicates stage where value is fetched
 	variable EX_decodeRegOut :  std_logic_vector(31 downto 0) := (others => '0');
 	variable EX_decodeControlSignals :  std_logic_vector(4 downto 0) := (others => '0');
-	variable MEMWR_alur1 :  std_logic_vector(31 downto 0) := (others => '0');
-	variable MEMWR_alur2 :  std_logic_vector(31 downto 0) := (others => '0');
+	variable ALUW_alur1 :  std_logic_vector(31 downto 0) := (others => '0');
+	variable ALUW_alur2 :  std_logic_vector(31 downto 0) := (others => '0');
 	variable EX_decodeRegWBAddr : std_logic_vector(4 downto 0);
 	
 	variable sig_Branch : std_logic := '0';
@@ -328,6 +329,9 @@ begin
 			if currentState = AluWait then
 				
 				DCurrentIns3 <= ALUW_currentIns;
+				ALUW_alur1 := alu_r1;
+				ALUW_alur2 := alu_r2;
+				
 				if (ALUW_currentIns(20 downto 0) = b"000000000000000001000" and
 					 ALUW_CurrentIns(31 downto 26) = b"000000") then
 				-- JR
@@ -352,14 +356,15 @@ begin
 				MEMWR_decodeRegOut <= ALUW_decodeRegOut;	
 				MEMWR_decodeControlSignals <= ALUW_decodeControlSignals;
 				MEMWR_decodeRegWBAddr <= ALUW_decodeRegWBAddr;
+				MEMWR_alur1 <= ALUW_alur1;
+				MEMWR_alur2 <= ALUW_alur2;
 			end if;
 			
 			if currentState = MemWR then
 	--			DCPUState <= (1 => '1', others => '0');
 				--Assignment of propagated values
 				DCurrentIns4 <= MEMWR_currentIns;
-				MEMWR_alur1 := alu_r1;
-				MEMWR_alur2 := alu_r2;
+				
 				sig_Branch := MEMWR_decodeControlSignals(0);
 				sig_MemRead := MEMWR_decodeControlSignals(1);
 				sig_MemWrite := MEMWR_decodeControlSignals(2);
