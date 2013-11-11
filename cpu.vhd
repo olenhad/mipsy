@@ -237,6 +237,13 @@ process(CLK)
 	variable ALUW_alur2 :  std_logic_vector(31 downto 0) := (others => '0');
 	variable EX_decodeRegWBAddr : std_logic_vector(4 downto 0);
 	
+	variable END_currentIns : std_logic_vector(31 downto 0) := (others => '0');
+	variable END_decodeRegOut :  std_logic_vector(31 downto 0) := (others => '0');
+	variable END_decodeControlSignals :  std_logic_vector(4 downto 0) := (others => '0');
+	variable END_alur1 :  std_logic_vector(31 downto 0) := (others => '0');
+	variable END_alur2 :  std_logic_vector(31 downto 0) := (others => '0');
+	variable END_decodeRegWBAddr : std_logic_vector(4 downto 0);
+	
 	variable sig_Branch : std_logic := '0';
 	variable sig_MemRead : std_logic := '0';
 	variable sig_MemWrite : std_logic := '0';
@@ -312,7 +319,125 @@ begin
 				EX_decodeControlSignals := decode_controlSignals;
 				EX_decodeRegWBAddr := decode_RegWBAddr;
 				--Main execution
+				alu_op1 <= decode_AluOP1;
+				alu_op2 <= decode_AluOP2;
 				
+				sig_Branch := ALUW_decodeControlSignals(0);
+				sig_MemRead := ALUW_decodeControlSignals(1);
+				sig_MemWrite := ALUW_decodeControlSignals(2);
+				sig_RegWrite := ALUW_decodeControlSignals(3);
+				sig_MemToReg := ALUW_decodeControlSignals(4);
+
+
+				DRegOut <= (others => '0');
+				if MEMWR_decodeRegWBAddr = EX_currentIns(25 downto 21) and 
+				   sig_RegWrite = '1' and 
+					sig_MemToReg = '0' and
+					MEMWR_alur1(0) /= 'U' then
+						alu_op1 <= ALUW_alur1;
+				end if;
+				
+				if MEMWR_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
+				   sig_RegWrite = '1' and 
+					sig_MemToReg = '0' and
+					MEMWR_alur1(0) /= 'U' then
+						alu_op2 <= ALUW_alur1;
+				end if;
+				
+				if ALUW_decodeRegWBAddr = EX_currentIns(25 downto 21) and 
+				   sig_RegWrite = '1' and 
+					sig_MemToReg = '0' and
+					ALUW_alur1(0) /= 'U' then
+						DRegOut <= (others => '0');
+						alu_op1 <= alu_r1;
+				end if;
+				
+				if ALUW_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
+				   sig_RegWrite = '1' and 
+					sig_MemToReg = '0' and
+					ALUW_alur1(0) /= 'U' then
+						alu_op2 <= alu_r1;
+						DRegOut <= (others => '0');
+				end if;
+
+				if END_decodeControlSignals(3) = '1' and
+				   END_decodeControlSignals(4) = '1' and
+					END_decodeRegWBAddr = EX_currentIns(25 downto 21) then
+						alu_op1 <= RAM3(to_integer(unsigned(END_alur1(5 downto 0)))) &
+					              RAM2(to_integer(unsigned(END_alur1(5 downto 0)))) &
+									  RAM1(to_integer(unsigned(END_alur1(5 downto 0)))) &
+									  RAM0(to_integer(unsigned(END_alur1(5 downto 0))));
+				end if;
+				
+				if END_decodeControlSignals(3) = '1' and
+				   END_decodeControlSignals(4) = '1' and
+					END_decodeRegWBAddr = EX_currentIns(20 downto 16) then
+						alu_op2 <= RAM3(to_integer(unsigned(END_alur1(5 downto 0)))) &
+					              RAM2(to_integer(unsigned(END_alur1(5 downto 0)))) &
+									  RAM1(to_integer(unsigned(END_alur1(5 downto 0)))) &
+									  RAM0(to_integer(unsigned(END_alur1(5 downto 0))));
+				end if;
+				
+				if WB_decodeControlSignals(3) = '1' and
+				   WB_decodeControlSignals(4) = '1' and
+					WB_decodeRegWBAddr = EX_currentIns(25 downto 21) then
+						alu_op1 <= RAM3(to_integer(unsigned(WB_alur1(5 downto 0)))) &
+					              RAM2(to_integer(unsigned(WB_alur1(5 downto 0)))) &
+									  RAM1(to_integer(unsigned(WB_alur1(5 downto 0)))) &
+									  RAM0(to_integer(unsigned(WB_alur1(5 downto 0))));
+						DRegOut <= (others => '0');
+				end if;
+				
+				if WB_decodeControlSignals(3) = '1' and
+				   WB_decodeControlSignals(4) = '1' and
+					WB_decodeRegWBAddr = EX_currentIns(20 downto 16) then
+						alu_op2 <= RAM3(to_integer(unsigned(WB_alur1(5 downto 0)))) &
+					              RAM2(to_integer(unsigned(WB_alur1(5 downto 0)))) &
+									  RAM1(to_integer(unsigned(WB_alur1(5 downto 0)))) &
+									  RAM0(to_integer(unsigned(WB_alur1(5 downto 0))));
+									  DRegOut <= (others => '1');
+				end if;
+
+				
+				if MEMWR_decodeControlSignals(3) = '1' and
+				   MEMWR_decodeControlSignals(4) = '1' and
+					MEMWR_decodeRegWBAddr = EX_currentIns(25 downto 21) then
+						alu_op1 <= RAM3(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) &
+					              RAM2(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) &
+									  RAM1(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) &
+									  RAM0(to_integer(unsigned(MEMWR_alur1(5 downto 0))));
+									  --DRegOut <= (others => '0');
+				end if;
+				
+				if MEMWR_decodeControlSignals(3) = '1' and
+				   MEMWR_decodeControlSignals(4) = '1' and
+					MEMWR_decodeRegWBAddr = EX_currentIns(20 downto 16) then
+						alu_op2 <= RAM3(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) &
+					              RAM2(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) &
+									  RAM1(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) &
+									  RAM0(to_integer(unsigned(MEMWR_alur1(5 downto 0))));
+									 -- DRegOut <= (others => '0');
+				end if;
+								
+				if ALUW_decodeControlSignals(3) = '1' and
+				   ALUW_decodeControlSignals(4) = '1' and
+					ALUW_decodeRegWBAddr = EX_currentIns(25 downto 21) then
+						alu_op1 <= RAM3(to_integer(unsigned(alu_r1(5 downto 0)))) &
+					              RAM2(to_integer(unsigned(alu_r1(5 downto 0)))) &
+									  RAM1(to_integer(unsigned(alu_r1(5 downto 0)))) &
+									  RAM0(to_integer(unsigned(alu_r1(5 downto 0))));
+									--  DRegOut <= (others => '0');
+				end if;
+				
+				if ALUW_decodeControlSignals(3) = '1' and
+				   ALUW_decodeControlSignals(4) = '1' and
+					ALUW_decodeRegWBAddr = EX_currentIns(20 downto 16) then
+						alu_op2 <= RAM3(to_integer(unsigned(alu_r1(5 downto 0)))) &
+					              RAM2(to_integer(unsigned(alu_r1(5 downto 0)))) &
+									  RAM1(to_integer(unsigned(alu_r1(5 downto 0)))) &
+									  RAM0(to_integer(unsigned(alu_r1(5 downto 0))));
+									 -- DRegOut <= (others => '0');
+				end if;
 
 				waitCounter :=  to_integer(unsigned(decode_WaitFor));
 				currentState := AluWait;
@@ -327,7 +452,7 @@ begin
 			end if;
 			
 			if currentState = AluWait then
-				
+				DAluR1 <= alu_r1;
 				DCurrentIns3 <= ALUW_currentIns;
 				ALUW_alur1 := alu_r1;
 				ALUW_alur2 := alu_r2;
@@ -511,6 +636,13 @@ begin
 --					
 				end if;
 				
+				END_currentIns := WB_currentIns;
+				END_decodeRegOut := WB_decodeRegOut;
+				END_decodeControlSignals :=  WB_decodeControlSignals;
+				END_alur1 := WB_alur1;
+				END_alur2 := WB_alur2;
+				END_decodeRegWBAddr := WB_decodeRegWBAddr;
+	
 				currentState := FetchDecode;
 				
 			end if;
@@ -525,7 +657,7 @@ begin
 
 rom_ADDR <= pc;
 DRegOutAddr <= vlregAddr;
-DRegOut <= decode_registerOut;-- vlreg;
+--DRegOut <= decode_registerOut;-- vlreg;
 --DMeMOut <= pc;
 
 DOutput <= res1Reg;
@@ -539,14 +671,14 @@ end process;
 
 --RAM(63) & RAM(62) & RAM(61) & RAM(60);
 
-alu_op1 <= decode_AluOP1;
-alu_op2 <= decode_AluOP2;
+
 
 DAlu1 <= alu_op1;
 DAlu2 <= alu_op2;
-
+--DAlu1 <= Decode_ALUOP1;
+--DAlu2 <= Decode_ALUOP2;
 alu_control <= decode_AluControl;
-DAluR1 <= alu_r1;
+
 
 
 --DMemOut <= ram_DO;

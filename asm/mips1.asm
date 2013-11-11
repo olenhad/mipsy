@@ -1,6 +1,6 @@
 .data 
-in1 : .word 12
-in2 : .word 12
+in1 : .word 2
+in2 : .word 3
 
 .text
 

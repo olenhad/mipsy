@@ -70,14 +70,16 @@ process(CLK)
 begin
 	if rising_edge(CLK) then
 		
+		if RegWrite = '1' then
+			registerFile(to_integer(unsigned(WriteAddr))) <= WriteData;
+			lreg <= WriteData;
+			lregAddr <= WriteAddr;
+		end if;
+		
 		if currentInstruction = x"FFFFFFFF" then
 			--registerOut <= registerFile(to_integer(unsigned(WriteAddr)));
 			--registerOut <= x"000000" & b"000" & WriteAddr;
 			
-		elsif RegWrite = '1' then
-			registerFile(to_integer(unsigned(WriteAddr))) <= WriteData;
-			lreg <= WriteData;
-			lregAddr <= WriteAddr;
 		else
 --			lreg <= (others=>'0');
 --			lregAddr <= (others=>'0');
