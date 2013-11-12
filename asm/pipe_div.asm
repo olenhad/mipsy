@@ -10,7 +10,8 @@ lw $t1, in1
 lw $t2, in2
 
 addi $t3,$t1,10
-slti $t5, $t2, 7 
+slti $t5, $t2, 7
+ori $t6, $t2, 9
 div $t3,$t2
 #mfhi $t4
 mflo $t4
@@ -21,7 +22,7 @@ lui $1, 0x1001
 sw $t4, 68($1)
 
 lui $1, 0x1001
-sw $t5, 64($1)
+sw $t6, 64($1)
 
 j main
 

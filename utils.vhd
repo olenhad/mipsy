@@ -26,6 +26,7 @@ package utils is
 	
 	
 	constant op_SLTI : std_logic_vector(5 downto 0) :=  b"001010";
+	constant op_ORI : std_logic_vector(5 downto 0) := b"001101";
 	
 	impure function read_rom_from_file ( rom_file_name : in string) return RomData;
 --	impure function read_ram_from_file ( ram_file_name : in string) return RamData;

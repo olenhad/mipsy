@@ -222,9 +222,13 @@ begin
 			elsif opcode = b"001101" then
 			-- ORI
 			-- Offset padded with 16 0's
-				AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
+				if currentInstruction(15) = '1' then
+					AluOP1 <= x"ffff" & CurrentInstruction(15 downto 0);
+				else
+					AluOP1 <= x"0000" & CurrentInstruction(15 downto 0);
+				end if;
 			-- OP1 given RS	
-				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+				AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
 				AluControl <= b"100101";
 						-- all R type instructions just Write to registers. assert RegWrite	
 				ControlSignals <= "01000";

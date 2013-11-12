@@ -370,7 +370,9 @@ begin
 				-- checking for R type, or ADDI or SLTI
 				elsif EX_currentIns(31 downto 26) = b"000000" or 
 						EX_currentIns(31 downto 26) = b"001000" or
-						EX_currentIns(31 downto 26) = op_SLTI then
+						EX_currentIns(31 downto 26) = op_SLTI or
+						EX_currentIns(31 downto 26) = op_ORI 
+						then
 				-- Both Rs, and Rt to be forwarded
 				-- Check for 'U' for unintialised valus
 				-- Priority system. Most recent change is applied
@@ -405,7 +407,8 @@ begin
 					if END_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
 						END_alur1(0) /= 'U' and
 						EX_currentIns(31 downto 26) /= b"001000" and
-						EX_currentIns(31 downto 26) /= op_SLTI 
+						EX_currentIns(31 downto 26) /= op_SLTI and
+						EX_currentIns(31 downto 26) /= op_ORI 
 						then
 							--Checking if END is R-type.
 							if END_decodeControlSignals(3) = '1' and 
@@ -457,7 +460,8 @@ begin
 					if WB_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
 						WB_alur1(0) /= 'U' and
 						EX_currentIns(31 downto 26) /= b"001000"  and
-						EX_currentIns(31 downto 26) /= op_SLTI then
+						EX_currentIns(31 downto 26) /= op_SLTI and
+						EX_currentIns(31 downto 26) /= op_ORI then
 							--Checking if END is R-type.
 							if WB_decodeControlSignals(3) = '1' and 
 								WB_decodeControlSignals(4) = '0' then
@@ -509,7 +513,8 @@ begin
 					if MEMWR_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
 						MEMWR_alur1(0) /= 'U' and
 						EX_currentIns(31 downto 26) /= b"001000"  and
-						EX_currentIns(31 downto 26) /= op_SLTI then
+						EX_currentIns(31 downto 26) /= op_SLTI and
+						EX_currentIns(31 downto 26) /= op_ORI then
 							--Checking if END is R-type.
 							if MEMWR_decodeControlSignals(3) = '1' and 
 								MEMWR_decodeControlSignals(4) = '0' then
@@ -563,7 +568,8 @@ begin
 					if ALUW_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
 						ALUW_alur1(0) /= 'U' and
 						EX_currentIns(31 downto 26) /= b"001000"  and
-						EX_currentIns(31 downto 26) /= op_SLTI then
+						EX_currentIns(31 downto 26) /= op_SLTI and
+						EX_currentIns(31 downto 26) /= op_ORI then
 							--Checking if END is R-type.
 							if ALUW_decodeControlSignals(3) = '1' and 
 								ALUW_decodeControlSignals(4) = '0' then
