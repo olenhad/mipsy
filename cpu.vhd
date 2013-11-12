@@ -335,67 +335,334 @@ begin
 --				else 
 --				DRegOut <= (others => '0');
 --				end if;
-				if END_decodeRegWBAddr = EX_currentIns(25 downto 21) and 
-				   END_decodeControlSignals(3) = '1' and 
-					END_decodeControlSignals(4) = '0' and
-					END_alur1(0) /= 'U' then
-						alu_op1 <= END_alur1;
+
+				-- checking for R type
+				if EX_currentIns(31 downto 26) = b"000000" then
+				-- Both Rs, and Rt to be forwarded
+				-- Check for 'U' for unintialised valus
+				-- Priority system. Most recent change is applied
+				
+					-- If value is written to a register towards the end of a instruction
+					-- TODO. Check whether ControlSignal checks are required?
+					if END_decodeRegWBAddr = EX_currentIns(25 downto 21) and 
+						END_alur1(0) /= 'U' then
+							--Checking if END is R-type.
+							if END_decodeControlSignals(3) = '1' and 
+								END_decodeControlSignals(4) = '0' then
+									alu_op1 <= END_alur1;
+							-- Checking if LW
+							elsif END_decodeControlSignals(3) = '1' and 
+								END_decodeControlSignals(4) = '1' then
+								
+								-- Sets value to last value contained at rs + offset
+								alu_op1 <= RAM3(to_integer(unsigned(END_alur1(3 downto 0)))) &
+											  RAM2(to_integer(unsigned(END_alur1(3 downto 0)))) &
+											  RAM1(to_integer(unsigned(END_alur1(3 downto 0)))) &
+											  RAM0(to_integer(unsigned(END_alur1(3 downto 0))));
+							-- Checking if SW
+							elsif END_decodeControlSignals(2) = '1' then
+							-- MEM[$s + offset] = $t; advance_pc (4);
+							-- Syntax:
+							---sw $t, offset($s)	
+							-- Don't care for R-type
+							end if;
+							
+					end if;
+					
+					if END_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
+						END_alur1(0) /= 'U' then
+							--Checking if END is R-type.
+							if END_decodeControlSignals(3) = '1' and 
+								END_decodeControlSignals(4) = '0' then
+								alu_op2 <= END_alur1;
+							-- Checking if LW
+							elsif END_decodeControlSignals(3) = '1' and 
+								END_decodeControlSignals(4) = '1' then
+								
+								-- Sets value to last value contained at rs + offset
+								alu_op2 <= RAM3(to_integer(unsigned(END_alur1(3 downto 0)))) &
+											  RAM2(to_integer(unsigned(END_alur1(3 downto 0)))) &
+											  RAM1(to_integer(unsigned(END_alur1(3 downto 0)))) &
+											  RAM0(to_integer(unsigned(END_alur1(3 downto 0))));
+							-- Checking if SW
+							elsif END_decodeControlSignals(2) = '1' then
+							-- MEM[$s + offset] = $t; advance_pc (4);
+							-- Syntax:
+							---sw $t, offset($s)	
+							-- Don't care for R-type
+							end if;
+					end if;
+					
+					-- If value is written towards the end of a WB stage
+					if WB_decodeRegWBAddr = EX_currentIns(25 downto 21) and 
+						WB_alur1(0) /= 'U' then
+							--Checking if WB is R-type.
+							if WB_decodeControlSignals(3) = '1' and 
+								WB_decodeControlSignals(4) = '0' then
+								alu_op1 <= WB_alur1;
+							-- Checking if LW
+							elsif WB_decodeControlSignals(3) = '1' and 
+								WB_decodeControlSignals(4) = '1' then
+								
+								-- Sets value to last value contained at rs + offset
+								alu_op1 <= RAM3(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+											  RAM2(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+											  RAM1(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+											  RAM0(to_integer(unsigned(WB_alur1(3 downto 0))));
+							-- Checking if SW
+							elsif WB_decodeControlSignals(2) = '1' then
+							-- MEM[$s + offset] = $t; advance_pc (4);
+							-- Syntax:
+							---sw $t, offset($s)	
+							-- Don't care for R-type
+							end if;
+					end if;
+					
+					if WB_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
+						WB_alur1(0) /= 'U' then
+							--Checking if END is R-type.
+							if WB_decodeControlSignals(3) = '1' and 
+								WB_decodeControlSignals(4) = '0' then
+								alu_op2 <= WB_alur1;
+							-- Checking if LW
+							elsif WB_decodeControlSignals(3) = '1' and 
+								WB_decodeControlSignals(4) = '1' then
+								
+								-- Sets value to last value contained at rs + offset
+								alu_op2 <= RAM3(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+											  RAM2(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+											  RAM1(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+											  RAM0(to_integer(unsigned(WB_alur1(3 downto 0))));
+							-- Checking if SW
+							elsif WB_decodeControlSignals(2) = '1' then
+							-- MEM[$s + offset] = $t; advance_pc (4);
+							-- Syntax:
+							---sw $t, offset($s)	
+							-- Don't care for R-type
+							end if;
+					end if;
+					--last change
+					
+					-- If value is written towards the end of MEMWR stage
+					if MEMWR_decodeRegWBAddr = EX_currentIns(25 downto 21) and 
+						MEMWR_alur1(0) /= 'U' then
+							--Checking if END is R-type.
+							if MEMWR_decodeControlSignals(3) = '1' and 
+								MEMWR_decodeControlSignals(4) = '0' then
+								alu_op1 <= MEMWR_alur1;
+							-- Checking if LW
+							elsif MEMWR_decodeControlSignals(3) = '1' and 
+								MEMWR_decodeControlSignals(4) = '1' then
+								
+								-- Sets value to last value contained at rs + offset
+								alu_op1 <= RAM3(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+											  RAM2(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+											  RAM1(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+											  RAM0(to_integer(unsigned(MEMWR_alur1(3 downto 0))));
+							-- Checking if SW
+							elsif MEMWR_decodeControlSignals(2) = '1' then
+							-- MEM[$s + offset] = $t; advance_pc (4);
+							-- Syntax:
+							---sw $t, offset($s)	
+							-- Don't care for R-type
+							end if;
+					end if;
+					
+					if MEMWR_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
+						MEMWR_alur1(0) /= 'U' then
+							--Checking if END is R-type.
+							if MEMWR_decodeControlSignals(3) = '1' and 
+								MEMWR_decodeControlSignals(4) = '0' then
+								alu_op2 <= MEMWR_alur1;
+							-- Checking if LW
+							elsif MEMWR_decodeControlSignals(3) = '1' and 
+								MEMWR_decodeControlSignals(4) = '1' then
+								
+								-- Sets value to last value contained at rs + offset
+								alu_op2 <= RAM3(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+											  RAM2(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+											  RAM1(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+											  RAM0(to_integer(unsigned(MEMWR_alur1(3 downto 0))));
+							-- Checking if SW
+							elsif MEMWR_decodeControlSignals(2) = '1' then
+							-- MEM[$s + offset] = $t; advance_pc (4);
+							-- Syntax:
+							---sw $t, offset($s)	
+							-- Don't care for R-type
+							end if;
+					end if;
+					
+					-- If value is written towards the end of AluW stage
+					-- Unlike other stages, we check alu_r1 directly here because we use a 
+					-- variable below and variables are sequentially assigned
+					if ALUW_decodeRegWBAddr = EX_currentIns(25 downto 21) and 
+						ALUW_alur1(0) /= 'U' then
+						--	DRegOut <= (others => '0');
+							--Checking if END is R-type.
+							if ALUW_decodeControlSignals(3) = '1' and 
+								ALUW_decodeControlSignals(4) = '0' then
+								alu_op1 <= alu_r1;
+							-- Checking if LW
+							elsif ALUW_decodeControlSignals(3) = '1' and 
+								ALUW_decodeControlSignals(4) = '1' then
+								
+								-- Sets value to last value contained at rs + offset
+								alu_op1 <= RAM3(to_integer(unsigned(alu_r1(3 downto 0)))) &
+											  RAM2(to_integer(unsigned(alu_r1(3 downto 0)))) &
+											  RAM1(to_integer(unsigned(alu_r1(3 downto 0)))) &
+											  RAM0(to_integer(unsigned(alu_r1(3 downto 0))));
+							-- Checking if SW
+							elsif ALUW_decodeControlSignals(2) = '1' then
+							-- MEM[$s + offset] = $t; advance_pc (4);
+							-- Syntax:
+							---sw $t, offset($s)	
+							-- Don't care for R-type
+							end if;
+					end if;
+					-- AND HERE
+					if ALUW_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
+						ALUW_alur1(0) /= 'U' then
+							--Checking if END is R-type.
+							if ALUW_decodeControlSignals(3) = '1' and 
+								ALUW_decodeControlSignals(4) = '0' then
+								alu_op2 <= alu_r1;
+							-- Checking if LW
+							elsif ALUW_decodeControlSignals(3) = '1' and 
+								ALUW_decodeControlSignals(4) = '1' then
+								
+								-- Sets value to last value contained at rs + offset
+								alu_op2 <= RAM3(to_integer(unsigned(alu_r1(3 downto 0)))) &
+											  RAM2(to_integer(unsigned(alu_r1(3 downto 0)))) &
+											  RAM1(to_integer(unsigned(alu_r1(3 downto 0)))) &
+											  RAM0(to_integer(unsigned(alu_r1(3 downto 0))));
+							-- Checking if SW
+							elsif ALUW_decodeControlSignals(2) = '1' then
+							-- MEM[$s + offset] = $t; advance_pc (4);
+							-- Syntax:
+							---sw $t, offset($s)	
+							-- Don't care for R-type
+							end if;
+						--	DRegOut <= (others => '0');
+					end if;
+				
+				elsif EX_currentIns(31 downto 26) = b"100011" then
+				-- LOAD WORD
+				-- $t = MEM[$s + offset]; advance_pc (4);
+				--Syntax:
+				--lw $t, offset($s) 
+				-- forward ONLY Rs (25 to 21).
+					if END_decodeRegWBAddr = EX_currentIns(25 downto 21) and 
+						END_alur1(0) /= 'U' then
+							--Checking if END is R-type.
+							if END_decodeControlSignals(3) = '1' and 
+								END_decodeControlSignals(4) = '0' then
+									alu_op1 <= END_alur1;
+							-- Checking if LW
+							elsif END_decodeControlSignals(3) = '1' and 
+								END_decodeControlSignals(4) = '1' then
+								
+								-- Sets value to last value contained at rs + offset
+								alu_op1 <= RAM3(to_integer(unsigned(END_alur1(3 downto 0)))) &
+											  RAM2(to_integer(unsigned(END_alur1(3 downto 0)))) &
+											  RAM1(to_integer(unsigned(END_alur1(3 downto 0)))) &
+											  RAM0(to_integer(unsigned(END_alur1(3 downto 0))));
+							-- Checking if SW
+							elsif END_decodeControlSignals(2) = '1' then
+							-- MEM[$s + offset] = $t; advance_pc (4);
+							-- Syntax:
+							---sw $t, offset($s)	
+							-- Don't care for R-type
+							end if;
+							
+					end if;
+					
+					-- If value is written towards the end of a WB stage
+					if WB_decodeRegWBAddr = EX_currentIns(25 downto 21) and 
+						WB_alur1(0) /= 'U' then
+							--Checking if WB is R-type.
+							if WB_decodeControlSignals(3) = '1' and 
+								WB_decodeControlSignals(4) = '0' then
+								alu_op1 <= WB_alur1;
+							-- Checking if LW
+							elsif WB_decodeControlSignals(3) = '1' and 
+								WB_decodeControlSignals(4) = '1' then
+								
+								-- Sets value to last value contained at rs + offset
+								alu_op1 <= RAM3(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+											  RAM2(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+											  RAM1(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+											  RAM0(to_integer(unsigned(WB_alur1(3 downto 0))));
+							-- Checking if SW
+							elsif WB_decodeControlSignals(2) = '1' then
+							-- MEM[$s + offset] = $t; advance_pc (4);
+							-- Syntax:
+							---sw $t, offset($s)	
+							-- Don't care for R-type
+							end if;
+					end if;
+					
+					-- If value is written towards the end of MEMWR stage
+					if MEMWR_decodeRegWBAddr = EX_currentIns(25 downto 21) and 
+						MEMWR_alur1(0) /= 'U' then
+							--Checking if END is R-type.
+							if MEMWR_decodeControlSignals(3) = '1' and 
+								MEMWR_decodeControlSignals(4) = '0' then
+								alu_op1 <= MEMWR_alur1;
+							-- Checking if LW
+							elsif MEMWR_decodeControlSignals(3) = '1' and 
+								MEMWR_decodeControlSignals(4) = '1' then
+								
+								-- Sets value to last value contained at rs + offset
+								alu_op1 <= RAM3(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+											  RAM2(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+											  RAM1(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+											  RAM0(to_integer(unsigned(MEMWR_alur1(3 downto 0))));
+							-- Checking if SW
+							elsif MEMWR_decodeControlSignals(2) = '1' then
+							-- MEM[$s + offset] = $t; advance_pc (4);
+							-- Syntax:
+							---sw $t, offset($s)	
+							-- Don't care for R-type
+							end if;
+					end if;
+					
+					-- If value is written towards the end of AluW stage
+					-- Unlike other stages, we check alu_r1 directly here because we use a 
+					-- variable below and variables are sequentially assigned
+					if ALUW_decodeRegWBAddr = EX_currentIns(25 downto 21) and 
+						ALUW_alur1(0) /= 'U' then
+						--	DRegOut <= (others => '0');
+							--Checking if END is R-type.
+							if ALUW_decodeControlSignals(3) = '1' and 
+								ALUW_decodeControlSignals(4) = '0' then
+								alu_op1 <= alu_r1;
+							-- Checking if LW
+							elsif ALUW_decodeControlSignals(3) = '1' and 
+								ALUW_decodeControlSignals(4) = '1' then
+								
+								-- Sets value to last value contained at rs + offset
+								alu_op1 <= RAM3(to_integer(unsigned(alu_r1(3 downto 0)))) &
+											  RAM2(to_integer(unsigned(alu_r1(3 downto 0)))) &
+											  RAM1(to_integer(unsigned(alu_r1(3 downto 0)))) &
+											  RAM0(to_integer(unsigned(alu_r1(3 downto 0))));
+							-- Checking if SW
+							elsif ALUW_decodeControlSignals(2) = '1' then
+							-- MEM[$s + offset] = $t; advance_pc (4);
+							-- Syntax:
+							---sw $t, offset($s)	
+							-- Don't care for R-type
+							end if;
+					end if;
 				end if;
+
+
+
 				
-				if END_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
-				   END_decodeControlSignals(3) = '1' and 
-					END_decodeControlSignals(4) = '0' and
-					END_alur1(0) /= 'U' then
-						alu_op2 <= END_alur1;
-				end if; 
+
 				
-				if WB_decodeRegWBAddr = EX_currentIns(25 downto 21) and 
-				   WB_decodeControlSignals(3) = '1' and 
-					WB_decodeControlSignals(4) = '0' and
-					WB_alur1(0) /= 'U' then
-						alu_op1 <= WB_alur1;
-				end if;
-				
-				if WB_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
-				   WB_decodeControlSignals(3) = '1' and 
-					WB_decodeControlSignals(4) = '0' and
-					WB_alur1(0) /= 'U' then
-						alu_op2 <= WB_alur1;
-				end if;
-				--last change
-				
-				
-				-- MEMWR TO BE USED DUMBFUCKS
-				if MEMWR_decodeRegWBAddr = EX_currentIns(25 downto 21) and 
-				   MEMWR_decodeControlSignals(3) = '1' and 
-					MEMWR_decodeControlSignals(4) = '0' and
-					MEMWR_alur1(0) /= 'U' then
-						alu_op1 <= MEMWR_alur1;
-				end if;
-				
-				if MEMWR_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
-				   MEMWR_decodeControlSignals(3) = '1' and 
-					MEMWR_decodeControlSignals(4) = '0' and
-					MEMWR_alur1(0) /= 'U' then
-						alu_op2 <= MEMWR_alur1;
-				end if;
 				
 				-- DONT TOUCH THIS..MAGIC HERE
-				if ALUW_decodeRegWBAddr = EX_currentIns(25 downto 21) and 
-				   ALUW_decodeControlSignals(3) = '1' and 
-					ALUW_decodeControlSignals(4) = '0' and
-					ALUW_alur1(0) /= 'U' then
-					--	DRegOut <= (others => '0');
-						alu_op1 <= alu_r1;
-				end if;
-				-- AND HERE
-				if ALUW_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
-				   ALUW_decodeControlSignals(3) = '1' and 
-					ALUW_decodeControlSignals(4) = '0' and
-					ALUW_alur1(0) /= 'U' then
-						alu_op2 <= alu_r1;
-					--	DRegOut <= (others => '0');
-				end if;
+				
 
 				--change if store word to latest value
 				EX_decodeRegOut := decode_registerOut;

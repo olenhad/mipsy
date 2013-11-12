@@ -3,14 +3,14 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.70 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.61 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.70 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.61 secs
  
 --> Reading design: LAB2.prj
 
@@ -107,8 +107,6 @@ loop_iteration_limit               : 2048
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/LAB2 is now defined in a different file.  It was defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd", and is now defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd".
-WARNING:HDLParsers:3607 - Unit work/LAB2/Structural is now defined in a different file.  It was defined in "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd", and is now defined in "C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd".
 Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/uadder32.vhd" in Library work.
 Architecture behavioral of Entity uadder32 is up to date.
 Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/adder32.vhd" in Library work.
@@ -124,11 +122,9 @@ Architecture behavioral of Entity div32 is up to date.
 Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/utils.vhd" in Library work.
 Architecture utils of Entity utils is up to date.
 Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd" in Library work.
-Entity <rom> compiled.
-Entity <rom> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity rom is up to date.
 Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/decode.vhd" in Library work.
-Entity <decode> compiled.
-Entity <decode> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity decode is up to date.
 Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/alu.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "C:/Users/pc richard/Documents/CG3207/cg3207-project/cpu.vhd" in Library work.
@@ -394,8 +390,6 @@ WARNING:Xst:646 - Signal <decode_lreg> is assigned but never used. This unconnec
 WARNING:Xst:646 - Signal <alu_debug> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <WB_decodeRegOut> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <END_decodeControlSignals<2:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <END_alur1<31:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Register <MEMWR_alur1> equivalent to <ALUW_alur1> has been removed
     Using one-hot encoding for signal <currentState>.
     Using one-hot encoding for signal <currentState$mux0002>.
     Using one-hot encoding for signal <currentState$mux0003>.
@@ -409,35 +403,39 @@ WARNING:Xst:646 - Signal <END_alur1<31:4>> is assigned but never used. This unco
     Found 32-bit register for signal <DCurrentIns5>.
     Found 32-bit register for signal <DCurrentIns>.
     Found 32-bit register for signal <alu_op1>.
-    Found 5-bit comparator equal for signal <alu_op1$cmp_eq0000> created at line 443.
-    Found 5-bit comparator equal for signal <alu_op1$cmp_eq0001> created at line 423.
-    Found 5-bit comparator equal for signal <alu_op1$cmp_eq0002> created at line 402.
-    Found 5-bit comparator equal for signal <alu_op1$cmp_eq0003> created at line 384.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0000> created at line 387.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0001> created at line 387.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0002> created at line 387.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0003> created at line 387.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0004> created at line 405.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0005> created at line 405.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0006> created at line 405.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0007> created at line 405.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0008> created at line 426.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0009> created at line 426.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0010> created at line 426.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0011> created at line 426.
+    Found 5-bit comparator equal for signal <alu_op1$cmp_eq0000> created at line 347.
+    Found 5-bit comparator equal for signal <alu_op1$cmp_eq0001> created at line 397.
+    Found 5-bit comparator equal for signal <alu_op1$cmp_eq0002> created at line 621.
+    Found 5-bit comparator equal for signal <alu_op1$cmp_eq0003> created at line 592.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0000> created at line 358.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0001> created at line 358.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0002> created at line 358.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0003> created at line 358.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0004> created at line 408.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0005> created at line 408.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0006> created at line 408.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0007> created at line 408.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0008> created at line 458.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0009> created at line 458.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0010> created at line 458.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0011> created at line 458.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0012> created at line 625.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0013> created at line 625.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0014> created at line 625.
+    Found 8-bit 16-to-1 multiplexer for signal <alu_op1$varindex0015> created at line 625.
     Found 32-bit register for signal <alu_op2>.
-    Found 5-bit comparator equal for signal <alu_op2$cmp_eq0000> created at line 453.
-    Found 5-bit comparator equal for signal <alu_op2$cmp_eq0001> created at line 433.
-    Found 5-bit comparator equal for signal <alu_op2$cmp_eq0002> created at line 412.
-    Found 5-bit comparator equal for signal <alu_op2$cmp_eq0003> created at line 393.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op2$varindex0000> created at line 376.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op2$varindex0001> created at line 376.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op2$varindex0002> created at line 376.
-    Found 8-bit 16-to-1 multiplexer for signal <alu_op2$varindex0003> created at line 376.
-    Found 32-bit register for signal <ALUW_alur1>.
+    Found 5-bit comparator equal for signal <alu_op2$cmp_eq0000> created at line 372.
+    Found 5-bit comparator equal for signal <alu_op2$cmp_eq0001> created at line 421.
+    Found 5-bit comparator equal for signal <alu_op2$cmp_eq0003> created at line 504.
+    Found 5-bit comparator equal for signal <alu_op2$cmp_eq0004> created at line 471.
+    Found 32-bit 4-to-1 multiplexer for signal <alu_op2$mux0012> created at line 544.
+    Found 32-bit 4-to-1 multiplexer for signal <alu_op2$mux0014> created at line 573.
+    Found 32-bit 4-to-1 multiplexer for signal <alu_op2$mux0016> created at line 603.
+    Found 32-bit 4-to-1 multiplexer for signal <alu_op2$mux0019>.
     Found 32-bit register for signal <ALUW_currentIns>.
     Found 5-bit register for signal <ALUW_decodeControlSignals>.
     Found 32-bit register for signal <ALUW_decodeRegOut>.
+    Found 32-bit 4-to-1 multiplexer for signal <ALUW_decodeRegOut$mux0000>.
     Found 5-bit register for signal <ALUW_decodeRegWBAddr>.
     Found 5-bit register for signal <currentState>.
     Found 32-bit register for signal <decode_CurrentInstruction>.
@@ -449,8 +447,12 @@ WARNING:Xst:646 - Signal <END_alur1<31:4>> is assigned but never used. This unco
     Found 5-bit register for signal <END_decodeControlSignals>.
     Found 5-bit register for signal <END_decodeRegWBAddr>.
     Found 32-bit register for signal <EX_currentIns>.
+    Found 32-bit 4-to-1 multiplexer for signal <EX_decodeRegOut$mux0001> created at line 544.
+    Found 32-bit 4-to-1 multiplexer for signal <EX_decodeRegOut$mux0003> created at line 573.
+    Found 32-bit 4-to-1 multiplexer for signal <EX_decodeRegOut$mux0005> created at line 603.
     Found 32-bit register for signal <hi>.
     Found 32-bit register for signal <lo>.
+    Found 32-bit register for signal <MEMWR_alur1>.
     Found 32-bit register for signal <MEMWR_alur2>.
     Found 32-bit register for signal <MEMWR_currentIns>.
     Found 5-bit register for signal <MEMWR_decodeControlSignals>.
@@ -459,8 +461,8 @@ WARNING:Xst:646 - Signal <END_alur1<31:4>> is assigned but never used. This unco
     Found 32-bit register for signal <pc>.
     Found 32-bit adder for signal <pc$add0000> created at line 298.
     Found 32-bit 4-to-1 multiplexer for signal <pc$mux0001> created at line 285.
-    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0003> created at line 475.
-    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0004> created at line 475.
+    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0003> created at line 667.
+    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0004> created at line 667.
     Found 32-bit adder for signal <pc$share0000>.
     Found 32-bit register for signal <prev_op1>.
     Found 32-bit comparator not equal for signal <prev_op1$cmp_ne0000> created at line 258.
@@ -488,7 +490,7 @@ WARNING:Xst:646 - Signal <END_alur1<31:4>> is assigned but never used. This unco
 	inferred 1496 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
 	inferred  14 Comparator(s).
-	inferred 256 Multiplexer(s).
+	inferred 512 Multiplexer(s).
 Unit <cpu> synthesized.
 
 
@@ -529,9 +531,9 @@ Macro Statistics
  32-bit comparator less                                : 6
  32-bit comparator not equal                           : 9
  5-bit comparator equal                                : 8
-# Multiplexers                                         : 27
+# Multiplexers                                         : 35
  1-bit 32-to-1 multiplexer                             : 1
- 32-bit 4-to-1 multiplexer                             : 8
+ 32-bit 4-to-1 multiplexer                             : 16
  32-bit 8-to-1 multiplexer                             : 2
  8-bit 16-to-1 multiplexer                             : 16
 # Xors                                                 : 5
@@ -583,34 +585,6 @@ WARNING:Xst:2677 - Node <ALUW_currentIns_22> of sequential type is unconnected i
 WARNING:Xst:2677 - Node <ALUW_currentIns_23> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <ALUW_currentIns_24> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <ALUW_currentIns_25> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_4> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_5> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_6> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_7> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_8> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_9> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_10> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_11> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_12> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_13> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_14> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_15> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_16> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_17> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_18> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_19> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_20> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_21> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_22> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_23> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_24> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_25> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_26> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_27> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_28> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_29> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_30> of sequential type is unconnected in block <cpu0>.
-WARNING:Xst:2677 - Node <END_alur1_31> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <WB_decodeControlSignals_0> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <WB_decodeControlSignals_1> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <WB_decodeControlSignals_2> of sequential type is unconnected in block <cpu0>.
@@ -713,34 +687,6 @@ Unit <cpu> synthesized (advanced).
 WARNING:Xst:2677 - Node <WB_decodeControlSignals_0> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <WB_decodeControlSignals_1> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <WB_decodeControlSignals_2> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_4> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_5> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_6> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_7> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_8> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_9> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_10> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_11> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_12> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_13> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_14> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_15> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_16> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_17> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_18> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_19> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_20> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_21> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_22> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_23> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_24> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_25> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_26> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_27> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_28> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_29> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_30> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <END_alur1_31> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <END_decodeControlSignals_0> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <END_decodeControlSignals_1> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <END_decodeControlSignals_2> of sequential type is unconnected in block <cpu>.
@@ -763,17 +709,17 @@ Macro Statistics
  64-bit adder                                          : 1
 # Counters                                             : 1
  32-bit down counter                                   : 1
-# Registers                                            : 1901
- Flip-Flops                                            : 1901
+# Registers                                            : 1929
+ Flip-Flops                                            : 1929
 # Comparators                                          : 35
  32-bit comparator equal                               : 7
  32-bit comparator greatequal                          : 5
  32-bit comparator less                                : 6
  32-bit comparator not equal                           : 9
  5-bit comparator equal                                : 8
-# Multiplexers                                         : 27
+# Multiplexers                                         : 35
  1-bit 32-to-1 multiplexer                             : 1
- 32-bit 4-to-1 multiplexer                             : 8
+ 32-bit 4-to-1 multiplexer                             : 16
  32-bit 8-to-1 multiplexer                             : 2
  8-bit 16-to-1 multiplexer                             : 16
 # Xors                                                 : 5
@@ -832,31 +778,31 @@ INFO:Xst:2261 - The FF/Latch <EX_currentIns_13> in Unit <cpu> is equivalent to t
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_14> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_14> 
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_15> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_15> 
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_20> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_20> 
-INFO:Xst:2261 - The FF/Latch <EX_currentIns_16> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_16> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_0> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_0> 
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_21> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_21> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_0> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_0> 
-INFO:Xst:2261 - The FF/Latch <EX_currentIns_17> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_17> 
+INFO:Xst:2261 - The FF/Latch <EX_currentIns_16> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_16> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_1> 
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_22> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_22> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_1> 
-INFO:Xst:2261 - The FF/Latch <EX_currentIns_18> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_18> 
+INFO:Xst:2261 - The FF/Latch <EX_currentIns_17> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_17> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_2> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_2> 
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_23> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_23> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_2> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_2> 
-INFO:Xst:2261 - The FF/Latch <EX_currentIns_19> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_19> 
+INFO:Xst:2261 - The FF/Latch <EX_currentIns_18> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_18> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_3> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_3> 
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_24> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_24> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_3> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_3> 
-INFO:Xst:2261 - The FF/Latch <EX_currentIns_25> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_25> 
+INFO:Xst:2261 - The FF/Latch <EX_currentIns_19> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_19> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_4> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_4> 
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_30> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_30> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_4> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_4> 
-INFO:Xst:2261 - The FF/Latch <EX_currentIns_26> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_26> 
+INFO:Xst:2261 - The FF/Latch <EX_currentIns_25> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_25> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_5> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_5> 
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_31> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_31> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_5> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_5> 
+INFO:Xst:2261 - The FF/Latch <EX_currentIns_26> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_26> 
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_27> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_27> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_6> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_6> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_6> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_6> 
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_28> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_28> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_7> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_7> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_7> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_7> 
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_29> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_29> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_8> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_8> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_9> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_9> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_8> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_8> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_9> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_9> 
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_0> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_0> 
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_1> 
 INFO:Xst:2261 - The FF/Latch <EX_currentIns_2> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns_2> 
@@ -895,19 +841,19 @@ INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_11> in Unit <cpu> is equivalent to
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_12> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_12> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_13> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_13> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_14> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_14> 
-INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_20> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_20> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_15> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_15> 
-INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_21> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_21> 
+INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_20> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_20> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_16> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_16> 
-INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_22> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_22> 
+INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_21> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_21> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_17> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_17> 
-INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_23> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_23> 
+INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_22> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_22> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_18> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_18> 
-INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_24> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_24> 
+INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_23> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_23> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_19> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_19> 
+INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_24> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_24> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_10> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_10> 
-INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_30> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_30> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_25> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_25> 
+INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_30> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_30> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_11> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_11> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_26> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_26> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_31> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_31> 
@@ -917,18 +863,18 @@ INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_13> in Unit <cpu> is equivalent t
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_28> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_28> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_14> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_14> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_29> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_29> 
-INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_15> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_15> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_20> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_20> 
-INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_16> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_16> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_15> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_15> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_21> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_21> 
-INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_17> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_17> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_16> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_16> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_22> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_22> 
-INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_18> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_18> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_17> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_17> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_23> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_23> 
-INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_19> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_19> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_18> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_18> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_24> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_24> 
-INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_25> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_25> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_19> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_19> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_30> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_30> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_25> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_25> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_31> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_31> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_26> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_26> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_27> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_27> 
@@ -953,30 +899,29 @@ INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_6> in Unit <cpu> is equivalent to
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_9> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_9> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_7> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_7> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_8> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_8> 
-INFO:Xst:2261 - The FF/Latch <DRegOut_0> in Unit <cpu> is equivalent to the following 31 FFs/Latches, which will be removed : <DRegOut_1> <DRegOut_2> <DRegOut_3> <DRegOut_4> <DRegOut_5> <DRegOut_6> <DRegOut_7> <DRegOut_8> <DRegOut_9> <DRegOut_10> <DRegOut_11> <DRegOut_12> <DRegOut_13> <DRegOut_14> <DRegOut_15> <DRegOut_16> <DRegOut_17> <DRegOut_18> <DRegOut_19> <DRegOut_20> <DRegOut_21> <DRegOut_22> <DRegOut_23> <DRegOut_24> <DRegOut_25> <DRegOut_26> <DRegOut_27> <DRegOut_28> <DRegOut_29> <DRegOut_30> <DRegOut_31> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_9> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_9> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_10> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_10> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_11> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_11> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_12> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_12> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_13> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_13> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_14> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_14> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_15> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_15> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_20> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_20> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_16> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_16> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_21> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_21> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_17> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_17> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_22> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_22> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_18> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_18> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_23> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_23> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_19> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_19> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_24> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_24> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_25> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_25> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_30> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_30> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_26> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_26> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_31> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_31> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_27> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_27> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_28> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_28> 
-INFO:Xst:2261 - The FF/Latch <ALUW_alur1_29> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_29> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_10> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_10> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_11> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_11> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_12> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_12> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_13> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_13> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_14> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_14> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_15> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_15> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_20> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_20> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_16> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_16> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_21> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_21> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_17> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_17> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_22> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_22> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_18> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_18> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_23> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_23> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_19> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_19> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_24> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_24> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_25> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_25> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_30> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_30> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_26> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_26> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_31> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_31> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_27> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_27> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_28> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_28> 
+INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_29> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_29> 
 INFO:Xst:2261 - The FF/Latch <ALUW_decodeControlSignals_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <ALUW_decodeControlSignals_4> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_decodeControlSignals_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <MEMWR_decodeControlSignals_4> 
 
@@ -1000,6 +945,38 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <currentState_4> has
 WARNING:Xst:2677 - Node <cpu0_ialu_Debug_0> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_ialu_Debug_1> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_ialu_div_exception> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_31> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_30> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_29> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_28> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_27> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_26> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_25> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_24> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_23> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_22> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_21> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_20> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_19> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_18> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_17> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_16> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_15> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_14> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_13> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_12> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_11> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_10> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_9> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_8> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_7> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_6> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_5> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_4> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_3> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_2> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_1> of sequential type is unconnected in block <LAB2>.
+WARNING:Xst:2677 - Node <cpu0_DRegOut_0> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_DCurrentIns5_31> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_DCurrentIns5_30> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_DCurrentIns5_29> of sequential type is unconnected in block <LAB2>.
@@ -1072,13 +1049,12 @@ WARNING:Xst:2677 - Node <cpu0_idecode_lregAddr_3> of sequential type is unconnec
 WARNING:Xst:2677 - Node <cpu0_idecode_lregAddr_2> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_idecode_lregAddr_1> of sequential type is unconnected in block <LAB2>.
 WARNING:Xst:2677 - Node <cpu0_idecode_lregAddr_0> of sequential type is unconnected in block <LAB2>.
-WARNING:Xst:2677 - Node <cpu0_DRegOut_0> of sequential type is unconnected in block <LAB2>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 108.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 117.
 Optimizing block <LAB2> to meet ratio 100 (+ 5) of 3584 slices :
-Area constraint is met for block <LAB2>, final ratio is 103.
+WARNING:Xst:2254 - Area constraint could not be met for block <LAB2>, final ratio is 109.
 INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
@@ -1087,6 +1063,43 @@ INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_r
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
 INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
+FlipFlop cpu0_alu_op1_0 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_1 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_10 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_11 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_12 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_13 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_14 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_15 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_16 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_17 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_18 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_19 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_2 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_20 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_21 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_22 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_23 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_24 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_25 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_26 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_27 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_28 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_29 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_3 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_30 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_4 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_5 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_6 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_7 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_8 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_9 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op2_0 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op2_1 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op2_2 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op2_3 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op2_31 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op2_4 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -1099,8 +1112,8 @@ Unit <LAB2> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1625
- Flip-Flops                                            : 1625
+# Registers                                            : 1690
+ Flip-Flops                                            : 1690
 # Shift Registers                                      : 2
  2-bit shift register                                  : 2
 
@@ -1131,32 +1144,32 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 10028
+# BELS                             : 10630
 #      GND                         : 2
 #      INV                         : 325
-#      LUT1                        : 58
-#      LUT2                        : 479
-#      LUT2_D                      : 10
+#      LUT1                        : 59
+#      LUT2                        : 540
+#      LUT2_D                      : 12
 #      LUT2_L                      : 3
-#      LUT3                        : 1994
+#      LUT3                        : 2111
 #      LUT3_D                      : 35
-#      LUT3_L                      : 6
-#      LUT4                        : 3781
-#      LUT4_D                      : 26
-#      LUT4_L                      : 87
+#      LUT3_L                      : 7
+#      LUT4                        : 4079
+#      LUT4_D                      : 28
+#      LUT4_L                      : 92
 #      MULT_AND                    : 94
-#      MUXCY                       : 1072
+#      MUXCY                       : 1073
 #      MUXCY_L                     : 77
-#      MUXF5                       : 821
+#      MUXF5                       : 935
 #      MUXF6                       : 262
 #      MUXF7                       : 130
 #      MUXF8                       : 1
 #      VCC                         : 2
 #      XORCY                       : 763
-# FlipFlops/Latches                : 2218
+# FlipFlops/Latches                : 2283
 #      FD                          : 90
 #      FDE                         : 443
-#      FDE_1                       : 1197
+#      FDE_1                       : 1262
 #      FDR                         : 168
 #      FDRE                        : 214
 #      FDRS                        : 2
@@ -1184,10 +1197,10 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     3702  out of   3584   103% (*) 
- Number of Slice Flip Flops:           2218  out of   7168    30%  
- Number of 4 input LUTs:               7138  out of   7168    99%  
-    Number used as logic:              6804
+ Number of Slices:                     3940  out of   3584   109% (*) 
+ Number of Slice Flip Flops:           2283  out of   7168    31%  
+ Number of 4 input LUTs:               7625  out of   7168   106% (*) 
+    Number used as logic:              7291
     Number used as Shift registers:      52
     Number used as RAMs:                282
  Number of IOs:                          11
@@ -1219,7 +1232,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 2432  |
+Clk                                | BUFGP                  | 2497  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1230,7 +1243,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 75.842ns (Maximum Frequency: 13.185MHz)
+   Minimum period: 70.498ns (Maximum Frequency: 14.185MHz)
    Minimum input arrival time before clock: 1.548ns
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: 5.816ns
@@ -1241,20 +1254,20 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 75.842ns (frequency: 13.185MHz)
-  Total number of paths / destination ports: 6624907097845 / 6818
+  Clock period: 70.498ns (frequency: 14.185MHz)
+  Total number of paths / destination ports: 5555029948692 / 6948
 -------------------------------------------------------------------------
-Delay:               37.921ns (Levels of Logic = 202)
-  Source:            cpu0_alu_op1_0 (FF)
+Delay:               35.249ns (Levels of Logic = 189)
+  Source:            cpu0_alu_op1_0_1 (FF)
   Destination:       cpu0_ialu_div_quotient_31 (FF)
   Source Clock:      Clk falling
   Destination Clock: Clk rising
 
-  Data Path: cpu0_alu_op1_0 to cpu0_ialu_div_quotient_31
+  Data Path: cpu0_alu_op1_0_1 to cpu0_ialu_div_quotient_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE_1:C->Q           75   0.591   1.419  cpu0_alu_op1_0 (cpu0_alu_op1_0)
+     FDE_1:C->Q            5   0.591   0.776  cpu0_alu_op1_0_1 (cpu0_alu_op1_0_1)
      LUT1:I0->O            1   0.648   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>_rt (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>_rt)
      MUXCY:S->O            1   0.632   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<0>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1> (cpu0_ialu_div_Madd_cOperand1_addsub0000_cy<1>)
@@ -1325,10 +1338,10 @@ Delay:               37.921ns (Levels of Logic = 202)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<28> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<29> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<30> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<30>)
-     MUXCY:CI->O          61   0.269   1.274  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0003)
-     LUT4:I3->O            5   0.648   0.713  cpu0_ialu_div_tremainder_1_mux00001 (cpu0_ialu_div_tremainder_1_mux0000)
-     LUT2:I1->O            1   0.643   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_lut<2> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_lut<2>)
-     MUXCY:S->O            1   0.632   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<2> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<2>)
+     MUXCY:CI->O         105   0.269   1.317  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0003_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0003)
+     LUT3:I2->O            3   0.648   0.531  cpu0_ialu_div_tremainder_0_mux00001 (cpu0_ialu_div_tremainder_0_mux0000)
+     MUXCY:DI->O           1   0.787   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<1> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<2> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<3> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<4> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<4>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<5> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<5>)
@@ -1357,7 +1370,7 @@ Delay:               37.921ns (Levels of Logic = 202)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<28> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<29> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<30> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<30>)
-     MUXCY:CI->O         127   0.269   1.324  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0002)
+     MUXCY:CI->O         135   0.269   1.327  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0002_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0002)
      LUT3:I2->O            3   0.648   0.531  cpu0_ialu_div_tremainder_0_mux00011 (cpu0_ialu_div_tremainder_0_mux0001)
      MUXCY:DI->O           1   0.787   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<1> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<2> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<2>)
@@ -1389,7 +1402,7 @@ Delay:               37.921ns (Levels of Logic = 202)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<28> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<29> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<30> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<30>)
-     MUXCY:CI->O         128   0.269   1.325  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0001)
+     MUXCY:CI->O         155   0.269   1.333  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0001_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0001)
      LUT3:I2->O            2   0.648   0.447  cpu0_ialu_div_tremainder_0_mux00021 (cpu0_ialu_div_tremainder_0_mux0002)
      MUXCY:DI->O           1   0.787   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<1> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<2> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<2>)
@@ -1421,23 +1434,10 @@ Delay:               37.921ns (Levels of Logic = 202)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<28> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<28>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<29> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<29>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<30> (cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<30>)
-     MUXCY:CI->O          98   0.269   1.286  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0000)
-     LUT4_D:I3->O         63   0.648   1.275  cpu0_ialu_div_tquotient_0_mux00001 (cpu0_ialu_div_N01)
-     LUT4:I3->O            1   0.648   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_lut<0> (cpu0_ialu_div_Madd_quotient_addsub0000_lut<0>)
-     MUXCY:S->O            1   0.632   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<0> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<1> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<2> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<3> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<4> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<5> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<6> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<6>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<7> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<7>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<8> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<8>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<9> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<9>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<10> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<10>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<11> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<11>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<12> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<12>)
-     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<13> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<13>)
+     MUXCY:CI->O         117   0.269   1.292  cpu0_ialu_div_Mcompar_tquotient_13_cmp_ge0000_cy<31> (cpu0_ialu_div_tquotient_13_cmp_ge0000)
+     LUT4:I3->O            5   0.648   0.636  cpu0_ialu_div_tquotient_0_mux00001_1 (cpu0_ialu_div_tquotient_0_mux00001)
+     LUT4:I3->O            1   0.648   0.000  cpu0_ialu_div_Madd_quotient_not0000<13>11 (cpu0_ialu_div_Madd_quotient_not0000<13>1)
+     MUXCY:S->O            1   0.632   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<13> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<13>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<14> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<14>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<15> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<15>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_div_Madd_quotient_addsub0000_cy<16> (cpu0_ialu_div_Madd_quotient_addsub0000_cy<16>)
@@ -1459,8 +1459,8 @@ Delay:               37.921ns (Levels of Logic = 202)
      LUT4:I3->O            1   0.648   0.000  cpu0_ialu_div_Mmux_quotient_mux000150 (cpu0_ialu_div_quotient_mux0001<31>)
      FDE:D                     0.252          cpu0_ialu_div_quotient_31
     ----------------------------------------
-    Total                     37.921ns (26.768ns logic, 11.153ns route)
-                                       (70.6% logic, 29.4% route)
+    Total                     35.249ns (25.500ns logic, 9.749ns route)
+                                       (72.3% logic, 27.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
@@ -1523,14 +1523,14 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 221.00 secs
-Total CPU time to Xst completion: 221.58 secs
+Total REAL time to Xst completion: 231.00 secs
+Total CPU time to Xst completion: 231.57 secs
  
 --> 
 
-Total memory usage is 403896 kilobytes
+Total memory usage is 410672 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  250 (   0 filtered)
-Number of infos    :  210 (   0 filtered)
+Number of warnings :  223 (   0 filtered)
+Number of infos    :  209 (   0 filtered)
 
