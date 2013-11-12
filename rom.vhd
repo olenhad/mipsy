@@ -53,10 +53,10 @@ end rom;
 
 architecture Behavioral of rom is
 -- TODO. RomDefault       
-signal rom0 : RomData := (x"3c",x"8c",x"3c",x"8c",x"01",x"01",x"3c",x"ac",x"3c",x"ac",x"08",others => (others => '0')); 
-signal rom1 : RomData := (x"01",x"29",x"01",x"2a",x"49",x"49",x"01",x"2c",x"01",x"2d",x"10",others => (others => '0')); 
-signal rom2 : RomData := (x"10",x"00",x"10",x"00",x"60",x"68",x"10",x"00",x"10",x"00",x"00",others => (others => '0')); 
-signal rom3 : RomData := (x"01",x"00",x"01",x"04",x"22",x"20",x"01",x"40",x"01",x"44",x"00",others => (others => '0')); 
+signal rom0 : RomData := (x"3c",x"8c",x"3c",x"8c",x"01",x"01",x"3c",x"ac",x"02",x"02",x"8c",x"21",x"3c",x"02",x"02",x"ac",x"08",others => (others => '0')); 
+signal rom1 : RomData := (x"01",x"29",x"01",x"2a",x"49",x"49",x"01",x"2c",x"51",x"51",x"2e",x"ce",x"01",x"51",x"51",x"2e",x"10",others => (others => '0')); 
+signal rom2 : RomData := (x"10",x"00",x"10",x"00",x"60",x"68",x"10",x"00",x"98",x"98",x"00",x"00",x"10",x"98",x"98",x"00",x"00",others => (others => '0')); 
+signal rom3 : RomData := (x"01",x"00",x"01",x"04",x"22",x"20",x"01",x"40",x"20",x"20",x"40",x"01",x"01",x"20",x"20",x"44",x"00",others => (others => '0')); 
 
 begin
 

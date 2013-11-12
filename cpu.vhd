@@ -127,7 +127,7 @@ signal alu_r2 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_debug : std_logic_vector(31 downto 0) := (others => '0');
 
 
-signal RAM0: RamData := (0 => x"02", 1 => x"03", 2 => x"01", 3 => x"0d",others => (others => '0'));
+signal RAM0: RamData := (0 => x"01", 1 => x"06", 2 => x"01", 3 => x"0d",others => (others => '0'));
 signal RAM1: RamData := (0 => x"00",others => (others => '0'));
 signal RAM2: RamData := (0 => x"00",others => (others => '0'));
 signal RAM3: RamData := (0 => x"00",others => (others => '0'));
@@ -364,38 +364,38 @@ begin
 				if END_decodeControlSignals(3) = '1' and
 				   END_decodeControlSignals(4) = '1' and
 					END_decodeRegWBAddr = EX_currentIns(25 downto 21) then
-						alu_op1 <= RAM3(to_integer(unsigned(END_alur1(5 downto 0)))) &
-					              RAM2(to_integer(unsigned(END_alur1(5 downto 0)))) &
-									  RAM1(to_integer(unsigned(END_alur1(5 downto 0)))) &
-									  RAM0(to_integer(unsigned(END_alur1(5 downto 0))));
+						alu_op1 <= RAM3(to_integer(unsigned(END_alur1(3 downto 0)))) &
+					              RAM2(to_integer(unsigned(END_alur1(3 downto 0)))) &
+									  RAM1(to_integer(unsigned(END_alur1(3 downto 0)))) &
+									  RAM0(to_integer(unsigned(END_alur1(3 downto 0))));
 				end if;
 				
 				if END_decodeControlSignals(3) = '1' and
 				   END_decodeControlSignals(4) = '1' and
 					END_decodeRegWBAddr = EX_currentIns(20 downto 16) then
-						alu_op2 <= RAM3(to_integer(unsigned(END_alur1(5 downto 0)))) &
-					              RAM2(to_integer(unsigned(END_alur1(5 downto 0)))) &
-									  RAM1(to_integer(unsigned(END_alur1(5 downto 0)))) &
-									  RAM0(to_integer(unsigned(END_alur1(5 downto 0))));
+						alu_op2 <= RAM3(to_integer(unsigned(END_alur1(3 downto 0)))) &
+					              RAM2(to_integer(unsigned(END_alur1(3 downto 0)))) &
+									  RAM1(to_integer(unsigned(END_alur1(3 downto 0)))) &
+									  RAM0(to_integer(unsigned(END_alur1(3 downto 0))));
 				end if;
 				
 				if WB_decodeControlSignals(3) = '1' and
 				   WB_decodeControlSignals(4) = '1' and
 					WB_decodeRegWBAddr = EX_currentIns(25 downto 21) then
-						alu_op1 <= RAM3(to_integer(unsigned(WB_alur1(5 downto 0)))) &
-					              RAM2(to_integer(unsigned(WB_alur1(5 downto 0)))) &
-									  RAM1(to_integer(unsigned(WB_alur1(5 downto 0)))) &
-									  RAM0(to_integer(unsigned(WB_alur1(5 downto 0))));
+						alu_op1 <= RAM3(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+					              RAM2(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+									  RAM1(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+									  RAM0(to_integer(unsigned(WB_alur1(3 downto 0))));
 						DRegOut <= (others => '0');
 				end if;
 				
 				if WB_decodeControlSignals(3) = '1' and
 				   WB_decodeControlSignals(4) = '1' and
 					WB_decodeRegWBAddr = EX_currentIns(20 downto 16) then
-						alu_op2 <= RAM3(to_integer(unsigned(WB_alur1(5 downto 0)))) &
-					              RAM2(to_integer(unsigned(WB_alur1(5 downto 0)))) &
-									  RAM1(to_integer(unsigned(WB_alur1(5 downto 0)))) &
-									  RAM0(to_integer(unsigned(WB_alur1(5 downto 0))));
+						alu_op2 <= RAM3(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+					              RAM2(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+									  RAM1(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+									  RAM0(to_integer(unsigned(WB_alur1(3 downto 0))));
 									  DRegOut <= (others => '1');
 				end if;
 
@@ -403,40 +403,40 @@ begin
 				if MEMWR_decodeControlSignals(3) = '1' and
 				   MEMWR_decodeControlSignals(4) = '1' and
 					MEMWR_decodeRegWBAddr = EX_currentIns(25 downto 21) then
-						alu_op1 <= RAM3(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) &
-					              RAM2(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) &
-									  RAM1(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) &
-									  RAM0(to_integer(unsigned(MEMWR_alur1(5 downto 0))));
+						alu_op1 <= RAM3(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+					              RAM2(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+									  RAM1(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+									  RAM0(to_integer(unsigned(MEMWR_alur1(3 downto 0))));
 									  --DRegOut <= (others => '0');
 				end if;
 				
 				if MEMWR_decodeControlSignals(3) = '1' and
 				   MEMWR_decodeControlSignals(4) = '1' and
 					MEMWR_decodeRegWBAddr = EX_currentIns(20 downto 16) then
-						alu_op2 <= RAM3(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) &
-					              RAM2(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) &
-									  RAM1(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) &
-									  RAM0(to_integer(unsigned(MEMWR_alur1(5 downto 0))));
+						alu_op2 <= RAM3(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+					              RAM2(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+									  RAM1(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
+									  RAM0(to_integer(unsigned(MEMWR_alur1(3 downto 0))));
 									 -- DRegOut <= (others => '0');
 				end if;
 								
 				if ALUW_decodeControlSignals(3) = '1' and
 				   ALUW_decodeControlSignals(4) = '1' and
 					ALUW_decodeRegWBAddr = EX_currentIns(25 downto 21) then
-						alu_op1 <= RAM3(to_integer(unsigned(alu_r1(5 downto 0)))) &
-					              RAM2(to_integer(unsigned(alu_r1(5 downto 0)))) &
-									  RAM1(to_integer(unsigned(alu_r1(5 downto 0)))) &
-									  RAM0(to_integer(unsigned(alu_r1(5 downto 0))));
+						alu_op1 <= RAM3(to_integer(unsigned(alu_r1(3 downto 0)))) &
+					              RAM2(to_integer(unsigned(alu_r1(3 downto 0)))) &
+									  RAM1(to_integer(unsigned(alu_r1(3 downto 0)))) &
+									  RAM0(to_integer(unsigned(alu_r1(3 downto 0))));
 									--  DRegOut <= (others => '0');
 				end if;
 				
 				if ALUW_decodeControlSignals(3) = '1' and
 				   ALUW_decodeControlSignals(4) = '1' and
 					ALUW_decodeRegWBAddr = EX_currentIns(20 downto 16) then
-						alu_op2 <= RAM3(to_integer(unsigned(alu_r1(5 downto 0)))) &
-					              RAM2(to_integer(unsigned(alu_r1(5 downto 0)))) &
-									  RAM1(to_integer(unsigned(alu_r1(5 downto 0)))) &
-									  RAM0(to_integer(unsigned(alu_r1(5 downto 0))));
+						alu_op2 <= RAM3(to_integer(unsigned(alu_r1(3 downto 0)))) &
+					              RAM2(to_integer(unsigned(alu_r1(3 downto 0)))) &
+									  RAM1(to_integer(unsigned(alu_r1(3 downto 0)))) &
+									  RAM0(to_integer(unsigned(alu_r1(3 downto 0))));
 									 -- DRegOut <= (others => '0');
 				end if;
 
@@ -523,10 +523,10 @@ begin
 					elsif MEMWR_alur1(5 downto 0) = b"010001" then
 						res2Reg := MEMWR_decodeRegOut;
 					else
-						RAM0(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) <= MEMWR_decodeRegOut(7 downto 0);
-						RAM1(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) <= MEMWR_decodeRegOut(15 downto 8);
-						RAM2(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) <= MEMWR_decodeRegOut(23 downto 16);
-						RAM3(to_integer(unsigned(MEMWR_alur1(5 downto 0)))) <= MEMWR_decodeRegOut(31 downto 24);
+						RAM0(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) <= MEMWR_decodeRegOut(7 downto 0);
+						RAM1(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) <= MEMWR_decodeRegOut(15 downto 8);
+						RAM2(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) <= MEMWR_decodeRegOut(23 downto 16);
+						RAM3(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) <= MEMWR_decodeRegOut(31 downto 24);
 	--					DMemOut <= read_ram_at(RAM, alu_r1);
 	--					DMemAddr <= alu_r1;
 					end if;
@@ -628,10 +628,10 @@ begin
 					decode_regWrite <= '1';
 					decode_WriteAddr <= WB_decodeRegWBAddr;
 					--decode_WriteData <= read_ram_at(RAM, WB_alur1);
-					decode_WriteData <= RAM3(to_integer(unsigned(WB_alur1(5 downto 0)))) &
-					                    RAM2(to_integer(unsigned(WB_alur1(5 downto 0)))) &
-											  RAM1(to_integer(unsigned(WB_alur1(5 downto 0)))) &
-											  RAM0(to_integer(unsigned(WB_alur1(5 downto 0))));
+					decode_WriteData <= RAM3(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+					                    RAM2(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+											  RAM1(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+											  RAM0(to_integer(unsigned(WB_alur1(3 downto 0))));
 --					DMemOut <= read_ram_at(RAM, WB_alur1);
 --					DMemAddr <= WB_alur1;
 --					
