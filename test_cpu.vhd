@@ -60,6 +60,7 @@ ARCHITECTURE behavior OF test_cpu IS
 			  DAlu1 : out std_logic_vector(31 downto 0);
 			  DAlu2 : out std_logic_vector(31 downto 0);
 			  DAluR1 : out std_logic_vector(31 downto 0);
+			  DAluR2 : out std_logic_vector(31 downto 0);
 			  DRegOutAddr : out std_logic_vector(4 downto 0)  			  
         );
     END COMPONENT;
@@ -84,6 +85,7 @@ ARCHITECTURE behavior OF test_cpu IS
 	signal DAlu1 : std_logic_vector(31 downto 0);
 	signal DAlu2 : std_logic_vector(31 downto 0);
 	signal DAluR1 : std_logic_vector(31 downto 0);
+	signal DAluR2 : std_logic_vector(31 downto 0);
    signal DRegOutAddr : std_logic_vector(4 downto 0);
 	signal DOutput : std_logic_vector(31 downto 0);
 		signal DOutput2 : std_logic_vector(31 downto 0);
@@ -111,6 +113,7 @@ BEGIN
 			 DAlu1 => Dalu1,
 		 DAlu2 => DAlu2,
 			 DAluR1 => DAluR1,
+			 DAluR2 => DAluR2,
 			 DRegOutAddr => DRegOutAddr,
 			 DOutput => DOutput,
 			 			 DOutput2 => DOutput2

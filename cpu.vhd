@@ -50,6 +50,7 @@ entity cpu is
 			  DAlu1 : out std_logic_vector(31 downto 0);
 			  DAlu2 : out std_logic_vector(31 downto 0);
 			  DAluR1 : out std_logic_vector(31 downto 0);
+			  DAluR2 : out std_logic_vector(31 downto 0);
 			  DRegOutAddr : out std_logic_vector(4 downto 0) 
 			  );
 end cpu;
@@ -127,7 +128,7 @@ signal alu_r2 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_debug : std_logic_vector(31 downto 0) := (others => '0');
 
 
-signal RAM0: RamData := (0 => x"04", 1 => x"06", 2 => x"01", 3 => x"0d",others => (others => '0'));
+signal RAM0: RamData := (0 => x"01", 1 => x"06", 2 => x"01", 3 => x"0d",others => (others => '0'));
 signal RAM1: RamData := (0 => x"00",others => (others => '0'));
 signal RAM2: RamData := (0 => x"00",others => (others => '0'));
 signal RAM3: RamData := (0 => x"00",others => (others => '0'));
@@ -342,9 +343,32 @@ begin
 --				end if;
 
 
-
+				-- checking for MFHI
+				if (EX_currentIns(5 downto 0) = b"010000" and EX_currentIns(31 downto 26) = b"000000") then
+					-- If ALUW Ins is of the MUL/DIV family then we can't access HI directly as it hasn't been assigned yet
+					-- therefore we use alu_r1
+					if (ALUW_currentIns(5 downto 0) = b"011000" and ALUW_currentIns(31 downto 26) = b"000000") or 
+						(ALUW_currentIns(5 downto 0) = b"011001" and ALUW_currentIns(31 downto 26) = b"000000") or 
+						(ALUW_currentIns(5 downto 0) = b"011010" and ALUW_currentIns(31 downto 26) = b"000000") or
+						(ALUW_currentIns(5 downto 0) = b"011011" and ALUW_currentIns(31 downto 26) = b"000000")	then
+							alu_op1 <= alu_r1;
+					else
+					-- Otherwise we just assign HI
+						alu_op1 <= HI;
+					end if;					
+					
+				-- checking for MMFLO	 
+				elsif (EX_currentIns(5 downto 0) = b"010010" and EX_currentIns(31 downto 26) = b"000000") then
+					if (ALUW_currentIns(5 downto 0) = b"011000" and ALUW_currentIns(31 downto 26) = b"000000") or 
+						(ALUW_currentIns(5 downto 0) = b"011001" and ALUW_currentIns(31 downto 26) = b"000000") or 
+						(ALUW_currentIns(5 downto 0) = b"011010" and ALUW_currentIns(31 downto 26) = b"000000") or
+						(ALUW_currentIns(5 downto 0) = b"011011" and ALUW_currentIns(31 downto 26) = b"000000")	then
+							alu_op1 <= alu_r2;
+					else
+						alu_op1 <= LO;
+					end if;
 				-- checking for R type
-				if EX_currentIns(31 downto 26) = b"000000" then
+				elsif EX_currentIns(31 downto 26) = b"000000" then
 				-- Both Rs, and Rt to be forwarded
 				-- Check for 'U' for unintialised valus
 				-- Priority system. Most recent change is applied
@@ -1021,6 +1045,7 @@ begin
 			
 			if currentState = AluWait then
 				DAluR1 <= alu_r1;
+				DAluR2 <= alu_r2;
 				DCurrentIns3 <= ALUW_currentIns;
 				ALUW_alur1 := alu_r1;
 				ALUW_alur2 := alu_r2;
@@ -1031,8 +1056,8 @@ begin
 					(ALUW_currentIns(5 downto 0) = b"011001" and ALUW_currentIns(31 downto 26) = b"000000") or 
 					(ALUW_currentIns(5 downto 0) = b"011010" and ALUW_currentIns(31 downto 26) = b"000000") or
 					(ALUW_currentIns(5 downto 0) = b"011011" and ALUW_currentIns(31 downto 26) = b"000000")	then
-						lo := ALUW_alur1;
-						hi := ALUW_alur2;
+						lo := ALUW_alur2;
+						hi := ALUW_alur1;
 				end if;
 				
 				if (ALUW_currentIns(20 downto 0) = b"000000000000000001000" and
