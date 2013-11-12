@@ -166,15 +166,15 @@ begin
 			Result2 <= mulResult(63 downto 32);
 		elsif Control = b"011010" then
 		-- DIV
-			Result1 <= divRemainder;
-			Result2 <= divQuotient;
+			Result1 <= divQuotient;
+			Result2 <= divRemainder;
 --			divIsSigned <= '1';
 			Debug <= ( 1 => divException, others => '0');
 		
 		elsif Control = b"011011" then
 		-- DIVU	
-			Result1 <= divRemainder;
-			Result2 <= divQuotient;
+			Result1 <= divQuotient;
+			Result2 <= divRemainder;
 --			divIsSigned <= '0';
 			Debug <= ( 1 => divException, others => '0');
 		elsif Control = b"100100" then
@@ -192,7 +192,7 @@ begin
 		elsif Control = b"101010" then
 		-- SLT
 --			isadd <= '0';
-			if signed(operand1) < signed(operand2) then
+			if signed(operand2) < signed(operand1) then
 				Result1 <= (0 => '1', others => '0');
 			else
 				Result1 <= (others => '0');

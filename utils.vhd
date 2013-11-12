@@ -24,6 +24,9 @@ package utils is
 	type CodeInstruction is array (31 downto 0) of std_logic;
 	subtype Word is std_logic_vector(31 downto 0);
 	
+	
+	constant op_SLTI : std_logic_vector(5 downto 0) :=  b"001010";
+	
 	impure function read_rom_from_file ( rom_file_name : in string) return RomData;
 --	impure function read_ram_from_file ( ram_file_name : in string) return RamData;
 	

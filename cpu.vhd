@@ -351,7 +351,7 @@ begin
 						(ALUW_currentIns(5 downto 0) = b"011001" and ALUW_currentIns(31 downto 26) = b"000000") or 
 						(ALUW_currentIns(5 downto 0) = b"011010" and ALUW_currentIns(31 downto 26) = b"000000") or
 						(ALUW_currentIns(5 downto 0) = b"011011" and ALUW_currentIns(31 downto 26) = b"000000")	then
-							alu_op1 <= alu_r1;
+							alu_op1 <= alu_r2;
 					else
 					-- Otherwise we just assign HI
 						alu_op1 <= HI;
@@ -363,12 +363,14 @@ begin
 						(ALUW_currentIns(5 downto 0) = b"011001" and ALUW_currentIns(31 downto 26) = b"000000") or 
 						(ALUW_currentIns(5 downto 0) = b"011010" and ALUW_currentIns(31 downto 26) = b"000000") or
 						(ALUW_currentIns(5 downto 0) = b"011011" and ALUW_currentIns(31 downto 26) = b"000000")	then
-							alu_op1 <= alu_r2;
+							alu_op1 <= alu_r1;
 					else
 						alu_op1 <= LO;
 					end if;
-				-- checking for R type, or ADDI
-				elsif EX_currentIns(31 downto 26) = b"000000" or EX_currentIns(31 downto 26) = b"001000" then
+				-- checking for R type, or ADDI or SLTI
+				elsif EX_currentIns(31 downto 26) = b"000000" or 
+						EX_currentIns(31 downto 26) = b"001000" or
+						EX_currentIns(31 downto 26) = op_SLTI then
 				-- Both Rs, and Rt to be forwarded
 				-- Check for 'U' for unintialised valus
 				-- Priority system. Most recent change is applied
@@ -402,7 +404,8 @@ begin
 					
 					if END_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
 						END_alur1(0) /= 'U' and
-						EX_currentIns(31 downto 26) /= b"001000"
+						EX_currentIns(31 downto 26) /= b"001000" and
+						EX_currentIns(31 downto 26) /= op_SLTI 
 						then
 							--Checking if END is R-type.
 							if END_decodeControlSignals(3) = '1' and 
@@ -453,7 +456,8 @@ begin
 					
 					if WB_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
 						WB_alur1(0) /= 'U' and
-						EX_currentIns(31 downto 26) /= b"001000" then
+						EX_currentIns(31 downto 26) /= b"001000"  and
+						EX_currentIns(31 downto 26) /= op_SLTI then
 							--Checking if END is R-type.
 							if WB_decodeControlSignals(3) = '1' and 
 								WB_decodeControlSignals(4) = '0' then
@@ -504,7 +508,8 @@ begin
 					
 					if MEMWR_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
 						MEMWR_alur1(0) /= 'U' and
-						EX_currentIns(31 downto 26) /= b"001000" then
+						EX_currentIns(31 downto 26) /= b"001000"  and
+						EX_currentIns(31 downto 26) /= op_SLTI then
 							--Checking if END is R-type.
 							if MEMWR_decodeControlSignals(3) = '1' and 
 								MEMWR_decodeControlSignals(4) = '0' then
@@ -557,7 +562,8 @@ begin
 					-- AND HERE
 					if ALUW_decodeRegWBAddr = EX_currentIns(20 downto 16) and 
 						ALUW_alur1(0) /= 'U' and
-						EX_currentIns(31 downto 26) /= b"001000" then
+						EX_currentIns(31 downto 26) /= b"001000"  and
+						EX_currentIns(31 downto 26) /= op_SLTI then
 							--Checking if END is R-type.
 							if ALUW_decodeControlSignals(3) = '1' and 
 								ALUW_decodeControlSignals(4) = '0' then
@@ -1061,8 +1067,8 @@ begin
 					(ALUW_currentIns(5 downto 0) = b"011001" and ALUW_currentIns(31 downto 26) = b"000000") or 
 					(ALUW_currentIns(5 downto 0) = b"011010" and ALUW_currentIns(31 downto 26) = b"000000") or
 					(ALUW_currentIns(5 downto 0) = b"011011" and ALUW_currentIns(31 downto 26) = b"000000")	then
-						lo := ALUW_alur2;
-						hi := ALUW_alur1;
+						lo := ALUW_alur1;
+						hi := ALUW_alur2;
 				end if;
 				
 				if (ALUW_currentIns(20 downto 0) = b"000000000000000001000" and
