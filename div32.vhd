@@ -85,18 +85,18 @@ begin
 			end if;
 			if operand2 /= x"00000000" then
 					
-					for i in 0 to 3 loop
+					--for i in 0 to 3 loop
 						tremainder := std_logic_vector( unsigned(tremainder) sll 1);
-						tremainder(0) := cOperand1(counter - i);
+						tremainder(0) := cOperand1(counter);
 						
 						if tremainder >= cOperand2 then
 							tremainder := std_logic_vector(unsigned(tremainder) - unsigned(cOperand2));
-							tquotient(counter - i) := '1';
+							tquotient(counter) := '1';
 						end if;
-					end loop;
+					--end loop;
 					
 					
-					if counter < 4 then
+					if counter < 1 then
 						-- End of loop state
 						counter := 31;
 						isDone := '1';
@@ -108,7 +108,7 @@ begin
 						remainder <= tremainder;
 						exception <= '0';
 					else 
-						counter := counter - 4;
+						counter := counter - 1;
 					end if;
 					
 			else

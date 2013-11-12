@@ -41,7 +41,7 @@ entity decode is
 			AluControl : out std_logic_vector(5 downto 0);
 			ControlSignals : out std_logic_vector(4 downto 0);
 			RegWBAddr : out std_logic_vector(4 downto 0);
-			WaitFor : out std_logic_vector (3 downto 0);
+			WaitFor : out std_logic_vector (7 downto 0);
 			registerOut : out std_logic_vector(31 downto 0);
 			lreg: out std_logic_vector(31 downto 0);
 			lregAddr : out std_logic_vector(4 downto 0)
@@ -301,11 +301,11 @@ begin
 end process;
 
 -- checks for DIV, DIVU
-waitFor <= x"8" when (CurrentInstruction(5 downto 0) = b"011010" or 
+waitFor <= x"20" when (CurrentInstruction(5 downto 0) = b"011010" or 
 							 CurrentInstruction(5 downto 0) = b"011011") else
 -- checks for LUI
 			  --x"0" when CurrentInstruction(31 downto 26) = b"001111" else
-			  x"0";
+			  x"00";
 
 end Behavioral;
 
