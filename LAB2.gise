@@ -227,6 +227,10 @@
     <transform xil_pn:end_ts="1384216650" xil_pn:in_ck="7129224599166667769" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1384216649">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="adder32.vhd"/>
       <outfile xil_pn:name="addsub32.vhd"/>
       <outfile xil_pn:name="alu.vhd"/>
@@ -366,14 +370,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1383869369" xil_pn:in_ck="1508176950863347775" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5675292700759545696" xil_pn:start_ts="1383869307">
+    <transform xil_pn:end_ts="1384219746" xil_pn:in_ck="1508176950863347775" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5675292700759545696" xil_pn:start_ts="1384219510">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="LAB2.lso"/>
       <outfile xil_pn:name="LAB2.ngc"/>
@@ -400,7 +400,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="LAB2.bld"/>
       <outfile xil_pn:name="LAB2.ngd"/>
       <outfile xil_pn:name="LAB2_ngdbuild.xrpt"/>

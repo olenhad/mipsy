@@ -5,101 +5,79 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/LAB2</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/LAB2/Structural</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot;.
+</msg>
+
 <msg type="info" file="Xst" num="2555" delta="old" >&apos;<arg fmt="%s" index="1">-hierarchy_separator</arg>&apos; switch is being deprecated in a future release.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">UART_Interrupt</arg>&apos; of component &apos;<arg fmt="%s" index="4">mcs</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">UART_Interrupt</arg>&apos; of component &apos;<arg fmt="%s" index="4">mcs</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">GPI1_Interrupt</arg>&apos; of component &apos;<arg fmt="%s" index="4">mcs</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">GPI1_Interrupt</arg>&apos; of component &apos;<arg fmt="%s" index="4">mcs</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">GPI2_Interrupt</arg>&apos; of component &apos;<arg fmt="%s" index="4">mcs</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">GPI2_Interrupt</arg>&apos; of component &apos;<arg fmt="%s" index="4">mcs</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">GPI3_Interrupt</arg>&apos; of component &apos;<arg fmt="%s" index="4">mcs</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">GPI3_Interrupt</arg>&apos; of component &apos;<arg fmt="%s" index="4">mcs</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">GPI4_Interrupt</arg>&apos; of component &apos;<arg fmt="%s" index="4">mcs</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">GPI4_Interrupt</arg>&apos; of component &apos;<arg fmt="%s" index="4">mcs</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">INTC_IRQ</arg>&apos; of component &apos;<arg fmt="%s" index="4">mcs</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">INTC_IRQ</arg>&apos; of component &apos;<arg fmt="%s" index="4">mcs</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">mcs</arg>&gt;.
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">119</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">mcs</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">DRegOut</arg>&apos; of component &apos;<arg fmt="%s" index="4">cpu</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">DRegOut</arg>&apos; of component &apos;<arg fmt="%s" index="4">cpu</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">DAlu1</arg>&apos; of component &apos;<arg fmt="%s" index="4">cpu</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">DCurrentIns2</arg>&apos; of component &apos;<arg fmt="%s" index="4">cpu</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">DAlu2</arg>&apos; of component &apos;<arg fmt="%s" index="4">cpu</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">DCurrentIns3</arg>&apos; of component &apos;<arg fmt="%s" index="4">cpu</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">DAluR1</arg>&apos; of component &apos;<arg fmt="%s" index="4">cpu</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">DCurrentIns4</arg>&apos; of component &apos;<arg fmt="%s" index="4">cpu</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">333</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">DCurrentIns5</arg>&apos; of component &apos;<arg fmt="%s" index="4">cpu</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">334</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">DAlu1</arg>&apos; of component &apos;<arg fmt="%s" index="4">cpu</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">335</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">DAlu2</arg>&apos; of component &apos;<arg fmt="%s" index="4">cpu</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">336</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/LAB2.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">DAluR1</arg>&apos; of component &apos;<arg fmt="%s" index="4">cpu</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">418</arg>: Index value(s) does not match array range, simulation mismatch.
-</msg>
-
-<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">RAM3</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-</msg>
-
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">418</arg>: Index value(s) does not match array range, simulation mismatch.
-</msg>
-
-<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">RAM2</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-</msg>
-
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">418</arg>: Index value(s) does not match array range, simulation mismatch.
-</msg>
-
-<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">RAM1</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-</msg>
-
-<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">418</arg>: Index value(s) does not match array range, simulation mismatch.
-</msg>
-
-<msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">RAM0</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-</msg>
-
-<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd</arg>&quot; line <arg fmt="%d" index="2">197</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-<arg fmt="%s" index="3">&lt;decode_registerOut&gt;</arg>
-</msg>
-
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">67</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">64</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">rom0</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">67</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">64</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">rom1</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">67</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">64</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">rom2</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">67</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/pc richard/Documents/CG3207/cg3207-project/rom.vhd</arg>&quot; line <arg fmt="%d" index="2">64</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">rom3</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
@@ -141,13 +119,16 @@
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">decode_lreg</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">currentIns&lt;25:21&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">alu_debug</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">aluwaitwb</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">currentState</arg>&gt;.
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">WB_decodeRegOut</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">END_decodeControlSignals&lt;2:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">END_alur1&lt;31:4&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">paddedRegAddr</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -159,100 +140,292 @@
 <msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_10&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_11&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_12&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_13&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_4&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_14&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_5&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_15&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_6&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_20&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_7&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_16&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_8&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_21&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_9&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_17&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_10&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_22&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_11&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_18&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_12&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_23&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_13&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_19&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_14&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_24&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_15&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_25&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_20&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_30&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_16&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_26&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_17&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_31&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_18&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_27&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_19&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_28&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_30&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_29&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_26&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_0&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_31&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_27&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_28&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_29&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_4&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentIns_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_5&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentIns_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_6&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentIns_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_7&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentIns_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_8&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentIns_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_9&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ALUW_currentIns_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ALUW_currentIns_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ALUW_currentIns_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ALUW_currentIns_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ALUW_currentIns_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_decodeControlSignals_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_decodeControlSignals_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_decodeControlSignals_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MEMWR_currentIns_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MEMWR_currentIns_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MEMWR_currentIns_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MEMWR_currentIns_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">MEMWR_currentIns_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_decodeControlSignals_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_decodeControlSignals_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_decodeControlSignals_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_currentIns_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu0</arg>&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">idecode_Mram_registerFile_ren</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
@@ -265,19 +438,106 @@
 <msg type="info" file="Xst" num="3225" delta="old" >The RAM &lt;<arg fmt="%s" index="1">irom_Mrom_rom0_rom0000</arg>&gt; will be implemented as BLOCK RAM
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentIns_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_decodeControlSignals_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentIns_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_decodeControlSignals_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentIns_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">WB_decodeControlSignals_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentIns_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">currentIns_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_alur1_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_decodeControlSignals_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_decodeControlSignals_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">END_decodeControlSignals_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cpu</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Debug_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">alu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -370,94 +630,514 @@
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">Debug_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">alu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_11&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_12&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_13&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_14&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_20&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_16&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_21&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_17&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_22&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_18&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_23&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_19&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_24&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_25&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_30&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_26&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_27&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_28&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_29&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">EX_currentIns_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_11&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_12&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_13&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_14&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_20&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_16&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_21&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_17&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_22&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_18&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_23&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_19&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_24&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_25&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_30&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">idecode_ControlSignals_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;idecode_ControlSignals_4&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_0&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_26&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_31&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_2&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_27&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_28&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_4&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">WB_currentIns_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns4_29&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_5&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_10&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_6&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_11&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_7&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_12&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_8&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_13&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_9&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_14&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_10&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_20&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_11&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_15&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_12&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_21&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_13&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_16&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_14&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_22&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_15&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_17&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_20&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_23&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_16&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_18&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_17&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_24&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_18&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_19&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_19&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_10&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_30&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_30&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_26&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_25&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_31&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_11&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_27&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_26&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_28&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_31&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">currentIns_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns_29&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_12&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_27&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_13&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_28&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_14&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_29&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_20&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_16&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_21&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_17&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_22&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_18&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_23&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_19&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_24&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_25&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_30&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_26&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_27&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_28&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_29&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_currentIns_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns2_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">DRegOut_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DRegOut_1&gt; &lt;DRegOut_2&gt; &lt;DRegOut_3&gt; &lt;DRegOut_4&gt; &lt;DRegOut_5&gt; &lt;DRegOut_6&gt; &lt;DRegOut_7&gt; &lt;DRegOut_8&gt; &lt;DRegOut_9&gt; &lt;DRegOut_10&gt; &lt;DRegOut_11&gt; &lt;DRegOut_12&gt; &lt;DRegOut_13&gt; &lt;DRegOut_14&gt; &lt;DRegOut_15&gt; &lt;DRegOut_16&gt; &lt;DRegOut_17&gt; &lt;DRegOut_18&gt; &lt;DRegOut_19&gt; &lt;DRegOut_20&gt; &lt;DRegOut_21&gt; &lt;DRegOut_22&gt; &lt;DRegOut_23&gt; &lt;DRegOut_24&gt; &lt;DRegOut_25&gt; &lt;DRegOut_26&gt; &lt;DRegOut_27&gt; &lt;DRegOut_28&gt; &lt;DRegOut_29&gt; &lt;DRegOut_30&gt; &lt;DRegOut_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_currentIns_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DCurrentIns3_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_11&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_12&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_13&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_14&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_20&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_16&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_21&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_17&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_22&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_18&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_23&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_19&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_24&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_25&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_30&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_26&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_27&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_28&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_alur1_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DAluR1_29&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ALUW_decodeControlSignals_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ALUW_decodeControlSignals_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">MEMWR_decodeControlSignals_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cpu</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;MEMWR_decodeControlSignals_4&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">counter_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">div32</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">counter_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">div32</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">currentState_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">currentState_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">currentState_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">currentState_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cpu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cpu0_ialu_Debug_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
@@ -467,6 +1147,177 @@
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cpu0_ialu_div_exception</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DCurrentIns5_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_WB_currentIns_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_MEMWR_currentIns_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_MEMWR_currentIns_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_MEMWR_currentIns_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_MEMWR_currentIns_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_MEMWR_currentIns_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cpu0_vlregAddr_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
@@ -484,6 +1335,21 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cpu0_vlregAddr_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
 </msg>
 
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_ALUW_currentIns_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_ALUW_currentIns_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_ALUW_currentIns_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_ALUW_currentIns_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_ALUW_currentIns_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cpu0_idecode_lregAddr_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
 </msg>
 
@@ -499,6 +1365,9 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cpu0_idecode_lregAddr_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
 </msg>
 
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cpu0_DRegOut_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LAB2</arg>&gt;.
+</msg>
+
 <msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/dlmb/POR_FF_I</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mcs0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;U0/ilmb/POR_FF_I&gt; </arg>
 </msg>
 
@@ -509,6 +1378,9 @@
 </msg>
 
 <msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/dlmb/POR_FF_I</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mcs0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;U0/ilmb/POR_FF_I&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1336" delta="new" > (*) More than 100% of Device resources are used
 </msg>
 
 </messages>
