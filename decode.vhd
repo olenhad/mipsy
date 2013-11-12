@@ -158,13 +158,13 @@ begin
 			elsif opcode = b"001000" then
 			--	ADDI
 				if currentInstruction(15) = '1' then
-					AluOP2 <= x"ffff" & CurrentInstruction(15 downto 0);
+					AluOP1 <= x"ffff" & CurrentInstruction(15 downto 0);
 				else
-					AluOP2 <= x"0000" & CurrentInstruction(15 downto 0);
+					AluOP1 <= x"0000" & CurrentInstruction(15 downto 0);
 				end if;
 				
 			-- currentInstruction (25 downto 21) denotes rs, which contains base address
-				AluOP1 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
+				AluOP2 <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
 			-- Alu Control set to Add.
 				AluControl <=  b"100000";
 				RegWBAddr <= CurrentInstruction(20 downto 16);

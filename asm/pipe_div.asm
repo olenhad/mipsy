@@ -9,7 +9,8 @@ main:
 lw $t1, in1
 lw $t2, in2
 
-div $t2,$t1
+addi $t3,$t1,10  
+mult $t2,$t3
 mfhi $t5
 mflo $t4
 
