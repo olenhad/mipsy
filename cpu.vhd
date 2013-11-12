@@ -285,7 +285,8 @@ begin
 				if FD_currentIns(31 downto 26) = b"000010" then
 					--pc := b"0000" & CurrentIns(25 downto 0) & b"00";
 					pc := b"000000" & FD_currentIns(25 downto 0);
-					currentState := FetchDecode;	
+					currentState := Execute;
+					decode_currentInstruction <= FD_currentIns;						
 				elsif FD_currentIns(31 downto 26) = b"000011" then
 				-- check for JAL
 					decode_WriteAddr <= b"11111";

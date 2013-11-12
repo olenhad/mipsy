@@ -19,5 +19,11 @@ sw $t4, 64($1)
 lui $1, 0x1001
 sw $t5, 68($1)
 
+#add $s3,$s2,$s1
+#add $s3,$s2,$s1
+#add $s3,$s2,$s1
+#add $s3,$s2,$s1
+#add $s3,$s2,$s1
+
 j main
 
