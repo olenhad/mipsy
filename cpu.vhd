@@ -127,7 +127,7 @@ signal alu_r2 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_debug : std_logic_vector(31 downto 0) := (others => '0');
 
 
-signal RAM0: RamData := (0 => x"01", 1 => x"06", 2 => x"01", 3 => x"0d",others => (others => '0'));
+signal RAM0: RamData := (0 => x"04", 1 => x"06", 2 => x"01", 3 => x"0d",others => (others => '0'));
 signal RAM1: RamData := (0 => x"00",others => (others => '0'));
 signal RAM2: RamData := (0 => x"00",others => (others => '0'));
 signal RAM3: RamData := (0 => x"00",others => (others => '0'));
@@ -274,6 +274,7 @@ begin
 		
 		if waitCounter = 0 then
 			
+			alu_control <= decode_AluControl;
 			
 			if currentState = FetchDecode then
 				
@@ -339,6 +340,8 @@ begin
 --				else 
 --				DRegOut <= (others => '0');
 --				end if;
+
+
 
 				-- checking for R type
 				if EX_currentIns(31 downto 26) = b"000000" then
@@ -865,9 +868,11 @@ begin
 							end if;
 						--	DRegOut <= (others => '0');
 					end if;
+				
+				
 				end if;
 
-
+			
 
 				
 
@@ -1019,6 +1024,16 @@ begin
 				DCurrentIns3 <= ALUW_currentIns;
 				ALUW_alur1 := alu_r1;
 				ALUW_alur2 := alu_r2;
+				Dregout <= alu_r2;
+				
+				-- IF ALUW_Currennt Ins is of mul/div family
+				if (ALUW_currentIns(5 downto 0) = b"011000" and ALUW_currentIns(31 downto 26) = b"000000") or 
+					(ALUW_currentIns(5 downto 0) = b"011001" and ALUW_currentIns(31 downto 26) = b"000000") or 
+					(ALUW_currentIns(5 downto 0) = b"011010" and ALUW_currentIns(31 downto 26) = b"000000") or
+					(ALUW_currentIns(5 downto 0) = b"011011" and ALUW_currentIns(31 downto 26) = b"000000")	then
+						lo := ALUW_alur1;
+						hi := ALUW_alur2;
+				end if;
 				
 				if (ALUW_currentIns(20 downto 0) = b"000000000000000001000" and
 					 ALUW_CurrentIns(31 downto 26) = b"000000") then
@@ -1158,13 +1173,9 @@ begin
 					sig_MemToReg = '0' then
 					
 					-- if instruction is mul/div family then place result in hi/lo
-					if (WB_currentIns(5 downto 0) = b"011000" and WB_currentIns(31 downto 26) = b"000000") or 
-						(WB_currentIns(5 downto 0) = b"011001" and WB_currentIns(31 downto 26) = b"000000") or 
-						(WB_currentIns(5 downto 0) = b"011010" and WB_currentIns(31 downto 26) = b"000000") or
-						(WB_currentIns(5 downto 0) = b"011011" and WB_currentIns(31 downto 26) = b"000000")	then
-						lo := WB_alur1;
-						hi := WB_alur2;
-					else
+
+						--Dregout <= WB_alur1;
+					
 						decode_regWrite <= '1';
 						-- write to rd
 						-- also goes here with LUI
@@ -1180,7 +1191,7 @@ begin
 							-- otherwise send WB_alur1
 							decode_WriteData <= WB_alur1;
 						end if;
-					end if;
+					
 					
 				
 				elsif sig_RegWrite = '1' and
@@ -1219,7 +1230,7 @@ begin
 	end if;
 
 rom_ADDR <= pc;
-DRegOutAddr <= vlregAddr;
+--DRegOutAddr <= vlregAddr;
 --DRegOut <= decode_registerOut;-- vlreg;
 --DMeMOut <= pc;
 
@@ -1240,8 +1251,8 @@ DAlu1 <= alu_op1;
 DAlu2 <= alu_op2;
 --DAlu1 <= Decode_ALUOP1;
 --DAlu2 <= Decode_ALUOP2;
-alu_control <= decode_AluControl;
 
+DRegOutAddr <= alu_control(4 downto 0);
 
 
 --DMemOut <= ram_DO;

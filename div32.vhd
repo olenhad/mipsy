@@ -60,9 +60,12 @@ begin
 			tquotient := ( others =>'0');
 			isDone := '0';
 			cIsSigned := isSigned;
+			counter := 31;
+			
 		end if;
 		
 		if isDone = '0' then
+			
 			if isSigned = '0' then
 				cOperand1 := operand1 ;
 				cOperand2 := operand2;

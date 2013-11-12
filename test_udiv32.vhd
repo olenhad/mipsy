@@ -99,9 +99,18 @@ BEGIN
 
       -- insert stimulus here
 		isSigned <= '1';
-		operand1 <= x"0000000A";
-		operand2 <= x"fffffffd";
-		wait for clk_period*9;
+		operand1 <= x"00000003";
+		operand2 <= x"00000002";
+		wait for clk_period;
+		operand1 <= x"00000005";
+		operand2 <= x"00000002";
+		wait for clk_period;
+		operand1 <= x"00000007";
+		operand2 <= x"00000002";
+		wait for clk_period;
+		operand1 <= x"00000006";
+		operand2 <= x"00000001";
+		wait for clk_period*8;
 		operand1 <= x"00000013";
 		operand2 <= x"00000018";
 		wait for clk_period*9;

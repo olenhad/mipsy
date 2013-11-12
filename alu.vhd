@@ -108,8 +108,8 @@ mult: mul32 port map ( operand1 => operand1,
 							  result1 => mulResult(31 downto 0),
 							  result2 => mulResult(63 downto 32));
 
-div: div32 port map ( operand1 => operand1,
-							  operand2 => operand2,
+div: div32 port map ( operand1 => operand2,
+							  operand2 => operand1,
 							  clk => clk,
 							  isSigned => divIsSigned,
 							  remainder => divRemainder,
