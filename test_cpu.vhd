@@ -137,7 +137,7 @@ BEGIN
 		
       wait for CLK_period*10;
 
-		cpu_op1 <= x"00000007";
+		cpu_op1 <= x"00000008";
 		wait for CLK_period*10;
 		
 		cpu_op2 <= x"00000007";

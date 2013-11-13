@@ -854,21 +854,21 @@ begin
 					elsif MEMWR_currentIns(31 downto 26) = b"000001" then
 						if MEMWR_alur1 = X"00000000" then
 								tconcat := x"0000" & MEMWR_currentIns(15 downto 0);
-								if MEMWR_currentIns(20 downto 16) = b"10001" then
-								-- BGEZAL
-								-- TODO  Write issue. May lead to HAZARD!!! 
-								--	Possible fix by waiting?							
-									decode_WriteAddr <= b"11111";
-									decode_WriteData <= pc;
-									decode_RegWrite <= '1';
-								
-								end if;
+--								if MEMWR_currentIns(20 downto 16) = b"10001" then
+--								-- BGEZAL
+--								-- TODO  Write issue. May lead to HAZARD!!! 
+--								--	Possible fix by waiting?							
+--									decode_WriteAddr <= b"11111";
+--									decode_WriteData <= std_logic_vector( signed(pc)- 3);
+--									decode_RegWrite <= '1';
+--								
+--								end if;
 				-- add offset to pc				
 								pc := std_logic_vector( signed(pc) + signed( tconcat)  - 3);
 						end if;
 					end if;
 					
-					currentState := FetchDecode;
+					currentState := WriteBack;
 					
 				end if;	
 				
@@ -934,6 +934,19 @@ begin
 --					
 				end if;
 				
+				if WB_currentIns(20 downto 16) = b"10001" and 
+				   WB_currentIns(31 downto 26) = b"000001" and
+					WB_alur1(0) = '0'					then
+								-- BGEZAL
+								-- TODO  Write issue. May lead to HAZARD!!! 
+								--	Possible fix by waiting?
+									tconcat := x"0000" & WB_currentIns(15 downto 0);								
+									decode_WriteAddr <= b"11111";
+									decode_WriteData <= std_logic_vector( (signed(pc) - signed(tconcat) - 1) sll 2);
+									decode_RegWrite <= '1';
+								
+				end if;
+
 				END_currentIns <= WB_currentIns;
 				END_decodeRegOut <= WB_decodeRegOut;
 				END_decodeControlSignals <=  WB_decodeControlSignals;

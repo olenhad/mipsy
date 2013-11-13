@@ -34,11 +34,11 @@ Architecture behavioral of Entity alu is up to date.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> 
 
-Total memory usage is 199408 kilobytes
+Total memory usage is 199792 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
