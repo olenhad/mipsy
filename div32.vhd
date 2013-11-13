@@ -34,6 +34,7 @@ entity div32 is
            operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
 			  clk : in std_logic;
            isSigned : in std_logic;
+           reset : in std_logic;
 			  remainder : out  STD_LOGIC_VECTOR(31 downto 0);
 			  quotient : out STD_LOGIC_VECTOR(31 downto 0);
 			  exception : out std_logic
@@ -46,26 +47,24 @@ begin
 
 
 process (clk)
-variable isDone : std_logic := '0';
+variable isDone : std_logic := '1';
 variable tquotient : std_logic_vector(31 downto 0) := (others => '0');
 variable tremainder : std_logic_vector(31 downto 0) := (others => '0');
 variable cOperand1 : std_logic_vector(31 downto 0):= (others => '0');
 variable cOperand2 : std_logic_vector(31 downto 0) := (others => '0');
 variable cIsSigned :std_logic;
+variable wasReset : std_logic := '0';
 variable counter : integer := 31;
 begin
 	if rising_edge(clk) then
-		if cOperand1 /= operand1 or cOperand2 /= operand2  or cIsSigned /= isSigned then
+		--if cOperand1 /= operand1 or cOperand2 /= operand2  or cIsSigned /= isSigned then
+		if reset = '1' and wasReset = '0' then
 			tremainder := ( others =>'0');
 			tquotient := ( others =>'0');
 			isDone := '0';
 			cIsSigned := isSigned;
 			counter := 31;
-			
-		end if;
-		
-		if isDone = '0' then
-			
+
 			if isSigned = '0' then
 				cOperand1 := operand1 ;
 				cOperand2 := operand2;
@@ -83,7 +82,12 @@ begin
 					cOperand2 := std_logic_vector(unsigned(not(operand2))+1);
 				end if;
 			end if;
-			if operand2 /= x"00000000" then
+		end if;
+		wasReset := reset;
+		if isDone = '0' then
+			
+			
+			if cOperand2 /= x"00000000" then
 					
 					--for i in 0 to 3 loop
 						tremainder := std_logic_vector( unsigned(tremainder) sll 1);
@@ -100,7 +104,7 @@ begin
 						-- End of loop state
 						counter := 31;
 						isDone := '1';
-						if isSigned='1' and (operand1(31) xor operand2(31)) = '1' then 
+						if isSigned='1' and (cOperand1(31) xor cOperand2(31)) = '1' then 
 							quotient <= std_logic_vector(unsigned(not(tquotient))+1);
 						else
 							quotient <= tquotient;

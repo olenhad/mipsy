@@ -64,11 +64,13 @@ end component;
 component div32 is
     Port ( operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
            operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
-			  clk: in STD_LOGIC;
-			  isSigned: in STD_LOGIC;
-           remainder : out  STD_LOGIC_VECTOR(31 downto 0);
+			  clk : in std_logic;
+           isSigned : in std_logic;
+           reset : in std_logic;
+			  remainder : out  STD_LOGIC_VECTOR(31 downto 0);
 			  quotient : out STD_LOGIC_VECTOR(31 downto 0);
-			  exception : out std_logic);
+			  exception : out std_logic
+			  );
 end component;
 
 
@@ -83,7 +85,7 @@ signal divIsSigned : std_logic;
 signal divRemainder : std_logic_vector(31 downto 0);
 signal divQuotient : std_logic_vector(31 downto 0);
 signal divException : std_logic;
-
+signal divReset : std_logic;
 
 signal isAdd: std_logic;
 signal isOverflowAdd : std_logic;
@@ -114,7 +116,8 @@ div: div32 port map ( operand1 => operand2,
 							  isSigned => divIsSigned,
 							  remainder => divRemainder,
 							  quotient => divQuotient,
-							  exception => divException);
+							  exception => divException,
+							  reset => divReset);
 
 isadd <= '1' when (control = b"100000" or control = b"100001") else
 			'0';
@@ -127,7 +130,7 @@ process (Clk)
 	variable r2Reg : std_logic_vector(31 downto 0);
 begin  
    if (Clk'event and Clk = '1') then
-		
+		divReset <= '0';
 		if Control = b"111111" then
 			-- NOP/echo
 	--		r1Reg := operand1;
@@ -166,13 +169,15 @@ begin
 			Result2 <= mulResult(63 downto 32);
 		elsif Control = b"011010" then
 		-- DIV
+			divReset <= '1';
 			Result1 <= divQuotient;
 			Result2 <= divRemainder;
 --			divIsSigned <= '1';
 			Debug <= ( 1 => divException, others => '0');
 		
 		elsif Control = b"011011" then
-		-- DIVU	
+		-- DIVU
+			divReset <= '1';		
 			Result1 <= divQuotient;
 			Result2 <= divRemainder;
 --			divIsSigned <= '0';

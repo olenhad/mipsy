@@ -41,13 +41,14 @@ ARCHITECTURE behavior OF test_div32 IS
  
     COMPONENT div32
     PORT(
-         operand1 : IN  std_logic_vector(31 downto 0);
-         operand2 : IN  std_logic_vector(31 downto 0);
-			clk : in std_logic;
-			isSigned : in std_logic;
-         remainder : OUT  std_logic_vector(31 downto 0);
-         quotient : OUT  std_logic_vector(31 downto 0);
-         exception : OUT  std_logic
+         operand1 : in  STD_LOGIC_VECTOR(31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR(31 downto 0);
+			  clk : in std_logic;
+           isSigned : in std_logic;
+           reset : in std_logic;
+			  remainder : out  STD_LOGIC_VECTOR(31 downto 0);
+			  quotient : out STD_LOGIC_VECTOR(31 downto 0);
+			  exception : out std_logic
         );
     END COMPONENT;
     
@@ -56,6 +57,7 @@ ARCHITECTURE behavior OF test_div32 IS
    signal operand1 : std_logic_vector(31 downto 0) := (others => '0');
    signal operand2 : std_logic_vector(31 downto 0) := (others => '0');
  	signal isSigned : std_logic;
+	signal reset : std_logic;
 	signal clk : std_logic;
 	--Outputs
    signal remainder : std_logic_vector(31 downto 0);
@@ -76,7 +78,8 @@ BEGIN
 			 isSigned => isSigned,
           remainder => remainder,
           quotient => quotient,
-          exception => exception
+          exception => exception,
+			 reset => reset
         );
 
     --Clock process definitions
@@ -101,15 +104,28 @@ BEGIN
 		isSigned <= '1';
 		operand1 <= x"00000003";
 		operand2 <= x"00000002";
+		reset <= '1';
 		wait for clk_period;
+		reset <= '0';
+		wait for CLK_period*32;
 		operand1 <= x"00000005";
 		operand2 <= x"00000002";
+		reset <= '1';
+		wait for clk_period;
+		reset <= '0';
 		wait for clk_period*32;
 		operand1 <= x"00000007";
 		operand2 <= x"00000002";
+		reset <= '1';
+		wait for clk_period;
+		reset <= '0';
+		
 		wait for clk_period;
 		operand1 <= x"00000006";
 		operand2 <= x"00000001";
+		reset <= '1';
+		wait for clk_period;
+		reset <= '0';
 		wait for clk_period*32;
 		operand1 <= x"00000013";
 		operand2 <= x"00000018";
