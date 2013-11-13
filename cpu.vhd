@@ -43,10 +43,10 @@ entity cpu is
 --			  DMemOut : out std_logic_vector(31 downto 0);
 --			  DCPUState : out std_logic_vector(31 downto 0);
 			  DCurrentIns : out std_logic_vector(31 downto 0);
-			  DCurrentIns2 : out std_logic_vector(31 downto 0);
-			  DCurrentIns3 : out std_logic_vector(31 downto 0);
-			  DCurrentIns4 : out std_logic_vector(31 downto 0);
-			  DCurrentIns5 : out std_logic_vector(31 downto 0);
+			  --DCurrentIns2 : out std_logic_vector(31 downto 0);
+			  --DCurrentIns3 : out std_logic_vector(31 downto 0);
+			  --DCurrentIns4 : out std_logic_vector(31 downto 0);
+			  --DCurrentIns5 : out std_logic_vector(31 downto 0);
 			  DAlu1 : out std_logic_vector(31 downto 0);
 			  DAlu2 : out std_logic_vector(31 downto 0);
 			  DAluR1 : out std_logic_vector(31 downto 0);
@@ -258,21 +258,21 @@ begin
 		vlreg := decode_lreg;
 		vlregAddr := decode_lregAddr;
 		
-		if(prev_op1 /= cpu_op1) then
-			prev_op1 := cpu_op1;
-			RAM0(0) <= prev_op1(7 downto 0);
-			RAM1(0) <= prev_op1(15 downto 8);
-			RAM2(0) <= prev_op1(23 downto 16);
-			RAM3(0) <= prev_op1(31 downto 24);
-		--end if;
-		else
-		--if(prev_op2 /= cpu_op2) then
-			prev_op2 := cpu_op2;
-			RAM0(1) <= prev_op2(7 downto 0);
-			RAM1(1) <= prev_op2(15 downto 8);
-			RAM2(1) <= prev_op2(23 downto 16);
-			RAM3(1) <= prev_op2(31 downto 24);
-		end if;
+		-- if(prev_op1 /= cpu_op1) then
+		-- 	prev_op1 := cpu_op1;
+		-- 	RAM0(0) <= prev_op1(7 downto 0);
+		-- 	RAM1(0) <= prev_op1(15 downto 8);
+		-- 	RAM2(0) <= prev_op1(23 downto 16);
+		-- 	RAM3(0) <= prev_op1(31 downto 24);
+		-- --end if;
+		-- else
+		-- --if(prev_op2 /= cpu_op2) then
+		-- 	prev_op2 := cpu_op2;
+		-- 	RAM0(1) <= prev_op2(7 downto 0);
+		-- 	RAM1(1) <= prev_op2(15 downto 8);
+		-- 	RAM2(1) <= prev_op2(23 downto 16);
+		-- 	RAM3(1) <= prev_op2(31 downto 24);
+		-- end if;
 		
 		if waitCounter = b"000000" then
 			
@@ -282,7 +282,7 @@ begin
 				
 				
 				FD_currentIns := rom_DATA;
-				DCurrentIns <= FD_currentIns;
+				--DCurrentIns <= FD_currentIns;
 	--			DCPUState <= (others => '0');
 
 --				 Check if instruction is a jump
@@ -313,7 +313,7 @@ begin
 			
 			if currentState = Execute then
 				
-				DCurrentIns2 <= EX_currentIns;
+				--DCurrentIns2 <= EX_currentIns;
 				--Assignment of propagated values
 				EX_decodeControlSignals := decode_controlSignals;
 				EX_decodeRegWBAddr := decode_RegWBAddr;
@@ -690,7 +690,7 @@ begin
 			if currentState = AluWait then
 				DAluR1 <= alu_r1;
 				DAluR2 <= alu_r2;
-				DCurrentIns3 <= ALUW_currentIns;
+				--DCurrentIns3 <= ALUW_currentIns;
 				ALUW_alur1 := alu_r1;
 				ALUW_alur2 := alu_r2;
 				Dregout <= alu_r2;
@@ -735,7 +735,7 @@ begin
 			if currentState = MemWR then
 	--			DCPUState <= (1 => '1', others => '0');
 				--Assignment of propagated values
-				DCurrentIns4 <= MEMWR_currentIns;
+				--DCurrentIns4 <= MEMWR_currentIns;
 				
 				sig_Branch := MEMWR_decodeControlSignals(0);
 				sig_MemRead := MEMWR_decodeControlSignals(1);
@@ -829,7 +829,7 @@ begin
 --					DCPUState <= (2 => '1', others => '0');
 					--ram_WE <= '0';
 				-- R Type
-				DCurrentIns5 <= WB_currentIns;
+				--DCurrentIns5 <= WB_currentIns;
 				--Assignment of propagated values
 				sig_Branch := WB_decodeControlSignals(0);
 				sig_MemRead := WB_decodeControlSignals(1);
