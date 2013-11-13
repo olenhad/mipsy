@@ -431,3 +431,5 @@ xst -intstyle ise -ifn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-pr
 xst -intstyle ise -ifn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.xst" -ofn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.syr" 
 xst -intstyle ise -ifn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.xst" -ofn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.syr" 
 xst -intstyle ise -ifn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.xst" -ofn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.syr" 
+xst -intstyle ise -ifn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.xst" -ofn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.syr" 
+xst -intstyle ise -ifn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.xst" -ofn "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.syr" 

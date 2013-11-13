@@ -264,9 +264,9 @@ begin
 			RAM1(0) <= prev_op1(15 downto 8);
 			RAM2(0) <= prev_op1(23 downto 16);
 			RAM3(0) <= prev_op1(31 downto 24);
-		end if;
-		
-		if(prev_op2 /= cpu_op2) then
+		--end if;
+		else
+		--if(prev_op2 /= cpu_op2) then
 			prev_op2 := cpu_op2;
 			RAM0(1) <= prev_op2(7 downto 0);
 			RAM1(1) <= prev_op2(15 downto 8);
