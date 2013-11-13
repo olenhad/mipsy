@@ -225,7 +225,7 @@ process(CLK)
 
 	
 	variable waitCounter : std_logic_vector(5 downto 0) := (others => '0');
-	variable tconcat : std_logic_vector(17 downto 0);
+	variable tconcat : std_logic_vector(31 downto 0);
 	variable ram_WE : std_logic := '0';
 	variable vlreg : std_logic_vector(31 downto 0) := (others => '0');
 	variable vlregAddr : std_logic_vector(4 downto 0) := (others => '0');
@@ -843,17 +843,17 @@ begin
 			
 				-- shift branch offset by 2 			
 				--		tconcat := CurrentIns(15 downto 0) & b"00";
-				
-								tconcat := b"00" & MEMWR_currentIns(15 downto 0);
+				-- TODO sign extension
+								tconcat := x"0000" & MEMWR_currentIns(15 downto 0);
 				
 				-- add offset to pc				
-								pc := std_logic_vector( signed(pc) + signed( tconcat));
+								pc := std_logic_vector( signed(pc) + signed( tconcat) - 3);
 						
 						end if;
 				-- BGEZ
 					elsif MEMWR_currentIns(31 downto 26) = b"000001" then
 						if MEMWR_alur1 = X"00000000" then
-								tconcat := b"00" & MEMWR_currentIns(15 downto 0);
+								tconcat := x"0000" & MEMWR_currentIns(15 downto 0);
 								if MEMWR_currentIns(20 downto 16) = b"10001" then
 								-- BGEZAL
 								-- TODO  Write issue. May lead to HAZARD!!! 

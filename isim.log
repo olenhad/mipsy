@@ -11,285 +11,11 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 1.00us
-ISim O.61xd (signature 0x1cce1bb2)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 1.00us
-ISim O.61xd (signature 0x1cce1bb2)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ISim O.61xd (signature 0x1cce1bb2)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 1.00us
-ISim O.61xd (signature 0x1cce1bb2)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 1.00us
 # restart
 # run all
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Stopped at time : 145 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 62
-# step
-Stopped at time : 145 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 63
-# step
-Stopped at time : 145 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 64
-# step
-Stopped at time : 145 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 65
-# step
-Stopped at time : 145 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 66
-# step
-Stopped at time : 145 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 68
-# step
-Stopped at time : 145 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 73
-# run 1.00us
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 62
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 63
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 64
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 65
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 66
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 68
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 73
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 74
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 79
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 80
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 86
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 87
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 90
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 93
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 94
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 103
-# step
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 115
-# step
-Stopped at time : 650 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_cpu.vhd" Line 126
-# run all
-Stopped at time : 1145 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 62
-# restart
-# run all
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-Stopped at time : 10 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 20 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 30 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 40 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 50 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 60 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 70 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 80 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 90 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 100 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 110 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 120 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 130 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 145 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 62
-# run all
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 470 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 480 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 490 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 500 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 510 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 520 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 530 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 540 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 550 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 560 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 570 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 580 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 590 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 600 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 610 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 620 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 630 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 645 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 655 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# restart
-# run all
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-Stopped at time : 10 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 145 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 155 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 165 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 175 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 185 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 195 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 205 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 215 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 225 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 235 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 245 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 255 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 265 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 275 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 285 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 295 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 305 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 315 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 325 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 335 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 345 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 355 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 365 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 375 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 385 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 395 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 405 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 415 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 425 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 435 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 445 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 455 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# step
-Stopped at time : 455 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 97
-# step
-Stopped at time : 455 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 98
-# step
-Stopped at time : 455 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 103
-# step
-Stopped at time : 455 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 105
-# step
-Stopped at time : 455 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 106
-# step
-Stopped at time : 455 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 107
-# step
-Stopped at time : 455 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 110
-# step
-Stopped at time : 455 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 112
-# step
-Stopped at time : 455 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 113
-# step
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_cpu.vhd" Line 126
-# step
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/test_cpu.vhd" Line 127
-# step
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 260
-# step
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 261
-# step
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 262
-# step
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 264
-# step
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 271
-# step
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 277
-# step
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 279
-# step
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 281
-# step
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 284
-# step
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 289
-# step
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 302
-# step
-Stopped at time : 460 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 305
+Stopped at time : 170 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 821
 ISim O.61xd (signature 0x1cce1bb2)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -298,37 +24,29 @@ This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Stopped at time : 10 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
+# restart
 # run all
-Stopped at time : 20 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 30 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 40 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 50 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 60 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 70 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 80 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 90 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 100 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 110 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 120 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 130 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 145 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 96
-# run all
-Stopped at time : 455 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 107
-# run all
-Stopped at time : 470 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 744
-# run all
-Stopped at time : 965 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" Line 107
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 120 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 850
+ISim O.61xd (signature 0x1cce1bb2)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 120 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 850
+# step
+Stopped at time : 120 ns : File "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" Line 871
+# run 1.00us
+ISim O.61xd (signature 0x1cce1bb2)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
 # run 1.00us

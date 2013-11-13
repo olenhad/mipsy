@@ -92,14 +92,14 @@ signal isOverflowAdd : std_logic;
 signal isOverflowAddU : std_logic;
 
 begin
-addsub: addsub32 port map (operand1 => operand1, 
-									operand2 => operand2,
+addsub: addsub32 port map (operand1 => operand2, 
+									operand2 => operand1,
 									isadd => isadd, 
 									result => addsubResult,
 									overflow => isOverflowAdd);
 
-uaddsub: uaddsub32 port map (operand1 => operand1, 
-									 operand2 => operand2,
+uaddsub: uaddsub32 port map (operand1 => operand2, 
+									 operand2 => operand1,
 									 isadd => isadd, 
 									 result => uaddsubResult,
 									 overflow => isOverflowAddU);
