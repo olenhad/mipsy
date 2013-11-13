@@ -22,7 +22,7 @@ div $t3,$t2
 #mfhi $t4
 mflo $t4
 
-add $t4, $s0, $s1
+#add $t4, $s0, $s1
 
 lui $1, 0x1001
 sw $t4, 68($1)

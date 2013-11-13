@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: LAB2.prj
 
@@ -122,14 +122,14 @@ Architecture behavioral of Entity div32 is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/utils.vhd" in Library work.
 Architecture utils of Entity utils is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" in Library work.
-Entity <rom> compiled.
-Entity <rom> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity rom is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" in Library work.
 Architecture behavioral of Entity decode is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" in Library work.
-Architecture behavioral of Entity cpu is up to date.
+Entity <cpu> compiled.
+Entity <cpu> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" in Library work.
 Architecture structural of Entity lab2 is up to date.
 
@@ -253,7 +253,7 @@ Synthesizing Unit <decode>.
     Found 5-bit register for signal <RegWBAddr>.
     Found 5-bit register for signal <ControlSignals>.
     Found 32-bit register for signal <registerOut>.
-    Found 32-bit 4-to-1 multiplexer for signal <registerOut$mux0008>.
+    Found 32-bit 4-to-1 multiplexer for signal <registerOut$mux0009>.
     Summary:
 	inferred   2 RAM(s).
 	inferred 149 D-type flip-flop(s).
@@ -444,15 +444,8 @@ WARNING:Xst:646 - Signal <END_alur2> is assigned but never used. This unconnecte
     Found 32-bit adder for signal <pc$share0000>.
     Found 32-bit register for signal <prev_op1>.
     Found 32-bit comparator equal for signal <prev_op1$cmp_eq0009> created at line 264.
+    Found 32-bit comparator not equal for signal <prev_op1$cmp_ne0000> created at line 264.
     Found 32-bit register for signal <prev_op2>.
-    Found 32-bit comparator equal for signal <prev_op2$cmp_eq0000> created at line 265.
-    Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0000> created at line 264.
-    Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0001> created at line 265.
-    Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0000>.
-    Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0001> created at line 608.
-    Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0002> created at line 683.
-    Found 32-bit 16-to-1 multiplexer for signal <prev_op2$mux0003> created at line 314.
-    Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0005>.
     Found 32-bit register for signal <res1Reg>.
     Found 32-bit register for signal <res2Reg>.
     Found 6-bit down counter for signal <waitCounter>.
@@ -465,8 +458,8 @@ WARNING:Xst:646 - Signal <END_alur2> is assigned but never used. This unconnecte
 	inferred   1 Counter(s).
 	inferred 953 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
-	inferred  13 Comparator(s).
-	inferred 288 Multiplexer(s).
+	inferred  11 Comparator(s).
+	inferred 128 Multiplexer(s).
 Unit <cpu> synthesized.
 
 
@@ -502,17 +495,16 @@ Macro Statistics
  32-bit register                                       : 39
  5-bit register                                        : 14
  6-bit register                                        : 2
-# Comparators                                          : 18
- 32-bit comparator equal                               : 3
+# Comparators                                          : 16
+ 32-bit comparator equal                               : 2
  32-bit comparator greatequal                          : 1
  32-bit comparator less                                : 2
- 32-bit comparator not equal                           : 3
+ 32-bit comparator not equal                           : 2
  5-bit comparator equal                                : 8
  5-bit comparator not equal                            : 1
-# Multiplexers                                         : 15
+# Multiplexers                                         : 10
  1-bit 32-to-1 multiplexer                             : 1
- 32-bit 16-to-1 multiplexer                            : 1
- 32-bit 4-to-1 multiplexer                             : 11
+ 32-bit 4-to-1 multiplexer                             : 7
  32-bit 8-to-1 multiplexer                             : 2
 # Xors                                                 : 3
  1-bit xor2                                            : 2
@@ -526,6 +518,7 @@ Macro Statistics
 
 Reading core <mcs.ngc>.
 Loading core <mcs> for timing and area information for instance <mcs0>.
+INFO:Xst:2261 - The FF/Latch <ControlSignals_1> in Unit <idecode> is equivalent to the following FF/Latch, which will be removed : <ControlSignals_4> 
 WARNING:Xst:2677 - Node <ALUW_currentIns_21> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <ALUW_currentIns_22> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <ALUW_currentIns_23> of sequential type is unconnected in block <cpu0>.
@@ -628,22 +621,6 @@ INFO:Xst:3231 - The small RAM <Mram_RAM1_ren_2> will be implemented on LUTs in o
     |     addrB          | connected to signal <WB_alur1>      |          |
     |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram_RAM2_ren> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 8-bit                     |          |
-    |     clkA           | connected to signal <CLK>           | fall     |
-    |     weA            | connected to signal <_cmp_eq0000_1> | low      |
-    |     addrA          | connected to signal <MEMWR_alur1>   |          |
-    |     diA            | connected to signal <MEMWR_decodeRegOut> |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 16-word x 8-bit                     |          |
-    |     addrB          | connected to internal node          |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
 INFO:Xst:3231 - The small RAM <Mram_RAM2> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -652,6 +629,22 @@ INFO:Xst:3231 - The small RAM <Mram_RAM2> will be implemented on LUTs in order t
     |     aspect ratio   | 16-word x 8-bit                     |          |
     |     clkA           | connected to signal <CLK>           | fall     |
     |     weA            | connected to signal <_cmp_eq0000_0> | low      |
+    |     addrA          | connected to signal <MEMWR_alur1>   |          |
+    |     diA            | connected to signal <MEMWR_decodeRegOut> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     addrB          | connected to internal node          |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_RAM2_ren> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     clkA           | connected to signal <CLK>           | fall     |
+    |     weA            | connected to signal <_cmp_eq0000_1> | low      |
     |     addrA          | connected to signal <MEMWR_alur1>   |          |
     |     diA            | connected to signal <MEMWR_decodeRegOut> |          |
     -----------------------------------------------------------------------
@@ -724,22 +717,6 @@ INFO:Xst:3231 - The small RAM <Mram_RAM0_ren_1> will be implemented on LUTs in o
     |     addrB          | connected to internal node          |          |
     |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram_RAM3_ren> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 8-bit                     |          |
-    |     clkA           | connected to signal <CLK>           | fall     |
-    |     weA            | connected to signal <_cmp_eq0000_9> | low      |
-    |     addrA          | connected to signal <MEMWR_alur1>   |          |
-    |     diA            | connected to signal <MEMWR_decodeRegOut> |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 16-word x 8-bit                     |          |
-    |     addrB          | connected to internal node          |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
 INFO:Xst:3231 - The small RAM <Mram_RAM3> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -748,6 +725,22 @@ INFO:Xst:3231 - The small RAM <Mram_RAM3> will be implemented on LUTs in order t
     |     aspect ratio   | 16-word x 8-bit                     |          |
     |     clkA           | connected to signal <CLK>           | fall     |
     |     weA            | connected to signal <_cmp_eq0000_8> | low      |
+    |     addrA          | connected to signal <MEMWR_alur1>   |          |
+    |     diA            | connected to signal <MEMWR_decodeRegOut> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     addrB          | connected to internal node          |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_RAM3_ren> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     clkA           | connected to signal <CLK>           | fall     |
+    |     weA            | connected to signal <_cmp_eq0000_9> | low      |
     |     addrA          | connected to signal <MEMWR_alur1>   |          |
     |     diA            | connected to signal <MEMWR_decodeRegOut> |          |
     -----------------------------------------------------------------------
@@ -772,22 +765,6 @@ INFO:Xst:3231 - The small RAM <Mram_RAM3_ren_1> will be implemented on LUTs in o
     |     addrB          | connected to internal node          |          |
     |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram_RAM1> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 8-bit                     |          |
-    |     clkA           | connected to signal <CLK>           | fall     |
-    |     weA            | connected to signal <_cmp_eq0000_12> | low      |
-    |     addrA          | connected to signal <MEMWR_alur1>   |          |
-    |     diA            | connected to signal <MEMWR_decodeRegOut> |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 16-word x 8-bit                     |          |
-    |     addrB          | connected to internal node          |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
 INFO:Xst:3231 - The small RAM <Mram_RAM1_ren> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -796,6 +773,22 @@ INFO:Xst:3231 - The small RAM <Mram_RAM1_ren> will be implemented on LUTs in ord
     |     aspect ratio   | 16-word x 8-bit                     |          |
     |     clkA           | connected to signal <CLK>           | fall     |
     |     weA            | connected to signal <_cmp_eq0000_13> | low      |
+    |     addrA          | connected to signal <MEMWR_alur1>   |          |
+    |     diA            | connected to signal <MEMWR_decodeRegOut> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     addrB          | connected to internal node          |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_RAM1> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     clkA           | connected to signal <CLK>           | fall     |
+    |     weA            | connected to signal <_cmp_eq0000_12> | low      |
     |     addrA          | connected to signal <MEMWR_alur1>   |          |
     |     diA            | connected to signal <MEMWR_decodeRegOut> |          |
     -----------------------------------------------------------------------
@@ -934,12 +927,12 @@ WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_11> of sequential type i
 WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_10> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_9> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_8> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_sliced1_-1> of sequential type is unconnected in block <cpu>.
-WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_sliced1_0> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <decode_WriteData_sliced1_-1> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <decode_WriteData_sliced1_0> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced1_-1> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced1_0> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_sliced1_-1> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced_sliced1_0> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <WB_decodeControlSignals_0> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <WB_decodeControlSignals_1> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <WB_decodeControlSignals_2> of sequential type is unconnected in block <cpu>.
@@ -968,17 +961,16 @@ Macro Statistics
  6-bit down counter                                    : 1
 # Registers                                            : 1355
  Flip-Flops                                            : 1355
-# Comparators                                          : 18
- 32-bit comparator equal                               : 3
+# Comparators                                          : 16
+ 32-bit comparator equal                               : 2
  32-bit comparator greatequal                          : 1
  32-bit comparator less                                : 2
- 32-bit comparator not equal                           : 3
+ 32-bit comparator not equal                           : 2
  5-bit comparator equal                                : 8
  5-bit comparator not equal                            : 1
-# Multiplexers                                         : 15
+# Multiplexers                                         : 10
  1-bit 32-to-1 multiplexer                             : 1
- 32-bit 16-to-1 multiplexer                            : 1
- 32-bit 4-to-1 multiplexer                             : 11
+ 32-bit 4-to-1 multiplexer                             : 7
  32-bit 8-to-1 multiplexer                             : 2
 # Xors                                                 : 3
  1-bit xor2                                            : 2
@@ -1048,8 +1040,8 @@ INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_20> in Unit <cpu> is equivalent to
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_15> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_15> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_21> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_21> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_16> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_16> 
-INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_22> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_22> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_17> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_17> 
+INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_22> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_22> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_23> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_23> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_18> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_18> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_24> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_24> 
@@ -1081,6 +1073,7 @@ INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_16> in Unit <cpu> is equivalent t
 INFO:Xst:2261 - The FF/Latch <WB_currentIns_10> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns4_10> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_21> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_21> 
 INFO:Xst:2261 - The FF/Latch <WB_currentIns_9> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns4_9> 
+INFO:Xst:2261 - The FF/Latch <idecode_ControlSignals_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <idecode_ControlSignals_4> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_17> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_17> 
 INFO:Xst:2261 - The FF/Latch <WB_currentIns_11> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns4_11> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_currentIns_22> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns3_22> 
@@ -1127,7 +1120,6 @@ INFO:Xst:2261 - The FF/Latch <WB_currentIns_28> in Unit <cpu> is equivalent to t
 INFO:Xst:2261 - The FF/Latch <WB_currentIns_29> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns4_29> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_10> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_10> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_11> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_11> 
-INFO:Xst:2261 - The FF/Latch <idecode_ControlSignals_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <idecode_ControlSignals_4> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_12> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_12> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_13> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_13> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_14> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_14> 
@@ -1298,9 +1290,9 @@ WARNING:Xst:2677 - Node <cpu0_DRegOut_0> of sequential type is unconnected in bl
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 104.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 101.
 Optimizing block <LAB2> to meet ratio 100 (+ 5) of 3584 slices :
-Area constraint is met for block <LAB2>, final ratio is 95.
+Area constraint is met for block <LAB2>, final ratio is 92.
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
@@ -1375,23 +1367,23 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 7881
+# BELS                             : 7654
 #      GND                         : 2
 #      INV                         : 263
-#      LUT1                        : 56
-#      LUT2                        : 366
-#      LUT2_D                      : 10
-#      LUT2_L                      : 5
-#      LUT3                        : 1169
-#      LUT3_D                      : 52
-#      LUT3_L                      : 22
-#      LUT4                        : 3695
-#      LUT4_D                      : 78
-#      LUT4_L                      : 234
+#      LUT1                        : 55
+#      LUT2                        : 369
+#      LUT2_D                      : 11
+#      LUT2_L                      : 4
+#      LUT3                        : 1056
+#      LUT3_D                      : 53
+#      LUT3_L                      : 19
+#      LUT4                        : 3671
+#      LUT4_D                      : 74
+#      LUT4_L                      : 232
 #      MULT_AND                    : 95
-#      MUXCY                       : 698
+#      MUXCY                       : 681
 #      MUXCY_L                     : 77
-#      MUXF5                       : 440
+#      MUXF5                       : 373
 #      MUXF6                       : 6
 #      MUXF7                       : 2
 #      MUXF8                       : 1
@@ -1399,11 +1391,11 @@ Cell Usage :
 #      XORCY                       : 608
 # FlipFlops/Latches                : 1680
 #      FD                          : 124
-#      FDE                         : 359
+#      FDE                         : 323
 #      FDE_1                       : 709
-#      FDR                         : 168
+#      FDR                         : 203
 #      FDRE                        : 214
-#      FDRS                        : 2
+#      FDRS                        : 3
 #      FDRSE                       : 12
 #      FDS                         : 72
 #      FDSE                        : 20
@@ -1428,10 +1420,10 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     3383  out of   3584    94%  
+ Number of Slices:                     3320  out of   3584    92%  
  Number of Slice Flip Flops:           1680  out of   7168    23%  
- Number of 4 input LUTs:               6540  out of   7168    91%  
-    Number used as logic:              5950
+ Number of 4 input LUTs:               6397  out of   7168    89%  
+    Number used as logic:              5807
     Number used as Shift registers:      52
     Number used as RAMs:                538
  Number of IOs:                          11
@@ -1484,7 +1476,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
   Clock period: 46.196ns (frequency: 21.647MHz)
-  Total number of paths / destination ports: 1224641249 / 6956
+  Total number of paths / destination ports: 1224602099 / 6957
 -------------------------------------------------------------------------
 Delay:               23.098ns (Levels of Logic = 74)
   Source:            cpu0_alu_op2_0_1 (FF)
@@ -1569,7 +1561,7 @@ Delay:               23.098ns (Levels of Logic = 74)
      INV:I->O              1   0.648   0.000  cpu0_ialu_mult_Madd_convertedResult_not0000<62>1_INV_0 (cpu0_ialu_mult_Madd_convertedResult_not0000<62>)
      MUXCY:S->O            0   0.632   0.000  cpu0_ialu_mult_Madd_convertedResult_cy<62> (cpu0_ialu_mult_Madd_convertedResult_cy<62>)
      XORCY:CI->O           1   0.844   0.423  cpu0_ialu_mult_Madd_convertedResult_xor<63> (cpu0_ialu_mult_convertedResult<63>)
-     LUT4:I3->O            1   0.648   0.000  cpu0_ialu_Result2_mux0000<31>341_F (N718)
+     LUT4:I3->O            1   0.648   0.000  cpu0_ialu_Result2_mux0000<31>341_F (N773)
      MUXF5:I0->O           1   0.276   0.000  cpu0_ialu_Result2_mux0000<31>341 (cpu0_ialu_Result2_mux0000<31>34)
      FDS:D                     0.252          cpu0_ialu_Result2_31
     ----------------------------------------
@@ -1637,14 +1629,14 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 76.00 secs
-Total CPU time to Xst completion: 75.72 secs
+Total REAL time to Xst completion: 75.00 secs
+Total CPU time to Xst completion: 74.99 secs
  
 --> 
 
-Total memory usage is 419672 kilobytes
+Total memory usage is 411544 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  300 (   0 filtered)
-Number of infos    :  161 (   0 filtered)
+Number of infos    :  162 (   0 filtered)
 

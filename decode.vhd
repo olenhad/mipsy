@@ -65,8 +65,7 @@ begin
 
 
 process(CLK)
-
-	variable opcode : std_logic_vector(5 downto 0) := (others => '0');	
+	
 begin
 	if rising_edge(CLK) then
 		
@@ -76,19 +75,18 @@ begin
 			lregAddr <= WriteAddr;
 		end if;
 		
-		if currentInstruction = x"FFFFFFFF" then
+		
 			--registerOut <= registerFile(to_integer(unsigned(WriteAddr)));
 			--registerOut <= x"000000" & b"000" & WriteAddr;
 			
-		else
 --			lreg <= (others=>'0');
 --			lregAddr <= (others=>'0');
 			
-			opcode := currentInstruction(31 downto 26);
 			ControlSignals <= (others => '0');
 			registerOut <= (others => '0');
+			if currentInstruction = x"FFFFFFFF" then
 			
-			if (CurrentInstruction(5 downto 0) = b"001000" and
+			elsif (CurrentInstruction(5 downto 0) = b"001000" and
 				 CurrentInstruction(31 downto 26) = b"000000") then
 						-- JR
 				registerOut <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
@@ -97,7 +95,7 @@ begin
 			       CurrentInstruction(31 downto 26) = b"000000") then
 						-- JALR
 				registerOut <= registerFile(to_integer(unsigned(currentInstruction(25 downto 21))));
-			elsif opcode = b"000000" then
+			elsif CurrentInstruction(31 downto 26) = b"000000" then
 
 				-- R type
 				-- all R type instructions just Write to registers. assert RegWrite	
@@ -155,7 +153,7 @@ begin
 					--registerFile(to_integer(unsigned(currentInstruction(15 downto 11)))) := alu_result1;
 				
 			-- I types
-			elsif opcode = b"001000" then
+			elsif CurrentInstruction(31 downto 26) = b"001000" then
 			--	ADDI
 				if currentInstruction(15) = '1' then
 					AluOP1 <= x"ffff" & CurrentInstruction(15 downto 0);
@@ -171,7 +169,7 @@ begin
 				ControlSignals <= "01000";
 			--RT is the write back address
 				
-			elsif opcode = b"100011" then
+			elsif CurrentInstruction(31 downto 26) = b"100011" then
 			 -- Load Word (23)
 			 -- sign extension to offset
 				AluOP2 <= x"0000" & b"00" & CurrentInstruction(15 downto 2);
@@ -190,7 +188,7 @@ begin
 				ControlSignals <= b"11010";
 				RegWBAddr <= currentInstruction(20 downto 16);
 				
-			elsif opcode = b"101011" then
+			elsif CurrentInstruction(31 downto 26) = b"101011" then
 			-- Store Word (2B)
 				AluOP2 <= x"0000" & b"00" & CurrentInstruction(15 downto 2);
 			-- currentInstruction (25 downto 21) denotes rs, which contains base address
@@ -211,7 +209,7 @@ begin
 			
 				registerOut <= registerFile(to_integer(unsigned(currentInstruction(20 downto 16))));
 				RegWBAddr <= currentInstruction(20 downto 16);
-			elsif opcode = b"001111" then
+			elsif CurrentInstruction(31 downto 26) = b"001111" then
 			-- LUI (F)
 				AluOP1 <= x"0000" & CurrentInstruction(15 downto 0);
 				AluOP2 <= x"00000010";
@@ -219,7 +217,7 @@ begin
 				ControlSignals <= b"01000";
 				RegWBAddr <= currentInstruction(20 downto 16);
 				
-			elsif opcode = b"001101" then
+			elsif CurrentInstruction(31 downto 26) = b"001101" then
 			-- ORI
 			-- Offset padded with 16 0's
 				if currentInstruction(15) = '1' then
@@ -234,7 +232,7 @@ begin
 				ControlSignals <= "01000";
 				RegWBAddr <= currentInstruction(20 downto 16);
 			
-			elsif opcode = b"001010" then
+			elsif CurrentInstruction(31 downto 26) = b"001010" then
 	--	 SLTI
 				if currentInstruction(15) = '1' then
 					AluOP1 <= x"ffff" & CurrentInstruction(15 downto 0);
@@ -246,7 +244,7 @@ begin
 				ControlSignals <= "01000";
 				RegWBAddr <= currentInstruction(20 downto 16);
 				
-			elsif opcode = b"000010" then
+			elsif CurrentInstruction(31 downto 26) = b"000010" then
 			-- J 
 			-- ControlSignals
 			-- 0 => Branch
@@ -258,7 +256,7 @@ begin
 			--	jAddr <= b"0000" & CurrentInstruction(25 downto 0) & b"00";
 				ControlSignals <= b"00001";
 			
-			elsif opcode = b"000100" then
+			elsif CurrentInstruction(31 downto 26) = b"000100" then
 			-- BEQ	
 			-- Jump to offset from 15 to 0
 			--	jAddr <= x"000" & b"00" & CurrentInstruction(15 downto 0) & b"00";
@@ -276,7 +274,7 @@ begin
 			-- 3 => RegWrite
 			-- 4 => MemToReg
 				ControlSignals <= b"00001";
-			elsif opcode = b"000001" then
+			elsif CurrentInstruction(31 downto 26) = b"000001" then
 			
 						-- BGEZ	
 			-- Jump to offset from 15 to 0
@@ -295,8 +293,10 @@ begin
 			-- 3 => RegWrite
 			-- 4 => MemToReg
 				ControlSignals <= b"00001";
+			else
+				
 			end if;
-		end if;
+		
 	end if;
 end process;
 
