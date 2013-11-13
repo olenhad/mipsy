@@ -1,7 +1,7 @@
 Release 13.2 par O.61xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-HUNARKHANNA-PC::  Thu Nov 14 04:09:00 2013
+HUNARKHANNA-PC::  Thu Nov 14 05:00:36 2013
 
 par -w -intstyle ise -ol high -t 1 LAB2_map.ncd LAB2.ncd LAB2.pcf 
 
@@ -49,12 +49,12 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 4 secs 
-Finished initial Timing Analysis.  REAL time: 4 secs 
+Starting initial Timing Analysis.  REAL time: 3 secs 
+Finished initial Timing Analysis.  REAL time: 3 secs 
 
 
 Starting Placer
-Total REAL time at the beginning of Placer: 4 secs 
+Total REAL time at the beginning of Placer: 3 secs 
 Total CPU  time at the beginning of Placer: 4 secs 
 
 Phase 1.1  Initial Placement Analysis
@@ -68,13 +68,13 @@ Phase 3.31  Local Placement Optimization (Checksum:5a7969d5) REAL time: 4 secs
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:38fe6608) REAL time: 7 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:38fe6608) REAL time: 6 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:38fe6608) REAL time: 7 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:38fe6608) REAL time: 6 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:38fe6608) REAL time: 7 secs 
+Phase 6.36  Local Placement Optimization (Checksum:38fe6608) REAL time: 6 secs 
 
 Phase 7.8  Global Placement
 ...................................
