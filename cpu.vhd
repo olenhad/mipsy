@@ -43,10 +43,10 @@ entity cpu is
 --			  DMemOut : out std_logic_vector(31 downto 0);
 --			  DCPUState : out std_logic_vector(31 downto 0);
 			  DCurrentIns : out std_logic_vector(31 downto 0);
-			  --DCurrentIns2 : out std_logic_vector(31 downto 0);
-			  --DCurrentIns3 : out std_logic_vector(31 downto 0);
-			  --DCurrentIns4 : out std_logic_vector(31 downto 0);
-			  --DCurrentIns5 : out std_logic_vector(31 downto 0);
+			  DCurrentIns2 : out std_logic_vector(31 downto 0);
+			  DCurrentIns3 : out std_logic_vector(31 downto 0);
+			  DCurrentIns4 : out std_logic_vector(31 downto 0);
+			  DCurrentIns5 : out std_logic_vector(31 downto 0);
 			  DAlu1 : out std_logic_vector(31 downto 0);
 			  DAlu2 : out std_logic_vector(31 downto 0);
 			  DAluR1 : out std_logic_vector(31 downto 0);
@@ -229,11 +229,13 @@ process(CLK)
 	variable ram_WE : std_logic := '0';
 	variable vlreg : std_logic_vector(31 downto 0) := (others => '0');
 	variable vlregAddr : std_logic_vector(4 downto 0) := (others => '0');
+	
 	variable prev_op1 : STD_LOGIC_VECTOR (31 downto 0):= (others => '0');
 	variable prev_op2 : STD_LOGIC_VECTOR (31 downto 0):= (others => '0');
 	
 	variable res1Reg : STD_LOGIC_vector (31 downto 0):= (others => '0');
 	variable res2Reg : STD_LOGIC_vector (31 downto 0):= (others => '0');
+	
 	
 	variable lo : std_logic_vector(31 downto 0) := (others => '0'); 
 	variable hi : std_logic_vector(31 downto 0) := (others => '0'); 
@@ -259,7 +261,19 @@ begin
 		vlreg := decode_lreg;
 		vlregAddr := decode_lregAddr;
 	
-			 
+		if(prev_op1 /= cpu_op1) then
+			prev_op1 := cpu_op1;
+--								RAM0(0) <= prev_op1(7 downto 0);
+--								RAM1(0) <= prev_op1(15 downto 8);
+--								RAM2(0) <= prev_op1(23 downto 16);
+--								RAM3(0) <= prev_op1(31 downto 24);
+		elsif(prev_op2 /= cpu_op2) then
+			prev_op2 := cpu_op2;
+--								RAM0(1) <= prev_op2(7 downto 0);
+--								RAM1(1) <= prev_op2(15 downto 8);
+--								RAM2(1) <= prev_op2(23 downto 16);
+--								RAM3(1) <= prev_op2(31 downto 24);
+		end if;
 		if waitCounter = b"000000" then
 			
 			alu_control <= decode_AluControl;
@@ -299,7 +313,7 @@ begin
 			
 			if currentState = Execute then
 				
-				--DCurrentIns2 <= EX_currentIns;
+				DCurrentIns2 <= EX_currentIns;
 				--Assignment of propagated values
 				EX_decodeControlSignals := decode_controlSignals;
 				EX_decodeRegWBAddr := decode_RegWBAddr;
@@ -592,18 +606,41 @@ begin
 						then
 						
 						case EX_assignO1(0) is
-							when '1' => alu_op1 <= RAM3(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
-								 			  RAM2(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
-								 			  RAM1(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
-								 			  RAM0(to_integer(unsigned(EX_assignO1(4 downto 1))));
+							when '1' => 
+								case EX_assignO1(5 downto 1) is
+										when b"10010" => alu_op1<= prev_op1;
+										when b"10011" => alu_op1 <=prev_op2;
+										when others => alu_op1 <=
+													 RAM3(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
+													 RAM2(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
+													 RAM1(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
+													 RAM0(to_integer(unsigned(EX_assignO1(4 downto 1))));
+									end case;
+							-- alu_op1 <= 
+							-- 					RAM3(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
+							-- 	 			  RAM2(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
+							-- 	 			  RAM1(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
+							-- 	 			  RAM0(to_integer(unsigned(EX_assignO1(4 downto 1))));
 							when others => alu_op1 <= EX_assignO1(32 downto 1);
 						end case;
 						--alu_op1 <= EX_assignO1 ;
 						case EX_assignO2(0) is
-							when '1' => alu_op2 <= RAM3(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
-								 			  RAM2(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
-								 			  RAM1(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
-								 			  RAM0(to_integer(unsigned(EX_assignO2(4 downto 1))));
+							when '1' => 
+									case EX_assignO2(5 downto 1) is
+										when b"10010" => alu_op2<= prev_op1;
+										when b"10011" => alu_op2 <=prev_op2;
+										when others => alu_op2 <=
+													 RAM3(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+													 RAM2(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+													 RAM1(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+													 RAM0(to_integer(unsigned(EX_assignO2(4 downto 1))));
+									end case;
+
+
+							-- alu_op2 <=	 RAM3(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+							-- 	 			  RAM2(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+							-- 	 			  RAM1(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+							-- 	 			  RAM0(to_integer(unsigned(EX_assignO2(4 downto 1))));
 							when others => alu_op2 <= EX_assignO2(32 downto 1);
 						end case;
 						--alu_op2 <= EX_assignO2;	
@@ -616,10 +653,20 @@ begin
 				-- forward ONLY Rs (25 to 21).
 
 				case EX_assignO2(0) is
-							when '1' => alu_op1 <= RAM3(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
-								 			  RAM2(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
-								 			  RAM1(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
-								 			  RAM0(to_integer(unsigned(EX_assignO2(4 downto 1))));
+							when '1' => 
+								case EX_assignO2(5 downto 1) is
+										when b"10010" => alu_op1<= prev_op1;
+										when b"10011" => alu_op1 <=prev_op2;
+										when others => alu_op1 <=
+													 RAM3(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+													 RAM2(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+													 RAM1(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+													 RAM0(to_integer(unsigned(EX_assignO2(4 downto 1))));
+									end case;
+							-- alu_op1 <=		RAM3(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+							-- 	 			  RAM2(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+							-- 	 			  RAM1(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+							-- 	 			  RAM0(to_integer(unsigned(EX_assignO2(4 downto 1))));
 							when others => alu_op1 <= EX_assignO2(32 downto 1);
 						end case;
 					--alu_op1 <= EX_assignO1;
@@ -634,10 +681,21 @@ begin
 
 				-- EX_assign2 should contain new val of 25-21, rS
 					case EX_assignO2(0) is
-							when '1' => alu_op1 <= RAM3(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
-								 			  RAM2(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
-								 			  RAM1(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
-								 			  RAM0(to_integer(unsigned(EX_assignO2(4 downto 1))));
+							when '1' => 
+								case EX_assignO2(5 downto 1) is
+										when b"10010" => alu_op1<= prev_op1;
+										when b"10011" => alu_op1 <=prev_op2;
+										when others => alu_op1 <=
+													 RAM3(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+													 RAM2(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+													 RAM1(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+													 RAM0(to_integer(unsigned(EX_assignO2(4 downto 1))));
+									end case;
+							-- alu_op1 <= 
+							-- 				RAM3(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+							-- 	 			  RAM2(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+							-- 	 			  RAM1(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+							-- 	 			  RAM0(to_integer(unsigned(EX_assignO2(4 downto 1))));
 							when others => alu_op1 <= EX_assignO2(32 downto 1);
 						end case;
 					--alu_op1 <= EX_assignO2;
@@ -645,10 +703,17 @@ begin
 
 				-- EX_assign1 should contain new val of 20-16, rT
 					if EX_assignRegOut(0) = '1' then
-							EX_decodeRegOut := RAM3(to_integer(unsigned(EX_assignRegOut(4 downto 1)))) &
+							if EX_assignRegOut(5 downto 1) = b"10010" then
+								EX_decodeRegOut := prev_op1;
+							elsif EX_assignRegOut(5 downto 1) = b"10011" then
+								EX_decodeRegOut := prev_op2;
+							else
+								EX_decodeRegOut := 
+											  RAM3(to_integer(unsigned(EX_assignRegOut(4 downto 1)))) &
 								 			  RAM2(to_integer(unsigned(EX_assignRegOut(4 downto 1)))) &
 								 			  RAM1(to_integer(unsigned(EX_assignRegOut(4 downto 1)))) &
 								 			  RAM0(to_integer(unsigned(EX_assignRegOut(4 downto 1))));
+							end if;
 					else
 						EX_decodeRegOut := EX_assignRegOut(32 downto 1);
 					end if;
@@ -676,7 +741,7 @@ begin
 			if currentState = AluWait then
 				DAluR1 <= alu_r1;
 				DAluR2 <= alu_r2;
-				--DCurrentIns3 <= ALUW_currentIns;
+				DCurrentIns3 <= ALUW_currentIns;
 				ALUW_alur1 := alu_r1;
 				ALUW_alur2 := alu_r2;
 				Dregout <= alu_r2;
@@ -721,7 +786,7 @@ begin
 			if currentState = MemWR then
 	--			DCPUState <= (1 => '1', others => '0');
 				--Assignment of propagated values
-				--DCurrentIns4 <= MEMWR_currentIns;
+				DCurrentIns4 <= MEMWR_currentIns;
 				
 				sig_Branch := MEMWR_decodeControlSignals(0);
 				sig_MemRead := MEMWR_decodeControlSignals(1);
@@ -737,19 +802,7 @@ begin
 				-- DO nothing. Update to next stage
 				-- R Type	
 					currentState := WriteBack;
-					if(prev_op1 /= cpu_op1) then
-								prev_op1 := cpu_op1;
-								RAM0(0) <= prev_op1(7 downto 0);
-								RAM1(0) <= prev_op1(15 downto 8);
-								RAM2(0) <= prev_op1(23 downto 16);
-								RAM3(0) <= prev_op1(31 downto 24);
---							elsif(prev_op2 /= cpu_op2) then
---								prev_op2 := cpu_op2;
---								RAM0(1) <= prev_op2(7 downto 0);
---								RAM1(1) <= prev_op2(15 downto 8);
---								RAM2(1) <= prev_op2(23 downto 16);
---								RAM3(1) <= prev_op2(31 downto 24);
-							end if;
+
 				elsif sig_Branch = '0' and
 				      sig_MemRead = '1' and 
 					   sig_MemWrite = '0' then 
@@ -832,7 +885,7 @@ begin
 --					DCPUState <= (2 => '1', others => '0');
 					--ram_WE <= '0';
 				-- R Type
-				--DCurrentIns5 <= WB_currentIns;
+				DCurrentIns5 <= WB_currentIns;
 				--Assignment of propagated values
 				sig_Branch := WB_decodeControlSignals(0);
 				sig_MemRead := WB_decodeControlSignals(1);
@@ -872,11 +925,17 @@ begin
 						-- RT for I type instructions	
 					decode_regWrite <= '1';
 					decode_WriteAddr <= WB_decodeRegWBAddr;
-					--decode_WriteData <= read_ram_at(RAM, WB_alur1);
-					decode_WriteData <= RAM3(to_integer(unsigned(WB_alur1(3 downto 0)))) &
-					                    RAM2(to_integer(unsigned(WB_alur1(3 downto 0)))) &
-											  RAM1(to_integer(unsigned(WB_alur1(3 downto 0)))) &
-											  RAM0(to_integer(unsigned(WB_alur1(3 downto 0))));
+					
+					 --read_ram_at(RAM3,RAM2,RAM1,RAM0,WB_alur1(3 downto 0));
+					case WB_alur1(4 downto 0) is
+						when b"10010" => decode_WriteData <= prev_op1;
+						when b"10011" => decode_WriteData <=prev_op2;
+						when others => decode_WriteData <=
+									 RAM3(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+									 RAM2(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+									 RAM1(to_integer(unsigned(WB_alur1(3 downto 0)))) &
+									 RAM0(to_integer(unsigned(WB_alur1(3 downto 0))));
+					end case;
 --					DMemOut <= read_ram_at(RAM, WB_alur1);
 --					DMemAddr <= WB_alur1;
 --					

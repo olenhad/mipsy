@@ -5,15 +5,15 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">mcs0/UART_Interrupt</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">cpu0_Mram_RAM1_ren_18/SPO</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">86</arg> more times for the following (max. 5 shown):
-<arg fmt="%s" index="3">mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i&lt;5&gt;,
-mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i&lt;4&gt;,
-mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i&lt;3&gt;,
-mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i&lt;2&gt;,
-mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i&lt;1&gt;</arg>
+<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">214</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">cpu0_Mram_RAM1_ren_17/SPO,
+cpu0_Mram_RAM1_ren_16/SPO,
+cpu0_Mram_RAM1_ren_15/SPO,
+cpu0_Mram_RAM1_ren_14/SPO,
+cpu0_Mram_RAM1_ren_12/SPO</arg>
 To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
 </msg>
 
@@ -23,7 +23,7 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">cpu0_alu_control_cmp_eq0000</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">cpu0_currentState_not0001_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">cpu0_and0000_cmp_eq0000</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">cpu0_currentState_not0001_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
 <msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[24].SRL16E_I/Use_unisim.MB_SRL16E_I1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[24].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5</arg>.  <arg fmt="%z" index="3">The function generator mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[24].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be placed in the G position because the output signal doesn&apos;t match other symbols&apos; use of the G signal.  The signal mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[24].Operand_Select_Bit_I/op2_Reg already uses G.</arg>  The design will exhibit suboptimal timing.
@@ -264,16 +264,6 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="812" delta="old" >Dangling pin &lt;<arg fmt="%s" index="1">DIA1</arg>&gt; on block:&lt;<arg fmt="%s" index="2">mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1</arg>&gt;:&lt;<arg fmt="%s" index="3">RAMB16BWE_RAMB16BWE</arg>&gt;.
-</msg>
-
-<msg type="error" file="Pack" num="2310" delta="old" >Too many comps of type &quot;<arg fmt="%s" index="1">SLICEL</arg>&quot; found to fit this device.
-</msg>
-
-<msg type="error" file="Pack" num="18" delta="old" >The design is too large for the given device and package.  Please check the Design Summary section to see which resource requirement for your design exceeds the resources available in the device.
-
-NOTE: An NCD file will still be generated to allow you to examine the mapped design.  This file is intended for evaluation use only, and will not process successfully through PAR.
-
-This mapped NCD file can be used to evaluate how the design&apos;s logic has been mapped into FPGA logic resources.  It can also be used to analyze preliminary, logic-level (pre-route) timing with one of the Xilinx static timing analysis tools (TRCE or Timing Analyzer).
 </msg>
 
 </messages>

@@ -38,7 +38,11 @@ package utils is
 	x"0a", x"00", x"00", x"00", x"0c", others => (others => '0'));
 	
 	
-	function read_ram_at ( ram_data : in RamData; addr: in std_logic_vector(31 downto 0))  
+			function read_ram_at ( RAM3 : in RamData;
+									  RAM2 : in RamData;
+									  RAM1 : in RamData;
+									  RAM0 : in RamData;
+									  addr: in std_logic_vector(3 downto 0)) 
 		return Word;
 	
 --	function write_ram_at (ram_data : in RamData; 
@@ -67,15 +71,20 @@ end utils;
 
 package body utils is
 	
-		function read_ram_at ( ram_data : in RamData; addr: in std_logic_vector(31 downto 0)) 
+		function read_ram_at ( RAM3 : in RamData;
+									  RAM2 : in RamData;
+									  RAM1 : in RamData;
+									  RAM0 : in RamData;
+									  addr: in std_logic_vector(3 downto 0)) 
 		return Word is
 		begin
 		
-			return ram_data(to_integer(unsigned(ADDR(5 downto 0))+3)) &
-					 ram_data(to_integer(unsigned(ADDR(5 downto 0))+2)) &
-					 ram_data(to_integer(unsigned(ADDR(5 downto 0))+1)) &
-					 ram_data(to_integer(unsigned(ADDR(5 downto 0))));
+			return RAM3(to_integer(unsigned(addr))) &
+					 RAM2(to_integer(unsigned(addr))) &
+					 RAM1(to_integer(unsigned(addr))) &
+					 RAM0(to_integer(unsigned(addr)));
 		end function;
+									
 		
 --	function write_ram_at (ram_data : in RamData; 
 --								  addr: in std_logic_vector(31 downto 0);

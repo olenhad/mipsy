@@ -9,36 +9,24 @@ Target Device  : xc3s400a
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Wed Nov 13 18:28:22 2013
-ERROR:Pack:18 - The design is too large for the given device and package. 
-   Please check the Design Summary section to see which resource requirement for
-   your design exceeds the resources available in the device.
-
-   NOTE: An NCD file will still be generated to allow you to examine the mapped
-   design.  This file is intended for evaluation use only, and will not process
-   successfully through PAR.
-
-   This mapped NCD file can be used to evaluate how the design's logic has been
-   mapped into FPGA logic resources.  It can also be used to analyze
-   preliminary, logic-level (pre-route) timing with one of the Xilinx static
-   timing analysis tools (TRCE or Timing Analyzer).
+Mapped Date    : Wed Nov 13 20:20:53 2013
 
 Design Summary
 --------------
-Number of errors:      2
+Number of errors:      0
 Number of warnings:   81
 Logic Utilization:
-  Number of Slice Flip Flops:         2,075 out of   7,168   28%
-  Number of 4 input LUTs:             6,798 out of   7,168   94%
+  Number of Slice Flip Flops:         1,567 out of   7,168   21%
+  Number of 4 input LUTs:             6,445 out of   7,168   89%
 Logic Distribution:
-  Number of occupied Slices:          3,928 out of   3,584  109% (OVERMAPPED)
-    Number of Slices containing only related logic:   3,928 out of   3,928 100%
-    Number of Slices containing unrelated logic:          0 out of   3,928   0%
+  Number of occupied Slices:          3,582 out of   3,584   99%
+    Number of Slices containing only related logic:   3,582 out of   3,582 100%
+    Number of Slices containing unrelated logic:          0 out of   3,582   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       6,890 out of   7,168   96%
-    Number used as logic:             6,464
-    Number used as a route-thru:         92
-    Number used for Dual Port RAMs:     282
+  Total Number of 4 input LUTs:       6,533 out of   7,168   91%
+    Number used as logic:             5,855
+    Number used as a route-thru:         88
+    Number used for Dual Port RAMs:     538
       (Two LUTs used per Dual Port RAM)
     Number used as Shift registers:      52
 
@@ -50,11 +38,11 @@ Logic Distribution:
   Number of MULT18X18SIOs:                4 out of      20   20%
   Number of RAMB16BWEs:                  19 out of      20   95%
 
-Average Fanout of Non-Clock Nets:                3.73
+Average Fanout of Non-Clock Nets:                3.70
 
-Peak Memory Usage:  311 MB
-Total REAL time to MAP completion:  9 secs 
-Total CPU time to MAP completion:   9 secs 
+Peak Memory Usage:  305 MB
+Total REAL time to MAP completion:  7 secs 
+Total CPU time to MAP completion:   7 secs 
 
 NOTES:
 
@@ -92,23 +80,10 @@ Section 13 - Utilization by Hierarchy
 
 Section 1 - Errors
 ------------------
-ERROR:Pack:2310 - Too many comps of type "SLICEL" found to fit this device.
-ERROR:Pack:18 - The design is too large for the given device and package. 
-   Please check the Design Summary section to see which resource requirement for
-   your design exceeds the resources available in the device.
-
-   NOTE: An NCD file will still be generated to allow you to examine the mapped
-   design.  This file is intended for evaluation use only, and will not process
-   successfully through PAR.
-
-   This mapped NCD file can be used to evaluate how the design's logic has been
-   mapped into FPGA logic resources.  It can also be used to analyze
-   preliminary, logic-level (pre-route) timing with one of the Xilinx static
-   timing analysis tools (TRCE or Timing Analyzer).
 
 Section 2 - Warnings
 --------------------
-WARNING:Pack:266 - The function generator cpu0_alu_control_cmp_eq0000 failed to
+WARNING:Pack:266 - The function generator cpu0_and0000_cmp_eq0000 failed to
    merge with F5 multiplexer cpu0_currentState_not0001_f5.  There is a conflict
    for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator
@@ -498,14 +473,14 @@ WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network mcs0/UART_Interrupt has no load.
-INFO:LIT:395 - The above info message is repeated 86 more times for the
+INFO:LIT:243 - Logical network cpu0_Mram_RAM1_ren_18/SPO has no load.
+INFO:LIT:395 - The above info message is repeated 214 more times for the
    following (max. 5 shown):
-   mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<5>,
-   mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<4>,
-   mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<3>,
-   mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<2>,
-   mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<1>
+   cpu0_Mram_RAM1_ren_17/SPO,
+   cpu0_Mram_RAM1_ren_16/SPO,
+   cpu0_Mram_RAM1_ren_15/SPO,
+   cpu0_Mram_RAM1_ren_14/SPO,
+   cpu0_Mram_RAM1_ren_12/SPO
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
