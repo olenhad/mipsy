@@ -317,8 +317,10 @@ begin
 				EX_decodeControlSignals := decode_controlSignals;
 				EX_decodeRegWBAddr := decode_RegWBAddr;
 				--Main execution
-				alu_op1 <= decode_AluOP1;
-				alu_op2 <= decode_AluOP2;
+				--alu_op1 <= decode_AluOP1;
+				--alu_op2 <= decode_AluOP2;
+				EX_assignO1 := decode_AluOP1 & b"0";
+				EX_assignO2 := decode_AluOP2 & b"0";
 				--change if store word to latest value
 				EX_decodeRegOut := decode_registerOut;
 				

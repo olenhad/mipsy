@@ -124,11 +124,13 @@ Architecture utils of Entity utils is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" in Library work.
 Architecture behavioral of Entity rom is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" in Library work.
-Architecture behavioral of Entity decode is up to date.
+Entity <decode> compiled.
+Entity <decode> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" in Library work.
-Architecture behavioral of Entity cpu is up to date.
+Entity <cpu> compiled.
+Entity <cpu> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" in Library work.
 Architecture structural of Entity lab2 is up to date.
 
@@ -1339,8 +1341,8 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 78.00 secs
-Total CPU time to Xst completion: 78.52 secs
+Total REAL time to Xst completion: 81.00 secs
+Total CPU time to Xst completion: 81.53 secs
  
 --> 
 
