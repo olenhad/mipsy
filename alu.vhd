@@ -131,6 +131,8 @@ process (Clk)
 begin  
    if (Clk'event and Clk = '1') then
 		divReset <= '0';
+		-- assigning a default value to result2
+		Result2 <= (others => '0');
 		if Control = b"111111" then
 			-- NOP/echo
 	--		r1Reg := operand1;
