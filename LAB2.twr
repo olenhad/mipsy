@@ -34,1286 +34,985 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 ================================================================================
 Timing constraint: TS_Clk = PERIOD TIMEGRP "TNM_Clk" 16 MHz HIGH 50%;
 
- 1225027925 paths analyzed, 9442 endpoints analyzed, 0 failing endpoints
+ 1225206630 paths analyzed, 9475 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  60.134ns.
+ Minimum period is  55.494ns.
 --------------------------------------------------------------------------------
 
-Paths for end point cpu0_ialu_Result2_31 (SLICE_X38Y61.G4), 96720178 paths
+Paths for end point cpu0_ialu_Result1_13 (SLICE_X28Y43.SR), 2680 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     1.183ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu0_alu_control_4 (FF)
-  Destination:          cpu0_ialu_Result2_31 (FF)
+Slack (setup path):     3.503ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu0_alu_op2_6 (FF)
+  Destination:          cpu0_ialu_Result1_13 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      29.970ns (Levels of Logic = 30)
-  Clock Path Skew:      -0.097ns (0.549 - 0.646)
+  Data Path Delay:      27.659ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.088ns (0.640 - 0.728)
   Source Clock:         Clk_BUFGP falling at 31.250ns
   Destination Clock:    Clk_BUFGP rising at 62.500ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: cpu0_alu_control_4 to cpu0_ialu_Result2_31
+  Maximum Data Path: cpu0_alu_op2_6 to cpu0_ialu_Result1_13
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y74.YQ      Tcko                  0.580   cpu0_alu_control<5>
-                                                       cpu0_alu_control_4
-    SLICE_X42Y52.G1      net (fanout=8)        4.080   cpu0_alu_control<4>
-    SLICE_X42Y52.Y       Tilo                  0.707   cpu0_ialu_mulIsSigned
-                                                       cpu0_ialu_divIsSigned_cmp_eq000011_1
-    SLICE_X44Y39.G1      net (fanout=3)        1.407   cpu0_ialu_divIsSigned_cmp_eq000011
-    SLICE_X44Y39.Y       Tilo                  0.707   cpu0_ialu_mult_newOperand1<0>
-                                                       cpu0_ialu_mult_Mmux_newOperand11011
-    SLICE_X43Y30.G4      net (fanout=31)       2.899   cpu0_ialu_mult_N11
-    SLICE_X43Y30.Y       Tilo                  0.648   cpu0_ialu_mult_newOperand1<5>
-                                                       cpu0_ialu_mult_Mmux_newOperand1461
-    MULT18X18_X1Y4.A2    net (fanout=2)        0.880   cpu0_ialu_mult_newOperand1<2>
-    MULT18X18_X1Y4.P18   Tmult                 4.873   cpu0_ialu_mult_Mmult_combinedResult_submult_0
+    SLICE_X26Y32.YQ      Tcko                  0.676   cpu0_alu_op2<7>
+                                                       cpu0_alu_op2_6
+    SLICE_X25Y54.F1      net (fanout=14)       2.865   cpu0_alu_op2<6>
+    SLICE_X25Y54.XB      Topxb                 1.285   cpu0_alu_op2_31_2
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_lut<6>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<6>
+    SLICE_X2Y70.G4       net (fanout=25)       4.277   cpu0_ialu_Result1_cmp_eq00111_wg_cy<6>
+    SLICE_X2Y70.Y        Tilo                  0.707   cpu0_ialu_Result1_cmp_eq0030
+                                                       cpu0_ialu_Result1_cmp_eq002911
+    SLICE_X3Y71.G1       net (fanout=18)       0.337   cpu0_ialu_N221
+    SLICE_X3Y71.Y        Tilo                  0.648   cpu0_ialu_Result1_mux0006<21>188
+                                                       cpu0_ialu_Result1_cmp_eq00292
+    SLICE_X9Y61.G2       net (fanout=28)       1.855   cpu0_ialu_Result1_cmp_eq0029
+    SLICE_X9Y61.COUT     Topcyg                1.178   cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_lut<5>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+    SLICE_X9Y62.CIN      net (fanout=1)        0.000   cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+    SLICE_X9Y62.COUT     Tbyp                  0.130   cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<6>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+    SLICE_X14Y58.F2      net (fanout=2)        1.090   cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+    SLICE_X14Y58.X       Tilo                  0.692   N616
+                                                       cpu0_ialu_Result1_or000538_SW0
+    SLICE_X14Y59.G1      net (fanout=2)        0.202   N616
+    SLICE_X14Y59.Y       Tilo                  0.707   cpu0_ialu_N45
+                                                       cpu0_ialu_Result1_mux0006<10>5
+    SLICE_X14Y59.F3      net (fanout=5)        0.064   cpu0_ialu_N23
+    SLICE_X14Y59.X       Tilo                  0.692   cpu0_ialu_N45
+                                                       cpu0_ialu_Result1_mux0006<10>121
+    SLICE_X15Y57.G3      net (fanout=2)        0.650   cpu0_ialu_N45
+    SLICE_X15Y57.Y       Tilo                  0.648   cpu0_ialu_N59
+                                                       cpu0_ialu_Result1_mux0006<10>141
+    SLICE_X17Y57.G4      net (fanout=4)        0.459   cpu0_ialu_N51
+    SLICE_X17Y57.Y       Tilo                  0.648   cpu0_ialu_N78
+                                                       cpu0_ialu_Result1_mux0006<10>211
+    SLICE_X17Y57.F1      net (fanout=2)        0.546   cpu0_ialu_N72
+    SLICE_X17Y57.X       Tilo                  0.643   cpu0_ialu_N78
+                                                       cpu0_ialu_Result1_mux0006<10>231
+    SLICE_X23Y51.G1      net (fanout=4)        1.565   cpu0_ialu_N78
+    SLICE_X23Y51.Y       Tilo                  0.648   cpu0_ialu_N115
+                                                       cpu0_ialu_Result1_mux0006<10>301
+    SLICE_X23Y46.G2      net (fanout=3)        0.687   cpu0_ialu_N99
+    SLICE_X23Y46.Y       Tilo                  0.648   cpu0_ialu_N114
+                                                       cpu0_ialu_Result1_mux0006<10>321
+    SLICE_X23Y46.F3      net (fanout=5)        0.150   cpu0_ialu_N105
+    SLICE_X23Y46.X       Tilo                  0.643   cpu0_ialu_N114
+                                                       cpu0_ialu_Result1_mux0006<12>11
+    SLICE_X28Y43.SR      net (fanout=2)        1.452   cpu0_ialu_N114
+    SLICE_X28Y43.CLK     Tsrck                 0.867   cpu0_ialu_Result1<13>
+                                                       cpu0_ialu_Result1_13
+    -------------------------------------------------  ---------------------------
+    Total                                     27.659ns (11.460ns logic, 16.199ns route)
+                                                       (41.4% logic, 58.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.794ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu0_alu_op2_6 (FF)
+  Destination:          cpu0_ialu_Result1_13 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      27.368ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.088ns (0.640 - 0.728)
+  Source Clock:         Clk_BUFGP falling at 31.250ns
+  Destination Clock:    Clk_BUFGP rising at 62.500ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: cpu0_alu_op2_6 to cpu0_ialu_Result1_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y32.YQ      Tcko                  0.676   cpu0_alu_op2<7>
+                                                       cpu0_alu_op2_6
+    SLICE_X25Y54.F1      net (fanout=14)       2.865   cpu0_alu_op2<6>
+    SLICE_X25Y54.XB      Topxb                 1.285   cpu0_alu_op2_31_2
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_lut<6>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<6>
+    SLICE_X2Y70.G4       net (fanout=25)       4.277   cpu0_ialu_Result1_cmp_eq00111_wg_cy<6>
+    SLICE_X2Y70.Y        Tilo                  0.707   cpu0_ialu_Result1_cmp_eq0030
+                                                       cpu0_ialu_Result1_cmp_eq002911
+    SLICE_X2Y70.F4       net (fanout=18)       0.211   cpu0_ialu_N221
+    SLICE_X2Y70.X        Tilo                  0.692   cpu0_ialu_Result1_cmp_eq0030
+                                                       cpu0_ialu_Result1_cmp_eq00301
+    SLICE_X9Y61.F2       net (fanout=26)       1.629   cpu0_ialu_Result1_cmp_eq0030
+    SLICE_X9Y61.COUT     Topcyf                1.195   cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_lut<4>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<4>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+    SLICE_X9Y62.CIN      net (fanout=1)        0.000   cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+    SLICE_X9Y62.COUT     Tbyp                  0.130   cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<6>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+    SLICE_X14Y58.F2      net (fanout=2)        1.090   cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+    SLICE_X14Y58.X       Tilo                  0.692   N616
+                                                       cpu0_ialu_Result1_or000538_SW0
+    SLICE_X14Y59.G1      net (fanout=2)        0.202   N616
+    SLICE_X14Y59.Y       Tilo                  0.707   cpu0_ialu_N45
+                                                       cpu0_ialu_Result1_mux0006<10>5
+    SLICE_X14Y59.F3      net (fanout=5)        0.064   cpu0_ialu_N23
+    SLICE_X14Y59.X       Tilo                  0.692   cpu0_ialu_N45
+                                                       cpu0_ialu_Result1_mux0006<10>121
+    SLICE_X15Y57.G3      net (fanout=2)        0.650   cpu0_ialu_N45
+    SLICE_X15Y57.Y       Tilo                  0.648   cpu0_ialu_N59
+                                                       cpu0_ialu_Result1_mux0006<10>141
+    SLICE_X17Y57.G4      net (fanout=4)        0.459   cpu0_ialu_N51
+    SLICE_X17Y57.Y       Tilo                  0.648   cpu0_ialu_N78
+                                                       cpu0_ialu_Result1_mux0006<10>211
+    SLICE_X17Y57.F1      net (fanout=2)        0.546   cpu0_ialu_N72
+    SLICE_X17Y57.X       Tilo                  0.643   cpu0_ialu_N78
+                                                       cpu0_ialu_Result1_mux0006<10>231
+    SLICE_X23Y51.G1      net (fanout=4)        1.565   cpu0_ialu_N78
+    SLICE_X23Y51.Y       Tilo                  0.648   cpu0_ialu_N115
+                                                       cpu0_ialu_Result1_mux0006<10>301
+    SLICE_X23Y46.G2      net (fanout=3)        0.687   cpu0_ialu_N99
+    SLICE_X23Y46.Y       Tilo                  0.648   cpu0_ialu_N114
+                                                       cpu0_ialu_Result1_mux0006<10>321
+    SLICE_X23Y46.F3      net (fanout=5)        0.150   cpu0_ialu_N105
+    SLICE_X23Y46.X       Tilo                  0.643   cpu0_ialu_N114
+                                                       cpu0_ialu_Result1_mux0006<12>11
+    SLICE_X28Y43.SR      net (fanout=2)        1.452   cpu0_ialu_N114
+    SLICE_X28Y43.CLK     Tsrck                 0.867   cpu0_ialu_Result1<13>
+                                                       cpu0_ialu_Result1_13
+    -------------------------------------------------  ---------------------------
+    Total                                     27.368ns (11.521ns logic, 15.847ns route)
+                                                       (42.1% logic, 57.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.889ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu0_alu_op2_23 (FF)
+  Destination:          cpu0_ialu_Result1_13 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      27.403ns (Levels of Logic = 17)
+  Clock Path Skew:      0.042ns (0.301 - 0.259)
+  Source Clock:         Clk_BUFGP falling at 31.250ns
+  Destination Clock:    Clk_BUFGP rising at 62.500ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: cpu0_alu_op2_23 to cpu0_ialu_Result1_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y57.XQ      Tcko                  0.631   cpu0_alu_op2<23>
+                                                       cpu0_alu_op2_23
+    SLICE_X25Y51.F4      net (fanout=14)       2.188   cpu0_alu_op2<23>
+    SLICE_X25Y51.COUT    Topcyf                1.195   cpu0_ialu_Result1_cmp_eq00111_wg_cy<1>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_lut<0>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<0>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<1>
+    SLICE_X25Y52.CIN     net (fanout=1)        0.000   cpu0_ialu_Result1_cmp_eq00111_wg_cy<1>
+    SLICE_X25Y52.COUT    Tbyp                  0.130   cpu0_ialu_Result1_cmp_eq00111_wg_cy<3>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<2>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<3>
+    SLICE_X25Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_Result1_cmp_eq00111_wg_cy<3>
+    SLICE_X25Y53.COUT    Tbyp                  0.130   cpu0_ialu_Result1_cmp_eq00111_wg_cy<5>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<4>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<5>
+    SLICE_X25Y54.CIN     net (fanout=1)        0.000   cpu0_ialu_Result1_cmp_eq00111_wg_cy<5>
+    SLICE_X25Y54.XB      Tcinxb                0.296   cpu0_alu_op2_31_2
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<6>
+    SLICE_X2Y70.G4       net (fanout=25)       4.277   cpu0_ialu_Result1_cmp_eq00111_wg_cy<6>
+    SLICE_X2Y70.Y        Tilo                  0.707   cpu0_ialu_Result1_cmp_eq0030
+                                                       cpu0_ialu_Result1_cmp_eq002911
+    SLICE_X3Y71.G1       net (fanout=18)       0.337   cpu0_ialu_N221
+    SLICE_X3Y71.Y        Tilo                  0.648   cpu0_ialu_Result1_mux0006<21>188
+                                                       cpu0_ialu_Result1_cmp_eq00292
+    SLICE_X9Y61.G2       net (fanout=28)       1.855   cpu0_ialu_Result1_cmp_eq0029
+    SLICE_X9Y61.COUT     Topcyg                1.178   cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_lut<5>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+    SLICE_X9Y62.CIN      net (fanout=1)        0.000   cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+    SLICE_X9Y62.COUT     Tbyp                  0.130   cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<6>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+    SLICE_X14Y58.F2      net (fanout=2)        1.090   cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+    SLICE_X14Y58.X       Tilo                  0.692   N616
+                                                       cpu0_ialu_Result1_or000538_SW0
+    SLICE_X14Y59.G1      net (fanout=2)        0.202   N616
+    SLICE_X14Y59.Y       Tilo                  0.707   cpu0_ialu_N45
+                                                       cpu0_ialu_Result1_mux0006<10>5
+    SLICE_X14Y59.F3      net (fanout=5)        0.064   cpu0_ialu_N23
+    SLICE_X14Y59.X       Tilo                  0.692   cpu0_ialu_N45
+                                                       cpu0_ialu_Result1_mux0006<10>121
+    SLICE_X15Y57.G3      net (fanout=2)        0.650   cpu0_ialu_N45
+    SLICE_X15Y57.Y       Tilo                  0.648   cpu0_ialu_N59
+                                                       cpu0_ialu_Result1_mux0006<10>141
+    SLICE_X17Y57.G4      net (fanout=4)        0.459   cpu0_ialu_N51
+    SLICE_X17Y57.Y       Tilo                  0.648   cpu0_ialu_N78
+                                                       cpu0_ialu_Result1_mux0006<10>211
+    SLICE_X17Y57.F1      net (fanout=2)        0.546   cpu0_ialu_N72
+    SLICE_X17Y57.X       Tilo                  0.643   cpu0_ialu_N78
+                                                       cpu0_ialu_Result1_mux0006<10>231
+    SLICE_X23Y51.G1      net (fanout=4)        1.565   cpu0_ialu_N78
+    SLICE_X23Y51.Y       Tilo                  0.648   cpu0_ialu_N115
+                                                       cpu0_ialu_Result1_mux0006<10>301
+    SLICE_X23Y46.G2      net (fanout=3)        0.687   cpu0_ialu_N99
+    SLICE_X23Y46.Y       Tilo                  0.648   cpu0_ialu_N114
+                                                       cpu0_ialu_Result1_mux0006<10>321
+    SLICE_X23Y46.F3      net (fanout=5)        0.150   cpu0_ialu_N105
+    SLICE_X23Y46.X       Tilo                  0.643   cpu0_ialu_N114
+                                                       cpu0_ialu_Result1_mux0006<12>11
+    SLICE_X28Y43.SR      net (fanout=2)        1.452   cpu0_ialu_N114
+    SLICE_X28Y43.CLK     Tsrck                 0.867   cpu0_ialu_Result1<13>
+                                                       cpu0_ialu_Result1_13
+    -------------------------------------------------  ---------------------------
+    Total                                     27.403ns (11.881ns logic, 15.522ns route)
+                                                       (43.4% logic, 56.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cpu0_ialu_Result1_19 (SLICE_X34Y46.SR), 5654 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.631ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu0_alu_op2_6 (FF)
+  Destination:          cpu0_ialu_Result1_19 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      27.476ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.143ns (0.585 - 0.728)
+  Source Clock:         Clk_BUFGP falling at 31.250ns
+  Destination Clock:    Clk_BUFGP rising at 62.500ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: cpu0_alu_op2_6 to cpu0_ialu_Result1_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y32.YQ      Tcko                  0.676   cpu0_alu_op2<7>
+                                                       cpu0_alu_op2_6
+    SLICE_X25Y54.F1      net (fanout=14)       2.865   cpu0_alu_op2<6>
+    SLICE_X25Y54.XB      Topxb                 1.285   cpu0_alu_op2_31_2
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_lut<6>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<6>
+    SLICE_X2Y70.G4       net (fanout=25)       4.277   cpu0_ialu_Result1_cmp_eq00111_wg_cy<6>
+    SLICE_X2Y70.Y        Tilo                  0.707   cpu0_ialu_Result1_cmp_eq0030
+                                                       cpu0_ialu_Result1_cmp_eq002911
+    SLICE_X3Y71.G1       net (fanout=18)       0.337   cpu0_ialu_N221
+    SLICE_X3Y71.Y        Tilo                  0.648   cpu0_ialu_Result1_mux0006<21>188
+                                                       cpu0_ialu_Result1_cmp_eq00292
+    SLICE_X9Y61.G2       net (fanout=28)       1.855   cpu0_ialu_Result1_cmp_eq0029
+    SLICE_X9Y61.COUT     Topcyg                1.178   cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_lut<5>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+    SLICE_X9Y62.CIN      net (fanout=1)        0.000   cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+    SLICE_X9Y62.COUT     Tbyp                  0.130   cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<6>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+    SLICE_X14Y58.F2      net (fanout=2)        1.090   cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+    SLICE_X14Y58.X       Tilo                  0.692   N616
+                                                       cpu0_ialu_Result1_or000538_SW0
+    SLICE_X14Y59.G1      net (fanout=2)        0.202   N616
+    SLICE_X14Y59.Y       Tilo                  0.707   cpu0_ialu_N45
+                                                       cpu0_ialu_Result1_mux0006<10>5
+    SLICE_X14Y59.F3      net (fanout=5)        0.064   cpu0_ialu_N23
+    SLICE_X14Y59.X       Tilo                  0.692   cpu0_ialu_N45
+                                                       cpu0_ialu_Result1_mux0006<10>121
+    SLICE_X15Y57.G3      net (fanout=2)        0.650   cpu0_ialu_N45
+    SLICE_X15Y57.Y       Tilo                  0.648   cpu0_ialu_N59
+                                                       cpu0_ialu_Result1_mux0006<10>141
+    SLICE_X17Y57.G4      net (fanout=4)        0.459   cpu0_ialu_N51
+    SLICE_X17Y57.Y       Tilo                  0.648   cpu0_ialu_N78
+                                                       cpu0_ialu_Result1_mux0006<10>211
+    SLICE_X17Y57.F1      net (fanout=2)        0.546   cpu0_ialu_N72
+    SLICE_X17Y57.X       Tilo                  0.643   cpu0_ialu_N78
+                                                       cpu0_ialu_Result1_mux0006<10>231
+    SLICE_X23Y48.G1      net (fanout=4)        1.500   cpu0_ialu_N78
+    SLICE_X23Y48.Y       Tilo                  0.648   cpu0_ialu_Result1_mux0006<18>456
+                                                       cpu0_ialu_Result1_mux0006<10>261
+    SLICE_X26Y62.F4      net (fanout=3)        0.986   cpu0_ialu_N86
+    SLICE_X26Y62.X       Tilo                  0.692   cpu0_ialu_Result1_mux0006<19>460
+                                                       cpu0_ialu_Result1_mux0006<19>460
+    SLICE_X34Y46.SR      net (fanout=1)        1.784   cpu0_ialu_Result1_mux0006<19>460
+    SLICE_X34Y46.CLK     Tsrck                 0.867   cpu0_ialu_Result1<19>
+                                                       cpu0_ialu_Result1_19
+    -------------------------------------------------  ---------------------------
+    Total                                     27.476ns (10.861ns logic, 16.615ns route)
+                                                       (39.5% logic, 60.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.922ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu0_alu_op2_6 (FF)
+  Destination:          cpu0_ialu_Result1_19 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      27.185ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.143ns (0.585 - 0.728)
+  Source Clock:         Clk_BUFGP falling at 31.250ns
+  Destination Clock:    Clk_BUFGP rising at 62.500ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: cpu0_alu_op2_6 to cpu0_ialu_Result1_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y32.YQ      Tcko                  0.676   cpu0_alu_op2<7>
+                                                       cpu0_alu_op2_6
+    SLICE_X25Y54.F1      net (fanout=14)       2.865   cpu0_alu_op2<6>
+    SLICE_X25Y54.XB      Topxb                 1.285   cpu0_alu_op2_31_2
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_lut<6>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<6>
+    SLICE_X2Y70.G4       net (fanout=25)       4.277   cpu0_ialu_Result1_cmp_eq00111_wg_cy<6>
+    SLICE_X2Y70.Y        Tilo                  0.707   cpu0_ialu_Result1_cmp_eq0030
+                                                       cpu0_ialu_Result1_cmp_eq002911
+    SLICE_X2Y70.F4       net (fanout=18)       0.211   cpu0_ialu_N221
+    SLICE_X2Y70.X        Tilo                  0.692   cpu0_ialu_Result1_cmp_eq0030
+                                                       cpu0_ialu_Result1_cmp_eq00301
+    SLICE_X9Y61.F2       net (fanout=26)       1.629   cpu0_ialu_Result1_cmp_eq0030
+    SLICE_X9Y61.COUT     Topcyf                1.195   cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_lut<4>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<4>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+    SLICE_X9Y62.CIN      net (fanout=1)        0.000   cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+    SLICE_X9Y62.COUT     Tbyp                  0.130   cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<6>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+    SLICE_X14Y58.F2      net (fanout=2)        1.090   cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+    SLICE_X14Y58.X       Tilo                  0.692   N616
+                                                       cpu0_ialu_Result1_or000538_SW0
+    SLICE_X14Y59.G1      net (fanout=2)        0.202   N616
+    SLICE_X14Y59.Y       Tilo                  0.707   cpu0_ialu_N45
+                                                       cpu0_ialu_Result1_mux0006<10>5
+    SLICE_X14Y59.F3      net (fanout=5)        0.064   cpu0_ialu_N23
+    SLICE_X14Y59.X       Tilo                  0.692   cpu0_ialu_N45
+                                                       cpu0_ialu_Result1_mux0006<10>121
+    SLICE_X15Y57.G3      net (fanout=2)        0.650   cpu0_ialu_N45
+    SLICE_X15Y57.Y       Tilo                  0.648   cpu0_ialu_N59
+                                                       cpu0_ialu_Result1_mux0006<10>141
+    SLICE_X17Y57.G4      net (fanout=4)        0.459   cpu0_ialu_N51
+    SLICE_X17Y57.Y       Tilo                  0.648   cpu0_ialu_N78
+                                                       cpu0_ialu_Result1_mux0006<10>211
+    SLICE_X17Y57.F1      net (fanout=2)        0.546   cpu0_ialu_N72
+    SLICE_X17Y57.X       Tilo                  0.643   cpu0_ialu_N78
+                                                       cpu0_ialu_Result1_mux0006<10>231
+    SLICE_X23Y48.G1      net (fanout=4)        1.500   cpu0_ialu_N78
+    SLICE_X23Y48.Y       Tilo                  0.648   cpu0_ialu_Result1_mux0006<18>456
+                                                       cpu0_ialu_Result1_mux0006<10>261
+    SLICE_X26Y62.F4      net (fanout=3)        0.986   cpu0_ialu_N86
+    SLICE_X26Y62.X       Tilo                  0.692   cpu0_ialu_Result1_mux0006<19>460
+                                                       cpu0_ialu_Result1_mux0006<19>460
+    SLICE_X34Y46.SR      net (fanout=1)        1.784   cpu0_ialu_Result1_mux0006<19>460
+    SLICE_X34Y46.CLK     Tsrck                 0.867   cpu0_ialu_Result1<19>
+                                                       cpu0_ialu_Result1_19
+    -------------------------------------------------  ---------------------------
+    Total                                     27.185ns (10.922ns logic, 16.263ns route)
+                                                       (40.2% logic, 59.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     4.017ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu0_alu_op2_23 (FF)
+  Destination:          cpu0_ialu_Result1_19 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      27.220ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.013ns (0.246 - 0.259)
+  Source Clock:         Clk_BUFGP falling at 31.250ns
+  Destination Clock:    Clk_BUFGP rising at 62.500ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: cpu0_alu_op2_23 to cpu0_ialu_Result1_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y57.XQ      Tcko                  0.631   cpu0_alu_op2<23>
+                                                       cpu0_alu_op2_23
+    SLICE_X25Y51.F4      net (fanout=14)       2.188   cpu0_alu_op2<23>
+    SLICE_X25Y51.COUT    Topcyf                1.195   cpu0_ialu_Result1_cmp_eq00111_wg_cy<1>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_lut<0>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<0>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<1>
+    SLICE_X25Y52.CIN     net (fanout=1)        0.000   cpu0_ialu_Result1_cmp_eq00111_wg_cy<1>
+    SLICE_X25Y52.COUT    Tbyp                  0.130   cpu0_ialu_Result1_cmp_eq00111_wg_cy<3>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<2>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<3>
+    SLICE_X25Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_Result1_cmp_eq00111_wg_cy<3>
+    SLICE_X25Y53.COUT    Tbyp                  0.130   cpu0_ialu_Result1_cmp_eq00111_wg_cy<5>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<4>
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<5>
+    SLICE_X25Y54.CIN     net (fanout=1)        0.000   cpu0_ialu_Result1_cmp_eq00111_wg_cy<5>
+    SLICE_X25Y54.XB      Tcinxb                0.296   cpu0_alu_op2_31_2
+                                                       cpu0_ialu_Result1_cmp_eq00111_wg_cy<6>
+    SLICE_X2Y70.G4       net (fanout=25)       4.277   cpu0_ialu_Result1_cmp_eq00111_wg_cy<6>
+    SLICE_X2Y70.Y        Tilo                  0.707   cpu0_ialu_Result1_cmp_eq0030
+                                                       cpu0_ialu_Result1_cmp_eq002911
+    SLICE_X3Y71.G1       net (fanout=18)       0.337   cpu0_ialu_N221
+    SLICE_X3Y71.Y        Tilo                  0.648   cpu0_ialu_Result1_mux0006<21>188
+                                                       cpu0_ialu_Result1_cmp_eq00292
+    SLICE_X9Y61.G2       net (fanout=28)       1.855   cpu0_ialu_Result1_cmp_eq0029
+    SLICE_X9Y61.COUT     Topcyg                1.178   cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_lut<5>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+    SLICE_X9Y62.CIN      net (fanout=1)        0.000   cpu0_ialu_Result1_mux0006<0>41_wg_cy<5>
+    SLICE_X9Y62.COUT     Tbyp                  0.130   cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<6>
+                                                       cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+    SLICE_X14Y58.F2      net (fanout=2)        1.090   cpu0_ialu_Result1_mux0006<0>41_wg_cy<7>
+    SLICE_X14Y58.X       Tilo                  0.692   N616
+                                                       cpu0_ialu_Result1_or000538_SW0
+    SLICE_X14Y59.G1      net (fanout=2)        0.202   N616
+    SLICE_X14Y59.Y       Tilo                  0.707   cpu0_ialu_N45
+                                                       cpu0_ialu_Result1_mux0006<10>5
+    SLICE_X14Y59.F3      net (fanout=5)        0.064   cpu0_ialu_N23
+    SLICE_X14Y59.X       Tilo                  0.692   cpu0_ialu_N45
+                                                       cpu0_ialu_Result1_mux0006<10>121
+    SLICE_X15Y57.G3      net (fanout=2)        0.650   cpu0_ialu_N45
+    SLICE_X15Y57.Y       Tilo                  0.648   cpu0_ialu_N59
+                                                       cpu0_ialu_Result1_mux0006<10>141
+    SLICE_X17Y57.G4      net (fanout=4)        0.459   cpu0_ialu_N51
+    SLICE_X17Y57.Y       Tilo                  0.648   cpu0_ialu_N78
+                                                       cpu0_ialu_Result1_mux0006<10>211
+    SLICE_X17Y57.F1      net (fanout=2)        0.546   cpu0_ialu_N72
+    SLICE_X17Y57.X       Tilo                  0.643   cpu0_ialu_N78
+                                                       cpu0_ialu_Result1_mux0006<10>231
+    SLICE_X23Y48.G1      net (fanout=4)        1.500   cpu0_ialu_N78
+    SLICE_X23Y48.Y       Tilo                  0.648   cpu0_ialu_Result1_mux0006<18>456
+                                                       cpu0_ialu_Result1_mux0006<10>261
+    SLICE_X26Y62.F4      net (fanout=3)        0.986   cpu0_ialu_N86
+    SLICE_X26Y62.X       Tilo                  0.692   cpu0_ialu_Result1_mux0006<19>460
+                                                       cpu0_ialu_Result1_mux0006<19>460
+    SLICE_X34Y46.SR      net (fanout=1)        1.784   cpu0_ialu_Result1_mux0006<19>460
+    SLICE_X34Y46.CLK     Tsrck                 0.867   cpu0_ialu_Result1<19>
+                                                       cpu0_ialu_Result1_19
+    -------------------------------------------------  ---------------------------
+    Total                                     27.220ns (11.282ns logic, 15.938ns route)
+                                                       (41.4% logic, 58.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cpu0_ialu_Result2_29 (SLICE_X41Y76.G3), 85334123 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.717ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu0_alu_op2_0_1 (FF)
+  Destination:          cpu0_ialu_Result2_29 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      27.336ns (Levels of Logic = 34)
+  Clock Path Skew:      -0.197ns (0.580 - 0.777)
+  Source Clock:         Clk_BUFGP falling at 31.250ns
+  Destination Clock:    Clk_BUFGP rising at 62.500ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: cpu0_alu_op2_0_1 to cpu0_ialu_Result2_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X21Y37.XQ      Tcko                  0.591   cpu0_alu_op2_0_1
+                                                       cpu0_alu_op2_0_1
+    SLICE_X39Y46.F1      net (fanout=5)        2.177   cpu0_alu_op2_0_1
+    SLICE_X39Y46.COUT    Topcyf                1.195   cpu0_ialu_mult_newOperand2_addsub0000<0>
+                                                       cpu0_alu_op2_0_1_rt
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<0>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<1>
+    SLICE_X39Y47.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<1>
+    SLICE_X39Y47.COUT    Tbyp                  0.130   cpu0_ialu_mult_newOperand2_addsub0000<2>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<2>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<3>
+    SLICE_X39Y48.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<3>
+    SLICE_X39Y48.COUT    Tbyp                  0.130   cpu0_ialu_mult_newOperand2_addsub0000<4>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<4>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<5>
+    SLICE_X39Y49.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<5>
+    SLICE_X39Y49.COUT    Tbyp                  0.130   cpu0_ialu_mult_newOperand2_addsub0000<6>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<6>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<7>
+    SLICE_X39Y50.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<7>
+    SLICE_X39Y50.COUT    Tbyp                  0.130   cpu0_ialu_mult_newOperand2_addsub0000<8>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<8>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<9>
+    SLICE_X39Y51.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<9>
+    SLICE_X39Y51.COUT    Tbyp                  0.130   cpu0_ialu_mult_newOperand2_addsub0000<10>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<10>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<11>
+    SLICE_X39Y52.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<11>
+    SLICE_X39Y52.COUT    Tbyp                  0.130   cpu0_ialu_mult_newOperand2_addsub0000<12>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<12>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<13>
+    SLICE_X39Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<13>
+    SLICE_X39Y53.Y       Tciny                 0.864   cpu0_ialu_mult_newOperand2_addsub0000<14>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<14>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_xor<15>
+    SLICE_X38Y59.G4      net (fanout=1)        0.668   cpu0_ialu_mult_newOperand2_addsub0000<15>
+    SLICE_X38Y59.Y       Tilo                  0.707   cpu0_ialu_Result2_mux0009<15>0
+                                                       cpu0_ialu_mult_Mmux_newOperand2141
+    MULT18X18_X1Y4.B15   net (fanout=1)        1.475   cpu0_ialu_mult_newOperand2<15>
+    MULT18X18_X1Y4.P19   Tmult                 4.873   cpu0_ialu_mult_Mmult_combinedResult_submult_0
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_0
-    SLICE_X43Y35.G1      net (fanout=1)        0.741   cpu0_ialu_mult_Mmult_combinedResult_submult_0_P_to_Adder_A_18
-    SLICE_X43Y35.COUT    Topcyg                1.178   cpu0_ialu_mult_Mmult_combinedResult_submult_0_17
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_lut<18>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_19
+    SLICE_X42Y42.F2      net (fanout=1)        1.497   cpu0_ialu_mult_Mmult_combinedResult_submult_0_P_to_Adder_A_19
+    SLICE_X42Y42.COUT    Topcyf                1.305   cpu0_ialu_mult_Mmult_combinedResult_submult_0_19
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_lut<19>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<19>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_21
+    SLICE_X42Y43.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
+    SLICE_X42Y43.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_21
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<21>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_23
+    SLICE_X42Y44.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
+    SLICE_X42Y44.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_23
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<23>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_25
+    SLICE_X42Y45.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
+    SLICE_X42Y45.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_25
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<25>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_27
+    SLICE_X42Y46.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
+    SLICE_X42Y46.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_27
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<27>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.Y       Tciny                 0.864   cpu0_ialu_mult_Mmult_combinedResult_submult_0_29
+    SLICE_X42Y47.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
+    SLICE_X42Y47.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_29
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_xor<30>
-    SLICE_X41Y48.G2      net (fanout=1)        1.532   cpu0_ialu_mult_Mmult_combinedResult_submult_0_30
-    SLICE_X41Y48.COUT    Topcyg                1.178   cpu0_ialu_mult_combinedResult<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_lut<30>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<36>
-    SLICE_X41Y52.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<36>
-    SLICE_X41Y52.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<37>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<37>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<38>
-    SLICE_X41Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<38>
-    SLICE_X41Y53.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<39>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<39>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<40>
-    SLICE_X41Y54.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<40>
-    SLICE_X41Y54.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<41>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<41>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<30>
+    SLICE_X42Y48.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<30>
+    SLICE_X42Y48.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_31
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<31>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<32>
+    SLICE_X42Y49.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<32>
+    SLICE_X42Y49.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_33
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<33>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<34>
+    SLICE_X42Y50.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<34>
+    SLICE_X42Y50.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_35
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<35>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<36>
+    SLICE_X42Y51.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<36>
+    SLICE_X42Y51.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_37
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<37>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<38>
+    SLICE_X42Y52.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<38>
+    SLICE_X42Y52.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_39
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<39>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<40>
+    SLICE_X42Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<40>
+    SLICE_X42Y53.Y       Tciny                 0.902   cpu0_ialu_mult_Mmult_combinedResult_submult_0_41
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<41>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_xor<42>
+    SLICE_X43Y58.G1      net (fanout=1)        1.264   cpu0_ialu_mult_Mmult_combinedResult_submult_0_42
+    SLICE_X43Y58.COUT    Topcyg                1.178   cpu0_ialu_mult_combinedResult<41>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_lut<42>
                                                        cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<42>
-    SLICE_X41Y55.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<42>
-    SLICE_X41Y55.Y       Tciny                 0.864   cpu0_ialu_mult_combinedResult<43>
+    SLICE_X43Y59.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<42>
+    SLICE_X43Y59.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<43>
                                                        cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<43>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_xor<44>
-    SLICE_X39Y56.F1      net (fanout=2)        0.583   cpu0_ialu_mult_combinedResult<44>
-    SLICE_X39Y56.COUT    Topcyf                1.195   cpu0_ialu_mult_convertedResult<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_not0000<44>1_INV_0
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<53>
-    SLICE_X39Y61.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<53>
-    SLICE_X39Y61.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<54>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<54>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<55>
-    SLICE_X39Y62.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<55>
-    SLICE_X39Y62.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<56>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<56>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<57>
-    SLICE_X39Y63.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<57>
-    SLICE_X39Y63.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<58>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<44>
+    SLICE_X43Y60.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<44>
+    SLICE_X43Y60.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<45>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<45>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<46>
+    SLICE_X43Y61.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<46>
+    SLICE_X43Y61.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<47>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<47>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<48>
+    SLICE_X43Y62.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<48>
+    SLICE_X43Y62.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<49>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<49>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<50>
+    SLICE_X43Y63.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<50>
+    SLICE_X43Y63.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<51>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<51>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<52>
+    SLICE_X43Y64.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<52>
+    SLICE_X43Y64.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<53>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<53>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<54>
+    SLICE_X43Y65.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<54>
+    SLICE_X43Y65.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<55>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<55>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<56>
+    SLICE_X43Y66.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<56>
+    SLICE_X43Y66.Y       Tciny                 0.864   cpu0_ialu_mult_combinedResult<57>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<57>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_xor<58>
+    SLICE_X41Y66.F1      net (fanout=2)        0.519   cpu0_ialu_mult_combinedResult<58>
+    SLICE_X41Y66.COUT    Topcyf                1.195   cpu0_ialu_mult_convertedResult<58>
+                                                       cpu0_ialu_mult_Madd_convertedResult_not0000<58>1_INV_0
                                                        cpu0_ialu_mult_Madd_convertedResult_cy<58>
                                                        cpu0_ialu_mult_Madd_convertedResult_cy<59>
-    SLICE_X39Y64.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<59>
-    SLICE_X39Y64.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<60>
+    SLICE_X41Y67.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<59>
+    SLICE_X41Y67.Y       Tciny                 0.864   cpu0_ialu_mult_convertedResult<60>
                                                        cpu0_ialu_mult_Madd_convertedResult_cy<60>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<61>
-    SLICE_X39Y65.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<61>
-    SLICE_X39Y65.Y       Tciny                 0.864   cpu0_ialu_mult_convertedResult<62>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<62>
-                                                       cpu0_ialu_mult_Madd_convertedResult_xor<63>
-    SLICE_X38Y61.G4      net (fanout=1)        0.623   cpu0_ialu_mult_convertedResult<63>
-    SLICE_X38Y61.CLK     Tgck                  1.097   cpu0_ialu_Result2<31>
-                                                       cpu0_ialu_Result2_mux0009<31>301_F
-                                                       cpu0_ialu_Result2_mux0009<31>301
-                                                       cpu0_ialu_Result2_31
+                                                       cpu0_ialu_mult_Madd_convertedResult_xor<61>
+    SLICE_X41Y76.G3      net (fanout=1)        0.945   cpu0_ialu_mult_convertedResult<61>
+    SLICE_X41Y76.CLK     Tgck                  1.003   cpu0_ialu_Result2<29>
+                                                       cpu0_ialu_Result2_mux0009<29>301_F
+                                                       cpu0_ialu_Result2_mux0009<29>301
+                                                       cpu0_ialu_Result2_29
     -------------------------------------------------  ---------------------------
-    Total                                     29.970ns (17.225ns logic, 12.745ns route)
-                                                       (57.5% logic, 42.5% route)
+    Total                                     27.336ns (18.791ns logic, 8.545ns route)
+                                                       (68.7% logic, 31.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     1.191ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu0_alu_control_4 (FF)
-  Destination:          cpu0_ialu_Result2_31 (FF)
+Slack (setup path):     3.720ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu0_alu_op2_0_1 (FF)
+  Destination:          cpu0_ialu_Result2_29 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      29.962ns (Levels of Logic = 30)
-  Clock Path Skew:      -0.097ns (0.549 - 0.646)
+  Data Path Delay:      27.333ns (Levels of Logic = 35)
+  Clock Path Skew:      -0.197ns (0.580 - 0.777)
   Source Clock:         Clk_BUFGP falling at 31.250ns
   Destination Clock:    Clk_BUFGP rising at 62.500ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: cpu0_alu_control_4 to cpu0_ialu_Result2_31
+  Maximum Data Path: cpu0_alu_op2_0_1 to cpu0_ialu_Result2_29
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y74.YQ      Tcko                  0.580   cpu0_alu_control<5>
-                                                       cpu0_alu_control_4
-    SLICE_X42Y52.G1      net (fanout=8)        4.080   cpu0_alu_control<4>
-    SLICE_X42Y52.Y       Tilo                  0.707   cpu0_ialu_mulIsSigned
-                                                       cpu0_ialu_divIsSigned_cmp_eq000011_1
-    SLICE_X44Y39.G1      net (fanout=3)        1.407   cpu0_ialu_divIsSigned_cmp_eq000011
-    SLICE_X44Y39.Y       Tilo                  0.707   cpu0_ialu_mult_newOperand1<0>
-                                                       cpu0_ialu_mult_Mmux_newOperand11011
-    SLICE_X43Y30.G4      net (fanout=31)       2.899   cpu0_ialu_mult_N11
-    SLICE_X43Y30.Y       Tilo                  0.648   cpu0_ialu_mult_newOperand1<5>
-                                                       cpu0_ialu_mult_Mmux_newOperand1461
-    MULT18X18_X1Y4.A2    net (fanout=2)        0.880   cpu0_ialu_mult_newOperand1<2>
-    MULT18X18_X1Y4.P18   Tmult                 4.873   cpu0_ialu_mult_Mmult_combinedResult_submult_0
+    SLICE_X21Y37.XQ      Tcko                  0.591   cpu0_alu_op2_0_1
+                                                       cpu0_alu_op2_0_1
+    SLICE_X39Y46.F1      net (fanout=5)        2.177   cpu0_alu_op2_0_1
+    SLICE_X39Y46.COUT    Topcyf                1.195   cpu0_ialu_mult_newOperand2_addsub0000<0>
+                                                       cpu0_alu_op2_0_1_rt
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<0>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<1>
+    SLICE_X39Y47.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<1>
+    SLICE_X39Y47.COUT    Tbyp                  0.130   cpu0_ialu_mult_newOperand2_addsub0000<2>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<2>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<3>
+    SLICE_X39Y48.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<3>
+    SLICE_X39Y48.COUT    Tbyp                  0.130   cpu0_ialu_mult_newOperand2_addsub0000<4>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<4>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<5>
+    SLICE_X39Y49.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<5>
+    SLICE_X39Y49.COUT    Tbyp                  0.130   cpu0_ialu_mult_newOperand2_addsub0000<6>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<6>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<7>
+    SLICE_X39Y50.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<7>
+    SLICE_X39Y50.COUT    Tbyp                  0.130   cpu0_ialu_mult_newOperand2_addsub0000<8>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<8>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<9>
+    SLICE_X39Y51.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<9>
+    SLICE_X39Y51.COUT    Tbyp                  0.130   cpu0_ialu_mult_newOperand2_addsub0000<10>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<10>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<11>
+    SLICE_X39Y52.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<11>
+    SLICE_X39Y52.COUT    Tbyp                  0.130   cpu0_ialu_mult_newOperand2_addsub0000<12>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<12>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<13>
+    SLICE_X39Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<13>
+    SLICE_X39Y53.COUT    Tbyp                  0.130   cpu0_ialu_mult_newOperand2_addsub0000<14>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<14>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<15>
+    SLICE_X39Y54.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<15>
+    SLICE_X39Y54.X       Tcinx                 0.604   cpu0_ialu_mult_newOperand2_addsub0000<16>
+                                                       cpu0_ialu_mult_Madd_newOperand2_addsub0000_xor<16>
+    SLICE_X42Y57.G2      net (fanout=1)        0.793   cpu0_ialu_mult_newOperand2_addsub0000<16>
+    SLICE_X42Y57.Y       Tilo                  0.707   cpu0_ialu_Result2_mux0009<16>0
+                                                       cpu0_ialu_mult_Mmux_newOperand2161
+    MULT18X18_X1Y4.B16   net (fanout=1)        1.477   cpu0_ialu_mult_newOperand2<16>
+    MULT18X18_X1Y4.P19   Tmult                 4.873   cpu0_ialu_mult_Mmult_combinedResult_submult_0
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_0
-    SLICE_X43Y35.G1      net (fanout=1)        0.741   cpu0_ialu_mult_Mmult_combinedResult_submult_0_P_to_Adder_A_18
-    SLICE_X43Y35.COUT    Topcyg                1.178   cpu0_ialu_mult_Mmult_combinedResult_submult_0_17
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_lut<18>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_19
+    SLICE_X42Y42.F2      net (fanout=1)        1.497   cpu0_ialu_mult_Mmult_combinedResult_submult_0_P_to_Adder_A_19
+    SLICE_X42Y42.COUT    Topcyf                1.305   cpu0_ialu_mult_Mmult_combinedResult_submult_0_19
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_lut<19>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<19>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_21
+    SLICE_X42Y43.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
+    SLICE_X42Y43.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_21
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<21>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_23
+    SLICE_X42Y44.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
+    SLICE_X42Y44.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_23
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<23>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_25
+    SLICE_X42Y45.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
+    SLICE_X42Y45.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_25
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<25>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_27
+    SLICE_X42Y46.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
+    SLICE_X42Y46.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_27
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<27>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.Y       Tciny                 0.864   cpu0_ialu_mult_Mmult_combinedResult_submult_0_29
+    SLICE_X42Y47.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
+    SLICE_X42Y47.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_29
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_xor<30>
-    SLICE_X41Y48.G2      net (fanout=1)        1.532   cpu0_ialu_mult_Mmult_combinedResult_submult_0_30
-    SLICE_X41Y48.COUT    Topcyg                1.178   cpu0_ialu_mult_combinedResult<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_lut<30>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<36>
-    SLICE_X41Y52.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<36>
-    SLICE_X41Y52.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<37>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<37>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<38>
-    SLICE_X41Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<38>
-    SLICE_X41Y53.Y       Tciny                 0.864   cpu0_ialu_mult_combinedResult<39>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<39>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_xor<40>
-    SLICE_X39Y54.F1      net (fanout=2)        0.575   cpu0_ialu_mult_combinedResult<40>
-    SLICE_X39Y54.COUT    Topcyf                1.195   cpu0_ialu_mult_convertedResult<40>
-                                                       cpu0_ialu_mult_Madd_convertedResult_not0000<40>1_INV_0
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<40>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<41>
-    SLICE_X39Y55.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<41>
-    SLICE_X39Y55.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<42>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<42>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<43>
-    SLICE_X39Y56.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<43>
-    SLICE_X39Y56.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<53>
-    SLICE_X39Y61.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<53>
-    SLICE_X39Y61.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<54>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<54>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<55>
-    SLICE_X39Y62.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<55>
-    SLICE_X39Y62.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<56>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<56>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<57>
-    SLICE_X39Y63.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<57>
-    SLICE_X39Y63.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<58>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<58>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<59>
-    SLICE_X39Y64.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<59>
-    SLICE_X39Y64.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<60>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<60>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<61>
-    SLICE_X39Y65.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<61>
-    SLICE_X39Y65.Y       Tciny                 0.864   cpu0_ialu_mult_convertedResult<62>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<62>
-                                                       cpu0_ialu_mult_Madd_convertedResult_xor<63>
-    SLICE_X38Y61.G4      net (fanout=1)        0.623   cpu0_ialu_mult_convertedResult<63>
-    SLICE_X38Y61.CLK     Tgck                  1.097   cpu0_ialu_Result2<31>
-                                                       cpu0_ialu_Result2_mux0009<31>301_F
-                                                       cpu0_ialu_Result2_mux0009<31>301
-                                                       cpu0_ialu_Result2_31
-    -------------------------------------------------  ---------------------------
-    Total                                     29.962ns (17.225ns logic, 12.737ns route)
-                                                       (57.5% logic, 42.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     1.204ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu0_alu_control_4 (FF)
-  Destination:          cpu0_ialu_Result2_31 (FF)
-  Requirement:          31.250ns
-  Data Path Delay:      29.949ns (Levels of Logic = 30)
-  Clock Path Skew:      -0.097ns (0.549 - 0.646)
-  Source Clock:         Clk_BUFGP falling at 31.250ns
-  Destination Clock:    Clk_BUFGP rising at 62.500ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: cpu0_alu_control_4 to cpu0_ialu_Result2_31
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X13Y74.YQ      Tcko                  0.580   cpu0_alu_control<5>
-                                                       cpu0_alu_control_4
-    SLICE_X42Y52.G1      net (fanout=8)        4.080   cpu0_alu_control<4>
-    SLICE_X42Y52.Y       Tilo                  0.707   cpu0_ialu_mulIsSigned
-                                                       cpu0_ialu_divIsSigned_cmp_eq000011_1
-    SLICE_X44Y39.G1      net (fanout=3)        1.407   cpu0_ialu_divIsSigned_cmp_eq000011
-    SLICE_X44Y39.Y       Tilo                  0.707   cpu0_ialu_mult_newOperand1<0>
-                                                       cpu0_ialu_mult_Mmux_newOperand11011
-    SLICE_X43Y30.G4      net (fanout=31)       2.899   cpu0_ialu_mult_N11
-    SLICE_X43Y30.Y       Tilo                  0.648   cpu0_ialu_mult_newOperand1<5>
-                                                       cpu0_ialu_mult_Mmux_newOperand1461
-    MULT18X18_X1Y4.A2    net (fanout=2)        0.880   cpu0_ialu_mult_newOperand1<2>
-    MULT18X18_X1Y4.P18   Tmult                 4.873   cpu0_ialu_mult_Mmult_combinedResult_submult_0
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_0
-    SLICE_X43Y35.G1      net (fanout=1)        0.741   cpu0_ialu_mult_Mmult_combinedResult_submult_0_P_to_Adder_A_18
-    SLICE_X43Y35.COUT    Topcyg                1.178   cpu0_ialu_mult_Mmult_combinedResult_submult_0_17
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_lut<18>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_19
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<19>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_21
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<21>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_23
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<23>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_25
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<25>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_27
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<27>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.Y       Tciny                 0.864   cpu0_ialu_mult_Mmult_combinedResult_submult_0_29
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_xor<30>
-    SLICE_X41Y48.G2      net (fanout=1)        1.532   cpu0_ialu_mult_Mmult_combinedResult_submult_0_30
-    SLICE_X41Y48.COUT    Topcyg                1.178   cpu0_ialu_mult_combinedResult<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_lut<30>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.Y       Tciny                 0.864   cpu0_ialu_mult_combinedResult<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_xor<36>
-    SLICE_X39Y52.F1      net (fanout=2)        0.562   cpu0_ialu_mult_combinedResult<36>
-    SLICE_X39Y52.COUT    Topcyf                1.195   cpu0_ialu_mult_convertedResult<36>
-                                                       cpu0_ialu_mult_Madd_convertedResult_not0000<36>1_INV_0
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<36>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<37>
-    SLICE_X39Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<37>
-    SLICE_X39Y53.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<38>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<38>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<39>
-    SLICE_X39Y54.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<39>
-    SLICE_X39Y54.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<40>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<40>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<41>
-    SLICE_X39Y55.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<41>
-    SLICE_X39Y55.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<42>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<42>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<43>
-    SLICE_X39Y56.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<43>
-    SLICE_X39Y56.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<53>
-    SLICE_X39Y61.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<53>
-    SLICE_X39Y61.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<54>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<54>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<55>
-    SLICE_X39Y62.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<55>
-    SLICE_X39Y62.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<56>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<56>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<57>
-    SLICE_X39Y63.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<57>
-    SLICE_X39Y63.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<58>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<58>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<59>
-    SLICE_X39Y64.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<59>
-    SLICE_X39Y64.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<60>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<60>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<61>
-    SLICE_X39Y65.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<61>
-    SLICE_X39Y65.Y       Tciny                 0.864   cpu0_ialu_mult_convertedResult<62>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<62>
-                                                       cpu0_ialu_mult_Madd_convertedResult_xor<63>
-    SLICE_X38Y61.G4      net (fanout=1)        0.623   cpu0_ialu_mult_convertedResult<63>
-    SLICE_X38Y61.CLK     Tgck                  1.097   cpu0_ialu_Result2<31>
-                                                       cpu0_ialu_Result2_mux0009<31>301_F
-                                                       cpu0_ialu_Result2_mux0009<31>301
-                                                       cpu0_ialu_Result2_31
-    -------------------------------------------------  ---------------------------
-    Total                                     29.949ns (17.225ns logic, 12.724ns route)
-                                                       (57.5% logic, 42.5% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point cpu0_ialu_Result2_20 (SLICE_X44Y53.G1), 43585382 paths
---------------------------------------------------------------------------------
-Slack (setup path):     1.226ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu0_alu_control_4 (FF)
-  Destination:          cpu0_ialu_Result2_20 (FF)
-  Requirement:          31.250ns
-  Data Path Delay:      29.958ns (Levels of Logic = 25)
-  Clock Path Skew:      -0.066ns (0.580 - 0.646)
-  Source Clock:         Clk_BUFGP falling at 31.250ns
-  Destination Clock:    Clk_BUFGP rising at 62.500ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: cpu0_alu_control_4 to cpu0_ialu_Result2_20
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X13Y74.YQ      Tcko                  0.580   cpu0_alu_control<5>
-                                                       cpu0_alu_control_4
-    SLICE_X42Y52.G1      net (fanout=8)        4.080   cpu0_alu_control<4>
-    SLICE_X42Y52.Y       Tilo                  0.707   cpu0_ialu_mulIsSigned
-                                                       cpu0_ialu_divIsSigned_cmp_eq000011_1
-    SLICE_X44Y39.G1      net (fanout=3)        1.407   cpu0_ialu_divIsSigned_cmp_eq000011
-    SLICE_X44Y39.Y       Tilo                  0.707   cpu0_ialu_mult_newOperand1<0>
-                                                       cpu0_ialu_mult_Mmux_newOperand11011
-    SLICE_X43Y30.G4      net (fanout=31)       2.899   cpu0_ialu_mult_N11
-    SLICE_X43Y30.Y       Tilo                  0.648   cpu0_ialu_mult_newOperand1<5>
-                                                       cpu0_ialu_mult_Mmux_newOperand1461
-    MULT18X18_X1Y4.A2    net (fanout=2)        0.880   cpu0_ialu_mult_newOperand1<2>
-    MULT18X18_X1Y4.P18   Tmult                 4.873   cpu0_ialu_mult_Mmult_combinedResult_submult_0
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_0
-    SLICE_X43Y35.G1      net (fanout=1)        0.741   cpu0_ialu_mult_Mmult_combinedResult_submult_0_P_to_Adder_A_18
-    SLICE_X43Y35.COUT    Topcyg                1.178   cpu0_ialu_mult_Mmult_combinedResult_submult_0_17
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_lut<18>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_19
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<19>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_21
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<21>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_23
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<23>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_25
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<25>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_27
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<27>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.Y       Tciny                 0.864   cpu0_ialu_mult_Mmult_combinedResult_submult_0_29
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_xor<30>
-    SLICE_X41Y48.G2      net (fanout=1)        1.532   cpu0_ialu_mult_Mmult_combinedResult_submult_0_30
-    SLICE_X41Y48.COUT    Topcyg                1.178   cpu0_ialu_mult_combinedResult<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_lut<30>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<36>
-    SLICE_X41Y52.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<36>
-    SLICE_X41Y52.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<37>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<37>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<38>
-    SLICE_X41Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<38>
-    SLICE_X41Y53.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<39>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<39>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<40>
-    SLICE_X41Y54.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<40>
-    SLICE_X41Y54.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<41>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<41>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<30>
+    SLICE_X42Y48.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<30>
+    SLICE_X42Y48.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_31
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<31>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<32>
+    SLICE_X42Y49.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<32>
+    SLICE_X42Y49.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_33
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<33>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<34>
+    SLICE_X42Y50.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<34>
+    SLICE_X42Y50.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_35
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<35>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<36>
+    SLICE_X42Y51.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<36>
+    SLICE_X42Y51.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_37
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<37>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<38>
+    SLICE_X42Y52.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<38>
+    SLICE_X42Y52.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_39
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<39>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<40>
+    SLICE_X42Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<40>
+    SLICE_X42Y53.Y       Tciny                 0.902   cpu0_ialu_mult_Mmult_combinedResult_submult_0_41
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<41>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_xor<42>
+    SLICE_X43Y58.G1      net (fanout=1)        1.264   cpu0_ialu_mult_Mmult_combinedResult_submult_0_42
+    SLICE_X43Y58.COUT    Topcyg                1.178   cpu0_ialu_mult_combinedResult<41>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_lut<42>
                                                        cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<42>
-    SLICE_X41Y55.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<42>
-    SLICE_X41Y55.Y       Tciny                 0.864   cpu0_ialu_mult_combinedResult<43>
+    SLICE_X43Y59.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<42>
+    SLICE_X43Y59.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<43>
                                                        cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<43>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_xor<44>
-    SLICE_X39Y56.F1      net (fanout=2)        0.583   cpu0_ialu_mult_combinedResult<44>
-    SLICE_X39Y56.COUT    Topcyf                1.195   cpu0_ialu_mult_convertedResult<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_not0000<44>1_INV_0
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.X       Tcinx                 0.604   cpu0_ialu_mult_convertedResult<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_xor<52>
-    SLICE_X44Y53.G1      net (fanout=1)        1.521   cpu0_ialu_mult_convertedResult<52>
-    SLICE_X44Y53.CLK     Tgck                  1.097   cpu0_ialu_Result2<20>
-                                                       cpu0_ialu_Result2_mux0009<20>301_F
-                                                       cpu0_ialu_Result2_mux0009<20>301
-                                                       cpu0_ialu_Result2_20
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<44>
+    SLICE_X43Y60.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<44>
+    SLICE_X43Y60.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<45>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<45>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<46>
+    SLICE_X43Y61.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<46>
+    SLICE_X43Y61.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<47>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<47>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<48>
+    SLICE_X43Y62.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<48>
+    SLICE_X43Y62.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<49>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<49>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<50>
+    SLICE_X43Y63.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<50>
+    SLICE_X43Y63.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<51>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<51>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<52>
+    SLICE_X43Y64.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<52>
+    SLICE_X43Y64.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<53>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<53>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<54>
+    SLICE_X43Y65.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<54>
+    SLICE_X43Y65.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<55>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<55>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<56>
+    SLICE_X43Y66.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<56>
+    SLICE_X43Y66.Y       Tciny                 0.864   cpu0_ialu_mult_combinedResult<57>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<57>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_xor<58>
+    SLICE_X41Y66.F1      net (fanout=2)        0.519   cpu0_ialu_mult_combinedResult<58>
+    SLICE_X41Y66.COUT    Topcyf                1.195   cpu0_ialu_mult_convertedResult<58>
+                                                       cpu0_ialu_mult_Madd_convertedResult_not0000<58>1_INV_0
+                                                       cpu0_ialu_mult_Madd_convertedResult_cy<58>
+                                                       cpu0_ialu_mult_Madd_convertedResult_cy<59>
+    SLICE_X41Y67.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<59>
+    SLICE_X41Y67.Y       Tciny                 0.864   cpu0_ialu_mult_convertedResult<60>
+                                                       cpu0_ialu_mult_Madd_convertedResult_cy<60>
+                                                       cpu0_ialu_mult_Madd_convertedResult_xor<61>
+    SLICE_X41Y76.G3      net (fanout=1)        0.945   cpu0_ialu_mult_convertedResult<61>
+    SLICE_X41Y76.CLK     Tgck                  1.003   cpu0_ialu_Result2<29>
+                                                       cpu0_ialu_Result2_mux0009<29>301_F
+                                                       cpu0_ialu_Result2_mux0009<29>301
+                                                       cpu0_ialu_Result2_29
     -------------------------------------------------  ---------------------------
-    Total                                     29.958ns (16.315ns logic, 13.643ns route)
-                                                       (54.5% logic, 45.5% route)
+    Total                                     27.333ns (18.661ns logic, 8.672ns route)
+                                                       (68.3% logic, 31.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     1.234ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu0_alu_control_4 (FF)
-  Destination:          cpu0_ialu_Result2_20 (FF)
+Slack (setup path):     3.727ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu0_alu_control_5 (FF)
+  Destination:          cpu0_ialu_Result2_29 (FF)
   Requirement:          31.250ns
-  Data Path Delay:      29.950ns (Levels of Logic = 25)
-  Clock Path Skew:      -0.066ns (0.580 - 0.646)
+  Data Path Delay:      27.363ns (Levels of Logic = 28)
+  Clock Path Skew:      -0.160ns (0.580 - 0.740)
   Source Clock:         Clk_BUFGP falling at 31.250ns
   Destination Clock:    Clk_BUFGP rising at 62.500ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: cpu0_alu_control_4 to cpu0_ialu_Result2_20
+  Maximum Data Path: cpu0_alu_control_5 to cpu0_ialu_Result2_29
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X13Y74.YQ      Tcko                  0.580   cpu0_alu_control<5>
-                                                       cpu0_alu_control_4
-    SLICE_X42Y52.G1      net (fanout=8)        4.080   cpu0_alu_control<4>
-    SLICE_X42Y52.Y       Tilo                  0.707   cpu0_ialu_mulIsSigned
+    SLICE_X21Y46.XQ      Tcko                  0.591   cpu0_alu_control<5>
+                                                       cpu0_alu_control_5
+    SLICE_X35Y50.G4      net (fanout=7)        1.819   cpu0_alu_control<5>
+    SLICE_X35Y50.Y       Tilo                  0.648   cpu0_alu_control_0_1
                                                        cpu0_ialu_divIsSigned_cmp_eq000011_1
-    SLICE_X44Y39.G1      net (fanout=3)        1.407   cpu0_ialu_divIsSigned_cmp_eq000011
-    SLICE_X44Y39.Y       Tilo                  0.707   cpu0_ialu_mult_newOperand1<0>
-                                                       cpu0_ialu_mult_Mmux_newOperand11011
-    SLICE_X43Y30.G4      net (fanout=31)       2.899   cpu0_ialu_mult_N11
-    SLICE_X43Y30.Y       Tilo                  0.648   cpu0_ialu_mult_newOperand1<5>
-                                                       cpu0_ialu_mult_Mmux_newOperand1461
-    MULT18X18_X1Y4.A2    net (fanout=2)        0.880   cpu0_ialu_mult_newOperand1<2>
-    MULT18X18_X1Y4.P18   Tmult                 4.873   cpu0_ialu_mult_Mmult_combinedResult_submult_0
+    SLICE_X35Y51.G2      net (fanout=4)        0.425   cpu0_ialu_divIsSigned_cmp_eq000011
+    SLICE_X35Y51.Y       Tilo                  0.648   cpu0_alu_control_1_1
+                                                       cpu0_ialu_mult_Mmux_newOperand21011
+    SLICE_X42Y57.G4      net (fanout=31)       2.169   cpu0_ialu_mult_N2
+    SLICE_X42Y57.Y       Tilo                  0.707   cpu0_ialu_Result2_mux0009<16>0
+                                                       cpu0_ialu_mult_Mmux_newOperand2161
+    MULT18X18_X1Y4.B16   net (fanout=1)        1.477   cpu0_ialu_mult_newOperand2<16>
+    MULT18X18_X1Y4.P19   Tmult                 4.873   cpu0_ialu_mult_Mmult_combinedResult_submult_0
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_0
-    SLICE_X43Y35.G1      net (fanout=1)        0.741   cpu0_ialu_mult_Mmult_combinedResult_submult_0_P_to_Adder_A_18
-    SLICE_X43Y35.COUT    Topcyg                1.178   cpu0_ialu_mult_Mmult_combinedResult_submult_0_17
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_lut<18>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_19
+    SLICE_X42Y42.F2      net (fanout=1)        1.497   cpu0_ialu_mult_Mmult_combinedResult_submult_0_P_to_Adder_A_19
+    SLICE_X42Y42.COUT    Topcyf                1.305   cpu0_ialu_mult_Mmult_combinedResult_submult_0_19
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_lut<19>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<19>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_21
+    SLICE_X42Y43.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
+    SLICE_X42Y43.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_21
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<21>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_23
+    SLICE_X42Y44.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
+    SLICE_X42Y44.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_23
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<23>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_25
+    SLICE_X42Y45.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
+    SLICE_X42Y45.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_25
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<25>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_27
+    SLICE_X42Y46.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
+    SLICE_X42Y46.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_27
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<27>
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.Y       Tciny                 0.864   cpu0_ialu_mult_Mmult_combinedResult_submult_0_29
+    SLICE_X42Y47.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
+    SLICE_X42Y47.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_29
                                                        cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_xor<30>
-    SLICE_X41Y48.G2      net (fanout=1)        1.532   cpu0_ialu_mult_Mmult_combinedResult_submult_0_30
-    SLICE_X41Y48.COUT    Topcyg                1.178   cpu0_ialu_mult_combinedResult<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_lut<30>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<36>
-    SLICE_X41Y52.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<36>
-    SLICE_X41Y52.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<37>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<37>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<38>
-    SLICE_X41Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<38>
-    SLICE_X41Y53.Y       Tciny                 0.864   cpu0_ialu_mult_combinedResult<39>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<39>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_xor<40>
-    SLICE_X39Y54.F1      net (fanout=2)        0.575   cpu0_ialu_mult_combinedResult<40>
-    SLICE_X39Y54.COUT    Topcyf                1.195   cpu0_ialu_mult_convertedResult<40>
-                                                       cpu0_ialu_mult_Madd_convertedResult_not0000<40>1_INV_0
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<40>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<41>
-    SLICE_X39Y55.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<41>
-    SLICE_X39Y55.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<42>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<42>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<43>
-    SLICE_X39Y56.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<43>
-    SLICE_X39Y56.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.X       Tcinx                 0.604   cpu0_ialu_mult_convertedResult<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_xor<52>
-    SLICE_X44Y53.G1      net (fanout=1)        1.521   cpu0_ialu_mult_convertedResult<52>
-    SLICE_X44Y53.CLK     Tgck                  1.097   cpu0_ialu_Result2<20>
-                                                       cpu0_ialu_Result2_mux0009<20>301_F
-                                                       cpu0_ialu_Result2_mux0009<20>301
-                                                       cpu0_ialu_Result2_20
-    -------------------------------------------------  ---------------------------
-    Total                                     29.950ns (16.315ns logic, 13.635ns route)
-                                                       (54.5% logic, 45.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     1.247ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu0_alu_control_4 (FF)
-  Destination:          cpu0_ialu_Result2_20 (FF)
-  Requirement:          31.250ns
-  Data Path Delay:      29.937ns (Levels of Logic = 25)
-  Clock Path Skew:      -0.066ns (0.580 - 0.646)
-  Source Clock:         Clk_BUFGP falling at 31.250ns
-  Destination Clock:    Clk_BUFGP rising at 62.500ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: cpu0_alu_control_4 to cpu0_ialu_Result2_20
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X13Y74.YQ      Tcko                  0.580   cpu0_alu_control<5>
-                                                       cpu0_alu_control_4
-    SLICE_X42Y52.G1      net (fanout=8)        4.080   cpu0_alu_control<4>
-    SLICE_X42Y52.Y       Tilo                  0.707   cpu0_ialu_mulIsSigned
-                                                       cpu0_ialu_divIsSigned_cmp_eq000011_1
-    SLICE_X44Y39.G1      net (fanout=3)        1.407   cpu0_ialu_divIsSigned_cmp_eq000011
-    SLICE_X44Y39.Y       Tilo                  0.707   cpu0_ialu_mult_newOperand1<0>
-                                                       cpu0_ialu_mult_Mmux_newOperand11011
-    SLICE_X43Y30.G4      net (fanout=31)       2.899   cpu0_ialu_mult_N11
-    SLICE_X43Y30.Y       Tilo                  0.648   cpu0_ialu_mult_newOperand1<5>
-                                                       cpu0_ialu_mult_Mmux_newOperand1461
-    MULT18X18_X1Y4.A2    net (fanout=2)        0.880   cpu0_ialu_mult_newOperand1<2>
-    MULT18X18_X1Y4.P18   Tmult                 4.873   cpu0_ialu_mult_Mmult_combinedResult_submult_0
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_0
-    SLICE_X43Y35.G1      net (fanout=1)        0.741   cpu0_ialu_mult_Mmult_combinedResult_submult_0_P_to_Adder_A_18
-    SLICE_X43Y35.COUT    Topcyg                1.178   cpu0_ialu_mult_Mmult_combinedResult_submult_0_17
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_lut<18>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_19
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<19>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_21
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<21>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_23
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<23>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_25
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<25>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_27
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<27>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.Y       Tciny                 0.864   cpu0_ialu_mult_Mmult_combinedResult_submult_0_29
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_xor<30>
-    SLICE_X41Y48.G2      net (fanout=1)        1.532   cpu0_ialu_mult_Mmult_combinedResult_submult_0_30
-    SLICE_X41Y48.COUT    Topcyg                1.178   cpu0_ialu_mult_combinedResult<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_lut<30>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.Y       Tciny                 0.864   cpu0_ialu_mult_combinedResult<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_xor<36>
-    SLICE_X39Y52.F1      net (fanout=2)        0.562   cpu0_ialu_mult_combinedResult<36>
-    SLICE_X39Y52.COUT    Topcyf                1.195   cpu0_ialu_mult_convertedResult<36>
-                                                       cpu0_ialu_mult_Madd_convertedResult_not0000<36>1_INV_0
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<36>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<37>
-    SLICE_X39Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<37>
-    SLICE_X39Y53.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<38>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<38>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<39>
-    SLICE_X39Y54.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<39>
-    SLICE_X39Y54.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<40>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<40>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<41>
-    SLICE_X39Y55.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<41>
-    SLICE_X39Y55.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<42>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<42>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<43>
-    SLICE_X39Y56.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<43>
-    SLICE_X39Y56.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.X       Tcinx                 0.604   cpu0_ialu_mult_convertedResult<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_xor<52>
-    SLICE_X44Y53.G1      net (fanout=1)        1.521   cpu0_ialu_mult_convertedResult<52>
-    SLICE_X44Y53.CLK     Tgck                  1.097   cpu0_ialu_Result2<20>
-                                                       cpu0_ialu_Result2_mux0009<20>301_F
-                                                       cpu0_ialu_Result2_mux0009<20>301
-                                                       cpu0_ialu_Result2_20
-    -------------------------------------------------  ---------------------------
-    Total                                     29.937ns (16.315ns logic, 13.622ns route)
-                                                       (54.5% logic, 45.5% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point cpu0_ialu_Result2_30 (SLICE_X38Y64.G1), 90911152 paths
---------------------------------------------------------------------------------
-Slack (setup path):     1.335ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu0_alu_control_4 (FF)
-  Destination:          cpu0_ialu_Result2_30 (FF)
-  Requirement:          31.250ns
-  Data Path Delay:      29.839ns (Levels of Logic = 30)
-  Clock Path Skew:      -0.076ns (0.570 - 0.646)
-  Source Clock:         Clk_BUFGP falling at 31.250ns
-  Destination Clock:    Clk_BUFGP rising at 62.500ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: cpu0_alu_control_4 to cpu0_ialu_Result2_30
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X13Y74.YQ      Tcko                  0.580   cpu0_alu_control<5>
-                                                       cpu0_alu_control_4
-    SLICE_X42Y52.G1      net (fanout=8)        4.080   cpu0_alu_control<4>
-    SLICE_X42Y52.Y       Tilo                  0.707   cpu0_ialu_mulIsSigned
-                                                       cpu0_ialu_divIsSigned_cmp_eq000011_1
-    SLICE_X44Y39.G1      net (fanout=3)        1.407   cpu0_ialu_divIsSigned_cmp_eq000011
-    SLICE_X44Y39.Y       Tilo                  0.707   cpu0_ialu_mult_newOperand1<0>
-                                                       cpu0_ialu_mult_Mmux_newOperand11011
-    SLICE_X43Y30.G4      net (fanout=31)       2.899   cpu0_ialu_mult_N11
-    SLICE_X43Y30.Y       Tilo                  0.648   cpu0_ialu_mult_newOperand1<5>
-                                                       cpu0_ialu_mult_Mmux_newOperand1461
-    MULT18X18_X1Y4.A2    net (fanout=2)        0.880   cpu0_ialu_mult_newOperand1<2>
-    MULT18X18_X1Y4.P18   Tmult                 4.873   cpu0_ialu_mult_Mmult_combinedResult_submult_0
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_0
-    SLICE_X43Y35.G1      net (fanout=1)        0.741   cpu0_ialu_mult_Mmult_combinedResult_submult_0_P_to_Adder_A_18
-    SLICE_X43Y35.COUT    Topcyg                1.178   cpu0_ialu_mult_Mmult_combinedResult_submult_0_17
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_lut<18>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_19
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<19>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_21
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<21>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_23
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<23>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_25
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<25>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_27
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<27>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.Y       Tciny                 0.864   cpu0_ialu_mult_Mmult_combinedResult_submult_0_29
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_xor<30>
-    SLICE_X41Y48.G2      net (fanout=1)        1.532   cpu0_ialu_mult_Mmult_combinedResult_submult_0_30
-    SLICE_X41Y48.COUT    Topcyg                1.178   cpu0_ialu_mult_combinedResult<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_lut<30>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<36>
-    SLICE_X41Y52.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<36>
-    SLICE_X41Y52.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<37>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<37>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<38>
-    SLICE_X41Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<38>
-    SLICE_X41Y53.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<39>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<39>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<40>
-    SLICE_X41Y54.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<40>
-    SLICE_X41Y54.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<41>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<41>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<30>
+    SLICE_X42Y48.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<30>
+    SLICE_X42Y48.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_31
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<31>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<32>
+    SLICE_X42Y49.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<32>
+    SLICE_X42Y49.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_33
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<33>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<34>
+    SLICE_X42Y50.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<34>
+    SLICE_X42Y50.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_35
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<35>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<36>
+    SLICE_X42Y51.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<36>
+    SLICE_X42Y51.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_37
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<37>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<38>
+    SLICE_X42Y52.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<38>
+    SLICE_X42Y52.COUT    Tbyp                  0.156   cpu0_ialu_mult_Mmult_combinedResult_submult_0_39
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<39>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<40>
+    SLICE_X42Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<40>
+    SLICE_X42Y53.Y       Tciny                 0.902   cpu0_ialu_mult_Mmult_combinedResult_submult_0_41
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<41>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_xor<42>
+    SLICE_X43Y58.G1      net (fanout=1)        1.264   cpu0_ialu_mult_Mmult_combinedResult_submult_0_42
+    SLICE_X43Y58.COUT    Topcyg                1.178   cpu0_ialu_mult_combinedResult<41>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_lut<42>
                                                        cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<42>
-    SLICE_X41Y55.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<42>
-    SLICE_X41Y55.Y       Tciny                 0.864   cpu0_ialu_mult_combinedResult<43>
+    SLICE_X43Y59.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<42>
+    SLICE_X43Y59.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<43>
                                                        cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<43>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_xor<44>
-    SLICE_X39Y56.F1      net (fanout=2)        0.583   cpu0_ialu_mult_combinedResult<44>
-    SLICE_X39Y56.COUT    Topcyf                1.195   cpu0_ialu_mult_convertedResult<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_not0000<44>1_INV_0
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<53>
-    SLICE_X39Y61.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<53>
-    SLICE_X39Y61.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<54>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<54>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<55>
-    SLICE_X39Y62.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<55>
-    SLICE_X39Y62.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<56>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<56>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<57>
-    SLICE_X39Y63.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<57>
-    SLICE_X39Y63.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<58>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<44>
+    SLICE_X43Y60.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<44>
+    SLICE_X43Y60.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<45>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<45>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<46>
+    SLICE_X43Y61.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<46>
+    SLICE_X43Y61.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<47>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<47>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<48>
+    SLICE_X43Y62.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<48>
+    SLICE_X43Y62.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<49>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<49>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<50>
+    SLICE_X43Y63.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<50>
+    SLICE_X43Y63.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<51>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<51>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<52>
+    SLICE_X43Y64.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<52>
+    SLICE_X43Y64.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<53>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<53>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<54>
+    SLICE_X43Y65.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<54>
+    SLICE_X43Y65.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<55>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<55>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<56>
+    SLICE_X43Y66.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<56>
+    SLICE_X43Y66.Y       Tciny                 0.864   cpu0_ialu_mult_combinedResult<57>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<57>
+                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_xor<58>
+    SLICE_X41Y66.F1      net (fanout=2)        0.519   cpu0_ialu_mult_combinedResult<58>
+    SLICE_X41Y66.COUT    Topcyf                1.195   cpu0_ialu_mult_convertedResult<58>
+                                                       cpu0_ialu_mult_Madd_convertedResult_not0000<58>1_INV_0
                                                        cpu0_ialu_mult_Madd_convertedResult_cy<58>
                                                        cpu0_ialu_mult_Madd_convertedResult_cy<59>
-    SLICE_X39Y64.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<59>
-    SLICE_X39Y64.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<60>
+    SLICE_X41Y67.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<59>
+    SLICE_X41Y67.Y       Tciny                 0.864   cpu0_ialu_mult_convertedResult<60>
                                                        cpu0_ialu_mult_Madd_convertedResult_cy<60>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<61>
-    SLICE_X39Y65.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<61>
-    SLICE_X39Y65.X       Tcinx                 0.604   cpu0_ialu_mult_convertedResult<62>
-                                                       cpu0_ialu_mult_Madd_convertedResult_xor<62>
-    SLICE_X38Y64.G1      net (fanout=1)        0.752   cpu0_ialu_mult_convertedResult<62>
-    SLICE_X38Y64.CLK     Tgck                  1.097   cpu0_ialu_Result2<30>
-                                                       cpu0_ialu_Result2_mux0009<30>301_F
-                                                       cpu0_ialu_Result2_mux0009<30>301
-                                                       cpu0_ialu_Result2_30
+                                                       cpu0_ialu_mult_Madd_convertedResult_xor<61>
+    SLICE_X41Y76.G3      net (fanout=1)        0.945   cpu0_ialu_mult_convertedResult<61>
+    SLICE_X41Y76.CLK     Tgck                  1.003   cpu0_ialu_Result2<29>
+                                                       cpu0_ialu_Result2_mux0009<29>301_F
+                                                       cpu0_ialu_Result2_mux0009<29>301
+                                                       cpu0_ialu_Result2_29
     -------------------------------------------------  ---------------------------
-    Total                                     29.839ns (16.965ns logic, 12.874ns route)
-                                                       (56.9% logic, 43.1% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     1.343ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu0_alu_control_4 (FF)
-  Destination:          cpu0_ialu_Result2_30 (FF)
-  Requirement:          31.250ns
-  Data Path Delay:      29.831ns (Levels of Logic = 30)
-  Clock Path Skew:      -0.076ns (0.570 - 0.646)
-  Source Clock:         Clk_BUFGP falling at 31.250ns
-  Destination Clock:    Clk_BUFGP rising at 62.500ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: cpu0_alu_control_4 to cpu0_ialu_Result2_30
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X13Y74.YQ      Tcko                  0.580   cpu0_alu_control<5>
-                                                       cpu0_alu_control_4
-    SLICE_X42Y52.G1      net (fanout=8)        4.080   cpu0_alu_control<4>
-    SLICE_X42Y52.Y       Tilo                  0.707   cpu0_ialu_mulIsSigned
-                                                       cpu0_ialu_divIsSigned_cmp_eq000011_1
-    SLICE_X44Y39.G1      net (fanout=3)        1.407   cpu0_ialu_divIsSigned_cmp_eq000011
-    SLICE_X44Y39.Y       Tilo                  0.707   cpu0_ialu_mult_newOperand1<0>
-                                                       cpu0_ialu_mult_Mmux_newOperand11011
-    SLICE_X43Y30.G4      net (fanout=31)       2.899   cpu0_ialu_mult_N11
-    SLICE_X43Y30.Y       Tilo                  0.648   cpu0_ialu_mult_newOperand1<5>
-                                                       cpu0_ialu_mult_Mmux_newOperand1461
-    MULT18X18_X1Y4.A2    net (fanout=2)        0.880   cpu0_ialu_mult_newOperand1<2>
-    MULT18X18_X1Y4.P18   Tmult                 4.873   cpu0_ialu_mult_Mmult_combinedResult_submult_0
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_0
-    SLICE_X43Y35.G1      net (fanout=1)        0.741   cpu0_ialu_mult_Mmult_combinedResult_submult_0_P_to_Adder_A_18
-    SLICE_X43Y35.COUT    Topcyg                1.178   cpu0_ialu_mult_Mmult_combinedResult_submult_0_17
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_lut<18>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_19
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<19>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_21
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<21>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_23
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<23>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_25
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<25>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_27
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<27>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.Y       Tciny                 0.864   cpu0_ialu_mult_Mmult_combinedResult_submult_0_29
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_xor<30>
-    SLICE_X41Y48.G2      net (fanout=1)        1.532   cpu0_ialu_mult_Mmult_combinedResult_submult_0_30
-    SLICE_X41Y48.COUT    Topcyg                1.178   cpu0_ialu_mult_combinedResult<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_lut<30>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<36>
-    SLICE_X41Y52.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<36>
-    SLICE_X41Y52.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<37>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<37>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<38>
-    SLICE_X41Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<38>
-    SLICE_X41Y53.Y       Tciny                 0.864   cpu0_ialu_mult_combinedResult<39>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<39>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_xor<40>
-    SLICE_X39Y54.F1      net (fanout=2)        0.575   cpu0_ialu_mult_combinedResult<40>
-    SLICE_X39Y54.COUT    Topcyf                1.195   cpu0_ialu_mult_convertedResult<40>
-                                                       cpu0_ialu_mult_Madd_convertedResult_not0000<40>1_INV_0
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<40>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<41>
-    SLICE_X39Y55.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<41>
-    SLICE_X39Y55.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<42>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<42>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<43>
-    SLICE_X39Y56.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<43>
-    SLICE_X39Y56.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<53>
-    SLICE_X39Y61.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<53>
-    SLICE_X39Y61.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<54>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<54>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<55>
-    SLICE_X39Y62.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<55>
-    SLICE_X39Y62.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<56>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<56>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<57>
-    SLICE_X39Y63.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<57>
-    SLICE_X39Y63.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<58>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<58>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<59>
-    SLICE_X39Y64.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<59>
-    SLICE_X39Y64.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<60>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<60>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<61>
-    SLICE_X39Y65.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<61>
-    SLICE_X39Y65.X       Tcinx                 0.604   cpu0_ialu_mult_convertedResult<62>
-                                                       cpu0_ialu_mult_Madd_convertedResult_xor<62>
-    SLICE_X38Y64.G1      net (fanout=1)        0.752   cpu0_ialu_mult_convertedResult<62>
-    SLICE_X38Y64.CLK     Tgck                  1.097   cpu0_ialu_Result2<30>
-                                                       cpu0_ialu_Result2_mux0009<30>301_F
-                                                       cpu0_ialu_Result2_mux0009<30>301
-                                                       cpu0_ialu_Result2_30
-    -------------------------------------------------  ---------------------------
-    Total                                     29.831ns (16.965ns logic, 12.866ns route)
-                                                       (56.9% logic, 43.1% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     1.356ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu0_alu_control_4 (FF)
-  Destination:          cpu0_ialu_Result2_30 (FF)
-  Requirement:          31.250ns
-  Data Path Delay:      29.818ns (Levels of Logic = 30)
-  Clock Path Skew:      -0.076ns (0.570 - 0.646)
-  Source Clock:         Clk_BUFGP falling at 31.250ns
-  Destination Clock:    Clk_BUFGP rising at 62.500ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: cpu0_alu_control_4 to cpu0_ialu_Result2_30
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X13Y74.YQ      Tcko                  0.580   cpu0_alu_control<5>
-                                                       cpu0_alu_control_4
-    SLICE_X42Y52.G1      net (fanout=8)        4.080   cpu0_alu_control<4>
-    SLICE_X42Y52.Y       Tilo                  0.707   cpu0_ialu_mulIsSigned
-                                                       cpu0_ialu_divIsSigned_cmp_eq000011_1
-    SLICE_X44Y39.G1      net (fanout=3)        1.407   cpu0_ialu_divIsSigned_cmp_eq000011
-    SLICE_X44Y39.Y       Tilo                  0.707   cpu0_ialu_mult_newOperand1<0>
-                                                       cpu0_ialu_mult_Mmux_newOperand11011
-    SLICE_X43Y30.G4      net (fanout=31)       2.899   cpu0_ialu_mult_N11
-    SLICE_X43Y30.Y       Tilo                  0.648   cpu0_ialu_mult_newOperand1<5>
-                                                       cpu0_ialu_mult_Mmux_newOperand1461
-    MULT18X18_X1Y4.A2    net (fanout=2)        0.880   cpu0_ialu_mult_newOperand1<2>
-    MULT18X18_X1Y4.P18   Tmult                 4.873   cpu0_ialu_mult_Mmult_combinedResult_submult_0
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_0
-    SLICE_X43Y35.G1      net (fanout=1)        0.741   cpu0_ialu_mult_Mmult_combinedResult_submult_0_P_to_Adder_A_18
-    SLICE_X43Y35.COUT    Topcyg                1.178   cpu0_ialu_mult_Mmult_combinedResult_submult_0_17
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_lut<18>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<18>
-    SLICE_X43Y36.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_19
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<19>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<20>
-    SLICE_X43Y37.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_21
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<21>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<22>
-    SLICE_X43Y38.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_23
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<23>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<24>
-    SLICE_X43Y39.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_25
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<25>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<26>
-    SLICE_X43Y40.COUT    Tbyp                  0.130   cpu0_ialu_mult_Mmult_combinedResult_submult_0_27
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<27>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<28>
-    SLICE_X43Y41.Y       Tciny                 0.864   cpu0_ialu_mult_Mmult_combinedResult_submult_0_29
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_xor<30>
-    SLICE_X41Y48.G2      net (fanout=1)        1.532   cpu0_ialu_mult_Mmult_combinedResult_submult_0_30
-    SLICE_X41Y48.COUT    Topcyg                1.178   cpu0_ialu_mult_combinedResult<29>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_lut<30>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<30>
-    SLICE_X41Y49.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<31>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<32>
-    SLICE_X41Y50.COUT    Tbyp                  0.130   cpu0_ialu_mult_combinedResult<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<33>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<34>
-    SLICE_X41Y51.Y       Tciny                 0.864   cpu0_ialu_mult_combinedResult<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_cy<35>
-                                                       cpu0_ialu_mult_Mmult_combinedResult_Madd_xor<36>
-    SLICE_X39Y52.F1      net (fanout=2)        0.562   cpu0_ialu_mult_combinedResult<36>
-    SLICE_X39Y52.COUT    Topcyf                1.195   cpu0_ialu_mult_convertedResult<36>
-                                                       cpu0_ialu_mult_Madd_convertedResult_not0000<36>1_INV_0
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<36>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<37>
-    SLICE_X39Y53.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<37>
-    SLICE_X39Y53.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<38>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<38>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<39>
-    SLICE_X39Y54.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<39>
-    SLICE_X39Y54.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<40>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<40>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<41>
-    SLICE_X39Y55.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<41>
-    SLICE_X39Y55.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<42>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<42>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<43>
-    SLICE_X39Y56.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<43>
-    SLICE_X39Y56.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<44>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<45>
-    SLICE_X39Y57.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<46>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<47>
-    SLICE_X39Y58.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<48>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<49>
-    SLICE_X39Y59.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<50>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<51>
-    SLICE_X39Y60.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<52>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<53>
-    SLICE_X39Y61.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<53>
-    SLICE_X39Y61.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<54>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<54>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<55>
-    SLICE_X39Y62.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<55>
-    SLICE_X39Y62.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<56>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<56>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<57>
-    SLICE_X39Y63.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<57>
-    SLICE_X39Y63.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<58>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<58>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<59>
-    SLICE_X39Y64.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<59>
-    SLICE_X39Y64.COUT    Tbyp                  0.130   cpu0_ialu_mult_convertedResult<60>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<60>
-                                                       cpu0_ialu_mult_Madd_convertedResult_cy<61>
-    SLICE_X39Y65.CIN     net (fanout=1)        0.000   cpu0_ialu_mult_Madd_convertedResult_cy<61>
-    SLICE_X39Y65.X       Tcinx                 0.604   cpu0_ialu_mult_convertedResult<62>
-                                                       cpu0_ialu_mult_Madd_convertedResult_xor<62>
-    SLICE_X38Y64.G1      net (fanout=1)        0.752   cpu0_ialu_mult_convertedResult<62>
-    SLICE_X38Y64.CLK     Tgck                  1.097   cpu0_ialu_Result2<30>
-                                                       cpu0_ialu_Result2_mux0009<30>301_F
-                                                       cpu0_ialu_Result2_mux0009<30>301
-                                                       cpu0_ialu_Result2_30
-    -------------------------------------------------  ---------------------------
-    Total                                     29.818ns (16.965ns logic, 12.853ns route)
-                                                       (56.9% logic, 43.1% route)
+    Total                                     27.363ns (17.248ns logic, 10.115ns route)
+                                                       (63.0% logic, 37.0% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_Clk = PERIOD TIMEGRP "TNM_Clk" 16 MHz HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point cpu0_Mram_RAM3_ren_24.SLICEM_F (SLICE_X6Y42.BY), 1 path
+Paths for end point mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar13.SLICEM_F (SLICE_X6Y2.BY), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.757ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               cpu0_MEMWR_decodeRegOut_27 (FF)
-  Destination:          cpu0_Mram_RAM3_ren_24.SLICEM_F (RAM)
+  Source:               mcs0/U0/iomodule_0/write_data_14 (FF)
+  Destination:          mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar13.SLICEM_F (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.808ns (Levels of Logic = 1)
-  Clock Path Skew:      0.051ns (0.337 - 0.286)
-  Source Clock:         Clk_BUFGP falling at 93.750ns
-  Destination Clock:    Clk_BUFGP falling at 93.750ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: cpu0_MEMWR_decodeRegOut_27 to cpu0_Mram_RAM3_ren_24.SLICEM_F
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X4Y40.XQ       Tcko                  0.505   cpu0_MEMWR_decodeRegOut<27>
-                                                       cpu0_MEMWR_decodeRegOut_27
-    SLICE_X6Y42.BY       net (fanout=6)        0.429   cpu0_MEMWR_decodeRegOut<27>
-    SLICE_X6Y42.CLK      Tdh         (-Th)     0.126   cpu0_decode_WriteData_varindex0000<3>
-                                                       cpu0_Mram_RAM3_ren_24.SLICEM_F
-    -------------------------------------------------  ---------------------------
-    Total                                      0.808ns (0.379ns logic, 0.429ns route)
-                                                       (46.9% logic, 53.1% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point cpu0_Mram_RAM3_ren_24.SLICEM_G (SLICE_X6Y42.BY), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.757ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               cpu0_MEMWR_decodeRegOut_27 (FF)
-  Destination:          cpu0_Mram_RAM3_ren_24.SLICEM_G (RAM)
-  Requirement:          0.000ns
-  Data Path Delay:      0.808ns (Levels of Logic = 1)
-  Clock Path Skew:      0.051ns (0.337 - 0.286)
-  Source Clock:         Clk_BUFGP falling at 93.750ns
-  Destination Clock:    Clk_BUFGP falling at 93.750ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: cpu0_MEMWR_decodeRegOut_27 to cpu0_Mram_RAM3_ren_24.SLICEM_G
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X4Y40.XQ       Tcko                  0.505   cpu0_MEMWR_decodeRegOut<27>
-                                                       cpu0_MEMWR_decodeRegOut_27
-    SLICE_X6Y42.BY       net (fanout=6)        0.429   cpu0_MEMWR_decodeRegOut<27>
-    SLICE_X6Y42.CLK      Tdh         (-Th)     0.126   cpu0_decode_WriteData_varindex0000<3>
-                                                       cpu0_Mram_RAM3_ren_24.SLICEM_G
-    -------------------------------------------------  ---------------------------
-    Total                                      0.808ns (0.379ns logic, 0.429ns route)
-                                                       (46.9% logic, 53.1% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar4.SLICEM_F (SLICE_X28Y18.BY), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.781ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               mcs0/U0/iomodule_0/write_data_5 (FF)
-  Destination:          mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar4.SLICEM_F (RAM)
-  Requirement:          0.000ns
-  Data Path Delay:      0.786ns (Levels of Logic = 1)
-  Clock Path Skew:      0.005ns (0.028 - 0.023)
+  Data Path Delay:      0.762ns (Levels of Logic = 1)
+  Clock Path Skew:      0.005ns (0.034 - 0.029)
   Source Clock:         Clk_BUFGP rising at 62.500ns
   Destination Clock:    Clk_BUFGP rising at 62.500ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: mcs0/U0/iomodule_0/write_data_5 to mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar4.SLICEM_F
+  Minimum Data Path: mcs0/U0/iomodule_0/write_data_14 to mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar13.SLICEM_F
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X29Y19.YQ      Tcko                  0.464   mcs0/U0/iomodule_0/write_data<13>
-                                                       mcs0/U0/iomodule_0/write_data_5
-    SLICE_X28Y18.BY      net (fanout=4)        0.448   mcs0/U0/iomodule_0/write_data<5>
-    SLICE_X28Y18.CLK     Tdh         (-Th)     0.126   mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/intr_addr_i<3>
-                                                       mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar4.SLICEM_F
+    SLICE_X7Y2.XQ        Tcko                  0.473   mcs0/U0/iomodule_0/write_data<14>
+                                                       mcs0/U0/iomodule_0/write_data_14
+    SLICE_X6Y2.BY        net (fanout=3)        0.415   mcs0/U0/iomodule_0/write_data<14>
+    SLICE_X6Y2.CLK       Tdh         (-Th)     0.126   mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/intr_addr_i<12>
+                                                       mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar13.SLICEM_F
     -------------------------------------------------  ---------------------------
-    Total                                      0.786ns (0.338ns logic, 0.448ns route)
-                                                       (43.0% logic, 57.0% route)
+    Total                                      0.762ns (0.347ns logic, 0.415ns route)
+                                                       (45.5% logic, 54.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar13.SLICEM_G (SLICE_X6Y2.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.757ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               mcs0/U0/iomodule_0/write_data_14 (FF)
+  Destination:          mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar13.SLICEM_G (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.762ns (Levels of Logic = 1)
+  Clock Path Skew:      0.005ns (0.034 - 0.029)
+  Source Clock:         Clk_BUFGP rising at 62.500ns
+  Destination Clock:    Clk_BUFGP rising at 62.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: mcs0/U0/iomodule_0/write_data_14 to mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar13.SLICEM_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y2.XQ        Tcko                  0.473   mcs0/U0/iomodule_0/write_data<14>
+                                                       mcs0/U0/iomodule_0/write_data_14
+    SLICE_X6Y2.BY        net (fanout=3)        0.415   mcs0/U0/iomodule_0/write_data<14>
+    SLICE_X6Y2.CLK       Tdh         (-Th)     0.126   mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/intr_addr_i<12>
+                                                       mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar13.SLICEM_G
+    -------------------------------------------------  ---------------------------
+    Total                                      0.762ns (0.347ns logic, 0.415ns route)
+                                                       (45.5% logic, 54.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cpu0_ALUW_currentIns_15 (SLICE_X47Y72.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.895ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cpu0_EX_currentIns_15 (FF)
+  Destination:          cpu0_ALUW_currentIns_15 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.937ns (Levels of Logic = 0)
+  Clock Path Skew:      0.042ns (0.280 - 0.238)
+  Source Clock:         Clk_BUFGP falling at 93.750ns
+  Destination Clock:    Clk_BUFGP falling at 93.750ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: cpu0_EX_currentIns_15 to cpu0_ALUW_currentIns_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y72.XQ      Tcko                  0.505   cpu0_EX_currentIns<15>
+                                                       cpu0_EX_currentIns_15
+    SLICE_X47Y72.BX      net (fanout=1)        0.343   cpu0_EX_currentIns<15>
+    SLICE_X47Y72.CLK     Tckdi       (-Th)    -0.089   cpu0_ALUW_currentIns<15>
+                                                       cpu0_ALUW_currentIns_15
+    -------------------------------------------------  ---------------------------
+    Total                                      0.937ns (0.594ns logic, 0.343ns route)
+                                                       (63.4% logic, 36.6% route)
 
 --------------------------------------------------------------------------------
 
@@ -1324,7 +1023,7 @@ Slack: 58.929ns (period - min period limit)
   Min period limit: 3.571ns (280.034MHz) ()
   Physical resource: mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[15].RAMB16_S2_1/CLKA
   Logical resource: mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[15].RAMB16_S2_1/CLKA
-  Location pin: RAMB16_X1Y4.CLKA
+  Location pin: RAMB16_X1Y2.CLKA
   Clock network: Clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 58.929ns (period - min period limit)
@@ -1332,7 +1031,7 @@ Slack: 58.929ns (period - min period limit)
   Min period limit: 3.571ns (280.034MHz) ()
   Physical resource: mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[15].RAMB16_S2_1/CLKB
   Logical resource: mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[15].RAMB16_S2_1/CLKB
-  Location pin: RAMB16_X1Y4.CLKB
+  Location pin: RAMB16_X1Y2.CLKB
   Clock network: Clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 58.929ns (period - min period limit)
@@ -1340,7 +1039,7 @@ Slack: 58.929ns (period - min period limit)
   Min period limit: 3.571ns (280.034MHz) ()
   Physical resource: mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[8].RAMB16_S2_1/CLKA
   Logical resource: mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[8].RAMB16_S2_1/CLKA
-  Location pin: RAMB16_X1Y2.CLKA
+  Location pin: RAMB16_X0Y0.CLKA
   Clock network: Clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -1357,7 +1056,7 @@ Clock to Setup on destination clock Clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk            |   19.005|   30.067|   16.539|   22.834|
+Clk            |   22.120|   27.747|   16.493|   25.154|
 ---------------+---------+---------+---------+---------+
 
 
@@ -1366,16 +1065,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 1225027925 paths, 0 nets, and 27967 connections
+Constraints cover 1225206630 paths, 0 nets, and 28048 connections
 
 Design statistics:
-   Minimum period:  60.134ns{1}   (Maximum frequency:  16.630MHz)
+   Minimum period:  55.494ns{1}   (Maximum frequency:  18.020MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Thu Nov 14 02:41:00 2013 
+Analysis completed Thu Nov 14 03:35:26 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:

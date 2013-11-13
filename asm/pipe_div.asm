@@ -1,5 +1,5 @@
 .data 
-in1 : .word 16
+in1 : .word 8
 in2 : .word 6
 
 .text
@@ -20,7 +20,8 @@ mflo $t3
 
 div $s1, $s0
 mfhi $t5
-sll $t5, $t5, 0x10
+sllv $t5, $t5, $t1
+sll $t5, $t5, 8
 mflo $t4
 add $t5, $t5, $t4
 

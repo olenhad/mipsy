@@ -440,8 +440,8 @@ WARNING:Xst:646 - Signal <END_alur2> is assigned but never used. This unconnecte
     Found 32-bit register for signal <pc>.
     Found 32-bit adder for signal <pc$add0000> created at line 295.
     Found 32-bit 4-to-1 multiplexer for signal <pc$mux0001> created at line 282.
-    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0003> created at line 734.
-    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0004> created at line 734.
+    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0003> created at line 741.
+    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0004> created at line 741.
     Found 32-bit adder for signal <pc$mux0006>.
     Found 32-bit subtractor for signal <pc$share0000>.
     Found 32-bit register for signal <prev_op1>.
@@ -452,7 +452,7 @@ WARNING:Xst:646 - Signal <END_alur2> is assigned but never used. This unconnecte
     Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0001> created at line 265.
     Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0000>.
     Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0001> created at line 601.
-    Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0002> created at line 676.
+    Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0002> created at line 683.
     Found 32-bit 16-to-1 multiplexer for signal <prev_op2$mux0003> created at line 307.
     Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0005>.
     Found 32-bit register for signal <res1Reg>.
@@ -1293,7 +1293,7 @@ WARNING:Xst:2677 - Node <cpu0_DRegOut_0> of sequential type is unconnected in bl
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 104.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 103.
 Optimizing block <LAB2> to meet ratio 100 (+ 5) of 3584 slices :
 Area constraint is met for block <LAB2>, final ratio is 94.
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
@@ -1304,6 +1304,9 @@ INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_r
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
 INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
+FlipFlop cpu0_alu_control_0 has been replicated 1 time(s)
+FlipFlop cpu0_alu_control_1 has been replicated 1 time(s)
+FlipFlop cpu0_alu_control_2 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_0 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_1 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_10 has been replicated 1 time(s)
@@ -1312,18 +1315,31 @@ FlipFlop cpu0_alu_op1_12 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_13 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_14 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_15 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_16 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_17 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_18 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_19 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_2 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_20 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_21 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_22 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_23 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_24 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_25 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_26 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_3 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_31 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_4 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_5 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_6 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_7 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_8 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_9 has been replicated 1 time(s)
-FlipFlop cpu0_alu_op2_0 has been replicated 1 time(s)
-FlipFlop cpu0_alu_op2_2 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op2_0 has been replicated 2 time(s)
+FlipFlop cpu0_alu_op2_1 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op2_2 has been replicated 2 time(s)
 FlipFlop cpu0_alu_op2_3 has been replicated 1 time(s)
-FlipFlop cpu0_alu_op2_31 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op2_31 has been replicated 2 time(s)
 FlipFlop cpu0_alu_op2_4 has been replicated 1 time(s)
 
 Final Macro Processing ...
@@ -1337,8 +1353,8 @@ Unit <LAB2> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1074
- Flip-Flops                                            : 1074
+# Registers                                            : 1093
+ Flip-Flops                                            : 1093
 # Shift Registers                                      : 2
  2-bit shift register                                  : 2
 
@@ -1369,35 +1385,35 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 7862
+# BELS                             : 7901
 #      GND                         : 2
 #      INV                         : 292
 #      LUT1                        : 57
-#      LUT2                        : 381
-#      LUT2_D                      : 16
-#      LUT2_L                      : 9
-#      LUT3                        : 1045
-#      LUT3_D                      : 31
+#      LUT2                        : 432
+#      LUT2_D                      : 15
+#      LUT2_L                      : 10
+#      LUT3                        : 1121
+#      LUT3_D                      : 28
 #      LUT3_L                      : 16
-#      LUT4                        : 3616
-#      LUT4_D                      : 110
-#      LUT4_L                      : 326
+#      LUT4                        : 3434
+#      LUT4_D                      : 117
+#      LUT4_L                      : 412
 #      MULT_AND                    : 95
 #      MUXCY                       : 728
 #      MUXCY_L                     : 77
-#      MUXF5                       : 410
+#      MUXF5                       : 414
 #      MUXF6                       : 6
 #      MUXF7                       : 2
 #      MUXF8                       : 1
 #      VCC                         : 2
 #      XORCY                       : 640
-# FlipFlops/Latches                : 1667
+# FlipFlops/Latches                : 1686
 #      FD                          : 124
 #      FDE                         : 323
-#      FDE_1                       : 696
-#      FDR                         : 204
+#      FDE_1                       : 715
+#      FDR                         : 203
 #      FDRE                        : 214
-#      FDRS                        : 2
+#      FDRS                        : 3
 #      FDRSE                       : 12
 #      FDS                         : 72
 #      FDSE                        : 20
@@ -1422,10 +1438,10 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     3356  out of   3584    93%  
- Number of Slice Flip Flops:           1667  out of   7168    23%  
- Number of 4 input LUTs:               6489  out of   7168    90%  
-    Number used as logic:              5899
+ Number of Slices:                     3373  out of   3584    94%  
+ Number of Slice Flip Flops:           1686  out of   7168    23%  
+ Number of 4 input LUTs:               6524  out of   7168    91%  
+    Number used as logic:              5934
     Number used as Shift registers:      52
     Number used as RAMs:                538
  Number of IOs:                          11
@@ -1455,7 +1471,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 2009  |
+Clk                                | BUFGP                  | 2028  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1466,7 +1482,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 47.068ns (Maximum Frequency: 21.246MHz)
+   Minimum period: 46.124ns (Maximum Frequency: 21.681MHz)
    Minimum input arrival time before clock: 1.548ns
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: 5.816ns
@@ -1477,22 +1493,23 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 47.068ns (frequency: 21.246MHz)
-  Total number of paths / destination ports: 1225050532 / 6930
+  Clock period: 46.124ns (frequency: 21.681MHz)
+  Total number of paths / destination ports: 1225238581 / 6969
 -------------------------------------------------------------------------
-Delay:               23.534ns (Levels of Logic = 73)
-  Source:            cpu0_alu_op2_1 (FF)
+Delay:               23.062ns (Levels of Logic = 74)
+  Source:            cpu0_alu_op2_0_1 (FF)
   Destination:       cpu0_ialu_Result2_31 (FF)
   Source Clock:      Clk falling
   Destination Clock: Clk rising
 
-  Data Path: cpu0_alu_op2_1 to cpu0_ialu_Result2_31
+  Data Path: cpu0_alu_op2_0_1 to cpu0_ialu_Result2_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE_1:C->Q           57   0.591   1.270  cpu0_alu_op2_1 (cpu0_alu_op2_1)
-     INV:I->O              1   0.648   0.000  cpu0_ialu_mult_Madd_newOperand2_not0000<1>1_INV_0 (cpu0_ialu_mult_Madd_newOperand2_not0000<1>)
-     MUXCY:S->O            1   0.632   0.000  cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<1> (cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<1>)
+     FDE_1:C->Q            5   0.591   0.776  cpu0_alu_op2_0_1 (cpu0_alu_op2_0_1)
+     LUT1:I0->O            1   0.648   0.000  cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<0>_rt (cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.632   0.000  cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<0> (cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<1> (cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<1>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<2> (cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<2>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<3> (cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<3>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<4> (cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<4>)
@@ -1507,8 +1524,8 @@ Delay:               23.534ns (Levels of Logic = 73)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<13> (cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<13>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<14> (cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<14>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<15> (cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<15>)
-     XORCY:CI->O           1   0.844   0.500  cpu0_ialu_mult_Madd_newOperand2_addsub0000_xor<16> (cpu0_ialu_mult_newOperand2_addsub0000<16>)
-     LUT3:I1->O            1   0.643   0.420  cpu0_ialu_mult_Mmux_newOperand2161 (cpu0_ialu_mult_newOperand2<16>)
+     XORCY:CI->O           1   0.844   0.452  cpu0_ialu_mult_Madd_newOperand2_addsub0000_xor<16> (cpu0_ialu_mult_newOperand2_addsub0000<16>)
+     LUT3:I2->O            1   0.648   0.420  cpu0_ialu_mult_Mmux_newOperand2161 (cpu0_ialu_mult_newOperand2<16>)
      MULT18X18SIO:B16->P17    1   4.873   0.500  cpu0_ialu_mult_Mmult_combinedResult_submult_0 (cpu0_ialu_mult_Mmult_combinedResult_submult_0_P_to_Adder_A_17)
      LUT2:I1->O            1   0.643   0.000  cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_lut<17> (cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_lut<17>)
      MUXCY:S->O            1   0.632   0.000  cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<17> (cpu0_ialu_mult_Mmult_combinedResult_submult_00_Madd_cy<17>)
@@ -1562,12 +1579,12 @@ Delay:               23.534ns (Levels of Logic = 73)
      INV:I->O              1   0.648   0.000  cpu0_ialu_mult_Madd_convertedResult_not0000<62>1_INV_0 (cpu0_ialu_mult_Madd_convertedResult_not0000<62>)
      MUXCY:S->O            0   0.632   0.000  cpu0_ialu_mult_Madd_convertedResult_cy<62> (cpu0_ialu_mult_Madd_convertedResult_cy<62>)
      XORCY:CI->O           1   0.844   0.423  cpu0_ialu_mult_Madd_convertedResult_xor<63> (cpu0_ialu_mult_convertedResult<63>)
-     LUT4:I3->O            1   0.648   0.000  cpu0_ialu_Result2_mux0009<31>301_F (N758)
+     LUT4:I3->O            1   0.648   0.000  cpu0_ialu_Result2_mux0009<31>301_F (N730)
      MUXF5:I0->O           1   0.276   0.000  cpu0_ialu_Result2_mux0009<31>301 (cpu0_ialu_Result2_mux0009<31>30)
      FDS:D                     0.252          cpu0_ialu_Result2_31
     ----------------------------------------
-    Total                     23.534ns (19.474ns logic, 4.060ns route)
-                                       (82.7% logic, 17.3% route)
+    Total                     23.062ns (19.544ns logic, 3.518ns route)
+                                       (84.7% logic, 15.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
@@ -1630,8 +1647,8 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 75.00 secs
-Total CPU time to Xst completion: 75.40 secs
+Total REAL time to Xst completion: 76.00 secs
+Total CPU time to Xst completion: 76.01 secs
  
 --> 
 
