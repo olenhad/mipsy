@@ -9,26 +9,933 @@ Target Device  : xc3s400a
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Wed Nov 13 01:36:23 2013
+Mapped Date    : Wed Nov 13 12:38:09 2013
+ERROR:Pack:18 - The design is too large for the given device and package. 
+   Please check the Design Summary section to see which resource requirement for
+   your design exceeds the resources available in the device.
+
+   NOTE: An NCD file will still be generated to allow you to examine the mapped
+   design.  This file is intended for evaluation use only, and will not process
+   successfully through PAR.
+
+   This mapped NCD file can be used to evaluate how the design's logic has been
+   mapped into FPGA logic resources.  It can also be used to analyze
+   preliminary, logic-level (pre-route) timing with one of the Xilinx static
+   timing analysis tools (TRCE or Timing Analyzer).
 
 Design Summary
 --------------
-Number of errors   :   1
-Number of warnings :   0
+Number of errors:      2
+Number of warnings:   80
+Logic Utilization:
+  Number of Slice Flip Flops:         2,175 out of   7,168   30%
+  Number of 4 input LUTs:             6,920 out of   7,168   96%
+Logic Distribution:
+  Number of occupied Slices:          4,011 out of   3,584  111% (OVERMAPPED)
+    Number of Slices containing only related logic:   4,011 out of   4,011 100%
+    Number of Slices containing unrelated logic:          0 out of   4,011   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       7,012 out of   7,168   97%
+    Number used as logic:             6,586
+    Number used as a route-thru:         92
+    Number used for Dual Port RAMs:     282
+      (Two LUTs used per Dual Port RAM)
+    Number used as Shift registers:      52
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 11 out of     195    5%
+  Number of BUFGMUXs:                     1 out of      24    4%
+  Number of MULT18X18SIOs:                4 out of      20   20%
+  Number of RAMB16BWEs:                  19 out of      20   95%
+
+Average Fanout of Non-Clock Nets:                3.58
+
+Peak Memory Usage:  312 MB
+Total REAL time to MAP completion:  9 secs 
+Total CPU time to MAP completion:   9 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
 
 Section 1 - Errors
 ------------------
-ERROR:Security:9 - No 'ISE' nor 'WebPack' feature was available for part
-'xc3s400a'.
-ERROR:Map:258 - A problem was encountered attempting to get the license for this
-   architecture. 
+ERROR:Pack:2310 - Too many comps of type "SLICEL" found to fit this device.
+ERROR:Pack:18 - The design is too large for the given device and package. 
+   Please check the Design Summary section to see which resource requirement for
+   your design exceeds the resources available in the device.
+
+   NOTE: An NCD file will still be generated to allow you to examine the mapped
+   design.  This file is intended for evaluation use only, and will not process
+   successfully through PAR.
+
+   This mapped NCD file can be used to evaluate how the design's logic has been
+   mapped into FPGA logic resources.  It can also be used to analyze
+   preliminary, logic-level (pre-route) timing with one of the Xilinx static
+   timing analysis tools (TRCE or Timing Analyzer).
 
 Section 2 - Warnings
 --------------------
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[24].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[24].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[24].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[24].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[25].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[25].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[25].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[29].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[29].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[29].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[29].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[30].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[30].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[30].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[30].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[31].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[31].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[31].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[31].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[28].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[28].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[28].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[27].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[27].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[27].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[26].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[26].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[26].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[26].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[16].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[16].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[17].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[17].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[17].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[17].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[18].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[18].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[18].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[18].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[19].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[19].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[20].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[20].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[20].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[20].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[21].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[21].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[21].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[22].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[22].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[22].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[22].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[23].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
+   with F5 multiplexer
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[23].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5.  The
+   function generator
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
+   FPGA.PreFetch_Buffers[23].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be
+   placed in the G position because the output signal doesn't match other
+   symbols' use of the G signal.  The signal
+   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Usin
+   g_FPGA.OpSelect_Bits[23].Operand_Select_Bit_I/op2_Reg already uses G.  The
+   design will exhibit suboptimal timing.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[15].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[15].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[8].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[8].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[2].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[2].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[14].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[14].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[7].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[7].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[1].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[1].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[13].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[13].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[0].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[12].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[12].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[5].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[5].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[11].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[11].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[4].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[4].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[9].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA2> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA3> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA4> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA5> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA6> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA7> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA8> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA9> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA10> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA11> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA12> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA13> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA14> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA15> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA16> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA17> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA18> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA19> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA20> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA21> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA22> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA23> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA24> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA25> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA26> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA27> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA28> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA29> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA30> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA31> on
+   block:<cpu0_irom_Mrom_rom0_rom0000>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[10].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[10].RAMB16_S2_1>:<R
+   AMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1>:<RA
+   MB16BWE_RAMB16BWE>.
 
 Section 3 - Informational
 -------------------------
-INFO:Security:54 - 'xc3s400a' is a WebPack part.
-INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
-INFO:Security:63 - The LM_LICENSE_FILE environment variable is not set.
-INFO:Security:68 - Please run the Xilinx License Configuration Manager
+INFO:LIT:243 - Logical network mcs0/UART_Interrupt has no load.
+INFO:LIT:395 - The above info message is repeated 86 more times for the
+   following (max. 5 shown):
+   mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<5>,
+   mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<4>,
+   mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<3>,
+   mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<2>,
+   mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<1>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  65 block(s) removed
+  52 block(s) optimized away
+  17 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I/Using_FPGA.FP
+GA_LUT4_Target_ADDR.LOW_ADDR_OUT_LEFT_I" (ROM) removed.
+ The signal
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I/low_addr_i<0>
+" is loadless and has been removed.
+  Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I/Mxor_low_addr
+_i<0>_xo<0>1" (ROM) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I/Using_FPGA.FP
+GA_LUT4_Target_ADDR.LOW_ADDR_OUT_RIGHT_I" (ROM) removed.
+ The signal
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I/low_addr_i<1>
+" is loadless and has been removed.
+  Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I/Mxor_low_addr
+_i<1>_Result1" (ROM) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[17].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[18].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[19].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[20].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[21].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[22].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[23].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[24].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[25].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[26].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[27].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[28].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[29].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[0].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[10].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[11].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[12].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[13].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[14].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[15].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[16].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[17].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[18].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[19].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[1].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[20].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[21].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[22].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[23].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[24].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[25].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[26].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[27].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[28].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[29].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[2].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[30].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[31].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[3].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[4].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[5].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[6].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[7].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[8].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA
+.Result_Mux_Bits[9].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Ext_NM_BRK_FDRS
+E" (SFF) removed.
+The signal "mcs0/UART_Interrupt" is sourceless and has been removed.
+The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<5>" is
+sourceless and has been removed.
+The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<4>" is
+sourceless and has been removed.
+The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<3>" is
+sourceless and has been removed.
+The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<2>" is
+sourceless and has been removed.
+The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<1>" is
+sourceless and has been removed.
+The signal "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i<0>" is
+sourceless and has been removed.
+The signal
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/iFetch_In_Progress_n" is
+sourceless and has been removed.
+ Sourceless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3"
+(MUX) removed.
+  The signal
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3/
+O" is sourceless and has been removed.
+   Sourceless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3/
+MUXCY_L_BUF" (BUF) removed.
+    The signal
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3/
+LO" is sourceless and has been removed.
+The signal "mcs0/U0/iomodule_0/gpo1_write" is sourceless and has been removed.
+ Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i_0" (SFF)
+removed.
+ Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i_1" (SFF)
+removed.
+ Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i_2" (SFF)
+removed.
+ Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i_3" (SFF)
+removed.
+ Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i_4" (SFF)
+removed.
+ Sourceless block "mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I1/gpo_io_i_5" (SFF)
+removed.
+The signal
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[17].PC_Bit_I/MUXCY_X/O" is sourceless and has been removed.
+ Sourceless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[17].PC_Bit_I/MUXCY_X/MUXCY_L_BUF" (BUF) removed.
+  The signal
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[17].PC_Bit_I/MUXCY_X/LO" is sourceless and has been removed.
+The signal
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FP
+GA.Buffer_DFFs[1].buffer_Addr_MUXCY_L/O" is sourceless and has been removed.
+ Sourceless block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FP
+GA.Buffer_DFFs[1].buffer_Addr_MUXCY_L/MUXCY_L_BUF" (BUF) removed.
+  The signal
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FP
+GA.Buffer_DFFs[1].buffer_Addr_MUXCY_L/LO" is sourceless and has been removed.
+Unused block
+"mcs0/U0/iomodule_0/IOModule_Core_I1/Using_UART.Uart_Control_Status_I1/UART_Inte
+rrupt1" (ROM) removed.
+Unused block "mcs0/U0/iomodule_0/gpo1_write1" (ROM) removed.
+Unused block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/iFetch_In_Progress_n1_INV_
+0" (BUF) removed.
+Unused block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.
+Not_All_Bits.PC_GEN[17].PC_Bit_I/MUXCY_X" (MUX) removed.
+Unused block
+"mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FP
+GA.Buffer_DFFs[1].buffer_Addr_MUXCY_L" (MUX) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i
+   optimized to 0
+FDR 		mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i
+   optimized to 0
+LUT3
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.No_C
+arry_Decoding.alu_carry_select_LUT
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[10].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[11].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[12].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[13].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[14].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[15].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[16].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[1].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[2].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT4
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[31].Operand_Select_Bit_I/Using_LUT4_1.Both_PC_and_MSR.Op1_Mu
+x2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[3].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[4].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[5].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[6].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[7].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[8].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+LUT2
+		mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using
+_FPGA.OpSelect_Bits[9].Operand_Select_Bit_I/Using_LUT4_1.Only_PC.Op1_Mux2_2
+GND 		mcs0/XST_GND
+VCC 		mcs0/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew    | Reg (s)      | Resistor | IBUF/IFD | SUSPEND          |
+|                                    |                  |           |                      | Term  | Strength | Rate    |              |          | Delay    |                  |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Clk                                | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| D2                                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| D3                                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| D4                                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| D5                                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| PUSH_A                             | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| PUSH_B                             | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| PUSH_C                             | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| Reset                              | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| UART_Rx                            | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| UART_Tx                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.
