@@ -128,7 +128,7 @@ signal alu_r2 : std_logic_vector(31 downto 0) := (others => '0');
 signal alu_debug : std_logic_vector(31 downto 0) := (others => '0');
 
 
-signal RAM0: RamData := (0 => x"01", 1 => x"06", 2 => x"01", 3 => x"0d",others => (others => '0'));
+signal RAM0: RamData := (0 => x"10", 1 => x"06", 2 => x"01", 3 => x"0d",others => (others => '0'));
 signal RAM1: RamData := (0 => x"00",others => (others => '0'));
 signal RAM2: RamData := (0 => x"00",others => (others => '0'));
 signal RAM3: RamData := (0 => x"00",others => (others => '0'));
@@ -263,16 +263,9 @@ begin
 	
 		if(prev_op1 /= cpu_op1) then
 			prev_op1 := cpu_op1;
---								RAM0(0) <= prev_op1(7 downto 0);
---								RAM1(0) <= prev_op1(15 downto 8);
---								RAM2(0) <= prev_op1(23 downto 16);
---								RAM3(0) <= prev_op1(31 downto 24);
-		else
+
+		elsif(prev_op2 /= cpu_op2) then
 			prev_op2 := cpu_op2;
---								RAM0(1) <= prev_op2(7 downto 0);
---								RAM1(1) <= prev_op2(15 downto 8);
---								RAM2(1) <= prev_op2(23 downto 16);
---								RAM3(1) <= prev_op2(31 downto 24);
 		end if;
 		if waitCounter = b"000000" then
 			
@@ -864,7 +857,7 @@ begin
 								
 								end if;
 				-- add offset to pc				
-								pc := std_logic_vector( signed(pc) + signed( tconcat));
+								pc := std_logic_vector( signed(pc) + signed( tconcat)  - 3);
 						end if;
 					end if;
 					
@@ -906,16 +899,9 @@ begin
 						-- also goes here with LUI
 						decode_WriteAddr <= WB_decodeRegWBAddr;
 						-- send WB_alur1
-						-- check if mfhi
-						if (WB_currentIns(5 downto 0) = b"010000" and WB_currentIns(31 downto 26) = b"000000") then
-							decode_WriteData <= hi;
-						elsif (WB_currentIns(5 downto 0) = b"010010" and WB_currentIns(31 downto 26) = b"000000") then
-						-- check if mflo
-							decode_WriteData <= lo;
-						else
-							-- otherwise send WB_alur1
-							decode_WriteData <= WB_alur1;
-						end if;
+	
+						decode_WriteData <= WB_alur1;
+					
 					
 					
 				

@@ -14,6 +14,11 @@ lw $s0, 72($1)
 
 lui $1,0x1001
 lw $s1, 76($1)
+nop
+nop
+nop
+nop
+nop
 
 beq $s1, $s0, equal
 nop

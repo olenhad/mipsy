@@ -135,10 +135,13 @@ BEGIN
    begin		
       wait for 20 ns;
 		
-      wait for CLK_period*7;
+      wait for CLK_period*10;
 
+		cpu_op1 <= x"00000007";
+		wait for CLK_period*10;
 		
-		-- insert stimulus here 
+		cpu_op2 <= x"00000008";
+		
 
       wait;
    end process;
