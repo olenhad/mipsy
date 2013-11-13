@@ -1,7 +1,7 @@
 Release 13.2 par O.61xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-HUNARKHANNA-PC::  Wed Nov 13 20:21:02 2013
+HUNARKHANNA-PC::  Wed Nov 13 20:38:24 2013
 
 par -w -intstyle ise -ol high -t 1 LAB2_map.ncd LAB2.ncd LAB2.pcf 
 
@@ -49,7 +49,7 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 4 secs 
+Starting initial Timing Analysis.  REAL time: 3 secs 
 Finished initial Timing Analysis.  REAL time: 4 secs 
 
 
@@ -58,13 +58,13 @@ Total REAL time at the beginning of Placer: 4 secs
 Total CPU  time at the beginning of Placer: 4 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:ca3e5d22) REAL time: 5 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:ca3e5d22) REAL time: 4 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:ca3e5d22) REAL time: 5 secs 
+Phase 2.7  Design Feasibility Check (Checksum:ca3e5d22) REAL time: 4 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:ca3e5d22) REAL time: 5 secs 
+Phase 3.31  Local Placement Optimization (Checksum:ca3e5d22) REAL time: 4 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
@@ -105,21 +105,21 @@ Writing design to file LAB2.ncd
 Starting Router
 
 
-Phase  1  : 28510 unrouted;      REAL time: 42 secs 
+Phase  1  : 28510 unrouted;      REAL time: 43 secs 
 
 Phase  2  : 26964 unrouted;      REAL time: 43 secs 
 
 Phase  3  : 11502 unrouted;      REAL time: 46 secs 
 
-Phase  4  : 11502 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 46 secs 
+Phase  4  : 11502 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 47 secs 
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 55 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 56 secs 
 
 Updating file: LAB2.ncd with current fully routed design.
 
 Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 59 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 59 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 
 
 Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 1 secs 
 
@@ -177,7 +177,7 @@ All signals are completely routed.
 Total REAL time to PAR completion: 1 mins 3 secs 
 Total CPU time to PAR completion: 1 mins 3 secs 
 
-Peak Memory Usage:  402 MB
+Peak Memory Usage:  401 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
