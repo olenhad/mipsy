@@ -231,6 +231,7 @@ process(CLK)
 	variable vlregAddr : std_logic_vector(4 downto 0) := (others => '0');
 	variable prev_op1 : STD_LOGIC_VECTOR (31 downto 0):= (others => '0');
 	variable prev_op2 : STD_LOGIC_VECTOR (31 downto 0):= (others => '0');
+	
 	variable res1Reg : STD_LOGIC_vector (31 downto 0):= (others => '0');
 	variable res2Reg : STD_LOGIC_vector (31 downto 0):= (others => '0');
 	
@@ -257,23 +258,8 @@ begin
 	if falling_edge(CLK) then
 		vlreg := decode_lreg;
 		vlregAddr := decode_lregAddr;
-		
-		-- if(prev_op1 /= cpu_op1) then
-		-- 	prev_op1 := cpu_op1;
-		-- 	RAM0(0) <= prev_op1(7 downto 0);
-		-- 	RAM1(0) <= prev_op1(15 downto 8);
-		-- 	RAM2(0) <= prev_op1(23 downto 16);
-		-- 	RAM3(0) <= prev_op1(31 downto 24);
-		-- --end if;
-		-- else
-		-- --if(prev_op2 /= cpu_op2) then
-		-- 	prev_op2 := cpu_op2;
-		-- 	RAM0(1) <= prev_op2(7 downto 0);
-		-- 	RAM1(1) <= prev_op2(15 downto 8);
-		-- 	RAM2(1) <= prev_op2(23 downto 16);
-		-- 	RAM3(1) <= prev_op2(31 downto 24);
-		-- end if;
-		
+	
+			 
 		if waitCounter = b"000000" then
 			
 			alu_control <= decode_AluControl;
@@ -751,14 +737,26 @@ begin
 				-- DO nothing. Update to next stage
 				-- R Type	
 					currentState := WriteBack;
-			
+					if(prev_op1 /= cpu_op1) then
+								prev_op1 := cpu_op1;
+								RAM0(0) <= prev_op1(7 downto 0);
+								RAM1(0) <= prev_op1(15 downto 8);
+								RAM2(0) <= prev_op1(23 downto 16);
+								RAM3(0) <= prev_op1(31 downto 24);
+--							elsif(prev_op2 /= cpu_op2) then
+--								prev_op2 := cpu_op2;
+--								RAM0(1) <= prev_op2(7 downto 0);
+--								RAM1(1) <= prev_op2(15 downto 8);
+--								RAM2(1) <= prev_op2(23 downto 16);
+--								RAM3(1) <= prev_op2(31 downto 24);
+							end if;
 				elsif sig_Branch = '0' and
 				      sig_MemRead = '1' and 
 					   sig_MemWrite = '0' then 
 					
-				-- lw 					
+				-- lw
 					currentState := WriteBack;
-			
+					
 				elsif sig_Branch = '0' and
 				      sig_MemRead = '0' and
 						sig_MemWrite = '1' then
@@ -766,14 +764,19 @@ begin
 --				-- registerOut sends data from rt	
 					if MEMWR_alur1(5 downto 0) = b"010000" then
 						res1Reg := MEMWR_decodeRegOut;
+						
 					elsif MEMWR_alur1(5 downto 0) = b"010001" then
 						res2Reg := MEMWR_decodeRegOut;
 					else
-						RAM0(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) <= MEMWR_decodeRegOut(7 downto 0);
-						RAM1(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) <= MEMWR_decodeRegOut(15 downto 8);
-						RAM2(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) <= MEMWR_decodeRegOut(23 downto 16);
-						RAM3(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) <= MEMWR_decodeRegOut(31 downto 24);
-	--					DMemOut <= read_ram_at(RAM, alu_r1);
+						
+						
+							RAM0(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) <= MEMWR_decodeRegOut(7 downto 0);
+							RAM1(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) <= MEMWR_decodeRegOut(15 downto 8);
+							RAM2(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) <= MEMWR_decodeRegOut(23 downto 16);
+							RAM3(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) <= MEMWR_decodeRegOut(31 downto 24);
+
+						
+		--					DMemOut <= read_ram_at(RAM, alu_r1);
 	--					DMemAddr <= alu_r1;
 					end if;
 					currentState := WriteBack;

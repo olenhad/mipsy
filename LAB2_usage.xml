@@ -4,8 +4,8 @@
      changes made to this file may result in unpredictable
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
-<DeviceUsageSummary rev="134">
-<DesignStatistics TimeStamp="Wed Nov 13 17:42:59 2013"><group name="NetStatistics">
+<DeviceUsageSummary rev="135">
+<DesignStatistics TimeStamp="Wed Nov 13 18:28:31 2013"><group name="NetStatistics">
 <item name="NumNets_Active" rev="132">
 <attrib name="value" value="7201"/></item>
 <item name="NumNets_Gnd" rev="132">
@@ -112,43 +112,43 @@
 <attrib name="value" value="1477"/></item>
 </group>
 <group name="MiscellaneousStatistics">
-<item name="AGG_BONDED_IO" rev="134">
+<item name="AGG_BONDED_IO" rev="135">
 <attrib name="value" value="11"/></item>
-<item name="AGG_IO" rev="134">
+<item name="AGG_IO" rev="135">
 <attrib name="value" value="11"/></item>
-<item name="AGG_SLICE" rev="134">
-<attrib name="value" value="3956"/></item>
-<item name="NUM_4_INPUT_LUT" rev="134">
-<attrib name="value" value="6973"/></item>
-<item name="NUM_BONDED_IBUF" rev="134">
+<item name="AGG_SLICE" rev="135">
+<attrib name="value" value="3928"/></item>
+<item name="NUM_4_INPUT_LUT" rev="135">
+<attrib name="value" value="6890"/></item>
+<item name="NUM_BONDED_IBUF" rev="135">
 <attrib name="value" value="6"/></item>
-<item name="NUM_BONDED_IOB" rev="134">
+<item name="NUM_BONDED_IOB" rev="135">
 <attrib name="value" value="5"/></item>
-<item name="NUM_BUFGMUX" rev="134">
+<item name="NUM_BUFGMUX" rev="135">
 <attrib name="value" value="1"/></item>
-<item name="NUM_CYMUX" rev="134">
-<attrib name="value" value="773"/></item>
-<item name="NUM_DP_RAM" rev="134">
+<item name="NUM_CYMUX" rev="135">
+<attrib name="value" value="772"/></item>
+<item name="NUM_DP_RAM" rev="135">
 <attrib name="value" value="282"/></item>
-<item name="NUM_LUT_RT" rev="134">
+<item name="NUM_LUT_RT" rev="135">
 <attrib name="value" value="92"/></item>
-<item name="NUM_MULT18X18SIO" rev="134">
+<item name="NUM_MULT18X18SIO" rev="135">
 <attrib name="value" value="4"/></item>
-<item name="NUM_MULTAND" rev="134">
+<item name="NUM_MULTAND" rev="135">
 <attrib name="value" value="95"/></item>
-<item name="NUM_RAMB16BWE" rev="134">
+<item name="NUM_RAMB16BWE" rev="135">
 <attrib name="value" value="19"/></item>
-<item name="NUM_SHIFT" rev="134">
+<item name="NUM_SHIFT" rev="135">
 <attrib name="value" value="52"/></item>
-<item name="NUM_SLICEL" rev="134">
-<attrib name="value" value="3526"/></item>
-<item name="NUM_SLICEM" rev="134">
+<item name="NUM_SLICEL" rev="135">
+<attrib name="value" value="3498"/></item>
+<item name="NUM_SLICEM" rev="135">
 <attrib name="value" value="430"/></item>
-<item name="NUM_SLICE_FF" rev="134">
-<attrib name="value" value="2057"/></item>
-<item name="NUM_XOR" rev="134">
+<item name="NUM_SLICE_FF" rev="135">
+<attrib name="value" value="2075"/></item>
+<item name="NUM_XOR" rev="135">
 <attrib name="value" value="608"/></item>
-<item name="Xilinx Core microblaze_mcs_v1_4, Xilinx CORE Generator 14.6" rev="134">
+<item name="Xilinx Core microblaze_mcs_v1_4, Xilinx CORE Generator 14.6" rev="135">
 <attrib name="value" value="1"/></item>
 </group>
 </DesignStatistics>
@@ -296,7 +296,7 @@
 <item name="CLKA" rev="132">
 <attrib name="CLKA_INV" value="1"/><attrib name="CLKA" value="18"/></item>
 <item name="CLKB" rev="132">
-<attrib name="CLKB_INV" value="2"/><attrib name="CLKB" value="16"/></item>
+<attrib name="CLKB" value="16"/><attrib name="CLKB_INV" value="2"/></item>
 <item name="DATA_WIDTH_A" rev="132">
 <attrib name="2" value="16"/><attrib name="36" value="3"/></item>
 <item name="DATA_WIDTH_B" rev="132">
@@ -422,7 +422,7 @@
 <item name="CLKA" rev="132">
 <attrib name="CLKA_INV" value="1"/><attrib name="CLKA" value="18"/></item>
 <item name="CLKB" rev="132">
-<attrib name="CLKB_INV" value="2"/><attrib name="CLKB" value="16"/></item>
+<attrib name="CLKB" value="16"/><attrib name="CLKB_INV" value="2"/></item>
 <item name="ENA" rev="132">
 <attrib name="ENA_INV" value="0"/><attrib name="ENA" value="19"/></item>
 <item name="ENB" rev="132">
@@ -917,14 +917,6 @@
 <item name="1" rev="132">
 <attrib name="value" value="101"/></item>
 </group>
-<group name="SLICEL_XORF">
-<item name="0" rev="132">
-<attrib name="value" value="384"/></item>
-<item name="1" rev="132">
-<attrib name="value" value="384"/></item>
-<item name="O" rev="132">
-<attrib name="value" value="384"/></item>
-</group>
 <group name="SLICEL_FFX">
 <item name="CE" rev="132">
 <attrib name="value" value="862"/></item>
@@ -938,6 +930,14 @@
 <attrib name="value" value="9"/></item>
 <item name="SR" rev="132">
 <attrib name="value" value="248"/></item>
+</group>
+<group name="SLICEL_XORF">
+<item name="0" rev="132">
+<attrib name="value" value="384"/></item>
+<item name="1" rev="132">
+<attrib name="value" value="384"/></item>
+<item name="O" rev="132">
+<attrib name="value" value="384"/></item>
 </group>
 <group name="SLICEL_FFY">
 <item name="CE" rev="132">
