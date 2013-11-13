@@ -369,7 +369,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1384335302" xil_pn:in_ck="1508176950863347775" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5675292700759545696" xil_pn:start_ts="1384335222">
+    <transform xil_pn:end_ts="1384335745" xil_pn:in_ck="1508176950863347775" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5675292700759545696" xil_pn:start_ts="1384335666">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -397,6 +397,30 @@
     <transform xil_pn:end_ts="1384277763" xil_pn:in_ck="3325591100109" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-3247099115580352011" xil_pn:start_ts="1384277763">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1384335769" xil_pn:in_ck="-2415316715413887055" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="821716558544295882" xil_pn:start_ts="1384335763">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="LAB2.bld"/>
+      <outfile xil_pn:name="LAB2.ngd"/>
+      <outfile xil_pn:name="LAB2_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1384335780" xil_pn:in_ck="4907003062215974997" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-2836189773595213093" xil_pn:start_ts="1384335769">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="LAB2.pcf"/>
+      <outfile xil_pn:name="LAB2_map.map"/>
+      <outfile xil_pn:name="LAB2_map.mrp"/>
+      <outfile xil_pn:name="LAB2_map.ncd"/>
+      <outfile xil_pn:name="LAB2_map.ngm"/>
+      <outfile xil_pn:name="LAB2_map.xrpt"/>
+      <outfile xil_pn:name="LAB2_summary.xml"/>
+      <outfile xil_pn:name="LAB2_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
   </transforms>
 

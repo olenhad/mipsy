@@ -9,10 +9,13 @@ Target Device  : xc3s400a
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Wed Nov 13 12:38:09 2013
+Mapped Date    : Wed Nov 13 17:42:50 2013
 
 Mapping design into LUTs...
 Running directed packing...
+WARNING:Pack:266 - The function generator cpu0_RAM2_0_cmp_eq0001 failed to merge
+   with F5 multiplexer cpu0_currentState_not0001_f5.  There is a conflict for
+   the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator
    mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_
    FPGA.PreFetch_Buffers[24].SRL16E_I/Use_unisim.MB_SRL16E_I1 failed to merge
@@ -420,17 +423,17 @@ Design Summary
 
 Design Summary:
 Number of errors:      2
-Number of warnings:   80
+Number of warnings:   81
 Logic Utilization:
-  Number of Slice Flip Flops:         2,175 out of   7,168   30%
-  Number of 4 input LUTs:             6,920 out of   7,168   96%
+  Number of Slice Flip Flops:         2,057 out of   7,168   28%
+  Number of 4 input LUTs:             6,881 out of   7,168   95%
 Logic Distribution:
-  Number of occupied Slices:          4,011 out of   3,584  111% (OVERMAPPED)
-    Number of Slices containing only related logic:   4,011 out of   4,011 100%
-    Number of Slices containing unrelated logic:          0 out of   4,011   0%
+  Number of occupied Slices:          3,956 out of   3,584  110% (OVERMAPPED)
+    Number of Slices containing only related logic:   3,956 out of   3,956 100%
+    Number of Slices containing unrelated logic:          0 out of   3,956   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       7,012 out of   7,168   97%
-    Number used as logic:             6,586
+  Total Number of 4 input LUTs:       6,973 out of   7,168   97%
+    Number used as logic:             6,547
     Number used as a route-thru:         92
     Number used for Dual Port RAMs:     282
       (Two LUTs used per Dual Port RAM)
@@ -444,7 +447,7 @@ Logic Distribution:
   Number of MULT18X18SIOs:                4 out of      20   20%
   Number of RAMB16BWEs:                  19 out of      20   95%
 
-Average Fanout of Non-Clock Nets:                3.58
+Average Fanout of Non-Clock Nets:                3.73
 
 Peak Memory Usage:  312 MB
 Total REAL time to MAP completion:  9 secs 

@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Wed Nov 13 12:38:18 2013">
+  <application stringID="Map" timeStamp="Wed Nov 13 17:42:59 2013">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -68,19 +68,19 @@
       <section stringID="MAP_DESIGN_SUMMARY">
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="2"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
-        <item dataType="int" stringID="MAP_NUM_WARNINGS" value="80"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="319008"/>
+        <item dataType="int" stringID="MAP_NUM_WARNINGS" value="81"/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="319456"/>
         <item stringID="MAP_TOTAL_REAL_TIME" value="9 secs "/>
         <item stringID="MAP_TOTAL_CPU_TIME" value="9 secs "/>
       </section>
       <section stringID="MAP_SLICE_REPORTING">
-        <item AVAILABLE="7168" dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="2175"/>
-        <item AVAILABLE="7168" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="7012">
+        <item AVAILABLE="7168" dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="2057"/>
+        <item AVAILABLE="7168" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="6973">
           <item dataType="int" label="Number of route-thrus" stringID="MAP_NUM_LUT_RT" value="92"/>
           <item dataType="int" stringID="MAP_NUM_DP_RAM" value="282"/>
           <item dataType="int" label="Number used as Shift registers" stringID="MAP_NUM_SHIFT" value="52"/>
         </item>
-        <item AVAILABLE="3584" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="4011">
+        <item AVAILABLE="3584" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="3956">
           <item dataType="int" label="Number of Slices containing unrelated logic" stringID="MAP_NUM_SLICE_UNRELATED" value="0"/>
         </item>
       </section>
@@ -206,7 +206,7 @@
       </section>
       <section stringID="MAP_RPM_MACROS">
         <section stringID="MAP_SHAPE_SECTION">
-          <item dataType="int" stringID="MAP_NUM_SHAPE" value="144"/>
+          <item dataType="int" stringID="MAP_NUM_SHAPE" value="164"/>
         </section>
       </section>
       <section stringID="MAP_GUIDE_REPORT"/>

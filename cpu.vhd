@@ -75,7 +75,7 @@ component decode is
 			AluControl : out std_logic_vector(5 downto 0);
 			ControlSignals : out std_logic_vector(4 downto 0);
 			RegWBAddr : out std_logic_vector(    4 downto 0);
-			WaitFor : out std_logic_vector (7 downto 0);
+			WaitFor : out std_logic_vector (5 downto 0);
 			registerOut : out std_logic_vector(31 downto 0);
 			lreg: out std_logic_vector(31 downto 0);
 			lregAddr : out std_logic_vector(4 downto 0));
@@ -114,7 +114,7 @@ signal decode_AluOP1 :  std_logic_vector(31 downto 0) := (others => '0');
 signal decode_AluOP2 :  std_logic_vector(31 downto 0) := (others => '0');
 signal decode_AluControl : std_logic_vector(5 downto 0) := (others => '0');
 signal decode_ControlSignals : std_logic_vector(4 downto 0) := (others => '0');
-signal decode_waitFor : std_logic_vector(7 downto 0);
+signal decode_waitFor : std_logic_vector(5 downto 0);
 signal decode_registerOut : std_logic_vector(31 downto 0);
 signal decode_lreg : std_logic_vector(31 downto 0);
 signal decode_lregAddr : std_logic_vector(4 downto 0);
@@ -224,7 +224,7 @@ process(CLK)
 
 
 	
-	variable waitCounter : integer := 0;
+	variable waitCounter : std_logic_vector(5 downto 0) := (others => '0');
 	variable tconcat : std_logic_vector(17 downto 0);
 	variable ram_WE : std_logic := '0';
 	variable vlreg : std_logic_vector(31 downto 0) := (others => '0');
@@ -274,7 +274,7 @@ begin
 			RAM3(1) <= prev_op2(31 downto 24);
 		end if;
 		
-		if waitCounter = 0 then
+		if waitCounter = b"000000" then
 			
 			alu_control <= decode_AluControl;
 			
@@ -675,7 +675,7 @@ begin
 				end if;
 
 
-				waitCounter :=  to_integer(unsigned(decode_WaitFor));
+				waitCounter :=  decode_WaitFor;
 				currentState := AluWait;
 				
 				
@@ -893,7 +893,7 @@ begin
 			
 		else
 		
-			waitCounter := waitCounter - 1;
+			waitCounter := std_logic_vector(unsigned(waitCounter) - 1);
 		
 		end if;
 	end if;
