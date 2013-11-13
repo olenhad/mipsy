@@ -126,7 +126,8 @@ Architecture behavioral of Entity rom is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/decode.vhd" in Library work.
 Architecture behavioral of Entity decode is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
-Architecture behavioral of Entity alu is up to date.
+Entity <alu> compiled.
+Entity <alu> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" in Library work.
 Architecture behavioral of Entity cpu is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" in Library work.
@@ -354,11 +355,10 @@ Synthesizing Unit <alu>.
     Found 1-bit register for signal <divReset>.
     Found 32-bit comparator equal for signal <Result1$cmp_eq0078> created at line 220.
     Found 32-bit comparator less for signal <Result1$cmp_lt0000> created at line 200.
-    Found 32-bit comparator not equal for signal <Result1$cmp_ne0000> created at line 227.
     Found 32-bit xor2 for signal <Result1$xor0000> created at line 193.
     Summary:
 	inferred  97 D-type flip-flop(s).
-	inferred   3 Comparator(s).
+	inferred   2 Comparator(s).
 Unit <alu> synthesized.
 
 
@@ -502,11 +502,11 @@ Macro Statistics
  5-bit register                                        : 14
  6-bit register                                        : 2
  8-bit register                                        : 64
-# Comparators                                          : 20
+# Comparators                                          : 19
  32-bit comparator equal                               : 3
  32-bit comparator greatequal                          : 1
  32-bit comparator less                                : 2
- 32-bit comparator not equal                           : 5
+ 32-bit comparator not equal                           : 4
  5-bit comparator equal                                : 8
  5-bit comparator not equal                            : 1
 # Multiplexers                                         : 27
@@ -689,11 +689,11 @@ Macro Statistics
  32-bit down counter                                   : 1
 # Registers                                            : 1899
  Flip-Flops                                            : 1899
-# Comparators                                          : 20
+# Comparators                                          : 19
  32-bit comparator equal                               : 3
  32-bit comparator greatequal                          : 1
  32-bit comparator less                                : 2
- 32-bit comparator not equal                           : 5
+ 32-bit comparator not equal                           : 4
  5-bit comparator equal                                : 8
  5-bit comparator not equal                            : 1
 # Multiplexers                                         : 27
@@ -1051,7 +1051,7 @@ WARNING:Xst:2677 - Node <cpu0_DRegOut_0> of sequential type is unconnected in bl
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 110.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 111.
 Optimizing block <LAB2> to meet ratio 100 (+ 5) of 3584 slices :
 Area constraint is met for block <LAB2>, final ratio is 102.
 INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
@@ -1106,23 +1106,23 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 9617
+# BELS                             : 9697
 #      GND                         : 2
 #      INV                         : 295
 #      LUT1                        : 56
-#      LUT2                        : 399
+#      LUT2                        : 401
 #      LUT2_D                      : 10
 #      LUT2_L                      : 3
-#      LUT3                        : 1553
-#      LUT3_D                      : 40
-#      LUT3_L                      : 7
-#      LUT4                        : 4200
-#      LUT4_D                      : 63
-#      LUT4_L                      : 126
+#      LUT3                        : 1622
+#      LUT3_D                      : 39
+#      LUT3_L                      : 6
+#      LUT4                        : 4190
+#      LUT4_D                      : 62
+#      LUT4_L                      : 125
 #      MULT_AND                    : 95
 #      MUXCY                       : 769
 #      MUXCY_L                     : 77
-#      MUXF5                       : 887
+#      MUXF5                       : 910
 #      MUXF6                       : 262
 #      MUXF7                       : 130
 #      MUXF8                       : 1
@@ -1159,10 +1159,10 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     3661  out of   3584   102% (*) 
+ Number of Slices:                     3692  out of   3584   103% (*) 
  Number of Slice Flip Flops:           2196  out of   7168    30%  
- Number of 4 input LUTs:               7086  out of   7168    98%  
-    Number used as logic:              6752
+ Number of 4 input LUTs:               7143  out of   7168    99%  
+    Number used as logic:              6809
     Number used as Shift registers:      52
     Number used as RAMs:                282
  Number of IOs:                          11
@@ -1205,7 +1205,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 52.367ns (Maximum Frequency: 19.096MHz)
+   Minimum period: 52.377ns (Maximum Frequency: 19.092MHz)
    Minimum input arrival time before clock: 1.548ns
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: 5.816ns
@@ -1216,10 +1216,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 52.367ns (frequency: 19.096MHz)
-  Total number of paths / destination ports: 1224800462 / 6740
+  Clock period: 52.377ns (frequency: 19.092MHz)
+  Total number of paths / destination ports: 1224800087 / 6740
 -------------------------------------------------------------------------
-Delay:               26.183ns (Levels of Logic = 26)
+Delay:               26.188ns (Levels of Logic = 26)
   Source:            cpu0_alu_op2_23 (FF)
   Destination:       cpu0_ialu_Result1_10 (FF)
   Source Clock:      Clk falling
@@ -1229,7 +1229,7 @@ Delay:               26.183ns (Levels of Logic = 26)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE_1:C->Q           15   0.591   1.160  cpu0_alu_op2_23 (cpu0_alu_op2_23)
+     FDE_1:C->Q           18   0.591   1.211  cpu0_alu_op2_23 (cpu0_alu_op2_23)
      LUT3:I0->O            1   0.648   0.000  cpu0_ialu_Result1_cmp_eq00431_wg_lut<0> (cpu0_ialu_Result1_cmp_eq00431_wg_lut<0>)
      MUXCY:S->O            1   0.632   0.000  cpu0_ialu_Result1_cmp_eq00431_wg_cy<0> (cpu0_ialu_Result1_cmp_eq00431_wg_cy<0>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_Result1_cmp_eq00431_wg_cy<1> (cpu0_ialu_Result1_cmp_eq00431_wg_cy<1>)
@@ -1239,26 +1239,26 @@ Delay:               26.183ns (Levels of Logic = 26)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_Result1_cmp_eq00431_wg_cy<5> (cpu0_ialu_Result1_cmp_eq00431_wg_cy<5>)
      MUXCY:CI->O          39   0.269   1.296  cpu0_ialu_Result1_cmp_eq00431_wg_cy<6> (cpu0_ialu_Result1_cmp_eq00431_wg_cy<6>)
      LUT3:I2->O           18   0.648   1.211  cpu0_ialu_Result1_cmp_eq00671 (cpu0_ialu_Result1_cmp_eq0067)
-     LUT4:I0->O            5   0.648   0.636  cpu0_ialu_Result1_mux0006<17>110 (cpu0_ialu_N96)
-     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0006<21>1 (N1098)
-     LUT4:I3->O            5   0.648   0.636  cpu0_ialu_Result1_mux0006<25>1 (cpu0_ialu_N42)
-     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0006<29>11 (N1097)
+     LUT4:I0->O            4   0.648   0.590  cpu0_ialu_Result1_mux0005<17>110 (cpu0_ialu_N95)
+     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0005<21>1 (N1080)
+     LUT4:I3->O            5   0.648   0.636  cpu0_ialu_Result1_mux0005<25>1 (cpu0_ialu_N41)
+     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0005<29>11 (N1079)
      LUT4:I3->O            4   0.648   0.590  cpu0_ialu_Result1_or0005 (cpu0_ialu_Result1_or0005)
-     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0006<10>5 (N1053)
-     LUT4:I3->O            4   0.648   0.590  cpu0_ialu_Result1_mux0006<10>81 (cpu0_ialu_N32)
-     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0006<10>121 (N1052)
-     LUT4:I3->O            3   0.648   0.534  cpu0_ialu_Result1_mux0006<10>141 (cpu0_ialu_N51)
-     LUT4:I3->O            4   0.648   0.590  cpu0_ialu_Result1_mux0006<10>171 (cpu0_ialu_N59)
-     LUT4:I3->O            2   0.648   0.450  cpu0_ialu_Result1_mux0006<10>211 (cpu0_ialu_N72)
-     LUT4:I3->O            3   0.648   0.534  cpu0_ialu_Result1_mux0006<10>231 (cpu0_ialu_N78)
-     LUT4:I3->O            4   0.648   0.590  cpu0_ialu_Result1_mux0006<10>261 (cpu0_ialu_N86)
-     LUT4:I3->O            2   0.648   0.450  cpu0_ialu_Result1_mux0006<10>301 (cpu0_ialu_N99)
-     LUT4:I3->O            5   0.648   0.636  cpu0_ialu_Result1_mux0006<10>321 (cpu0_ialu_N105)
-     LUT4_D:I3->O          1   0.648   0.423  cpu0_ialu_Result1_mux0006<10>351 (cpu0_ialu_N119)
-     LUT4:I3->O            2   0.648   0.447  cpu0_ialu_Result1_mux0006<10>352 (cpu0_ialu_N113)
+     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0005<10>5 (N1037)
+     LUT4:I3->O            4   0.648   0.590  cpu0_ialu_Result1_mux0005<10>81 (cpu0_ialu_N31)
+     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0005<10>121 (N1036)
+     LUT4:I3->O            3   0.648   0.534  cpu0_ialu_Result1_mux0005<10>141 (cpu0_ialu_N50)
+     LUT4:I3->O            4   0.648   0.590  cpu0_ialu_Result1_mux0005<10>171 (cpu0_ialu_N58)
+     LUT4:I3->O            2   0.648   0.450  cpu0_ialu_Result1_mux0005<10>211 (cpu0_ialu_N71)
+     LUT4:I3->O            3   0.648   0.534  cpu0_ialu_Result1_mux0005<10>231 (cpu0_ialu_N77)
+     LUT4:I3->O            4   0.648   0.590  cpu0_ialu_Result1_mux0005<10>261 (cpu0_ialu_N85)
+     LUT4:I3->O            2   0.648   0.450  cpu0_ialu_Result1_mux0005<10>301 (cpu0_ialu_N98)
+     LUT4:I3->O            5   0.648   0.636  cpu0_ialu_Result1_mux0005<10>321 (cpu0_ialu_N104)
+     LUT4_D:I3->O          1   0.648   0.423  cpu0_ialu_Result1_mux0005<10>351 (cpu0_ialu_N118)
+     LUT4:I3->O            2   0.648   0.447  cpu0_ialu_Result1_mux0005<10>352 (cpu0_ialu_N112)
      FDS:S                     0.869          cpu0_ialu_Result1_10
     ----------------------------------------
-    Total                     26.183ns (14.998ns logic, 11.185ns route)
+    Total                     26.188ns (14.998ns logic, 11.190ns route)
                                        (57.3% logic, 42.7% route)
 
 =========================================================================
@@ -1322,12 +1322,12 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 78.00 secs
-Total CPU time to Xst completion: 78.49 secs
+Total REAL time to Xst completion: 76.00 secs
+Total CPU time to Xst completion: 76.74 secs
  
 --> 
 
-Total memory usage is 414168 kilobytes
+Total memory usage is 413080 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  246 (   0 filtered)

@@ -222,13 +222,13 @@ begin
 			else
 				Result1 <= (others => '0');
 			end if;
-		elsif Control = b"000101" then
-		-- BNE
-			if operand1 /= operand2 then
-				Result1 <= (0 => '1', others => '0');
-			else
-				Result1 <= (others => '0');
-			end if;
+		-- elsif Control = b"000101" then
+		-- -- BNE
+		-- 	if operand1 /= operand2 then
+		-- 		Result1 <= (0 => '1', others => '0');
+		-- 	else
+		-- 		Result1 <= (others => '0');
+		-- 	end if;
       end if;
    end if;
 end process;
