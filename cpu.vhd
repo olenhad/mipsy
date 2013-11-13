@@ -617,6 +617,7 @@ begin
 							when others => alu_op1 <= EX_assignO1(32 downto 1);
 						end case;
 						--alu_op1 <= EX_assignO1 ;
+
 						case EX_assignO2(0) is
 							when '1' => 
 									case EX_assignO2(5 downto 1) is
@@ -636,6 +637,12 @@ begin
 							-- 	 			  RAM0(to_integer(unsigned(EX_assignO2(4 downto 1))));
 							when others => alu_op2 <= EX_assignO2(32 downto 1);
 						end case;
+
+						if EX_currentIns(5 downto 0) = b"000000" or 
+							EX_currentIns(5 downto 0) = b"000010" or 
+							EX_currentIns(5 downto 0) = b"000011" then
+							alu_op2 <= decode_AluOP2;
+						end if;
 						--alu_op2 <= EX_assignO2;	
 				
 				elsif EX_currentIns(31 downto 26) = b"100011" then
