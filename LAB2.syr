@@ -128,8 +128,7 @@ Architecture behavioral of Entity decode is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" in Library work.
-Entity <cpu> compiled.
-Entity <cpu> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity cpu is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" in Library work.
 Architecture structural of Entity lab2 is up to date.
 
@@ -218,8 +217,6 @@ Analyzing Entity <mul32> in library <work> (Architecture <behavioral>).
 Entity <mul32> analyzed. Unit <mul32> generated.
 
 Analyzing Entity <div32> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" line 90: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd" line 94: Index value(s) does not match array range, simulation mismatch.
 Entity <div32> analyzed. Unit <div32> generated.
 
 
@@ -286,42 +283,29 @@ Synthesizing Unit <div32>.
     Found 1-bit register for signal <exception>.
     Found 32-bit register for signal <quotient>.
     Found 32-bit register for signal <remainder>.
-    Found 1-bit register for signal <cIsSigned>.
     Found 32-bit register for signal <cOperand1>.
-    Found 32-bit adder for signal <cOperand1$addsub0000> created at line 77.
-    Found 32-bit 4-to-1 multiplexer for signal <cOperand1$mux0001> created at line 69.
-    Found 1-bit 32-to-1 multiplexer for signal <cOperand1$mux0002> created at line 90.
+    Found 32-bit adder for signal <cOperand1$add0000> created at line 76.
+    Found 1-bit 32-to-1 multiplexer for signal <cOperand1$mux0003> created at line 94.
+    Found 32-bit 4-to-1 multiplexer for signal <cOperand1$mux0004>.
     Found 32-bit register for signal <cOperand2>.
-    Found 32-bit adder for signal <cOperand2$addsub0000> created at line 83.
-    Found 32-bit 4-to-1 multiplexer for signal <cOperand2$mux0001> created at line 69.
-    Found 32-bit register for signal <counter>.
-    Found 32-bit subtractor for signal <counter$addsub0000> created at line 111.
+    Found 32-bit adder for signal <cOperand2$addsub0000> created at line 82.
+    Found 5-bit register for signal <counter>.
+    Found 5-bit subtractor for signal <counter$addsub0000> created at line 115.
     Found 1-bit register for signal <isDone>.
-    Found 32-bit comparator less for signal <isDone$cmp_lt0000> created at line 99.
-    Found 32-bit adder for signal <quotient$addsub0000> created at line 104.
-    Found 32-bit comparator greatequal for signal <quotient$cmp_ge0000> created at line 99.
+    Found 32-bit adder for signal <quotient$addsub0000> created at line 108.
     Found 32-bit 4-to-1 multiplexer for signal <quotient$mux0001>.
-    Found 1-bit xor2 for signal <quotient$xor0000> created at line 103.
+    Found 1-bit xor2 for signal <quotient$xor0000> created at line 107.
     Found 32-bit register for signal <tquotient>.
-    Found 32-bit comparator equal for signal <tquotient_22$cmp_eq0001> created at line 58.
-    Found 32-bit comparator equal for signal <tquotient_22$cmp_eq0002> created at line 58.
-    Found 32-bit comparator equal for signal <tquotient_22$cmp_eq0003> created at line 58.
-    Found 32-bit comparator equal for signal <tquotient_22$cmp_eq0004> created at line 58.
-    Found 32-bit comparator less for signal <tquotient_22$cmp_lt0000> created at line 92.
-    Found 32-bit comparator greatequal for signal <tquotient_23$cmp_ge0000> created at line 92.
-    Found 32-bit comparator not equal for signal <tquotient_23$cmp_ne0000> created at line 58.
-    Found 32-bit comparator not equal for signal <tquotient_23$cmp_ne0001> created at line 58.
-    Found 32-bit comparator not equal for signal <tquotient_23$cmp_ne0002> created at line 58.
-    Found 32-bit comparator not equal for signal <tquotient_23$cmp_ne0003> created at line 58.
-    Found 1-bit xor2 for signal <tquotient_23$xor0000> created at line 58.
+    Found 32-bit comparator less for signal <tquotient_22$cmp_lt0000> created at line 96.
+    Found 32-bit comparator greatequal for signal <tquotient_23$cmp_ge0000> created at line 96.
     Found 32-bit register for signal <tremainder>.
-    Found 1-bit xor2 for signal <tremainder$xor0000> created at line 58.
-    Found 32-bit subtractor for signal <tremainder_31$sub0000> created at line 93.
+    Found 32-bit subtractor for signal <tremainder_31$sub0000> created at line 97.
+    Found 1-bit register for signal <wasReset>.
     Summary:
-	inferred 227 D-type flip-flop(s).
+	inferred 200 D-type flip-flop(s).
 	inferred   5 Adder/Subtractor(s).
-	inferred  12 Comparator(s).
-	inferred  97 Multiplexer(s).
+	inferred   2 Comparator(s).
+	inferred  65 Multiplexer(s).
 Unit <div32> synthesized.
 
 
@@ -367,12 +351,13 @@ Synthesizing Unit <alu>.
     Found 32-bit register for signal <Debug>.
     Found 32-bit register for signal <Result1>.
     Found 32-bit register for signal <Result2>.
-    Found 32-bit comparator equal for signal <Result1$cmp_eq0078> created at line 215.
-    Found 32-bit comparator less for signal <Result1$cmp_lt0000> created at line 195.
-    Found 32-bit comparator not equal for signal <Result1$cmp_ne0000> created at line 222.
-    Found 32-bit xor2 for signal <Result1$xor0000> created at line 188.
+    Found 1-bit register for signal <divReset>.
+    Found 32-bit comparator equal for signal <Result1$cmp_eq0078> created at line 220.
+    Found 32-bit comparator less for signal <Result1$cmp_lt0000> created at line 200.
+    Found 32-bit comparator not equal for signal <Result1$cmp_ne0000> created at line 227.
+    Found 32-bit xor2 for signal <Result1$xor0000> created at line 193.
     Summary:
-	inferred  96 D-type flip-flop(s).
+	inferred  97 D-type flip-flop(s).
 	inferred   3 Comparator(s).
 Unit <alu> synthesized.
 
@@ -505,31 +490,32 @@ Macro Statistics
  32x32-bit multiplier                                  : 1
 # Adders/Subtractors                                   : 17
  32-bit adder                                          : 13
- 32-bit subtractor                                     : 2
+ 32-bit subtractor                                     : 1
  33-bit adder                                          : 1
+ 5-bit subtractor                                      : 1
  64-bit adder                                          : 1
 # Counters                                             : 1
  32-bit down counter                                   : 1
-# Registers                                            : 188
- 1-bit register                                        : 68
- 32-bit register                                       : 41
- 5-bit register                                        : 13
+# Registers                                            : 189
+ 1-bit register                                        : 69
+ 32-bit register                                       : 40
+ 5-bit register                                        : 14
  6-bit register                                        : 2
  8-bit register                                        : 64
-# Comparators                                          : 30
- 32-bit comparator equal                               : 7
- 32-bit comparator greatequal                          : 2
- 32-bit comparator less                                : 3
- 32-bit comparator not equal                           : 9
+# Comparators                                          : 20
+ 32-bit comparator equal                               : 3
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator less                                : 2
+ 32-bit comparator not equal                           : 5
  5-bit comparator equal                                : 8
  5-bit comparator not equal                            : 1
-# Multiplexers                                         : 28
+# Multiplexers                                         : 27
  1-bit 32-to-1 multiplexer                             : 1
- 32-bit 4-to-1 multiplexer                             : 9
+ 32-bit 4-to-1 multiplexer                             : 8
  32-bit 8-to-1 multiplexer                             : 2
  8-bit 16-to-1 multiplexer                             : 16
-# Xors                                                 : 5
- 1-bit xor2                                            : 4
+# Xors                                                 : 3
+ 1-bit xor2                                            : 2
  32-bit xor2                                           : 1
 
 =========================================================================
@@ -695,27 +681,28 @@ Macro Statistics
 # Adders/Subtractors                                   : 16
  32-bit adder                                          : 11
  32-bit adder carry in                                 : 1
- 32-bit subtractor                                     : 2
+ 32-bit subtractor                                     : 1
  33-bit adder                                          : 1
+ 5-bit subtractor                                      : 1
  64-bit adder                                          : 1
 # Counters                                             : 1
  32-bit down counter                                   : 1
-# Registers                                            : 1925
- Flip-Flops                                            : 1925
-# Comparators                                          : 30
- 32-bit comparator equal                               : 7
- 32-bit comparator greatequal                          : 2
- 32-bit comparator less                                : 3
- 32-bit comparator not equal                           : 9
+# Registers                                            : 1899
+ Flip-Flops                                            : 1899
+# Comparators                                          : 20
+ 32-bit comparator equal                               : 3
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator less                                : 2
+ 32-bit comparator not equal                           : 5
  5-bit comparator equal                                : 8
  5-bit comparator not equal                            : 1
-# Multiplexers                                         : 28
+# Multiplexers                                         : 27
  1-bit 32-to-1 multiplexer                             : 1
- 32-bit 4-to-1 multiplexer                             : 9
+ 32-bit 4-to-1 multiplexer                             : 8
  32-bit 8-to-1 multiplexer                             : 2
  8-bit 16-to-1 multiplexer                             : 16
-# Xors                                                 : 5
- 1-bit xor2                                            : 4
+# Xors                                                 : 3
+ 1-bit xor2                                            : 2
  32-bit xor2                                           : 1
 
 =========================================================================
@@ -1064,9 +1051,9 @@ WARNING:Xst:2677 - Node <cpu0_DRegOut_0> of sequential type is unconnected in bl
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 112.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 110.
 Optimizing block <LAB2> to meet ratio 100 (+ 5) of 3584 slices :
-Area constraint is met for block <LAB2>, final ratio is 104.
+Area constraint is met for block <LAB2>, final ratio is 102.
 INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
@@ -1087,8 +1074,8 @@ Unit <LAB2> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1629
- Flip-Flops                                            : 1629
+# Registers                                            : 1603
+ Flip-Flops                                            : 1603
 # Shift Registers                                      : 2
  2-bit shift register                                  : 2
 
@@ -1119,31 +1106,31 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 9924
+# BELS                             : 9617
 #      GND                         : 2
 #      INV                         : 295
 #      LUT1                        : 56
-#      LUT2                        : 359
-#      LUT2_D                      : 11
+#      LUT2                        : 399
+#      LUT2_D                      : 10
 #      LUT2_L                      : 3
-#      LUT3                        : 1676
-#      LUT3_D                      : 52
-#      LUT3_L                      : 6
-#      LUT4                        : 4284
-#      LUT4_D                      : 75
-#      LUT4_L                      : 92
+#      LUT3                        : 1553
+#      LUT3_D                      : 40
+#      LUT3_L                      : 7
+#      LUT4                        : 4200
+#      LUT4_D                      : 63
+#      LUT4_L                      : 126
 #      MULT_AND                    : 95
-#      MUXCY                       : 889
+#      MUXCY                       : 769
 #      MUXCY_L                     : 77
-#      MUXF5                       : 885
+#      MUXF5                       : 887
 #      MUXF6                       : 262
 #      MUXF7                       : 130
 #      MUXF8                       : 1
 #      VCC                         : 2
-#      XORCY                       : 672
-# FlipFlops/Latches                : 2222
-#      FD                          : 90
-#      FDE                         : 445
+#      XORCY                       : 640
+# FlipFlops/Latches                : 2196
+#      FD                          : 124
+#      FDE                         : 385
 #      FDE_1                       : 1199
 #      FDR                         : 168
 #      FDRE                        : 214
@@ -1172,10 +1159,10 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     3757  out of   3584   104% (*) 
- Number of Slice Flip Flops:           2222  out of   7168    30%  
- Number of 4 input LUTs:               7243  out of   7168   101% (*) 
-    Number used as logic:              6909
+ Number of Slices:                     3661  out of   3584   102% (*) 
+ Number of Slice Flip Flops:           2196  out of   7168    30%  
+ Number of 4 input LUTs:               7086  out of   7168    98%  
+    Number used as logic:              6752
     Number used as Shift registers:      52
     Number used as RAMs:                282
  Number of IOs:                          11
@@ -1207,7 +1194,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 2436  |
+Clk                                | BUFGP                  | 2410  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1218,7 +1205,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 52.343ns (Maximum Frequency: 19.105MHz)
+   Minimum period: 52.367ns (Maximum Frequency: 19.096MHz)
    Minimum input arrival time before clock: 1.548ns
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: 5.816ns
@@ -1229,10 +1216,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 52.343ns (frequency: 19.105MHz)
-  Total number of paths / destination ports: 1252687692 / 6826
+  Clock period: 52.367ns (frequency: 19.096MHz)
+  Total number of paths / destination ports: 1224800462 / 6740
 -------------------------------------------------------------------------
-Delay:               26.171ns (Levels of Logic = 26)
+Delay:               26.183ns (Levels of Logic = 26)
   Source:            cpu0_alu_op2_23 (FF)
   Destination:       cpu0_ialu_Result1_10 (FF)
   Source Clock:      Clk falling
@@ -1242,7 +1229,7 @@ Delay:               26.171ns (Levels of Logic = 26)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE_1:C->Q           17   0.591   1.194  cpu0_alu_op2_23 (cpu0_alu_op2_23)
+     FDE_1:C->Q           15   0.591   1.160  cpu0_alu_op2_23 (cpu0_alu_op2_23)
      LUT3:I0->O            1   0.648   0.000  cpu0_ialu_Result1_cmp_eq00431_wg_lut<0> (cpu0_ialu_Result1_cmp_eq00431_wg_lut<0>)
      MUXCY:S->O            1   0.632   0.000  cpu0_ialu_Result1_cmp_eq00431_wg_cy<0> (cpu0_ialu_Result1_cmp_eq00431_wg_cy<0>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_Result1_cmp_eq00431_wg_cy<1> (cpu0_ialu_Result1_cmp_eq00431_wg_cy<1>)
@@ -1252,14 +1239,14 @@ Delay:               26.171ns (Levels of Logic = 26)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_Result1_cmp_eq00431_wg_cy<5> (cpu0_ialu_Result1_cmp_eq00431_wg_cy<5>)
      MUXCY:CI->O          39   0.269   1.296  cpu0_ialu_Result1_cmp_eq00431_wg_cy<6> (cpu0_ialu_Result1_cmp_eq00431_wg_cy<6>)
      LUT3:I2->O           18   0.648   1.211  cpu0_ialu_Result1_cmp_eq00671 (cpu0_ialu_Result1_cmp_eq0067)
-     LUT4:I0->O            4   0.648   0.590  cpu0_ialu_Result1_mux0006<17>110 (cpu0_ialu_N96)
-     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0006<21>1 (N1022)
+     LUT4:I0->O            5   0.648   0.636  cpu0_ialu_Result1_mux0006<17>110 (cpu0_ialu_N96)
+     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0006<21>1 (N1098)
      LUT4:I3->O            5   0.648   0.636  cpu0_ialu_Result1_mux0006<25>1 (cpu0_ialu_N42)
-     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0006<29>11 (N1021)
+     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0006<29>11 (N1097)
      LUT4:I3->O            4   0.648   0.590  cpu0_ialu_Result1_or0005 (cpu0_ialu_Result1_or0005)
-     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0006<10>5 (N975)
+     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0006<10>5 (N1053)
      LUT4:I3->O            4   0.648   0.590  cpu0_ialu_Result1_mux0006<10>81 (cpu0_ialu_N32)
-     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0006<10>121 (N974)
+     LUT4_D:I3->LO         1   0.648   0.103  cpu0_ialu_Result1_mux0006<10>121 (N1052)
      LUT4:I3->O            3   0.648   0.534  cpu0_ialu_Result1_mux0006<10>141 (cpu0_ialu_N51)
      LUT4:I3->O            4   0.648   0.590  cpu0_ialu_Result1_mux0006<10>171 (cpu0_ialu_N59)
      LUT4:I3->O            2   0.648   0.450  cpu0_ialu_Result1_mux0006<10>211 (cpu0_ialu_N72)
@@ -1271,7 +1258,7 @@ Delay:               26.171ns (Levels of Logic = 26)
      LUT4:I3->O            2   0.648   0.447  cpu0_ialu_Result1_mux0006<10>352 (cpu0_ialu_N113)
      FDS:S                     0.869          cpu0_ialu_Result1_10
     ----------------------------------------
-    Total                     26.171ns (14.998ns logic, 11.173ns route)
+    Total                     26.183ns (14.998ns logic, 11.185ns route)
                                        (57.3% logic, 42.7% route)
 
 =========================================================================
@@ -1335,14 +1322,14 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 79.00 secs
-Total CPU time to Xst completion: 79.66 secs
+Total REAL time to Xst completion: 78.00 secs
+Total CPU time to Xst completion: 78.49 secs
  
 --> 
 
-Total memory usage is 416216 kilobytes
+Total memory usage is 414168 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  248 (   0 filtered)
+Number of warnings :  246 (   0 filtered)
 Number of infos    :  209 (   0 filtered)
 

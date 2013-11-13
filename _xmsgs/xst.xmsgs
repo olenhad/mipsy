@@ -80,12 +80,6 @@
 <msg type="info" file="Xst" num="1433" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">rom3</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd</arg>&quot; line <arg fmt="%d" index="2">90</arg>: Index value(s) does not match array range, simulation mismatch.
-</msg>
-
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/div32.vhd</arg>&quot; line <arg fmt="%d" index="2">94</arg>: Index value(s) does not match array range, simulation mismatch.
-</msg>
-
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDR&lt;31:20&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 

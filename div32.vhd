@@ -54,7 +54,7 @@ variable cOperand1 : std_logic_vector(31 downto 0):= (others => '0');
 variable cOperand2 : std_logic_vector(31 downto 0) := (others => '0');
 variable cIsSigned :std_logic;
 variable wasReset : std_logic := '0';
-variable counter : integer := 31;
+variable counter : std_logic_vector(4 downto 0) := (others => '1');
 begin
 	if rising_edge(clk) then
 		--if cOperand1 /= operand1 or cOperand2 /= operand2  or cIsSigned /= isSigned then
@@ -63,7 +63,7 @@ begin
 			tquotient := ( others =>'0');
 			isDone := '0';
 			cIsSigned := isSigned;
-			counter := 31;
+			counter := (others => '1');
 
 			if isSigned = '0' then
 				cOperand1 := operand1 ;
@@ -91,18 +91,18 @@ begin
 					
 					--for i in 0 to 3 loop
 						tremainder := std_logic_vector( unsigned(tremainder) sll 1);
-						tremainder(0) := cOperand1(counter);
+						tremainder(0) := cOperand1(to_integer(unsigned(counter)));
 						
 						if tremainder >= cOperand2 then
 							tremainder := std_logic_vector(unsigned(tremainder) - unsigned(cOperand2));
-							tquotient(counter) := '1';
+							tquotient(to_integer(unsigned(counter))) := '1';
 						end if;
 					--end loop;
 					
 					
-					if counter < 1 then
+					if counter = b"00000" then
 						-- End of loop state
-						counter := 31;
+						counter := (others => '1');
 						isDone := '1';
 						if isSigned='1' and (cOperand1(31) xor cOperand2(31)) = '1' then 
 							quotient <= std_logic_vector(unsigned(not(tquotient))+1);
@@ -112,7 +112,7 @@ begin
 						remainder <= tremainder;
 						exception <= '0';
 					else 
-						counter := counter - 1;
+						counter := std_logic_vector(unsigned(counter) - 1);
 					end if;
 					
 			else
