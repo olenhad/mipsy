@@ -245,6 +245,7 @@ process(CLK)
 	variable EX_decodeRegWBAddr : std_logic_vector(4 downto 0);
 	variable EX_assignO1 :  std_logic_vector(32 downto 0) := (others => '0');
 	variable EX_assignO2 :  std_logic_vector(32 downto 0) := (others => '0');
+	variable EX_assignRegOut :  std_logic_vector(32 downto 0) := (others => '0');
 	
 	variable sig_Branch : std_logic := '0';
 	variable sig_MemRead : std_logic := '0';
@@ -317,13 +318,14 @@ begin
 				EX_decodeControlSignals := decode_controlSignals;
 				EX_decodeRegWBAddr := decode_RegWBAddr;
 				--Main execution
-				--alu_op1 <= decode_AluOP1;
-				--alu_op2 <= decode_AluOP2;
+				alu_op1 <= decode_AluOP1;
+				alu_op2 <= decode_AluOP2;
 				EX_assignO1 := decode_AluOP1 & b"0";
 				EX_assignO2 := decode_AluOP2 & b"0";
+
 				--change if store word to latest value
-				EX_decodeRegOut := decode_registerOut;
-				
+				--EX_decodeRegOut := decode_registerOut;
+				EX_assignRegOut := decode_registerOut & b"0";
 				-- First stage gathers data to be forwaded
 				-- Dont know where to forward in this stage
 				-- Hence, gathered data is assigned to temp (EX_assignO1 and EX_assignO2) vars
@@ -366,6 +368,7 @@ begin
 								END_decodeControlSignals(4) = '0' then
 								--alu_op1 <= END_alur1;
 								EX_assignO1 := END_alur1 & b"0";
+								EX_assignRegOut := END_alur1 & b"0";
 							-- Checking if LW
 							elsif END_decodeControlSignals(3) = '1' and 
 								END_decodeControlSignals(4) = '1' then
@@ -377,6 +380,7 @@ begin
 								-- 			  RAM1(to_integer(unsigned(END_alur1(3 downto 0)))) &
 								-- 			  RAM0(to_integer(unsigned(END_alur1(3 downto 0))));
 								EX_assignO1 := END_alur1 & b"1";
+								EX_assignRegOut := END_alur1 & b"1";
 							-- Checking if SW
 							elsif END_decodeControlSignals(2) = '1' then
 							-- MEM[$s + offset] = $t; advance_pc (4);
@@ -424,6 +428,7 @@ begin
 								WB_decodeControlSignals(4) = '0' then
 								--alu_op1 <= WB_alur1;
 								EX_assignO1 := WB_alur1 & b"0";
+								EX_assignRegOut := WB_alur1 & b"0";
 							-- Checking if LW
 							elsif WB_decodeControlSignals(3) = '1' and 
 								WB_decodeControlSignals(4) = '1' then
@@ -435,6 +440,7 @@ begin
 								-- 			  RAM1(to_integer(unsigned(WB_alur1(3 downto 0)))) &
 								-- 			  RAM0(to_integer(unsigned(WB_alur1(3 downto 0))));
 								EX_assignO1 := WB_alur1 & b"1";
+								EX_assignRegOut := WB_alur1 & b"1";
 							-- Checking if SW
 							elsif WB_decodeControlSignals(2) = '1' then
 							-- MEM[$s + offset] = $t; advance_pc (4);
@@ -483,6 +489,7 @@ begin
 								MEMWR_decodeControlSignals(4) = '0' then
 								--alu_op1 <= MEMWR_alur1;
 								EX_assignO1 := MEMWR_alur1 & b"0";
+								EX_assignRegOut := MEMWR_alur1 & b"0";
 							-- Checking if LW
 							elsif MEMWR_decodeControlSignals(3) = '1' and 
 								MEMWR_decodeControlSignals(4) = '1' then
@@ -494,6 +501,7 @@ begin
 								-- 			  RAM1(to_integer(unsigned(MEMWR_alur1(3 downto 0)))) &
 								-- 			  RAM0(to_integer(unsigned(MEMWR_alur1(3 downto 0))));
 								EX_assignO1 := MEMWR_alur1 & b"1";
+								EX_assignRegOut := MEMWR_alur1 & b"1";
 							-- Checking if SW
 							elsif MEMWR_decodeControlSignals(2) = '1' then
 							-- MEM[$s + offset] = $t; advance_pc (4);
@@ -544,6 +552,7 @@ begin
 								ALUW_decodeControlSignals(4) = '0' then
 								--alu_op1 <= alu_r1;
 								EX_assignO1 := alu_r1 & b"0";
+								EX_assignRegOut := alu_r1 & b"0";
 							-- Checking if LW
 							elsif ALUW_decodeControlSignals(3) = '1' and 
 								ALUW_decodeControlSignals(4) = '1' then
@@ -555,6 +564,7 @@ begin
 								-- 			  RAM1(to_integer(unsigned(alu_r1(3 downto 0)))) &
 								-- 			  RAM0(to_integer(unsigned(alu_r1(3 downto 0))));
 								EX_assignO1 := alu_r1 & b"1";
+								EX_assignRegOut := alu_r1 & b"1";
 							-- Checking if SW
 							elsif ALUW_decodeControlSignals(2) = '1' then
 							-- MEM[$s + offset] = $t; advance_pc (4);
@@ -619,12 +629,12 @@ begin
 				--lw $t, offset($s) 
 				-- forward ONLY Rs (25 to 21).
 
-				case EX_assignO1(0) is
-							when '1' => alu_op1 <= RAM3(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
-								 			  RAM2(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
-								 			  RAM1(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
-								 			  RAM0(to_integer(unsigned(EX_assignO1(4 downto 1))));
-							when others => alu_op1 <= EX_assignO1(32 downto 1);
+				case EX_assignO2(0) is
+							when '1' => alu_op1 <= RAM3(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+								 			  RAM2(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+								 			  RAM1(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
+								 			  RAM0(to_integer(unsigned(EX_assignO2(4 downto 1))));
+							when others => alu_op1 <= EX_assignO2(32 downto 1);
 						end case;
 					--alu_op1 <= EX_assignO1;
 
@@ -633,6 +643,10 @@ begin
 					-- Both Rs, and Rt to be forwarded
 				-- Check for 'U' for unintialised valus
 				-- Priority system. Most recent change is applied
+				-- if 25-21 i.e , Rs, or the base addr. to be forwarded
+				-- if 20-16 i.e , rT, or value to be stored, to be forwarded 
+
+				-- EX_assign2 should contain new val of 25-21, rS
 					case EX_assignO2(0) is
 							when '1' => alu_op1 <= RAM3(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
 								 			  RAM2(to_integer(unsigned(EX_assignO2(4 downto 1)))) &
@@ -641,17 +655,23 @@ begin
 							when others => alu_op1 <= EX_assignO2(32 downto 1);
 						end case;
 					--alu_op1 <= EX_assignO2;
-					if EX_assignO1(0) = '1' then
-							EX_decodeRegOut := RAM3(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
-								 			  RAM2(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
-								 			  RAM1(to_integer(unsigned(EX_assignO1(4 downto 1)))) &
-								 			  RAM0(to_integer(unsigned(EX_assignO1(4 downto 1))));
+					--rT val being forwarded
+
+				-- EX_assign1 should contain new val of 20-16, rT
+					if EX_assignRegOut(0) = '1' then
+							EX_decodeRegOut := RAM3(to_integer(unsigned(EX_assignRegOut(4 downto 1)))) &
+								 			  RAM2(to_integer(unsigned(EX_assignRegOut(4 downto 1)))) &
+								 			  RAM1(to_integer(unsigned(EX_assignRegOut(4 downto 1)))) &
+								 			  RAM0(to_integer(unsigned(EX_assignRegOut(4 downto 1))));
 					else
-						EX_decodeRegOut := EX_assignO1(32 downto 1);
+						EX_decodeRegOut := EX_assignRegOut(32 downto 1);
 					end if;
 					--EX_decodeRegOut := EX_assignO1;
 					-- If value is written to a register towards the end of a instruction
 					-- TODO. Check whether ControlSignal checks are required?
+				-- else
+				-- 	alu_op1 <= EX_assignO1(32 downto 1);
+				-- 	alu_op2 <= EX_assignO2(32 downto 1);
 				end if;
 
 
