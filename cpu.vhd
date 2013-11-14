@@ -255,6 +255,9 @@ process(CLK)
 	variable sig_MemWrite : std_logic := '0';
 	variable sig_RegWrite : std_logic := '0';
 	variable sig_MemToReg : std_logic := '0';
+	
+	variable old_pc : std_logic_vector(31 downto 0);
+	variable jal_pc : std_logic_vector(31 downto 0);
 begin
 	
 	if falling_edge(CLK) then
@@ -286,6 +289,7 @@ begin
 					decode_currentInstruction <= FD_currentIns;						
 				elsif FD_currentIns(31 downto 26) = b"000011" then
 				-- check for JAL
+					jal_pc := pc;
 					decode_WriteAddr <= b"11111";
 					decode_WriteData <= std_logic_vector(unsigned(pc) + 1);
 					decode_RegWrite <= '1';
@@ -759,16 +763,14 @@ begin
 					 ALUW_CurrentIns(31 downto 26) = b"000000") then
 				-- JR
 					pc := ALUW_decodeRegOut;
-					currentState := FetchDecode;
+					currentState := MemWR;
 				elsif (ALUW_CurrentIns(20 downto 0) = b"000001111100000001001" and
 					    ALUW_CurrentIns(31 downto 26) = b"000000") then
 				-- JALR
 				-- TODO. JALR Writing back will lead to Hazard!!!!
-					decode_WriteAddr <= b"11111";
-					decode_WriteData <= pc;
-					decode_RegWrite <= '1';
+					old_pc := x"000000" & b"00" & pc(5 downto 0);
 					pc := ALUW_decodeRegOut;
-					currentState := FetchDecode;
+					currentState := MemWR;
 				else
 	--			DCPUState <= (5 => '1', others => '0');
 					currentState := MemWR;
@@ -946,7 +948,20 @@ begin
 									decode_RegWrite <= '1';
 								
 				end if;
-
+				if (WB_CurrentIns(20 downto 0) = b"000001111100000001001" and
+					    WB_CurrentIns(31 downto 26) = b"000000") then
+				-- JALR
+				-- TODO. JALR Writing back will lead to Hazard!!!!
+					decode_WriteAddr <= b"11111";
+					decode_WriteData <= std_logic_vector((unsigned(old_pc) - 2) sll 2);
+					decode_RegWrite <= '1';
+				elsif WB_currentIns(31 downto 26) = b"000011" then
+				-- check for JAL
+					decode_WriteAddr <= b"11111";
+					decode_WriteData <= std_logic_vector((unsigned(jal_pc) + 1) sll 2);
+					decode_RegWrite <= '1';
+				end if;
+				
 				END_currentIns <= WB_currentIns;
 				END_decodeRegOut <= WB_decodeRegOut;
 				END_decodeControlSignals <=  WB_decodeControlSignals;

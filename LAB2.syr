@@ -187,14 +187,6 @@ Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
 Entity <cpu> analyzed. Unit <cpu> generated.
 
 Analyzing Entity <rom> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
-INFO:Xst:1433 - Contents of array <rom0> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
-INFO:Xst:1433 - Contents of array <rom1> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
-INFO:Xst:1433 - Contents of array <rom2> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-WARNING:Xst:790 - "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd" line 65: Index value(s) does not match array range, simulation mismatch.
-INFO:Xst:1433 - Contents of array <rom3> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 Entity <rom> analyzed. Unit <rom> generated.
 
 Analyzing Entity <decode> in library <work> (Architecture <behavioral>).
@@ -230,7 +222,7 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <rom>.
     Related source file is "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/rom.vhd".
-WARNING:Xst:647 - Input <ADDR<31:20>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ADDR<31:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <EN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1781 - Signal <rom3> is used but never assigned. Tied to default value.
 WARNING:Xst:1781 - Signal <rom2> is used but never assigned. Tied to default value.
@@ -394,8 +386,8 @@ WARNING:Xst:646 - Signal <END_alur2> is assigned but never used. This unconnecte
     Using one-hot encoding for signal <currentState>.
     Using one-hot encoding for signal <currentState$mux0002>.
     Using one-hot encoding for signal <currentState$mux0003>.
-    Using one-hot encoding for signal <currentState$mux0006>.
-    Using one-hot encoding for signal <currentState$mux0011>.
+    Using one-hot encoding for signal <currentState$mux0004>.
+    Using one-hot encoding for signal <currentState$mux0009>.
     Found 32-bit register for signal <DAluR1>.
     Found 32-bit register for signal <DAluR2>.
     Found 32-bit register for signal <DRegOut>.
@@ -417,19 +409,21 @@ WARNING:Xst:646 - Signal <END_alur2> is assigned but never used. This unconnecte
     Found 5-bit register for signal <decode_WriteAddr>.
     Found 32-bit register for signal <decode_WriteData>.
     Found 32-bit subtractor for signal <decode_WriteData$addsub0000> created at line 945.
+    Found 32-bit adder for signal <decode_WriteData$addsub0001> created at line 959.
     Found 32-bit subtractor for signal <decode_WriteData$sub0000> created at line 945.
-    Found 5-bit comparator not equal for signal <DRegOut$cmp_ne0000> created at line 353.
+    Found 32-bit subtractor for signal <decode_WriteData$sub0001> created at line 954.
+    Found 5-bit comparator not equal for signal <DRegOut$cmp_ne0000> created at line 355.
     Found 32-bit register for signal <END_alur1>.
     Found 5-bit register for signal <END_decodeControlSignals>.
     Found 5-bit register for signal <END_decodeRegWBAddr>.
-    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0000> created at line 353.
-    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0001> created at line 414.
-    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0002> created at line 538.
-    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0003> created at line 475.
-    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0000> created at line 387.
-    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0001> created at line 510.
-    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0002> created at line 448.
-    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0003> created at line 325.
+    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0000> created at line 355.
+    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0001> created at line 416.
+    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0002> created at line 540.
+    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0003> created at line 477.
+    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0000> created at line 389.
+    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0001> created at line 512.
+    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0002> created at line 450.
+    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0003> created at line 327.
     Found 32-bit register for signal <EX_currentIns>.
     Found 32-bit register for signal <EX_decodeRegOut>.
     Found 32-bit register for signal <hi>.
@@ -439,24 +433,25 @@ WARNING:Xst:646 - Signal <END_alur2> is assigned but never used. This unconnecte
     Found 5-bit register for signal <MEMWR_decodeControlSignals>.
     Found 32-bit register for signal <MEMWR_decodeRegOut>.
     Found 5-bit register for signal <MEMWR_decodeRegWBAddr>.
+    Found 32-bit register for signal <old_pc>.
     Found 32-bit register for signal <pc>.
-    Found 32-bit adder for signal <pc$add0000> created at line 295.
-    Found 32-bit 4-to-1 multiplexer for signal <pc$mux0001> created at line 282.
-    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0003> created at line 741.
-    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0004> created at line 741.
-    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0006> created at line 741.
+    Found 32-bit adder for signal <pc$add0000> created at line 297.
+    Found 32-bit 4-to-1 multiplexer for signal <pc$mux0001> created at line 284.
+    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0003> created at line 743.
+    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0004> created at line 743.
+    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0006> created at line 743.
     Found 32-bit adder for signal <pc$mux0007>.
     Found 32-bit subtractor for signal <pc$share0000>.
     Found 32-bit register for signal <prev_op1>.
-    Found 32-bit comparator equal for signal <prev_op1$cmp_eq0009> created at line 264.
+    Found 32-bit comparator equal for signal <prev_op1$cmp_eq0009> created at line 266.
     Found 32-bit register for signal <prev_op2>.
-    Found 32-bit comparator equal for signal <prev_op2$cmp_eq0000> created at line 265.
-    Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0000> created at line 264.
-    Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0001> created at line 265.
+    Found 32-bit comparator equal for signal <prev_op2$cmp_eq0000> created at line 267.
+    Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0000> created at line 266.
+    Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0001> created at line 267.
     Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0000>.
-    Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0001> created at line 601.
-    Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0002> created at line 683.
-    Found 32-bit 16-to-1 multiplexer for signal <prev_op2$mux0003> created at line 307.
+    Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0001> created at line 603.
+    Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0002> created at line 685.
+    Found 32-bit 16-to-1 multiplexer for signal <prev_op2$mux0003> created at line 309.
     Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0005>.
     Found 32-bit register for signal <res1Reg>.
     Found 32-bit register for signal <res2Reg>.
@@ -468,8 +463,8 @@ WARNING:Xst:646 - Signal <END_alur2> is assigned but never used. This unconnecte
     Summary:
 	inferred  16 RAM(s).
 	inferred   1 Counter(s).
-	inferred 953 D-type flip-flop(s).
-	inferred   5 Adder/Subtractor(s).
+	inferred 985 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
 	inferred  13 Comparator(s).
 	inferred 320 Multiplexer(s).
 Unit <cpu> synthesized.
@@ -494,17 +489,17 @@ Macro Statistics
  64x32-bit ROM                                         : 1
 # Multipliers                                          : 1
  32x32-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 20
- 32-bit adder                                          : 13
- 32-bit subtractor                                     : 4
+# Adders/Subtractors                                   : 22
+ 32-bit adder                                          : 14
+ 32-bit subtractor                                     : 5
  33-bit adder                                          : 1
  5-bit subtractor                                      : 1
  64-bit adder                                          : 1
 # Counters                                             : 1
  6-bit down counter                                    : 1
-# Registers                                            : 124
+# Registers                                            : 125
  1-bit register                                        : 69
- 32-bit register                                       : 39
+ 32-bit register                                       : 40
  5-bit register                                        : 14
  6-bit register                                        : 2
 # Comparators                                          : 18
@@ -532,6 +527,10 @@ Macro Statistics
 Reading core <mcs.ngc>.
 Loading core <mcs> for timing and area information for instance <mcs0>.
 INFO:Xst:2261 - The FF/Latch <ControlSignals_1> in Unit <idecode> is equivalent to the following FF/Latch, which will be removed : <ControlSignals_4> 
+INFO:Xst:2261 - The FF/Latch <old_pc_6> in Unit <cpu0> is equivalent to the following 25 FFs/Latches, which will be removed : <old_pc_7> <old_pc_8> <old_pc_9> <old_pc_10> <old_pc_11> <old_pc_12> <old_pc_13> <old_pc_14> <old_pc_15> <old_pc_16> <old_pc_17> <old_pc_18> <old_pc_19> <old_pc_20> <old_pc_21> <old_pc_22> <old_pc_23> <old_pc_24> <old_pc_25> <old_pc_26> <old_pc_27> <old_pc_28> <old_pc_29> <old_pc_30> <old_pc_31> 
+WARNING:Xst:1426 - The value init of the FF/Latch decode_RegWrite hinder the constant cleaning in the block cpu0.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <old_pc_6> (without init value) has a constant value of 0 in block <cpu0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <ALUW_currentIns_21> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <ALUW_currentIns_22> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <ALUW_currentIns_23> of sequential type is unconnected in block <cpu0>.
@@ -553,6 +552,7 @@ WARNING:Xst:2677 - Node <WB_currentIns_22> of sequential type is unconnected in 
 WARNING:Xst:2677 - Node <WB_currentIns_23> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <WB_currentIns_24> of sequential type is unconnected in block <cpu0>.
 WARNING:Xst:2677 - Node <WB_currentIns_25> of sequential type is unconnected in block <cpu0>.
+WARNING:Xst:2404 -  FFs/Latches <old_pc<31:6>> (without init value) have a constant value of 0 in block <cpu>.
 
 Synthesizing (advanced) Unit <cpu>.
 INFO:Xst:3231 - The small RAM <Mram_RAM2_ren_2> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
@@ -948,9 +948,10 @@ Macro Statistics
  64x32-bit single-port block RAM                       : 1
 # Multipliers                                          : 1
  32x32-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 18
+# Adders/Subtractors                                   : 20
+ 30-bit subtractor                                     : 1
  30-bit subtractor borrow in                           : 1
- 32-bit adder                                          : 11
+ 32-bit adder                                          : 12
  32-bit adder carry in                                 : 1
  32-bit subtractor                                     : 2
  33-bit adder                                          : 1
@@ -958,8 +959,8 @@ Macro Statistics
  64-bit adder                                          : 1
 # Counters                                             : 1
  6-bit down counter                                    : 1
-# Registers                                            : 1355
- Flip-Flops                                            : 1355
+# Registers                                            : 1361
+ Flip-Flops                                            : 1361
 # Comparators                                          : 18
  32-bit comparator equal                               : 3
  32-bit comparator greatequal                          : 1
@@ -1011,6 +1012,8 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_5> (without i
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_4> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_3> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Debug_2> (without init value) has a constant value of 0 in block <alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch decode_RegWrite hinder the constant cleaning in the block cpu.
+   You should achieve better results by setting this init to 1.
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_0> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_0> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_1> 
 INFO:Xst:2261 - The FF/Latch <ALUW_currentIns_2> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DCurrentIns2_2> 
@@ -1275,7 +1278,7 @@ WARNING:Xst:2677 - Node <cpu0_DRegOut_0> of sequential type is unconnected in bl
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 101.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 102.
 Optimizing block <LAB2> to meet ratio 100 (+ 5) of 3584 slices :
 Area constraint is met for block <LAB2>, final ratio is 92.
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
@@ -1314,8 +1317,8 @@ Unit <LAB2> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1096
- Flip-Flops                                            : 1096
+# Registers                                            : 1102
+ Flip-Flops                                            : 1102
 # Shift Registers                                      : 2
  2-bit shift register                                  : 2
 
@@ -1346,32 +1349,32 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 7801
+# BELS                             : 7874
 #      GND                         : 2
 #      INV                         : 292
 #      LUT1                        : 57
-#      LUT2                        : 452
-#      LUT2_D                      : 14
-#      LUT2_L                      : 8
-#      LUT3                        : 895
-#      LUT3_D                      : 30
-#      LUT3_L                      : 16
-#      LUT4                        : 3542
-#      LUT4_D                      : 113
-#      LUT4_L                      : 366
+#      LUT2                        : 491
+#      LUT2_D                      : 15
+#      LUT2_L                      : 11
+#      LUT3                        : 889
+#      LUT3_D                      : 29
+#      LUT3_L                      : 15
+#      LUT4                        : 3511
+#      LUT4_D                      : 114
+#      LUT4_L                      : 362
 #      MULT_AND                    : 95
-#      MUXCY                       : 757
+#      MUXCY                       : 793
 #      MUXCY_L                     : 77
-#      MUXF5                       : 404
+#      MUXF5                       : 408
 #      MUXF6                       : 6
 #      MUXF7                       : 2
 #      MUXF8                       : 1
 #      VCC                         : 2
-#      XORCY                       : 670
-# FlipFlops/Latches                : 1689
+#      XORCY                       : 702
+# FlipFlops/Latches                : 1695
 #      FD                          : 124
 #      FDE                         : 323
-#      FDE_1                       : 718
+#      FDE_1                       : 724
 #      FDR                         : 204
 #      FDRE                        : 214
 #      FDRS                        : 2
@@ -1399,10 +1402,10 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     3306  out of   3584    92%  
- Number of Slice Flip Flops:           1689  out of   7168    23%  
- Number of 4 input LUTs:               6375  out of   7168    88%  
-    Number used as logic:              5785
+ Number of Slices:                     3319  out of   3584    92%  
+ Number of Slice Flip Flops:           1695  out of   7168    23%  
+ Number of 4 input LUTs:               6376  out of   7168    88%  
+    Number used as logic:              5786
     Number used as Shift registers:      52
     Number used as RAMs:                538
  Number of IOs:                          11
@@ -1432,7 +1435,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 2031  |
+Clk                                | BUFGP                  | 2037  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1455,7 +1458,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
   Clock period: 46.274ns (frequency: 21.610MHz)
-  Total number of paths / destination ports: 1233495452 / 6974
+  Total number of paths / destination ports: 1239269496 / 6985
 -------------------------------------------------------------------------
 Delay:               23.137ns (Levels of Logic = 74)
   Source:            cpu0_alu_op2_0_1 (FF)
@@ -1540,7 +1543,7 @@ Delay:               23.137ns (Levels of Logic = 74)
      INV:I->O              1   0.648   0.000  cpu0_ialu_mult_Madd_convertedResult_not0000<62>1_INV_0 (cpu0_ialu_mult_Madd_convertedResult_not0000<62>)
      MUXCY:S->O            0   0.632   0.000  cpu0_ialu_mult_Madd_convertedResult_cy<62> (cpu0_ialu_mult_Madd_convertedResult_cy<62>)
      XORCY:CI->O           1   0.844   0.423  cpu0_ialu_mult_Madd_convertedResult_xor<63> (cpu0_ialu_mult_convertedResult<63>)
-     LUT4:I3->O            1   0.648   0.000  cpu0_ialu_Result2_mux0009<31>301_F (N623)
+     LUT4:I3->O            1   0.648   0.000  cpu0_ialu_Result2_mux0009<31>301_F (N639)
      MUXF5:I0->O           1   0.276   0.000  cpu0_ialu_Result2_mux0009<31>301 (cpu0_ialu_Result2_mux0009<31>30)
      FDS:D                     0.252          cpu0_ialu_Result2_31
     ----------------------------------------
@@ -1609,13 +1612,13 @@ Delay:               5.816ns (Levels of Logic = 2)
 
 
 Total REAL time to Xst completion: 71.00 secs
-Total CPU time to Xst completion: 70.90 secs
+Total CPU time to Xst completion: 71.40 secs
  
 --> 
 
-Total memory usage is 401304 kilobytes
+Total memory usage is 400792 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  270 (   0 filtered)
-Number of infos    :  162 (   0 filtered)
+Number of infos    :  159 (   0 filtered)
 
