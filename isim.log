@@ -11,14 +11,6 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 340 ns(2), Instance /test_cpu/uut/irom/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 340 ns(2), Instance /test_cpu/uut/irom/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 340 ns(2), Instance /test_cpu/uut/irom/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 340 ns(2), Instance /test_cpu/uut/irom/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 350 ns(2), Instance /test_cpu/uut/irom/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 350 ns(2), Instance /test_cpu/uut/irom/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 350 ns(2), Instance /test_cpu/uut/irom/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 350 ns(2), Instance /test_cpu/uut/irom/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 ISim O.61xd (signature 0x1cce1bb2)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -37,8 +29,22 @@ This is a Lite version of ISim.
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # run 1.00us
-# run 1.00us
-# run 1.00us
+ISim O.61xd (signature 0x1cce1bb2)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim O.61xd (signature 0x1cce1bb2)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
 # run 1.00us
 ISim O.61xd (signature 0x1cce1bb2)
 WARNING: A WEBPACK license was found.
@@ -49,3 +55,27 @@ This is a Lite version of ISim.
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # run 1.00us
+ISim O.61xd (signature 0x1cce1bb2)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim O.61xd (signature 0x1cce1bb2)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim O.61xd (signature 0x1cce1bb2)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

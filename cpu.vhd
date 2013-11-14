@@ -290,10 +290,10 @@ begin
 				elsif FD_currentIns(31 downto 26) = b"000011" then
 				-- check for JAL
 					jal_pc := pc;
-					decode_WriteAddr <= b"11111";
-					decode_WriteData <= std_logic_vector(unsigned(pc) + 1);
-					decode_RegWrite <= '1';
-					pc := b"000000" & FD_currentIns(25 downto 0);
+					-- decode_WriteAddr <= b"11111";
+					-- decode_WriteData <= std_logic_vector(unsigned(pc) + 1);
+					-- decode_RegWrite <= '1';
+					pc := x"000000" & b"00" & FD_currentIns(5 downto 0);
 					currentState := FetchDecode;
 				else
 					pc := std_logic_vector(unsigned(pc) + 1);

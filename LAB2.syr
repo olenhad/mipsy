@@ -129,8 +129,7 @@ Architecture behavioral of Entity decode is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/alu.vhd" in Library work.
 Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/cpu.vhd" in Library work.
-Entity <cpu> compiled.
-Entity <cpu> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity cpu is up to date.
 Compiling vhdl file "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/LAB2.vhd" in Library work.
 Architecture structural of Entity lab2 is up to date.
 
@@ -408,25 +407,26 @@ WARNING:Xst:646 - Signal <END_alur2> is assigned but never used. This unconnecte
     Found 1-bit register for signal <decode_RegWrite>.
     Found 5-bit register for signal <decode_WriteAddr>.
     Found 32-bit register for signal <decode_WriteData>.
-    Found 32-bit subtractor for signal <decode_WriteData$addsub0000> created at line 945.
-    Found 32-bit adder for signal <decode_WriteData$addsub0001> created at line 959.
-    Found 32-bit subtractor for signal <decode_WriteData$sub0000> created at line 945.
-    Found 32-bit subtractor for signal <decode_WriteData$sub0001> created at line 954.
-    Found 5-bit comparator not equal for signal <DRegOut$cmp_ne0000> created at line 355.
+    Found 32-bit adder for signal <decode_WriteData$add0000> created at line 961.
+    Found 32-bit subtractor for signal <decode_WriteData$addsub0000> created at line 947.
+    Found 32-bit subtractor for signal <decode_WriteData$sub0000> created at line 947.
+    Found 32-bit subtractor for signal <decode_WriteData$sub0001> created at line 956.
+    Found 5-bit comparator not equal for signal <DRegOut$cmp_ne0000> created at line 357.
     Found 32-bit register for signal <END_alur1>.
     Found 5-bit register for signal <END_decodeControlSignals>.
     Found 5-bit register for signal <END_decodeRegWBAddr>.
-    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0000> created at line 355.
-    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0001> created at line 416.
-    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0002> created at line 540.
-    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0003> created at line 477.
-    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0000> created at line 389.
-    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0001> created at line 512.
-    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0002> created at line 450.
-    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0003> created at line 327.
+    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0000> created at line 357.
+    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0001> created at line 418.
+    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0002> created at line 542.
+    Found 5-bit comparator equal for signal <EX_assignO1$cmp_eq0003> created at line 479.
+    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0000> created at line 391.
+    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0001> created at line 514.
+    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0002> created at line 452.
+    Found 5-bit comparator equal for signal <EX_assignO2$cmp_eq0003> created at line 329.
     Found 32-bit register for signal <EX_currentIns>.
     Found 32-bit register for signal <EX_decodeRegOut>.
     Found 32-bit register for signal <hi>.
+    Found 32-bit register for signal <jal_pc>.
     Found 32-bit register for signal <lo>.
     Found 32-bit register for signal <MEMWR_alur1>.
     Found 32-bit register for signal <MEMWR_currentIns>.
@@ -435,23 +435,23 @@ WARNING:Xst:646 - Signal <END_alur2> is assigned but never used. This unconnecte
     Found 5-bit register for signal <MEMWR_decodeRegWBAddr>.
     Found 32-bit register for signal <old_pc>.
     Found 32-bit register for signal <pc>.
-    Found 32-bit adder for signal <pc$add0000> created at line 297.
-    Found 32-bit 4-to-1 multiplexer for signal <pc$mux0001> created at line 284.
-    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0003> created at line 743.
-    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0004> created at line 743.
-    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0006> created at line 743.
+    Found 32-bit adder for signal <pc$addsub0000> created at line 299.
+    Found 32-bit 4-to-1 multiplexer for signal <pc$mux0001> created at line 285.
+    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0003> created at line 745.
+    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0004> created at line 745.
+    Found 32-bit 8-to-1 multiplexer for signal <pc$mux0006> created at line 745.
     Found 32-bit adder for signal <pc$mux0007>.
     Found 32-bit subtractor for signal <pc$share0000>.
     Found 32-bit register for signal <prev_op1>.
-    Found 32-bit comparator equal for signal <prev_op1$cmp_eq0009> created at line 266.
+    Found 32-bit comparator equal for signal <prev_op1$cmp_eq0009> created at line 267.
     Found 32-bit register for signal <prev_op2>.
-    Found 32-bit comparator equal for signal <prev_op2$cmp_eq0000> created at line 267.
-    Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0000> created at line 266.
-    Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0001> created at line 267.
+    Found 32-bit comparator equal for signal <prev_op2$cmp_eq0000> created at line 268.
+    Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0000> created at line 267.
+    Found 32-bit comparator not equal for signal <prev_op2$cmp_ne0001> created at line 268.
     Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0000>.
-    Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0001> created at line 603.
-    Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0002> created at line 685.
-    Found 32-bit 16-to-1 multiplexer for signal <prev_op2$mux0003> created at line 309.
+    Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0001> created at line 605.
+    Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0002> created at line 687.
+    Found 32-bit 16-to-1 multiplexer for signal <prev_op2$mux0003> created at line 311.
     Found 32-bit 4-to-1 multiplexer for signal <prev_op2$mux0005>.
     Found 32-bit register for signal <res1Reg>.
     Found 32-bit register for signal <res2Reg>.
@@ -463,7 +463,7 @@ WARNING:Xst:646 - Signal <END_alur2> is assigned but never used. This unconnecte
     Summary:
 	inferred  16 RAM(s).
 	inferred   1 Counter(s).
-	inferred 985 D-type flip-flop(s).
+	inferred 1017 D-type flip-flop(s).
 	inferred   7 Adder/Subtractor(s).
 	inferred  13 Comparator(s).
 	inferred 320 Multiplexer(s).
@@ -497,9 +497,9 @@ Macro Statistics
  64-bit adder                                          : 1
 # Counters                                             : 1
  6-bit down counter                                    : 1
-# Registers                                            : 125
+# Registers                                            : 126
  1-bit register                                        : 69
- 32-bit register                                       : 40
+ 32-bit register                                       : 41
  5-bit register                                        : 14
  6-bit register                                        : 2
 # Comparators                                          : 18
@@ -931,6 +931,8 @@ WARNING:Xst:2677 - Node <decode_WriteData_sliced1_-1> of sequential type is unco
 WARNING:Xst:2677 - Node <decode_WriteData_sliced1_0> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced1_-1> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <decode_WriteData_sliced_sliced1_0> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <jal_pc_30> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <jal_pc_31> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <WB_decodeControlSignals_0> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <WB_decodeControlSignals_1> of sequential type is unconnected in block <cpu>.
 WARNING:Xst:2677 - Node <WB_decodeControlSignals_2> of sequential type is unconnected in block <cpu>.
@@ -949,9 +951,10 @@ Macro Statistics
 # Multipliers                                          : 1
  32x32-bit multiplier                                  : 1
 # Adders/Subtractors                                   : 20
+ 30-bit adder                                          : 1
  30-bit subtractor                                     : 1
  30-bit subtractor borrow in                           : 1
- 32-bit adder                                          : 12
+ 32-bit adder                                          : 11
  32-bit adder carry in                                 : 1
  32-bit subtractor                                     : 2
  33-bit adder                                          : 1
@@ -959,8 +962,8 @@ Macro Statistics
  64-bit adder                                          : 1
 # Counters                                             : 1
  6-bit down counter                                    : 1
-# Registers                                            : 1361
- Flip-Flops                                            : 1361
+# Registers                                            : 1391
+ Flip-Flops                                            : 1391
 # Comparators                                          : 18
  32-bit comparator equal                               : 3
  32-bit comparator greatequal                          : 1
@@ -1145,6 +1148,8 @@ INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_28> in Unit <cpu> is equivalent to the
 INFO:Xst:2261 - The FF/Latch <MEMWR_alur1_29> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <DAluR1_29> 
 INFO:Xst:2261 - The FF/Latch <ALUW_decodeControlSignals_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <ALUW_decodeControlSignals_4> 
 INFO:Xst:2261 - The FF/Latch <MEMWR_decodeControlSignals_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <MEMWR_decodeControlSignals_4> 
+WARNING:Xst:2677 - Node <pc_30> of sequential type is unconnected in block <cpu>.
+WARNING:Xst:2677 - Node <pc_31> of sequential type is unconnected in block <cpu>.
 
 Optimizing unit <LAB2> ...
 
@@ -1278,9 +1283,9 @@ WARNING:Xst:2677 - Node <cpu0_DRegOut_0> of sequential type is unconnected in bl
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 102.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 101.
 Optimizing block <LAB2> to meet ratio 100 (+ 5) of 3584 slices :
-Area constraint is met for block <LAB2>, final ratio is 92.
+Area constraint is met for block <LAB2>, final ratio is 91.
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
@@ -1289,21 +1294,41 @@ INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_r
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
 INFO:Xst:2260 - The FF/Latch <U0/dlmb/POR_FF_I> in Unit <mcs0> is equivalent to the following FF/Latch : <U0/ilmb/POR_FF_I> 
+FlipFlop cpu0_alu_control_0 has been replicated 1 time(s)
+FlipFlop cpu0_alu_control_1 has been replicated 1 time(s)
 FlipFlop cpu0_alu_control_2 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_0 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_1 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_10 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_11 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_12 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_13 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_14 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_15 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_16 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_17 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_18 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_19 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_2 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_20 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_21 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_22 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_23 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_24 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_25 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_3 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_31 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_4 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_5 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_6 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_7 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op1_8 has been replicated 1 time(s)
-FlipFlop cpu0_alu_op2_0 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op1_9 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op2_0 has been replicated 2 time(s)
 FlipFlop cpu0_alu_op2_1 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op2_2 has been replicated 1 time(s)
 FlipFlop cpu0_alu_op2_3 has been replicated 1 time(s)
-FlipFlop cpu0_alu_op2_31 has been replicated 1 time(s)
+FlipFlop cpu0_alu_op2_31 has been replicated 2 time(s)
 FlipFlop cpu0_alu_op2_4 has been replicated 1 time(s)
 
 Final Macro Processing ...
@@ -1317,8 +1342,8 @@ Unit <LAB2> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1102
- Flip-Flops                                            : 1102
+# Registers                                            : 1152
+ Flip-Flops                                            : 1152
 # Shift Registers                                      : 2
  2-bit shift register                                  : 2
 
@@ -1349,32 +1374,32 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 7874
+# BELS                             : 7789
 #      GND                         : 2
-#      INV                         : 292
-#      LUT1                        : 57
-#      LUT2                        : 491
-#      LUT2_D                      : 15
-#      LUT2_L                      : 11
-#      LUT3                        : 889
+#      INV                         : 290
+#      LUT1                        : 55
+#      LUT2                        : 433
+#      LUT2_D                      : 14
+#      LUT2_L                      : 13
+#      LUT3                        : 1041
 #      LUT3_D                      : 29
 #      LUT3_L                      : 15
-#      LUT4                        : 3511
-#      LUT4_D                      : 114
-#      LUT4_L                      : 362
+#      LUT4                        : 3295
+#      LUT4_D                      : 113
+#      LUT4_L                      : 397
 #      MULT_AND                    : 95
-#      MUXCY                       : 793
+#      MUXCY                       : 786
 #      MUXCY_L                     : 77
-#      MUXF5                       : 408
+#      MUXF5                       : 429
 #      MUXF6                       : 6
 #      MUXF7                       : 2
 #      MUXF8                       : 1
 #      VCC                         : 2
-#      XORCY                       : 702
-# FlipFlops/Latches                : 1695
+#      XORCY                       : 694
+# FlipFlops/Latches                : 1745
 #      FD                          : 124
 #      FDE                         : 323
-#      FDE_1                       : 724
+#      FDE_1                       : 774
 #      FDR                         : 204
 #      FDRE                        : 214
 #      FDRS                        : 2
@@ -1402,10 +1427,10 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     3319  out of   3584    92%  
- Number of Slice Flip Flops:           1695  out of   7168    23%  
- Number of 4 input LUTs:               6376  out of   7168    88%  
-    Number used as logic:              5786
+ Number of Slices:                     3269  out of   3584    91%  
+ Number of Slice Flip Flops:           1745  out of   7168    24%  
+ Number of 4 input LUTs:               6285  out of   7168    87%  
+    Number used as logic:              5695
     Number used as Shift registers:      52
     Number used as RAMs:                538
  Number of IOs:                          11
@@ -1435,7 +1460,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 2037  |
+Clk                                | BUFGP                  | 2087  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1446,7 +1471,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 46.274ns (Maximum Frequency: 21.610MHz)
+   Minimum period: 46.032ns (Maximum Frequency: 21.724MHz)
    Minimum input arrival time before clock: 1.548ns
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: 5.816ns
@@ -1457,10 +1482,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 46.274ns (frequency: 21.610MHz)
-  Total number of paths / destination ports: 1239269496 / 6985
+  Clock period: 46.032ns (frequency: 21.724MHz)
+  Total number of paths / destination ports: 1232859789 / 7085
 -------------------------------------------------------------------------
-Delay:               23.137ns (Levels of Logic = 74)
+Delay:               23.016ns (Levels of Logic = 74)
   Source:            cpu0_alu_op2_0_1 (FF)
   Destination:       cpu0_ialu_Result2_31 (FF)
   Source Clock:      Clk falling
@@ -1470,7 +1495,7 @@ Delay:               23.137ns (Levels of Logic = 74)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE_1:C->Q            7   0.591   0.851  cpu0_alu_op2_0_1 (cpu0_alu_op2_0_1)
+     FDE_1:C->Q            4   0.591   0.730  cpu0_alu_op2_0_1 (cpu0_alu_op2_0_1)
      LUT1:I0->O            1   0.648   0.000  cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<0>_rt (cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<0>_rt)
      MUXCY:S->O            1   0.632   0.000  cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<0> (cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<0>)
      MUXCY:CI->O           1   0.065   0.000  cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<1> (cpu0_ialu_mult_Madd_newOperand2_addsub0000_cy<1>)
@@ -1543,12 +1568,12 @@ Delay:               23.137ns (Levels of Logic = 74)
      INV:I->O              1   0.648   0.000  cpu0_ialu_mult_Madd_convertedResult_not0000<62>1_INV_0 (cpu0_ialu_mult_Madd_convertedResult_not0000<62>)
      MUXCY:S->O            0   0.632   0.000  cpu0_ialu_mult_Madd_convertedResult_cy<62> (cpu0_ialu_mult_Madd_convertedResult_cy<62>)
      XORCY:CI->O           1   0.844   0.423  cpu0_ialu_mult_Madd_convertedResult_xor<63> (cpu0_ialu_mult_convertedResult<63>)
-     LUT4:I3->O            1   0.648   0.000  cpu0_ialu_Result2_mux0009<31>301_F (N639)
+     LUT4:I3->O            1   0.648   0.000  cpu0_ialu_Result2_mux0009<31>301_F (N553)
      MUXF5:I0->O           1   0.276   0.000  cpu0_ialu_Result2_mux0009<31>301 (cpu0_ialu_Result2_mux0009<31>30)
      FDS:D                     0.252          cpu0_ialu_Result2_31
     ----------------------------------------
-    Total                     23.137ns (19.544ns logic, 3.593ns route)
-                                       (84.5% logic, 15.5% route)
+    Total                     23.016ns (19.544ns logic, 3.472ns route)
+                                       (84.9% logic, 15.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
@@ -1611,14 +1636,14 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 71.00 secs
-Total CPU time to Xst completion: 71.40 secs
+Total REAL time to Xst completion: 69.00 secs
+Total CPU time to Xst completion: 69.64 secs
  
 --> 
 
-Total memory usage is 400792 kilobytes
+Total memory usage is 399064 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  270 (   0 filtered)
+Number of warnings :  274 (   0 filtered)
 Number of infos    :  159 (   0 filtered)
 

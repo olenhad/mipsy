@@ -29,9 +29,6 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">cpu0_and0000_cmp_eq0000</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">cpu0_currentState_not0001_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">cpu0_and0000_cmp_eq0000</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">cpu0_decode_WriteAddr_not000176_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
-</msg>
-
 <msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[24].SRL16E_I/Use_unisim.MB_SRL16E_I1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[24].Operand_Select_Bit_I/Using_LUT4_2.Op2_MUXF5</arg>.  <arg fmt="%z" index="3">The function generator mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[24].SRL16E_I/Use_unisim.MB_SRL16E_I1 is unable to be placed in the G position because the output signal doesn&apos;t match other symbols&apos; use of the G signal.  The signal mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[24].Operand_Select_Bit_I/op2_Reg already uses G.</arg>  The design will exhibit suboptimal timing.
 </msg>
 

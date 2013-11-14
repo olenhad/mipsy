@@ -5,7 +5,7 @@ C:\Xilinx\13.2\ISE_DS\ISE\.
    "LAB2" is an NCD, version 3.2, device xc3s400a, package ft256, speed -4
 Opened constraints file LAB2.pcf.
 
-Thu Nov 14 08:29:39 2013
+Thu Nov 14 09:20:01 2013
 
 C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -bd mcs/mcs.elf tag mcs -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g Reset_on_err:No -g ConfigRate:25 -g ProgPin:PullUp -g DonePin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:No -g DriveDone:No -g en_sw_gsr:No -g en_porb:Yes -g drive_awake:No -g sw_clk:Startupclk -g sw_gwe_cycle:5 -g sw_gts_cycle:4 LAB2.ncd 
 

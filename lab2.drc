@@ -1,7 +1,7 @@
 Release 13.2 Drc O.61xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Thu Nov 14 08:29:39 2013
+Thu Nov 14 09:20:01 2013
 
 drc -z LAB2.ncd LAB2.pcf
 
