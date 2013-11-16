@@ -1,7 +1,0 @@
-work	"adder32.vhd"
-work	"addsub32.vhd"
-work	"alu.vhd"
-work	"div32.vhd"
-work	"mul32.vhd"
-work	"uadder32.vhd"
-work	"uaddsub32.vhd"

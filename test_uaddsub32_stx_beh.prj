@@ -1,3 +1,0 @@
-vhdl isim_temp "uadder32.vhd"
-vhdl isim_temp "uaddsub32.vhd"
-vhdl isim_temp "test_uaddsub32.vhd"
