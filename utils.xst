@@ -1,6 +1,0 @@
-set -tmpdir "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/Hunar Khanna/Desktop/CG3207/VHDL/lab2/cg3207-project/xst"
-elaborate
--ifn utils.prj
--ifmt mixed
-set -loop_iteration_limit 1024

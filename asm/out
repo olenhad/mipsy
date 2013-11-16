@@ -1,5 +1,0 @@
-signal rom0 : RomData := (x"3c",x"8c",x"3c",x"8c",x"3c",x"3c",x"ac",x"3c",x"ac",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"0c",others => (others => '0')); 
-signal rom1 : RomData := (x"01",x"30",x"01",x"31",x"0a",x"01",x"30",x"01",x"3f",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"10",others => (others => '0')); 
-signal rom2 : RomData := (x"10",x"00",x"10",x"00",x"00",x"10",x"00",x"10",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",others => (others => '0')); 
-signal rom3 : RomData := (x"01",x"48",x"01",x"4c",x"40",x"01",x"40",x"01",x"44",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",x"00",others => (others => '0')); 
-

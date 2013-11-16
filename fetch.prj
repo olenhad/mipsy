@@ -1,3 +1,0 @@
-vhdl work "utils.vhd"
-vhdl work "rom.vhd"
-vhdl work "fetch.vhd"

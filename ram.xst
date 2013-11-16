@@ -1,5 +1,0 @@
-set -tmpdir "C:/Users/pc richard/Documents/CG3207/cg3207-project/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/pc richard/Documents/CG3207/cg3207-project/xst"
-elaborate
--ifn ram.prj
--ifmt mixed
